@@ -1,0 +1,4 @@
+# Cloudflare Pages project for tcgshopdb.com. The domain is attached in the Cloudflare dashboard, not here.
+name = "tcgshopdb"
+pages_build_output_dir = "web/dist"
+compatibility_date = "2025-06-01"

@@ -1,0 +1,6044 @@
+{
+  "game": "TCG Card Shop Simulator",
+  "engine": "unity",
+  "version": "OPNeonGames | Card Shop Simulator (app.info)",
+  "source": {
+    "assembly": "C:/uTorria/Downloads/TCG Card Shop Simulator/Card Shop Simulator_Data/Managed/Assembly-CSharp.dll",
+    "extractor": "tcg-p0-inventory@0.2.0",
+    "extractedAt": "2026-09-27T16:27:05.713Z",
+    "note": "per-instance decoded values; each instance is one object whose layout consumed its payload exactly"
+  },
+  "count": 260,
+  "instances": [
+    {
+      "class": "EventSystem",
+      "pathId": "9495",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_FirstSelected",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_sendNavigationEvents",
+          "kind": "bool",
+          "value": true
+        },
+        {
+          "name": "m_DragThreshold",
+          "kind": "int",
+          "value": 5
+        }
+      ]
+    },
+    {
+      "class": "Mask",
+      "pathId": "10057",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_ShowMaskGraphic",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "CustomFloatController",
+      "pathId": "10062",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": true
+        },
+        {
+          "name": "customFloatId",
+          "kind": "int",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "class": "Mask",
+      "pathId": "10077",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_ShowMaskGraphic",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "TextureResolutionController",
+      "pathId": "10084",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "AudioMixerVolumeController",
+      "pathId": "10117",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": true
+        },
+        {
+          "name": "audioMixerConfigId",
+          "kind": "int",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "class": "RefreshRateController",
+      "pathId": "10144",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "StandaloneInputModule",
+      "pathId": "10177",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_SendPointerHoverToParent",
+          "kind": "bool",
+          "value": true
+        },
+        {
+          "name": "m_HorizontalAxis",
+          "kind": "string",
+          "value": "Horizontal"
+        },
+        {
+          "name": "m_VerticalAxis",
+          "kind": "string",
+          "value": "Vertical"
+        },
+        {
+          "name": "m_SubmitButton",
+          "kind": "string",
+          "value": "Submit"
+        },
+        {
+          "name": "m_CancelButton",
+          "kind": "string",
+          "value": "Cancel"
+        },
+        {
+          "name": "m_InputActionsPerSecond",
+          "kind": "float",
+          "value": 10
+        },
+        {
+          "name": "m_RepeatDelay",
+          "kind": "float",
+          "value": 0.5
+        },
+        {
+          "name": "m_ForceModuleActive",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "Mask",
+      "pathId": "10182",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_ShowMaskGraphic",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "Mask",
+      "pathId": "10184",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_ShowMaskGraphic",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "Mask",
+      "pathId": "10188",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_ShowMaskGraphic",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "Mask",
+      "pathId": "10203",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_ShowMaskGraphic",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "LayoutElement",
+      "pathId": "10214",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_IgnoreLayout",
+          "kind": "bool",
+          "value": false
+        },
+        {
+          "name": "m_MinWidth",
+          "kind": "float",
+          "value": -1
+        },
+        {
+          "name": "m_MinHeight",
+          "kind": "float",
+          "value": 20
+        },
+        {
+          "name": "m_PreferredWidth",
+          "kind": "float",
+          "value": 610
+        },
+        {
+          "name": "m_PreferredHeight",
+          "kind": "float",
+          "value": -1
+        },
+        {
+          "name": "m_FlexibleWidth",
+          "kind": "float",
+          "value": -1
+        },
+        {
+          "name": "m_FlexibleHeight",
+          "kind": "float",
+          "value": 1
+        },
+        {
+          "name": "m_LayoutPriority",
+          "kind": "int",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "class": "FpsController",
+      "pathId": "10219",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "Mask",
+      "pathId": "10228",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_ShowMaskGraphic",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "CustomFloatController",
+      "pathId": "10230",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": true
+        },
+        {
+          "name": "customFloatId",
+          "kind": "int",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "class": "ResolutionController",
+      "pathId": "10249",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "Mask",
+      "pathId": "10252",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_ShowMaskGraphic",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "Mask",
+      "pathId": "10269",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_ShowMaskGraphic",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "Mask",
+      "pathId": "10273",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_ShowMaskGraphic",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "Mask",
+      "pathId": "10275",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_ShowMaskGraphic",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "Mask",
+      "pathId": "10295",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_ShowMaskGraphic",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "CustomFloatController",
+      "pathId": "10297",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": true
+        },
+        {
+          "name": "customFloatId",
+          "kind": "int",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "class": "Mask",
+      "pathId": "10308",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_ShowMaskGraphic",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "RefreshRateController",
+      "pathId": "10310",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "10340",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "11037"
+        }
+      ]
+    },
+    {
+      "class": "KeybindSetting",
+      "pathId": "10342",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_GameBaseKey",
+          "kind": "enum:EGameBaseKey",
+          "value": 31
+        },
+        {
+          "name": "m_GameBaseKeySecondary",
+          "kind": "enum:EGameBaseKey",
+          "value": 0
+        },
+        {
+          "name": "m_IsGamepad",
+          "kind": "bool",
+          "value": true
+        },
+        {
+          "name": "m_UpdatingGrp",
+          "kind": "reference",
+          "value": "1555"
+        },
+        {
+          "name": "m_TooltipUI",
+          "kind": "reference",
+          "value": "13004"
+        },
+        {
+          "name": "m_GamepadSettingLinker",
+          "kind": "reference",
+          "value": "11036"
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "10347",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "11051"
+        }
+      ]
+    },
+    {
+      "class": "Mask",
+      "pathId": "10378",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_ShowMaskGraphic",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "KeybindSetting",
+      "pathId": "10391",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_GameBaseKey",
+          "kind": "enum:EGameBaseKey",
+          "value": 15
+        },
+        {
+          "name": "m_GameBaseKeySecondary",
+          "kind": "enum:EGameBaseKey",
+          "value": 0
+        },
+        {
+          "name": "m_IsGamepad",
+          "kind": "bool",
+          "value": true
+        },
+        {
+          "name": "m_UpdatingGrp",
+          "kind": "reference",
+          "value": "1617"
+        },
+        {
+          "name": "m_TooltipUI",
+          "kind": "reference",
+          "value": "12885"
+        },
+        {
+          "name": "m_GamepadSettingLinker",
+          "kind": "reference",
+          "value": "11084"
+        }
+      ]
+    },
+    {
+      "class": "CustomBooleanController",
+      "pathId": "10392",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": true
+        },
+        {
+          "name": "customBooleanId",
+          "kind": "int",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "class": "Mask",
+      "pathId": "10409",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_ShowMaskGraphic",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "Mask",
+      "pathId": "10411",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_ShowMaskGraphic",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "Mask",
+      "pathId": "10417",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_ShowMaskGraphic",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "KeybindSetting",
+      "pathId": "10420",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_GameBaseKey",
+          "kind": "enum:EGameBaseKey",
+          "value": 1
+        },
+        {
+          "name": "m_GameBaseKeySecondary",
+          "kind": "enum:EGameBaseKey",
+          "value": 2
+        },
+        {
+          "name": "m_IsGamepad",
+          "kind": "bool",
+          "value": false
+        },
+        {
+          "name": "m_UpdatingGrp",
+          "kind": "reference",
+          "value": "1673"
+        },
+        {
+          "name": "m_TooltipUI",
+          "kind": "reference",
+          "value": "12750"
+        },
+        {
+          "name": "m_GamepadSettingLinker",
+          "kind": "reference",
+          "value": "11151"
+        }
+      ]
+    },
+    {
+      "class": "VsyncController",
+      "pathId": "10471",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "PostProcessingEffectController",
+      "pathId": "10478",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": false
+        },
+        {
+          "name": "postProcessingEffect",
+          "kind": "enum:ECollectionSortingType",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "10544",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "11782"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "3097"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "class": "Mask",
+      "pathId": "10565",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_ShowMaskGraphic",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "10583",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "10737"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "class": "Mask",
+      "pathId": "10607",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_ShowMaskGraphic",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "KeybindSetting",
+      "pathId": "10608",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_GameBaseKey",
+          "kind": "enum:EGameBaseKey",
+          "value": 22
+        },
+        {
+          "name": "m_GameBaseKeySecondary",
+          "kind": "enum:EGameBaseKey",
+          "value": 0
+        },
+        {
+          "name": "m_IsGamepad",
+          "kind": "bool",
+          "value": true
+        },
+        {
+          "name": "m_UpdatingGrp",
+          "kind": "reference",
+          "value": "1827"
+        },
+        {
+          "name": "m_TooltipUI",
+          "kind": "reference",
+          "value": "12679"
+        },
+        {
+          "name": "m_GamepadSettingLinker",
+          "kind": "reference",
+          "value": "11304"
+        }
+      ]
+    },
+    {
+      "class": "RefreshRateController",
+      "pathId": "10613",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "Mask",
+      "pathId": "10699",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_ShowMaskGraphic",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "10720",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "11332"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "class": "KeybindSetting",
+      "pathId": "10730",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_GameBaseKey",
+          "kind": "enum:EGameBaseKey",
+          "value": 3
+        },
+        {
+          "name": "m_GameBaseKeySecondary",
+          "kind": "enum:EGameBaseKey",
+          "value": 4
+        },
+        {
+          "name": "m_IsGamepad",
+          "kind": "bool",
+          "value": true
+        },
+        {
+          "name": "m_UpdatingGrp",
+          "kind": "reference",
+          "value": "1173"
+        },
+        {
+          "name": "m_TooltipUI",
+          "kind": "reference",
+          "value": "12596"
+        },
+        {
+          "name": "m_GamepadSettingLinker",
+          "kind": "reference",
+          "value": "11359"
+        }
+      ]
+    },
+    {
+      "class": "FpsController",
+      "pathId": "10731",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "10748",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "11367"
+        }
+      ]
+    },
+    {
+      "class": "Mask",
+      "pathId": "10809",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_ShowMaskGraphic",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "Mask",
+      "pathId": "10827",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_ShowMaskGraphic",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "ShadowDistanceController",
+      "pathId": "10828",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "CustomBooleanController",
+      "pathId": "10832",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": false
+        },
+        {
+          "name": "customBooleanId",
+          "kind": "int",
+          "value": 11
+        }
+      ]
+    },
+    {
+      "class": "KeybindSetting",
+      "pathId": "10886",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_GameBaseKey",
+          "kind": "enum:EGameBaseKey",
+          "value": 14
+        },
+        {
+          "name": "m_GameBaseKeySecondary",
+          "kind": "enum:EGameBaseKey",
+          "value": 0
+        },
+        {
+          "name": "m_IsGamepad",
+          "kind": "bool",
+          "value": true
+        },
+        {
+          "name": "m_UpdatingGrp",
+          "kind": "reference",
+          "value": "1413"
+        },
+        {
+          "name": "m_TooltipUI",
+          "kind": "reference",
+          "value": "12415"
+        },
+        {
+          "name": "m_GamepadSettingLinker",
+          "kind": "reference",
+          "value": "11513"
+        }
+      ]
+    },
+    {
+      "class": "KeybindSetting",
+      "pathId": "10890",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_GameBaseKey",
+          "kind": "enum:EGameBaseKey",
+          "value": 33
+        },
+        {
+          "name": "m_GameBaseKeySecondary",
+          "kind": "enum:EGameBaseKey",
+          "value": 0
+        },
+        {
+          "name": "m_IsGamepad",
+          "kind": "bool",
+          "value": true
+        },
+        {
+          "name": "m_UpdatingGrp",
+          "kind": "reference",
+          "value": "1415"
+        },
+        {
+          "name": "m_TooltipUI",
+          "kind": "reference",
+          "value": "12409"
+        },
+        {
+          "name": "m_GamepadSettingLinker",
+          "kind": "reference",
+          "value": "11520"
+        }
+      ]
+    },
+    {
+      "class": "Mask",
+      "pathId": "10891",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_ShowMaskGraphic",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "10897",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "11505"
+        }
+      ]
+    },
+    {
+      "class": "Mask",
+      "pathId": "10905",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_ShowMaskGraphic",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "KeybindSetting",
+      "pathId": "10916",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_GameBaseKey",
+          "kind": "enum:EGameBaseKey",
+          "value": 29
+        },
+        {
+          "name": "m_GameBaseKeySecondary",
+          "kind": "enum:EGameBaseKey",
+          "value": 0
+        },
+        {
+          "name": "m_IsGamepad",
+          "kind": "bool",
+          "value": true
+        },
+        {
+          "name": "m_UpdatingGrp",
+          "kind": "reference",
+          "value": "1425"
+        },
+        {
+          "name": "m_TooltipUI",
+          "kind": "reference",
+          "value": "12423"
+        },
+        {
+          "name": "m_GamepadSettingLinker",
+          "kind": "reference",
+          "value": "11528"
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "10919",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "12963"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "10924",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "11525"
+        }
+      ]
+    },
+    {
+      "class": "Mask",
+      "pathId": "10942",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_ShowMaskGraphic",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "10954",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "10732"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "class": "AntiAliasingController",
+      "pathId": "10982",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "CustomBooleanController",
+      "pathId": "10997",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": true
+        },
+        {
+          "name": "customBooleanId",
+          "kind": "int",
+          "value": 10
+        }
+      ]
+    },
+    {
+      "class": "Mask",
+      "pathId": "11007",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_ShowMaskGraphic",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "11019",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "10614"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "11036",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "10342"
+        }
+      ]
+    },
+    {
+      "class": "KeybindSetting",
+      "pathId": "11037",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_GameBaseKey",
+          "kind": "enum:EGameBaseKey",
+          "value": 16
+        },
+        {
+          "name": "m_GameBaseKeySecondary",
+          "kind": "enum:EGameBaseKey",
+          "value": 0
+        },
+        {
+          "name": "m_IsGamepad",
+          "kind": "bool",
+          "value": true
+        },
+        {
+          "name": "m_UpdatingGrp",
+          "kind": "reference",
+          "value": "722"
+        },
+        {
+          "name": "m_TooltipUI",
+          "kind": "reference",
+          "value": "12239"
+        },
+        {
+          "name": "m_GamepadSettingLinker",
+          "kind": "reference",
+          "value": "10340"
+        }
+      ]
+    },
+    {
+      "class": "FullscreenController",
+      "pathId": "11041",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "KeybindSetting",
+      "pathId": "11051",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_GameBaseKey",
+          "kind": "enum:EGameBaseKey",
+          "value": 21
+        },
+        {
+          "name": "m_GameBaseKeySecondary",
+          "kind": "enum:EGameBaseKey",
+          "value": 0
+        },
+        {
+          "name": "m_IsGamepad",
+          "kind": "bool",
+          "value": true
+        },
+        {
+          "name": "m_UpdatingGrp",
+          "kind": "reference",
+          "value": "758"
+        },
+        {
+          "name": "m_TooltipUI",
+          "kind": "reference",
+          "value": "12250"
+        },
+        {
+          "name": "m_GamepadSettingLinker",
+          "kind": "reference",
+          "value": "10347"
+        }
+      ]
+    },
+    {
+      "class": "PostProcessingController",
+      "pathId": "11053",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "CustomFloatController",
+      "pathId": "11063",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": true
+        },
+        {
+          "name": "customFloatId",
+          "kind": "int",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "class": "CustomBooleanController",
+      "pathId": "11078",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": true
+        },
+        {
+          "name": "customBooleanId",
+          "kind": "int",
+          "value": 15
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "11084",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "10391"
+        }
+      ]
+    },
+    {
+      "class": "PostProcessingEffectController",
+      "pathId": "11134",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": false
+        },
+        {
+          "name": "postProcessingEffect",
+          "kind": "enum:ECollectionSortingType",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "11151",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "10420"
+        }
+      ]
+    },
+    {
+      "class": "CustomFloatController",
+      "pathId": "11210",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": true
+        },
+        {
+          "name": "customFloatId",
+          "kind": "int",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "class": "Mask",
+      "pathId": "11212",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_ShowMaskGraphic",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "Mask",
+      "pathId": "11217",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_ShowMaskGraphic",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "CustomBooleanController",
+      "pathId": "11258",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": true
+        },
+        {
+          "name": "customBooleanId",
+          "kind": "int",
+          "value": 8
+        }
+      ]
+    },
+    {
+      "class": "Mask",
+      "pathId": "11298",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_ShowMaskGraphic",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "CustomBooleanController",
+      "pathId": "11299",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": true
+        },
+        {
+          "name": "customBooleanId",
+          "kind": "int",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "11304",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "10608"
+        }
+      ]
+    },
+    {
+      "class": "PostProcessingEffectController",
+      "pathId": "11324",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": false
+        },
+        {
+          "name": "postProcessingEffect",
+          "kind": "enum:ECollectionSortingType",
+          "value": 8
+        }
+      ]
+    },
+    {
+      "class": "PostProcessingEffectController",
+      "pathId": "11334",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": false
+        },
+        {
+          "name": "postProcessingEffect",
+          "kind": "enum:ECollectionSortingType",
+          "value": 7
+        }
+      ]
+    },
+    {
+      "class": "CustomBooleanController",
+      "pathId": "11335",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": true
+        },
+        {
+          "name": "customBooleanId",
+          "kind": "int",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "class": "PostProcessingEffectController",
+      "pathId": "11345",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": false
+        },
+        {
+          "name": "postProcessingEffect",
+          "kind": "enum:ECollectionSortingType",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "class": "PostProcessingEffectController",
+      "pathId": "11356",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": false
+        },
+        {
+          "name": "postProcessingEffect",
+          "kind": "enum:ECollectionSortingType",
+          "value": 9
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "11359",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "10730"
+        }
+      ]
+    },
+    {
+      "class": "KeybindSetting",
+      "pathId": "11367",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_GameBaseKey",
+          "kind": "enum:EGameBaseKey",
+          "value": 34
+        },
+        {
+          "name": "m_GameBaseKeySecondary",
+          "kind": "enum:EGameBaseKey",
+          "value": 0
+        },
+        {
+          "name": "m_IsGamepad",
+          "kind": "bool",
+          "value": true
+        },
+        {
+          "name": "m_UpdatingGrp",
+          "kind": "reference",
+          "value": "348"
+        },
+        {
+          "name": "m_TooltipUI",
+          "kind": "reference",
+          "value": "11881"
+        },
+        {
+          "name": "m_GamepadSettingLinker",
+          "kind": "reference",
+          "value": "10748"
+        }
+      ]
+    },
+    {
+      "class": "Mask",
+      "pathId": "11417",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_ShowMaskGraphic",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "11432",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "12021"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "class": "Mask",
+      "pathId": "11435",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_ShowMaskGraphic",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "11438",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "10250"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "11441",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "12120"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "11444",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "12858"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "11447",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "10220"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "class": "Mask",
+      "pathId": "11449",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_ShowMaskGraphic",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "11450",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "12251"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "11453",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "10535"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "11456",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "10169"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "11457",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "12842"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "1991"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "11490",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "11325"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "class": "Mask",
+      "pathId": "11503",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_ShowMaskGraphic",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "KeybindSetting",
+      "pathId": "11505",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_GameBaseKey",
+          "kind": "enum:EGameBaseKey",
+          "value": 20
+        },
+        {
+          "name": "m_GameBaseKeySecondary",
+          "kind": "enum:EGameBaseKey",
+          "value": 0
+        },
+        {
+          "name": "m_IsGamepad",
+          "kind": "bool",
+          "value": true
+        },
+        {
+          "name": "m_UpdatingGrp",
+          "kind": "reference",
+          "value": "507"
+        },
+        {
+          "name": "m_TooltipUI",
+          "kind": "reference",
+          "value": "11739"
+        },
+        {
+          "name": "m_GamepadSettingLinker",
+          "kind": "reference",
+          "value": "10897"
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "11513",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "10886"
+        }
+      ]
+    },
+    {
+      "class": "CustomFloatController",
+      "pathId": "11514",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": true
+        },
+        {
+          "name": "customFloatId",
+          "kind": "int",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "11516",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "12563"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "11520",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "10890"
+        }
+      ]
+    },
+    {
+      "class": "KeybindSetting",
+      "pathId": "11525",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_GameBaseKey",
+          "kind": "enum:EGameBaseKey",
+          "value": 10
+        },
+        {
+          "name": "m_GameBaseKeySecondary",
+          "kind": "enum:EGameBaseKey",
+          "value": 0
+        },
+        {
+          "name": "m_IsGamepad",
+          "kind": "bool",
+          "value": true
+        },
+        {
+          "name": "m_UpdatingGrp",
+          "kind": "reference",
+          "value": "539"
+        },
+        {
+          "name": "m_TooltipUI",
+          "kind": "reference",
+          "value": "11783"
+        },
+        {
+          "name": "m_GamepadSettingLinker",
+          "kind": "reference",
+          "value": "10924"
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "11528",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "10916"
+        }
+      ]
+    },
+    {
+      "class": "Mask",
+      "pathId": "11574",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_ShowMaskGraphic",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "CustomBooleanController",
+      "pathId": "11610",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": true
+        },
+        {
+          "name": "customBooleanId",
+          "kind": "int",
+          "value": 9
+        }
+      ]
+    },
+    {
+      "class": "Mask",
+      "pathId": "11614",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_ShowMaskGraphic",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "11622",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "11541"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "11624",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "12326"
+        }
+      ]
+    },
+    {
+      "class": "KeybindSetting",
+      "pathId": "11627",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_GameBaseKey",
+          "kind": "enum:EGameBaseKey",
+          "value": 18
+        },
+        {
+          "name": "m_GameBaseKeySecondary",
+          "kind": "enum:EGameBaseKey",
+          "value": 0
+        },
+        {
+          "name": "m_IsGamepad",
+          "kind": "bool",
+          "value": true
+        },
+        {
+          "name": "m_UpdatingGrp",
+          "kind": "reference",
+          "value": "3130"
+        },
+        {
+          "name": "m_TooltipUI",
+          "kind": "reference",
+          "value": "11593"
+        },
+        {
+          "name": "m_GamepadSettingLinker",
+          "kind": "reference",
+          "value": "12316"
+        }
+      ]
+    },
+    {
+      "class": "CustomBooleanController",
+      "pathId": "11632",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": true
+        },
+        {
+          "name": "customBooleanId",
+          "kind": "int",
+          "value": 5
+        }
+      ]
+    },
+    {
+      "class": "Mask",
+      "pathId": "11637",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_ShowMaskGraphic",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "11645",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "12155"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "class": "Mask",
+      "pathId": "11672",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_ShowMaskGraphic",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "11683",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "11616"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "class": "Mask",
+      "pathId": "11684",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_ShowMaskGraphic",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "Mask",
+      "pathId": "11742",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_ShowMaskGraphic",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "Mask",
+      "pathId": "11772",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_ShowMaskGraphic",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "Mask",
+      "pathId": "11784",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_ShowMaskGraphic",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "11791",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "12074"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "class": "Mask",
+      "pathId": "11804",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_ShowMaskGraphic",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "ShadowModeController",
+      "pathId": "11820",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "CustomBooleanController",
+      "pathId": "11872",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": true
+        },
+        {
+          "name": "customBooleanId",
+          "kind": "int",
+          "value": 6
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "11933",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "11414"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "11934",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "10414"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "2909"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "11946",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "12612"
+        }
+      ]
+    },
+    {
+      "class": "Mask",
+      "pathId": "11983",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_ShowMaskGraphic",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "11990",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "11394"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "12010",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "10231"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "892"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "class": "Mask",
+      "pathId": "12017",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_ShowMaskGraphic",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "CustomBooleanController",
+      "pathId": "12034",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": false
+        },
+        {
+          "name": "customBooleanId",
+          "kind": "int",
+          "value": 13
+        }
+      ]
+    },
+    {
+      "class": "Mask",
+      "pathId": "12035",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_ShowMaskGraphic",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "Mask",
+      "pathId": "12043",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_ShowMaskGraphic",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "TextureResolutionController",
+      "pathId": "12063",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "12067",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "10612"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "12118",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "12746"
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "12122",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "12308"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "12125",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "10298"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "607"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "class": "SaveLoadSlotPanelUI",
+      "pathId": "12130",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_SlotIndex",
+          "kind": "int",
+          "value": 3
+        },
+        {
+          "name": "m_SaveBtn",
+          "kind": "reference",
+          "value": "1782"
+        },
+        {
+          "name": "m_LoadBtn",
+          "kind": "reference",
+          "value": "1158"
+        },
+        {
+          "name": "m_ShopName",
+          "kind": "reference",
+          "value": "9800"
+        },
+        {
+          "name": "m_Money",
+          "kind": "reference",
+          "value": "9799"
+        },
+        {
+          "name": "m_Level",
+          "kind": "reference",
+          "value": "9649"
+        },
+        {
+          "name": "m_DaysPassed",
+          "kind": "reference",
+          "value": "9763"
+        }
+      ]
+    },
+    {
+      "class": "SaveLoadSlotPanelUI",
+      "pathId": "12131",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_SlotIndex",
+          "kind": "int",
+          "value": 2
+        },
+        {
+          "name": "m_SaveBtn",
+          "kind": "reference",
+          "value": "1780"
+        },
+        {
+          "name": "m_LoadBtn",
+          "kind": "reference",
+          "value": "1157"
+        },
+        {
+          "name": "m_ShopName",
+          "kind": "reference",
+          "value": "9803"
+        },
+        {
+          "name": "m_Money",
+          "kind": "reference",
+          "value": "9804"
+        },
+        {
+          "name": "m_Level",
+          "kind": "reference",
+          "value": "9646"
+        },
+        {
+          "name": "m_DaysPassed",
+          "kind": "reference",
+          "value": "9759"
+        }
+      ]
+    },
+    {
+      "class": "SaveLoadSlotPanelUI",
+      "pathId": "12132",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_SlotIndex",
+          "kind": "int",
+          "value": 1
+        },
+        {
+          "name": "m_SaveBtn",
+          "kind": "reference",
+          "value": "1781"
+        },
+        {
+          "name": "m_LoadBtn",
+          "kind": "reference",
+          "value": "1156"
+        },
+        {
+          "name": "m_ShopName",
+          "kind": "reference",
+          "value": "9805"
+        },
+        {
+          "name": "m_Money",
+          "kind": "reference",
+          "value": "9806"
+        },
+        {
+          "name": "m_Level",
+          "kind": "reference",
+          "value": "9647"
+        },
+        {
+          "name": "m_DaysPassed",
+          "kind": "reference",
+          "value": "9761"
+        }
+      ]
+    },
+    {
+      "class": "KeybindSetting",
+      "pathId": "12146",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_GameBaseKey",
+          "kind": "enum:EGameBaseKey",
+          "value": 43
+        },
+        {
+          "name": "m_GameBaseKeySecondary",
+          "kind": "enum:EGameBaseKey",
+          "value": 0
+        },
+        {
+          "name": "m_IsGamepad",
+          "kind": "bool",
+          "value": true
+        },
+        {
+          "name": "m_UpdatingGrp",
+          "kind": "reference",
+          "value": "2914"
+        },
+        {
+          "name": "m_TooltipUI",
+          "kind": "reference",
+          "value": "11093"
+        },
+        {
+          "name": "m_GamepadSettingLinker",
+          "kind": "reference",
+          "value": "12913"
+        }
+      ]
+    },
+    {
+      "class": "KeybindSetting",
+      "pathId": "12158",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_GameBaseKey",
+          "kind": "enum:EGameBaseKey",
+          "value": 43
+        },
+        {
+          "name": "m_GameBaseKeySecondary",
+          "kind": "enum:EGameBaseKey",
+          "value": 0
+        },
+        {
+          "name": "m_IsGamepad",
+          "kind": "bool",
+          "value": false
+        },
+        {
+          "name": "m_UpdatingGrp",
+          "kind": "reference",
+          "value": "2929"
+        },
+        {
+          "name": "m_TooltipUI",
+          "kind": "reference",
+          "value": "11120"
+        },
+        {
+          "name": "m_GamepadSettingLinker",
+          "kind": "reference",
+          "value": "12937"
+        }
+      ]
+    },
+    {
+      "class": "KeybindSetting",
+      "pathId": "12159",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_GameBaseKey",
+          "kind": "enum:EGameBaseKey",
+          "value": 9
+        },
+        {
+          "name": "m_GameBaseKeySecondary",
+          "kind": "enum:EGameBaseKey",
+          "value": 0
+        },
+        {
+          "name": "m_IsGamepad",
+          "kind": "bool",
+          "value": false
+        },
+        {
+          "name": "m_UpdatingGrp",
+          "kind": "reference",
+          "value": "2933"
+        },
+        {
+          "name": "m_TooltipUI",
+          "kind": "reference",
+          "value": "11121"
+        },
+        {
+          "name": "m_GamepadSettingLinker",
+          "kind": "reference",
+          "value": "12936"
+        }
+      ]
+    },
+    {
+      "class": "KeybindSetting",
+      "pathId": "12160",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_GameBaseKey",
+          "kind": "enum:EGameBaseKey",
+          "value": 17
+        },
+        {
+          "name": "m_GameBaseKeySecondary",
+          "kind": "enum:EGameBaseKey",
+          "value": 0
+        },
+        {
+          "name": "m_IsGamepad",
+          "kind": "bool",
+          "value": false
+        },
+        {
+          "name": "m_UpdatingGrp",
+          "kind": "reference",
+          "value": "2932"
+        },
+        {
+          "name": "m_TooltipUI",
+          "kind": "reference",
+          "value": "11122"
+        },
+        {
+          "name": "m_GamepadSettingLinker",
+          "kind": "reference",
+          "value": "12935"
+        }
+      ]
+    },
+    {
+      "class": "KeybindSetting",
+      "pathId": "12161",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_GameBaseKey",
+          "kind": "enum:EGameBaseKey",
+          "value": 34
+        },
+        {
+          "name": "m_GameBaseKeySecondary",
+          "kind": "enum:EGameBaseKey",
+          "value": 0
+        },
+        {
+          "name": "m_IsGamepad",
+          "kind": "bool",
+          "value": false
+        },
+        {
+          "name": "m_UpdatingGrp",
+          "kind": "reference",
+          "value": "2931"
+        },
+        {
+          "name": "m_TooltipUI",
+          "kind": "reference",
+          "value": "11124"
+        },
+        {
+          "name": "m_GamepadSettingLinker",
+          "kind": "reference",
+          "value": "12933"
+        }
+      ]
+    },
+    {
+      "class": "KeybindSetting",
+      "pathId": "12162",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_GameBaseKey",
+          "kind": "enum:EGameBaseKey",
+          "value": 3
+        },
+        {
+          "name": "m_GameBaseKeySecondary",
+          "kind": "enum:EGameBaseKey",
+          "value": 4
+        },
+        {
+          "name": "m_IsGamepad",
+          "kind": "bool",
+          "value": false
+        },
+        {
+          "name": "m_UpdatingGrp",
+          "kind": "reference",
+          "value": "2930"
+        },
+        {
+          "name": "m_TooltipUI",
+          "kind": "reference",
+          "value": "11123"
+        },
+        {
+          "name": "m_GamepadSettingLinker",
+          "kind": "reference",
+          "value": "12934"
+        }
+      ]
+    },
+    {
+      "class": "KeybindSetting",
+      "pathId": "12163",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_GameBaseKey",
+          "kind": "enum:EGameBaseKey",
+          "value": 12
+        },
+        {
+          "name": "m_GameBaseKeySecondary",
+          "kind": "enum:EGameBaseKey",
+          "value": 0
+        },
+        {
+          "name": "m_IsGamepad",
+          "kind": "bool",
+          "value": false
+        },
+        {
+          "name": "m_UpdatingGrp",
+          "kind": "reference",
+          "value": "2935"
+        },
+        {
+          "name": "m_TooltipUI",
+          "kind": "reference",
+          "value": "11126"
+        },
+        {
+          "name": "m_GamepadSettingLinker",
+          "kind": "reference",
+          "value": "12940"
+        }
+      ]
+    },
+    {
+      "class": "KeybindSetting",
+      "pathId": "12164",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_GameBaseKey",
+          "kind": "enum:EGameBaseKey",
+          "value": 10
+        },
+        {
+          "name": "m_GameBaseKeySecondary",
+          "kind": "enum:EGameBaseKey",
+          "value": 0
+        },
+        {
+          "name": "m_IsGamepad",
+          "kind": "bool",
+          "value": false
+        },
+        {
+          "name": "m_UpdatingGrp",
+          "kind": "reference",
+          "value": "2934"
+        },
+        {
+          "name": "m_TooltipUI",
+          "kind": "reference",
+          "value": "11125"
+        },
+        {
+          "name": "m_GamepadSettingLinker",
+          "kind": "reference",
+          "value": "12941"
+        }
+      ]
+    },
+    {
+      "class": "KeybindSetting",
+      "pathId": "12165",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_GameBaseKey",
+          "kind": "enum:EGameBaseKey",
+          "value": 16
+        },
+        {
+          "name": "m_GameBaseKeySecondary",
+          "kind": "enum:EGameBaseKey",
+          "value": 0
+        },
+        {
+          "name": "m_IsGamepad",
+          "kind": "bool",
+          "value": false
+        },
+        {
+          "name": "m_UpdatingGrp",
+          "kind": "reference",
+          "value": "2937"
+        },
+        {
+          "name": "m_TooltipUI",
+          "kind": "reference",
+          "value": "11128"
+        },
+        {
+          "name": "m_GamepadSettingLinker",
+          "kind": "reference",
+          "value": "12939"
+        }
+      ]
+    },
+    {
+      "class": "KeybindSetting",
+      "pathId": "12166",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_GameBaseKey",
+          "kind": "enum:EGameBaseKey",
+          "value": 14
+        },
+        {
+          "name": "m_GameBaseKeySecondary",
+          "kind": "enum:EGameBaseKey",
+          "value": 0
+        },
+        {
+          "name": "m_IsGamepad",
+          "kind": "bool",
+          "value": false
+        },
+        {
+          "name": "m_UpdatingGrp",
+          "kind": "reference",
+          "value": "2936"
+        },
+        {
+          "name": "m_TooltipUI",
+          "kind": "reference",
+          "value": "11127"
+        },
+        {
+          "name": "m_GamepadSettingLinker",
+          "kind": "reference",
+          "value": "12938"
+        }
+      ]
+    },
+    {
+      "class": "KeybindSetting",
+      "pathId": "12167",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_GameBaseKey",
+          "kind": "enum:EGameBaseKey",
+          "value": 8
+        },
+        {
+          "name": "m_GameBaseKeySecondary",
+          "kind": "enum:EGameBaseKey",
+          "value": 0
+        },
+        {
+          "name": "m_IsGamepad",
+          "kind": "bool",
+          "value": false
+        },
+        {
+          "name": "m_UpdatingGrp",
+          "kind": "reference",
+          "value": "2940"
+        },
+        {
+          "name": "m_TooltipUI",
+          "kind": "reference",
+          "value": "11111"
+        },
+        {
+          "name": "m_GamepadSettingLinker",
+          "kind": "reference",
+          "value": "12928"
+        }
+      ]
+    },
+    {
+      "class": "KeybindSetting",
+      "pathId": "12168",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_GameBaseKey",
+          "kind": "enum:EGameBaseKey",
+          "value": 32
+        },
+        {
+          "name": "m_GameBaseKeySecondary",
+          "kind": "enum:EGameBaseKey",
+          "value": 0
+        },
+        {
+          "name": "m_IsGamepad",
+          "kind": "bool",
+          "value": false
+        },
+        {
+          "name": "m_UpdatingGrp",
+          "kind": "reference",
+          "value": "2939"
+        },
+        {
+          "name": "m_TooltipUI",
+          "kind": "reference",
+          "value": "11113"
+        },
+        {
+          "name": "m_GamepadSettingLinker",
+          "kind": "reference",
+          "value": "12926"
+        }
+      ]
+    },
+    {
+      "class": "KeybindSetting",
+      "pathId": "12169",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_GameBaseKey",
+          "kind": "enum:EGameBaseKey",
+          "value": 31
+        },
+        {
+          "name": "m_GameBaseKeySecondary",
+          "kind": "enum:EGameBaseKey",
+          "value": 0
+        },
+        {
+          "name": "m_IsGamepad",
+          "kind": "bool",
+          "value": false
+        },
+        {
+          "name": "m_UpdatingGrp",
+          "kind": "reference",
+          "value": "2938"
+        },
+        {
+          "name": "m_TooltipUI",
+          "kind": "reference",
+          "value": "11112"
+        },
+        {
+          "name": "m_GamepadSettingLinker",
+          "kind": "reference",
+          "value": "12927"
+        }
+      ]
+    },
+    {
+      "class": "KeybindSetting",
+      "pathId": "12170",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_GameBaseKey",
+          "kind": "enum:EGameBaseKey",
+          "value": 33
+        },
+        {
+          "name": "m_GameBaseKeySecondary",
+          "kind": "enum:EGameBaseKey",
+          "value": 0
+        },
+        {
+          "name": "m_IsGamepad",
+          "kind": "bool",
+          "value": false
+        },
+        {
+          "name": "m_UpdatingGrp",
+          "kind": "reference",
+          "value": "2942"
+        },
+        {
+          "name": "m_TooltipUI",
+          "kind": "reference",
+          "value": "11114"
+        },
+        {
+          "name": "m_GamepadSettingLinker",
+          "kind": "reference",
+          "value": "12925"
+        }
+      ]
+    },
+    {
+      "class": "KeybindSetting",
+      "pathId": "12171",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_GameBaseKey",
+          "kind": "enum:EGameBaseKey",
+          "value": 18
+        },
+        {
+          "name": "m_GameBaseKeySecondary",
+          "kind": "enum:EGameBaseKey",
+          "value": 0
+        },
+        {
+          "name": "m_IsGamepad",
+          "kind": "bool",
+          "value": false
+        },
+        {
+          "name": "m_UpdatingGrp",
+          "kind": "reference",
+          "value": "2941"
+        },
+        {
+          "name": "m_TooltipUI",
+          "kind": "reference",
+          "value": "11115"
+        },
+        {
+          "name": "m_GamepadSettingLinker",
+          "kind": "reference",
+          "value": "12924"
+        }
+      ]
+    },
+    {
+      "class": "KeybindSetting",
+      "pathId": "12172",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_GameBaseKey",
+          "kind": "enum:EGameBaseKey",
+          "value": 22
+        },
+        {
+          "name": "m_GameBaseKeySecondary",
+          "kind": "enum:EGameBaseKey",
+          "value": 0
+        },
+        {
+          "name": "m_IsGamepad",
+          "kind": "bool",
+          "value": false
+        },
+        {
+          "name": "m_UpdatingGrp",
+          "kind": "reference",
+          "value": "2943"
+        },
+        {
+          "name": "m_TooltipUI",
+          "kind": "reference",
+          "value": "11116"
+        },
+        {
+          "name": "m_GamepadSettingLinker",
+          "kind": "reference",
+          "value": "12932"
+        }
+      ]
+    },
+    {
+      "class": "KeybindSetting",
+      "pathId": "12173",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_GameBaseKey",
+          "kind": "enum:EGameBaseKey",
+          "value": 20
+        },
+        {
+          "name": "m_GameBaseKeySecondary",
+          "kind": "enum:EGameBaseKey",
+          "value": 0
+        },
+        {
+          "name": "m_IsGamepad",
+          "kind": "bool",
+          "value": false
+        },
+        {
+          "name": "m_UpdatingGrp",
+          "kind": "reference",
+          "value": "2946"
+        },
+        {
+          "name": "m_TooltipUI",
+          "kind": "reference",
+          "value": "11118"
+        },
+        {
+          "name": "m_GamepadSettingLinker",
+          "kind": "reference",
+          "value": "12930"
+        }
+      ]
+    },
+    {
+      "class": "KeybindSetting",
+      "pathId": "12174",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_GameBaseKey",
+          "kind": "enum:EGameBaseKey",
+          "value": 21
+        },
+        {
+          "name": "m_GameBaseKeySecondary",
+          "kind": "enum:EGameBaseKey",
+          "value": 0
+        },
+        {
+          "name": "m_IsGamepad",
+          "kind": "bool",
+          "value": false
+        },
+        {
+          "name": "m_UpdatingGrp",
+          "kind": "reference",
+          "value": "2945"
+        },
+        {
+          "name": "m_TooltipUI",
+          "kind": "reference",
+          "value": "11117"
+        },
+        {
+          "name": "m_GamepadSettingLinker",
+          "kind": "reference",
+          "value": "12931"
+        }
+      ]
+    },
+    {
+      "class": "KeybindSetting",
+      "pathId": "12175",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_GameBaseKey",
+          "kind": "enum:EGameBaseKey",
+          "value": 15
+        },
+        {
+          "name": "m_GameBaseKeySecondary",
+          "kind": "enum:EGameBaseKey",
+          "value": 0
+        },
+        {
+          "name": "m_IsGamepad",
+          "kind": "bool",
+          "value": false
+        },
+        {
+          "name": "m_UpdatingGrp",
+          "kind": "reference",
+          "value": "2944"
+        },
+        {
+          "name": "m_TooltipUI",
+          "kind": "reference",
+          "value": "11119"
+        },
+        {
+          "name": "m_GamepadSettingLinker",
+          "kind": "reference",
+          "value": "12929"
+        }
+      ]
+    },
+    {
+      "class": "Mask",
+      "pathId": "12245",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_ShowMaskGraphic",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "CustomBooleanController",
+      "pathId": "12253",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": true
+        },
+        {
+          "name": "customBooleanId",
+          "kind": "int",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "12255",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "13013"
+        }
+      ]
+    },
+    {
+      "class": "CustomBooleanController",
+      "pathId": "12256",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": false
+        },
+        {
+          "name": "customBooleanId",
+          "kind": "int",
+          "value": 7
+        }
+      ]
+    },
+    {
+      "class": "KeybindSetting",
+      "pathId": "12287",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_GameBaseKey",
+          "kind": "enum:EGameBaseKey",
+          "value": 32
+        },
+        {
+          "name": "m_GameBaseKeySecondary",
+          "kind": "enum:EGameBaseKey",
+          "value": 0
+        },
+        {
+          "name": "m_IsGamepad",
+          "kind": "bool",
+          "value": true
+        },
+        {
+          "name": "m_UpdatingGrp",
+          "kind": "reference",
+          "value": "3070"
+        },
+        {
+          "name": "m_TooltipUI",
+          "kind": "reference",
+          "value": "10989"
+        },
+        {
+          "name": "m_GamepadSettingLinker",
+          "kind": "reference",
+          "value": "13034"
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "12316",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "11627"
+        }
+      ]
+    },
+    {
+      "class": "Mask",
+      "pathId": "12318",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_ShowMaskGraphic",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "BrightnessController",
+      "pathId": "12322",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": true
+        }
+      ]
+    },
+    {
+      "class": "KeybindSetting",
+      "pathId": "12326",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_GameBaseKey",
+          "kind": "enum:EGameBaseKey",
+          "value": 17
+        },
+        {
+          "name": "m_GameBaseKeySecondary",
+          "kind": "enum:EGameBaseKey",
+          "value": 0
+        },
+        {
+          "name": "m_IsGamepad",
+          "kind": "bool",
+          "value": true
+        },
+        {
+          "name": "m_UpdatingGrp",
+          "kind": "reference",
+          "value": "2232"
+        },
+        {
+          "name": "m_TooltipUI",
+          "kind": "reference",
+          "value": "10951"
+        },
+        {
+          "name": "m_GamepadSettingLinker",
+          "kind": "reference",
+          "value": "11624"
+        }
+      ]
+    },
+    {
+      "class": "Mask",
+      "pathId": "12335",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_ShowMaskGraphic",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "Mask",
+      "pathId": "12339",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_ShowMaskGraphic",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "Mask",
+      "pathId": "12347",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_ShowMaskGraphic",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "CustomFloatController",
+      "pathId": "12366",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": true
+        },
+        {
+          "name": "customFloatId",
+          "kind": "int",
+          "value": 4
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "12371",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "10950"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "12375",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "12361"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "12385",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "10844"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "class": "Mask",
+      "pathId": "12424",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_ShowMaskGraphic",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "SaveLoadSlotPanelUI",
+      "pathId": "12476",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_SlotIndex",
+          "kind": "int",
+          "value": 0
+        },
+        {
+          "name": "m_SaveBtn",
+          "kind": "reference",
+          "value": "555"
+        },
+        {
+          "name": "m_LoadBtn",
+          "kind": "reference",
+          "value": "750"
+        },
+        {
+          "name": "m_ShopName",
+          "kind": "reference",
+          "value": "9842"
+        },
+        {
+          "name": "m_Money",
+          "kind": "reference",
+          "value": "9841"
+        },
+        {
+          "name": "m_Level",
+          "kind": "reference",
+          "value": "9502"
+        },
+        {
+          "name": "m_DaysPassed",
+          "kind": "reference",
+          "value": "9827"
+        }
+      ]
+    },
+    {
+      "class": "PostProcessingEffectController",
+      "pathId": "12481",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": false
+        },
+        {
+          "name": "postProcessingEffect",
+          "kind": "enum:ECollectionSortingType",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "class": "CustomBooleanController",
+      "pathId": "12519",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": true
+        },
+        {
+          "name": "customBooleanId",
+          "kind": "int",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "class": "CustomBooleanController",
+      "pathId": "12520",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": false
+        },
+        {
+          "name": "customBooleanId",
+          "kind": "int",
+          "value": 12
+        }
+      ]
+    },
+    {
+      "class": "ShadowResolutionController",
+      "pathId": "12526",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "Mask",
+      "pathId": "12542",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_ShowMaskGraphic",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "CustomBooleanController",
+      "pathId": "12549",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": true
+        },
+        {
+          "name": "customBooleanId",
+          "kind": "int",
+          "value": 4
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "12556",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "11562"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "1683"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "class": "CustomFloatController",
+      "pathId": "12607",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": true
+        },
+        {
+          "name": "customFloatId",
+          "kind": "int",
+          "value": 5
+        }
+      ]
+    },
+    {
+      "class": "KeybindSetting",
+      "pathId": "12612",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_GameBaseKey",
+          "kind": "enum:EGameBaseKey",
+          "value": 1
+        },
+        {
+          "name": "m_GameBaseKeySecondary",
+          "kind": "enum:EGameBaseKey",
+          "value": 2
+        },
+        {
+          "name": "m_IsGamepad",
+          "kind": "bool",
+          "value": true
+        },
+        {
+          "name": "m_UpdatingGrp",
+          "kind": "reference",
+          "value": "2547"
+        },
+        {
+          "name": "m_TooltipUI",
+          "kind": "reference",
+          "value": "10718"
+        },
+        {
+          "name": "m_GamepadSettingLinker",
+          "kind": "reference",
+          "value": "11946"
+        }
+      ]
+    },
+    {
+      "class": "PostProcessingEffectController",
+      "pathId": "12666",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": false
+        },
+        {
+          "name": "postProcessingEffect",
+          "kind": "enum:ECollectionSortingType",
+          "value": 10
+        }
+      ]
+    },
+    {
+      "class": "CustomBooleanController",
+      "pathId": "12672",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": false
+        },
+        {
+          "name": "customBooleanId",
+          "kind": "int",
+          "value": 14
+        }
+      ]
+    },
+    {
+      "class": "Mask",
+      "pathId": "12688",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_ShowMaskGraphic",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "12703",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "12399"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "class": "Mask",
+      "pathId": "12708",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_ShowMaskGraphic",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "Mask",
+      "pathId": "12722",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_ShowMaskGraphic",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "PostProcessingEffectController",
+      "pathId": "12723",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": false
+        },
+        {
+          "name": "postProcessingEffect",
+          "kind": "enum:ECollectionSortingType",
+          "value": 4
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "12730",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "12609"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "class": "KeybindSetting",
+      "pathId": "12746",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_GameBaseKey",
+          "kind": "enum:EGameBaseKey",
+          "value": 8
+        },
+        {
+          "name": "m_GameBaseKeySecondary",
+          "kind": "enum:EGameBaseKey",
+          "value": 0
+        },
+        {
+          "name": "m_IsGamepad",
+          "kind": "bool",
+          "value": true
+        },
+        {
+          "name": "m_UpdatingGrp",
+          "kind": "reference",
+          "value": "1980"
+        },
+        {
+          "name": "m_TooltipUI",
+          "kind": "reference",
+          "value": "10431"
+        },
+        {
+          "name": "m_GamepadSettingLinker",
+          "kind": "reference",
+          "value": "12118"
+        }
+      ]
+    },
+    {
+      "class": "ResolutionController",
+      "pathId": "12762",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "PostProcessingEffectController",
+      "pathId": "12765",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": false
+        },
+        {
+          "name": "postProcessingEffect",
+          "kind": "enum:ECollectionSortingType",
+          "value": 6
+        }
+      ]
+    },
+    {
+      "class": "ShadowModeController",
+      "pathId": "12768",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "ShadowDistanceController",
+      "pathId": "12772",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "CustomBooleanController",
+      "pathId": "12776",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": true
+        },
+        {
+          "name": "customBooleanId",
+          "kind": "int",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "class": "PostProcessingEffectController",
+      "pathId": "12779",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": false
+        },
+        {
+          "name": "postProcessingEffect",
+          "kind": "enum:ECollectionSortingType",
+          "value": 4
+        }
+      ]
+    },
+    {
+      "class": "MasterVolumeController",
+      "pathId": "12782",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": true
+        }
+      ]
+    },
+    {
+      "class": "FpsController",
+      "pathId": "12789",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "Mask",
+      "pathId": "12794",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_ShowMaskGraphic",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "PostProcessingEffectController",
+      "pathId": "12801",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": false
+        },
+        {
+          "name": "postProcessingEffect",
+          "kind": "enum:ECollectionSortingType",
+          "value": 8
+        }
+      ]
+    },
+    {
+      "class": "PostProcessingEffectController",
+      "pathId": "12809",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": false
+        },
+        {
+          "name": "postProcessingEffect",
+          "kind": "enum:ECollectionSortingType",
+          "value": 5
+        }
+      ]
+    },
+    {
+      "class": "PostProcessingController",
+      "pathId": "12813",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "VsyncController",
+      "pathId": "12815",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "PostProcessingEffectController",
+      "pathId": "12816",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": false
+        },
+        {
+          "name": "postProcessingEffect",
+          "kind": "enum:ECollectionSortingType",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "class": "AudioMixerVolumeController",
+      "pathId": "12819",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": true
+        },
+        {
+          "name": "audioMixerConfigId",
+          "kind": "int",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "class": "BrightnessController",
+      "pathId": "12824",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": true
+        }
+      ]
+    },
+    {
+      "class": "Mask",
+      "pathId": "12828",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_ShowMaskGraphic",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "PostProcessingEffectController",
+      "pathId": "12831",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": false
+        },
+        {
+          "name": "postProcessingEffect",
+          "kind": "enum:ECollectionSortingType",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "class": "PostProcessingEffectController",
+      "pathId": "12835",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": false
+        },
+        {
+          "name": "postProcessingEffect",
+          "kind": "enum:ECollectionSortingType",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "class": "CustomFloatController",
+      "pathId": "12843",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": true
+        },
+        {
+          "name": "customFloatId",
+          "kind": "int",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "class": "PostProcessingEffectController",
+      "pathId": "12845",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": false
+        },
+        {
+          "name": "postProcessingEffect",
+          "kind": "enum:ECollectionSortingType",
+          "value": 9
+        }
+      ]
+    },
+    {
+      "class": "Mask",
+      "pathId": "12849",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_ShowMaskGraphic",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "PostProcessingEffectController",
+      "pathId": "12852",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": false
+        },
+        {
+          "name": "postProcessingEffect",
+          "kind": "enum:ECollectionSortingType",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "class": "PostProcessingEffectController",
+      "pathId": "12857",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": false
+        },
+        {
+          "name": "postProcessingEffect",
+          "kind": "enum:ECollectionSortingType",
+          "value": 7
+        }
+      ]
+    },
+    {
+      "class": "AntiAliasingController",
+      "pathId": "12860",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "ShadowResolutionController",
+      "pathId": "12863",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "PostProcessingEffectController",
+      "pathId": "12868",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": false
+        },
+        {
+          "name": "postProcessingEffect",
+          "kind": "enum:ECollectionSortingType",
+          "value": 10
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "12886",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "12707"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "3349"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "class": "ResolutionController",
+      "pathId": "12912",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "12913",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "12146"
+        }
+      ]
+    },
+    {
+      "class": "CustomBooleanController",
+      "pathId": "12918",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": true
+        },
+        {
+          "name": "customBooleanId",
+          "kind": "int",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "12924",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "12171"
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "12925",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "12170"
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "12926",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "12168"
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "12927",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "12169"
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "12928",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "12167"
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "12929",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "12175"
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "12930",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "12173"
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "12931",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "12174"
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "12932",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "12172"
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "12933",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "12161"
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "12934",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "12162"
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "12935",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "12160"
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "12936",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "12159"
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "12937",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "12158"
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "12938",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "12166"
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "12939",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "12165"
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "12940",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "12163"
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "12941",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "12164"
+        }
+      ]
+    },
+    {
+      "class": "Mask",
+      "pathId": "12987",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_ShowMaskGraphic",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "KeybindSetting",
+      "pathId": "13013",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_GameBaseKey",
+          "kind": "enum:EGameBaseKey",
+          "value": 12
+        },
+        {
+          "name": "m_GameBaseKeySecondary",
+          "kind": "enum:EGameBaseKey",
+          "value": 0
+        },
+        {
+          "name": "m_IsGamepad",
+          "kind": "bool",
+          "value": true
+        },
+        {
+          "name": "m_UpdatingGrp",
+          "kind": "reference",
+          "value": "2162"
+        },
+        {
+          "name": "m_TooltipUI",
+          "kind": "reference",
+          "value": "10351"
+        },
+        {
+          "name": "m_GamepadSettingLinker",
+          "kind": "reference",
+          "value": "12255"
+        }
+      ]
+    },
+    {
+      "class": "PostProcessingEffectController",
+      "pathId": "13024",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": false
+        },
+        {
+          "name": "postProcessingEffect",
+          "kind": "enum:ECollectionSortingType",
+          "value": 6
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "13034",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "12287"
+        }
+      ]
+    },
+    {
+      "class": "PostProcessingEffectController",
+      "pathId": "13048",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "autoApply",
+          "kind": "bool",
+          "value": false
+        },
+        {
+          "name": "postProcessingEffect",
+          "kind": "enum:ECollectionSortingType",
+          "value": 5
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "13049",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "10468"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "class": "Mask",
+      "pathId": "13053",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_ShowMaskGraphic",
+          "kind": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "class": "GamepadSettingLinker",
+      "pathId": "13060",
+      "source": "level1 + globalgamemanagers.assets",
+      "values": [
+        {
+          "name": "m_Toggle",
+          "kind": "reference",
+          "value": "12435"
+        },
+        {
+          "name": "m_Dropdown",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_Slider",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_SliderActiveThumbstickIcon",
+          "kind": "reference",
+          "value": "0"
+        },
+        {
+          "name": "m_KeybindSetting",
+          "kind": "reference",
+          "value": "0"
+        }
+      ]
+    }
+  ]
+}

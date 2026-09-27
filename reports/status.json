@@ -1,0 +1,31 @@
+{
+  "site": "tcgshopdb.com",
+  "head": "08514d3",
+  "commits": 66,
+  "pages": 257,
+  "indexable": 13,
+  "noindex": 244,
+  "classes": 240,
+  "fields": 9593,
+  "version": "OPNeonGames | Card Shop Simulator (app.info)",
+  "generatedBy": "pipeline/status.mjs",
+  "headNote": "generated from this commit; the commit that adds this file is one step later",
+  "handoff": {
+    "trackedFiles": 48,
+    "byTop": {
+      "(root)": 6,
+      ".github": 1,
+      "data": 2,
+      "pipeline": 21,
+      "reports": 16,
+      "tests": 1,
+      "tools": 1
+    },
+    "excludedCount": 0,
+    "excluded": []
+  },
+  "valueLayer": {
+    "file": "data/normalized/p0-instances.json",
+    "count": 260
+  }
+}
