@@ -10,8 +10,9 @@
  *     disclaimer, privacy, terms) are indexable and listed.
  * Nothing is estimated: a value this build does not have is rendered as "unknown".
  */
-import { readFileSync, writeFileSync, mkdirSync, rmSync, existsSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, rmSync, existsSync, copyFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 export const SITE = {
   name: 'TCG Card Shop Wiki',
@@ -76,6 +77,10 @@ export function build(inventoryPath, outDir) {
   const inv = JSON.parse(readFileSync(inventoryPath, 'utf8'));
   rmSync(outDir, { recursive: true, force: true });
   mkdirSync(join(outDir, 'entity'), { recursive: true });
+  const assetRoot = join(dirname(fileURLToPath(import.meta.url)), '..', 'web', 'assets');
+  const asset = (name) => { mkdirSync(join(outDir, 'assets'), { recursive: true }); copyFileSync(join(assetRoot, name), join(outDir, 'assets', name)); return '/assets/' + name; };
+  const heroImage = asset('hero-shop.jpg');
+  const featuredImage = asset('featured-card.jpg');
   const pages = new Map();
   const classes = (inv.classes ?? []).slice().sort((a, b) => b.written - a.written);
   const used = new Set();
@@ -92,10 +97,10 @@ export function build(inventoryPath, outDir) {
     '<section class="hero"><div><p class="eyebrow">A player guide for the card shop</p><h1>TCG Card Shop Simulator</h1><p class="lead">' + esc(SITE.tagline) + '. Find a card, plan your stock and keep the counter moving.</p>' +
     '<form class="hero-search" action="/search.html"><input name="q" type="search" placeholder="Search cards, packs or shop guides"><button>Search</button></form>' +
     '<p class="actions"><a class="button primary" href="/guide.html">Start here</a><a class="button" href="/cards.html">Browse cards & packs</a></p></div>' +
-    '<div class="hero-art" aria-label="TCG Card Shop Simulator"><span>SHOP LOG / 001</span><strong>PACKS.<br>PULLS.<br>PROFIT.</strong><span>OPEN · PRICE · STOCK</span></div></section>' +
+    '<figure class="hero-media"><img src="' + heroImage + '" alt="TCG Card Shop Simulator shop furniture and layout"><figcaption>In-game shop layout · verified game asset</figcaption></figure></section>' +
     '<section class="section"><p class="eyebrow">Choose your next task</p><h2>Run the next shift</h2><div class="task-grid">' +
     [['Open the right pack','Learn packs, pulls and rarity before you buy.','/cards.html'],['Price a single','Check what a card means for the counter.','/search.html'],['Keep shelves stocked','Plan storage and restocking through a busy day.','/collection.html'],['Grow the shop','Choose an upgrade at the right time.','/guide.html']].map(([a,b,h])=>'<a class="task" href="'+h+'"><strong>'+a+'</strong><span>'+b+'</span><i>→</i></a>').join('')+'</div></section>' +
-    '<section class="section split"><div><p class="eyebrow">Browse the archive</p><h2>The cards and the shop around them.</h2><p class="dim">Find packs, rarity, pricing, customers, shelving and the next upgrade.</p></div><div class="archive-list"><a href="/cards.html"><b>Cards & rarity</b><span>Know what you pulled</span></a><a href="/collection.html"><b>Packs & stock</b><span>Keep the shelves ready</span></a><a href="/guide.html"><b>Shop guides</b><span>Make the next day better</span></a></div></section>', inv));
+    '<section class="section split"><div><p class="eyebrow">Browse the archive</p><h2>The cards and the shop around them.</h2><p class="dim">Find packs, rarity, pricing, customers, shelving and the next upgrade.</p><figure class="feature-card"><img src="' + featuredImage + '" alt="TCG Card Shop Simulator card front"><figcaption>Featured entity: card rarity</figcaption></figure></div><div class="archive-list"><a href="/cards.html"><b>Cards & rarity</b><span>Know what you pulled</span></a><a href="/collection.html"><b>Packs & stock</b><span>Keep the shelves ready</span></a><a href="/guide.html"><b>Shop guides</b><span>Make the next day better</span></a></div></section>', inv));
 
   write('collection.html', layout('P0 classes', 'Every P0 class with the fields Unity writes.', '/collection.html',
     '<h1>P0 classes <span class="dim">(' + classes.length + ')</span></h1><p class="dim">Reference pages. Each is marked noindex and kept out of the sitemap.</p><table><thead><tr><th>Class</th><th>Base</th><th>Written fields</th></tr></thead><tbody>' +
