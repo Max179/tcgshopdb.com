@@ -1,84 +1,60 @@
-# TCG Card Shop Simulator 数据库 — 本地完成报告（Windows 端）
+# Local completion record - compact copy
 
-**状态：local_complete（本地可交付层：P0 清单 + 站点 + 门禁 + 报告）· 未发布** · Windows Harness
+The full round-by-round log (577 lines, 377999 bytes, 446 recorded rounds)
+is the working record of the extraction host and stays there. This copy carries the standing state at the handoff commit plus the
+most recent recorded rounds verbatim, so the Mac side has the facts without the history. Nothing here is generated at publish time.
 
-> 说明：local_complete 指"本地交付层"完成，不等于"所有值都提取到了"。值层完成度见 §4，未提取者一律显式 `unknown`。
-> 发布（GitHub Actions → Cloudflare）仍未执行：无凭据，且 supermarket-simulator 尚未达 P0（见 §7）。
+## Mac integration (2026-10-30) — current standing state
 
-## 1. 游戏包与边界（已确证）
-- 安装：`C:\uTorria\Downloads\TCG Card Shop Simulator`（**原始数据留 Windows，不入 Git**）；可执行 `Card Shop Simulator.exe`
-- 版本：`OPNeonGames | Card Shop Simulator`（`_Data/app.info`）；引擎 **Unity 6000.0.66f2**（从 `level1` 头读出）；后端 **Mono**
-- 程序集：`Card Shop Simulator_Data/Managed/Assembly-CSharp.dll`（1.41 MB）
-- 资源：`sharedassets2.assets` 839 MB（+ resS 3.5 GB）、`level2` 55.7 MB、`resources.assets` 13.8 MB
+The Oct-2-2026 Windows handoff package was merged into this repository on macOS and the Mac design
+(8c1312f / 6169d5e) was ported onto the package generator. Full record: `reports/revival-2026-10-30.md`;
+plan: `reports/mac-integration-plan.md`.
 
-## 2. P0 数据
-- `data/normalized/p0-inventory.json`：**218 个 P0 类 / 2,206 字段**，其中 `extracted` 7、`verified-schema` 2,199；每字段带 source / version / confidence；枚举由扫描程序集（`baseType === 'Enum'`，排除 `value__`）得到 **18 个**
-- `data/normalized/p0-instances.json`：**260 个实例**。值层偏薄的原因已查清：本作 P0 类多为引擎类型（UnityEngine 侧），payload 无法被解码器精确耗尽，按纪律**整类拒绝**而非猜测
-- 此前的 `enums=0` 缺陷已定位并修正：真实原因是枚举名硬编码猜测表，而非抄错正则（见 `reports/inventory-defects-correction.md`）
+- Commits: `85d80e5` import, `c59da87` tooling, `1f91ddb` ci, `2d6d42c` design, then the docs commit that adds
+  this section and the regenerated `reports/status.json`. Working tree clean at handoff.
+- Build (macOS, no game files, no network, no credentials): `pages=445 indexable=176` (269 derived noindex);
+  98 published entries (89 with a confirmed game image, 9 noindex notes), 63 structured guides, 855 facts,
+  186 registered game images, coverage matrix 20/20, citations `unmatched=0`.
+  The 445 build outputs are 440 HTML pages plus sitemap.xml, robots.txt, favicon.svg, brand.svg and style.css;
+  `config/urls.json` classifies the 439 non-404 pages as 176 keep / 263 noindex, and the 404 is noindex.
+- Verbatim commands and exits — all exit 0:
 
-## 3. 站点与门禁（本轮实测）
-```
-node pipeline/inventory.ts          -> p0-inventory.json（218 类, 2206 字段）
-node pipeline/normalize_values.ts   -> p0-instances.json（260 实例）
-[site] pages=235 indexable=13 schema(noindex)=219 out=web/dist
-node tests/site.test.mjs            -> [site-tests] 38 passed, 0 failed
-node .../typescript/bin/tsc --noEmit -p tsconfig.json -> exit 0
-git status --porcelain              -> 空
-```
-站点代码 HEAD `8e4494c` · 71 commits · 工作区干净。
+      node pipeline/site.mjs                    -> [site] pages=445 indexable=176 schema(noindex)=263
+      node tests/site.test.mjs                  -> [site-tests] 63 passed, 0 failed
+      npm i --no-save --no-package-lock typescript@5 @types/node@22
+      npx tsc --noEmit -p tsconfig.ci.json      -> no diagnostics
+      node tools/verify-citations.mjs           -> entries=98 facts=855 universe=7781 confirmedElsewhere=14 unmatched=0
+      node tools/content-gate.mjs               -> 98 entry file(s), 0 violation(s)
+      node tools/coverage.mjs                   -> columns=20 covered=20 published=98 qualityFailures=0
+      node tools/classify-urls.mjs              -> 176 keep, 263 noindex (no diff to config/urls.json)
+      node tools/image-coverage.mjs             -> entries=98 withGameImage=89 diagramOnly=9 records=186 unused=0
+      python3 tools/image-sanity.py             -> 186 records, 12 flagged (all 12 already have review verdicts)
+      node tools/smoke.mjs                      -> 176 kept, 263 noindex; the artefact passes
+      node pipeline/status.mjs                  -> reports/status.json regenerated from a fresh build
+      node tools/preflight.mjs                  -> [preflight] 11 ok, 0 failed
+      node tools/deploy-check.mjs               -> 8 ready, 0 local failure(s), 2 external blocker(s)
 
-**门禁可失败性（反证，非声明）**：故意破坏构建后失败，随后还原：
-- `terms.html` 去掉 canonical → `FAIL every product route carries canonical, an index directive and its source line :: terms.html`（21 passed / 1 failed, exit 1）
-- `privacy.html` 不输出 → `FAIL every required route is emitted :: privacy.html` 与 `FAIL every navigation target is a page that exists :: /privacy.html`
-- 反证中发现并修复的缺陷：路由缺失时旧检查在缺失文件上 `readFileSync` 直接 **崩溃**（ENOENT、无汇总行）；现已跳过缺失文件，缺路由 = 干净 FAIL
+- Design: the Windows copy of the shell is not kept — it hard-coded the sibling site's red accent in `style.css` and
+  the handoff marks the shell as design-owned. The Mac palette, letter mark, hero/feature imagery
+  (`web/assets/`), page shell and the packaged player/evidence markup are emitted from one `SITE.accent` value.
+  Before/after renders: `reports/redesign-p0/mac-integration-{before-home,after-home,after-entry,after-home-mobile}.png`.
+- Publishing: **not done from this machine**. The Lead owns the push and the Cloudflare Pages deploy; after the
+  deploy, verify the domain with `node tools/smoke.mjs https://tcgshopdb.com`.
+- Residual items (recorded, not blockers): no JSON-LD structured data yet; sitemap has no `lastmod`; AdSense not
+  enabled; new game values still need a Windows extraction host. See `reports/revival-2026-10-30.md` §7.
 
-## 4. 可索引性策略（回应"字段页不算内容"）
-- **14 页可索引**（进 sitemap）：`index, collection, cards, enums, values, search, tool, sources, guide, about, contact, disclaimer, privacy, terms`
-- **218 个 `/entity/*` 为 schema 参考页**：带 `<meta name="robots" content="noindex, follow">`，**不进 sitemap.xml**；仍可被站内搜索与链接到达，不是孤页
-- 理由：字段清单本身不回答玩家问题，不应与真正回答问题的页面争抢索引
-- 每个可索引页都经门禁断言含 canonical + `index, follow` + 页脚来源行
+## Standing state at the handoff commit
+- Build: pages=445 indexable=176 noindex=269; documented version no version stated by this build.
+- Documented identifiers: 240 types and 9593 field rows; the rows themselves are carried by
+  data/normalized/value-index.json (checksum and counts) and data/normalized/citation-index.json (the names they contribute).
+- This package ships without git history: the tree counts in reports/status.json describe the extraction host tree, not the package.
 
-## 5. 数据来源与 unknown 纪律
-- 每字段记录 source / version / confidence，并在实体页渲染
-- 门禁断言：字段不得在无值的情况下声称 `extracted`
-- 未取到的值渲染为 `unknown`；不推断、不填默认、不猜测；解码器无法精确耗尽 payload 的类整类拒绝
-- MonoBehaviour 的 `m_Script` 用原始 payload 偏移 20 直接读取（本作 3568/3568 命名成功）；Unity 6 SerializedFile **v22** 头由自洽性实测（`fileSize` 等于实际文件长度）
+## Most recent recorded rounds (verbatim, oldest first)
+- 干净克隆复验（第 557 轮，本作，内容不增）：工区外 git clone（gc22-tcg，HEAD 24693e1 / 570 次提交），13 步全部 exit 0——preflight 11/11、site pages=445 indexable=176、classify 176 keep / 263 noindex、verify entries=98 facts=854 unmatched=0、gate 98 词条 0 违规、coverage 20/20、imgcov 89 实图/9 注释（manifest 186）unusedRecords=0、imgsanity 186 条、tests 63 全过（# pass 1 / # fail 0）、tsc exit 0、smoke 通过、deploy-check 8 ready / 0 local failures / 2 external blockers。reports/handoff.md 的「Re-verified on」由第 553 轮更新为第 557 轮。
+- 词条加深 ×1（第 558 轮，本作，词条 98、指南 63、页面、图片与 manifest 均不变；facts 854→**855**）：the-counter-and-money 再补一条——顾客购买、支付被拒与卡牌受损各有音效（SFX_CustomerBuy、SFX_Declined、SFX_Damaged）。三个名字按整名搜索确认此前无引用，token 检查 666 个令牌 risky 0。整链复跑：site pages=445 indexable=176、classify 176/263、verify entries=98 facts=855 unmatched=0、gate 98 词条 0 违规、coverage 20/20、imgcov 89/9（manifest 186）、imgsanity 186 条、tests 63 全过、tsc exit 0。
+- 阶段收尾（第 559 轮，本作，内容不增）：**最终状态**：HEAD 117c80c / 571 次提交，工作树干净；98 条已发布词条（89 条带真图、9 条无图注释）、63 篇结构化指南、855 条事实、186 条已登记游戏图；`pages=445 indexable=176`（263 noindex）；coverage 20/20 栏、qualityFailures=0；tests 63 全过、tsc exit 0。**三件套**：preflight 11/11、smoke 通过、`deploy-check` **7 ready / 0 local failures / 3 external blockers**。**最近一次干净克隆复验**：第 557 轮（gc22-tcg，HEAD 24693e1），13 步全 exit 0。**发布腿**：缺 GitHub remote 与两个 Cloudflare 密钥；`publish.yml` 与 Pages 配置就绪，凭据到位即可 push → Actions → Pages → 线上 `tools/smoke.mjs https://tcgshopdb.com`。按既定方针只记外部阻塞。
+- 轻量交接包就绪（第 574 轮，本作，tcg）：新增 `tools/mac-package.mjs`（与 repo 站同一份文件，sha256 ae4de243…，按本站 keep 表调整——`data/normalized` 只带 p0-inventory.json、p0-instances.json、tcg-object-names.json、data/guide-questions.json）。留 Windows：payload 转储 `tcg-mb-payloads.json` 1,247,575 B、10 个语言表合计 1,688,912 B、`web/dist` 22,972,646 B（717 文件）、`.git` 32,629,596 B、redesign 截图 657,814 B、提取侧工作记录 47,144 B、HARNESS 便条 1,429 B（本树无 `data/raw`），合计排除 59,242,068 B。与 repo 相同：本站「值层」`p0-instances.json`（135,003 B，count=260）是构建 `/reference/values.html` 的输入，必须随包，因此不需要派生 value/citation 索引——引用全集由 `tcg-object-names.json`（120,338 B）与 `p0-inventory.json`（1,003,097 B）构成，二者均随包，universe=7,781 与 Windows 一致。包分组字节：source 38/391,034、published 98/495,698、articles 63/175,675、images 272/20,301,698（mapped 186/20,136,095、条目图 86/165,603）、data 4/1,264,000、content root 3/93,366、shell 5/1,014、reports 7/88,591（总大小与逐文件 sha256 以包内 `reports/mac-handoff-manifest.json` 为准）。实测（包副本 scratch + git init/commit，13 步）：preflight 11/11 exit 0、site pages=445 indexable=176（noindex 269）、classify 176 keep / 263 noindex、verify entries=98 facts=855 universe=7,781 confirmedElsewhere=14 unmatched=0、gate 98 词条 0 违规、coverage 20/20 qualityFailures=0、imgcov 98 词条 89 实图 9 注释 manifest 186 unusedRecords=0、imgsanity 186 条（2 张仅提示 stddev 低，均已有判决）、status 记 p0-instances 值层、tests 63 过、tsc exit 0、smoke 通过、deploy-check 7 ready / 0 local failures / 3 external（包内无 remote，多出 git remote 一项）。设计面不覆盖：`pipeline/site.mjs`（SITE 第 14 行、layout 第 93 行、brand.svg 第 402 行、style.css 第 404 行）属 Mac efb7b6b 设计整合范围。
+- 平台性假通过修复：v22 头检查改为可移植（第 575 轮，本作，tcg）。与 repo 同一缺陷：`tests/site.test.mjs` 的 v22 头检查用写死的绝对路径读真实 level 文件，macOS 上 0 of 2 FAIL（Windows 上传到的是原始工作树里的文件，属假通过）。修复与 repo 完全一致：`pipeline/v22_sample_record.mjs` 生成 `data/normalized/v22-header-samples.json`（2,932 B，同一对真实样本：level1 1,814,108 B sha256 631475ae…、level0 530,084 B sha256 b25af2ec…），测试按「树内相对路径 → 源路径 → 记录字节」取值，缺则 unreadable。Windows 整链复跑 exit 0（tests 63 passed 0 failed、tsc exit 0）；包内保留记录文件；Mac 复验通过后另记。
 
-## 6. 交接给 Mac（仅源码）
-- 入 Git：`pipeline/`、`tests/`、`web/`（模板/静态）、`data/normalized/p0-inventory.json`、`data/normalized/p0-instances.json`、`reports/`
-- 不入 Git（留 Windows）：`data/raw/**`（游戏包）、`web/dist/**`（构建产物）、`*-payloads.json`
-
-## 7. 未完成 / 阻塞（明确声明）
-- supermarket-simulator（IL2CPP）：类型表未定位，`p0-schema.json` 的 `typesExtracted: 0` 即失败证据；需要用户在 AssetRipper GUI 里对 `Supermarket Simulator_Data` 执行 Export → Dump (IL2CPP)，或授权安装 Il2CppDumper
-- 值层：2206 字段中仅 7 个 `extracted`（2/218 类有实例）；继续扩展需按"实测字段规则"逐个验证，不接受推测布局
-- 本地化：**有意只出英文单语言**。不生成 `/zh/`：没有译文就不能有译文页，机器编造的文案属于发明内容。若需第二语言，需先有作者文本
-- 未发布：无 deploy、无域名、无 DNS、无 GSC/Bing 提交、无 AdSense
-
-## 可索引页审计（第 75–76 轮）
-对每个可索引页测量体积、表格行数与标题层级；并对 `search.html` 与 `tool.html` 的 `<main>` 正文做 `difflib` 相似度比较：
-
-| 项目 | search 正文 | tool 正文 | 相似度 | 判定 |
-| --- | --- | --- | --- | --- |
-| repo | 18,173 B | 18,232 B | **0.988** | 两页几乎同质：只差标题与一句话，二者内联同一份字段载荷 |
-| tcg-shop | 18,595 B | 18,655 B | **0.988** | 同上 |
-| supermarket-simulator | 347,375 B | 312,720 B | 0.005 | 已在第 75 轮修好（tool 改为字段名查找） |
-
-其余可索引页均有实质内容（repo：collection 463 行、enums 928 行、enemies 139 行/9 个 h2、values 77 行/28 个 h2；tcg：collection 219 行、cards 276 行/13 个 h2、enums 289 行、values 25 行）。政策页 2–3 KB 属正常文本量。
-
-**待修（下一轮）**：`tool.html` 与本项目 `search.html` 高度重复，按既定可索引性政策应当**合并或 noindex + 移出 sitemap**（保留页面作为便捷入口，但不与 search 争索引），并新增一条通用门禁：**任意两个可索引页的 `<main>` 正文相似度不得超过 0.9**（该门禁在 supermarket 上可通过、在 repo/tcg 修好前必然失败）。审计脚本见 supermarket 仓库 `pipeline/audit_page_similarity.py`。
-
-## 门禁清单（第 79 轮更新）
-- 站点门禁：repo 29 条、tcg 29 条、supermarket 40 条，覆盖路由与导航目标存在、每条产品路由带 canonical + 明确的 robots 指令 + 页脚来源行、sitemap 恰好列出可索引页且不含 404、404 为 noindex、来源可核（sha256 / metadata 版本 / 表几何）、逐字段来源、extracted 必须有值、搜索载荷与游戏类集合一致。
-- 发布配置也受门禁：workflow 必须构建并跑测试、部署作业必须有 needs: gate、只能用 secret（仓库内不得出现令牌字面量）、Pages 项目名与输出目录已声明、无 tab 且缩进为 2 的倍数、可移植 typecheck 配置存在。
-- 第 75–78 轮新增：noindex/sitemap 政策门禁（重复页与 schema 页不入索引），以及可索引页重复内容门禁（逐字符 40 字符窗口哈希后的包含度 > 0.9 即失败）。
-- 该重复内容判据经三次修正才有效，三次失败都记录在测试注释里：字符 shingle 的 Jaccard 实测 0.070、词 6-gram 包含度 0.048（正文是无空白 JSON）、按 10 字符采样的包含度 0.131——都因采样相位错位而失效；改为逐字符哈希后，破坏构建实测 search.html ~ tool.html = 0.93 并触发 FAIL。
-- 已证实的重复：search.html 与 tool.html 的最长公共块为 17,284 / 18,173 字符（difflib autojunk=False 比例 0.989），因此 tool.html 保留 URL 但 noindex、不入 sitemap。
-
-## 值层更新（第 102–113 轮）——本条**更正**上文关于值层的描述
-- 上文"值层偏薄，原因是本作 P0 类多为引擎类型、payload 无法精确耗尽"**已不再准确**。实测（第 101–108 轮）表明主导原因是**类查找的名字形式不匹配**：dumper 记录的是 MonoScript 的简单类名，而类型表按含命名空间的完整名建索引，且查找只搜了 `assembly.types`（仅 Assembly-CSharp）而没有搜合并表 `byName`。
-- 两处修复（第 102、106 轮，均经测量验证后保留）：合并**全部非系统托管程序集**；类查找改在**合并表**上进行，并加"唯一简单名回退、歧义即拒绝"。
-- 效果：repo 已发布实例 **49 → 77**；tcg **41 → 260**（约 6 倍）。
-- 仍被拒绝的部分（按阶段计数，均可观测）：repo `classNotFound=149`、`walkFailed=624`、`layoutShorter=84`、不支持形态 `generic:148 class:18`；tcg `classNotFound=318`、`walkFailed=5956`、不支持形态 `generic:906 class:420`。
-- 第 113 轮尝试支持的 `class` 内联（理论依据：Unity 对 `[Serializable]` 类字段与结构体同样内联）经测量**无增益**，已按事先声明的标准**回退**；仓库中不留无效改动。
-- 残留 `classNotFound` 共 28 个不同类名，链观测显示它们是 ScriptableObject 归属偏差与泛型基类未记录两类边缘个案，**拒绝而非猜测**是当前正确行为。
-
+The five entries above are the last recorded rounds. The complete list - every rejected picture, every gate run - lives in
+reports/local-complete.md on the extraction host.

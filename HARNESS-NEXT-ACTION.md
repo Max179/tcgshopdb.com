@@ -1,11 +1,32 @@
-# Harness next action — do not stop at parser blockers
+# Harness next action — TCG Shop (tcgshopdb.com)
 
-Issued by project supervisor. Continue work autonomously and do not leave the project in partial merely because Unity 6 instance parsing is incomplete.
+Updated: 2026-10-30, after the Mac handoff integration.
 
-1. Supermarket and TCG: use every verified source already readable (assembly schemas, enums, localization, Addressables, strings, static defaults) to build a small high-quality P0 site now. Unknown numeric fields must be explicit unknown; never invent.
-2. In parallel, keep Unity 6/IL2CPP parser work isolated. Parser failure must not block site scaffold, multilingual routes, policy pages, SEO checks, tests, production build, local-complete report, and commit.
-3. R.E.P.O.: if the package is still absent, build the source-only project skeleton, release workflow, policy/SEO/test harness, and blocked-data report. Do not fabricate game facts. Continue immediately when a local package appears.
-4. Run tests, typecheck, build, mobile/static/SEO/AdSense checks. Commit each meaningful milestone locally and update reports with exact next action.
-5. Do not deploy until local quality gates pass. After local_complete, create the dedicated GitHub repo and Cloudflare Pages/GitHub Actions release using Mac credentials if Windows lacks permission.
+## State: local-complete
 
-Do not wait for user confirmation for these in-scope engineering fallbacks. Stop only for genuinely missing user-owned data or credentials, and document the exact blocker.
+The Oct-2-2026 Windows handoff package is integrated and the Mac design is ported onto its generator.
+`node pipeline/site.mjs` prints `pages=445 indexable=176` (263 noindex), the 63 site gates, typecheck,
+content/coverage/image/citation gates, smoke, status and preflight (11/11) all pass on macOS with no game files and
+no network. `reports/status.json`, `reports/local-complete.md` and `reports/revival-2026-10-30.md` are current.
+Commits: `85d80e5` (import), `c59da87` (macOS-clean tooling), `1f91ddb` (CI project name), `2d6d42c` (design),
+plus the docs commit that carries the updated reports. Working tree clean.
+
+## Next, in order
+
+1. Push these commits (Lead) and let `.github/workflows/publish.yml` deploy `web/dist` to the existing Cloudflare
+   Pages project `tcgshopdb-com`. The workflow gate job runs build -> tests -> typecheck; the deploy job runs
+   build -> preflight -> smoke -> wrangler deploy.
+2. After the deploy completes, verify the live domain the same way a reader arrives:
+   `node tools/smoke.mjs https://tcgshopdb.com` (all 176 kept URLs, titles and canonicals on the real domain).
+   Record the result in `reports/local-complete.md`.
+3. Bind/verify `tcgshopdb.com` in the Cloudflare dashboard if it is not already attached (account owner action).
+4. Optional site improvement round: add JSON-LD (VideoGame / Article / BreadcrumbList / FAQPage), `lastmod` in the
+   sitemap, then consider the AdSense application (policy pages, original content and image attribution are ready).
+5. New facts/values need a Windows extraction host: never invent game data, keep unknown explicit, keep
+   parser/extraction blockers from blocking the build or the gates.
+
+## Rules
+
+- Never invent game data; a value the build cannot verify stays `unknown` with a source note.
+- Parser/extraction blockers must not stop the site build, gates, reports or commits.
+- Commit each meaningful milestone locally with a `type(scope): subject` message; deploy only after local gates pass.
