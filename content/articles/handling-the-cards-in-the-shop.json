@@ -1,0 +1,57 @@
+{
+  "id": "handling-the-cards-in-the-shop",
+  "title": "Handling the cards in the shop",
+  "tier": "published",
+  "kind": "article",
+  "target": "How a card behaves as a physical object in TCG Card Shop Simulator, from picking it up to putting it on a shelf.",
+  "version": "no version stated by this build (see the sources page)",
+  "prerequisites": [
+    "Cards in the shop",
+    "A shelf or storage for them",
+    "The scanner if you are selling them"
+  ],
+  "steps": [
+    {
+      "do": "Treat a card as a world object rather than a screen item.",
+      "because": "a card is a world object with a mesh, a highlight, a collider and a rigid body (InteractableCard3d, m_Mesh, m_HighlightGameObj, m_Collider, m_Rigidbody)"
+    },
+    {
+      "do": "Know which cards you can pick up, box and scan before you plan a job.",
+      "because": "a card carries its own permissions for being picked up and moved, boxed up and scanned at the counter (m_CanPickupMoveObject, m_CanBoxUpObject, m_CanScanByCounter)"
+    },
+    {
+      "do": "Watch where a card is allowed to be put.",
+      "because": "a card carries placement rules for the shop and for the warehouse, with a move area and a separate shelf move area (m_PlaceObjectInShopOnly, m_PlaceObjectInWarehouseOnly, m_MoveStateValidArea, m_ShelfMoveStateValidArea)"
+    },
+    {
+      "do": "Check whether a card belongs in an album before you shelve it as stock.",
+      "because": "a card carries a flag for whether it is an album card (m_IsCardAlbumCard)"
+    },
+    {
+      "do": "Know what the display group is doing while a card is shown.",
+      "because": "the group holds a card display and an animation of its own, with a front mesh position and a back mesh (Card3dUIGroup, m_CardUI, m_Anim, m_CardFrontMeshPos, m_CardBackMesh)"
+    },
+    {
+      "do": "Use the new-card mark to spot what you have just acquired.",
+      "because": "the group can mark a card as new (m_NewCardIndicator)"
+    },
+    {
+      "do": "Keep graded cards in the group that was built for them.",
+      "because": "there is a graded group and a separate cull group with a slab top-layer mesh and blockers for the case's front and back (m_GradedCardGrp, m_GradedCardCullGrp, m_SlabTopLayerMesh, m_GradedCaseCullCardFrontMeshBlocker, m_GradedCaseCullCardBackMeshBlocker)"
+    }
+  ],
+  "commonMistakes": [
+    "Trying to move a card that is not allowed to be picked up.",
+    "Putting a card where the card itself does not permit.",
+    "Shelving an album card as ordinary stock.",
+    "Treating a graded card like a loose one when it has its own display group."
+  ],
+  "relatedEntities": [
+    "the-card-object-in-the-world",
+    "the-group-that-shows-a-card",
+    "how-a-card-front-is-built"
+  ],
+  "sources": [
+    "A local copy of the game, read only. Grounding for each step is on the technical reference pages; no number is estimated."
+  ]
+}

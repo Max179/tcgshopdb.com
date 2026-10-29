@@ -1,0 +1,66 @@
+{
+  "id": "what-a-review-record-keeps",
+  "title": "What a review record keeps",
+  "category": "Customers",
+  "tier": "published",
+  "summary": "A customer review in TCG Card Shop Simulator is a record rather than a sentence: a reason, a star level, which text list the words came from and which line of it, the day, hour and minute, the item and the customer's name.",
+  "body": [
+    "A review is a record before it is anything a player reads. It carries the reason it was left, the star level it counted as, which of the text lists its wording came from and which line of that list was used, the day, the hour and the minute it was recorded, the item it concerned and the name of the customer who left it.",
+    "The wording is not written when the review happens. The game keeps a table with a good list, a normal list and a bad list, and the record points into one of them, which is why two customers can be unhappy for different reasons and still say something in the same voice.",
+    "The reasons are a fixed list of named kinds, so a complaint is filed under something rather than arriving as free text. That is what makes it possible to answer one complaint instead of guessing at all of them.",
+    "The reviews are gathered as well as kept one by one. The gathered form holds the reason, the item, a good-or-bad level and a chance of a better star, so the shop can be judged across many customers rather than one at a time.",
+    "There is a manager behind all of it, and a screen with panels to read the results on. Each review is a panel object in a list, which is how the screen can hold as many as the day produced.",
+    "The screen also reports, rather than only listing. It carries a star fill image, the shop's name and an average rating line, which is the part a player looks at first.",
+    "The image beside this entry is the game's own: the background it ships to sit under the star fill in that display.",
+    "What this entry does not tell you: how many reviews a day produces, how the average is worked out, or how the chance of a better star is rolled. We have not verified those numbers, so we do not print them."
+  ],
+  "facts": [
+    {
+      "claim": "A review carries its reason, its star level, which text list the wording came from and which line of that list, the day, hour and minute, the item and the customer's name.",
+      "evidence": "identifiers: customerReviewType, starLevel, textSOGoodBadLevel, textSOIndex, day, hour, minute, itemType, customerName"
+    },
+    {
+      "claim": "The wording table keeps a good, a normal and a bad list rather than one set of lines.",
+      "evidence": "identifiers: CustomerReviewTextDataTable, bad_TextList, normal_TextList, good_TextList"
+    },
+    {
+      "claim": "The kinds of review are a fixed list of named reasons.",
+      "evidence": "identifier: ECustomerReviewType"
+    },
+    {
+      "claim": "The gathered reviews keep the reason, the item, a good-or-bad level and a chance of a better star.",
+      "evidence": "identifiers: CustomerReviewGatherData, goodBadLevel, higherStarChanceAdd, itemType"
+    },
+    {
+      "claim": "There is a manager for reviews, a screen to read them on and a panel object to show each one.",
+      "evidence": "identifiers: CustomerReviewManager, CustomerReviewScreen, CustomerReviewPanelUI"
+    },
+    {
+      "claim": "The panels are held in a list of their own on the screen.",
+      "evidence": "identifier: m_CustomerReviewPanelUIList"
+    },
+    {
+      "claim": "The screen shows a star fill image, the shop's name and an average rating line.",
+      "evidence": "identifiers: m_StarFillImage, m_ShopNameText, m_AverageRatingText"
+    }
+  ],
+  "related": [
+    "customer-reviews",
+    "the-review-screen",
+    "the-kinds-of-customers"
+  ],
+  "images": [
+    {
+      "file": "mapped/what-a-review-record-keeps-star-bg.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "The background image the game ships to sit under its star fill in the rating display.",
+        "zh": "游戏在其星级显示中垫在星形下面的背景图。"
+      }
+    }
+  ],
+  "sources": [
+    "A local copy of the game, read only. The grounding for each fact is listed on the technical reference pages; nothing here is estimated."
+  ],
+  "imageTier": "game-image"
+}

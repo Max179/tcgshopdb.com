@@ -1,0 +1,93 @@
+{
+  "id": "why-every-customer-looks-different",
+  "title": "Why every customer looks different",
+  "category": "Customers",
+  "summary": "Customers in TCG Card Shop Simulator are assembled rather than repeated: the game keeps a detailed version of both the male and the female shopper, a separate list for each kind of part, and a bag, cash and prize spots for every one of them.",
+  "body": [
+    "Two shoppers are not the same model recoloured. The game keeps a detailed version of the male customer and a detailed version of the female one, which is why the crowd can hold people rather than one figure repeated.",
+    "Those models are assembled rather than painted. There is a list of hair, a list of eyebrows, a list of upper bodies, a list of lower bodies, a list of footwear and a list of extras, so a shopper is put together out of parts the game already has.",
+    "Each customer knows which of the two it is. The game records whether a customer is female, which is how the right model and the right parts are chosen for them.",
+    "A customer points at its own character. There is a custom character the customer refers to, so the look on screen belongs to that shopper rather than to the crowd as a whole.",
+    "The parts are gathered under one group. The customer's meshes are held in a group of their own, which is how a set of parts behaves as one person rather than as separate objects.",
+    "What a customer carries is part of the model. A shopper has their own cash and a shopping bag, each with a place to hang from, so the money in their hand and the bag they are filling are attached to them.",
+    "There are places to put prizes. Each customer has spots for a big item, for an item and for a card, and a second set of the same spots to swap to, which is how a prize can be handed over without the model having to be rebuilt.",
+    "Moving is set per customer. There is a speed, a rotation smoothing, a distance to the next waypoint and a rate for working out the route again, so how a shopper walks is theirs rather than shared by the whole crowd.",
+    "Cards can be shown two ways. There is a fanned-out form and a single-card form, which is why a customer can be offered a spread of cards or one at a time.",
+    "The look can be inspected as well. A customer carries debug settings of its own — a cube the game can draw, a flag for updating the model and an index for which model it shows — which is how a problem with an assembled shopper can be looked at in place.",
+    "Even the feet are placed rather than assumed. The build keeps a foot offset with a height, a foot rotation and a ball rotation of its own, which is why an assembled shopper stands on the floor instead of floating or sinking.",
+    "What this entry does not tell you: how many customers the game can build, how many parts each list holds, or how a part is picked. We have not verified those numbers, so we do not print them."
+  ],
+  "facts": [
+    {
+      "claim": "There is a detailed version of both the male and the female customer model.",
+      "evidence": "identifiers: m_CustomerPrefabHQ, m_CustomerFemalePrefabHQ"
+    },
+    {
+      "claim": "The detailed model is assembled from separate lists for hair, eyebrows, upper body, lower body, footwear and extras.",
+      "evidence": "identifiers: m_HQ_Female_Hair, m_HQ_Female_Eyebrows, m_HQ_Female_UpperBody, m_HQ_Female_LowerBody, m_HQ_Female_Footwear, m_HQ_Female_Misc"
+    },
+    {
+      "claim": "A customer records whether it is female.",
+      "evidence": "identifier: m_IsFemale"
+    },
+    {
+      "claim": "A customer refers to a custom character of its own.",
+      "evidence": "identifier: m_CharacterCustom"
+    },
+    {
+      "claim": "The customer's parts are gathered into a mesh group.",
+      "evidence": "identifier: m_CustomerMeshGrp"
+    },
+    {
+      "claim": "A customer carries cash and a shopping bag, each with a transform to hang from.",
+      "evidence": "identifiers: m_CustomerCash, m_ShoppingBagTransform"
+    },
+    {
+      "claim": "There are prize spots for a big item, an item and a card, plus a second set of the same spots to swap to.",
+      "evidence": "identifiers: m_PrizeBigItemLocList, m_PrizeItemLocList, m_PrizeCardLocList, m_PrizeBigItemLocSwappedList, m_PrizeItemLocSwappedList, m_PrizeCardLocSwappedList"
+    },
+    {
+      "claim": "Movement is set per customer, with a speed, a rotation smoothing, a waypoint distance and a rate for recalculating the route.",
+      "evidence": "identifiers: m_CurrentMoveSpeed, m_RotationLerpSpeed, m_NextWaypointDistance, m_RepathRate"
+    },
+    {
+      "claim": "Cards held out to a customer have a fanned form and a single-card form.",
+      "evidence": "identifiers: m_GameCardFanOut, m_GameCardSingle"
+    },
+    {
+      "claim": "A customer carries debug settings of its own: a cube that can be drawn, a flag for updating its model and an index for the model it shows.",
+      "evidence": "identifiers: m_DebugCube, m_DebugUpdateModel, m_DebugModelIndex"
+    },
+    {
+      "claim": "A character's foot placement is its own object, with a height offset, a foot rotation and a ball rotation.",
+      "evidence": "identifiers: FootOffset, HeightOffset, FootRotation, BallRotation"
+    }
+  ],
+  "related": [
+    "the-profile-behind-each-customer",
+    "the-kinds-of-customers",
+    "what-a-customer-carries"
+  ],
+  "images": [
+    {
+      "file": "mapped/why-every-customer-looks-different-female.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "One of the game's own customer portraits, a female shopper with long brown hair and a green top.",
+        "zh": "游戏自带的顾客头像之一：一位棕色长发、绿衣的女顾客。"
+      }
+    },
+    {
+      "file": "mapped/why-every-customer-looks-different-male.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "A second of the game's customer portraits, a bearded male shopper with glasses and a grey top.",
+        "zh": "游戏自带的另一位顾客头像：留着胡子、戴眼镜、灰衣的男顾客。"
+      }
+    }
+  ],
+  "sources": [
+    "A local copy of the game, read only. The grounding for each fact is listed on the technical reference pages; nothing here is estimated."
+  ],
+  "imageTier": "game-image"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "keeping-a-shop-that-keeps-getting-messy",
+  "title": "Keeping a shop that keeps getting messy",
+  "tier": "published",
+  "kind": "article",
+  "target": "How to keep a TCG Card Shop Simulator shop clean in practice, given that cleaners are objects you buy and place, that the shop remembers them, and that cleaning shows as an effect rather than a job you perform.",
+  "version": "no version stated by this build (see the sources page)",
+  "prerequisites": [
+    "A cleaner to buy",
+    "A bin within reach of the counter",
+    "A shop you can walk round in your head"
+  ],
+  "steps": [
+    {
+      "do": "Buy a cleaner and treat it as a thing you place, not as a chore you do.",
+      "because": "the build ships auto-cleaner objects with an interaction for using one (Interactable_AutoCleanser, AutoCleanser)"
+    },
+    {
+      "do": "Put it where customers actually walk rather than where the mess started.",
+      "because": "a cleaner is placed in the shop and its data is saved with the shop (m_AutoCleanserSaveDataList)"
+    },
+    {
+      "do": "Once one is down, expect the tidying to carry on without being asked again.",
+      "because": "the shop keeps its cleaners together in a list of their own (m_AutoCleanserList, AutoCleaners)"
+    },
+    {
+      "do": "Judge the cleaning by the effect on the floor, not by watching the cleaner move.",
+      "because": "cleaning has an effect named separately from the cleaners themselves (m_CleanFX, CleanFX)"
+    },
+    {
+      "do": "Put a bin by the busiest counter so the worst of it has somewhere to go.",
+      "because": "the bins have a material set of their own, with a base sheet, a normal map and a metallic-smoothness map (BinMaterial, BinMaterial_AlbedoTransparency, BinMaterial_Normal, BinMaterial_MetallicSmoothness)"
+    },
+    {
+      "do": "Do not expect the cleaner to look different close up: it is one object shown at two levels of detail.",
+      "because": "the cleaner is modelled with a mesh and a low-detail version beside it (Cleanser_Mesh, Cleanser_low)"
+    }
+  ],
+  "commonMistakes": [
+    "Cleaning by hand while a cleaner you already own stands unused.",
+    "Putting the cleaner in a back room where nobody drops anything.",
+    "Watching the cleaner instead of the floor and thinking nothing is happening.",
+    "Treating the bins as decoration rather than as the second half of the job."
+  ],
+  "relatedEntities": [
+    "keeping-the-shop-clean",
+    "expanding-and-decorating-the-shop"
+  ],
+  "sources": [
+    "A local copy of the game, read only. Grounding for each step is on the technical reference pages; no number is estimated."
+  ]
+}

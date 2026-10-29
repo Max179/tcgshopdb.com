@@ -1,0 +1,66 @@
+{
+  "id": "what-the-till-shows-you",
+  "title": "What the till shows you",
+  "category": "Shop",
+  "summary": "The till in TCG Card Shop Simulator shows more than one number: the bar carries a name, a price, a unit and a total, the card screen repeats the total on its own, and change is described per currency.",
+  "body": [
+    "The till tells you more than one number at a time. The bar that appears while you are serving carries a name, a price, a unit and a total, so the price of one thing and the price of the pile are separate readings on the screen.",
+    "A unit price is a real thing here. Because the bar keeps a unit line apart from the total, a customer buying several of the same card can be read as a price each rather than only as one sum, which is what makes a bulk purchase understandable while it is happening.",
+    "Paying by card has a screen of its own. It shows a total of its own rather than reusing the bar, so the two readings can be on screen together without contradicting each other.",
+    "That screen follows an object instead of sitting in a fixed place. It is attached to what is being paid for, which is why the reading moves with the card rather than being pinned to a corner of the screen.",
+    "It also carries an extension for controllers. The same screen is given pad handling rather than the game drawing a second version of it for a pad.",
+    "Change is not simply the same currency with a minus in front of it. The counter's change data describes each currency by name, says whether it is a coin, gives it a value and keeps a material for the change itself.",
+    "Because the coin flag and the value are separate, the game can tell a coin from a note while still treating both as the same currency, which is what makes a change drawer possible at all.",
+    "The image beside this entry is the game's own: the card it draws on its card payment screen, with the bank's name, the number and the holder printed on it.",
+    "What this entry does not tell you: what any of these screens look like, how change is worked out, or how many currencies the counter carries. We have not verified those, so we do not print them."
+  ],
+  "facts": [
+    {
+      "claim": "The checkout bar carries a name, a price, a unit and a total.",
+      "evidence": "identifiers: UI_CheckoutItemBar, m_NameText, m_PriceText, m_UnitText, m_TotalText"
+    },
+    {
+      "claim": "The card payment screen shows a total of its own.",
+      "evidence": "identifiers: UI_CreditCardScreen, m_TotalPriceText"
+    },
+    {
+      "claim": "That screen follows an object rather than sitting in a fixed place.",
+      "evidence": "identifier: m_FollowObject"
+    },
+    {
+      "claim": "It carries an extension for controllers.",
+      "evidence": "identifier: m_ControllerScreenUIExtension"
+    },
+    {
+      "claim": "The counter's change data names each currency, says whether it is a coin, and gives it a value and a material for the change.",
+      "evidence": "identifiers: CounterMoneyChangeCurrencyData, name, currencyType, isCoin, value, changeMaterial"
+    }
+  ],
+  "related": [
+    "the-counter-and-money",
+    "the-currencies-the-game-tracks"
+  ],
+  "images": [
+    {
+      "file": "mapped/what-the-till-shows-you-card.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "The card the game draws on its card payment screen.",
+        "zh": "游戏在刷卡付款界面上绘制的银行卡。"
+      }
+    },
+    {
+      "file": "what-the-till-shows-you.svg",
+      "kind": "diagram",
+      "alt": {
+        "en": "Diagram: the checkout bar shows a name, a price, a unit and a total, the card screen follows the card with its own total, and the counter holds change data per currency.",
+        "zh": "示意图：收银条显示名称、单价、单位与总额；刷卡界面跟随卡牌并显示总额；柜台按币种保存找零数据。"
+      },
+      "disclaimer": "Original diagram drawn for this site. It is not a screenshot of the game."
+    }
+  ],
+  "sources": [
+    "A local copy of the game, read only. The grounding for each fact is listed on the technical reference pages; nothing here is estimated."
+  ],
+  "imageTier": "game-image"
+}

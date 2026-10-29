@@ -1,0 +1,61 @@
+{
+  "id": "putting-the-walls-and-the-prizes-to-work",
+  "title": "Putting the walls and the prizes to work",
+  "tier": "published",
+  "kind": "article",
+  "target": "How to use decoration and the tournament prize shelf in TCG Card Shop Simulator so the walls and the prize display are doing a job rather than only filling space.",
+  "version": "no version stated by this build (see the sources page)",
+  "prerequisites": [
+    "A shop with wall slots",
+    "Some decoration to put on them",
+    "A prize shelf if you run tournaments"
+  ],
+  "steps": [
+    {
+      "do": "Treat posters as a decoration kind of their own rather than as pictures in general.",
+      "because": "posters are kept in a list of their own beside other decoration (m_PosterDecoList)"
+    },
+    {
+      "do": "Keep wall decoration and wall-bar decoration apart when you are planning a wall.",
+      "because": "the two are listed separately (m_WallDecoDataList, m_WallBarDecoDataList)"
+    },
+    {
+      "do": "Remember that the shop billboard is its own object, not a wall slot.",
+      "because": "the billboard is an interactable object of its own (InteractableShopBillboard)"
+    },
+    {
+      "do": "Put prizes on the shelf built for them rather than on any spare rack.",
+      "because": "there is a shelf dedicated to tournament prizes (TournamentPrizeShelf)"
+    },
+    {
+      "do": "Know that a shelf's purpose is a kind of shelf, not a label you apply.",
+      "because": "shelves are typed, with card shelves and combination shelves among them (CardShelf, CardItemCombiShelf, Shelf)"
+    },
+    {
+      "do": "Fill the compartments the shelf actually has, and give it the stand points it asks for.",
+      "because": "the prize shelf keeps its own compartment groups, a screen mesh, and separate stand locations for customers and for winners (m_CardShelfCompartmentGrpList, m_ShelfCompartmentGrpList, m_ScreenMesh, m_CustomerStandLocList, m_WinnerStandLocList)"
+    },
+    {
+      "do": "Let the shelf manager track what is on the shelves instead of tracking it yourself.",
+      "because": "shelf contents are tracked by a manager regardless of the shelf's purpose (ShelfManager)"
+    },
+    {
+      "do": "Watch where a fixture cuts the walkable floor before you commit to its place.",
+      "because": "a shelf is marked with its object type and with whether it cuts the navmesh (m_ObjectType, m_NavMeshCut, m_IsGenericObject)"
+    }
+  ],
+  "commonMistakes": [
+    "Treating every wall slot as the same kind of slot.",
+    "Hanging prizes on the first rack you find instead of the prize shelf.",
+    "Filling a shelf without regard to the compartments it actually has.",
+    "Placing a fixture across the path customers walk."
+  ],
+  "relatedEntities": [
+    "posters-and-wall-displays",
+    "prize-shelves-and-specials",
+    "how-a-shelf-holds-its-stock"
+  ],
+  "sources": [
+    "A local copy of the game, read only. Grounding for each step is on the technical reference pages; no number is estimated."
+  ]
+}

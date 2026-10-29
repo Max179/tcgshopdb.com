@@ -1,0 +1,95 @@
+{
+  "id": "the-setting-screens-for-your-fixtures",
+  "title": "The setting screens for your fixtures",
+  "category": "Interface",
+  "summary": "Fixtures in TCG Card Shop Simulator are configured where they stand: the game has a setting screen for prices, for the cashier counter, for card storage shelves and for play tables.",
+  "body": [
+    "Fixtures are configured individually. The game keeps a setting screen per kind of fixture rather than one global menu, which is why what you change depends on what you are standing at.",
+    "Prices have a screen of their own. There is a screen for setting an item price, which is why pricing is done at the fixture rather than only at the counter.",
+    "The counter has one too. The cashier counter carries its own setting screen, so how the counter works is a local decision rather than a shop-wide one.",
+    "Storage shelves are set where they are. Card storage shelves have a setting screen of their own, which is why what a shelf holds is decided at the shelf.",
+    "Play tables are numbered. There is a screen for setting a table number, which is why tables are identified individually rather than as one group.",
+    "The price screen shows its working. It carries the average cost of what is being priced and the profit on it, along with a card interface for setting the price rather than a bare box, so the number is chosen with what it earns in view.",
+    "Selling has a confirmation of its own. There is a confirm screen for selling a shelf, so a fixture is not disposed of by accident.",
+    "Naming a table is a screen too. It keeps an input along with a display of what has been typed and the table number itself, which is why a number is confirmed before it is set.",
+    "The image beside this entry is the game's own: one of the fixture icons it ships, the ceiling tile sheet a setting screen uses for a ceiling fixture.",
+    "What this entry does not tell you: how many fixtures each screen covers, what any setting costs, or whether settings can be copied between fixtures. We have not verified those, so we do not print them."
+  ],
+  "facts": [
+    {
+      "claim": "Setting screens exist per kind of fixture rather than as one global menu.",
+      "evidence": "identifier: SettingScreen"
+    },
+    {
+      "claim": "There is a screen for setting an item price.",
+      "evidence": "identifier: SetItemPriceScreen"
+    },
+    {
+      "claim": "The cashier counter has its own setting screen.",
+      "evidence": "identifier: SetCashierCounterSettingScreen"
+    },
+    {
+      "claim": "Card storage shelves have a setting screen of their own.",
+      "evidence": "identifier: SetCardStorageShelfSettingScreen"
+    },
+    {
+      "claim": "Play tables are numbered through their own screen.",
+      "evidence": "identifier: SetPlayerTableNumberScreen"
+    },
+    {
+      "claim": "Selling a shelf has a confirmation screen of its own.",
+      "evidence": "identifier: ConfirmSellShelfScreen"
+    },
+    {
+      "claim": "The price screen carries the average cost, the profit and a card interface for setting the price.",
+      "evidence": "identifiers: SetItemPriceScreen, m_AverageCostText, m_Profit, m_SetPriceCardUI"
+    },
+    {
+      "claim": "The game ships fixture icons of its own for the setting screens, including one for a ceiling.",
+      "evidence": "asset name: Icon_Ceiling0"
+    },
+    {
+      "claim": "The table-number screen keeps an input, a display for that input and the table number itself.",
+      "evidence": "identifiers: SetPlayerTableNumberScreen, m_TableNumberInput, m_TableNumberInputDisplay, m_TableNumber"
+    },
+    {
+      "claim": "The build ships a sheet of fixture icons in more than one colour variant.",
+      "evidence": "asset name: DeluxeEditionIconsHigh"
+    }
+  ],
+  "related": [
+    "shelves-stock-and-upgrades",
+    "the-card-game-you-can-play"
+  ],
+  "images": [
+    {
+      "file": "mapped/the-setting-screens-for-your-fixtures-ceiling.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "One of the fixture icons the game ships for its setting screens: a light grey grid of square ceiling tiles.",
+        "zh": "游戏为设置界面提供的设施图标之一：浅灰色方格天花板的贴图。"
+      }
+    },
+    {
+      "file": "the-setting-screens-for-your-fixtures.svg",
+      "kind": "diagram",
+      "alt": {
+        "en": "Diagram: stand at a fixture, open its setting screen, change what applies to it, and confirm.",
+        "zh": "示意图：走到设施前、打开其设置界面、修改适用于它的设定、确认。"
+      },
+      "disclaimer": "Original diagram drawn for this site. It is not a screenshot of the game."
+    },
+    {
+      "file": "mapped/the-setting-screens-for-your-fixtures-icons.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "A sheet of the game's fixture icons: a checkout machine, a counter, a table with chairs, a bin and a vending machine, in blue and in green.",
+        "zh": "游戏自带的设施图标图集：收银机、柜台、桌椅、垃圾桶与自动售货机，各有蓝、绿两种配色。"
+      }
+    }
+  ],
+  "sources": [
+    "A local copy of the game, read only. Identifiers are listed on the technical reference pages; nothing here is estimated."
+  ],
+  "imageTier": "game-image"
+}

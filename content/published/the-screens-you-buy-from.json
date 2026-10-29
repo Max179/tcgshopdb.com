@@ -1,0 +1,79 @@
+{
+  "id": "the-screens-you-buy-from",
+  "title": "The screens you buy from",
+  "category": "Shop",
+  "summary": "Buying in TCG Card Shop Simulator goes through screens of its own: an item shows its name, price, company and level requirement, then a confirmation screen repeats it with a picture before the purchase.",
+  "body": [
+    "Buying something for the shop goes through screens of its own rather than through one list. Furniture, card sets and decorations each have their own shop panel, which is why the same purchase can look different depending on what you are buying.",
+    "An item on a shop panel shows more than a price. The panel carries a name, a price, a company title and a line for the level it requires, so a locked purchase says what is missing rather than only refusing.",
+    "The button changes with the state of the purchase. There is a locked purchase button and a purchased button kept separately, which is how the game shows you that something is not available yet rather than only that it cannot be clicked.",
+    "Some panels have a prologue group and a list that a later shop screen switches on. That is how content tied to a follow-up shop can be present in the interface without being for sale yet.",
+    "Before the money is spent there is a confirmation screen. It repeats the picture, the name, a description and the price of what you are about to buy, so confirming is a decision made with the same information again rather than a second click on the same button.",
+    "Choosing a card set is its own screen. It carries a list of highlighted buttons and an extension for controllers, which is why picking a set is a step in the buying flow rather than a filter on a list.",
+    "The expansion shop is built the same way. Its screen keeps a list of its panels, the price text and lock button for the later shop, the group that unlocks the prologue content and a highlight button for each of the two shops, so growth is browsed as a set of panels rather than a single list.",
+    "The furniture shop screen collects its panels into one list and holds the confirmation screen behind it, so the shop is assembled from parts rather than drawn as a single page.",
+    "The image beside this entry is the game's own: the checkout icon it puts on the screens the shop is bought from.",
+    "What this entry does not tell you: how much anything costs, what each level requirement is, or how the shop decides what to show first. We have not verified those, so we do not print them."
+  ],
+  "facts": [
+    {
+      "claim": "A shop panel for an item carries its name, price, company title and level requirement.",
+      "evidence": "identifiers: FurnitureShopPanelUI, m_NameText, m_PriceText, m_CompanyTitle, m_LevelRequirementText"
+    },
+    {
+      "claim": "The button for a purchase exists in a locked form and in a purchased form.",
+      "evidence": "identifiers: m_LockPurchaseBtn, m_PurchasedBtn"
+    },
+    {
+      "claim": "An expansion panel keeps a prologue group and a list that a later shop screen enables.",
+      "evidence": "identifiers: ExpansionShopPanelUI, m_PrologueUIGrp, m_ShopB_EnableList"
+    },
+    {
+      "claim": "A confirmation screen repeats the picture, name, description and price before a purchase is made.",
+      "evidence": "identifiers: FurnitureShopConfirmPurchaseScreen, m_Image, m_NameText, m_DescriptionText, m_PriceText"
+    },
+    {
+      "claim": "Choosing a card set has a screen of its own with a highlight list and a controller extension.",
+      "evidence": "identifiers: CardExpansionSelectScreen, m_BtnHighlightList, m_ControllerScreenUIExtension"
+    },
+    {
+      "claim": "The furniture shop screen collects its panels into a list and holds the confirmation screen behind it.",
+      "evidence": "identifiers: FurnitureShopUIScreen, m_FurnitureShopPanelUIList, m_ConfirmPurchaseScreen"
+    },
+    {
+      "claim": "The expansion shop screen keeps a list of its panels, text for the price, a lock button, an unlock group for the prologue and highlight buttons for both shops.",
+      "evidence": "identifiers: m_ExpansionShopPanelUIList, m_ShopB_PriceText, m_ShopB_LockPurchaseBtn, m_ShopB_UnlockGrpPrologue, m_ShopA_HighlightBtn, m_ShopB_HighlightBtn"
+    },
+    {
+      "claim": "The game ships a checkout icon of its own for the screens the shop is bought from.",
+      "evidence": "asset name: Icon_Checkout"
+    }
+  ],
+  "related": [
+    "expanding-and-decorating-the-shop",
+    "the-upgrades-you-can-buy"
+  ],
+  "images": [
+    {
+      "file": "mapped/the-screens-you-buy-from-checkout.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "The checkout icon the game itself uses: a pale shopping trolley with two wheels, drawn for the screens the shop is bought from.",
+        "zh": "游戏自带的结账图标：一辆带两个轮子的浅色购物车，用于购买店铺内容的界面。"
+      }
+    },
+    {
+      "file": "the-screens-you-buy-from.svg",
+      "kind": "diagram",
+      "alt": {
+        "en": "Diagram: an item is shown with its name, price and level requirement, the confirm screen repeats it, and only then is the purchase made.",
+        "zh": "示意图：商品显示名称、价格与等级要求，确认页再次展示，之后才完成购买。"
+      },
+      "disclaimer": "Original diagram drawn for this site. It is not a screenshot of the game."
+    }
+  ],
+  "sources": [
+    "A local copy of the game, read only. The grounding for each fact is listed on the technical reference pages; nothing here is estimated."
+  ],
+  "imageTier": "game-image"
+}

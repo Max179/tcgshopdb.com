@@ -1,0 +1,62 @@
+{
+  "id": "sorting-the-restock-list-before-you-spend",
+  "title": "Sorting the restock list before you spend",
+  "tier": "published",
+  "kind": "article",
+  "target": "How the restock screens in TCG Card Shop Simulator are arranged: a screen for browsing and a screen for adding to the cart, sort controls and page buttons, a running total for the cart, and a notification of what went into it.",
+  "version": "no version stated by this build (see the sources page)",
+  "prerequisites": [
+    "A shop that needs stock",
+    "Enough money in the till",
+    "A minute to use the screens"
+  ],
+  "steps": [
+    {
+      "do": "Open the restock list rather than buying blind, because browsing and adding to the cart are separate screens.",
+      "because": "adding to the cart and browsing it are separate screens (RestockItemScreen, RestockItemAddToCartScreen)"
+    },
+    {
+      "do": "Sort before you shop, because the list has a sort screen and a set of sort buttons of its own.",
+      "because": "the list has a sort screen and sort buttons (m_SortUIScreen, m_SortBtnList)"
+    },
+    {
+      "do": "Move through the list in pages, because each page has a highlighted button that shows where you are.",
+      "because": "the panel list has page buttons that highlight (m_RestockItemPanelUIList, m_PageButtonHighlightList)"
+    },
+    {
+      "do": "Watch the running total rather than adding prices up in your head.",
+      "because": "the screen carries a total cost text (m_TotalCostText)"
+    },
+    {
+      "do": "Check how many lines are in the cart before paying, because the count has a readout of its own.",
+      "because": "the screen carries a total cart item count text (m_TotalCartItemCountText)"
+    },
+    {
+      "do": "Take the cart to its checkout screen when it is right, because the cart is paid for on a screen of its own.",
+      "because": "the cart is paid for on a checkout screen of its own (m_RestockItemCheckoutScreen)"
+    },
+    {
+      "do": "Use the tabletop screen for games rather than the card list, because tabletop games restock through a screen of their own.",
+      "because": "tabletop games restock through a screen of their own (RestockItemBoardGameScreen)"
+    },
+    {
+      "do": "Keep an eye on the cart notification, because adding something tells you it went in rather than leaving you to count rows.",
+      "because": "the screen carries a cart notification (m_CartNotification)"
+    }
+  ],
+  "commonMistakes": [
+    "Buying from the browsing screen and never opening the cart.",
+    "Working down an unsorted list and filling the cart with the wrong things.",
+    "Adding a line and not noticing the cart notification.",
+    "Paying without checking the total cost readout.",
+    "Going to the card list for tabletop games, which have a screen of their own."
+  ],
+  "relatedEntities": [
+    "restocking-from-a-cart",
+    "scanner-restocking-workflow",
+    "the-box-your-stock-arrives-in"
+  ],
+  "sources": [
+    "A local copy of the game, read only. Identifiers are listed on the technical reference pages; nothing here is estimated."
+  ]
+}

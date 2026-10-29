@@ -1,0 +1,61 @@
+{
+  "id": "reading-the-board-before-you-act",
+  "title": "Reading the board before you act",
+  "tier": "published",
+  "kind": "article",
+  "target": "How to read the board in the card game in TCG Card Shop Simulator before committing to a play, so a turn is decided from what is on the table rather than from memory.",
+  "version": "no version stated by this build (see the sources page)",
+  "prerequisites": [
+    "A play table with a game in progress",
+    "A deck you are playing with",
+    "Some idea of what your cards do"
+  ],
+  "steps": [
+    {
+      "do": "Read attack as three totals rather than one number.",
+      "because": "the board keeps a base attack list and two separate boost lists, one for the elements involved and one for cards (m_AtkPowerList, m_BoostElementAtkPowerList, m_BoostCardAtkPowerList)"
+    },
+    {
+      "do": "Put a card where the elements can add to it.",
+      "because": "the board holds positions and card lists for the element areas, and tracks which area you are hovering by index (m_ElementAreaPosList, m_ElementAreaCardList, m_CurrentHoverElementAreaIndex)"
+    },
+    {
+      "do": "Check the guardian row before you commit an attacker.",
+      "because": "guardians have their own positions and their own list of cards (m_GuardianCardPosList, m_GuardianCard3dList)"
+    },
+    {
+      "do": "Watch both ends of the deck, not only the top.",
+      "because": "the deck is kept as a top list and a bottom list (m_TopDeckCard3dList, m_BottomDeckCard3dList)"
+    },
+    {
+      "do": "Read the discard pile before you decide what is gone.",
+      "because": "the pile has its own position and card lists, and the board remembers the cards discarded most recently (m_DiscardPosList, m_DiscardCard3dList, m_LastTriggerDiscardedCard3dList)"
+    },
+    {
+      "do": "Wait for a resolution to finish rather than starting another.",
+      "because": "the board keeps the cards selected for a resolution, the cards valid for it and a flag for a turn waiting to resolve (m_ResolveActionSelectedCardList, m_ResolveActionValidCardList, m_IsWaitingActionResolve)"
+    },
+    {
+      "do": "Know that a resolution can refuse to repeat a kind of monster.",
+      "because": "there is a list to check against and a list of the kinds already chosen (m_ActionResolveMonsterTypeNoRepeatCheckList, m_ActionResolveMonsterTypeSelectedList)"
+    },
+    {
+      "do": "Know which areas are occupied before you plan around them.",
+      "because": "the board remembers the monsters standing in the element areas (m_ElementAreaMonsterDataList)"
+    }
+  ],
+  "commonMistakes": [
+    "Adding up one attack number and forgetting the element and card boosts.",
+    "Attacking past a guardian because you did not look at the row.",
+    "Planning around the top of the deck and forgetting that cards can go under it.",
+    "Acting again while a resolution is still waiting."
+  ],
+  "relatedEntities": [
+    "the-state-of-a-game-of-cards",
+    "the-boards-interface",
+    "what-a-card-shows-in-play"
+  ],
+  "sources": [
+    "A local copy of the game, read only. Grounding for each step is on the technical reference pages; no number is estimated."
+  ]
+}

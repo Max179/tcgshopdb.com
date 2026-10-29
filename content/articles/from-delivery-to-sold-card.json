@@ -1,0 +1,44 @@
+{
+  "id": "from-delivery-to-sold-card",
+  "title": "From a delivery to a sold card",
+  "tier": "published",
+  "kind": "article",
+  "target": "The chain in TCG Card Shop Simulator that turns a box on the floor into money in the till, step by step, using the shop's own behaviour.",
+  "version": "no version stated by this build (see the sources page)",
+  "prerequisites": [
+    "Packs ordered and delivered",
+    "A usable shelf",
+    "Access to the pricing screens"
+  ],
+  "steps": [
+    {
+      "do": "Decide what stays sealed and what you open.",
+      "because": "packaging boxes exist in separate kinds for cards, items and shelves (InteractablePackagingBox_Card, InteractablePackagingBox_Item)"
+    },
+    {
+      "do": "Open in bulk with the machine when you have the option.",
+      "because": "an automatic opener exists and keeps its own progress (InteractableAutoPackOpener, AutoPackOpenerSaveData)"
+    },
+    {
+      "do": "Price every card before it goes out.",
+      "because": "prices are attached through price tag objects (InteractableCardPriceTag, CheckPriceScreen)"
+    },
+    {
+      "do": "Keep the shelf full, because a shelf sells only what it holds.",
+      "because": "shelf contents are tracked by a manager (ShelfManager)"
+    }
+  ],
+  "commonMistakes": [
+    "Opening everything and shelving nothing.",
+    "Putting unpriced cards out.",
+    "Forgetting that sealed stock can also be sold."
+  ],
+  "relatedEntities": [
+    "packs-and-opening",
+    "prices-and-price-tags",
+    "shelves-stock-and-upgrades"
+  ],
+  "sources": [
+    "A local copy of the game, read only. Grounding for each step is on the technical reference pages; no number is estimated."
+  ]
+}

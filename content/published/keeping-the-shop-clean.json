@@ -1,0 +1,61 @@
+{
+  "id": "keeping-the-shop-clean",
+  "title": "Keeping the shop clean",
+  "category": "Shop",
+  "summary": "Cleaning in TCG Card Shop Simulator is a system of its own: the game keeps a list of auto-cleaners, a cleaning effect, saved cleaner data and its own cleaner and bin materials.",
+  "body": [
+    "A shop that is left alone gets messy, and the game treats cleaning as a system rather than a chore you improvise. It keeps the shop's cleaners together in a list of their own, which is why more than one can be working without being handled one at a time.",
+    "The cleaners are things in the shop rather than a setting. There are auto-cleaner objects with an interaction for using one, so a cleaner is picked up, placed and used like the shop's other fittings.",
+    "They are remembered with the shop. Cleaner data is saved in a list of its own, which is why where you put them survives closing the game rather than having to be set up again.",
+    "Cleaning has a look of its own. There is a cleaning effect named separately from the cleaners themselves, so what cleaning looks like on screen is its own piece rather than part of the model.",
+    "The cleaner is modelled, not drawn. It has a mesh with a low-detail version beside it, so the same object can be shown in full nearby and in a cheaper form further away.",
+    "It is pictured as well as modelled. The build ships an icon for the cleaner, so the shop's screens can show what it is without loading the object.",
+    "Its surfaces are its own. The cleaner has a material with an albedo sheet and a second variant, and the bins have a material set of their own with a base sheet, a normal map and a metallic-smoothness map, which is why the two pieces do not look alike.",
+    "Because the list, the effect, the saved data and the materials are separate, the game can add a cleaner without changing what cleaning looks like.",
+    "What this entry does not tell you: how much a cleaner costs, how quickly it works, or how often the shop needs cleaning. We have not verified those numbers, so we do not print them."
+  ],
+  "facts": [
+    {
+      "claim": "The shop's cleaning is kept in a list of its own.",
+      "evidence": "identifiers: m_AutoCleanserList, m_CleanFX"
+    },
+    {
+      "claim": "Cleaner data is saved with the shop, in a list of its own.",
+      "evidence": "identifier: m_AutoCleanserSaveDataList"
+    },
+    {
+      "claim": "Auto-cleaners are objects of their own, with an interaction for using one.",
+      "evidence": "asset names: AutoCleaners, AutoCleanser, Interactable_AutoCleanser, PO_AutoCleanser"
+    },
+    {
+      "claim": "The cleaner is modelled, with a mesh and a low-detail version beside it.",
+      "evidence": "asset names: Cleanser, Cleanser_Mesh, Cleanser_low"
+    },
+    {
+      "claim": "The build ships an icon for the cleaner of its own.",
+      "evidence": "asset name: Icon_Cleanser"
+    },
+    {
+      "claim": "The cleaner's material is named with an albedo sheet and a second variant, and the bins have a material set of their own: a base sheet, a normal map and a metallic-smoothness map.",
+      "evidence": "asset names: CleanserMaterial, CleanserMaterial_albedo, CleanserMaterial_second, MAT_Cleanser, BinMaterial, BinMaterial_AlbedoTransparency, BinMaterial_Normal, BinMaterial_MetallicSmoothness"
+    }
+  ],
+  "related": [
+    "expanding-and-decorating-the-shop",
+    "where-the-shops-lists-live"
+  ],
+  "images": [
+    {
+      "file": "mapped/keeping-the-shop-clean-cleanser.png",
+      "kind": "game",
+      "alt": {
+        "en": "The icon the game ships for its cleaner: a purple spray can of deodorant spray on transparency.",
+        "zh": "游戏为其清洁用品提供的图标：透明底上一罐紫色除臭喷雾。"
+      }
+    }
+  ],
+  "sources": [
+    "A local copy of the game, read only. The grounding for each fact is listed on the technical reference pages; nothing here is estimated."
+  ],
+  "imageTier": "game-image"
+}

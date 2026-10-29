@@ -1,0 +1,73 @@
+{
+  "id": "putting-on-an-event-that-pays-for-itself",
+  "title": "Putting on an event that pays for itself",
+  "tier": "published",
+  "kind": "article",
+  "target": "How to set up and run a shop event in TCG Card Shop Simulator: what the event screens ask for, what the prize shelf is for, and how a tournament result is decided when two players finish level.",
+  "version": "no version stated by this build (see the sources page)",
+  "prerequisites": [
+    "A shop open for trade",
+    "A play area that customers can reach",
+    "Prizes to put out"
+  ],
+  "steps": [
+    {
+      "do": "Settle the format before the price, because an event is set up through three screens and the format is one of them.",
+      "because": "an event is set up through its own screens (SetGameEventScreen, SetGameEventFormatScreen, SetGameEventPriceScreen)"
+    },
+    {
+      "do": "Check whether your shop has played enough to unlock the format you want, because the format screen keeps a requirement and a locked group.",
+      "because": "the format screen has a locked group and a required play count (SetGameEventFormatScreen, m_LockedGrp, m_PlayCountRequired)"
+    },
+    {
+      "do": "Read the fee and the cost separately before confirming, because the screen keeps them apart.",
+      "because": "the event screen has separate readouts for the fee, the format and the cost (m_FeeText, m_FormatText, m_CostText)"
+    },
+    {
+      "do": "Set the price against the market rather than from memory, since the price screen shows the market price beside the one you enter.",
+      "because": "the price screen shows the market price next to the price you set (SetGameEventPriceScreen, m_MarketPriceText, m_SetPriceInput, m_SetPrice)"
+    },
+    {
+      "do": "Read both effects of an event before you run it, because every event carries one positive and one negative.",
+      "because": "an event is shown with a positive effect and a negative effect (m_PositiveEffectText, m_NegativeEffectText)"
+    },
+    {
+      "do": "Look at what is coming next as well as what is on now, because the screen names both.",
+      "because": "the event screen names the current event and the next one (m_CurrentGameEventText, m_NextGameEventText)"
+    },
+    {
+      "do": "Use the button beside the previous and next ones when you are happy with the setup, because the screen has a confirming step of its own.",
+      "because": "the format screen has confirm, previous and next buttons (m_ConfirmButton, m_PreviousButton, m_NextButton)"
+    },
+    {
+      "do": "Put the prizes on the prize shelf rather than on an ordinary one, because the game has a shelf for exactly that.",
+      "because": "prizes have a dedicated shelf (TournamentPrizeShelf)"
+    },
+    {
+      "do": "Expect standings to come from wins, points and two tiebreakers rather than wins alone.",
+      "because": "a win count, a win point total and two tiebreakers from opponents and their opponents are kept (m_TournamentWinCount, m_TournamentWinPoints, m_TournamentOMW, m_TournamentOOMW)"
+    },
+    {
+      "do": "Keep the entrant's opponents and placement in mind when a result looks wrong, because both are recorded for each entrant.",
+      "because": "the record keeps the entrant's opponent list and their placement (m_TournamentOpponentIndexList, m_TournamentPlacementIndex)"
+    },
+    {
+      "do": "Note which table the winner played at, since the game records the winner and the table together.",
+      "because": "the game records whether the entrant won and which play table they used (m_IsTournamentWin, m_TournamentCustomerPlayTableIndex)"
+    }
+  ],
+  "commonMistakes": [
+    "Choosing the price before the format, when the format is what decides how many can play.",
+    "Ignoring the negative effect an event carries and only reading the good one.",
+    "Putting prizes on an ordinary shelf instead of the prize shelf.",
+    "Assuming the highest win count takes the event, when two tiebreakers sit behind it."
+  ],
+  "relatedEntities": [
+    "setting-up-an-event",
+    "tournaments-and-events",
+    "how-tournament-standings-are-decided"
+  ],
+  "sources": [
+    "A local copy of the game, read only. The grounding for each step is listed on the technical reference pages; nothing here is estimated."
+  ]
+}

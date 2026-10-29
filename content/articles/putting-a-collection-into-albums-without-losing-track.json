@@ -1,0 +1,62 @@
+{
+  "id": "putting-a-collection-into-albums-without-losing-track",
+  "title": "Putting a collection into albums without losing track",
+  "tier": "published",
+  "kind": "article",
+  "target": "How albums and binder pages work in TCG Card Shop Simulator: a card knows when it belongs to an album, a binder page has its own index and visibility, and the binder has a flip animation of its own.",
+  "version": "no version stated by this build (see the sources page)",
+  "prerequisites": [
+    "Cards worth keeping",
+    "An album or binder to put them in",
+    "A plan for what the album is for"
+  ],
+  "steps": [
+    {
+      "do": "Decide what the album is for before you start filling it, because the game keeps albums as things of their own.",
+      "because": "an album is a thing of its own in the game (CardAlbum)"
+    },
+    {
+      "do": "Put a card in the album rather than on a shelf when it is for keeping, because a card carries a flag for being an album card.",
+      "because": "a card carries a flag for whether it is an album card (m_IsCardAlbumCard)"
+    },
+    {
+      "do": "Work page by page, because a binder page has an index of its own.",
+      "because": "a binder page has an index that can be set (CardAlbumPage, BinderPage)"
+    },
+    {
+      "do": "Show and hide pages deliberately, because a page has a visibility the game can set.",
+      "because": "a binder page has its visibility set on its own (BinderPage)"
+    },
+    {
+      "do": "Count what is in the album as you go, because the album keeps a count of the cards in it.",
+      "because": "the album carries a card count (AlbumCardCount)"
+    },
+    {
+      "do": "Expect the binder to turn like an object, because it has a flip animation of its own.",
+      "because": "it can carry the collection binder's flip animation (m_CollectionBinderFlipAnimCtrl)"
+    },
+    {
+      "do": "Know that the page art is the game's own, because the binder page is a texture the build ships.",
+      "because": "the build ships its own binder page texture (T_BinderPage)"
+    },
+    {
+      "do": "Leave room for the pocket pages the game ships, because there is more than one page kind.",
+      "because": "a nine-pocket page texture is shipped as well (T_3_UP_PlatinumSeriesPocketPages)"
+    }
+  ],
+  "commonMistakes": [
+    "Filling an album with stock that was meant to be sold.",
+    "Moving a page's contents card by card instead of working page by page.",
+    "Forgetting that a card has to be flagged as an album card before it belongs there.",
+    "Treating the album as a shelf and expecting the shop's stock counts to agree.",
+    "Leaving pages hidden and then wondering where a card went."
+  ],
+  "relatedEntities": [
+    "albums-and-binder-pages",
+    "the-card-display-object",
+    "cards-and-rarity"
+  ],
+  "sources": [
+    "A local copy of the game, read only. Identifiers are listed on the technical reference pages; nothing here is estimated."
+  ]
+}

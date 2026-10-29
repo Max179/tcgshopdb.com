@@ -1,0 +1,65 @@
+{
+  "id": "how-a-crowd-is-animated-from-a-baked-set",
+  "title": "How a crowd is animated from a baked set",
+  "category": "Customers",
+  "summary": "The characters in TCG Card Shop Simulator can be animated from a baked set rather than from a live rig: the set is built from a source prefab and an archetype, stores the bones in a texture with block and texture sizes and a frame rate of its own, holds its clips, keeps CPU copies of the bone transforms and records a log of the bake.",
+  "body": [
+    "A shop full of customers is a lot of moving characters. Rather than running a full rig on every one of them, the game can bake the animation into a texture and play it back, which is why a busy shop stays busy.",
+    "A baked set starts from two things. It is built from a source prefab and an archetype of the character, so which character and which kind of movement it is baked from are both recorded.",
+    "The bones become a texture. The set keeps the bone data as a texture rather than as a hierarchy, which is what makes playing many of them cheaper than posing them.",
+    "It is laid out in blocks. There are block widths and heights along with the texture's own width and height, so where a particular frame's bones live in the texture is a matter of arithmetic rather than a lookup tree.",
+    "It runs at a frame rate of its own. That value belongs to the set, which is why a baked animation can be played at a chosen speed rather than only at the rate it was recorded.",
+    "It holds its clips and a CPU copy. The set keeps a list of clips, and it also keeps the bone matrices and bone transforms on the processor, so the same data can be used by the game's own code as well as drawn.",
+    "And it keeps a log. There is a bake log recorded with the set, which is how a problem with a bake can be found without rebuilding it to see what happened.",
+    "What this entry does not tell you: how many characters are baked, how many frames a texture holds, or what the frame rate is. We have not verified those numbers, so we do not print them."
+  ],
+  "facts": [
+    {
+      "claim": "A baked set is built from a source prefab and an archetype.",
+      "evidence": "identifiers: BakedAnimationSet, sourcePrefab, archetype, BakedCharacterArchetype"
+    },
+    {
+      "claim": "It keeps the bones as a texture.",
+      "evidence": "identifier: boneTexture"
+    },
+    {
+      "claim": "It is laid out in blocks, with block sizes and texture sizes.",
+      "evidence": "identifiers: blockWidth, blockHeight, textureWidth, textureHeight"
+    },
+    {
+      "claim": "It runs at a frame rate of its own.",
+      "evidence": "identifier: fps"
+    },
+    {
+      "claim": "It holds its clips.",
+      "evidence": "identifiers: clips, BakedClip"
+    },
+    {
+      "claim": "It keeps CPU copies of the bone matrices and transforms.",
+      "evidence": "identifiers: cpuBoneMatrices, cpuBoneTRS, BakedBoneTRS"
+    },
+    {
+      "claim": "It keeps a bake log.",
+      "evidence": "identifier: bakeLog"
+    }
+  ],
+  "related": [
+    "the-kinds-of-customers",
+    "the-profile-behind-each-customer"
+  ],
+  "images": [
+    {
+      "file": "how-a-crowd-is-animated-from-a-baked-set.svg",
+      "kind": "diagram",
+      "alt": {
+        "en": "Diagram: a set is baked from a prefab and an archetype into a bone texture, laid out in blocks at its own frame rate, with clips, CPU bone copies and a log.",
+        "zh": "示意图：由预制体与角色原型烘焙出骨骼贴图、按块排布并设自有帧率，另含片段、CPU 骨骼副本与日志。"
+      },
+      "disclaimer": "Original diagram drawn for this site. It is not a screenshot of the game."
+    }
+  ],
+  "sources": [
+    "A local copy of the game, read only. The grounding for each fact is listed on the technical reference pages; nothing here is estimated."
+  ],
+  "imageTier": "diagram-only"
+}

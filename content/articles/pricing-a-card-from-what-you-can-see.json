@@ -1,0 +1,47 @@
+{
+  "id": "pricing-a-card-from-what-you-can-see",
+  "title": "Pricing a card from what you can see",
+  "tier": "published",
+  "kind": "article",
+  "target": "How to price cards in TCG Card Shop Simulator using the tags, the price-check screen and the reveal, rather than from memory.",
+  "version": "no version stated by this build (see the sources page)",
+  "prerequisites": [
+    "Cards you intend to sell",
+    "Price tags to put on them",
+    "A counter to check prices at"
+  ],
+  "steps": [
+    {
+      "do": "Put a price on a card before it goes out on display.",
+      "because": "cards carry their own price tags (InteractableCardPriceTag)"
+    },
+    {
+      "do": "Use the price-check screen rather than guessing at the counter.",
+      "because": "the game has a screen for checking a price (CheckPriceScreen)"
+    },
+    {
+      "do": "Price a card at the moment you open it, while you can still see it.",
+      "because": "there is a price popup at the reveal (CardPricePopupUI)"
+    },
+    {
+      "do": "Take rarity into account as well as the card itself.",
+      "because": "rarity is a fixed set of levels rather than a free number (ERarity)"
+    },
+    {
+      "do": "Check the board for what you set rather than trusting your memory.",
+      "because": "prices are shown on tags and a board of their own (InteractablePriceTag)"
+    }
+  ],
+  "commonMistakes": [
+    "Displaying a card with no price on it.",
+    "Pricing from memory after the pack is gone.",
+    "Assuming a higher rarity always sells for more."
+  ],
+  "relatedEntities": [
+    "prices-and-price-tags",
+    "reading-the-price-board"
+  ],
+  "sources": [
+    "A local copy of the game, read only. Grounding for each step is on the technical reference pages; no number is estimated."
+  ]
+}

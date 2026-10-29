@@ -1,0 +1,70 @@
+{
+  "id": "reading-the-price-board",
+  "title": "Reading the price board",
+  "category": "Pricing",
+  "tier": "published",
+  "summary": "Prices in TCG Card Shop Simulator are shown, not hidden: the game draws item prices as their own lines in the interface and gives checking a price its own screen.",
+  "body": [
+    "Price information is presented as lines you read rather than a number you have to remember, which is why the game groups them together.",
+    "Checking a price is a deliberate action with its own screen, so you can look something up before you commit to a tag.",
+    "Because tags on the floor are objects too, what the board says and what the shelf says are two views of the same decision.",
+    "What this entry does not tell you: how often prices move or which lines matter most. We have not verified those numbers, so we do not print them."
+  ],
+  "facts": [
+    {
+      "claim": "Item prices are drawn as grouped lines in the interface.",
+      "evidence": "identifier: ItemPriceLineGrp"
+    },
+    {
+      "claim": "Checking a price has its own screen.",
+      "evidence": "identifier: CheckPriceScreen"
+    },
+    {
+      "claim": "Price tags on the floor are separate objects.",
+      "evidence": "identifier: InteractableCardPriceTag"
+    },
+    {
+      "claim": "The price screen pages through cards, with a panel list, highlighted page buttons, a card page option group and an expansion text.",
+      "evidence": "identifiers: m_CheckPricePanelUIList, m_PageButtonHighlightList, m_CardPageOptionGrp, m_CardExpansionText"
+    },
+    {
+      "claim": "That paging scrolls between a start and an end offset, stops at a scroll-end parent, and caps how many card elements a page may hold.",
+      "evidence": "identifiers: m_CardScrollOffsetPosStart, m_CardScrollOffsetPosEnd, m_ScrollEndParent, m_MaxCardUICountPerPage"
+    },
+    {
+      "claim": "The price screen carries the same three colours as the price graph: a positive, a negative and a neutral one.",
+      "evidence": "identifiers: m_PositiveColor, m_NegativeColor, m_NeutralColor"
+    },
+    {
+      "claim": "The build ships one sheet holding the tag artwork itself: the numerals, the separators and the currency signs the tags are written with.",
+      "evidence": "asset name: PriceTagAtlas"
+    }
+  ],
+  "related": [
+    "prices-and-price-tags",
+    "price-history-and-graphs"
+  ],
+  "images": [
+    {
+      "file": "mapped/reading-the-price-board-price-tag-atlas.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "The game's own tag sheet: the numerals, separators and currency signs a price tag is written with, beside a grid of item pictures.",
+        "zh": "游戏自带的价签图集：写价签用的数字、分隔符与货币符号，旁边是成排的商品小图。"
+      }
+    },
+    {
+      "file": "reading-the-price-board.svg",
+      "kind": "diagram",
+      "alt": {
+        "en": "Diagram: you open the price screen, read the lines, decide a tag, and the shelf shows it.",
+        "zh": "价格牌示意图：打开价格界面、查看价格行、决定标签、货架显示价格。"
+      },
+      "disclaimer": "Original diagram drawn for this site. It is not a screenshot of the game."
+    }
+  ],
+  "sources": [
+    "A local copy of the game, read only. The grounding for each fact is listed on the technical reference pages; nothing here is estimated."
+  ],
+  "imageTier": "game-image"
+}

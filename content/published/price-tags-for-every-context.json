@@ -1,0 +1,77 @@
+{
+  "id": "price-tags-for-every-context",
+  "title": "Price tags for every context",
+  "category": "Pricing",
+  "summary": "A price tag in TCG Card Shop Simulator is not one object: the game spawns it from a set of prefabs, so a shelf, an item box, a package box, a warehouse rack and a card each get the tag that fits them.",
+  "body": [
+    "A price tag in this shop is not a single object that is copied everywhere. The game spawns tags from a set of prefabs, and which one appears depends on what is being tagged.",
+    "An ordinary tag is one of them. A shelf gets a group of world interface elements rather than a lone tag, which is why a whole bay can carry several prices that belong together.",
+    "Boxes have their own tags. There is a tag for an item box and a separate one for a package box, so a sealed box can show a price without pretending to be a loose item on a shelf.",
+    "The warehouse is covered too, with a tag for a warehouse rack, and cards have a tag of their own rather than sharing the one used for goods.",
+    "Prices are also shown when you check one. The panel that opens for a price carries the picture of the item, its name, the total and a line describing how the price has changed, so a decision can be made from the panel rather than by remembering what the number used to be.",
+    "That panel has separate arrows for the three outcomes: a price that has gone up, one that has gone down and one that has not changed. Keeping three markers rather than a signed number is how the game makes the direction readable at a glance.",
+    "The panel also has a card element and a prologue group of its own, so what you see when you check a card is not simply the same screen as when you check a tin.",
+    "What this entry does not tell you: what any of these tags looks like in detail, how a price change is worked out, or how often prices move. We have not verified those, so we do not print them."
+  ],
+  "facts": [
+    {
+      "claim": "Price tags are spawned from a set of prefabs rather than one tag being reused everywhere.",
+      "evidence": "identifiers: PriceTagUISpawner, m_UIPriceTagPrefab"
+    },
+    {
+      "claim": "A shelf gets a group of world interface elements rather than a single tag.",
+      "evidence": "identifier: m_Shelf_WorldUIGrpPrefab"
+    },
+    {
+      "claim": "There is a tag for an item box and a separate one for a package box.",
+      "evidence": "identifiers: m_UIPriceTagItemBoxPrefab, m_UIPriceTagPackageBoxPrefab"
+    },
+    {
+      "claim": "There is a tag for a warehouse rack and a tag for a card.",
+      "evidence": "identifiers: m_UIPriceTagWarehouseRackPrefab, m_UIPriceTagCardPrefab"
+    },
+    {
+      "claim": "The panel that shows a price carries the item image, its name, the total and a line for how the price has changed.",
+      "evidence": "identifiers: CheckPricePanelUI, m_ItemImage, m_NameText, m_TotalPriceText, m_PriceChangeText"
+    },
+    {
+      "claim": "The panel has separate arrows for a price going up, going down and not changing.",
+      "evidence": "identifiers: m_UpArrow, m_DownArrow, m_NoChangeArrow"
+    },
+    {
+      "claim": "The panel has a card element and a prologue group of its own.",
+      "evidence": "identifiers: m_CardUI, m_PrologueUIGrp"
+    },
+    {
+      "claim": "The build ships item labels of its own, including a company label on the back.",
+      "evidence": "asset names: Item Label, LabelImage, LabelImageBack, LabelImageCompany"
+    }
+  ],
+  "related": [
+    "prices-and-price-tags",
+    "shelves-stock-and-upgrades"
+  ],
+  "images": [
+    {
+      "file": "mapped/price-tags-for-every-context-atlas.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "The game's own atlas of the price tags the entry describes.",
+        "zh": "游戏自带的价签图集。"
+      }
+    },
+    {
+      "file": "price-tags-for-every-context.svg",
+      "kind": "diagram",
+      "alt": {
+        "en": "Diagram: a tag is chosen to fit what it labels, and the price panel shows the item, the total and the direction of the change.",
+        "zh": "示意图：按所标注对象选择标签，价格面板显示物品、总价与涨跌方向。"
+      },
+      "disclaimer": "Original diagram drawn for this site. It is not a screenshot of the game."
+    }
+  ],
+  "sources": [
+    "A local copy of the game, read only. The grounding for each fact is listed on the technical reference pages; nothing here is estimated."
+  ],
+  "imageTier": "game-image"
+}

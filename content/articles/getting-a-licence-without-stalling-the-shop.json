@@ -1,0 +1,60 @@
+{
+  "id": "getting-a-licence-without-stalling-the-shop",
+  "title": "Getting a licence without stalling the shop",
+  "tier": "published",
+  "kind": "article",
+  "target": "How to add a product line in TCG Card Shop Simulator without wasting money: it covers the level requirement a licence asks for, the difference between an unlocked licence and an active one, and the unlock cost that comes on top.",
+  "version": "no version stated by this build (see the sources page)",
+  "prerequisites": [
+    "A shop that is open and running",
+    "Enough money for the licence and the unlock",
+    "A shop level to look at before you commit"
+  ],
+  "steps": [
+    {
+      "do": "Check the level requirement before you look at the price.",
+      "because": "a licence asks for a shop level as well as money, and the screen keeps a requirement line apart from the price (licenseShopLevelRequired, m_LevelRequirementText)"
+    },
+    {
+      "do": "Buy the licence as an item rather than treating it as a switch you flip.",
+      "because": "a licence is an item in the game, listed in its own tab with an indicator for a purchase (LicenseItem, LicensesTab, PurchasedLicenseIndicator)"
+    },
+    {
+      "do": "Budget the unlock separately from the licence.",
+      "because": "unlocking has a cost of its own, and shelves carry an unlock cost multiplier on top (m_UnlockCostText, m_ShelfUnlockCostMultiplier)"
+    },
+    {
+      "do": "After buying, check whether the licence is unlocked or actually active.",
+      "because": "the game keeps the unlocked licences apart from the ones currently active (unlockedLicenses, activeLicenses)"
+    },
+    {
+      "do": "If a line still does not appear, look for a disabled licence rather than buying it again.",
+      "because": "a set of licence numbers can be disabled, which is how a shop can hold a licence without its goods being on sale (disabledLicenseIDs)"
+    },
+    {
+      "do": "Do not assume a product will show up because it exists in the game.",
+      "because": "an item can stay hidden until it is unlocked (isHideItemUntilUnlocked)"
+    },
+    {
+      "do": "Expect the purchase to be checked rather than simply granted.",
+      "because": "the store side keeps a handle and a result the game examines before a licence is acquired (storeLicenseHandle, storeCanAcquireLicenseResult)"
+    },
+    {
+      "do": "Plan the order of licences rather than buying whatever is affordable.",
+      "because": "the licence lists can be sorted by level in either direction, so what is cheap is not the same as what is next (LicenseLevelLowToHigh, LicenseLevelHighToLow)"
+    }
+  ],
+  "commonMistakes": [
+    "Saving for a licence and forgetting the unlock cost on top of it.",
+    "Assuming a bought licence is active when it is only unlocked.",
+    "Buying a second licence for a line that has been disabled.",
+    "Sorting the licence list by price when the requirement is a shop level."
+  ],
+  "relatedEntities": [
+    "licences-and-shop-level",
+    "the-upgrades-you-can-buy"
+  ],
+  "sources": [
+    "A local copy of the game, read only. Grounding for each step is on the technical reference pages; no number is estimated."
+  ]
+}

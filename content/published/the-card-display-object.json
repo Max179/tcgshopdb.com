@@ -1,0 +1,115 @@
+{
+  "id": "the-card-display-object",
+  "title": "The card display object",
+  "category": "Cards",
+  "summary": "The thing that draws a card in TCG Card Shop Simulator holds every piece of it: a front and a back object, a centre frame with its mask, a border and its mask, backgrounds for the art and the description, fade bars, foil glitter in three places, a whole graded card case, and the texts written on the face.",
+  "body": [
+    "A card on screen is drawn by an object that holds all of its pieces. There is a front object and a back object, so a card can be turned over without being redrawn as something else.",
+    "The face is built from a frame rather than one image. There is a centre frame group and a mask group behind it, along with a border mask and a border image, which is why card art is cut to the shape of a card instead of being pasted on as a rectangle.",
+    "The artwork comes in layers. There is an image for the card back, one for the front, and a second copy of the front on a top layer, which is how a card can have something drawn over its art without the art being replaced.",
+    "Backgrounds are separate again. There is a background, a full background and a transparent layered version, each with an offset group of its own, along with distinct backgrounds for the evolution, the play effect and the description, so a card can change how busy it looks without changing its picture.",
+    "There are fade bars at the top and at the bottom. Those two images sit over the art, which is how text on a card stays readable against whatever is behind it.",
+    "It carries a rarity image and a stat image, and a brightness control, so the icons a card needs are part of the display rather than fetched from somewhere else.",
+    "Foiling is its own group. There is glitter on the centre, another glitter below the centre and a third on the border, with lists for which foil parts are shown, which blended parts are shown and which images are darkened, so a foil card can be assembled rather than swapped.",
+    "A graded card is a case of its own. There is a front group and a back group for the case, a texture image for it, brightness controls for both faces and scaling transforms for the graded front, including a simpler one used when the card is being culled at a distance.",
+    "The face carries its writing. There are texts for the first edition, the monster's name, the number, the rarity and the description, so those parts of a card are placed rather than being part of the picture.",
+    "It also has a stat image and a group for the stats, along with an artist text and groups for the stats, the evolution and artist name, the evolution, the basic evolution, the artist and the description, which is why parts of a card can be hidden together.",
+    "An evolution can show where it came from. There is an icon and a name for the previous stage, so a card can reference the creature it grew out of.",
+    "A graded card is written on too. There are grade texts for the number, the description, the name, the expansion rarity and a serial, so a graded card shows what a grading service put on it.",
+    "It can also cull itself. There are lists of objects to hide at a distance and a flag for whether it is being culled, which is how a shop full of cards can be drawn without every face being complete.",
+    "What this entry does not tell you: how many cards exist, what any stat is, or how a grade is decided. We have not verified those numbers, so we do not print them."
+  ],
+  "facts": [
+    {
+      "claim": "The display holds a front object and a back object.",
+      "evidence": "identifiers: CardUI, m_CardFront, m_CardBack"
+    },
+    {
+      "claim": "It has a centre frame group and a mask group, a border mask and a border image.",
+      "evidence": "identifiers: m_CenterFrameMaskGrp, m_CenterFrameImageGrp, m_CenterFrameMaskImage, m_CenterFrameImage, m_CardBorderMask, m_CardBorderImage"
+    },
+    {
+      "claim": "It holds images for the card back, the front and a front on a top layer.",
+      "evidence": "identifiers: m_CardBackImage, m_CardFrontImage, m_CardFrontImageTopLayer"
+    },
+    {
+      "claim": "There are fade bars at the top and the bottom.",
+      "evidence": "identifiers: m_FadeBarTopImage, m_FadeBarBtmImage"
+    },
+    {
+      "claim": "Backgrounds are separate for the evolution, the play effect and the description, with a background, a full background and a transparent layered version and their offset groups.",
+      "evidence": "identifiers: m_EvoBGImage, m_PlayEffectBGImage, m_DescriptionBGImage, m_CardBGImage, m_CardFullBGImage, m_CardFullTransparentLayerBGImage, m_CardFullBGOffsetGrp, m_CardFullBGTransparentLayeredOffsetGrp"
+    },
+    {
+      "claim": "It carries a rarity image, a stat image and a brightness control.",
+      "evidence": "identifiers: m_RarityImage, m_StatImage, m_BrightnessControl"
+    },
+    {
+      "claim": "Foil is a group with glitter on the centre, below the centre and on the border, with foil, blended and darken lists and a flag for updating the foil material.",
+      "evidence": "identifiers: m_FoilGrp, m_CenterFoilGlitter, m_CenterFoilGlitterBtm, m_BorderFoilGlitter, m_FoilShowList, m_FoilBlendedShowList, m_FoilDarkenImageList, m_UpdateFoilMaterialOnSetCardUI"
+    },
+    {
+      "claim": "A graded card has front and back case groups, a texture image, brightness controls for both faces and scaling transforms for the graded front, including a simpler one for culling.",
+      "evidence": "identifiers: m_GradedCardCaseGrp, m_GradedCardCaseBackGrp, m_GradedCardTextureImage, m_GradedCardBrightnessControl, m_GradedCardBackBrightnessControl, m_GradedCardFrontScaling, m_SimplifiedCullingGradedCardFrontScaling"
+    },
+    {
+      "claim": "The face writes the first edition, the monster's name, the number, the rarity and the description.",
+      "evidence": "identifiers: m_FirstEditionText, m_MonsterNameText, m_NumberText, m_RarityText, m_DescriptionText"
+    },
+    {
+      "claim": "There is an artist text and groups for the stats, the evolution and artist name, the evolution, the basic evolution, the artist and the description.",
+      "evidence": "identifiers: m_ArtistText, m_StatGrp, m_EvoAndArtistNameGrp, m_EvoGrp, m_EvoBasicGrp, m_ArtistGrp, m_DescriptionGrp"
+    },
+    {
+      "claim": "An evolution can show its previous stage with an icon and a name.",
+      "evidence": "identifiers: m_EvoPreviousStageIcon, m_EvoPreviousStageNameText"
+    },
+    {
+      "claim": "A graded card carries texts for the grade number, the description, the name, the expansion rarity and a serial.",
+      "evidence": "identifiers: m_GradeNumberText, m_GradeDescriptionText, m_GradeNameText, m_GradeExpansionRarityText, m_GradeSerialText"
+    },
+    {
+      "claim": "It can cull parts at a distance with lists of objects to hide and a flag for whether it is culled.",
+      "evidence": "identifiers: m_FarDistanceCullObjList, m_FarDistanceCullObjVisibilityList, m_IsFarDistanceCulled"
+    },
+    {
+      "claim": "The build ships card displays for a table, for a wall and an electronic one.",
+      "evidence": "asset names: CardDisplayTable, CardDisplayWall, CardDisplayElectronic_Mesh"
+    },
+    {
+      "claim": "The wall display also comes in a small and a big version, with display shelves A and B and a display table beside them.",
+      "evidence": "asset names: CardDisplayWallSmall, CardDisplayBigWall, DisplayCardShelfA, DisplayCardShelfB, DisplayCardTableA"
+    },
+    {
+      "claim": "A square empty slot picture is shipped beside the card slot ones.",
+      "evidence": "asset name: EmptySquareSlot"
+    }
+  ],
+  "related": [
+    "the-settings-that-draw-a-card",
+    "how-a-card-front-is-built"
+  ],
+  "images": [
+    {
+      "file": "mapped/the-card-display-object-full-art-front.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "The full-art card front the display draws: a golden bordered frame around the window the art sits in.",
+        "zh": "展示卡牌时使用的全画面前景：金色边框围出插画所在的窗口。"
+      }
+    },
+    {
+      "file": "the-card-display-object.svg",
+      "kind": "diagram",
+      "alt": {
+        "en": "Diagram: the display holds a front and a back, an art frame with masks and borders, layered backgrounds and fade bars, the writing on the face, foil glitter and a whole graded case.",
+        "zh": "示意图：显示对象持有正反面、带遮罩与边框的画面框架、分层背景与渐隐条、卡面文字、闪粉，以及整套评级外壳。"
+      },
+      "disclaimer": "Original diagram drawn for this site. It is not a screenshot of the game."
+    }
+  ],
+  "sources": [
+    "A local copy of the game, read only. The grounding for each fact is listed on the technical reference pages; nothing here is estimated."
+  ],
+  "imageTier": "game-image"
+}

@@ -1,0 +1,48 @@
+{
+  "id": "planting-a-shop-that-looks-lived-in",
+  "title": "Planting a shop that looks lived in",
+  "tier": "published",
+  "kind": "article",
+  "target": "How to use the plants in a TCG Card Shop Simulator shop, given that they are placed objects, that pots come in a numbered set with their own levels of detail, and that beds and trees are separate pieces.",
+  "version": "no version stated by this build (see the sources page)",
+  "prerequisites": [
+    "Room in the shop you are not using for stock",
+    "A little money set aside for decoration",
+    "An idea of which corner you want to soften"
+  ],
+  "steps": [
+    {
+      "do": "Buy a plant as an object to place rather than as a finish to paint on.",
+      "because": "the game names a set of plants you can interact with and place (Interactable_Plant1, Interactable_Plant2, Interactable_Plant8)"
+    },
+    {
+      "do": "Pick a pot from the numbered set and leave it where people will stand near it.",
+      "because": "the pots are a numbered set, several of them with more than one level of detail (Flower_Pot_01, Flower_Pot_02_LOD0, Flower_Pot_08_LOD1)"
+    },
+    {
+      "do": "Use a bed for a low run along a wall rather than lining up pots.",
+      "because": "flower beds are named as their own pieces, separate from the pots (Flowerbed01, Flowerbed03, Flowerbed06)"
+    },
+    {
+      "do": "Spend the tree on one corner rather than repeating it round the room.",
+      "because": "trees are named in kinds, a muffin tree and two evolution trees among them (TreeA, MuffinTreeA, StarfishEvoTree_Mesh, PiggyEvoTree_Mesh)"
+    },
+    {
+      "do": "Do not be surprised to meet the same tree again in another palette.",
+      "because": "there are ghost versions of a tree and of a flower (Ghost_TreeD, Ghost_FlowerD)"
+    }
+  ],
+  "commonMistakes": [
+    "Buying a pot and expecting a bed, when the two are separate pieces.",
+    "Filling the busiest corner with a tree and leaving customers nowhere to stand.",
+    "Repeating one plant round the whole room so the shop looks like a showroom.",
+    "Treating the planting as free: it is bought and placed like anything else."
+  ],
+  "relatedEntities": [
+    "the-plants-in-and-around-the-shop",
+    "expanding-and-decorating-the-shop"
+  ],
+  "sources": [
+    "A local copy of the game, read only. Grounding for each step is on the technical reference pages; no number is estimated."
+  ]
+}

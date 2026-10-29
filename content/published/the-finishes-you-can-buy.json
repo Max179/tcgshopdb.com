@@ -1,0 +1,106 @@
+{
+  "id": "the-finishes-you-can-buy",
+  "title": "The wall and floor finishes for your shop",
+  "category": "Shop",
+  "summary": "The look of a TCG Card Shop Simulator shop is built from materials rather than furniture: the game keeps a wall material and a separate one for the bar along it, a floor material, and a list of decorations for each surface.",
+  "body": [
+    "The look of the shop is not fixed. The game keeps the wall and floor materials as properties of the building itself, so a finish is something your shop has rather than something you place like a shelf.",
+    "Walls have more than one material. There is a material for the wall and a separate one for the bar that runs along it, and the game keeps both a plain wall and a wall with a bar, so the trim around the room can differ from the wall behind it.",
+    "The walls also carry a second set of materials. That is how the two faces of a wall are kept apart instead of both being finished with the same colour, which matters wherever a wall is visible from two sides.",
+    "Floors follow the same idea with a material of their own, and a floor finish is bought as a floor item rather than as a piece of furniture, which is why you cannot put a floor down where a shelf is standing.",
+    "Decoration is typed, and one property of a decoration is whether it stands vertically. That single property is what separates a wall hanging from something that lies flat, and it is why the game can refuse to put a picture on the floor.",
+    "The game keeps a separate list of decorations for each surface: walls, wall bars, floors, ceilings, posters and everything else. Buying from those lists has a screen of its own with its own purchase list, and the decorations you place are saved as records of their own.",
+    "The customisation manager holds the rest. Besides the wall, wall-bar and floor materials it keeps a second floor material, a second wall-bar material and two ceiling materials, one for the ceiling and one for its other face, which is why a room can be finished on every surface you can see.",
+    "The images beside this entry are the game's own: the icon it uses to offer a wall finish, two of the finishes themselves and the picture it uses for a floor finish, all taken from the installation this site describes.",
+    "What this entry does not tell you: what any finish costs, how many there are in total, or whether customers notice them. We have not verified those numbers, so we do not print them."
+  ],
+  "facts": [
+    {
+      "claim": "The material of a wall and the material of the bar along it are kept separately.",
+      "evidence": "identifiers: m_WallMat, m_WallBarMat, m_ShopWall_WithBar, m_ShopWall_NoBar"
+    },
+    {
+      "claim": "Walls carry a second set of materials for their other face.",
+      "evidence": "identifiers: m_WallMatB, m_ShopWall_WithBarB, m_ShopWall_NoBarB"
+    },
+    {
+      "claim": "Floors have a material of their own.",
+      "evidence": "identifier: m_FloorMat"
+    },
+    {
+      "claim": "A decoration has a type and a flag for whether it stands vertically.",
+      "evidence": "identifiers: EDecoObject, m_DecoObjectType, m_IsDecorationVertical"
+    },
+    {
+      "claim": "The game keeps a separate decoration list for walls, wall bars, floors, ceilings, posters and other things.",
+      "evidence": "identifiers: m_WallDecoDataList, m_WallBarDecoDataList, m_FloorDecoDataList, m_CeilingDecoDataList, m_PosterDecoList, m_OtherDecoList"
+    },
+    {
+      "claim": "Buying a decoration has a screen of its own with a purchase list and a panel.",
+      "evidence": "identifiers: ShopBuyDecoUIScreen, m_DecoPurchaseDataList, ShopDecoPanelUI"
+    },
+    {
+      "claim": "Decorations you place are saved as records of their own.",
+      "evidence": "identifiers: m_DecoObjectSaveDataList, m_DecoObjectList"
+    },
+    {
+      "claim": "The customisation manager holds a second floor material, a second wall-bar material and ceiling materials for the ceiling and its other face.",
+      "evidence": "identifiers: ShopCustomizationManager, m_FloorMatB, m_WallBarMatB, m_CeilingMat, m_CeilingMatB"
+    },
+    {
+      "claim": "The game ships finish icons of its own for the shop's surfaces, including one for a wall.",
+      "evidence": "asset name: Icon_Wall0"
+    }
+  ],
+  "related": [
+    "expanding-and-decorating-the-shop",
+    "posters-and-wall-displays"
+  ],
+  "images": [
+    {
+      "file": "mapped/the-finishes-you-can-buy-wall-icon.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "One of the wall finish icons the game itself uses: a dark wood band above cream slats, the picture a surface is chosen by.",
+        "zh": "游戏自用的墙面饰面图标之一：深色木纹覆于米色条板之上，即选择表面时看到的图。"
+      }
+    },
+    {
+      "file": "mapped/the-finishes-you-can-buy-wall-blue.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "The colour texture the game ships for one of its wall finishes.",
+        "zh": "游戏为其中一种墙面饰面提供的颜色贴图。"
+      }
+    },
+    {
+      "file": "mapped/the-finishes-you-can-buy-wall-orange.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "The colour texture the game ships for another of its wall finishes.",
+        "zh": "游戏为另一种墙面饰面提供的颜色贴图。"
+      }
+    },
+    {
+      "file": "mapped/the-finishes-you-can-buy-floor-icon.png",
+      "kind": "game",
+      "alt": {
+        "en": "The picture the game uses for a wood floor finish.",
+        "zh": "游戏用于木质地板饰面的图片。"
+      }
+    },
+    {
+      "file": "the-finishes-you-can-buy.svg",
+      "kind": "diagram",
+      "alt": {
+        "en": "Diagram: you pick a surface, buy a finish from its own list, place it, and the material changes on that surface only.",
+        "zh": "示意图：选择表面、从对应列表购买饰面、放置后仅该表面的材质改变。"
+      },
+      "disclaimer": "Original diagram drawn for this site. It is not a screenshot of the game."
+    }
+  ],
+  "sources": [
+    "A local copy of the game, read only. The grounding for each fact is listed on the technical reference pages; nothing here is estimated."
+  ],
+  "imageTier": "game-image"
+}

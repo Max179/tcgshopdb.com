@@ -1,0 +1,70 @@
+{
+  "id": "glossary-of-terms",
+  "title": "Glossary of the terms this site uses",
+  "category": "Glossary",
+  "summary": "The words this site uses for TCG Card Shop Simulator in plain language, each matched to the part of the game it comes from so the same word means the same thing on every page.",
+  "body": [
+    "We keep a small vocabulary and use it consistently. Where the game already has its own word for something, this site uses that word instead of inventing a new one, so a term here matches what you have already seen on screen.",
+    "A ghost card is its own kind of card record rather than a rarity label. It carries a name, a monster and one effect drawn from a fixed list, which is why it is described here as a separate kind of thing.",
+    "A foil is a card finish rather than a card. The build keeps foils as a border option with its own chance of appearing, which is why the site talks about foil chance rather than about foil cards.",
+    "A first edition is a printed marking on a card, kept as a border of its own, and full art describes a card whose picture runs to the edges instead of sitting inside a frame.",
+    "A collector is a customer, not a player: the build names collector kinds and gives each one its own chance of turning up, which is why collectors appear under customers rather than under cards.",
+    "A restocker is the worker who carries stock from the storage area to the shelves. The build keeps a restocker kind and a separate record of what is being carried, which is why restocking is described as a job rather than a button.",
+    "Sending a card to be graded means posting it away and getting it back in a case. The build keeps the service, the set of cards submitted and the case itself as separate records.",
+    "A store point is the shop's own progression credit rather than money, and destiny is the set of standing perks a shop can gain, including better odds and extra takings.",
+    "Where we cannot match a word to one of the game's own, we say so rather than guessing. The technical reference shows how each term was checked for anyone who wants to see the working."
+  ],
+  "facts": [
+    {
+      "claim": "A ghost card is its own kind of card record, carrying a name, a monster and one effect.",
+      "evidence": "identifiers: GhostCardData, MonsterType, GhostCardEffect"
+    },
+    {
+      "claim": "A foil is a card finish kept as a border option with its own chance of appearing.",
+      "evidence": "identifiers: Foil, FoilChance, ECardBorderType"
+    },
+    {
+      "claim": "A first edition is a printed marking kept as a border of its own.",
+      "evidence": "identifiers: FirstEdition, CardBorder_FirstEdition"
+    },
+    {
+      "claim": "Full art describes a card whose picture runs to the edges of the card.",
+      "evidence": "identifiers: FullArtBorder, CardFrontFullArt_Fire"
+    },
+    {
+      "claim": "A collector is a customer kind with its own chance of turning up.",
+      "evidence": "identifiers: Collector, CollectorChance, LegendCollector"
+    },
+    {
+      "claim": "A restocker is a worker who carries stock to the shelves, with a kind and a record of what is carried.",
+      "evidence": "identifiers: ERestockerType, RestockManager, RestockData"
+    },
+    {
+      "claim": "Grading a card keeps the service, the submitted set and the returned case as separate records.",
+      "evidence": "identifiers: GradeCardServiceData, GradeCardSubmitSet, GradedCardCaseBack"
+    },
+    {
+      "claim": "A store point is the shop's own progression credit rather than money.",
+      "evidence": "identifiers: StorePointUpgrade1, MoreMoney"
+    }
+  ],
+  "related": [
+    "what-a-ghost-card-does",
+    "the-kinds-of-customers"
+  ],
+  "images": [
+    {
+      "file": "glossary-of-terms.svg",
+      "kind": "diagram",
+      "alt": {
+        "en": "Diagram: a term used on this site is matched to the part of the game it comes from, then used the same way everywhere.",
+        "zh": "示意图：本站使用的术语对应到游戏中的出处，并在全站保持一致。"
+      },
+      "disclaimer": "Original diagram drawn for this site. It is not a screenshot of the game."
+    }
+  ],
+  "sources": [
+    "A local copy of the game, read only. The grounding for each term is on the technical reference pages; nothing here is estimated."
+  ],
+  "imageTier": "diagram-only"
+}

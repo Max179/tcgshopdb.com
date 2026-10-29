@@ -1,0 +1,47 @@
+{
+  "id": "restocking-without-guessing-what-you-need",
+  "title": "Restocking without guessing what you need",
+  "tier": "published",
+  "kind": "article",
+  "target": "How to use the restock cart in TCG Card Shop Simulator so that a delivery fills the gaps you actually have rather than the ones you remember.",
+  "version": "no version stated by this build (see the sources page)",
+  "prerequisites": [
+    "A shop already selling",
+    "Money for the cart and its checkout",
+    "Shelves you can read at a glance"
+  ],
+  "steps": [
+    {
+      "do": "Walk the shelves before you open the cart rather than after.",
+      "because": "restocking is its own system with its own manager (RestockManager)"
+    },
+    {
+      "do": "Use the category bar to take one kind of stock at a time.",
+      "because": "the restock screen is sorted with a category bar of its own (RestockCategoryBar)"
+    },
+    {
+      "do": "Check the cart over before you pay rather than afterwards.",
+      "because": "the cart has its own bar and a panel for each entry (RestockCheckoutItemBar)"
+    },
+    {
+      "do": "Pay at the checkout rather than expecting stock to arrive on account.",
+      "because": "the cart is settled on a checkout screen of its own (RestockItemCheckoutScreen)"
+    },
+    {
+      "do": "Order tabletop games from their own screen, not this list.",
+      "because": "tabletop games restock through a separate screen (RestockItemBoardGameScreen)"
+    }
+  ],
+  "commonMistakes": [
+    "Ordering before looking at what is already on the shelves.",
+    "Paying for a cart without checking it over.",
+    "Looking for tabletop games in the ordinary restock list."
+  ],
+  "relatedEntities": [
+    "restocking-from-a-cart",
+    "storage-shelves-and-restocking"
+  ],
+  "sources": [
+    "A local copy of the game, read only. Grounding for each step is on the technical reference pages; no number is estimated."
+  ]
+}

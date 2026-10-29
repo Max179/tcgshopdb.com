@@ -1,0 +1,125 @@
+{
+  "id": "the-boards-interface",
+  "title": "The board's interface",
+  "category": "Interface",
+  "summary": "A match in TCG Card Shop Simulator is played through an interface of its own: health and shield are drawn as sprites and text, the deck and discard pile are counted, attack is shown per element, the areas glow when they can be chosen, the hand slides with its own limits, and ending a turn has its own button and tooltips.",
+  "body": [
+    "The board is not played through the shop's menus. A match has a screen group and a user interface group of its own, which is why the table can show a great deal without the rest of the shop's screens being involved.",
+    "It animates its own states. There is an animation for setting up and separate ones for damage to the monsters and for damage to the shield, so being hit is shown rather than only counted.",
+    "Health is drawn twice over. There is a health sprite and a border sprite, with colours of their own for the opponent's side, along with lists for flipping and hiding the opponent's parts, which is how the other side of the table can be presented rather than mirrored.",
+    "The piles are counted in words. There is text for the number of cards in the deck and text for the discard pile, so what is left is readable without counting a stack by eye.",
+    "Health and protections have their own readouts. There is text for health, for shield health and for a freeze counter, with groups for the shield and the counter, which is why a protected creature reads differently from a healthy one.",
+    "Attack is shown per element. There is a list of attack figures for the element areas, alongside the lists of base attack power and boosted attack power, so a total can be read as the parts it is made of.",
+    "The areas advertise themselves. There are animations for an element area glowing and for it glowing when it is selected, which is how the board shows where a card may be played.",
+    "Choosing who goes is its own display. There is a turn-select group with an animation for the areas and two lists that split the first and second choice, along with an empty button area, so the opening of a match is a screen rather than a prompt.",
+    "The buttons are built rather than fixed. The play-card groups and the selection glow are attached to parents and instantiated from a group and a prefab, which is why the board can grow a row of controls as the hand grows.",
+    "The hand slides. There is a slider group for the horizontal layout, a range distance and a maximum index for the slider, an amount the cards spread by, a slide limit with a smallest and a largest count, a scroll speed and a multiplier for it, a flag for whether sliding is allowed at all and an option to invert the mouse wheel.",
+    "Ending a turn is its own control. There is a button for it, a controller button for it, and tooltips for both a mouse and a pad, and the discard area has a controller button of its own, so the two things you do most often are always reachable.",
+    "The end of a game is a screen as well. When a match finishes the board hands over to a conversation with a gift image, a line from the customer and separate lists of lines for a win and for a loss, which is why the result is staged rather than announced.",
+    "The protections have a picture of their own. The board's shield readout uses an icon the game draws, a green shield with a darker inner shield, so a protected creature can be marked rather than only counted.",
+    "Reading a card is its own screen. There is a screen for a card's information and a screen for triggering an effect, and each brings a card element and an animation of its own, so looking something up does not disturb the board underneath.",
+    "It also says what a card cannot do. There are groups for a card that cannot evolve and for one with no play effect, and the mat behind the board can be darkened, so the interface can step back when the table should be the picture.",
+    "What this entry does not tell you: how much health anything has, how many cards a hand holds, or what any attack figure is. We have not verified those numbers, so we do not print them."
+  ],
+  "facts": [
+    {
+      "claim": "The board has a screen group and a user interface group of its own.",
+      "evidence": "identifiers: PlayCardSetUI, m_ScreenGrp, m_UIGrp"
+    },
+    {
+      "claim": "It animates its setup and damage to the monsters and to the shield.",
+      "evidence": "identifiers: m_SetupAnim, m_HPDamagedAnim, m_TamerShieldDamagedAnim"
+    },
+    {
+      "claim": "Health is a sprite and a border sprite, with opponent colours and lists for flipping and hiding the opponent's parts.",
+      "evidence": "identifiers: m_HpSprite, m_HpBorderSprite, m_HPSpriteOpponentColor, m_HPBorderSpriteOpponentColor, m_OpponentFlip180UIList, m_OpponentHideObjectList"
+    },
+    {
+      "claim": "The deck and the discard pile are counted in text.",
+      "evidence": "identifiers: m_DeckCountText, m_DiscardPileCountText"
+    },
+    {
+      "claim": "Health, shield health and a freeze counter each have text, with groups for the shield and the counter.",
+      "evidence": "identifiers: m_HPText, m_ShieldHPText, m_FreezeCounterText, m_ShieldGrp, m_FreezeCounterGrp"
+    },
+    {
+      "claim": "Attack is shown per element, with lists for base and boosted attack power.",
+      "evidence": "identifiers: m_ElementAtkPowerTextList, m_BaseAtkPowerList, m_BoostAtkPowerList"
+    },
+    {
+      "claim": "Element areas have a glow animation and a selection glow animation.",
+      "evidence": "identifiers: m_ElementAreaGlowAnimList, m_ElementAreaSelectionGlowAnimList"
+    },
+    {
+      "claim": "Turn selection has its own group and area animation with two first-and-second lists and an empty button area.",
+      "evidence": "identifiers: m_TurnSelectUIGrp, m_TurnSelectAreaAnimList, m_TurnSelectAreaFirstSecondListA, m_TurnSelectAreaFirstSecondListB, m_EmptyBtnArea"
+    },
+    {
+      "claim": "The play-card button groups and the selection glow are instantiated from parents and a prefab.",
+      "evidence": "identifiers: m_PlayCardBtnGrpParent, m_PlayCardBtnGrpList, m_CardSelectionGlowGrpParent, m_CardSelectionGlowGrpPrefab"
+    },
+    {
+      "claim": "The hand can slide, with a slider group, range distance and index maximum, a spread amount, a slide limit with a minimum and maximum count, scroll speeds and an inverted-wheel option.",
+      "evidence": "identifiers: m_CardHorizontalLayoutSliderGrp, m_CardSliderRangeDistance, m_CardIndexSliderRangeMax, m_PosSpreadAmount, m_CardCountSlideLimit, m_CardCountSlideLimitMin, m_CardCountSlideLimitMax, m_MouseWheelScrollSpeed, m_ScrollSpeedMultiplier, m_CanSlide, m_MouseWheelScrollInverted"
+    },
+    {
+      "claim": "Ending a turn has a button, a controller button and mouse and gamepad tooltips, and the discard area has a controller button.",
+      "evidence": "identifiers: m_EndTurnBtn, m_ControllerButtonEndTurnBtn, m_EndTurnTooltipUI, m_EndTurnTooltipUI_Gamepad, m_ControllerButtonDiscardArea"
+    },
+    {
+      "claim": "There are groups for a card that cannot evolve and for one with no play effect, and the playmat background can be darkened.",
+      "evidence": "identifiers: m_NoEvoGrp, m_NoPlayEffectGrp, m_DarkenPlaymatBG"
+    },
+    {
+      "claim": "It can follow the mouse.",
+      "evidence": "identifier: m_FollowMouseGrp"
+    },
+    {
+      "claim": "The board carries a group that offsets the opponent's health display.",
+      "evidence": "identifier: m_OpponentHPOffsetGrp"
+    },
+    {
+      "claim": "It keeps a list of frozen slots in the element areas.",
+      "evidence": "identifier: m_ElementAreaFrozenSlotList"
+    },
+    {
+      "claim": "Looking at a card and triggering an effect have screens of their own, each with its own card interface element and animation.",
+      "evidence": "identifiers: PlayCardSetUIScreen, m_DisplayCardInfoScreen, m_EffectTriggerScreen, m_DisplayInfoCardUI, m_EffectTriggerCardUI, m_DisplayInfoCardAnim, m_EffectTriggerCardAnim"
+    },
+    {
+      "claim": "The end of a game has a conversation screen of its own, with a gift image, a customer line and separate lists of lines for winning and losing.",
+      "evidence": "identifiers: PlayCardSetUIScreen_EndGameConversation, m_GiftImage, m_CustomerText, m_PlayerWinTextList, m_PlayerLoseTextList"
+    },
+    {
+      "claim": "The game ships a shield icon of its own for the protections it shows on the board.",
+      "evidence": "asset name: Icon_Shield"
+    }
+  ],
+  "related": [
+    "the-state-of-a-game-of-cards",
+    "the-rules-of-the-card-game"
+  ],
+  "images": [
+    {
+      "file": "mapped/the-boards-interface-shield.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "The shield icon the game itself uses on the board: a green shield with a darker inner shield on a black field.",
+        "zh": "游戏在牌桌上使用的护盾图标：黑色背景上的绿色盾形，内部还有一层更深的盾形。"
+      }
+    },
+    {
+      "file": "the-boards-interface.svg",
+      "kind": "diagram",
+      "alt": {
+        "en": "Diagram: the board shows health and shield, counts the deck and discard, lists attack per element, glows on the areas, slides the hand, and ends the turn from its own button.",
+        "zh": "示意图：牌桌显示生命与护盾、统计牌库与弃牌、按元素列出攻击力、区域发光、手牌可滑动、并以专属按钮结束回合。"
+      },
+      "disclaimer": "Original diagram drawn for this site. It is not a screenshot of the game."
+    }
+  ],
+  "sources": [
+    "A local copy of the game, read only. The grounding for each fact is listed on the technical reference pages; nothing here is estimated."
+  ],
+  "imageTier": "game-image"
+}

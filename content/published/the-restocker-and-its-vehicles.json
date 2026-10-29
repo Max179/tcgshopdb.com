@@ -1,0 +1,63 @@
+{
+  "id": "the-restocker-and-its-vehicles",
+  "title": "The restocker and its vehicles",
+  "category": "Storage",
+  "summary": "Stock does not simply appear in TCG Card Shop Simulator: the game runs deliveries through a restocker that arrives in a vehicle of its own, from a bike up to a helicopter.",
+  "body": [
+    "Deliveries come through a restocker. The game keeps the restocking run as a system of its own, which is why an order arrives as a delivery rather than appearing on a shelf.",
+    "The vehicle is part of the order. The game sorts restockers into kinds, running from a bike through a van and a truck to a bigger truck and a helicopter, so the size of what you ordered is matched by how it turns up.",
+    "You can change how it is sorted. The game keeps sorting options for restocking, including by licence level and by cost in either direction, which is why the delivery list can be ordered to suit you.",
+    "The delivery has an icon of its own. The game uses its own restock-box icon, so a delivery is identifiable on screen rather than only in the world.",
+    "It ties to the licence level. Because sorting can be by licence level, what you are allowed to sell and what arrives are part of the same system.",
+    "What this entry does not tell you: what each vehicle costs, how much it carries, or how long a delivery takes. We have not verified those numbers, so we do not print them."
+  ],
+  "facts": [
+    {
+      "claim": "Deliveries are run through a restocker rather than appearing directly.",
+      "evidence": "identifiers: ERestockerType, Icon_RestockBox"
+    },
+    {
+      "claim": "Restockers come in kinds, running from a bike through vans and trucks to a helicopter.",
+      "evidence": "identifiers: Bike, Van, Truck, BigTruck, Helicopter"
+    },
+    {
+      "claim": "There is a set of sorting options for restocking, including by licence level and by cost.",
+      "evidence": "identifiers: ERestockSortingType, LicenseLevelLowToHigh, CostHighToLow"
+    },
+    {
+      "claim": "The phone is what puts the shop into restock scanning mode.",
+      "evidence": "asset names: EnterPhoneScanRestockMode, ExitPhoneScanRestockMode, ScannerRestockAppUnlock"
+    },
+    {
+      "claim": "The restocker's vans are named one by one, with two minivans among them.",
+      "evidence": "asset names: MinivanBuilders, MinivanMaestro"
+    }
+  ],
+  "related": [
+    "storage-shelves-and-restocking",
+    "shelves-stock-and-upgrades"
+  ],
+  "images": [
+    {
+      "file": "mapped/the-restocker-and-its-vehicles-box.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "The restock icon the game itself uses for deliveries.",
+        "zh": "游戏本身用于补货配送的图标。"
+      }
+    },
+    {
+      "file": "the-restocker-and-its-vehicles.svg",
+      "kind": "diagram",
+      "alt": {
+        "en": "Diagram: you place an order, the matching vehicle arrives, the delivery is sorted, and the stock is shelved.",
+        "zh": "示意图：下单、相配的车辆送达、按設定排序、上架。"
+      },
+      "disclaimer": "Original diagram drawn for this site. It is not a screenshot of the game."
+    }
+  ],
+  "sources": [
+    "A local copy of the game, read only. Identifiers are listed on the technical reference pages; nothing here is estimated."
+  ],
+  "imageTier": "game-image"
+}

@@ -1,0 +1,44 @@
+{
+  "id": "keeping-the-shelves-selling",
+  "title": "Keeping the shelves selling during a busy day",
+  "tier": "published",
+  "kind": "article",
+  "target": "How to keep product on the sales floor while customers are in the shop, using the shelf and pricing behaviour the game defines.",
+  "version": "no version stated by this build (see the sources page)",
+  "prerequisites": [
+    "Priced stock ready to go out",
+    "More than one shelf kind available",
+    "Packs in reserve"
+  ],
+  "steps": [
+    {
+      "do": "Check which shelf kind a product belongs on before you restock.",
+      "because": "the game separates plain shelves, card shelves and combination shelves (CardShelf, CardItemCombiShelf, Shelf)"
+    },
+    {
+      "do": "Restock from the shelf manager view rather than walking the room blind.",
+      "because": "shelf contents are tracked by a manager (ShelfManager)"
+    },
+    {
+      "do": "Keep priced stock in reserve so a gap can be filled immediately.",
+      "because": "a card's price is applied through a price tag object, so an unpriced card cannot simply be shelved (InteractableCardPriceTag)"
+    },
+    {
+      "do": "Keep boxes where you can reach them, because packaging is physical.",
+      "because": "packaging boxes exist separately for cards, items and shelves (InteractablePackagingBox_Card, InteractablePackagingBox_Shelf)"
+    }
+  ],
+  "commonMistakes": [
+    "Leaving a shelf empty while customers are inside.",
+    "Putting cards on the wrong kind of shelf.",
+    "Keeping all your stock in sealed boxes and none on the floor."
+  ],
+  "relatedEntities": [
+    "shelves-stock-and-upgrades",
+    "prices-and-price-tags",
+    "packs-and-opening"
+  ],
+  "sources": [
+    "A local copy of the game, read only. Grounding for each step is on the technical reference pages; no number is estimated."
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "id": "dressing-the-shop-so-it-looks-like-yours",
+  "title": "Dressing the shop so it looks like yours",
+  "tier": "published",
+  "kind": "article",
+  "target": "How decorating works in TCG Card Shop Simulator: where the shop name is actually set, how wall, bar and floor materials are kept apart, how the decoration lists are split by surface, and how a placed decoration is recorded.",
+  "version": "no version stated by this build (see the sources page)",
+  "prerequisites": [
+    "A shop with a billboard placed",
+    "Some money set aside for decoration",
+    "A moment to look at what is already on the walls"
+  ],
+  "steps": [
+    {
+      "do": "Set the shop name at the billboard in the world rather than in a menu, because the name is set at an interactable billboard.",
+      "because": "the shop name is set at a billboard placed in the world (InteractableShopBillboard)"
+    },
+    {
+      "do": "Expect the renaming to run through its own screens, because the billboard carries an opening screen, a name screen and a confirmation screen.",
+      "because": "the billboard carries the renaming interface with an opening, name and confirmation screen (ShopRenamer, m_IntroScreen, m_NameScreen, m_ConfirmNameScreen)"
+    },
+    {
+      "do": "Type the name and watch it come back, because what you type is echoed on a display and the billboard shows the name it holds.",
+      "because": "the name is typed into an entry box with a display that follows it, and the billboard shows the current name (m_SetNameInput, m_SetNameInputDisplay, m_ShopName, m_SetName)"
+    },
+    {
+      "do": "Choose the wall and the bar along it separately, because their materials are kept apart.",
+      "because": "the material of a wall and of the bar along it are kept separately (m_WallMat, m_WallBarMat, m_ShopWall_WithBar, m_ShopWall_NoBar)"
+    },
+    {
+      "do": "Remember that a wall has two faces, because there is a second set of materials for its other side.",
+      "because": "walls carry a second set of materials for their other face (m_WallMatB, m_ShopWall_WithBarB, m_ShopWall_NoBarB)"
+    },
+    {
+      "do": "Treat the floor as its own decision, because it has a material of its own.",
+      "because": "floors have a material of their own (m_FloorMat)"
+    },
+    {
+      "do": "Check whether a decoration stands up or lies flat before placing it, because a decoration has a type and a flag for being vertical.",
+      "because": "a decoration has a type and a flag for whether it stands vertically (EDecoObject, m_DecoObjectType, m_IsDecorationVertical)"
+    },
+    {
+      "do": "Expect the game to keep separate lists per surface, so what you can put on a ceiling is not what you can put on a wall.",
+      "because": "the game keeps separate decoration lists for walls, wall bars, floors, ceilings, posters and other things (m_WallDecoDataList, m_WallBarDecoDataList, m_FloorDecoDataList, m_CeilingDecoDataList, m_PosterDecoList, m_OtherDecoList)"
+    },
+    {
+      "do": "Buy decoration from its own screen rather than from the stock list, because it has a purchase screen with a list and a panel.",
+      "because": "buying a decoration has a screen of its own with a purchase list and a panel (ShopBuyDecoUIScreen, m_DecoPurchaseDataList, ShopDecoPanelUI)"
+    },
+    {
+      "do": "Know that what you place is written down, because placed decorations are saved as records of their own.",
+      "because": "decorations you place are saved as records of their own (m_DecoObjectSaveDataList, m_DecoObjectList)"
+    },
+    {
+      "do": "When you expand, expect the expansion and the furniture to have their own screens rather than sharing the decoration one.",
+      "because": "expanding the shop has its own screen and furniture is purchased through a separate screen (ExpansionShopUIScreen, FurnitureShopUIScreen, EUpgradeType)"
+    },
+    {
+      "do": "Remember that customisation and decoration are tracked as their own data, so a look can be managed rather than rebuilt by hand each time.",
+      "because": "shop customisation and decoration are tracked as their own data with a panel (ShopCustomizationManager, ShopDecoData, ShopDecoPanelUI)"
+    }
+  ],
+  "commonMistakes": [
+    "Looking for the shop name in the settings when it is set at the billboard.",
+    "Picking one wall material and being surprised by the other face of the wall.",
+    "Trying to put a floor decoration on a wall, when the lists are separate by surface.",
+    "Buying furniture from the decoration screen instead of its own."
+  ],
+  "relatedEntities": [
+    "the-shop-billboard-and-your-shop-name",
+    "the-finishes-you-can-buy",
+    "expanding-and-decorating-the-shop"
+  ],
+  "sources": [
+    "A local copy of the game, read only. The grounding for each step is listed on the technical reference pages; nothing here is estimated."
+  ]
+}

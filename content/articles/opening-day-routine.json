@@ -1,0 +1,39 @@
+{
+  "id": "opening-day-routine",
+  "title": "An opening routine that gets cards on sale",
+  "tier": "published",
+  "kind": "article",
+  "target": "How to get from a delivery of cards to a shelf customers can buy from, using only shop behaviour the game itself defines.",
+  "version": "no version stated by this build (see the sources page)",
+  "prerequisites": [
+    "A shop with at least one shelf placed",
+    "Packs in stock",
+    "Access to the pricing screens"
+  ],
+  "steps": [
+    {
+      "do": "Unpack and price the cards before you open the shop.",
+      "because": "cards and their prices are separate objects with dedicated screens rather than one combined value (InteractableCardPriceTag, CheckPriceScreen)"
+    },
+    {
+      "do": "Put the priced cards on a shelf a customer can reach.",
+      "because": "shelf contents are tracked by a manager and the game distinguishes several shelf kinds (ShelfManager, CardShelf, CardItemCombiShelf)"
+    },
+    {
+      "do": "Reinvest into shop items and upgrades as well as stock.",
+      "because": "shop purchases and upgrades are two separate, defined sets of choices (EShopItem, EUpgradeType)"
+    }
+  ],
+  "commonMistakes": [
+    "Opening with empty shelves: a shelf sells only what you put on it.",
+    "Leaving cards unpriced, so they cannot be sold.",
+    "Spending everything on furniture before you have stock to sell."
+  ],
+  "relatedEntities": [
+    "cards-and-rarity",
+    "shelves-stock-and-upgrades"
+  ],
+  "sources": [
+    "A local copy of the game, read only. Grounding for each step is on the technical reference pages; no number is estimated."
+  ]
+}

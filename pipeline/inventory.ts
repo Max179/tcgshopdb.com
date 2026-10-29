@@ -7,6 +7,12 @@ import { parseAssembly, unitySerializedFields, fieldTypeName, decodeFieldSignatu
 
 const DLL = 'C:/uTorria/Downloads/TCG Card Shop Simulator/Card Shop Simulator_Data/Managed/Assembly-CSharp.dll';
 const OUT = 'C:/Users/CHEN/Desktop/tcg-shop/data/normalized/p0-inventory.json';
+// This build states no version of its own: on 2026-10-01 every file in the copy was scanned for a
+// version-shaped string and only engine/library versions were found, and the player-settings slot in
+// globalgamemanagers reads "1.0", a default. The copy is identified by the product label app.info
+// records (company + product name), which is NOT a version. Nothing is invented to fill the gap.
+const VERSION = 'no version stated by this build';
+const VERSION_SOURCE = { status: 'absent', searched: '2026-10-01', playerSettingsSlot: "reads 1.0, a default" };
 
 if (!existsSync(DLL)) { console.error('assembly not found: ' + DLL); process.exit(2); }
 const asm = parseAssembly(DLL);
@@ -20,7 +26,7 @@ const candidates = asm.types
       name: t.name, namespace: t.namespace, base: t.baseType, declared: t.fields.length, written: written.length,
       fields: written.map((f) => ({
         name: f.name, type: fieldTypeName(asm, f.signature), kind: decodeFieldSignature(f.signature).kind,
-        source: DLL, version: 'OPNeonGames | Card Shop Simulator (app.info)', checkedAt: extractedAt,
+        source: DLL, version: VERSION, checkedAt: extractedAt,
         confidence: 'verified-schema', value: null,
       })),
     };
@@ -41,10 +47,11 @@ const enums = asm.types
 mkdirSync(dirname(OUT), { recursive: true });
 const payload = {
   game: 'TCG Card Shop Simulator',
-  version: 'OPNeonGames | Card Shop Simulator (app.info)',
+  version: VERSION,
+  productLabel: 'OPNeonGames | Card Shop Simulator',
   engine: 'unity',
   scriptBackend: 'mono',
-  source: { assembly: DLL, extractor: 'tcg-p0-inventory@0.2.0', extractedAt },
+  source: { assembly: DLL, extractor: 'tcg-p0-inventory@0.2.0', extractedAt, productLabel: 'OPNeonGames | Card Shop Simulator', versionSource: VERSION_SOURCE },
   totals: { types: asm.typeCount, fields: asm.fieldCount, candidateClasses: candidates.length },
   enums, classes: candidates,
 };

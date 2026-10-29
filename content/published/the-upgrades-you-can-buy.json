@@ -1,0 +1,77 @@
+{
+  "id": "the-upgrades-you-can-buy",
+  "title": "The upgrades you can buy",
+  "category": "Shop",
+  "summary": "Shop upgrades in TCG Card Shop Simulator are a fixed list rather than a free choice: the game names each one, from pack supply and earnings per tier through to customer spending and how often collectors turn up.",
+  "body": [
+    "Upgrades are a fixed list. The game names every upgrade it offers instead of letting an upgrade be an arbitrary improvement, which is why the shop grows in a shape rather than in any direction you like.",
+    "Supply is upgraded tier by tier. There are separate upgrades for the supply of basic, rare, epic and legendary packs, with a matching one for boxes, so you improve the tier you actually sell rather than packs in general.",
+    "Collection limits and earnings work the same way. The game has upgrades that raise how many cards of a tier may be kept, split by whether you pay in gold or in gems, and separate upgrades for how much each tier earns.",
+    "Some upgrades are about customers. The list covers how much a customer is willing to spend, whether they buy more items, how quickly they arrive, and how often a collector appears, with an entry of its own for each grade of collector.",
+    "One upgrade is about your own hands. There is an upgrade for how hard you tap, which is the only entry on the list about something you do rather than something the shop does.",
+    "A later expansion has upgrades of its own. The game adds a run of them named for one expansion, covering extra gold, extra gems and extra fame, cheaper shelf upgrades, a doubled customer chance, faster restocking and better foil odds.",
+    "Boosters are a different list again. Booster effects are tracked apart from upgrades, covering things like higher prices and larger pack storage.",
+    "What this entry does not tell you: what any upgrade costs, how many levels each one has, or the order they unlock in. We have not verified those numbers, so we do not print them."
+  ],
+  "facts": [
+    {
+      "claim": "Shop upgrades are a fixed list rather than arbitrary improvements.",
+      "evidence": "identifier: EUpgradeType"
+    },
+    {
+      "claim": "Pack supply is upgraded per tier, with a matching upgrade for boxes.",
+      "evidence": "identifiers: BasicCardPackSupply, RareCardPackSupply, EpicCardPackSupply, LegendaryCardPackSupply, BasicCardBoxSupply, LegendaryCardBoxSupply"
+    },
+    {
+      "claim": "Collection limits are raised per tier, separately for gold and for gems.",
+      "evidence": "identifiers: BasicCardPackCollectionUsingGoldMax, BasicCardPackCollectionUsingGemMax, LegendaryCardPackCollectionUsingGemMax"
+    },
+    {
+      "claim": "Earnings can be upgraded per pack and box tier.",
+      "evidence": "identifiers: CommonPackEarningUp, RarePackEarningUp, EpicPackEarningUp, LegendPackEarningUp, CommonBoxEarningUp, LegendBoxEarningUp"
+    },
+    {
+      "claim": "Some upgrades concern customers: what they spend, whether they buy more, when they arrive and how often collectors appear.",
+      "evidence": "identifiers: CustomerSpendingPower, CustomerBuyMoreItem, CustomerSpawnTime, CustomerCollectorSpawnRate, CustomerLegendCollectorSpawnRate"
+    },
+    {
+      "claim": "There is an upgrade for tap power.",
+      "evidence": "identifier: TapPowerLevel"
+    },
+    {
+      "claim": "A later expansion has a run of upgrades of its own.",
+      "evidence": "identifiers: DestinyExtraGold, DestinyExtraGem, DestinyExtraFame, DestinyCheaperShelfUpgrade, DestinyDoubleCustomerChance, DestinyReduceRestockTime, DestinyFoilChance, DestinyCustomerCountMax"
+    },
+    {
+      "claim": "Booster effects are tracked apart from upgrades.",
+      "evidence": "identifier: EBoosterEffect"
+    }
+  ],
+  "related": [
+    "expanding-and-decorating-the-shop",
+    "shelves-stock-and-upgrades"
+  ],
+  "images": [
+    {
+      "file": "mapped/the-upgrades-you-can-buy-levelup.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "The level-up icon the game itself uses.",
+        "zh": "游戏本身使用的升级图标。"
+      }
+    },
+    {
+      "file": "the-upgrades-you-can-buy.svg",
+      "kind": "diagram",
+      "alt": {
+        "en": "Diagram: you pick an upgrade, it applies to one tier or one behaviour, and the shop changes in that one way.",
+        "zh": "示意图：选择一个升级、作用于某一等级或某一行为、店铺在该方面发生变化。"
+      },
+      "disclaimer": "Original diagram drawn for this site. It is not a screenshot of the game."
+    }
+  ],
+  "sources": [
+    "A local copy of the game, read only. Identifiers are listed on the technical reference pages; nothing here is estimated."
+  ],
+  "imageTier": "game-image"
+}

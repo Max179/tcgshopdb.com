@@ -1,0 +1,67 @@
+{
+  "id": "the-shop-billboard-and-your-shop-name",
+  "title": "The shop billboard and your shop name",
+  "summary": "Your shop name in TCG Card Shop Simulator is not fixed: the billboard out front carries a step-by-step renaming screen, so changing the name is something you do on the shop floor.",
+  "body": [
+    "The name on the shop is something you set. The game puts a billboard out front as an object you place, and that billboard is where the name is changed rather than a setting buried away from the shop.",
+    "Renaming runs as a short sequence. The billboard walks through an opening screen, a name screen and a confirmation screen, so a name is not committed the moment you touch it.",
+    "You type the name rather than choose one. The billboard carries its own text box with a display that follows what you type, which is why a shop name can be anything you are able to type.",
+    "It is built for a pad as well as a keyboard. Each of the three screens carries its own controller extension, and the display follows a target of its own, which is why renaming works the same way on a handheld as at a desk.",
+    "The billboard also shows the result. Once set, the sign displays the current shop name in the world, so the sign and the name are one object rather than two things you have to keep in step.",
+    "What this entry does not tell you: whether a name has a length limit, or whether customers react to it. We have not verified those numbers, so we do not print them."
+  ],
+  "facts": [
+    {
+      "claim": "The shop name is set at a billboard placed in the world.",
+      "evidence": "identifier: InteractableShopBillboard"
+    },
+    {
+      "claim": "The billboard carries the renaming interface as its own part.",
+      "evidence": "identifier: ShopRenamer"
+    },
+    {
+      "claim": "Renaming runs through an opening screen, a name screen and a confirmation screen.",
+      "evidence": "identifiers: m_IntroScreen, m_NameScreen, m_ConfirmNameScreen"
+    },
+    {
+      "claim": "The name is typed into a field, with a display that follows it.",
+      "evidence": "identifiers: m_SetNameInput, m_SetNameInputDisplay"
+    },
+    {
+      "claim": "The billboard displays the current shop name.",
+      "evidence": "identifiers: m_ShopName, m_SetName"
+    },
+    {
+      "claim": "The renaming routine carries a controller extension for each of its three screens, and a target for what the display follows.",
+      "evidence": "identifiers: m_ControllerScreenUIExtension_IntroScreen, m_ControllerScreenUIExtension_NameScreen, m_ControllerScreenUIExtension_ConfirmNameScreen, m_FollowTarget"
+    }
+  ],
+  "related": [
+    "expanding-and-decorating-the-shop",
+    "the-screens-you-will-use-most"
+  ],
+  "images": [
+    {
+      "file": "mapped/the-shop-billboard-and-your-shop-name-billboard.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "The game's own shop billboard texture the shop name is shown on.",
+        "zh": "游戏自带的店铺招牌贴图，店名显示在上面。"
+      }
+    },
+    {
+      "file": "the-shop-billboard-and-your-shop-name.svg",
+      "kind": "diagram",
+      "alt": {
+        "en": "Diagram: walk to the billboard, open it, type a name, confirm it, and the sign shows the name.",
+        "zh": "示意图：走到招牌前、打开界面、输入店名、确认、招牌显示新名字。"
+      },
+      "disclaimer": "Original diagram drawn for this site. It is not a screenshot of the game."
+    }
+  ],
+  "sources": [
+    "A local copy of the game, read only. Identifiers are listed on the technical reference pages; nothing here is estimated."
+  ],
+  "category": "Interface",
+  "imageTier": "game-image"
+}

@@ -1,0 +1,63 @@
+{
+  "id": "the-currencies-the-game-tracks",
+  "title": "The currencies the game tracks",
+  "category": "Pricing",
+  "summary": "TCG Card Shop Simulator keeps a fixed list of the currencies it supports, one entry per money, so the money in the game is a named set rather than one generic coin.",
+  "body": [
+    "Money is a named set in the game. There is a fixed list of currencies rather than a single generic coin, which is how the game can show the right money without being rebuilt for each country.",
+    "The list is short and specific. It covers the US dollar, the euro, the yen, the pound, the yuan, the Canadian dollar, the Australian dollar and the Malaysian ringgit.",
+    "Each one has its own coin. The game ships a separate coin texture per currency along with a general one, so the money you handle looks like the money you are playing in rather than one shared design.",
+    "Nothing else changes with it. The list is about the money rather than the shop, so the prices, the packs and the customers are the same system whichever one is in use.",
+    "That is what makes it a label rather than a second economy. Because the currencies are only a fixed set of names, the money sits on top of the numbers you already work with instead of changing them.",
+    "What this entry does not tell you: how the game decides which currency you are on, whether you can change it later, or any exchange rate. We have not verified those, so we do not print them."
+  ],
+  "facts": [
+    {
+      "claim": "The game keeps a fixed list of currencies.",
+      "evidence": "identifiers: EMoneyCurrencyType, USD, Euro, Yen, GBP, CNY, CAD, AUD, MYR"
+    },
+    {
+      "claim": "Each currency has its own coin texture, alongside a general one.",
+      "evidence": "identifiers: T_MoneyCoinGBP, T_MoneyCoinEuro, T_MoneyCoinYen, T_MoneyCoinCAD, T_MoneyCoinAUD, T_MoneyCoinCNY, T_MoneyCoinMYR, T_MoneyCoin"
+    },
+    {
+      "claim": "The game has a general money icon used with the currency the player is on.",
+      "evidence": "identifier: MoneyIcon"
+    },
+    {
+      "claim": "The money the game handles is built from its own coin and cash objects, one per denomination.",
+      "evidence": "asset names: CoinMesh_1, CoinMesh_10, CashGrp_0.01, CashGrp_0.05"
+    },
+    {
+      "claim": "The coin object carries a material for each currency it can be shown in, AUD, CAD, CNY and Euro among them.",
+      "evidence": "asset names: MAT_MoneyCoinAUD, MAT_MoneyCoinCAD, MAT_MoneyCoinCNY, MAT_MoneyCoinEuro"
+    }
+  ],
+  "related": [
+    "the-counter-and-money",
+    "prices-and-price-tags"
+  ],
+  "images": [
+    {
+      "file": "mapped/the-currencies-the-game-tracks-euro.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "The coin texture the game ships for one of the currencies it supports.",
+        "zh": "游戏为其支持的某一种货币提供的硬币贴图。"
+      }
+    },
+    {
+      "file": "the-currencies-the-game-tracks.svg",
+      "kind": "diagram",
+      "alt": {
+        "en": "Diagram: the game picks a currency from its fixed list, shows the matching coin, and the prices stay the same numbers.",
+        "zh": "示意图：游戏从固定列表中选定货币、显示对应硬币、价格数字本身不变。"
+      },
+      "disclaimer": "Original diagram drawn for this site. It is not a screenshot of the game."
+    }
+  ],
+  "sources": [
+    "A local copy of the game, read only. Identifiers are listed on the technical reference pages; nothing here is estimated."
+  ],
+  "imageTier": "game-image"
+}

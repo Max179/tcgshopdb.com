@@ -1,0 +1,39 @@
+{
+  "id": "packs-to-profit",
+  "title": "From sealed packs to priced cards",
+  "tier": "published",
+  "kind": "article",
+  "target": "A routine for handling sealed product: what to keep sealed, what to open, and how opened cards reach a shelf priced.",
+  "version": "no version stated by this build (see the sources page)",
+  "prerequisites": [
+    "Packs in stock",
+    "A place to store boxes",
+    "An automatic opener if you have unlocked one"
+  ],
+  "steps": [
+    {
+      "do": "Keep some sealed product where customers can buy it and open the rest yourself.",
+      "because": "packaging boxes come in separate kinds for cards, items and shelves (InteractablePackagingBox_Card, InteractablePackagingBox_Item, InteractablePackagingBox_Shelf)"
+    },
+    {
+      "do": "Use the automatic opener when you are opening in bulk.",
+      "because": "an automatic opener exists and keeps its own saved progress (InteractableAutoPackOpener, AutoPackOpenerSaveData)"
+    },
+    {
+      "do": "Price every card you open before it goes on a shelf.",
+      "because": "card prices are applied through dedicated price objects (InteractableCardPriceTag)"
+    }
+  ],
+  "commonMistakes": [
+    "Opening every pack yourself and never shelving sealed stock.",
+    "Shelving cards that have not been priced.",
+    "Treating all packaging boxes as if they were the same kind of container."
+  ],
+  "relatedEntities": [
+    "packs-and-opening",
+    "cards-and-rarity"
+  ],
+  "sources": [
+    "A local copy of the game, read only. Grounding for each step is on the technical reference pages; no number is estimated."
+  ]
+}

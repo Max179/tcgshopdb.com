@@ -1,0 +1,114 @@
+{
+  "id": "how-a-shelf-holds-its-stock",
+  "title": "How a shelf holds its stock",
+  "category": "Storage",
+  "summary": "A shelf in TCG Card Shop Simulator is not one surface: it is divided into compartments, and each compartment decides for itself what it will accept, how big it is and which price tags belong to it.",
+  "body": [
+    "A shelf in this shop is not one surface. It is divided into compartments, and each compartment decides for itself what it will take, which is why one bay can be filled with boxes while the one beside it holds single items.",
+    "A compartment has rules of its own. It records whether an item may be placed, whether a box may be placed, whether the goods on it are not for sale, and whether its label can be locked, so a shop can be organised deliberately rather than treated as one pile.",
+    "A compartment has a size. Its width, depth and height are kept separately, and it can be marked as affected by a tall item or as able to grow upward, which is how a shelf reacts when something does not fit the first way you try it.",
+    "Cards have a compartment of their own. It keeps a place to put a card and an alternative place for a card that has not been graded, along with a mesh part that can be hidden when it is not needed, which is how a graded card can sit differently from an ordinary one.",
+    "Cards are not stored one record per card. The game keeps them compactly: a record carries the set, the card's index, how many of that card there are, whether it is graded and whether it belongs to the game's own Destiny set.",
+    "A slot is not always simply full or empty. The game has a picture of its own for a slot that is frozen, which is a state a slot can be in rather than only a description of what is standing on it.",
+    "Price tags belong to the compartment rather than to the product. A compartment keeps the tags attached to it, which is why a price can stay with the shelf when the goods on it change.",
+    "Boxes that have not been opened are tracked as well. A candidate record ties a live box to the compartment it is stored in and to a record index, which is how a sealed box can sit on a shelf and still be found again.",
+    "The images beside this entry are the game's own: the picture it uses for an empty slot on a card shelf and the one it uses for a frozen slot.",
+    "A compartment's shape is kept as corners rather than one size: where it starts and where its width, depth and height end, so its volume can be worked out from two points.",
+    "It keeps its own groups. There is a group for its positions, a group for the items stored on it and a list of the live boxes that belong to it, along with a place for a customer to stand and an aim location for the controller's quick select.",
+    "It can also be told to apply a scale offset, which is how what sits on a compartment follows a change in its size.",
+    "What this entry does not tell you: how many compartments a shelf has, how much a compartment holds, or how the cost multipliers on shelves are applied. We have not verified those, so we do not print them."
+  ],
+  "facts": [
+    {
+      "claim": "A shelf is divided into compartments.",
+      "evidence": "identifiers: ShelfCompartment, InteractableCardCompartment"
+    },
+    {
+      "claim": "A compartment records what it will accept and whether its label can be locked.",
+      "evidence": "identifiers: m_CanPutItem, m_CanPutBox, m_ItemNotForSale, m_CanLockItemLabel"
+    },
+    {
+      "claim": "A compartment has a recorded size and can be affected by a tall item or able to grow upward.",
+      "evidence": "identifiers: m_SizeX, m_SizeY, m_SizeZ, m_AffectedByTallItem, m_HeightGoesUp"
+    },
+    {
+      "claim": "A card compartment has places to put a card, including an alternative for a card that has not been graded, and a mesh it can hide.",
+      "evidence": "identifiers: m_PutCardLocation, m_PutCardLocationAlt, m_NoneGradedCardUseAltCardLocation, m_AdapterMesh, m_HideAdapterMesh"
+    },
+    {
+      "claim": "Cards are kept compactly, with the set, the card index, the amount, whether it is graded and whether it is from the Destiny set.",
+      "evidence": "identifiers: CompactCardDataAmount, expansionType, cardSaveIndex, amount, gradedCardIndex, isDestiny"
+    },
+    {
+      "claim": "The shop's stock data holds the lists of what is shown, the restock and event data, and the images the screens use.",
+      "evidence": "identifiers: m_ShownItemType, m_CardPackItemTypeList, m_RestockDataList, m_GameEventDataList, m_CollectionPackImageSpriteList"
+    },
+    {
+      "claim": "Price tags are attached to the compartment rather than to the product.",
+      "evidence": "identifier: m_InteractablePriceTagList"
+    },
+    {
+      "claim": "A box that has not been opened is tracked against the compartment it sits in and a record index.",
+      "evidence": "identifiers: PackageBoxCandidate, liveBox, storedCompartment, storedRecordIndex"
+    },
+    {
+      "claim": "The game ships a picture for an empty slot and one for a frozen slot on a card shelf.",
+      "evidence": "asset names: CardEmptySlot, CardSlotFrozen"
+    },
+    {
+      "claim": "A compartment's shape is kept as a start point and the ends of its width, depth and height.",
+      "evidence": "identifiers: m_StartLoc, m_EndWidthLoc, m_EndDepthLoc, m_EndHeightLoc"
+    },
+    {
+      "claim": "It keeps a group for its positions, a group for what is stored on it and a list of the live boxes that belong to it.",
+      "evidence": "identifiers: m_PosListGrp, m_StoredItemListGrp, m_LivePackagingBoxList"
+    },
+    {
+      "claim": "It has a place for a customer to stand and an aim location for the controller's quick select.",
+      "evidence": "identifiers: m_CustomerStandLoc, m_GamepadQuickSelectAimLoc"
+    },
+    {
+      "claim": "It can be told to apply a scale offset.",
+      "evidence": "identifier: m_ApplyScaleOffset"
+    },
+    {
+      "claim": "The build ships shelf meshes in a box, a cylinder and an L shape, with a material of its own for the cylinder shelf.",
+      "evidence": "asset names: BoxShelf_Mesh, CylinderShelf_Mesh, LShapedShelf_Mesh, MAT_CylinderShelf"
+    }
+  ],
+  "related": [
+    "shelves-stock-and-upgrades",
+    "the-warehouse-and-its-shelves"
+  ],
+  "images": [
+    {
+      "file": "mapped/how-a-shelf-holds-its-stock-empty.png",
+      "kind": "game",
+      "alt": {
+        "en": "The picture the game uses for an empty slot on a card shelf.",
+        "zh": "游戏用于卡架空位的图片。"
+      }
+    },
+    {
+      "file": "mapped/how-a-shelf-holds-its-stock-frozen.png",
+      "kind": "game",
+      "alt": {
+        "en": "The picture the game uses for a frozen slot on a card shelf.",
+        "zh": "游戏用于卡架“冻结”槽位的图片。"
+      }
+    },
+    {
+      "file": "how-a-shelf-holds-its-stock.svg",
+      "kind": "diagram",
+      "alt": {
+        "en": "Diagram: a shelf is split into compartments, each with its own size, rules, tags and stored contents.",
+        "zh": "示意图：货架被划分为格位，各有尺寸、规则、价签与存放内容。"
+      },
+      "disclaimer": "Original diagram drawn for this site. It is not a screenshot of the game."
+    }
+  ],
+  "sources": [
+    "A local copy of the game, read only. The grounding for each fact is listed on the technical reference pages; nothing here is estimated."
+  ],
+  "imageTier": "game-image"
+}

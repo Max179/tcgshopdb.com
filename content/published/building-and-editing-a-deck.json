@@ -1,0 +1,134 @@
+{
+  "id": "building-and-editing-a-deck",
+  "title": "Building and editing a deck",
+  "category": "Cards",
+  "summary": "Decks in TCG Card Shop Simulator are put together in screens of their own: the game has a deck editor, a search and a compact summary, and keeps a deck apart from the cards on your shelves.",
+  "body": [
+    "A deck is something you build. The game keeps deck data apart from the cards in your shop, which is why one card can be stock and part of a deck at the same time.",
+    "It has an editor of its own. There is a deck edit panel with a plus-and-minus screen, which is how a deck gets assembled rather than being played straight out of the collection.",
+    "You can search for what to add. The game keeps card search data and a search card selection screen, so finding a card to put in is its own interface.",
+    "The deck is stored compactly. There is a compact list of the cards in a deck, which is why a deck can be shown as a summary instead of as a pile.",
+    "The pool is tracked as well. The game keeps a card pool, so what there is to build from is something the game accounts for rather than something you do.",
+    "The screen keeps count as you go. It shows how many of a card are already in the deck and how many are in an album, and it has an amount input with a display of its own, which is why what you are about to add is decided against what you already have.",
+    "Empty is a state of its own. The game ships an icon for an empty play mat, which is why a board with nothing on it is presented rather than simply blank.",
+    "The editing panel is built out of parts. It has a slot kept for adding a new card along with a count group and its own count text, which is why the panel can show an empty slot and a running count at the same time.",
+    "What this entry does not tell you: how many cards a deck holds, what the deck-building rules are, or what the pool contains. We have not verified those, so we do not print them."
+  ],
+  "facts": [
+    {
+      "claim": "A deck is kept as its own data, apart from the cards in the shop.",
+      "evidence": "identifier: PlayCardDeckData"
+    },
+    {
+      "claim": "There is a deck editor with a plus-and-minus screen.",
+      "evidence": "identifiers: DeckCardEditPanelUI, DeckCardPlusMinusScreen"
+    },
+    {
+      "claim": "Cards can be searched for and selected when building.",
+      "evidence": "identifiers: PlayCardSearchData, PlayCardSetUIScreen_SearchCardSelection"
+    },
+    {
+      "claim": "A deck is also kept as a compact list of its cards.",
+      "evidence": "identifier: DeckCompactCardDataList"
+    },
+    {
+      "claim": "The game tracks the pool of cards available to build from.",
+      "evidence": "identifier: PlayCardPool"
+    },
+    {
+      "claim": "An empty play mat has an icon of its own.",
+      "evidence": "identifier: Icon_EmptyPlaymat"
+    },
+    {
+      "claim": "The plus-and-minus screen shows the deck count and the count already in an album, and has an amount input with a display of its own.",
+      "evidence": "identifiers: m_DeckCardCountText, m_InAlbumCountText, m_DeckCardAmountInput, m_DeckCardAmountInputDisplay"
+    },
+    {
+      "claim": "The deck card editing panel has an empty slot for adding a new card, a count group and a count text of its own.",
+      "evidence": "identifiers: DeckCardEditPanelUI, m_EmptyAddNewCardSlot, m_CardCountGrp, m_CountText"
+    },
+    {
+      "claim": "The game ships preconstructed battle decks of its own, one per element.",
+      "evidence": "asset names: T_PreconDeckFire, T_PreconDeckEarth, T_PreconDeckWind"
+    },
+    {
+      "claim": "A preconstructed wind deck is shipped beside the fire and earth ones, and the box art names it as a battle deck.",
+      "evidence": "asset names: T_PreconDeckWind, T_PreconDeckFire, T_PreconDeckEarth, Battle Deck"
+    },
+    {
+      "claim": "A water deck is shipped as well, in an elemental and a Destiny battle deck, each with box art of its own.",
+      "evidence": "asset names: T_PreconDeckWater, T_PreconDeckWaterDestiny"
+    },
+    {
+      "claim": "A water precon deck is carried with a material and two icons of its own.",
+      "evidence": "asset names: MAT_PreconDeckWater, Icon_PreconWater, Icon_PreconWaterDestiny"
+    }
+  ],
+  "related": [
+    "the-card-game-you-can-play",
+    "the-rules-of-the-card-game"
+  ],
+  "images": [
+    {
+      "file": "mapped/building-and-editing-a-deck-playmat.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "The icon the game itself shows for an empty play mat.",
+        "zh": "游戏本身为空白对战垫显示的图标。"
+      }
+    },
+    {
+      "file": "building-and-editing-a-deck.svg",
+      "kind": "diagram",
+      "alt": {
+        "en": "Diagram: open the deck editor, search the pool, add cards, and the deck is summarised.",
+        "zh": "示意图：打开卡组编辑器、检索卡池、加入卡牌、卡组以摘要呈现。"
+      },
+      "disclaimer": "Original diagram drawn for this site. It is not a screenshot of the game."
+    },
+    {
+      "file": "mapped/building-and-editing-a-deck-precon-water.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "The box art of the game's own preconstructed water battle deck, headed Tetra Elemental Battle Deck with a legend card on it.",
+        "zh": "游戏自带水属性预组对战套牌的盒面：标题为 Tetra Elemental Battle Deck，盒面印着一张传说卡。"
+      }
+    },
+    {
+      "file": "mapped/building-and-editing-a-deck-precon-water-destiny.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "The water deck's Destiny box art, headed Tetra Destiny Battle Deck.",
+        "zh": "水属性套牌的 Destiny 版盒面：标题为 Tetra Destiny Battle Deck。"
+      }
+    },
+    {
+      "file": "mapped/building-and-editing-a-deck-precon-fire.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "The box art of the game's own preconstructed fire battle deck, showing a legend card and the deck's name.",
+        "zh": "游戏自带火属性预组对战套牌的盒面：一张传说卡与套牌名称。"
+      }
+    },
+    {
+      "file": "mapped/building-and-editing-a-deck-precon-earth.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "The box art of the game's own preconstructed earth battle deck.",
+        "zh": "游戏自带土属性预组对战套牌的盒面。"
+      }
+    },
+    {
+      "file": "mapped/building-and-editing-a-deck-precon-wind.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "The box art of the game's own preconstructed wind battle deck, with a legendary card printed on the front.",
+        "zh": "游戏自带风属性预组对战套牌的盒面，正面印着一张传说卡。"
+      }
+    }
+  ],
+  "sources": [
+    "A local copy of the game, read only. Identifiers are listed on the technical reference pages; nothing here is estimated."
+  ],
+  "imageTier": "game-image"
+}

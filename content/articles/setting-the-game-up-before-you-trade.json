@@ -1,0 +1,69 @@
+{
+  "id": "setting-the-game-up-before-you-trade",
+  "title": "Setting the game up before you trade",
+  "tier": "published",
+  "kind": "article",
+  "target": "How the settings and key bindings in TCG Card Shop Simulator are organised, so the display, the sound and the controls are set once and deliberately rather than fought with later.",
+  "version": "no version stated by this build (see the sources page)",
+  "prerequisites": [
+    "The game started at least once",
+    "A keyboard and a mouse, or a pad",
+    "A few minutes before opening the shop"
+  ],
+  "steps": [
+    {
+      "do": "Set the display basics one at a time, because resolution, fullscreen, vertical sync, refresh rate and the frame limit each have a control of their own.",
+      "because": "display options each have a control of their own (ResolutionController, FullscreenController, VsyncController, RefreshRateController, FpsController)"
+    },
+    {
+      "do": "Set brightness deliberately rather than by feel, because it is a setting of its own.",
+      "because": "brightness has a control of its own (BrightnessController)"
+    },
+    {
+      "do": "Choose shadows and textures separately, because shadow distance, shadow mode, shadow resolution, texture resolution and anti-aliasing are five settings rather than one.",
+      "because": "each of them is a separate setting (ShadowDistanceController, ShadowModeController, ShadowResolutionController, TextureResolutionController, AntiAliasingController)"
+    },
+    {
+      "do": "Treat post-processing as two decisions, because the effect and the controller for it are separate.",
+      "because": "post-processing has two controls rather than one (PostProcessingController, PostProcessingEffectController)"
+    },
+    {
+      "do": "Balance the sound in two places, because there is a master level and a mixer level.",
+      "because": "sound has a master level and a mixer level as separate settings (MasterVolumeController, AudioMixerVolumeController)"
+    },
+    {
+      "do": "Rebind deliberately, because a binding is its own setting with a linker for a pad and flags for when it may be updated.",
+      "because": "bindings are rebindable with a key setting, a gamepad linker and update flags (KeybindSetting, GamepadSettingLinker, ResetCanUpdateKeybind, SetIsChangingKeybindNextFrame)"
+    },
+    {
+      "do": "Use the key screens rather than hunting: the settings screen has a keybind screen with a keyboard screen and a controller screen inside it.",
+      "because": "keys have a screen of their own with a keyboard screen and a controller screen (m_KeybindScreen, m_KeybindKeyboardScreen, m_KeybindControllerScreen)"
+    },
+    {
+      "do": "Expect a confirmation step when a binding changes, because there is a screen for it.",
+      "because": "a key bind change has its own confirmation screen (m_KeybindChangesConfirmScreen)"
+    },
+    {
+      "do": "Remember a binding can hold a second key, because a binding has a base key and a secondary base key with a flag for whether it is a controller binding.",
+      "because": "a binding holds a base key and a secondary base key with a controller flag (m_GameBaseKey, m_GameBaseKeySecondary, m_IsGamepad)"
+    },
+    {
+      "do": "Finish with the language and the interface scale, because both are settings with their own handling.",
+      "because": "language is a setting with assets of its own and the interface is scaled by screen ratio and offset by aspect ratio (SetLanguage, LanguageSourceAsset, ScreenRatioScaler, AspectRatioPositionOffset)"
+    }
+  ],
+  "commonMistakes": [
+    "Changing resolution, fullscreen and the frame limit in one go and not knowing which change helped.",
+    "Treating shadow and texture quality as one slider when they are separate settings.",
+    "Rebinding a key and losing track of which binding was changed, when a confirmation screen exists for that.",
+    "Forgetting the second key slot and thinking a binding is single."
+  ],
+  "relatedEntities": [
+    "the-settings-you-can-change",
+    "the-key-binding-settings",
+    "the-screens-you-will-use-most"
+  ],
+  "sources": [
+    "A local copy of the game, read only. The grounding for each step is listed on the technical reference pages; nothing here is estimated."
+  ]
+}

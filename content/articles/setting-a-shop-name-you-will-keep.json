@@ -1,0 +1,47 @@
+{
+  "id": "setting-a-shop-name-you-will-keep",
+  "title": "Setting a shop name you will keep",
+  "tier": "published",
+  "kind": "article",
+  "target": "How to rename a TCG Card Shop Simulator shop at the billboard, using the sequence the game runs rather than looking for a settings menu.",
+  "version": "no version stated by this build (see the sources page)",
+  "prerequisites": [
+    "A billboard in the shop",
+    "A moment when you are not serving",
+    "A name you have actually decided on"
+  ],
+  "steps": [
+    {
+      "do": "Set the shop name early rather than late.",
+      "because": "the billboard carries a renaming sequence of its own (ShopRenamer)"
+    },
+    {
+      "do": "Confirm the name rather than walking off partway through.",
+      "because": "renaming runs through an opening, a name and a confirmation screen (m_ConfirmNameScreen)"
+    },
+    {
+      "do": "Type it into the box the billboard gives you.",
+      "because": "the name is entered into its own input (m_SetNameInput)"
+    },
+    {
+      "do": "Check what the sign shows once you are done.",
+      "because": "the billboard displays the current shop name (m_ShopName)"
+    },
+    {
+      "do": "Come back to the billboard if you want to change it again.",
+      "because": "the billboard is a placed object in the shop (InteractableShopBillboard)"
+    }
+  ],
+  "commonMistakes": [
+    "Leaving the shop on a default name.",
+    "Walking away before confirming.",
+    "Looking for the name in a settings screen instead of the billboard."
+  ],
+  "relatedEntities": [
+    "the-shop-billboard-and-your-shop-name",
+    "expanding-and-decorating-the-shop"
+  ],
+  "sources": [
+    "A local copy of the game, read only. Grounding for each step is on the technical reference pages; no number is estimated."
+  ]
+}

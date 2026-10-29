@@ -73,7 +73,8 @@ mkdirSync(dirname(OUT), { recursive: true });
 const extractedAt = new Date().toISOString();
 writeFileSync(OUT, JSON.stringify({
   game: 'TCG Card Shop Simulator', engine: 'unity', scriptBackend: 'mono',
-  version: 'OPNeonGames | Card Shop Simulator (app.info)',
+  version: 'no version stated by this build',   // measured: the build ships no version marker; app.info holds company + product name only
+  productLabel: 'OPNeonGames | Card Shop Simulator',
   source: { assembly: 'Managed/Assembly-CSharp.dll', files: sources, extractor: 'tcg-p0-instances@0.1.0', extractedAt },
   enums, instances, stats,
 }, null, 2), 'utf8');

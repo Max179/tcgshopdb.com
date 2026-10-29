@@ -1,0 +1,47 @@
+{
+  "id": "putting-a-deck-together-deliberately",
+  "title": "Putting a deck together deliberately",
+  "tier": "published",
+  "kind": "article",
+  "target": "How to put a deck together in TCG Card Shop Simulator using the game own deck editor, search and card pool rather than working from memory.",
+  "version": "no version stated by this build (see the sources page)",
+  "prerequisites": [
+    "The card game unlocked",
+    "Cards in your collection worth playing",
+    "The deck editor open"
+  ],
+  "steps": [
+    {
+      "do": "Work from the card pool rather than from what you remember owning.",
+      "because": "the game tracks a pool of the cards there are to build from (PlayCardPool)"
+    },
+    {
+      "do": "Use the search when you are after something specific.",
+      "because": "there is a search screen for choosing a card (PlayCardSetUIScreen_SearchCardSelection)"
+    },
+    {
+      "do": "Add and remove through the plus-and-minus screen rather than editing by hand.",
+      "because": "the deck editor has a plus-and-minus screen of its own (DeckCardPlusMinusScreen)"
+    },
+    {
+      "do": "Read the deck as a summary before you take it to a table.",
+      "because": "the game keeps a compact list of the cards in a deck (DeckCompactCardDataList)"
+    },
+    {
+      "do": "Remember that a card can be stock and part of a deck at the same time.",
+      "because": "deck data is kept apart from the cards in your shop (PlayCardDeckData)"
+    }
+  ],
+  "commonMistakes": [
+    "Building from memory and missing cards you already own.",
+    "Selling a card that was part of a deck.",
+    "Assuming an empty board means an empty deck."
+  ],
+  "relatedEntities": [
+    "building-and-editing-a-deck",
+    "the-card-game-you-can-play"
+  ],
+  "sources": [
+    "A local copy of the game, read only. Grounding for each step is on the technical reference pages; no number is estimated."
+  ]
+}

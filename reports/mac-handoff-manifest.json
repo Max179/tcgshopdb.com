@@ -1,0 +1,2715 @@
+{
+  "generatedFor": "tcgshopdb.com",
+  "generatedOn": "the extraction host (Windows)",
+  "basis": {
+    "head": "41f80b2",
+    "commits": 574,
+    "pages": 445,
+    "indexable": 176
+  },
+  "gitHistoryIncluded": false,
+  "hashAlgorithm": "sha256",
+  "files": [
+    {
+      "rel": ".gitattributes",
+      "bytes": 19,
+      "sha256": "d60f352d0db1404c70afb4bb8b2ca3fd1c610572aa40720e8a0b7baa7885418c"
+    },
+    {
+      "rel": ".github/workflows/publish.yml",
+      "bytes": 1803,
+      "sha256": "6136641993bd251db1cf1f41177602c98dee405c5881e28cdf4b2729e09e2604"
+    },
+    {
+      "rel": ".gitignore",
+      "bytes": 136,
+      "sha256": "922eb7291ff5467389996cba50d87f99840419b656a9dd41f9a2d9c65f9f75c4"
+    },
+    {
+      "rel": "config/coverage.json",
+      "bytes": 4700,
+      "sha256": "f9637c61ff0d5a211666637fb776619f4b23dadc8fc38f3ca0476d0aec8fa110"
+    },
+    {
+      "rel": "config/urls.json",
+      "bytes": 73536,
+      "sha256": "94beba72b35914f6d890b914c9583953acd0041e9c0b086e7454aecc37318d79"
+    },
+    {
+      "rel": "content/articles/a-shop-day-that-turns-a-profit.json",
+      "bytes": 1708,
+      "sha256": "584b0cdc3d2a1bd327c1080f13e4967d25d51333a127231d02b91e703c5e5ec7"
+    },
+    {
+      "rel": "content/articles/answering-the-reviews-a-shift-leaves-behind.json",
+      "bytes": 4266,
+      "sha256": "0b8dde2acb10c28907c28543328290019e462a103cc3567e51c6f172304efdcc"
+    },
+    {
+      "rel": "content/articles/choosing-what-to-open-and-what-to-sell.json",
+      "bytes": 1892,
+      "sha256": "9e03b954b521b75e3f1faeca0175b79d5176965a084841cd6249cfe7221c9a54"
+    },
+    {
+      "rel": "content/articles/choosing-your-first-upgrades.json",
+      "bytes": 1949,
+      "sha256": "2095162d401778ac17c2b8f287a039040be2f5e4b98adcf201b432645f163b25"
+    },
+    {
+      "rel": "content/articles/clearing-old-stock-in-bulk.json",
+      "bytes": 2434,
+      "sha256": "98378851382885637db51fa7ba9c85b1c85243ef07c30ea3cdbc9152450bcaf6"
+    },
+    {
+      "rel": "content/articles/deciding-what-to-acquire-beyond-stock.json",
+      "bytes": 1851,
+      "sha256": "4be0e62846b76b89e2959121daf4e0e11e9306fa39d96aac2ff55ea619f5f1f5"
+    },
+    {
+      "rel": "content/articles/dressing-the-shop-so-it-looks-like-yours.json",
+      "bytes": 4850,
+      "sha256": "b32bc9dbf78552636c7d7e6538c7f9dc7999e675c602e884f39e998d40727e02"
+    },
+    {
+      "rel": "content/articles/dressing-the-table-before-a-game.json",
+      "bytes": 3237,
+      "sha256": "7ec4e770b913b4abdf038d1f0a616940ee23399fb323c019ce50c435723a9b65"
+    },
+    {
+      "rel": "content/articles/earning-and-reading-achievements.json",
+      "bytes": 2302,
+      "sha256": "0411ecf4a3e803ac11c10b9fe6026872fc7b5e1370fbc0ff60143c8ee6b3e499"
+    },
+    {
+      "rel": "content/articles/finding-the-card-games-own-screens.json",
+      "bytes": 2749,
+      "sha256": "bf048c1bf0b2b619d9c15a52d3277940935a8ee60b83ae6218788ac9eacc7015"
+    },
+    {
+      "rel": "content/articles/following-a-customer-from-the-door.json",
+      "bytes": 3358,
+      "sha256": "96d9c1a7aa809c43546a9fb399ed77a96471210f0c1583d1dcaee610718b12cd"
+    },
+    {
+      "rel": "content/articles/following-a-pull-from-pack-to-value.json",
+      "bytes": 3221,
+      "sha256": "7157a6e3dadc0fca117e80a88664410603b850183e7a302602358d3787bad121"
+    },
+    {
+      "rel": "content/articles/from-delivery-to-sold-card.json",
+      "bytes": 1688,
+      "sha256": "991f59879961e2c4e7a6ec9a35b4a1cc2f0356e2f62a4a0bf3f488b0187709a4"
+    },
+    {
+      "rel": "content/articles/getting-a-licence-without-stalling-the-shop.json",
+      "bytes": 3173,
+      "sha256": "2143a88c80b1e40580e4adffe88102c23cbbe88c1115004e8614b2cec324f94d"
+    },
+    {
+      "rel": "content/articles/getting-a-table-game-onto-a-table.json",
+      "bytes": 3551,
+      "sha256": "24adb9a03626b63fba05ad51d68f514ea9e0ab1e73e801cde30f4cd08e04bbf4"
+    },
+    {
+      "rel": "content/articles/getting-value-from-a-ghost-card.json",
+      "bytes": 1942,
+      "sha256": "00a0685626048d79c331595a5c3851e4feff1c16e775eaec0bca184ed8787874"
+    },
+    {
+      "rel": "content/articles/getting-your-workers-doing-what-you-want.json",
+      "bytes": 3555,
+      "sha256": "0960434ae4cab249af0229318ca5e8851b7006b97418c30b9136afb079d18fca"
+    },
+    {
+      "rel": "content/articles/handling-the-cards-in-the-shop.json",
+      "bytes": 2878,
+      "sha256": "1ed2d6b57d4b1ef2d6988c84204590051f8ef64158ddf6d6c57530e994e97570"
+    },
+    {
+      "rel": "content/articles/keeping-a-collection-that-keeps-its-value.json",
+      "bytes": 1879,
+      "sha256": "e6964df0a795470b48e99e1b3e775238ad1f139a74f04879f7008c73eca992a9"
+    },
+    {
+      "rel": "content/articles/keeping-a-shop-that-keeps-getting-messy.json",
+      "bytes": 2640,
+      "sha256": "99f6ab34417115935faae110812c47f731b223098de1ceb51d7a4fdad3fdf37a"
+    },
+    {
+      "rel": "content/articles/keeping-the-counter-straight-on-a-busy-day.json",
+      "bytes": 3699,
+      "sha256": "d9c8d754f3b3e0a9429ab8217e8595824d0988e1fb93f9d353988f369c156342"
+    },
+    {
+      "rel": "content/articles/keeping-the-shelves-selling.json",
+      "bytes": 1842,
+      "sha256": "7696626f7be0513934281b89ed41782b074de212f3c0f92447dc104b19039b9b"
+    },
+    {
+      "rel": "content/articles/labelling-the-shelves-so-prices-read-right.json",
+      "bytes": 3414,
+      "sha256": "0c57a92d7b929ed997e9fd03a33f3ffe2ebb6e341f06f72752fab1bd24b4c2b5"
+    },
+    {
+      "rel": "content/articles/letting-the-machines-and-the-restocker-do-the-work.json",
+      "bytes": 4203,
+      "sha256": "50d00d9461862bd72cc1186fd2e4507975a51e6bad836e46628a89a1f92e784a"
+    },
+    {
+      "rel": "content/articles/opening-day-routine.json",
+      "bytes": 1624,
+      "sha256": "7ce2a08b8a1d269ecb47c2ac1247c5be6bf98d5cb41c1e7ebd326579929e8624"
+    },
+    {
+      "rel": "content/articles/packs-to-profit.json",
+      "bytes": 1606,
+      "sha256": "4ef56316f9698ed6a21a1934bf46285a401dd15ab8a93b6025b1e0f96d52501d"
+    },
+    {
+      "rel": "content/articles/photographing-the-shop-with-the-phone-camera.json",
+      "bytes": 2217,
+      "sha256": "44a2cb1ae163e002e15998d645d33b8e9ca4ac46ab67e51702d21787c9f983ab"
+    },
+    {
+      "rel": "content/articles/planting-a-shop-that-looks-lived-in.json",
+      "bytes": 2408,
+      "sha256": "febbd50fb8aefdb24ea5f82953e17dd3e85f8cfe06eeff2d6d8b7a7a7a82a135"
+    },
+    {
+      "rel": "content/articles/practising-the-card-game-before-it-matters.json",
+      "bytes": 1847,
+      "sha256": "1ac8ee267be9b5c3ae92dc4e63ff7771c586dd0970cbd7eae485d73f15ad292b"
+    },
+    {
+      "rel": "content/articles/pricing-a-card-from-what-you-can-see.json",
+      "bytes": 1773,
+      "sha256": "498985b3495eb87efc818dc4d3a26907cd903bca755bb4b1cb3725eb8f50109c"
+    },
+    {
+      "rel": "content/articles/putting-a-collection-into-albums-without-losing-track.json",
+      "bytes": 2942,
+      "sha256": "c59eff2536ba0f86397290069072c68d0ded20172ab75e70f3de2760fe1fcef5"
+    },
+    {
+      "rel": "content/articles/putting-a-deck-together-deliberately.json",
+      "bytes": 1906,
+      "sha256": "214282d8fbe1cfd3e79f1ca526c85411dcd2532690ae0c1558b06ba9676de110"
+    },
+    {
+      "rel": "content/articles/putting-cards-on-display-so-they-sell.json",
+      "bytes": 2061,
+      "sha256": "b21db3711b1d163c4d57ad424814937b0ba98ac1dc10245d6ed51c75c6e90f14"
+    },
+    {
+      "rel": "content/articles/putting-on-an-event-that-pays-for-itself.json",
+      "bytes": 4271,
+      "sha256": "8f18553c1c831555f074db72b0e2487ea1dcf477ae4c84a78a2941ebfb31972f"
+    },
+    {
+      "rel": "content/articles/putting-the-walls-and-the-prizes-to-work.json",
+      "bytes": 3002,
+      "sha256": "75d78d987eb0547138bd431c15db56c9ef07e54a915182c0aa069262719e666d"
+    },
+    {
+      "rel": "content/articles/reading-a-cards-set-record-before-you-buy.json",
+      "bytes": 2966,
+      "sha256": "49e499de47d81dd97515091bfc67d54cb66160e47063ec571b5fd57ccd1034a1"
+    },
+    {
+      "rel": "content/articles/reading-a-price-graph-without-guessing.json",
+      "bytes": 3874,
+      "sha256": "f8dd7c125b63bac2fb74dd2b4697bfe43c25c984cf9bee2e372920628694988b"
+    },
+    {
+      "rel": "content/articles/reading-the-board-before-you-act.json",
+      "bytes": 3167,
+      "sha256": "1719dd328b57ce0e1909ccb5cfe87aa31b1f95386ae10f52c0210e3492580ddd"
+    },
+    {
+      "rel": "content/articles/reading-the-market-before-you-buy.json",
+      "bytes": 3939,
+      "sha256": "bea8b9e95eea3559e15b207f5ec4a7f373edd6c217654c5481f215b3d15f01c6"
+    },
+    {
+      "rel": "content/articles/reading-the-shop-screens.json",
+      "bytes": 3459,
+      "sha256": "edfe901552b683bed4607ebfb0e1ac24c8303c3ba3ffe3c3d8c6129b8c4f9421"
+    },
+    {
+      "rel": "content/articles/reading-what-a-customer-wants.json",
+      "bytes": 2073,
+      "sha256": "08eea8dd230873453964514134bf63a245156b1065d99e1c090c96538575cd70"
+    },
+    {
+      "rel": "content/articles/reading-why-a-price-moved.json",
+      "bytes": 4048,
+      "sha256": "5ead5e62e5fbd0629bd3ae6ee9a0d035525ea0df91a1faf21545b057591a3c20"
+    },
+    {
+      "rel": "content/articles/restocking-without-guessing-what-you-need.json",
+      "bytes": 1914,
+      "sha256": "cc4f64ad7007153273c9cba128880b53b659edbb26c8a1338938afeb89c0a266"
+    },
+    {
+      "rel": "content/articles/running-a-back-room-that-works.json",
+      "bytes": 2048,
+      "sha256": "3a604e246eb5d390c675b51af70d6659cffa112e9f0ca03b212043cadf4f6d5b"
+    },
+    {
+      "rel": "content/articles/running-a-tournament-that-keeps-its-own-score.json",
+      "bytes": 2086,
+      "sha256": "36ea6f618f4e269099e5df07ef3813a54ad09f260017e7339c57f987e6658f3a"
+    },
+    {
+      "rel": "content/articles/searching-your-cards-without-guessing.json",
+      "bytes": 3085,
+      "sha256": "978f27aee70978bf2d127b2055c1a3987747a74d0ce3946e9e1e72dde0ba5186"
+    },
+    {
+      "rel": "content/articles/setting-a-shop-name-you-will-keep.json",
+      "bytes": 1792,
+      "sha256": "2c8a39904b28cbf69e16a65e5c8e780564fbb1669035dc4039dbe025bd152ea2"
+    },
+    {
+      "rel": "content/articles/setting-the-game-up-before-you-trade.json",
+      "bytes": 4260,
+      "sha256": "a77b09f91cd0b48fd77e545dba82eb34bcc454541e36ac58c753bf6c21d4ff14"
+    },
+    {
+      "rel": "content/articles/setting-up-a-fixture-once.json",
+      "bytes": 1869,
+      "sha256": "dae5bde2bb02a29f2655a8b2ea03d3871dc25b3239d9083d22daea9fcd6030bf"
+    },
+    {
+      "rel": "content/articles/signing-a-shop-so-people-find-their-way.json",
+      "bytes": 2317,
+      "sha256": "7febbb41fbad040b4d6fcce478f1a9682ef3aa8b4ef45194fdf73821272dedfe"
+    },
+    {
+      "rel": "content/articles/sorting-the-restock-list-before-you-spend.json",
+      "bytes": 3094,
+      "sha256": "2ee846a2b92a630baf9901e3c56fce61be0deefaee673cae3556167d1353d50b"
+    },
+    {
+      "rel": "content/articles/stocking-a-product-line-that-is-not-cards.json",
+      "bytes": 1949,
+      "sha256": "f85484d6255ddd0c05642edeeb7facc01f0775ab66c3d165e02093eb84d25123"
+    },
+    {
+      "rel": "content/articles/stocking-figures-without-guessing.json",
+      "bytes": 2732,
+      "sha256": "8c86b446237b3bf5516dcbb15e8da1b56477c832197fb82556de08d439c87ec5"
+    },
+    {
+      "rel": "content/articles/storing-and-shelving-a-set.json",
+      "bytes": 3126,
+      "sha256": "c04f9201ba6dc79efb94a710f8548b65ccf1fae5690f567e31c0a73fbe94e483"
+    },
+    {
+      "rel": "content/articles/the-pictures-the-game-draws-on-screen.json",
+      "bytes": 3408,
+      "sha256": "af99183364c8b93ff98885f502ca8f5e093959c91b595e84f34dab98d0bdb4a8"
+    },
+    {
+      "rel": "content/articles/trading-a-card-without-losing-value.json",
+      "bytes": 3878,
+      "sha256": "030c30d3b6cf0bd52f74b1e266fc5d7f700d80a13256db81caabfdda592cb5d8"
+    },
+    {
+      "rel": "content/articles/using-grading-without-wasting-cards.json",
+      "bytes": 1985,
+      "sha256": "482d1b5890cbc914f4979326863cba5e3394ac86cabc797dcfa04cafd8bad18b"
+    },
+    {
+      "rel": "content/articles/using-the-discard-pile.json",
+      "bytes": 2780,
+      "sha256": "5b7d8cfeb6c1dd99c83b469236574c78cf884d6e6a5cf788499809fc91200675"
+    },
+    {
+      "rel": "content/articles/using-the-information-the-game-gives-you.json",
+      "bytes": 1887,
+      "sha256": "cd6557e2c4fa41eae7706dd2ff5971853c463c1ce9c8a05d65dea860a99cf6ca"
+    },
+    {
+      "rel": "content/articles/using-the-warehouse-without-losing-stock.json",
+      "bytes": 2009,
+      "sha256": "bb2c225a90c855c3a1e172340de3ae3d6e3bdf572af89e908ae26a51a259b848"
+    },
+    {
+      "rel": "content/articles/what-the-game-writes-down-for-you.json",
+      "bytes": 4992,
+      "sha256": "1fa6ff2ca2c4bf4876e3844e31765d893bc5d2218871d2148d2c18090b2062e3"
+    },
+    {
+      "rel": "content/articles/what-to-do-with-a-duplicate-card.json",
+      "bytes": 3760,
+      "sha256": "c0dae8dd7363ec2e550d965aad8cb2da5349b1a7d4410a9e4c886e1503cf1362"
+    },
+    {
+      "rel": "content/articles/working-out-how-many-customers-you-can-serve.json",
+      "bytes": 3240,
+      "sha256": "b90b10024c374d8fdc503ddeea18b6ba6c0cd83e81690527d1eaccf5df31357a"
+    },
+    {
+      "rel": "content/assets/albums-and-binder-pages.svg",
+      "bytes": 1916,
+      "sha256": "6121bfb54f842b7f1ffc3a1b6cb2772f8e270606c6c2be9d9c4befb549b8481b"
+    },
+    {
+      "rel": "content/assets/board-games-and-their-accessories.svg",
+      "bytes": 1930,
+      "sha256": "7228ed88885457b12e8d556bce3f3c5e69b96c73e1c702a74446afc616dda597"
+    },
+    {
+      "rel": "content/assets/building-and-editing-a-deck.svg",
+      "bytes": 1924,
+      "sha256": "850fe7b001142772caaa9aee78cbd8c7ce39b472fca6a19ebb3172b99dfaba2f"
+    },
+    {
+      "rel": "content/assets/card-sets-and-expansions.svg",
+      "bytes": 1945,
+      "sha256": "97d74cafabf5f95647a042ca4f5cfea5df2705f2c1c8a80b9db1bf61e2390d0e"
+    },
+    {
+      "rel": "content/assets/cards-and-rarity.svg",
+      "bytes": 1892,
+      "sha256": "59828ec1ba5e8a85d86dc5bbcdba0b9c8d0ab7523af5736e8b55a94c504a7b13"
+    },
+    {
+      "rel": "content/assets/customer-reviews.svg",
+      "bytes": 1922,
+      "sha256": "8cda0154c933e0554ba4b54b1f10cac9e96fa5afbff2b71a2b22e0ba8a830459"
+    },
+    {
+      "rel": "content/assets/discarding-cards.svg",
+      "bytes": 1938,
+      "sha256": "07db32da3a98648ec1a1b5eda352ed79a542ff510549ea7cf3a57ea7a17e8b6c"
+    },
+    {
+      "rel": "content/assets/expanding-and-decorating-the-shop.svg",
+      "bytes": 1908,
+      "sha256": "ef2e8e44df4236e73640b444f1fba79edb2f56bd8c43410c2b6b2008b322ad52"
+    },
+    {
+      "rel": "content/assets/glossary-of-terms.svg",
+      "bytes": 1920,
+      "sha256": "66bf3518b05376e10263e38dd4e50aafba7e8e18b7fc936d53ec99303fae54cf"
+    },
+    {
+      "rel": "content/assets/how-a-card-front-is-built.svg",
+      "bytes": 1922,
+      "sha256": "537e11f1710cd18a6f075d4383bd1b106278cbf1aac530dcce93e27fca4107d0"
+    },
+    {
+      "rel": "content/assets/how-a-card-search-is-described.svg",
+      "bytes": 1958,
+      "sha256": "2a43e07ae4a4f2856694190640be0e8893df4d6a91642f584a79f659caa57590"
+    },
+    {
+      "rel": "content/assets/how-a-crowd-is-animated-from-a-baked-set.svg",
+      "bytes": 1972,
+      "sha256": "04963acca5efce14358ce11b84172cf823ccb15b597df4b3cb34b9e131a867e7"
+    },
+    {
+      "rel": "content/assets/how-a-price-tag-is-drawn.svg",
+      "bytes": 1951,
+      "sha256": "37acae6ae4a966b6d369e40da4c66c7e6bc4ceaf87130c4345f348b1b175fbbf"
+    },
+    {
+      "rel": "content/assets/how-a-shelf-holds-its-stock.svg",
+      "bytes": 1925,
+      "sha256": "b67f562b3cf55688bacc2461743e18e1bda75cab99fccd8ce546a6524cd1bca2"
+    },
+    {
+      "rel": "content/assets/how-many-customers-your-shop-holds.svg",
+      "bytes": 1905,
+      "sha256": "e28466aabb24960dfd96e9f4d4be907718c644b8586418f01e0716ca168ce36b"
+    },
+    {
+      "rel": "content/assets/how-the-restock-manager-packs-stock.svg",
+      "bytes": 1962,
+      "sha256": "c575fe2ab1fbe06ad88a921b44077b4fe5dfafd3c458878fc0bb6ce5fc6ab3e6"
+    },
+    {
+      "rel": "content/assets/how-tournament-standings-are-decided.svg",
+      "bytes": 1946,
+      "sha256": "0b7617432995fa0686ac298675e1d9cc25d9e56fb703fd35ae3c1dd082c2af77"
+    },
+    {
+      "rel": "content/assets/licences-and-shop-level.svg",
+      "bytes": 1943,
+      "sha256": "5df8c4f117fa273fe8d9cc3de4d331e2c18f90a56507f720c6eb96974dd66fa0"
+    },
+    {
+      "rel": "content/assets/machines-that-work-on-their-own.svg",
+      "bytes": 1924,
+      "sha256": "c88643dcedef21b8aa5963adfd2b72362f25ba26be1fcd02ef3989cdafd72469"
+    },
+    {
+      "rel": "content/assets/mapped/albums-and-binder-pages-8up.jpg",
+      "bytes": 41226,
+      "sha256": "08181d56b830e6fc6c272a7348b24bcabd3f628d44e475c1d297e008b60118ce"
+    },
+    {
+      "rel": "content/assets/mapped/albums-and-binder-pages-all-star.jpg",
+      "bytes": 81127,
+      "sha256": "52f80e0395c8c1d7bb14e28fc5e74e1fc66f06c4bdc2ab1164839661d5de0d78"
+    },
+    {
+      "rel": "content/assets/mapped/albums-and-binder-pages-binder-book.jpg",
+      "bytes": 12881,
+      "sha256": "777dee61c68a9d1fee07246f8decb0d0d276f030bc9c97e028c96803d81ab436"
+    },
+    {
+      "rel": "content/assets/mapped/albums-and-binder-pages-binder.jpg",
+      "bytes": 34251,
+      "sha256": "44a095c3f5f9691fb80d1dd28e080705da9cdc9fb76fe539581a62a7ddb8e6b8"
+    },
+    {
+      "rel": "content/assets/mapped/albums-and-binder-pages-book.jpg",
+      "bytes": 61371,
+      "sha256": "d0c35b27de763269d448e3a53457d8af3c4e861800020ec58b72b13e5eeeb41c"
+    },
+    {
+      "rel": "content/assets/mapped/albums-and-binder-pages-collection.jpg",
+      "bytes": 13496,
+      "sha256": "e0afb87569b6af6c7a85b004eb81983513731ddbf140c3dfea463a02007ec91b"
+    },
+    {
+      "rel": "content/assets/mapped/albums-and-binder-pages-pocket-pages.jpg",
+      "bytes": 120766,
+      "sha256": "ac41ef66d0ef50d531da40af0bd872ffaca1bb5cd0a6748092ab427c3839648b"
+    },
+    {
+      "rel": "content/assets/mapped/albums-and-binder-pages-second-page.jpg",
+      "bytes": 61935,
+      "sha256": "3c7503e443ee75d517b91a1edf2d1ea6f93726d0a426e1d7b5e064d418a945d6"
+    },
+    {
+      "rel": "content/assets/mapped/board-games-and-their-accessories-claim.png",
+      "bytes": 169624,
+      "sha256": "ea84c929b459c85de5f5643a1d0d8d12e8b57ed89196d401a90e8472b633a1ab"
+    },
+    {
+      "rel": "content/assets/mapped/board-games-and-their-accessories-icon.jpg",
+      "bytes": 18351,
+      "sha256": "58990302d010effc492d2355af040fa4ead2ec9eb9d155f8315a11c01afe7810"
+    },
+    {
+      "rel": "content/assets/mapped/board-games-and-their-accessories-system-gate-2.png",
+      "bytes": 178312,
+      "sha256": "3197313e349b3e867a276d4f399c27ba6ab0777375070dd63cb8fb3db1a7932e"
+    },
+    {
+      "rel": "content/assets/mapped/board-games-and-their-accessories-system-gate.png",
+      "bytes": 177154,
+      "sha256": "75191e89e1a1dd35e25695cbe0834129a97332aa4f7b493ee94c79d5e8d15c61"
+    },
+    {
+      "rel": "content/assets/mapped/building-and-editing-a-deck-playmat.jpg",
+      "bytes": 12863,
+      "sha256": "ab4286d997d698bc35f18498133f63b40325852f28784ac937eb844b32adc1ca"
+    },
+    {
+      "rel": "content/assets/mapped/building-and-editing-a-deck-precon-earth.jpg",
+      "bytes": 73234,
+      "sha256": "6ba0112652a4f9e30357f08e9539bdd88719a2e7d5393666450c2035dca5c223"
+    },
+    {
+      "rel": "content/assets/mapped/building-and-editing-a-deck-precon-fire.jpg",
+      "bytes": 77474,
+      "sha256": "5b284ef00bdea6e4efd9942098f082f77317f4ae858ee933a1b3cdff06c6d426"
+    },
+    {
+      "rel": "content/assets/mapped/building-and-editing-a-deck-precon-water-destiny.jpg",
+      "bytes": 230299,
+      "sha256": "68cbd2073e0c289d6bd4b373e2736439a14b4d677c046fd4c60216fa7d1f6ce7"
+    },
+    {
+      "rel": "content/assets/mapped/building-and-editing-a-deck-precon-water.jpg",
+      "bytes": 192703,
+      "sha256": "7dca242dde012995808cd0e867bbc954c4fa88d1cccd0cc514e1ae417c655c82"
+    },
+    {
+      "rel": "content/assets/mapped/building-and-editing-a-deck-precon-wind.jpg",
+      "bytes": 85426,
+      "sha256": "6c10f405a9c7f2318e27b896291ec3b826280654497353509fad28be2c8d0b80"
+    },
+    {
+      "rel": "content/assets/mapped/card-sets-and-expansions-border.jpg",
+      "bytes": 6713,
+      "sha256": "a0b7ae3e4ee7ce395918945dd2c48f3061bdd8f170853f6c594c7b8acc18f0c9"
+    },
+    {
+      "rel": "content/assets/mapped/card-sets-and-expansions-destiny.jpg",
+      "bytes": 20731,
+      "sha256": "24d28c22a90e92e5cf23d2fdbf4686bf9a200e46b9d8f65b7a018299f0ddeef1"
+    },
+    {
+      "rel": "content/assets/mapped/card-sets-and-expansions-legend.jpg",
+      "bytes": 14906,
+      "sha256": "db06d06eb219221c9e6fcb222bfff97484509eedf7daf96716f6828817159501"
+    },
+    {
+      "rel": "content/assets/mapped/cards-and-rarity-cardfront.jpg",
+      "bytes": 52186,
+      "sha256": "95262375236e6220a56779d9451b2521ab96c6d87db843673f3fe6c5d75cc5c7"
+    },
+    {
+      "rel": "content/assets/mapped/customer-reviews-star.jpg",
+      "bytes": 7997,
+      "sha256": "36a807e3dc76b7c8f51b252ff2b5a23fc90017d6492cc72f4c4aea778f720479"
+    },
+    {
+      "rel": "content/assets/mapped/discarding-cards-bin.png",
+      "bytes": 37389,
+      "sha256": "01a45536ad49c542d00e0c5aa142009f04b8900b9939f3ee1c0943c4e9fa50e0"
+    },
+    {
+      "rel": "content/assets/mapped/expanding-and-decorating-the-shop-arrow-signs.png",
+      "bytes": 123684,
+      "sha256": "4a911d7b7cae5b9aebd625143f7449813591909b97ef35ee412a97b8455cb3ae"
+    },
+    {
+      "rel": "content/assets/mapped/expanding-and-decorating-the-shop-furniture.jpg",
+      "bytes": 219125,
+      "sha256": "b31fda530fad4923ab9d7ac0805f742c76aa746414853f49a2fc23633ef6e289"
+    },
+    {
+      "rel": "content/assets/mapped/expanding-and-decorating-the-shop-no-entry-sign.png",
+      "bytes": 22806,
+      "sha256": "038176b2ea6f8a06a6f2e178b398e44b287d583250fa2a540adcfcd2c905b3e5"
+    },
+    {
+      "rel": "content/assets/mapped/expanding-and-decorating-the-shop-open-closed-sign.png",
+      "bytes": 27597,
+      "sha256": "37deffca94e7ba80ee883a0cbd8763337cbcd239c6a251df81cbc50f08574b96"
+    },
+    {
+      "rel": "content/assets/mapped/how-a-card-front-is-built-air.jpg",
+      "bytes": 70319,
+      "sha256": "7e53d137bead2ab564b4b25ca08571678694a539037375f9ac612c7d2e64fab6"
+    },
+    {
+      "rel": "content/assets/mapped/how-a-card-front-is-built-card-back.png",
+      "bytes": 93385,
+      "sha256": "4e129877cefff155020cb960f435bd2b211d76cd136f4da3e1b8fcb6712ac648"
+    },
+    {
+      "rel": "content/assets/mapped/how-a-price-tag-is-drawn-atlas.jpg",
+      "bytes": 113959,
+      "sha256": "7df8918cefafc7c633b1a0cde969664ab3df303edb5a4edc27cca7298ff815f0"
+    },
+    {
+      "rel": "content/assets/mapped/how-a-shelf-holds-its-stock-empty.png",
+      "bytes": 36396,
+      "sha256": "a817a21647868837b7845415251ac5454921d4da8644c1112989a05f604c2619"
+    },
+    {
+      "rel": "content/assets/mapped/how-a-shelf-holds-its-stock-frozen.png",
+      "bytes": 177222,
+      "sha256": "e87e47ee883d6f7bb7c0de16fa9eee7cb8b6b3b3b2654368b485a24478bc06d6"
+    },
+    {
+      "rel": "content/assets/mapped/how-the-restock-manager-packs-stock-base-box.png",
+      "bytes": 54495,
+      "sha256": "579d4b7d516b322cb157a9a307bb7e21d226298eada5e4310665a755f22cd733"
+    },
+    {
+      "rel": "content/assets/mapped/how-the-restock-manager-packs-stock-destiny-box.png",
+      "bytes": 50281,
+      "sha256": "59515a09a80622b426e5c659905b19b4ff6dfb1d997b5ed7e79e682a7f4ccb34"
+    },
+    {
+      "rel": "content/assets/mapped/how-the-restock-manager-packs-stock-hg-box.png",
+      "bytes": 56135,
+      "sha256": "b6279217aacef981fe4ddcdd930efb5ff2b797884b08b0f0d9dfbb1570f2fc41"
+    },
+    {
+      "rel": "content/assets/mapped/how-the-restock-manager-packs-stock-refill.jpg",
+      "bytes": 11976,
+      "sha256": "ee941b009c3abf5de40b24ed0538c66a21b79e1e3493eb6d99781668be5e8678"
+    },
+    {
+      "rel": "content/assets/mapped/how-tournament-standings-are-decided-trophy.jpg",
+      "bytes": 24640,
+      "sha256": "226d672d23866a08ee1dbab0f92d2df8ce5c006fec753402d4dc4974198d1601"
+    },
+    {
+      "rel": "content/assets/mapped/keeping-the-shop-clean-cleanser.png",
+      "bytes": 31836,
+      "sha256": "1bc3f9741ba8d31b98f1b2e8af968a1584b1b1642d53f4f956c6c3b574c76223"
+    },
+    {
+      "rel": "content/assets/mapped/licences-and-shop-level-button-lock.png",
+      "bytes": 2631,
+      "sha256": "94d4dda05c5beea3c8ce085f79ffdee9b4ca851c9fe93eba740e174dccb9d49d"
+    },
+    {
+      "rel": "content/assets/mapped/licences-and-shop-level-frame.png",
+      "bytes": 18538,
+      "sha256": "6432f6068551c2c3f0fd8f5b554e8a94e6657c4444b4b53f5804acd7df074957"
+    },
+    {
+      "rel": "content/assets/mapped/licences-and-shop-level-pictogram-lock.png",
+      "bytes": 3349,
+      "sha256": "2ad21164efed29111cb3dea9c3107fbb06a5f14e7d140916e4c23d4672541e6e"
+    },
+    {
+      "rel": "content/assets/mapped/licences-and-shop-level-store-point.jpg",
+      "bytes": 20853,
+      "sha256": "398d964fd18432861e90b8f55a27bb4837f5cc4ddf57a6fdf77e49f510adc4df"
+    },
+    {
+      "rel": "content/assets/mapped/licences-and-shop-level-up.png",
+      "bytes": 3608,
+      "sha256": "05192d86bf21685bbbacb02770c25dbe3f78ce0d8ec9b8ebdf3d5bc25a966199"
+    },
+    {
+      "rel": "content/assets/mapped/machines-that-work-on-their-own-cleanser.jpg",
+      "bytes": 38978,
+      "sha256": "f78a4e4c087cdec537560b99fc011cd268fc88df329cf753608c55e54d7ad464"
+    },
+    {
+      "rel": "content/assets/mapped/machines-that-work-on-their-own-turn-off.jpg",
+      "bytes": 11595,
+      "sha256": "5e26cd73d75fd5fab3ad9ab1d810c0f1d5e9dfde4bc86b93da59fb1105a4d770"
+    },
+    {
+      "rel": "content/assets/mapped/machines-that-work-on-their-own-turn-on.jpg",
+      "bytes": 10930,
+      "sha256": "ba67453be622648654bf48ae3e33603117f5b3e418c83b89dfdfa3ac8bd7021b"
+    },
+    {
+      "rel": "content/assets/mapped/moving-on-old-stock-donationbox.jpg",
+      "bytes": 34520,
+      "sha256": "e1a609f21095d20777ed2aa665fc517a26667db301a2b5d1d45d4fb0a6d4b05d"
+    },
+    {
+      "rel": "content/assets/mapped/opening-a-pack-on-screen-cardback.jpg",
+      "bytes": 100983,
+      "sha256": "cf7ad04be1ce6754773595835903d4ac1ecf7e6c7dd853994669f4257822bd1e"
+    },
+    {
+      "rel": "content/assets/mapped/pack-tiers-and-names-atlas-24-31.jpg",
+      "bytes": 180049,
+      "sha256": "b850e0b59e6774b78665bd60632da761ee7129cebf17a7474087cd0c096d8d6b"
+    },
+    {
+      "rel": "content/assets/mapped/pack-tiers-and-names-atlas.jpg",
+      "bytes": 86019,
+      "sha256": "8cdccc50d6ce0b7a7bf2e43a2d090e0f3ef0df51fb39e1e2c70b14d60e46947d"
+    },
+    {
+      "rel": "content/assets/mapped/packs-and-opening-cardpack-atlas-40-47.png",
+      "bytes": 1582327,
+      "sha256": "8c0f313bf9fe6029144fa3fe5b0fe87957da856a2812d2c952e83be6a75e2f03"
+    },
+    {
+      "rel": "content/assets/mapped/packs-and-opening-cardpack-atlas-8-15.png",
+      "bytes": 549797,
+      "sha256": "51a30bd31a76a051527f7d1d6d7a09f6eb444b4b53cf5893f695621be579387f"
+    },
+    {
+      "rel": "content/assets/mapped/packs-and-opening-cardpack-atlas.png",
+      "bytes": 2158922,
+      "sha256": "386844c8b7fce40a3567ed4a4ff58c275d0af5cdc354eef8773adb4ded651c50"
+    },
+    {
+      "rel": "content/assets/mapped/playmats-deck-boxes-and-sleeves-card-preserver.png",
+      "bytes": 63930,
+      "sha256": "07891acef668aa2679349104d72d5f9223dec02f769047bb31c467fa64e6ab55"
+    },
+    {
+      "rel": "content/assets/mapped/playmats-deck-boxes-and-sleeves-deck-box-2.jpg",
+      "bytes": 68293,
+      "sha256": "cfa84dd88e331f9203434f1b5fdfd6b553d804469532614840bf1b5fe3b4a8c8"
+    },
+    {
+      "rel": "content/assets/mapped/playmats-deck-boxes-and-sleeves-deck-box.jpg",
+      "bytes": 32445,
+      "sha256": "d5a3de1e19897625fcb378b4f64295715b67a2e50f20b23041621c8e9e74b5a9"
+    },
+    {
+      "rel": "content/assets/mapped/playmats-deck-boxes-and-sleeves-dice-box.jpg",
+      "bytes": 47119,
+      "sha256": "982dd56c38ac050bed01d359cec65f57c92864f01bd75bd35543ed5ee8c62dda"
+    },
+    {
+      "rel": "content/assets/mapped/playmats-deck-boxes-and-sleeves-dice-yellow.jpg",
+      "bytes": 15676,
+      "sha256": "51bb9df85d84128302a114d6f1d5cade5f37d357004715052436122bd8b5a4bc"
+    },
+    {
+      "rel": "content/assets/mapped/playmats-deck-boxes-and-sleeves-dice.jpg",
+      "bytes": 14929,
+      "sha256": "bb66c76376730a5a16bb92dee96a60c5d4489dba6145fcf9ca273b22413994ef"
+    },
+    {
+      "rel": "content/assets/mapped/playmats-deck-boxes-and-sleeves-empty-deck-box.png",
+      "bytes": 7988,
+      "sha256": "728a5cc86b6025c3a87c22dc2381e43a44c55e4e4c05bc47e7565817f59168a8"
+    },
+    {
+      "rel": "content/assets/mapped/playmats-deck-boxes-and-sleeves-playmat.png",
+      "bytes": 21008,
+      "sha256": "4d1d7e164be54c523dadff40919134273e3d16718644a535952e89e41ff81fff"
+    },
+    {
+      "rel": "content/assets/mapped/playmats-deck-boxes-and-sleeves-sleeve.jpg",
+      "bytes": 84878,
+      "sha256": "355a68b1e970666444e8b57a9b26475fe8dc0c77e23d85b1da07b54d807c7e11"
+    },
+    {
+      "rel": "content/assets/mapped/playmats-deck-boxes-and-sleeves-tower-deck-box.jpg",
+      "bytes": 94978,
+      "sha256": "339dcf8f135e17bd51687342405d30bfed2a22911afac0e879943309525a58ec"
+    },
+    {
+      "rel": "content/assets/mapped/posters-and-wall-displays-poster-b.jpg",
+      "bytes": 52011,
+      "sha256": "8307079acc110e18b692654e83dbb3c4fac16f97c18ac19d899d792a2df2ce74"
+    },
+    {
+      "rel": "content/assets/mapped/posters-and-wall-displays-poster-c.jpg",
+      "bytes": 51099,
+      "sha256": "eb50a10135b1b90303d18626b61cd9cf3d6fc3966a25308a1e41e1ab3ef53fd9"
+    },
+    {
+      "rel": "content/assets/mapped/posters-and-wall-displays-poster-d.png",
+      "bytes": 156399,
+      "sha256": "55361c849979efd9a9416a474fe72c05cd4ee654420ae072007350144257a310"
+    },
+    {
+      "rel": "content/assets/mapped/posters-and-wall-displays-poster-e.png",
+      "bytes": 102665,
+      "sha256": "4638b13b13722a13eb5e90c1d33e08c60c235bb883bfc1608406ab1051d1feb5"
+    },
+    {
+      "rel": "content/assets/mapped/posters-and-wall-displays-poster-f.png",
+      "bytes": 108639,
+      "sha256": "3bc26a87caccb139c3e64c353795d1adf18ed6cfd6f6d4ca51480599bde4bd64"
+    },
+    {
+      "rel": "content/assets/mapped/posters-and-wall-displays-poster-g.png",
+      "bytes": 191524,
+      "sha256": "d77b227317757f7e0ff9e493434188621347ba8e5870035749e8ca5fc5d48a3a"
+    },
+    {
+      "rel": "content/assets/mapped/posters-and-wall-displays-poster-h.png",
+      "bytes": 199319,
+      "sha256": "71143fca3006ac941ad1cc83097da166484b4005212f8fc8ee9ace73267f3280"
+    },
+    {
+      "rel": "content/assets/mapped/posters-and-wall-displays-poster-i.png",
+      "bytes": 113714,
+      "sha256": "fe473ca72969cf28107b55c24f7b79d55e31fb86b8b0b71be1168cd6caafcc8e"
+    },
+    {
+      "rel": "content/assets/mapped/posters-and-wall-displays-poster.jpg",
+      "bytes": 50189,
+      "sha256": "fb37a48c57871ed2cc553a5d0603c453936c5c1b7acd1d95ee5ab5866ee73900"
+    },
+    {
+      "rel": "content/assets/mapped/price-changes-and-cash-register.jpg",
+      "bytes": 36356,
+      "sha256": "998388b9df2db397b76f3089c2c37c5372067d25621ad0a90fdc32e14dc58d50"
+    },
+    {
+      "rel": "content/assets/mapped/price-tags-for-every-context-atlas.jpg",
+      "bytes": 304568,
+      "sha256": "794858ecd46d1ab40718b08f075d269a53e3f42f49d798d497bc72154498fd38"
+    },
+    {
+      "rel": "content/assets/mapped/prices-and-price-tags-atlas.jpg",
+      "bytes": 304568,
+      "sha256": "794858ecd46d1ab40718b08f075d269a53e3f42f49d798d497bc72154498fd38"
+    },
+    {
+      "rel": "content/assets/mapped/prize-shelves-and-specials-shelf.jpg",
+      "bytes": 16420,
+      "sha256": "a426853c959294489aaf3bc9d0f876e4962fc04855bd4253dd75f49b0d67b2df"
+    },
+    {
+      "rel": "content/assets/mapped/questions-players-ask-question-mark.png",
+      "bytes": 5161,
+      "sha256": "890baec3b0c8c012102dd3c8e3a67bce77a2a5804a0a09813e28f1f60d1f90e7"
+    },
+    {
+      "rel": "content/assets/mapped/rarity-and-how-it-is-chosen-foil.jpg",
+      "bytes": 2658,
+      "sha256": "4dc5e796c5eab0f31ac85a27964413b36f719d29f08936680087b0387f120b17"
+    },
+    {
+      "rel": "content/assets/mapped/reading-the-price-board-price-tag-atlas.jpg",
+      "bytes": 304568,
+      "sha256": "794858ecd46d1ab40718b08f075d269a53e3f42f49d798d497bc72154498fd38"
+    },
+    {
+      "rel": "content/assets/mapped/restocking-from-a-cart-box.jpg",
+      "bytes": 135761,
+      "sha256": "f0aa09cec98d4fa55278b0b2e176b35b30b1bb1c0a3ac1c00d3de8a207b1462e"
+    },
+    {
+      "rel": "content/assets/mapped/scanner-restocking-workflow-scanner.jpg",
+      "bytes": 32216,
+      "sha256": "1565e2bd4e4063e0d6c65fed2a71838098938d3a14d89838a3c01d63c61e4b49"
+    },
+    {
+      "rel": "content/assets/mapped/sending-cards-to-be-graded-case.jpg",
+      "bytes": 19998,
+      "sha256": "b59ce18eb00fcb77d83edbe1a9a6687fd61f3aef0b4709b148f92502b7a89a28"
+    },
+    {
+      "rel": "content/assets/mapped/setting-up-an-event-host-screen.jpg",
+      "bytes": 73164,
+      "sha256": "797211471e2709b1afbe974e9c86088253e171586caffc22766ada91a12a7b01"
+    },
+    {
+      "rel": "content/assets/mapped/setting-what-your-workers-do-icon.jpg",
+      "bytes": 10410,
+      "sha256": "fefd031c991cbe18f683c43ec38a51d4075ae84f0ed537e2250e4050bb6d4217"
+    },
+    {
+      "rel": "content/assets/mapped/shelves-stock-and-upgrades-shelf.jpg",
+      "bytes": 59270,
+      "sha256": "85f04b5a435a97f8fc96ce1133ef3dc8c2194e6157696b46a9466043677adc7d"
+    },
+    {
+      "rel": "content/assets/mapped/storage-shelves-and-restocking-storage.jpg",
+      "bytes": 27415,
+      "sha256": "82db323eca40151b55a866a478fb5cb136467a82487c9b61f5fc88bd3fe29c60"
+    },
+    {
+      "rel": "content/assets/mapped/the-achievements-and-their-art-background.png",
+      "bytes": 868126,
+      "sha256": "ccf866d30b481ba296a3f4b7e9abab2c3de961e25ac13d014b5b40a7920ec64b"
+    },
+    {
+      "rel": "content/assets/mapped/the-achievements-and-their-art-icon.png",
+      "bytes": 855138,
+      "sha256": "3bf14df8a49b78a264ab46948ca05653b5cef63be9c96c03a4e8598f368642b9"
+    },
+    {
+      "rel": "content/assets/mapped/the-boards-interface-shield.jpg",
+      "bytes": 2305,
+      "sha256": "91d3f4e9c0de7446ab772cd236174a44832c09ce702eb7ebf02b8db50e71bb81"
+    },
+    {
+      "rel": "content/assets/mapped/the-box-your-stock-arrives-in-cardboard.jpg",
+      "bytes": 27065,
+      "sha256": "936558f1b64a26941c6f25758f3bf29cbc7ba810072a63dc5e4337d83a7465f3"
+    },
+    {
+      "rel": "content/assets/mapped/the-box-your-stock-arrives-in-packaging.jpg",
+      "bytes": 40831,
+      "sha256": "ad86aff99973e5c4448194604b5310f2050f8ae7481660852bd87964e743c74f"
+    },
+    {
+      "rel": "content/assets/mapped/the-boxes-cards-come-in-destiny.jpg",
+      "bytes": 74044,
+      "sha256": "1e3072e71fa43b4bc78765a3c59a3703f127028c04f6c8534599bbb581965bbc"
+    },
+    {
+      "rel": "content/assets/mapped/the-boxes-cards-come-in-legend.jpg",
+      "bytes": 74241,
+      "sha256": "b7e1a3ce00bcd0a48f9fe925209b35290331566782a030b19e67fe4491485519"
+    },
+    {
+      "rel": "content/assets/mapped/the-camera-and-the-photo-gallery-camera.jpg",
+      "bytes": 11264,
+      "sha256": "abfdf1f5bde5e34e7b712ed676ad02b25050bad952f16a45384659fe78db41cf"
+    },
+    {
+      "rel": "content/assets/mapped/the-card-display-object-full-art-front.jpg",
+      "bytes": 24291,
+      "sha256": "196fb2788a468ae23d53f64bbf25c697ce4954ea7d1ff4ca9c7c2b9eb57a8ca4"
+    },
+    {
+      "rel": "content/assets/mapped/the-card-game-you-can-play-logo.jpg",
+      "bytes": 30339,
+      "sha256": "6839ae655d8825525c57bca8d20e5d299929ed40356a5df5218ddec0dfb34017"
+    },
+    {
+      "rel": "content/assets/mapped/the-card-game-you-can-play-playtable.jpg",
+      "bytes": 28863,
+      "sha256": "6a84ad4e8261d4592b4865dfd24f087c0436889d9075cbd7a385f83e97b6566f"
+    },
+    {
+      "rel": "content/assets/mapped/the-card-object-in-the-world-card.jpg",
+      "bytes": 16157,
+      "sha256": "75e63e668efae7de34935743c2dc2157ebc9f342aebd13f05fba0f1aba94cdcb"
+    },
+    {
+      "rel": "content/assets/mapped/the-clothes-a-shopkeeper-wears-cloth.png",
+      "bytes": 466747,
+      "sha256": "87c1e8748574c51b72f929196a1b6c5eaccb59aaf0b326d7e5f244cac17154f3"
+    },
+    {
+      "rel": "content/assets/mapped/the-counter-and-money-closed-sign.jpg",
+      "bytes": 22305,
+      "sha256": "9b117e122a08694bdf9b5a6577149319b38a6191962cdb9e26e23579c3c347d0"
+    },
+    {
+      "rel": "content/assets/mapped/the-counter-and-money-coin.png",
+      "bytes": 2931072,
+      "sha256": "4e068a9998db204ce5725b6c25bbdd160e7e925b07f8283d1f256252f1cdabee"
+    },
+    {
+      "rel": "content/assets/mapped/the-currencies-the-game-tracks-euro.jpg",
+      "bytes": 172271,
+      "sha256": "acaac9e18cf837d78692e6bc7247dd9640ad7c056cdb593dd673b886d31323d6"
+    },
+    {
+      "rel": "content/assets/mapped/the-doors-and-the-signs-that-point-the-way-entrance-sign.png",
+      "bytes": 22806,
+      "sha256": "038176b2ea6f8a06a6f2e178b398e44b287d583250fa2a540adcfcd2c905b3e5"
+    },
+    {
+      "rel": "content/assets/mapped/the-expansions-the-game-ships-card-background.jpg",
+      "bytes": 63397,
+      "sha256": "15d3c12b6504f1bc50806941101144e4411f96ac6e26f8673d7e4a43d473b8cb"
+    },
+    {
+      "rel": "content/assets/mapped/the-expansions-the-game-ships-card-icon.jpg",
+      "bytes": 65985,
+      "sha256": "5ddbce7fc97e2b30f6cf67adf8037a613b31f1855b5cdc7389c6cd60d7c7066a"
+    },
+    {
+      "rel": "content/assets/mapped/the-expansions-the-game-ships-pack.jpg",
+      "bytes": 48639,
+      "sha256": "f3c02cca58acae2373ae1a4b294a628af2bd59fb2984d2fde626ac4fd3b5433c"
+    },
+    {
+      "rel": "content/assets/mapped/the-figures-the-shop-sells-fox.png",
+      "bytes": 67755,
+      "sha256": "10371d9fa3ba20f9454a498ac2556f00cf5b1a35b9d6a7f1751892ce086c6282"
+    },
+    {
+      "rel": "content/assets/mapped/the-figures-the-shop-sells-golem.png",
+      "bytes": 97231,
+      "sha256": "e048de1aa0b7c6b0aea30bd29ae526df32033ea052350b6a87043b9e3f973637"
+    },
+    {
+      "rel": "content/assets/mapped/the-finishes-you-can-buy-floor-icon.png",
+      "bytes": 247513,
+      "sha256": "67f288a2f3d9a3cf1b02ac55134e4c047ea2f7ecb28ebb9471b0d9c227ba7b84"
+    },
+    {
+      "rel": "content/assets/mapped/the-finishes-you-can-buy-wall-blue.jpg",
+      "bytes": 25220,
+      "sha256": "fd52bdea7f10ff564cee80bb2f99707af391be7a99cdbbdaf06be75e7670512c"
+    },
+    {
+      "rel": "content/assets/mapped/the-finishes-you-can-buy-wall-icon.jpg",
+      "bytes": 41123,
+      "sha256": "3adaf2cc6d67f33f7c4093b374a7f0c7f0955f8aa03206dfbcea811261278186"
+    },
+    {
+      "rel": "content/assets/mapped/the-finishes-you-can-buy-wall-orange.jpg",
+      "bytes": 20224,
+      "sha256": "904919e9c38028c1bbfc58fd6499fc4ef70c66fffdda3fbaf3b4d64bb0ec1664"
+    },
+    {
+      "rel": "content/assets/mapped/the-group-that-shows-a-card-rarity.jpg",
+      "bytes": 11759,
+      "sha256": "8db5a4390103df30a95ac88bb057c71b94ce2fcef2c339a99a60754a63297d72"
+    },
+    {
+      "rel": "content/assets/mapped/the-key-binding-settings-enter.png",
+      "bytes": 23099,
+      "sha256": "95cafc8c0dd1a58144dccd9dfafe981c23ac385f419d68608bc3a2210419f9ab"
+    },
+    {
+      "rel": "content/assets/mapped/the-key-binding-settings-shift.png",
+      "bytes": 11766,
+      "sha256": "e7e111a013c6f1bfacb6aecad5aa0010a354b9e4e1528601872e7206b1a2b508"
+    },
+    {
+      "rel": "content/assets/mapped/the-key-binding-settings-tab.png",
+      "bytes": 11948,
+      "sha256": "b390b686516e1881b149236da6900655d98b80d4b6c98bff1659cb924739f347"
+    },
+    {
+      "rel": "content/assets/mapped/the-kinds-of-customers-portrait.jpg",
+      "bytes": 31943,
+      "sha256": "b821f27cab02051a9ed15ae40b5f642edccd1f1da679bd20d4d51a2340775b18"
+    },
+    {
+      "rel": "content/assets/mapped/the-money-the-counter-handles-euro.jpg",
+      "bytes": 61823,
+      "sha256": "714f9b9063da568319bf780fc74d5eb8aa596f18976350ef9b66b9a1c36a8601"
+    },
+    {
+      "rel": "content/assets/mapped/the-money-the-counter-handles-yen.jpg",
+      "bytes": 61137,
+      "sha256": "1c1b3da28b27e164211268334dda13f72abbdc86685baef07ad6dc6c8bf87237"
+    },
+    {
+      "rel": "content/assets/mapped/the-pack-and-how-it-opens-packs.jpg",
+      "bytes": 69376,
+      "sha256": "311f4c75ed4ed7439f9098bfb35cfc63fa0bc8ea0ca00cdb72686a2541b4559f"
+    },
+    {
+      "rel": "content/assets/mapped/the-pack-and-how-it-opens-wrapper.jpg",
+      "bytes": 22580,
+      "sha256": "8af93017a42a100bf2ac33ca8a0ca4ed4da3b40a1fa5c62063556215bbcf1fa7"
+    },
+    {
+      "rel": "content/assets/mapped/the-page-that-shows-what-you-pulled-arrow.png",
+      "bytes": 4287,
+      "sha256": "079f834e62e3390c631052689ee5779c87ec2b8f08b7016a9b69b2c3040aef62"
+    },
+    {
+      "rel": "content/assets/mapped/the-payment-a-customer-hands-over-coin.jpg",
+      "bytes": 90442,
+      "sha256": "2dfd646316bb4a4acc9d70751b7d7ed9f343faf4d039090c29826e2679c402e9"
+    },
+    {
+      "rel": "content/assets/mapped/the-picture-the-game-draws-for-a-control-key.png",
+      "bytes": 11811,
+      "sha256": "b3e7dd35b9317487a3f0d9c631c91f98d1660cbcd28e019dea62bd209be9bb10"
+    },
+    {
+      "rel": "content/assets/mapped/the-picture-the-game-draws-for-a-control-mouse.png",
+      "bytes": 18956,
+      "sha256": "02a85b49ae46d438f4182db6bf465315de83d9087c0d5e2ff18e51efe213903b"
+    },
+    {
+      "rel": "content/assets/mapped/the-picture-the-game-draws-for-a-control-pad-button.png",
+      "bytes": 5265,
+      "sha256": "05ff5687034bbaccfa03604a41bb355784aefe165b00e532eb4dbd004a016091"
+    },
+    {
+      "rel": "content/assets/mapped/the-picture-the-game-draws-for-a-control-pad-dpad.png",
+      "bytes": 5473,
+      "sha256": "7d3a494b08073d378cdc2a9966bfd944d9a8d5972de515f4dd5a0de6a3bb19be"
+    },
+    {
+      "rel": "content/assets/mapped/the-picture-the-game-draws-for-a-control-pad-trigger.png",
+      "bytes": 2906,
+      "sha256": "38e53a2274ee374d79d9a914058745bc2ae28d9d0575d0f6f7d61485c2da0116"
+    },
+    {
+      "rel": "content/assets/mapped/the-picture-the-game-draws-for-a-control-plain-key.png",
+      "bytes": 18924,
+      "sha256": "2bf1200ea75f00c80ea05faf39f39f3274449a72525871a49381f915b7c7810f"
+    },
+    {
+      "rel": "content/assets/mapped/the-plants-in-and-around-the-shop-flower.png",
+      "bytes": 105017,
+      "sha256": "c50485c32039ffa53c01d8c88d5b1afc815991eab496efe1a692ffe222cbee89"
+    },
+    {
+      "rel": "content/assets/mapped/the-plants-in-and-around-the-shop-plants.png",
+      "bytes": 965403,
+      "sha256": "95a7028d89a444a858c80b69d245eeec983f8de2533fa1c45e9877d4fc81ca30"
+    },
+    {
+      "rel": "content/assets/mapped/the-profile-behind-each-customer-female.jpg",
+      "bytes": 39630,
+      "sha256": "efe4d47292311a66dc3c26dd8adb4575240a43a34bfc3b36e6c15b9189e33011"
+    },
+    {
+      "rel": "content/assets/mapped/the-profile-behind-each-customer-male.jpg",
+      "bytes": 30017,
+      "sha256": "60f141cbcfd2d6b8109f43a4b7b979cef238eca45bd46a9a0f4810719ad81cce"
+    },
+    {
+      "rel": "content/assets/mapped/the-restocker-and-its-vehicles-box.jpg",
+      "bytes": 22181,
+      "sha256": "916204f6eb2091e4c3c6de13fc9e8e4576b227b0b88b7633486dbc707482d1b2"
+    },
+    {
+      "rel": "content/assets/mapped/the-reveal-screen-gallery.jpg",
+      "bytes": 36154,
+      "sha256": "4e0f2c8c682be3de546ba8cedc8c71edca6cc16e3a64502432e69d62770121ba"
+    },
+    {
+      "rel": "content/assets/mapped/the-review-screen-star-off.png",
+      "bytes": 1376,
+      "sha256": "58a1a8ec3e24decae2ab43f36ddb8c4a7fdfa98b2876fc7fccbe8716b74eeafc"
+    },
+    {
+      "rel": "content/assets/mapped/the-review-screen-star-on.png",
+      "bytes": 2072,
+      "sha256": "bfc1c73dfc503186b3b79ad84dc3591eb2503662f35e3eaab953599c11f177b9"
+    },
+    {
+      "rel": "content/assets/mapped/the-rules-of-the-card-game-playarea.jpg",
+      "bytes": 61993,
+      "sha256": "88fe3fa32c0bc6a1abadf8cc3754c115658e7bb37e943a0246d7ee0c7062dbdd"
+    },
+    {
+      "rel": "content/assets/mapped/the-rules-of-the-card-game-sample.jpg",
+      "bytes": 95517,
+      "sha256": "8141bf3948f9a9b9092530c9c5a6dc6de3e4974e8ebd8b3a9377350920a7eb52"
+    },
+    {
+      "rel": "content/assets/mapped/the-screens-you-buy-from-checkout.jpg",
+      "bytes": 10271,
+      "sha256": "053dbb7dca004bf07e187b5fbf0219c6b788bf7b484d16057fec5472e58fda7f"
+    },
+    {
+      "rel": "content/assets/mapped/the-screens-you-will-use-most-shopicon.jpg",
+      "bytes": 9267,
+      "sha256": "c1d288db95ffa97c08df7714d30076e72b97b3f7efc778ed1f256debf605d26b"
+    },
+    {
+      "rel": "content/assets/mapped/the-search-that-picks-a-card-front.jpg",
+      "bytes": 6968,
+      "sha256": "9f1b1059ca3cfda8c9673e2a2d59bf0740b1c94321db375873c3eaba0fae4cd1"
+    },
+    {
+      "rel": "content/assets/mapped/the-services-the-game-offers-shopicon.jpg",
+      "bytes": 4293,
+      "sha256": "9b76ddf7ac339856c11b9664df7a0c649e00a529069a47db541d49f2fa1d4c37"
+    },
+    {
+      "rel": "content/assets/mapped/the-setting-screens-for-your-fixtures-ceiling.jpg",
+      "bytes": 55353,
+      "sha256": "8358d299ab991308f833180bd7a7a603476eff1a3c17ac307867fae6509abda5"
+    },
+    {
+      "rel": "content/assets/mapped/the-setting-screens-for-your-fixtures-icons.jpg",
+      "bytes": 29944,
+      "sha256": "b801efe536bce5a66a889b928d657c1d9e15d00866c0967f9b2b2557ab0c78e4"
+    },
+    {
+      "rel": "content/assets/mapped/the-settings-that-draw-a-card-air.jpg",
+      "bytes": 13895,
+      "sha256": "4e016436b40717a66f7a2c94707629dcc1a380b3017b218910acc4842342f81b"
+    },
+    {
+      "rel": "content/assets/mapped/the-settings-that-draw-a-card-background.jpg",
+      "bytes": 13305,
+      "sha256": "b4a2667bcbe2c9cdaec72806045d90d12627a7af499b58b094179e74e5b29a48"
+    },
+    {
+      "rel": "content/assets/mapped/the-settings-that-draw-a-card-border.jpg",
+      "bytes": 17713,
+      "sha256": "b04126c9f2fae544c06a536455acb5025e037f4223baa743d361dc1aa1709dc1"
+    },
+    {
+      "rel": "content/assets/mapped/the-settings-that-draw-a-card-colour-green.jpg",
+      "bytes": 14621,
+      "sha256": "70ebc4d56e5a813fc31c320c352305d85732d59e7153508da53ce3414b060741"
+    },
+    {
+      "rel": "content/assets/mapped/the-settings-that-draw-a-card-colour-red.jpg",
+      "bytes": 13833,
+      "sha256": "7d24a88e63a1bf9bfc939597aaed2c03f0c37df53643fd0c402ca613e25f16f3"
+    },
+    {
+      "rel": "content/assets/mapped/the-settings-that-draw-a-card-colour-yellow.jpg",
+      "bytes": 14956,
+      "sha256": "ed75b6b77cd4c5aa721f694ad2ad90217e911317ffca1e3bd50890bb07c1e359"
+    },
+    {
+      "rel": "content/assets/mapped/the-settings-that-draw-a-card-colour.jpg",
+      "bytes": 14207,
+      "sha256": "64e7b8076f51c155a706bd428de56aa32112147bfb2420d8960ca87bdb2bcfbf"
+    },
+    {
+      "rel": "content/assets/mapped/the-settings-that-draw-a-card-destiny.jpg",
+      "bytes": 38026,
+      "sha256": "9c27cdb82582003a32fa4b1a844cc394a07231e78282bfb42cd1f4bdd2f126ae"
+    },
+    {
+      "rel": "content/assets/mapped/the-settings-that-draw-a-card-earth.jpg",
+      "bytes": 8534,
+      "sha256": "487d004fbd649b4b115365c2da7c3e0d33323864afd0dd6cfbca930ea39a0ddc"
+    },
+    {
+      "rel": "content/assets/mapped/the-settings-that-draw-a-card-water.jpg",
+      "bytes": 9343,
+      "sha256": "ad8007829351d3b9fb43e446e5320851554519b03f1144d864efcf9677305a0d"
+    },
+    {
+      "rel": "content/assets/mapped/the-settings-you-can-change-icon.png",
+      "bytes": 11767,
+      "sha256": "e5aa3888c09e27f6ab29cc27dc580258064f9326cbdd4dbc2ce504a40e3375e2"
+    },
+    {
+      "rel": "content/assets/mapped/the-settings-you-can-change-key.png",
+      "bytes": 9627,
+      "sha256": "4898d5ba5b891dd32b1ba733a8e9535916b3363ea4aea4fdfe8175621b629926"
+    },
+    {
+      "rel": "content/assets/mapped/the-shop-billboard-and-your-shop-name-billboard.jpg",
+      "bytes": 85099,
+      "sha256": "652dc0d21f2a19a0905524afcaf364ce51c430192655065a73c9aac26119825f"
+    },
+    {
+      "rel": "content/assets/mapped/the-state-of-a-game-of-cards-freeze.jpg",
+      "bytes": 15211,
+      "sha256": "62cedaccf7c62cdf6543ca937d76bf0ee878e75f6322d354418f417c065f4be0"
+    },
+    {
+      "rel": "content/assets/mapped/the-trade-screen-and-what-it-shows-bubble.png",
+      "bytes": 3929,
+      "sha256": "2aaa21d15341dcf2a5e3817127b90e12244d34611b7ae16d59cd19f73e4d7a4d"
+    },
+    {
+      "rel": "content/assets/mapped/the-upgrades-you-can-buy-levelup.jpg",
+      "bytes": 4485,
+      "sha256": "bf5312c657fc112008e416841b2a7636ae43ae538ef7cb54651169d464f5817e"
+    },
+    {
+      "rel": "content/assets/mapped/the-warehouse-and-its-shelves-box-shelf.jpg",
+      "bytes": 19426,
+      "sha256": "a26187d2a57c2115d539ff95bdb10826be6482b8c4a5cf57068a2d7a86b0f4a0"
+    },
+    {
+      "rel": "content/assets/mapped/the-warehouse-and-its-shelves-corner-shelf.jpg",
+      "bytes": 28534,
+      "sha256": "7f9b2cce880c7c529e864132f4dc1d507c1a782c73f5c8050b1dc36969eed33c"
+    },
+    {
+      "rel": "content/assets/mapped/the-warehouse-and-its-shelves-storage.jpg",
+      "bytes": 54907,
+      "sha256": "e85578d996241b1b9b8ffed8bc31e3a1287ce92d06b050f1f0dd1b1c6d96a34a"
+    },
+    {
+      "rel": "content/assets/mapped/tournaments-and-events-screen.jpg",
+      "bytes": 73164,
+      "sha256": "797211471e2709b1afbe974e9c86088253e171586caffc22766ada91a12a7b01"
+    },
+    {
+      "rel": "content/assets/mapped/what-a-card-shows-in-play-earth.jpg",
+      "bytes": 16248,
+      "sha256": "dc59b152686ab374130debe63a9fa6d698c3546f3f258ea6c329ad83d4d87fab"
+    },
+    {
+      "rel": "content/assets/mapped/what-a-card-shows-in-play-fire.jpg",
+      "bytes": 18759,
+      "sha256": "ea9d900177629be6c9b01f14c66a5b552e4c92769ab657473a707802fe4e5e56"
+    },
+    {
+      "rel": "content/assets/mapped/what-a-card-shows-in-play-icon.jpg",
+      "bytes": 5775,
+      "sha256": "fc4572ed30f4c7b420f27cb376270dfa4aeda6affabb9fee82e497f0e3c023b8"
+    },
+    {
+      "rel": "content/assets/mapped/what-a-card-shows-in-play-water.jpg",
+      "bytes": 18024,
+      "sha256": "632ef2cfe4f01a8f26b06c75e133f0c11afe8edb4d692b7db87a5006af4485a6"
+    },
+    {
+      "rel": "content/assets/mapped/what-a-card-shows-in-play-wind.jpg",
+      "bytes": 22821,
+      "sha256": "9a76c2c7292ea21997e9131f5d21837a873f27d35b01809a58e68a6394744def"
+    },
+    {
+      "rel": "content/assets/mapped/what-a-cards-set-record-says-card.jpg",
+      "bytes": 12275,
+      "sha256": "5bac0e60fb4fefc1fea3966511befed160413bd33a0ed8a2b79a6d367b645921"
+    },
+    {
+      "rel": "content/assets/mapped/what-a-customer-carries-bag-open.jpg",
+      "bytes": 36144,
+      "sha256": "83d07c5388740690adac6753639d2c5db4457a5f496b7b7291e64d3d1d536b52"
+    },
+    {
+      "rel": "content/assets/mapped/what-a-customer-carries-bag.jpg",
+      "bytes": 34261,
+      "sha256": "bc22f68cf284bfeb12bef9cc8f6077af0af4fd38b6494eba39e523c773c83b02"
+    },
+    {
+      "rel": "content/assets/mapped/what-a-customer-carries-emotes.png",
+      "bytes": 170103,
+      "sha256": "c3b17fa218b1fcdccc483a1a1de743cedf376f53affa5379d308aa5852a826bc"
+    },
+    {
+      "rel": "content/assets/mapped/what-a-ghost-card-does-ghost.jpg",
+      "bytes": 6367,
+      "sha256": "32cb05be00afcc45a28f84099fbc6b9d0f68d1e92d27c4ba3afd6d1d2c92d15d"
+    },
+    {
+      "rel": "content/assets/mapped/what-a-review-record-keeps-star-bg.jpg",
+      "bytes": 10177,
+      "sha256": "2454c6c759e5edfa1cfcb12e31477655cb5bdf8d5840f55f735588c03e817d9f"
+    },
+    {
+      "rel": "content/assets/mapped/what-the-pack-opener-shows-you-booster.jpg",
+      "bytes": 5557,
+      "sha256": "e978e6ab37f6449e00b306eaedbdd98a044d8facd538b96d3cafd82f074bee2e"
+    },
+    {
+      "rel": "content/assets/mapped/what-the-shelf-manager-keeps-card-storage.jpg",
+      "bytes": 24075,
+      "sha256": "e766059705f2abf3e3dbc8f127d38535fdb32a91f517801c1fb7d64cf7fe6d85"
+    },
+    {
+      "rel": "content/assets/mapped/what-the-shelf-manager-keeps-shelves.jpg",
+      "bytes": 67648,
+      "sha256": "f2b31f576920fad2245e3afda521ba5ff448b15be029e6b784ac73b10ae6473e"
+    },
+    {
+      "rel": "content/assets/mapped/what-the-till-shows-you-card.jpg",
+      "bytes": 21497,
+      "sha256": "60d9cfef97e16ca58d721ada647b2f3ed059559f291b3dbb62a5d82d380f54df"
+    },
+    {
+      "rel": "content/assets/mapped/where-the-shops-lists-live-checklist.png",
+      "bytes": 4601,
+      "sha256": "a0ba6e023df5c6d16a09cd18dddfdc4e6f68d7e52e5b58209ade154a0e48ca5f"
+    },
+    {
+      "rel": "content/assets/mapped/where-the-shops-lists-live-figurines.png",
+      "bytes": 221587,
+      "sha256": "cb7f2b9fde1ce3043d85deb6aeb7bdf75b557a0625d9196c0155106000f45fe7"
+    },
+    {
+      "rel": "content/assets/mapped/which-version-this-site-documents-title.png",
+      "bytes": 110775,
+      "sha256": "e36faf3abd7049847c6a16a346c75933d59a5a717de4bd4f26badacc6f88241c"
+    },
+    {
+      "rel": "content/assets/mapped/why-every-customer-looks-different-female.jpg",
+      "bytes": 32940,
+      "sha256": "8593a7f025f3ae70ae12812f010368dbd5f666c8636d121262653666ce7d0619"
+    },
+    {
+      "rel": "content/assets/mapped/why-every-customer-looks-different-male.jpg",
+      "bytes": 39270,
+      "sha256": "3900c4249657a91c0fc731d0d553d03033d46410875383de1adef4224b0fd077"
+    },
+    {
+      "rel": "content/assets/moving-on-old-stock.svg",
+      "bytes": 1923,
+      "sha256": "e78d9b0ec7a3b15dfcddc3081f088ee1545a5c6921ac76bbc8afe068ca6e6dc7"
+    },
+    {
+      "rel": "content/assets/opening-a-pack-on-screen.svg",
+      "bytes": 1921,
+      "sha256": "c03767b343541daf8b3f34e03fa44a4c65f5c3e3e6d59c9c85d54c761e40db78"
+    },
+    {
+      "rel": "content/assets/pack-tiers-and-names.svg",
+      "bytes": 1928,
+      "sha256": "f75be1562a6b2cf78ec38714f78b58b3b3af588a78571e430fe1649cabf0f481"
+    },
+    {
+      "rel": "content/assets/packs-and-opening.svg",
+      "bytes": 1898,
+      "sha256": "bb040c0e5396d00a207284af2aff480faa57b54d1914bc27a2970c5c554766a9"
+    },
+    {
+      "rel": "content/assets/playmats-deck-boxes-and-sleeves.svg",
+      "bytes": 1936,
+      "sha256": "284d24c5a8048bcabd7eacded41eefa2598db33a158fd48260f4d17882ec24cc"
+    },
+    {
+      "rel": "content/assets/posters-and-wall-displays.svg",
+      "bytes": 1934,
+      "sha256": "9aebca24c9a0cbc77f6e52b6fc5bec976484b9d43340ce11585b7d657613861f"
+    },
+    {
+      "rel": "content/assets/price-changes-and-cash.svg",
+      "bytes": 1916,
+      "sha256": "719c4d076fb0e34310b3d0562ea82b20e17882a3fc67ef996fe6a94af395c7f4"
+    },
+    {
+      "rel": "content/assets/price-history-and-graphs.svg",
+      "bytes": 1923,
+      "sha256": "83b1d5374e01ed83ee0282f800b30f73d1b66ae07a560395d9db9b08bccbd164"
+    },
+    {
+      "rel": "content/assets/price-tags-for-every-context.svg",
+      "bytes": 1911,
+      "sha256": "d32c2bb20994a61d1d1fdd3b6c19225ae73c4e409099c7e341c42e9a9de6b983"
+    },
+    {
+      "rel": "content/assets/prices-and-price-tags.svg",
+      "bytes": 1915,
+      "sha256": "c7fecff13ee0848fc013ae311eef3488be5afaa6cac9a3a74b3bfc07a6e95e0c"
+    },
+    {
+      "rel": "content/assets/prize-shelves-and-specials.svg",
+      "bytes": 1928,
+      "sha256": "98df5c0135bee4072f74c5a36b9246aee5e8a24d8dfc7289e11308d3b5cda2ca"
+    },
+    {
+      "rel": "content/assets/questions-players-ask.svg",
+      "bytes": 1908,
+      "sha256": "8271c41ae1e90e3e033189de1ad8ab071c5010fa65c110dff11787e0894a4446"
+    },
+    {
+      "rel": "content/assets/rarity-and-how-it-is-chosen.svg",
+      "bytes": 1913,
+      "sha256": "896cf51d78bdd0efc66f3fc1e47d5a4a2d58cb9c627208ec028a28a3d278012f"
+    },
+    {
+      "rel": "content/assets/reading-the-price-board.svg",
+      "bytes": 1920,
+      "sha256": "9169affdd474f20920fc6d19f716cd9f317a5ccef2e615b1d527b74065a0a58e"
+    },
+    {
+      "rel": "content/assets/restocking-from-a-cart.svg",
+      "bytes": 1919,
+      "sha256": "1f3c4cde15f07fd1556ef363fbad57ec76827f303e90cdfb29a0ebe12d56fd77"
+    },
+    {
+      "rel": "content/assets/scanner-restocking-workflow.svg",
+      "bytes": 1905,
+      "sha256": "663ff76194219f7c7021aa043bca397cc5646e0f3b539e786fc96206b71f16ff"
+    },
+    {
+      "rel": "content/assets/sending-cards-to-be-graded.svg",
+      "bytes": 1927,
+      "sha256": "059d91166a1cdb9d39a8288d9637ff8743d4405d4acb16a83b37d658808bdf32"
+    },
+    {
+      "rel": "content/assets/setting-up-an-event.svg",
+      "bytes": 1936,
+      "sha256": "388e6a8fcb397f78cb76e9191738ba6295219111baeb8904f72cf8d9328b0728"
+    },
+    {
+      "rel": "content/assets/setting-what-your-workers-do.svg",
+      "bytes": 1926,
+      "sha256": "50b7df7976d7a8baef465142396cb9db8103850b0db56841e248eada1d8170a8"
+    },
+    {
+      "rel": "content/assets/shelves-stock-and-upgrades.svg",
+      "bytes": 1908,
+      "sha256": "dd53d35a79bcafe5c3eef8447565b4fcce271bee346d697022a00f343ca3a985"
+    },
+    {
+      "rel": "content/assets/storage-shelves-and-restocking.svg",
+      "bytes": 1923,
+      "sha256": "751d31b5f20c32f861078db9d3db7de41ab3a86ad67139252426d7524a8081b1"
+    },
+    {
+      "rel": "content/assets/the-boards-interface.svg",
+      "bytes": 1957,
+      "sha256": "bbe971ecb3bf4b912c7cff99694f5b74dc9f1a3142a9faf846962ba8116ed3bb"
+    },
+    {
+      "rel": "content/assets/the-box-your-stock-arrives-in.svg",
+      "bytes": 1933,
+      "sha256": "fd064a3baec9b23c3199aa561d082744f2c67fc180ccfb66a4177ab2e2bc113e"
+    },
+    {
+      "rel": "content/assets/the-camera-and-the-photo-gallery.svg",
+      "bytes": 1441,
+      "sha256": "99fcd4de9ca82071695a32caeb792750068389804be091556749a31ad448e6e2"
+    },
+    {
+      "rel": "content/assets/the-card-display-object.svg",
+      "bytes": 1942,
+      "sha256": "a691a3a67011caca18deb4b6193da1af607bcbc6b8725c1ff0a8eb78c7ab9580"
+    },
+    {
+      "rel": "content/assets/the-card-game-you-can-play.svg",
+      "bytes": 1909,
+      "sha256": "deb6eba846991de1c3d73d821d08af4cde38904a45c69bb1baa8a1422dfaeca4"
+    },
+    {
+      "rel": "content/assets/the-card-object-in-the-world.svg",
+      "bytes": 1937,
+      "sha256": "ed3ec8947c61ed0a333a8433689395049f0557abd7abef4f9ce6e99814e39034"
+    },
+    {
+      "rel": "content/assets/the-counter-and-money.svg",
+      "bytes": 1933,
+      "sha256": "2b0e71b4c42bfff46aadda15483c4e676526c5280af47dc4e5cb72cc83f7f37b"
+    },
+    {
+      "rel": "content/assets/the-currencies-the-game-tracks.svg",
+      "bytes": 1944,
+      "sha256": "9272fec37a15705c9737173179da7954b7776f012deb2ca5b1ebc048e100e3cd"
+    },
+    {
+      "rel": "content/assets/the-expansions-the-game-ships.svg",
+      "bytes": 1926,
+      "sha256": "c3930d1410151c33dedcb5fcca731f11b5da47dd1c08ed5c21aa046ca86948d5"
+    },
+    {
+      "rel": "content/assets/the-finishes-you-can-buy.svg",
+      "bytes": 1930,
+      "sha256": "38b7057309241ac65b42e569b1745902174eb0486828c075435105c1adc797ef"
+    },
+    {
+      "rel": "content/assets/the-group-that-shows-a-card.svg",
+      "bytes": 1962,
+      "sha256": "a45f9bd3ea0b9d92378d8a8d941557f1a3a5a684c5f70a5aab42b32d0a23d6e2"
+    },
+    {
+      "rel": "content/assets/the-key-binding-settings.svg",
+      "bytes": 1957,
+      "sha256": "c6c0e711115250190b9cccdbea0287c701270f363d73143325a8cc5c997fd941"
+    },
+    {
+      "rel": "content/assets/the-kinds-of-customers.svg",
+      "bytes": 1933,
+      "sha256": "2523b2f419035f5c8bac9c7a69dfb32a89ced95e3b8008596523c4854d91663b"
+    },
+    {
+      "rel": "content/assets/the-manager-behind-the-card-game.svg",
+      "bytes": 1948,
+      "sha256": "82c8a0ad925afde5ab2395723e73b0a5ffed33004c8722621b129b8c9db12157"
+    },
+    {
+      "rel": "content/assets/the-money-the-counter-handles.svg",
+      "bytes": 1953,
+      "sha256": "c6edf5594b8b558ca40c877cebfbc2899140929c758c0242fe23c3d4f0f16e84"
+    },
+    {
+      "rel": "content/assets/the-pack-and-how-it-opens.svg",
+      "bytes": 1963,
+      "sha256": "7570eaa752410162fe5d28a096930726bcf5d281efef80b395a3f3e71a52136b"
+    },
+    {
+      "rel": "content/assets/the-page-that-shows-what-you-pulled.svg",
+      "bytes": 1923,
+      "sha256": "c4b034ef4e8d100b57c8f089eccd7970f07e48888edaf7297f98983155cd39a3"
+    },
+    {
+      "rel": "content/assets/the-payment-a-customer-hands-over.svg",
+      "bytes": 1960,
+      "sha256": "40fc9a5a994420cc6fb86c7b30e3725a4f51ef2d2d65ee510b7007349b3f3f32"
+    },
+    {
+      "rel": "content/assets/the-profile-behind-each-customer.svg",
+      "bytes": 1944,
+      "sha256": "ec44e8312df4ddf4fb59684360ed76e65b10745438a78e334b7acb86ce7eb5b0"
+    },
+    {
+      "rel": "content/assets/the-restocker-and-its-vehicles.svg",
+      "bytes": 1932,
+      "sha256": "7912dbffd9d75286b9068e267a076fadc939efcbaf9e3c27a1a4b8e507f54486"
+    },
+    {
+      "rel": "content/assets/the-reveal-screen.svg",
+      "bytes": 1950,
+      "sha256": "b3addbc75652766ba3ae774986358b054197f45d8a8bdb1ebf6301a6ebe8992b"
+    },
+    {
+      "rel": "content/assets/the-review-screen.svg",
+      "bytes": 1931,
+      "sha256": "403b008d2f6c23474e7d937cc1d838b44326decd530e958fb3fde6a0d62f3b64"
+    },
+    {
+      "rel": "content/assets/the-rules-of-the-card-game.svg",
+      "bytes": 1914,
+      "sha256": "4c4c15e0b22b0db091c1f9b0d33b0917828454c520878a24bafca8cf1c612e18"
+    },
+    {
+      "rel": "content/assets/the-screens-you-buy-from.svg",
+      "bytes": 1925,
+      "sha256": "99c811cb7056d6ca3a6f7e324098997273955055342ccff8a773cb120c63cc10"
+    },
+    {
+      "rel": "content/assets/the-screens-you-will-use-most.svg",
+      "bytes": 1915,
+      "sha256": "1db09a7f9782f49c9306358ae8764230f51abf0ab0f3795d3b5160167320c7af"
+    },
+    {
+      "rel": "content/assets/the-services-the-game-offers.svg",
+      "bytes": 1939,
+      "sha256": "13985c9c397e77665e5496cd5d37a95fbda9f0e8317d7027d7544952c128ec4f"
+    },
+    {
+      "rel": "content/assets/the-setting-screens-for-your-fixtures.svg",
+      "bytes": 1908,
+      "sha256": "15e645c8a5cd3c4a645d47cb41c0fb1004a1f6a5023e7066ff9ae9b9395d12d9"
+    },
+    {
+      "rel": "content/assets/the-settings-that-draw-a-card.svg",
+      "bytes": 1956,
+      "sha256": "1f79aafef53de0bd7d775fa00769c9b3ad4c8f4b8e58834bb83ff131f282adcb"
+    },
+    {
+      "rel": "content/assets/the-settings-you-can-change.svg",
+      "bytes": 1923,
+      "sha256": "2c267a0754d8d3551caa4e33052175fa84442ca3b28d8a867626c0cbe19ab221"
+    },
+    {
+      "rel": "content/assets/the-shop-billboard-and-your-shop-name.svg",
+      "bytes": 1960,
+      "sha256": "7b208ed385b5f17cb87af98bf8a4c89aab235cd72e43d3ac7e7e2773dea675e7"
+    },
+    {
+      "rel": "content/assets/the-state-of-a-game-of-cards.svg",
+      "bytes": 1956,
+      "sha256": "4f0cbece89a6cba84a3a4387bccf82415057988ef625368f50308d99995a0e72"
+    },
+    {
+      "rel": "content/assets/the-trade-screen-and-what-it-shows.svg",
+      "bytes": 1942,
+      "sha256": "a68e0784dbf5915bcb0011b97d077fcc56edd1780ebee06884a61c73554981ba"
+    },
+    {
+      "rel": "content/assets/the-upgrades-you-can-buy.svg",
+      "bytes": 1937,
+      "sha256": "e031ac54b662975f2ef6bea542de75dd395db62acc1dad6754407802dfa56ac3"
+    },
+    {
+      "rel": "content/assets/the-warehouse-and-its-shelves.svg",
+      "bytes": 1941,
+      "sha256": "1eb69248559a6c5497c29f2d96707dbc444be49d5644b9654c457236888185df"
+    },
+    {
+      "rel": "content/assets/tournaments-and-events.svg",
+      "bytes": 1922,
+      "sha256": "d325e753f59bd11c2af3957770e189665a6c54aa68e0e112db5feef96bafcd7f"
+    },
+    {
+      "rel": "content/assets/trading-with-customers.svg",
+      "bytes": 1916,
+      "sha256": "6601734dcdb3b5d6ece58bdadfac64df43b23aed76486d008c56d3a0d761006d"
+    },
+    {
+      "rel": "content/assets/what-a-card-shows-in-play.svg",
+      "bytes": 1918,
+      "sha256": "73be976618799155557d64ef1c55f3b4b630532f23b02009b70ec69ce85d5126"
+    },
+    {
+      "rel": "content/assets/what-a-cards-set-record-says.svg",
+      "bytes": 1959,
+      "sha256": "41db8d3cd7b49c60bd32a45b27d3309f66f35742a10ecc359ce461d446570aac"
+    },
+    {
+      "rel": "content/assets/what-a-customer-carries.svg",
+      "bytes": 1938,
+      "sha256": "ea284be8e1be49d298cd0192cffe46a771a903e5590d31ff640e2393055f1ffe"
+    },
+    {
+      "rel": "content/assets/what-a-ghost-card-does.svg",
+      "bytes": 1939,
+      "sha256": "acc2cb1491c1d4cf53d9325aa34091cc8b5d4ebcb2a0b663df0450c5b8f5b42d"
+    },
+    {
+      "rel": "content/assets/what-the-game-records-about-a-deck.svg",
+      "bytes": 1962,
+      "sha256": "a36b647fe35ead8cecc341687a068395b2e20fb78a9cb0c401ad17547947aeac"
+    },
+    {
+      "rel": "content/assets/what-the-game-writes-down.svg",
+      "bytes": 1919,
+      "sha256": "f0c76afdfaa3c6a3de0464817b005c6cbea1a3f90bf7187081d648c01b4a6c99"
+    },
+    {
+      "rel": "content/assets/what-the-pack-opener-shows-you.svg",
+      "bytes": 1898,
+      "sha256": "6e1a90353f1f6cf5247b72ec0090875f38acd129f1707d51c41992cfae93d84d"
+    },
+    {
+      "rel": "content/assets/what-the-till-shows-you.svg",
+      "bytes": 1924,
+      "sha256": "c775c4d008e832d3110e5707ba34a8a4fbb3bf878c5a7a978c2b1793057d5d5f"
+    },
+    {
+      "rel": "content/assets/where-the-shops-lists-live.svg",
+      "bytes": 1934,
+      "sha256": "13aa3bed28565590e8badcf927cdaa1673195c2d50b4e81a9726823f698aa813"
+    },
+    {
+      "rel": "content/assets/which-version-this-site-documents.svg",
+      "bytes": 1929,
+      "sha256": "18d1b9135c48f3a6caf8f44b9759c005d91348b18e0f79bed7b996621217e74f"
+    },
+    {
+      "rel": "content/images-manifest.json",
+      "bytes": 87797,
+      "sha256": "29ca497ade3abb2874f6fa49f441262e4c2130848603485f66feffdd4a6075b5"
+    },
+    {
+      "rel": "content/published/albums-and-binder-pages.json",
+      "bytes": 7548,
+      "sha256": "f6e6fd1a44c34b551a2dde48b2bd83415772e6609b7a222a08fb16c1d600172a"
+    },
+    {
+      "rel": "content/published/board-games-and-their-accessories.json",
+      "bytes": 5994,
+      "sha256": "9b9766eb980059f9bd886829663d1ee6b8cacb46032948ae35e6344a78e0537b"
+    },
+    {
+      "rel": "content/published/building-and-editing-a-deck.json",
+      "bytes": 6918,
+      "sha256": "e27a2ea3e357738e1e3a59badbc35e5cf1a94781522c964c2ea3dba1c75ee7c6"
+    },
+    {
+      "rel": "content/published/card-sets-and-expansions.json",
+      "bytes": 4446,
+      "sha256": "1bc705804838fb0140a3840cfe9c695c857b4bf55f89da547dea28c8a4b6d8eb"
+    },
+    {
+      "rel": "content/published/cards-and-rarity.json",
+      "bytes": 3543,
+      "sha256": "97b9bc651ba014717b2f8cb0e31d00a40ba1f1205dde23dad46182e634f98f8c"
+    },
+    {
+      "rel": "content/published/customer-reviews.json",
+      "bytes": 2931,
+      "sha256": "d2f3a8b81d693bc96ba4e97bd924079bc2e276e46e2a11ee79ce59beb169dc66"
+    },
+    {
+      "rel": "content/published/discarding-cards.json",
+      "bytes": 4811,
+      "sha256": "103db151d2eb22e21336de9a1559bfbe7d660221fa0a5acc62c1654197693c88"
+    },
+    {
+      "rel": "content/published/expanding-and-decorating-the-shop.json",
+      "bytes": 8822,
+      "sha256": "e9cf13190e8664189cfae809a183ed455a7810a9208991c6bcee8312e2ec0d1b"
+    },
+    {
+      "rel": "content/published/glossary-of-terms.json",
+      "bytes": 4359,
+      "sha256": "32f9c3c58824934f983f575a5d07f7c2d910cfcb60e912b1b706a5ded5ea730f"
+    },
+    {
+      "rel": "content/published/how-a-card-front-is-built.json",
+      "bytes": 5103,
+      "sha256": "7b9fcae549ebc58c0bea0dad6b06920a68c07fc7a506a64284536e8a62f8b22d"
+    },
+    {
+      "rel": "content/published/how-a-card-search-is-described.json",
+      "bytes": 4273,
+      "sha256": "9f31537a2e56dd8dd2b70b57e905c2b6ac64c6d7dd041de17611052651a05b7f"
+    },
+    {
+      "rel": "content/published/how-a-crowd-is-animated-from-a-baked-set.json",
+      "bytes": 3872,
+      "sha256": "9f1e2c838ff7db4422107971d8dfc53def210628b3fa0fda9f804251658f1288"
+    },
+    {
+      "rel": "content/published/how-a-price-tag-is-drawn.json",
+      "bytes": 6667,
+      "sha256": "0bed8338e923428a910287d9ad551321630f83f7382a2ad4ac623dbb9fa38469"
+    },
+    {
+      "rel": "content/published/how-a-shelf-holds-its-stock.json",
+      "bytes": 7424,
+      "sha256": "253a40c9bab40703167cd8cea637519a23188cc3dc24a9e595c68c2d9efb3a21"
+    },
+    {
+      "rel": "content/published/how-many-customers-your-shop-holds.json",
+      "bytes": 4601,
+      "sha256": "96c19e47434fb7847f38c8f0e9b8355265335e55d419e8db1b14e6081db4e2a5"
+    },
+    {
+      "rel": "content/published/how-the-restock-manager-packs-stock.json",
+      "bytes": 6422,
+      "sha256": "3cb48e0c1d10830decd9b147ab2711c30f808c09654b810c13fb7ad219733925"
+    },
+    {
+      "rel": "content/published/how-tournament-standings-are-decided.json",
+      "bytes": 4914,
+      "sha256": "e5dddc175c8e417812f3bddacdb0746abaed6f162d7e6cefc35397f5bdc6ad04"
+    },
+    {
+      "rel": "content/published/keeping-the-shop-clean.json",
+      "bytes": 3967,
+      "sha256": "90b86cfb399a53e03f63069179526dfb96d8e32f3872d6f3e0376663dc23c98f"
+    },
+    {
+      "rel": "content/published/licences-and-shop-level.json",
+      "bytes": 6599,
+      "sha256": "43a36d0dae2031ff522bf68fe2f3cd6074eaf33f399234adcc4f6a688c446e66"
+    },
+    {
+      "rel": "content/published/machines-that-work-on-their-own.json",
+      "bytes": 4921,
+      "sha256": "f3d5a5d03d2a8348f5245b3267c541478aa692f9c8c075cff9651c6f308d6b86"
+    },
+    {
+      "rel": "content/published/moving-on-old-stock.json",
+      "bytes": 3269,
+      "sha256": "013adae4eccb1b545c32b2abffca05fa997c9119e769461211890b1c18a31bb2"
+    },
+    {
+      "rel": "content/published/opening-a-pack-on-screen.json",
+      "bytes": 3458,
+      "sha256": "50e0c93d0ef712e8b459dbe42aba3993c396ca784ba19a9f4d4d178c11a29880"
+    },
+    {
+      "rel": "content/published/pack-tiers-and-names.json",
+      "bytes": 4020,
+      "sha256": "1c5a39375ce5b7641564d65df2105133b48c1efd77f6b022ef838492e5d771be"
+    },
+    {
+      "rel": "content/published/packs-and-opening.json",
+      "bytes": 4339,
+      "sha256": "1ed36be77e4dfcf5e7e87b47ea5111e525bbdee86aec618c39fa88f2dba599f3"
+    },
+    {
+      "rel": "content/published/playmats-deck-boxes-and-sleeves.json",
+      "bytes": 10336,
+      "sha256": "0ec6db906265b3768073f9454821059f00664549d94bdc3d23bde72a9f42bbf7"
+    },
+    {
+      "rel": "content/published/posters-and-wall-displays.json",
+      "bytes": 6663,
+      "sha256": "ab475cd675066c72a9a60064d08420a579f2e4ff177397fa558008afa1f20f0a"
+    },
+    {
+      "rel": "content/published/price-changes-and-cash.json",
+      "bytes": 3720,
+      "sha256": "0cfdc634e903e394ce2e1264539c4a919f5b877e957225fe9e802dbb1c316e92"
+    },
+    {
+      "rel": "content/published/price-history-and-graphs.json",
+      "bytes": 2704,
+      "sha256": "3cdc3b1e4f93ee8f84a4d5407f75a163cc4bbeffab5e77a931c63946d6b660cc"
+    },
+    {
+      "rel": "content/published/price-tags-for-every-context.json",
+      "bytes": 4476,
+      "sha256": "03e1f0e0bcfdee3919d7784169ae47b325d90996d15608fdcfb44d5c3302bcc4"
+    },
+    {
+      "rel": "content/published/prices-and-price-tags.json",
+      "bytes": 3233,
+      "sha256": "59f05ef8c41014acd10f26b9ecee68c74c741dcede5c4cdea44eefe90476d11c"
+    },
+    {
+      "rel": "content/published/prize-shelves-and-specials.json",
+      "bytes": 3789,
+      "sha256": "2f4be9599a846185a718a8501663679b134866cfdc930ca8fd2d106036b2e097"
+    },
+    {
+      "rel": "content/published/questions-players-ask.json",
+      "bytes": 4494,
+      "sha256": "276c231f997757929229b6e963a2f4aff9f8a649cf0911deaa43245b10d04c48"
+    },
+    {
+      "rel": "content/published/rarity-and-how-it-is-chosen.json",
+      "bytes": 3564,
+      "sha256": "37e206007be327e026b13607ec4a67275344c7c86ba8e8495b7907136c656cd1"
+    },
+    {
+      "rel": "content/published/reading-the-price-board.json",
+      "bytes": 3412,
+      "sha256": "09626c49d0d2420de1216309da4d5ea2dc14ee95732a389a1558e823a1e59788"
+    },
+    {
+      "rel": "content/published/restocking-from-a-cart.json",
+      "bytes": 4965,
+      "sha256": "7adb9d5dca0c10dd41e05ffcb0f3fd673485bf66f2ef7d041ef7fec222262179"
+    },
+    {
+      "rel": "content/published/scanner-restocking-workflow.json",
+      "bytes": 3259,
+      "sha256": "c5674d751453096ac66c956709d25a4287ced1b0ed8f8a18ef4b4917c96ea7e0"
+    },
+    {
+      "rel": "content/published/sending-cards-to-be-graded.json",
+      "bytes": 6696,
+      "sha256": "de2de30667f833af8381941e1fe962b160456776c9d01d8ac5ef5083b8681ec0"
+    },
+    {
+      "rel": "content/published/setting-up-an-event.json",
+      "bytes": 4567,
+      "sha256": "f054ac4c304ed80978ed60364f9a8e08d32d330e71d57d369c9aa143e63a9fe3"
+    },
+    {
+      "rel": "content/published/setting-what-your-workers-do.json",
+      "bytes": 3321,
+      "sha256": "400f67846d301f928c33914f3668015858c2c54ac6b89610799ad0de12f7b449"
+    },
+    {
+      "rel": "content/published/shelves-stock-and-upgrades.json",
+      "bytes": 3356,
+      "sha256": "2d2f820c83250c2c37a4720b0a75157a28ea43221b99105469859837180bf545"
+    },
+    {
+      "rel": "content/published/storage-shelves-and-restocking.json",
+      "bytes": 2940,
+      "sha256": "b59afe9023ac31b6b5d8bfeba9ab288f9912cb35627a30a962ea19c474eede58"
+    },
+    {
+      "rel": "content/published/the-achievements-and-their-art.json",
+      "bytes": 3860,
+      "sha256": "cffc0f99dac2278ccf8fc80d74769ab793a7995607cd290db96ae391acc0f557"
+    },
+    {
+      "rel": "content/published/the-boards-interface.json",
+      "bytes": 9778,
+      "sha256": "48de27ba48c581f610da7de0cd6cd4ef31abc9c94af57302939a817f648097c9"
+    },
+    {
+      "rel": "content/published/the-box-your-stock-arrives-in.json",
+      "bytes": 6229,
+      "sha256": "59253067468b5107ab956a9ffdd4b2ab1fe6951abe1017a73226f89c2b483642"
+    },
+    {
+      "rel": "content/published/the-boxes-cards-come-in.json",
+      "bytes": 3921,
+      "sha256": "5f027ac5685544229a7a776c0933d5119c8b4c9126f066537b5837398b75647b"
+    },
+    {
+      "rel": "content/published/the-camera-and-the-photo-gallery.json",
+      "bytes": 3735,
+      "sha256": "f49716d61d6ad4c9e789c0e5717d65bf5c1d5d29b0fc5803945db8e2e7a21117"
+    },
+    {
+      "rel": "content/published/the-card-display-object.json",
+      "bytes": 8874,
+      "sha256": "b8532d46ecc8aa368f93637b1abef12d3ed0c116f2fd5c682ecbb5ddec637976"
+    },
+    {
+      "rel": "content/published/the-card-game-you-can-play.json",
+      "bytes": 3592,
+      "sha256": "35c59abecd20ac16ced97155ca22407fb98136ea38ce3553dc3684e0c79df31a"
+    },
+    {
+      "rel": "content/published/the-card-object-in-the-world.json",
+      "bytes": 5642,
+      "sha256": "5cc95b9855095c1344d38b8450c8da1f749512304d32929f6635d54ed8b12ba7"
+    },
+    {
+      "rel": "content/published/the-clothes-a-shopkeeper-wears.json",
+      "bytes": 4036,
+      "sha256": "418e2337292a30210522da78db585f5d51ef9dd3d7c6918e420fd22f2b3d7eae"
+    },
+    {
+      "rel": "content/published/the-counter-and-money.json",
+      "bytes": 4000,
+      "sha256": "ea8292184e95a07d54b353fbc7bd8da6fdfada285c3aabcbef11e3521159f9d1"
+    },
+    {
+      "rel": "content/published/the-currencies-the-game-tracks.json",
+      "bytes": 3531,
+      "sha256": "1eacf9b9f74fe5b18179a3a8b3cabf9acb6eb286e2ae66cc67da60da5bb48d7f"
+    },
+    {
+      "rel": "content/published/the-doors-and-the-signs-that-point-the-way.json",
+      "bytes": 4716,
+      "sha256": "e4488453ba90d26b099e4192cb11ce92dda9aed2b054b07b65ccdff56fbbccd7"
+    },
+    {
+      "rel": "content/published/the-expansions-the-game-ships.json",
+      "bytes": 5062,
+      "sha256": "aa6565b2b470a876d3498303c6de9cb85b3c63c3c4aca9a17085b421d64de77c"
+    },
+    {
+      "rel": "content/published/the-figures-the-shop-sells.json",
+      "bytes": 5331,
+      "sha256": "f85b9b3bce1d1c7dba16bafb0022502b359ddc615b387428fdf2060874218595"
+    },
+    {
+      "rel": "content/published/the-finishes-you-can-buy.json",
+      "bytes": 6255,
+      "sha256": "08027f21e176a911ccbe7382bedcbaa3dfa11f5e98ef142c7ec676b98bf04d03"
+    },
+    {
+      "rel": "content/published/the-group-that-shows-a-card.json",
+      "bytes": 5889,
+      "sha256": "7f0569291aac4203fdcecdfcc52dfbb8436ff485ffe6e149e96be5ae98091e67"
+    },
+    {
+      "rel": "content/published/the-key-binding-settings.json",
+      "bytes": 5987,
+      "sha256": "9d6dbd154687141f604d4a138736df5e3b1c072e959642f78928055b06c559c1"
+    },
+    {
+      "rel": "content/published/the-kinds-of-customers.json",
+      "bytes": 4065,
+      "sha256": "2cc559f257c663388fc74a8f1c7bb9472e071f17c6409eef03fab75d3711d597"
+    },
+    {
+      "rel": "content/published/the-manager-behind-the-card-game.json",
+      "bytes": 3075,
+      "sha256": "ffc91969c69787208902071cfa6cbac4d209e0bc47a4c9e4551374c7b4db3b40"
+    },
+    {
+      "rel": "content/published/the-money-the-counter-handles.json",
+      "bytes": 6327,
+      "sha256": "5d18cdc2b6fdebb23c7d15ed9c6c06fe102d927283e2a458f959890355932421"
+    },
+    {
+      "rel": "content/published/the-pack-and-how-it-opens.json",
+      "bytes": 5086,
+      "sha256": "df7727330d4564e6295e67ea55248d538a49419e6884dcbd9b79972529e06ff0"
+    },
+    {
+      "rel": "content/published/the-page-that-shows-what-you-pulled.json",
+      "bytes": 4490,
+      "sha256": "28e9821436675dee4fe1915c94a79e822ef7322004c937f1697e7d166b1792d1"
+    },
+    {
+      "rel": "content/published/the-payment-a-customer-hands-over.json",
+      "bytes": 4921,
+      "sha256": "e7f9326496750815caa5a18620c47af26dbfdbecb2c391a12aad84cb32b373f6"
+    },
+    {
+      "rel": "content/published/the-picture-the-game-draws-for-a-control.json",
+      "bytes": 5578,
+      "sha256": "8bb298fbecec9141983e67845daa35d7a8f5d916584f9ebb662eedeebb987d9e"
+    },
+    {
+      "rel": "content/published/the-plants-in-and-around-the-shop.json",
+      "bytes": 4255,
+      "sha256": "e7798b2b590cbfb217fb61af469f9217cf2a852d94a313713dd208357d08cc78"
+    },
+    {
+      "rel": "content/published/the-profile-behind-each-customer.json",
+      "bytes": 6337,
+      "sha256": "2387d0abdb9a026ad73dddc36240bee63c6bba29133b3cb29d0de16907242a85"
+    },
+    {
+      "rel": "content/published/the-restocker-and-its-vehicles.json",
+      "bytes": 3333,
+      "sha256": "4fff30803330b92640146455dc52d4836ed383138ca1d29df600fe2918073d44"
+    },
+    {
+      "rel": "content/published/the-reveal-screen.json",
+      "bytes": 4574,
+      "sha256": "7c9e3e2275127c9f683e1e1e60f5aa7fe614a5069eb02b7e33414c7c81c68e2b"
+    },
+    {
+      "rel": "content/published/the-review-screen.json",
+      "bytes": 6087,
+      "sha256": "4367542f28257dd56548fb8e2b022adcef8e4eda2f91da6418fe1a70e63935af"
+    },
+    {
+      "rel": "content/published/the-rules-of-the-card-game.json",
+      "bytes": 5123,
+      "sha256": "1494c1b705f80179b771e4972e3b55f10ad640e527bb981063b7c2c30227ec86"
+    },
+    {
+      "rel": "content/published/the-screens-you-buy-from.json",
+      "bytes": 5578,
+      "sha256": "f2831774cb196434b671111a35fc5a08f1dad3934b9ae961202cd124de8bfa03"
+    },
+    {
+      "rel": "content/published/the-screens-you-will-use-most.json",
+      "bytes": 3078,
+      "sha256": "931e426e36064a6fa40e6d037c252168f09e018196eaf42dfda62b736d450736"
+    },
+    {
+      "rel": "content/published/the-search-that-picks-a-card.json",
+      "bytes": 4219,
+      "sha256": "741b2eb274a91183bc5ebaff9a46d4d24ead5d3036192a4b7706afd598045242"
+    },
+    {
+      "rel": "content/published/the-services-the-game-offers.json",
+      "bytes": 3670,
+      "sha256": "d58a4ef9dfe97d1966c9c3907613525d5f84b6f3e6d1dfe5ceee2c9669f437fe"
+    },
+    {
+      "rel": "content/published/the-setting-screens-for-your-fixtures.json",
+      "bytes": 5290,
+      "sha256": "4e702ebed5228f905badb737de1b91877b09e18c4df5d4c82a32df4a04565b5c"
+    },
+    {
+      "rel": "content/published/the-settings-that-draw-a-card.json",
+      "bytes": 11438,
+      "sha256": "d16797261d72142a25dfd2e288d18db921e1d6a20284c543c6b24e852aba33d2"
+    },
+    {
+      "rel": "content/published/the-settings-you-can-change.json",
+      "bytes": 7620,
+      "sha256": "311c9a1af10d279dcacccf6c6591853f42afad7158cda384f70c6c400f8b3062"
+    },
+    {
+      "rel": "content/published/the-shop-billboard-and-your-shop-name.json",
+      "bytes": 3680,
+      "sha256": "63efd56eabc69b8ff5fcf8a49d2621c510271c0c1935af66825de5b5c570c631"
+    },
+    {
+      "rel": "content/published/the-state-of-a-game-of-cards.json",
+      "bytes": 9703,
+      "sha256": "ada5ad58ad65e639d9501d67e99cadc15367858f26d9a65fdc277cd774b8373c"
+    },
+    {
+      "rel": "content/published/the-trade-screen-and-what-it-shows.json",
+      "bytes": 6333,
+      "sha256": "a2fd9ccd7f05b72188a87b6f5a29b00e44effa3d26563bf70dd8381c9627c0b3"
+    },
+    {
+      "rel": "content/published/the-upgrades-you-can-buy.json",
+      "bytes": 4728,
+      "sha256": "9bdc4739e5bd3e2ab1e1b73c23cc4fb0fb551991d01c95f3c9cdc380688143c3"
+    },
+    {
+      "rel": "content/published/the-warehouse-and-its-shelves.json",
+      "bytes": 5146,
+      "sha256": "28282788136b104851119bd12f85ea8b87a6f12fcd343264f889271d32a086de"
+    },
+    {
+      "rel": "content/published/tournaments-and-events.json",
+      "bytes": 3048,
+      "sha256": "ff46e4372d4a4696142509643d8bd0e49ad2472210887b1bd419277d832c8c71"
+    },
+    {
+      "rel": "content/published/trading-with-customers.json",
+      "bytes": 2993,
+      "sha256": "a1e393f7efa6ca899a206fb0400c60c488b47fb592bbbb9ef1f376e75677746c"
+    },
+    {
+      "rel": "content/published/what-a-card-shows-in-play.json",
+      "bytes": 6391,
+      "sha256": "e6a42814c50f80aedc0fb972dbfb8499562da7ccc5d5f3096f3f5cbf57815b97"
+    },
+    {
+      "rel": "content/published/what-a-cards-set-record-says.json",
+      "bytes": 4525,
+      "sha256": "df26c7f622eb93dea0605f255994f8bd0ff793a87503a321c42c49666a4aa579"
+    },
+    {
+      "rel": "content/published/what-a-customer-carries.json",
+      "bytes": 8068,
+      "sha256": "5c2bdc108dc33bb40e1f7e60cfb106203ab0d6c449b6ae772977985f39afd67a"
+    },
+    {
+      "rel": "content/published/what-a-ghost-card-does.json",
+      "bytes": 4057,
+      "sha256": "437cf2797165542e4c70a450ca54669acd3564a85aad374adfa4e86cb3f9df1f"
+    },
+    {
+      "rel": "content/published/what-a-review-record-keeps.json",
+      "bytes": 4282,
+      "sha256": "06d121d68eeae104ac067001b0f4569f40af15f06d0a413dd29126476f3b61b2"
+    },
+    {
+      "rel": "content/published/what-the-game-records-about-a-deck.json",
+      "bytes": 4400,
+      "sha256": "86de2baf41fa6e30e2f35c257e8a7884c9264bec6ff2545f439d8b897501cd0b"
+    },
+    {
+      "rel": "content/published/what-the-game-writes-down.json",
+      "bytes": 3662,
+      "sha256": "25a49f6254c9faa9bc472fe2157e27cecf419758afa8c11e98314b76c8143680"
+    },
+    {
+      "rel": "content/published/what-the-pack-opener-shows-you.json",
+      "bytes": 5161,
+      "sha256": "0d029d086d4d49d6bcf6e890a564f751eb5a3b3ecb7106d3fa6b8c36f4f99f49"
+    },
+    {
+      "rel": "content/published/what-the-shelf-manager-keeps.json",
+      "bytes": 5047,
+      "sha256": "a7106a5738ebee3f6133f0ae08a21e46fa535a59fc1ed56ea311ced878c558da"
+    },
+    {
+      "rel": "content/published/what-the-till-shows-you.json",
+      "bytes": 4182,
+      "sha256": "a5e1db3325db9b9fd9f209768c6860aa381a8b8a6ba062ce6cb49b43c0d24a74"
+    },
+    {
+      "rel": "content/published/where-the-shops-lists-live.json",
+      "bytes": 6111,
+      "sha256": "06563010420c2f9432527c92deaf3164b82f43c8922559af6dede40c5c3f21f2"
+    },
+    {
+      "rel": "content/published/which-version-this-site-documents.json",
+      "bytes": 4630,
+      "sha256": "f809e4650b185317c52f3fc376b4fea25f19b4e7348d76496a45191799e10083"
+    },
+    {
+      "rel": "content/published/why-every-customer-looks-different.json",
+      "bytes": 6253,
+      "sha256": "0d2dbbf9d62362a698ebb90c0fdd82d5d49668c1bbbf8daedc6057436880acad"
+    },
+    {
+      "rel": "content/README.md",
+      "bytes": 3079,
+      "sha256": "4ee84d5a76de591c16fade63db6b32644c280c9b16f2eb5c939bb67a2c91ae1c"
+    },
+    {
+      "rel": "content/updates.json",
+      "bytes": 2490,
+      "sha256": "e5ab0050e511c290def3ee05f38dce69677f25028c9aa8b19d4d5423ffb4673f"
+    },
+    {
+      "rel": "data/guide-questions.json",
+      "bytes": 5562,
+      "sha256": "49eb3d9b7d62eef83056316cc1aa23e0e1e97770ab9cfb6c27cbd648ea4307a8"
+    },
+    {
+      "rel": "data/normalized/p0-instances.json",
+      "bytes": 135003,
+      "sha256": "8a92af89c3f766b21d74f4410d52d1574102f196c8a3cfecc16fe30797d9dfbe"
+    },
+    {
+      "rel": "data/normalized/p0-inventory.json",
+      "bytes": 1003097,
+      "sha256": "9d2616a8c47192cf6541c10ee3ccace8870a217e6eccbf328a670ceb08d39479"
+    },
+    {
+      "rel": "data/normalized/tcg-object-names.json",
+      "bytes": 120338,
+      "sha256": "bf0e59560b530e3881a638e60924715b8ee6a3c9dc1c1c2c88b5a8a80c2b9357"
+    },
+    {
+      "rel": "data/normalized/v22-header-samples.json",
+      "bytes": 2932,
+      "sha256": "b1079af22c859015f2d53e54210a5cfb20f20dbd07ff48a9a40fcdc33457782e"
+    },
+    {
+      "rel": "docs/redesign-spec.md",
+      "bytes": 8526,
+      "sha256": "dad7f1dc851e665af75333dcab22183ff17f16f2701416c5195531a9b750e46b"
+    },
+    {
+      "rel": "pipeline/decode_values.ts",
+      "bytes": 1861,
+      "sha256": "14d7df40cb87c37845c52da15fe44f92618aaff27a4820834c5f9a54217ca4e2"
+    },
+    {
+      "rel": "pipeline/decode_values2.ts",
+      "bytes": 3936,
+      "sha256": "602b93f5e4d8900459f53af4ae3e934cbe2bc1de5942e4491f2fc551861f2c8a"
+    },
+    {
+      "rel": "pipeline/dotnet-metadata.ts",
+      "bytes": 32464,
+      "sha256": "e7e397601010d2465b6c39cd11c2eb6568ba3ee07bff958a5accb638073ef4c7"
+    },
+    {
+      "rel": "pipeline/extract-assets.ts",
+      "bytes": 5309,
+      "sha256": "82004ee0c32f3d26def227f74c1d4250535be710bd16c4d556e294cdb4b0a212"
+    },
+    {
+      "rel": "pipeline/inventory.ts",
+      "bytes": 3911,
+      "sha256": "8ac49faadeb42542d90aa17e14d84e9dcbb4556c6aeb99fb3024884d0fb374e9"
+    },
+    {
+      "rel": "pipeline/measure_builtins.ts",
+      "bytes": 3648,
+      "sha256": "4e2f7e13a5eac3d7ca1d208c2798a344f4b73725b18a038f651c1de2b7c4bd5a"
+    },
+    {
+      "rel": "pipeline/mono-layout.ts",
+      "bytes": 9537,
+      "sha256": "ee3cab1b6e7ded0f7bad9c8e97a09c6b755d4a0355a55245ab053ba3d3be4336"
+    },
+    {
+      "rel": "pipeline/mono-values.ts",
+      "bytes": 8622,
+      "sha256": "a12a52c819ce1afe542c46492d59ce968deec34a74622c39ae552d4747c80f77"
+    },
+    {
+      "rel": "pipeline/normalize_values.ts",
+      "bytes": 6679,
+      "sha256": "ffc14c2c9a911c0f8f06c77676706bba8d937d0fa166f9d4c8a913ce50cbe5cd"
+    },
+    {
+      "rel": "pipeline/probe_classname_form.ts",
+      "bytes": 2813,
+      "sha256": "4d622f0f27c1b06dcce6fed0f385aae3438435a96e82db0df64b44352352e532"
+    },
+    {
+      "rel": "pipeline/serialized-v22.mjs",
+      "bytes": 2362,
+      "sha256": "baa20135a42ae1212bac185cf7ec0fae774b110e3c9418112248a5cf5b750dfb"
+    },
+    {
+      "rel": "pipeline/serialized.ts",
+      "bytes": 8752,
+      "sha256": "f50d1e26eacc247aa83d292f2e3dcf4e60775b8b0019e7338d50f4a16b06679a"
+    },
+    {
+      "rel": "pipeline/site.mjs",
+      "bytes": 48588,
+      "sha256": "916376c8c9ad4667ad7d486636713180ca38bf4c460aaae0e2ffa47643a375ce"
+    },
+    {
+      "rel": "pipeline/status.mjs",
+      "bytes": 2941,
+      "sha256": "8573daa104e7bac5841c3e9875dcd50254723124bcabf63744667f11a7b96064"
+    },
+    {
+      "rel": "pipeline/unitypy_dump_payloads.py",
+      "bytes": 1837,
+      "sha256": "2445e748222ef65a662706677012682c59bc938601fe21d5414f24f1887d3d5c"
+    },
+    {
+      "rel": "pipeline/unitypy_find_scripts.py",
+      "bytes": 1293,
+      "sha256": "e5680d7ca62b018352b25cc5db408ed2687d31e58188ab196ca4fe013728bf67"
+    },
+    {
+      "rel": "pipeline/unitypy_multifile.py",
+      "bytes": 2189,
+      "sha256": "138f11088a32992f288c028fdc68b27baa3137ac5ae6e783fc47b231dd335e43"
+    },
+    {
+      "rel": "pipeline/unitypy_name_all.py",
+      "bytes": 2253,
+      "sha256": "87d85a5a840b240bae21dca227a542b0f72b33c7aa59b5563e39cdd8f9d4e0c7"
+    },
+    {
+      "rel": "pipeline/unitypy_probe.py",
+      "bytes": 2138,
+      "sha256": "e2368df01297f4cf611975b3a13a77f6a5716336f4e7b0a971eec9588eea165f"
+    },
+    {
+      "rel": "pipeline/unitypy_rawscript.py",
+      "bytes": 2064,
+      "sha256": "e4f1b3513287ad7faad0711e58b9e0cb9f49a4e6641b82d971319ebfc763443c"
+    },
+    {
+      "rel": "pipeline/unitypy_scripts.py",
+      "bytes": 1385,
+      "sha256": "070949faf2b271ad851c41e8ddb40361a98ea43b19d4983a377f7da22cbb87bd"
+    },
+    {
+      "rel": "pipeline/v22_sample_record.mjs",
+      "bytes": 2335,
+      "sha256": "65d97f528c79cb85e5e3101358625c9280fe2dd360fb5efbf530773995dce8a6"
+    },
+    {
+      "rel": "reports/coverage-report.md",
+      "bytes": 1979,
+      "sha256": "987ff980091fabcab0d95f997ab912ee1abcde0e2ac075939678f63a322c4932"
+    },
+    {
+      "rel": "reports/handoff.md",
+      "bytes": 12047,
+      "sha256": "ee4430685bc940ffc0c9cf27a22bbb042e43727aa1dba843ecd84ca527a7845c"
+    },
+    {
+      "rel": "reports/image-coverage.md",
+      "bytes": 17111,
+      "sha256": "2f229eee21091b22ccba6a135fa2df418b04087b5462e59e25c5622a3365653c"
+    },
+    {
+      "rel": "reports/image-reviews.md",
+      "bytes": 57260,
+      "sha256": "6545e035c0283ffa235fa38ec6b8ec0c23b86b2b478a9a845c843f4fdba6e457"
+    },
+    {
+      "rel": "reports/image-sanity.md",
+      "bytes": 2265,
+      "sha256": "78783327dc648ec3a6fd20c38276b51adc993dcd5a727f79a48cd2e189e0c4a3"
+    },
+    {
+      "rel": "reports/local-complete.md",
+      "bytes": 5964,
+      "sha256": "957ba3a5b84069035ca20b1495639078805aa2d2c5723721dde18173d0edcc51"
+    },
+    {
+      "rel": "reports/status.json",
+      "bytes": 734,
+      "sha256": "b8e2dd3223b93a566f4508bbac91b69a3f2c6bf388b784270e8df4c96ccdc926"
+    },
+    {
+      "rel": "tests/site.test.mjs",
+      "bytes": 32048,
+      "sha256": "f3e650d14fd202c04736e598b9d34bdbfb4176d7e7eb9b0d861c7ff8d806b546"
+    },
+    {
+      "rel": "tools/classify-urls.mjs",
+      "bytes": 2809,
+      "sha256": "46125bb336bcb1a835fbdc6744c44abbbae4fc17c2943531004a6124ee7eedee"
+    },
+    {
+      "rel": "tools/content-gate.mjs",
+      "bytes": 8405,
+      "sha256": "ccfe13be7e90494369acd7d2c6f5c3c95d432f5c19505529a03c63e4570c5af8"
+    },
+    {
+      "rel": "tools/coverage.mjs",
+      "bytes": 6915,
+      "sha256": "daf7a90fbe0691d1200938768f5b8d56f0a85a6d8e4a82c2629c7eaddbe93c99"
+    },
+    {
+      "rel": "tools/deploy-check.mjs",
+      "bytes": 1997,
+      "sha256": "88969aab31cd76b5445b4ee6f0469ae97ef4e79a3e00bf69cc8b4c29acb06f71"
+    },
+    {
+      "rel": "tools/extract-images.py",
+      "bytes": 58302,
+      "sha256": "e2f4694c09979a579dd5d3a9f8a50f1ff08dd376e9a2bf400b569ea8bb78c0b7"
+    },
+    {
+      "rel": "tools/extract-localization.py",
+      "bytes": 6734,
+      "sha256": "33037a5127f1b378dad728c29561ac59f0f778cc1f8dcb2576974251dc2d94e7"
+    },
+    {
+      "rel": "tools/image-coverage.mjs",
+      "bytes": 3851,
+      "sha256": "2636468a2490dfb8b130fe28e9c769f6a3defbb1b5864845ec0514a811f2e197"
+    },
+    {
+      "rel": "tools/image-sanity.py",
+      "bytes": 5179,
+      "sha256": "564fae4c68759406f1ae1a26f056662563674f13db1c2c14af853ab0e58f2ce4"
+    },
+    {
+      "rel": "tools/mac-package.mjs",
+      "bytes": 9504,
+      "sha256": "77d9cdb6f8b6b207d8f5abcbd165fa905ead8c0c31f80d4cdbf54fb367a71287"
+    },
+    {
+      "rel": "tools/preflight.mjs",
+      "bytes": 4829,
+      "sha256": "6c30a8e55a73591fd1a3d649268b7f00b252dea736cee99f21003b6c53e52db7"
+    },
+    {
+      "rel": "tools/smoke.mjs",
+      "bytes": 4064,
+      "sha256": "039c8a46171e0e3fa40dd9de3c553fdf1dac6dc4f3aa75a952feb83377bc278a"
+    },
+    {
+      "rel": "tools/verify-citations.mjs",
+      "bytes": 4279,
+      "sha256": "b8dec5495e7bb0e8144c947989e35f27e32b1b21ef4862d58d1a6760a1284a2a"
+    },
+    {
+      "rel": "tsconfig.ci.json",
+      "bytes": 129,
+      "sha256": "06e294e1814b8f047b1f9805d1ab5368f481ef245dd683f4f7313d164ed7aa40"
+    },
+    {
+      "rel": "tsconfig.json",
+      "bytes": 533,
+      "sha256": "0aff85cc9c3970a577874d63e90d2f63f4534bc9b5a6798dea77a55e8473b6db"
+    },
+    {
+      "rel": "wrangler.toml",
+      "bytes": 197,
+      "sha256": "e90e0e7716c79d188b0fee0953ef26760293f4d7456ae1bef63d744bfaf9fec9"
+    }
+  ],
+  "totals": {
+    "files": 492,
+    "bytes": 22826141,
+    "byGroup": {
+      "source": {
+        "files": 39,
+        "bytes": 394398
+      },
+      "published": {
+        "files": 98,
+        "bytes": 495698
+      },
+      "articles": {
+        "files": 63,
+        "bytes": 175675
+      },
+      "images": {
+        "files": 272,
+        "bytes": 20301698
+      },
+      "data": {
+        "files": 5,
+        "bytes": 1266932
+      },
+      "contentRoot": {
+        "files": 3,
+        "bytes": 93366
+      },
+      "draft": {
+        "files": 0,
+        "bytes": 0
+      },
+      "shell": {
+        "files": 5,
+        "bytes": 1014
+      },
+      "reports": {
+        "files": 7,
+        "bytes": 97360
+      }
+    },
+    "groupSha256": {
+      "source": "2d18d1b25274e7eb48d94182b89d43531cfaf56108eccb782a5d71c4576e4815",
+      "published": "dd35a17b30754775a3741815f03604b050a9ffce1cc9676e7eee70ccca9d12d0",
+      "articles": "10ce8365ad06f24a57643f6cf68fae418ca24d76fec125b9a5d97f0235b03576",
+      "images": "d0b8bc21b1afa29019293737e68e01cd528f3e7bb7e1f562f97ce84ee5bb6b69",
+      "data": "da8f315dc781aa7be1e893170c3df22a5a4d35463611d2912ef4fd7c2c1c74b8",
+      "contentRoot": "7ba426c38395d6f766af45ed71c1556eac3f6ace023416936cc6f120ccd50133",
+      "draft": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "shell": "638381db288b28bba2b4bcc820e3389c7c67671770450a8eb8cc6b3f35d5f6fd",
+      "reports": "6597d1c65b3be3ac5465d55f21456c538f1544e0652d2903c05f03a535809125"
+    },
+    "allSha256": "b2bd011930fb308ff18b2c017fd3ad40876aecb060720633a0cff2a99aebf148"
+  },
+  "excluded": {
+    "files": [
+      {
+        "rel": ".git/",
+        "bytes": 32762911,
+        "files": 752,
+        "why": "git history, build output and the raw game packages are not part of a source handoff"
+      },
+      {
+        "rel": "data/normalized/localization-de.json",
+        "bytes": 171565,
+        "why": "decoded layer or extracted locale table: raw output, stays on the extraction host"
+      },
+      {
+        "rel": "data/normalized/localization-en.json",
+        "bytes": 157541,
+        "why": "decoded layer or extracted locale table: raw output, stays on the extraction host"
+      },
+      {
+        "rel": "data/normalized/localization-es.json",
+        "bytes": 171609,
+        "why": "decoded layer or extracted locale table: raw output, stays on the extraction host"
+      },
+      {
+        "rel": "data/normalized/localization-fr.json",
+        "bytes": 173119,
+        "why": "decoded layer or extracted locale table: raw output, stays on the extraction host"
+      },
+      {
+        "rel": "data/normalized/localization-it.json",
+        "bytes": 170320,
+        "why": "decoded layer or extracted locale table: raw output, stays on the extraction host"
+      },
+      {
+        "rel": "data/normalized/localization-ja.json",
+        "bytes": 189948,
+        "why": "decoded layer or extracted locale table: raw output, stays on the extraction host"
+      },
+      {
+        "rel": "data/normalized/localization-ko.json",
+        "bytes": 178232,
+        "why": "decoded layer or extracted locale table: raw output, stays on the extraction host"
+      },
+      {
+        "rel": "data/normalized/localization-pt-br.json",
+        "bytes": 159953,
+        "why": "decoded layer or extracted locale table: raw output, stays on the extraction host"
+      },
+      {
+        "rel": "data/normalized/localization-zh-cn.json",
+        "bytes": 155972,
+        "why": "decoded layer or extracted locale table: raw output, stays on the extraction host"
+      },
+      {
+        "rel": "data/normalized/localization-zh-tw.json",
+        "bytes": 157605,
+        "why": "decoded layer or extracted locale table: raw output, stays on the extraction host"
+      },
+      {
+        "rel": "data/normalized/tcg-mb-payloads.json",
+        "bytes": 1247575,
+        "why": "decoded layer or extracted locale table: raw output, stays on the extraction host"
+      },
+      {
+        "rel": "HARNESS-NEXT-ACTION.md",
+        "bytes": 1429,
+        "why": "a process note for the extraction host, not site content"
+      },
+      {
+        "rel": "reports/container-probe.txt",
+        "bytes": 914,
+        "why": "extraction-side working record; the live reports listed in the manifest are kept"
+      },
+      {
+        "rel": "reports/data-boundary.md",
+        "bytes": 5206,
+        "why": "extraction-side working record; the live reports listed in the manifest are kept"
+      },
+      {
+        "rel": "reports/decoder-arrays.md",
+        "bytes": 1807,
+        "why": "extraction-side working record; the live reports listed in the manifest are kept"
+      },
+      {
+        "rel": "reports/decoder-enums.md",
+        "bytes": 1590,
+        "why": "extraction-side working record; the live reports listed in the manifest are kept"
+      },
+      {
+        "rel": "reports/decoder-structs.md",
+        "bytes": 2100,
+        "why": "extraction-side working record; the live reports listed in the manifest are kept"
+      },
+      {
+        "rel": "reports/image-mapping-audit.md",
+        "bytes": 4330,
+        "why": "extraction-side working record; the live reports listed in the manifest are kept"
+      },
+      {
+        "rel": "reports/inventory-defects-correction.md",
+        "bytes": 1229,
+        "why": "extraction-side working record; the live reports listed in the manifest are kept"
+      },
+      {
+        "rel": "reports/inventory-defects.md",
+        "bytes": 2125,
+        "why": "extraction-side working record; the live reports listed in the manifest are kept"
+      },
+      {
+        "rel": "reports/localization-extraction.md",
+        "bytes": 3048,
+        "why": "extraction-side working record; the live reports listed in the manifest are kept"
+      },
+      {
+        "rel": "reports/measure-builtins.md",
+        "bytes": 2291,
+        "why": "extraction-side working record; the live reports listed in the manifest are kept"
+      },
+      {
+        "rel": "reports/monoscript-location.md",
+        "bytes": 2277,
+        "why": "extraction-side working record; the live reports listed in the manifest are kept"
+      },
+      {
+        "rel": "reports/publish-checklist.md",
+        "bytes": 5122,
+        "why": "extraction-side working record; the live reports listed in the manifest are kept"
+      },
+      {
+        "rel": "reports/redesign-p0/entities-customers.png",
+        "bytes": 250522,
+        "why": "screenshots of the built site taken on the extraction host; the site rebuilds them"
+      },
+      {
+        "rel": "reports/redesign-p0/entry.png",
+        "bytes": 79975,
+        "why": "screenshots of the built site taken on the extraction host; the site rebuilds them"
+      },
+      {
+        "rel": "reports/redesign-p0/home-grid.png",
+        "bytes": 156396,
+        "why": "screenshots of the built site taken on the extraction host; the site rebuilds them"
+      },
+      {
+        "rel": "reports/redesign-p0/home.png",
+        "bytes": 170921,
+        "why": "screenshots of the built site taken on the extraction host; the site rebuilds them"
+      },
+      {
+        "rel": "reports/route-d-values.md",
+        "bytes": 2671,
+        "why": "extraction-side working record; the live reports listed in the manifest are kept"
+      },
+      {
+        "rel": "reports/tooling-and-il2cpp-probe.md",
+        "bytes": 2638,
+        "why": "extraction-side working record; the live reports listed in the manifest are kept"
+      },
+      {
+        "rel": "reports/unitypy-object-table.md",
+        "bytes": 2644,
+        "why": "extraction-side working record; the live reports listed in the manifest are kept"
+      },
+      {
+        "rel": "reports/v22-header.md",
+        "bytes": 2285,
+        "why": "extraction-side working record; the live reports listed in the manifest are kept"
+      },
+      {
+        "rel": "reports/v22-object-table.md",
+        "bytes": 2126,
+        "why": "extraction-side working record; the live reports listed in the manifest are kept"
+      },
+      {
+        "rel": "reports/verification.md",
+        "bytes": 2741,
+        "why": "extraction-side working record; the live reports listed in the manifest are kept"
+      },
+      {
+        "rel": "web/dist/",
+        "bytes": 22972646,
+        "files": 717,
+        "why": "git history, build output and the raw game packages are not part of a source handoff"
+      }
+    ],
+    "bytes": 59375383
+  }
+}

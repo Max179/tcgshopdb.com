@@ -1,0 +1,91 @@
+{
+  "id": "the-rules-of-the-card-game",
+  "title": "The rules of the card game",
+  "category": "Cards",
+  "summary": "The game inside TCG Card Shop Simulator has rules of its own: the game ships a rulebook screen, a mulligan, action resolution, element areas and a win or lose screen.",
+  "body": [
+    "The card game has a rulebook inside the game. The game ships a screen for the rules rather than leaving you to learn by losing, so the rules are content rather than something you look up outside it.",
+    "The rulebook moves by pages. Its screen has a slider with an offset amount, a maximum page index and a speed of its own, so the rules are turned through rather than scrolled as one long sheet.",
+    "It prints its own play area. The rulebook includes a diagram of the play area and a sample card, which is why the layout is taught visually rather than only described in words.",
+    "A game opens with a mulligan. There is a screen for it, which is why the first decision you make is about your hand rather than about the board.",
+    "Actions are resolved on screen. The game has a screen for resolving an action and one for choosing an element area, so the steps of a turn are visible stages rather than automatic ones.",
+    "The board can be inspected. There is a screen for inspecting the board and one for searching your cards, which is why a game can be examined as well as played.",
+    "A finish is worded for what happened. The screen a match ends on keeps a line for a win, one for a loss and one for a draw, so the outcome is stated rather than left to be worked out from the board.",
+    "It ends with a stated result. There is a win-or-lose screen and an end-of-game conversation, so a match finishes with an outcome rather than simply stopping.",
+    "Cards do damage by element. The game keeps an element damage display, which is why a card's element matters in play and not only on the shelf.",
+    "What this entry does not tell you: the rules themselves, how many cards a deck holds, or how long a game takes. We have not verified those, so we do not print them."
+  ],
+  "facts": [
+    {
+      "claim": "The card game ships with a rulebook screen of its own.",
+      "evidence": "identifier: PlayCardRulebookScreen"
+    },
+    {
+      "claim": "The rulebook prints a play area diagram and a sample card.",
+      "evidence": "identifiers: RulebookPlayArea, RulebookCardSample"
+    },
+    {
+      "claim": "A game opens with a mulligan.",
+      "evidence": "identifier: PlayCardSetUIScreen_Mulligan"
+    },
+    {
+      "claim": "Actions are resolved on screen, including choosing an element area, and cards show element damage.",
+      "evidence": "identifiers: PlayCardSetUIScreen_ActionResolve, PlayCardSetUIScreen_SelectElementArea, PlayCardElementDamageDisplay"
+    },
+    {
+      "claim": "The board can be inspected and cards can be searched.",
+      "evidence": "identifiers: PlayCardSetUIScreen_InspectBoard, PlayCardSearchData, PlayCardSearchSelectionCardUI"
+    },
+    {
+      "claim": "A match ends with a win or lose screen and a closing conversation.",
+      "evidence": "identifiers: PlayCardSetUIScreen_WinLoseScreen, PlayCardSetUIScreen_EndGameConversation"
+    },
+    {
+      "claim": "Decks and the card pool are tracked by the game.",
+      "evidence": "identifiers: PlayCardDeckData, PlayCardPool, PlayCardGameManager"
+    },
+    {
+      "claim": "The rulebook screen scrolls its pages with a slider of its own, with an offset amount, a maximum page index and a speed.",
+      "evidence": "identifiers: m_SliderOffsetAmount, m_PageMaxIndex, m_SliderSpeed"
+    },
+    {
+      "claim": "The screen a match ends on carries separate lines for a win, a loss and a draw.",
+      "evidence": "identifiers: m_WinText, m_LoseText, m_DrawText"
+    }
+  ],
+  "related": [
+    "the-card-game-you-can-play",
+    "cards-and-rarity"
+  ],
+  "images": [
+    {
+      "file": "mapped/the-rules-of-the-card-game-sample.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "The sample card the game prints in its rulebook: a rare Burpig with a play effect and four attack values.",
+        "zh": "游戏规则书中印出的示例卡：稀有度 Rare 的 Burpig，带打出效果与四项攻击值。"
+      }
+    },
+    {
+      "file": "mapped/the-rules-of-the-card-game-playarea.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "The play area diagram the game itself prints in its rulebook.",
+        "zh": "游戏自带规则书中的对战区域示意图。"
+      }
+    },
+    {
+      "file": "the-rules-of-the-card-game.svg",
+      "kind": "diagram",
+      "alt": {
+        "en": "Diagram: read the rulebook, mulligan, take turns resolving actions, and reach a win or lose screen.",
+        "zh": "示意图：阅读规则、调度起手、逐回合结算行动、进入胜负界面。"
+      },
+      "disclaimer": "Original diagram drawn for this site. It is not a screenshot of the game."
+    }
+  ],
+  "sources": [
+    "A local copy of the game, read only. Identifiers are listed on the technical reference pages; nothing here is estimated."
+  ],
+  "imageTier": "game-image"
+}

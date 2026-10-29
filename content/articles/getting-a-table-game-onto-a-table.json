@@ -1,0 +1,65 @@
+{
+  "id": "getting-a-table-game-onto-a-table",
+  "title": "Getting a table game onto a table",
+  "tier": "published",
+  "kind": "article",
+  "target": "How to stock, place and keep the tabletop games in TCG Card Shop Simulator: what a game set is made of, how it restocks, and what the shop's own list decides about what is on show.",
+  "version": "no version stated by this build (see the sources page)",
+  "prerequisites": [
+    "A table or game area that customers can reach",
+    "A licence or space for tabletop goods",
+    "Shelf or table space for what arrives"
+  ],
+  "steps": [
+    {
+      "do": "Order tabletop games through their own screen rather than the item screen, because they restock apart from items and cards.",
+      "because": "tabletop games restock through a screen of their own (RestockItemBoardGameScreen)"
+    },
+    {
+      "do": "Treat a game as a set rather than a single product, because the game keeps a tabletop game as a set with a record of its own.",
+      "because": "a tabletop game is kept as a set with its own record (TableGameItemSet, TableGameItemSetData)"
+    },
+    {
+      "do": "Check that every part of a set arrived, because the game names them: a play mat, a deck box and a comic book.",
+      "because": "a set has named parts (playMatType, deckBoxType, comicBookType)"
+    },
+    {
+      "do": "Expect the parts to be visible in the world, because each of them has a mesh of its own.",
+      "because": "each part has its own mesh (m_DeckBoxMesh, m_ComicBookMesh, m_PlayMatMesh)"
+    },
+    {
+      "do": "Put the table where a customer can reach it, because customers have states for wanting to play and for walking to a table.",
+      "because": "customers have states for wanting to play, walking to the play table and playing there (WantToPlayGame, WalkToPlayTable, PlayingAtTable)"
+    },
+    {
+      "do": "Let the shop's own list decide what is on show rather than putting everything out, because the shop data holds which board game kinds are shown.",
+      "because": "the shop data holds which board game item kinds are shown (m_ShownBoardGameItemType)"
+    },
+    {
+      "do": "Use the shipped icons when telling one game from another, because the game has icons for particular tabletop games.",
+      "because": "the game ships icons for particular tabletop games (Icon_Boardgame_Speedrobo_Necro, Icon_Boardgame_Speedrobo_Mafia)"
+    },
+    {
+      "do": "Do not confuse a tabletop game with the playable card game, because playable card sets are defined separately.",
+      "because": "playable card sets are defined by the game of their own (PlayCardSet, PlayCardSetUI)"
+    },
+    {
+      "do": "Reorder before the shelf is empty, because the same board game screen is the one that brings them back.",
+      "because": "the board game restock screen is the one these goods use (RestockItemBoardGameScreen)"
+    }
+  ],
+  "commonMistakes": [
+    "Trying to restock a tabletop game from the item screen and finding nothing there.",
+    "Treating a game set as one product and being surprised by the play mat, deck box and comic book.",
+    "Putting a table out of reach and expecting customers to use it.",
+    "Mixing up the tabletop games you sell with the card game customers play."
+  ],
+  "relatedEntities": [
+    "board-games-and-their-accessories",
+    "the-card-game-you-can-play",
+    "restocking-from-a-cart"
+  ],
+  "sources": [
+    "A local copy of the game, read only. The grounding for each step is listed on the technical reference pages; nothing here is estimated."
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "id": "using-the-warehouse-without-losing-stock",
+  "title": "Using the warehouse without losing stock",
+  "tier": "published",
+  "kind": "article",
+  "target": "How to keep stock in the warehouse in TCG Card Shop Simulator, given that the game has a shelf type of its own for the back room, tracks those shelves apart from the shop's, and can store boxes unopened.",
+  "version": "no version stated by this build (see the sources page)",
+  "prerequisites": [
+    "Shelves bought for the back room",
+    "Stock you do not want on the shop floor yet",
+    "An idea of what the shop needs today"
+  ],
+  "steps": [
+    {
+      "do": "Buy the shelf type the warehouse expects rather than any shelf.",
+      "because": "the warehouse has a shelf type of its own (WarehouseShelf)"
+    },
+    {
+      "do": "Mark the things that should only ever live back there.",
+      "because": "an object can be marked as belonging in the warehouse (m_PlaceObjectInWarehouseOnly)"
+    },
+    {
+      "do": "Count back-room shelves separately from the shop's.",
+      "because": "warehouse shelves are tracked apart from the shop's shelves (m_WarehouseShelfList, m_WarehouseShelfSaveDataList)"
+    },
+    {
+      "do": "Leave stock boxed when you do not need it opened yet.",
+      "because": "stock can be stored boxed rather than unpacked (isBoxed, boxedPackagePos)"
+    },
+    {
+      "do": "Move a shelf only where the game shows it may go.",
+      "because": "the game shows where a shelf may legally be moved (ShelfMoveStateValidArea)"
+    }
+  ],
+  "commonMistakes": [
+    "Unboxing everything and then needing the boxes back.",
+    "Mixing back-room shelves with shop shelves when counting what you own.",
+    "Moving a shelf and assuming its saved contents move with it."
+  ],
+  "relatedEntities": [
+    "the-warehouse-and-its-shelves",
+    "moving-on-old-stock"
+  ],
+  "sources": [
+    "A local copy of the game, read only. Grounding for each step is on the technical reference pages; no number is estimated."
+  ]
+}

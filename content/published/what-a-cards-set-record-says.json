@@ -1,0 +1,74 @@
+{
+  "id": "what-a-cards-set-record-says",
+  "title": "What a card's set record says",
+  "category": "Cards",
+  "summary": "A card in TCG Card Shop Simulator is described by a record that says which expansion it belongs to, whether a pack can hold its rarity or a duplicate of it, which artist name, icon and background it uses, where its previous evolution stage's icon comes from, and which display settings it draws with.",
+  "body": [
+    "A card is more than its artwork and its stats. There is a record behind it that says how it should be presented and what may come out of a pack, which is why two cards of the same kind can differ between expansions.",
+    "It says which expansion the card belongs to. That is a value of its own, so a card can be filed by set rather than by the picture on its face.",
+    "It can hold a rarity back from packs. There is a flag for whether an opened pack can use the card's rarity, which is why some cards are collected rather than pulled.",
+    "It also decides about duplicates. There is a flag for whether a pack can contain a duplicate, so a set can be made to avoid handing out the same card twice.",
+    "It carries its own indices. There is an artist name index, an icon index and a background index, which is why the artist line and the small pictures on a card can be chosen without new artwork being drawn for each one.",
+    "An evolution can point at another expansion. There is a separate expansion value for the icon of a previous evolution stage, so a card's earlier form can come from a different set than the card itself.",
+    "And it holds the display settings it draws with. There is a list of those settings on the record, which is how the same card data can be shown by the interface in the way the set intends.",
+    "The image beside this entry is the game's own: a card icon printed at one of its rarities, which is the artwork the record's icon index points at.",
+    "What this entry does not tell you: how many cards are in any expansion, how a rarity is chosen, or what the duplicate rules cost you. We have not verified those numbers, so we do not print them."
+  ],
+  "facts": [
+    {
+      "claim": "A card's record names the expansion it belongs to.",
+      "evidence": "identifiers: CardUISetting, expansionType, ECardExpansionType"
+    },
+    {
+      "claim": "It says whether an opened pack can use the card's rarity.",
+      "evidence": "identifier: openPackCanUseRarity"
+    },
+    {
+      "claim": "It says whether an opened pack can contain a duplicate.",
+      "evidence": "identifier: openPackCanHaveDuplicate"
+    },
+    {
+      "claim": "It carries an artist name index, an icon index and a background index.",
+      "evidence": "identifiers: artistNameIndex, iconIndex, bgIndex"
+    },
+    {
+      "claim": "It names a separate expansion for the previous evolution stage's icon.",
+      "evidence": "identifiers: previousEvoStageIconExpansion, ECardExpansionType"
+    },
+    {
+      "claim": "It holds a list of display settings.",
+      "evidence": "identifier: cardUISettingDataList"
+    },
+    {
+      "claim": "The game ships an icon per rarity for the cards a record points at, including an epic icon.",
+      "evidence": "asset name: CardIcon_Epic"
+    }
+  ],
+  "related": [
+    "the-settings-that-draw-a-card",
+    "card-sets-and-expansions"
+  ],
+  "images": [
+    {
+      "file": "mapped/what-a-cards-set-record-says-card.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "One of the card icons the game prints at a rarity: two stacked card faces in magenta and purple under the same dark border.",
+        "zh": "游戏按稀有度印制的卡牌图标之一：两张叠放的洋红与紫色卡面，同款深色边框。"
+      }
+    },
+    {
+      "file": "what-a-cards-set-record-says.svg",
+      "kind": "diagram",
+      "alt": {
+        "en": "Diagram: a card's record names its expansion, its pack rarity and duplicate rules, its artist/icon/background indices, its previous evolution icon expansion and its display settings.",
+        "zh": "示意图：卡牌记录写明所属扩展包、是否可进包与可否重复、画师/图标/背景索引、进化前图标所属扩展包，以及显示设置。"
+      },
+      "disclaimer": "Original diagram drawn for this site. It is not a screenshot of the game."
+    }
+  ],
+  "sources": [
+    "A local copy of the game, read only. The grounding for each fact is listed on the technical reference pages; nothing here is estimated."
+  ],
+  "imageTier": "game-image"
+}

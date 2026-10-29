@@ -1,0 +1,53 @@
+{
+  "id": "earning-and-reading-achievements",
+  "title": "Earning and reading achievements",
+  "tier": "published",
+  "kind": "article",
+  "target": "How to read the achievement set a TCG Card Shop Simulator build ships, given that every entry carries an icon and a background and that the two are one picture.",
+  "version": "no version stated by this build (see the sources page)",
+  "prerequisites": [
+    "A shop that has been run for a while",
+    "The achievement list open in the game",
+    "A note of which ones you want"
+  ],
+  "steps": [
+    {
+      "do": "Expect an achievement to be a picture rather than a line of text.",
+      "because": "every numbered achievement carries an icon of its own (Asc_1_Icon, Asc_100_Icon)"
+    },
+    {
+      "do": "Read the icon and the background as one piece of art.",
+      "because": "an entry carries both, and for one entry they are the same artwork at two sizes of story (Asc_100_Icon, Asc_100_BG)"
+    },
+    {
+      "do": "Use the number when you talk about one.",
+      "because": "the set is numbered from one to a hundred and twenty-one (Asc_1_Icon, Asc_121_Icon)"
+    },
+    {
+      "do": "Look for the art in the game rather than in an outside list.",
+      "because": "the icons and backgrounds are shipped with the build (Asc_1_BG, Asc_121_BG)"
+    },
+    {
+      "do": "Expect a set rather than a handful of one-off awards.",
+      "because": "there is an icon and a background for each numbered entry (Asc_101_Icon, Asc_101_BG)"
+    },
+    {
+      "do": "Learn to recognise one by its picture.",
+      "because": "the art is filed per achievement, so the same badge looks the same wherever it shows (Asc_100_Icon, Asc_100_BG)"
+    }
+  ],
+  "commonMistakes": [
+    "Looking for a written description where the game shows a badge.",
+    "Assuming the icon and the background are different achievements.",
+    "Hunting for achievements in the card list rather than in the game's own list.",
+    "Expecting one achievement to stand for the whole set."
+  ],
+  "relatedEntities": [
+    "the-achievements-and-their-art",
+    "licences-and-shop-level",
+    "the-expansions-the-game-ships"
+  ],
+  "sources": [
+    "A local copy of the game, read only. Grounding for each step is on the technical reference pages; nothing here is estimated."
+  ]
+}

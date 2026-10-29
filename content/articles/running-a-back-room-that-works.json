@@ -1,0 +1,47 @@
+{
+  "id": "running-a-back-room-that-works",
+  "title": "Running a back room that actually works",
+  "tier": "published",
+  "kind": "article",
+  "target": "How to keep the warehouse in TCG Card Shop Simulator useful, given that the game counts its shelves separately and lets stock live there boxed as well as unpacked.",
+  "version": "no version stated by this build (see the sources page)",
+  "prerequisites": [
+    "A warehouse you can enter",
+    "Enough warehouse shelves for what you are holding",
+    "An idea of what you are about to put on the shop floor"
+  ],
+  "steps": [
+    {
+      "do": "Put shelving in the warehouse rather than moving shop shelves back there.",
+      "because": "the game keeps a warehouse shelf type of its own (WarehouseShelf)"
+    },
+    {
+      "do": "Keep the shop floor for what is for sale, and move the rest to the back.",
+      "because": "an object can be marked as belonging in the warehouse (m_PlaceObjectInWarehouseOnly)"
+    },
+    {
+      "do": "Leave bulk purchases boxed until you need them.",
+      "because": "a stored thing keeps a boxed state of its own (isBoxed)"
+    },
+    {
+      "do": "Tidy the back room once, then leave it, instead of reshuffling it daily.",
+      "because": "each stored shelf is saved with its position and its contents (WarehouseShelfSaveData)"
+    },
+    {
+      "do": "Watch where the game will let a shelf go before you plan a big rearrangement.",
+      "because": "the game shows the area a shelf may legally be moved in (ShelfMoveStateValidArea)"
+    }
+  ],
+  "commonMistakes": [
+    "Dragging shop shelving into the warehouse instead of using warehouse shelves.",
+    "Unpacking everything on arrival and running out of display space.",
+    "Rearranging the back room in the middle of a busy trading day."
+  ],
+  "relatedEntities": [
+    "the-warehouse-and-its-shelves",
+    "storage-shelves-and-restocking"
+  ],
+  "sources": [
+    "A local copy of the game, read only. Grounding for each step is on the technical reference pages; no number is estimated."
+  ]
+}

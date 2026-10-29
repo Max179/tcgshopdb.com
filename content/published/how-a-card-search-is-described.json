@@ -1,0 +1,70 @@
+{
+  "id": "how-a-card-search-is-described",
+  "title": "How a card search is described",
+  "category": "Cards",
+  "summary": "Searching in the card game of TCG Card Shop Simulator is described rather than scripted: a search carries the condition it resolves under, how many cards are picked and looked at, whether a number has to be met, whether it reveals, where it shuffles, and which queues the cards go into.",
+  "body": [
+    "A card that searches the deck does not do so by a special rule. The search is described by a small record, which is why different cards can look through the deck in different ways without each one being written separately.",
+    "It says when it resolves. There is a condition under which the search is carried out, so the same effect can happen at a different point depending on the kind of resolution it belongs to.",
+    "It says how much it takes. There is a count of cards to pick and a separate count of cards to look at, which is why a search can show you more than it lets you keep.",
+    "It can require a number to be met. There is a flag for whether a count has to be fulfilled, so a search can fail or be narrowed rather than always succeeding.",
+    "It can reveal what it finds. There is a flag for revealing the card, which is why a search can be public or private depending on the effect.",
+    "It decides where the deck is shuffled. There are separate flags for shuffling first, for shuffling the remaining cards afterwards and for shuffling at the end, so the order of a search and its shuffles is described rather than assumed.",
+    "It can look in the discard pile instead of the deck. There is a flag for that, which is how a card can reach back into what has already been thrown away.",
+    "It puts cards into queues, and it names the kinds. The selected cards and the remaining cards each have a queue kind, and a search can name specific monster kinds, so what comes out can be chosen as well as ordered.",
+    "What this entry does not tell you: how many cards a search looks through, what any condition requires, or how often a search appears. We have not verified those numbers, so we do not print them."
+  ],
+  "facts": [
+    {
+      "claim": "A search carries the condition it resolves under.",
+      "evidence": "identifiers: PlayCardSearchData, resolveCardCondition, EActionResolveCardCondition"
+    },
+    {
+      "claim": "It has a count of cards to pick and a count of cards to look at.",
+      "evidence": "identifiers: searchPickCount, searchLookAtCount"
+    },
+    {
+      "claim": "It can require a count to be fulfilled.",
+      "evidence": "identifier: mustFufillCount"
+    },
+    {
+      "claim": "It can reveal the card it finds.",
+      "evidence": "identifier: isRevealCard"
+    },
+    {
+      "claim": "It decides whether the deck is shuffled first, after the remaining cards, or at the end.",
+      "evidence": "identifiers: shuffleDeckFirst, shuffleDeckAfterRemaining, shuffleDeckEnd"
+    },
+    {
+      "claim": "It can search the discard pile rather than the deck.",
+      "evidence": "identifier: isSearchingDiscardPile"
+    },
+    {
+      "claim": "The selected and remaining cards go into queues of their own kinds.",
+      "evidence": "identifiers: selectedCardQueueType, remainingCardQueueType, ECardDrawQueueType"
+    },
+    {
+      "claim": "It can name specific monster kinds.",
+      "evidence": "identifier: specificMonsterTypeList"
+    }
+  ],
+  "related": [
+    "the-rules-of-the-card-game",
+    "the-state-of-a-game-of-cards"
+  ],
+  "images": [
+    {
+      "file": "how-a-card-search-is-described.svg",
+      "kind": "diagram",
+      "alt": {
+        "en": "Diagram: a search names its resolving condition, its pick and look-at counts, where it shuffles, whether it reaches into the discard pile, and the queues it fills.",
+        "zh": "示意图：检索写明结算条件、抽取与查看数量、洗牌位置、是否翻找弃牌堆，以及填充的队列。"
+      },
+      "disclaimer": "Original diagram drawn for this site. It is not a screenshot of the game."
+    }
+  ],
+  "sources": [
+    "A local copy of the game, read only. The grounding for each fact is listed on the technical reference pages; nothing here is estimated."
+  ],
+  "imageTier": "diagram-only"
+}

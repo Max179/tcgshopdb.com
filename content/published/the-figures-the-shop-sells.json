@@ -1,0 +1,84 @@
+{
+  "id": "the-figures-the-shop-sells",
+  "title": "The figures the shop sells",
+  "category": "Shop",
+  "summary": "Figures in TCG Card Shop Simulator are a stock line of their own: the build names a set of them with an icon each, an evolved version beside several of them, podiums to stand them on and a larger statue set that runs past the dragons.",
+  "body": [
+    "Figures are a line of stock rather than decoration. The build names a set of them with an icon each, a bat, a beetle, a fox, a golem, a piggy, a starfish and a toon among them, which is why what you sell is a defined range rather than one generic ornament.",
+    "Each family comes in versions. More than one of these creatures is named in several forms with an evolved one beside them, so a shelf of figures can show a range without the game inventing a second product line for it.",
+    "They stand on something. The podiums are named as objects of their own, with a dark and a dark shiny material for them, which is why a figure arrives as a piece with a base rather than as a lump of painted plastic.",
+    "The podium has artwork of its own as well, so what a figure stands on is drawn rather than left as bare geometry.",
+    "There is a larger set beside the small ones. The statue set runs past the dragons: a beetle, a shellfish, a fox, a tree and a wisp are named among them, so a shop can fill a corner with figures at more than one size.",
+    "Some of the set has more than one state. Shiny versions of several statues are named beside the ordinary ones, which is why two shops can hold the same creature and not look alike.",
+    "The image beside this entry is the game's own: the icons it ships for two of its figures.",
+    "What this entry does not tell you: what any figure costs, how many are in the set, or whether customers prefer one creature to another. We have not verified those numbers, so we do not print them."
+  ],
+  "facts": [
+    {
+      "claim": "The figures are shipped as their own set with an icon each: a bat, a beetle, a fox, a golem, a piggy, a starfish and a toon among them.",
+      "evidence": "asset names: Icon_Toy_BatB, Icon_Toy_Beetle, Icon_Toy_FoxB, Icon_Toy_GolemB, Icon_Toy_PiggyB, Icon_Toy_StarfishB, Icon_Toy_ToonZ"
+    },
+    {
+      "claim": "Several of the families are named in more than one version, with an evolved form beside them.",
+      "evidence": "asset names: Icon_Toy_PiggyEvo, Icon_Toy_StarfishEvo, Icon_Toy_BatD, Icon_Toy_GolemD"
+    },
+    {
+      "claim": "The figures stand on podiums of their own, named with a dark and a dark shiny material.",
+      "evidence": "asset names: StatuePodium, MAT_StatuePodium_Dark, MAT_StatuePodium_DarkShinny"
+    },
+    {
+      "claim": "The podium has a sheet of its own in the build.",
+      "evidence": "asset name: T_StatuePodium_Dark"
+    },
+    {
+      "claim": "The statue set runs past the dragons: a beetle, a shellfish, a fox, a tree and a wisp are named among them.",
+      "evidence": "asset names: Interactable_MonsterStatue_Beetle, Interactable_MonsterStatue_ShellfishD, Interactable_MonsterStatue_FoxD, Interactable_MonsterStatue_TreeD, Interactable_MonsterStatue_Wisp"
+    },
+    {
+      "claim": "There is a single statue mesh of its own for one of the bats.",
+      "evidence": "asset name: BatD_Statue_Mesh"
+    },
+    {
+      "claim": "One group inside the set is sea life: starfish named to four, a jellyfish and three shark fish beside them, with an evolution tree mesh for the starfish line.",
+      "evidence": "asset names: StarfishA, StarfishB, StarfishC, StarfishD, Jellyfish, SharkFishA, SharkFishB, SharkFishC, StarfishEvoTree_Mesh"
+    },
+    {
+      "claim": "Two of the sea-life pieces are carried again as ghosts, and some of them have an idle pose named beside them.",
+      "evidence": "asset names: Ghost_FishD, Ghost_StarfishD, StarfishA_IdlePose, ShellfishD_IdlePose"
+    },
+    {
+      "claim": "Each sea-life piece is carried with its own texture and material, named after the piece.",
+      "evidence": "asset names: T_StarfishA, MAT_StarfishA, T_StarfishD, MAT_StarfishD"
+    },
+    {
+      "claim": "A shiny starfish material and a shellfish material are named beside the ordinary ones, and the fish in the set come as four kinds.",
+      "evidence": "asset names: MAT_Shinny_StarfishA, MAT_ShellfishD, FishA, FishB, FishC, FishD"
+    }
+  ],
+  "related": [
+    "where-the-shops-lists-live",
+    "expanding-and-decorating-the-shop"
+  ],
+  "images": [
+    {
+      "file": "mapped/the-figures-the-shop-sells-fox.png",
+      "kind": "game",
+      "alt": {
+        "en": "The icon the game ships for one of its figures: a fox with a purple ball at its chest and a red mark on its brow.",
+        "zh": "游戏为某件手办提供的图标：胸前抱着紫色球、额上有红斑的狐狸。"
+      }
+    },
+    {
+      "file": "mapped/the-figures-the-shop-sells-golem.png",
+      "kind": "game",
+      "alt": {
+        "en": "A second figure icon: a stone golem with red horns standing on a green base.",
+        "zh": "第二件手办图标：长着红色角的石头魔像，立在绿色底座上。"
+      }
+    }
+  ],
+  "sources": [
+    "A local copy of the game, read only. The grounding for each fact is listed on the technical reference pages; nothing here is estimated."
+  ],
+  "imageTier": "game-image"
+}

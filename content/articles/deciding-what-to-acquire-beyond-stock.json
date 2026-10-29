@@ -1,0 +1,47 @@
+{
+  "id": "deciding-what-to-acquire-beyond-stock",
+  "title": "Deciding what to acquire beyond stock",
+  "tier": "published",
+  "kind": "article",
+  "target": "How to think about the services and extras in TCG Card Shop Simulator, which sit on one fixed list alongside ordinary goods.",
+  "version": "no version stated by this build (see the sources page)",
+  "prerequisites": [
+    "A shop already trading",
+    "Somewhere to spend what you have earned",
+    "An idea of which job you dislike most"
+  ],
+  "steps": [
+    {
+      "do": "Treat the list as one place with goods and services mixed together.",
+      "because": "the game keeps one fixed list of what can be acquired (EShopItem)"
+    },
+    {
+      "do": "Consider the services first if the routine is what wears you down.",
+      "because": "the list includes automatic restocking, automatic placing and a manager (AutoRestock)"
+    },
+    {
+      "do": "Check whether what you want comes in levels before deciding.",
+      "because": "some entries have more than one grade (StorePointUpgrade1)"
+    },
+    {
+      "do": "Remember some entries change the player rather than the shop.",
+      "because": "unlimited energy is on the same list (UnlimitedEnergy)"
+    },
+    {
+      "do": "Do not assume an entry is about stock rather than about packs.",
+      "because": "foil pack options sit on the list as well (FoilBasicPack)"
+    }
+  ],
+  "commonMistakes": [
+    "Assuming everything on the list is a product for the shelves.",
+    "Buying a service before the shop needs one.",
+    "Forgetting that some entries come in grades."
+  ],
+  "relatedEntities": [
+    "the-services-the-game-offers",
+    "machines-that-work-on-their-own"
+  ],
+  "sources": [
+    "A local copy of the game, read only. Grounding for each step is on the technical reference pages; no number is estimated."
+  ]
+}

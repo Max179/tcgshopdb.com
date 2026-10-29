@@ -1,0 +1,64 @@
+{
+  "id": "the-camera-and-the-photo-gallery",
+  "title": "The camera and the photo gallery",
+  "category": "Interface",
+  "tier": "published",
+  "summary": "TCG Card Shop Simulator ships a camera of its own: the phone can be put into a take-photo mode and back out of it, the shot is framed on a grid with a centre mark, the camera screen opens and closes, taking a photo has its own sound, and the pictures go into a gallery you can open full screen.",
+  "body": [
+    "Taking a picture in the shop is a mode rather than a click. There is a way into the take-photo mode and a way back out of it, so the phone is doing something specific while you are framing a shot.",
+    "The shot is framed on a grid. There is a grid and a centre mark for it, which is what the game draws over what you are pointing at rather than leaving you to guess at the middle of the picture.",
+    "The camera has its own screen. It opens and closes, so the viewfinder is a screen of its own rather than a corner of another interface.",
+    "There is a sound for the shot, with a version for the pad as well. That is how the game tells you a picture was actually taken rather than merely framed.",
+    "What you take goes into a gallery. A picture can be opened full screen and closed again, which is why the camera and the album are two parts of one feature rather than two unrelated screens.",
+    "What this entry does not tell you: how many pictures can be kept, where they are stored, or whether they can be taken of anything in particular. We have not verified those, so we do not print them."
+  ],
+  "facts": [
+    {
+      "claim": "The phone can be put into a take-photo mode and back out of it.",
+      "evidence": "asset names: EnterPhoneTakePhotoMode, ExitPhoneTakePhotoMode"
+    },
+    {
+      "claim": "The shot is framed on a grid that has a centre mark of its own.",
+      "evidence": "asset names: CameraPhotoGrid, CameraPhotoGridCenter"
+    },
+    {
+      "claim": "The camera has its own screen, which opens and closes.",
+      "evidence": "asset names: CameraPhotoOpenScreen, CameraPhotoCloseScreen"
+    },
+    {
+      "claim": "Taking the picture has a sound of its own, with a version for the pad.",
+      "evidence": "asset names: SFX_TakePhoto, SFX_TakePhoto_Pad"
+    },
+    {
+      "claim": "A picture can be opened full screen in a gallery and closed again.",
+      "evidence": "asset names: PhotoGalleryImageFullScreenEnter, PhotoGalleryImageFullScreenExit"
+    }
+  ],
+  "related": [
+    "the-screens-you-will-use-most",
+    "the-picture-the-game-draws-for-a-control"
+  ],
+  "images": [
+    {
+      "file": "mapped/the-camera-and-the-photo-gallery-camera.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "The camera icon the game itself draws for this feature: a cream camera body with a rainbow lens ring and a red shutter button.",
+        "zh": "游戏自己画的相机图标：米白机身上的彩虹镜环与红色快门点。"
+      }
+    },
+    {
+      "file": "the-camera-and-the-photo-gallery.svg",
+      "kind": "diagram",
+      "alt": {
+        "en": "Diagram: the phone enters take-photo mode, the shot is framed on a grid, the camera screen opens, the shot has its own sound, and the picture goes into a gallery you can open.",
+        "zh": "相机与相册示意图：手机进入拍照模式、画面按网格取景、相机界面开启、拍照有独立音效、照片进入可打开的相册。"
+      },
+      "disclaimer": "Original diagram drawn for this site. It is not a screenshot of the game."
+    }
+  ],
+  "sources": [
+    "A local copy of the game, read only. The grounding for each fact is listed on the technical reference pages; nothing here is estimated."
+  ],
+  "imageTier": "game-image"
+}

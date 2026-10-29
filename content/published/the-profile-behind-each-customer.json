@@ -1,0 +1,103 @@
+{
+  "id": "the-profile-behind-each-customer",
+  "title": "The profile behind each customer",
+  "category": "Customers",
+  "summary": "A customer in TCG Card Shop Simulator is set up before they walk in: the game gives each kind a profile with an appearance rate, a money range, how many items they want and how likely they are to buy a card.",
+  "body": [
+    "A customer is not only a body walking towards a shelf. Each kind of customer has a profile of its own, and that profile decides how the customer behaves before they ever come through the door.",
+    "The profile carries a name, a kind and the rate at which that kind appears, so a rare customer is rare by design rather than by luck.",
+    "Money is a range rather than one figure. The profile sets the lowest and the highest amount a customer of that kind may carry, along with the most they are willing to spend, which is why two customers of the same kind can behave differently.",
+    "How many items they want is a range as well, with percentages for how random their choice is. A profile can therefore be made predictable for one kind of customer and erratic for another.",
+    "The profile also decides how likely a customer is to buy a card, and it can carry a list of the things that customer will ignore, which is how a kind of customer is steered towards one part of the shop.",
+    "Once a customer is inside, the game saves them as a record of their own: where they are standing, what is in their bag, what they have already taken from a shelf, whether they have checked out, and what they owe for using a play table.",
+    "That record also notes whether the customer is smelly, with a meter kept for it, so being smelly is a state the game tracks rather than only a joke about a shop.",
+    "Trading has a record of its own. It holds whether a trade is going on, the price being asked, the market price it is measured against, and how many times the customer may decline before the trade is over.",
+    "The portraits beside this entry are the game's own: two of the customer pictures it ships.",
+    "What this entry does not tell you: the numbers inside any profile, how many profiles there are, or how the game picks one. We have not verified those, so we do not print them."
+  ],
+  "facts": [
+    {
+      "claim": "Each kind of customer has a profile of its own with a name, a kind and a rate at which it appears.",
+      "evidence": "identifiers: CustomerProfile, name, type, appearRate"
+    },
+    {
+      "claim": "The profile sets a range of money the customer may carry and a maximum they will spend.",
+      "evidence": "identifiers: maxMoneyRangeMin, maxMoneyRangeMax, maxMoney"
+    },
+    {
+      "claim": "The profile sets a range for how many items the customer wants, with percentages for how random that is.",
+      "evidence": "identifiers: maxItemCountRangeMin, maxItemCountRangeMax, itemWantRandomPercentMin, itemWantRandomPercentMax"
+    },
+    {
+      "claim": "The profile sets how likely the customer is to buy a card, and a list of things they ignore.",
+      "evidence": "identifiers: buyCardPercentChance, ignoreItemList"
+    },
+    {
+      "claim": "A customer inside the shop is saved as a record of their own, including their bag and what they have already taken.",
+      "evidence": "identifiers: CustomerSaveData, itemInBagList, cardInBagList, hasCheckedOut, hasTookCardFromShelf"
+    },
+    {
+      "claim": "That record keeps what the customer has spent and what they owe for a play table.",
+      "evidence": "identifiers: currentCostTotal, totalScannedItemCost, currentPlayTableFee"
+    },
+    {
+      "claim": "The game tracks whether a customer is smelly, with a meter of its own.",
+      "evidence": "identifiers: isSmelly, smellyMeter"
+    },
+    {
+      "claim": "Trading has its own record with the asking price, the market price and how many times a customer may decline.",
+      "evidence": "identifiers: CustomerTradeData, m_SellCardAskPrice, m_SellCardMarketPrice, m_MaxDeclineCount, m_DeclineCount"
+    },
+    {
+      "claim": "The manager keeps several customer models, including higher-detail ones, with lists of hair, eyebrows and body parts.",
+      "evidence": "identifiers: m_CustomerPrefab, m_CustomerFemalePrefabHQ, m_HQ_Female_Hair, m_HQ_Female_Eyebrows"
+    },
+    {
+      "claim": "The record keeps the prices of what is in the bag as well as the items, and what the customer is holding in each hand.",
+      "evidence": "identifiers: itemInBagPriceList, cardInBagPriceList, itemInHandList, cardInHandList"
+    },
+    {
+      "claim": "It also keeps what the customer has gathered for a review, what they set out at a table, and their tournament data.",
+      "evidence": "identifiers: customerReviewGatherDataList, tableGameItemSetData, customerTournamentData"
+    },
+    {
+      "claim": "The record carries the customer's state, whether they have played a game, whether they are inside the shop, and whether the customer count has been updated.",
+      "evidence": "identifiers: currentState, hasPlayedGame, isInsideShop, hasUpdatedCustomerCount"
+    }
+  ],
+  "related": [
+    "the-kinds-of-customers",
+    "trading-with-customers"
+  ],
+  "images": [
+    {
+      "file": "mapped/the-profile-behind-each-customer-female.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "One of the customer portraits the game ships.",
+        "zh": "游戏自带的顾客头像之一。"
+      }
+    },
+    {
+      "file": "mapped/the-profile-behind-each-customer-male.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "Another of the customer portraits the game ships.",
+        "zh": "游戏自带的另一位顾客头像。"
+      }
+    },
+    {
+      "file": "the-profile-behind-each-customer.svg",
+      "kind": "diagram",
+      "alt": {
+        "en": "Diagram: a profile sets the appearance rate, money range, item count and card chance before the customer arrives.",
+        "zh": "示意图：顾客到店前，档案已决定出现概率、金额范围、商品数量与买卡几率。"
+      },
+      "disclaimer": "Original diagram drawn for this site. It is not a screenshot of the game."
+    }
+  ],
+  "sources": [
+    "A local copy of the game, read only. The grounding for each fact is listed on the technical reference pages; nothing here is estimated."
+  ],
+  "imageTier": "game-image"
+}

@@ -1,0 +1,62 @@
+{
+  "id": "dressing-the-table-before-a-game",
+  "title": "Dressing the table before a game",
+  "tier": "published",
+  "kind": "article",
+  "target": "How the play table in TCG Card Shop Simulator is put together: the table keeps a set of items, the playmat and the deck box are meshes of their own, and the build ships several sleeve and dice pictures to dress them with.",
+  "version": "no version stated by this build (see the sources page)",
+  "prerequisites": [
+    "A play table in the shop",
+    "Cards worth playing with",
+    "A moment before customers arrive"
+  ],
+  "steps": [
+    {
+      "do": "Treat the table as a set of parts rather than one object, because the table keeps a set of items with its own data.",
+      "because": "the table keeps a set of items with data of its own (TableGameItemSet, TableGameItemSetData, m_TableGameItemSetData)"
+    },
+    {
+      "do": "Lay the playmat as its own piece, because it has a mesh of its own rather than being painted on the table.",
+      "because": "a playmat has a mesh of its own (m_PlayMatMesh, m_Mesh_Playmat)"
+    },
+    {
+      "do": "Watch the mat darken when the game needs the screen calm, because the background darkens behind it.",
+      "because": "the playmat background can be darkened (m_DarkenPlaymatBG)"
+    },
+    {
+      "do": "Put the deck in a box rather than loose, because the deck box is a mesh with a filter of its own.",
+      "because": "a deck box has a mesh and a filter of its own (m_DeckBoxMesh, m_DeckBoxMeshFilter)"
+    },
+    {
+      "do": "Choose the box that fits the deck, because the build ships several box designs including a nine-up tower and a six-up penny-sleeve box.",
+      "because": "the game ships more than one deck box design (T_DeckBox, T_DeckBox4, T_9_UP_TowerDeckbox, T_6_UP_PennySleeves)"
+    },
+    {
+      "do": "Sleeve the deck in the design you want, because there are sleeves for wind, fire and earth, for the game's own set, and a plain second design.",
+      "because": "sleeve artwork exists for several designs (T_CardSleeveWind, T_CardSleeveFire, T_CardSleeveEarth, T_CardSleeveTetramon, CardSleeve_second)"
+    },
+    {
+      "do": "Keep the dice with the table, because the game ships dice artwork and a dice box for it.",
+      "because": "the game ships dice artwork and a dice box (T_D20Dice, Icon_Dice_Yellow, DiceBox_second)"
+    },
+    {
+      "do": "Leave an empty slot visible rather than filling every place, because an empty playmat slot has a picture of its own.",
+      "because": "there is a picture for an empty playmat slot (Icon_EmptyPlaymat)"
+    }
+  ],
+  "commonMistakes": [
+    "Treating the playmat as part of the table and never changing it.",
+    "Putting a deck in a box that does not fit how it is sleeved.",
+    "Forgetting that the mat can darken while a game is on.",
+    "Leaving no empty slot for a card that is on its way.",
+    "Mixing sleeves between decks that are meant to stay apart."
+  ],
+  "relatedEntities": [
+    "playmats-deck-boxes-and-sleeves",
+    "building-and-editing-a-deck",
+    "the-card-game-you-can-play"
+  ],
+  "sources": [
+    "A local copy of the game, read only. Identifiers are listed on the technical reference pages; nothing here is estimated."
+  ]
+}

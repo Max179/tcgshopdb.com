@@ -1,0 +1,90 @@
+{
+  "id": "where-the-shops-lists-live",
+  "title": "Where the shop's lists live",
+  "category": "Storage",
+  "summary": "The shop in TCG Card Shop Simulator is built from two big lists: one holds the furniture and decorations by surface, the other holds what is shown, the restock data, the event data and the shelf costs.",
+  "body": [
+    "The shop does not decide what furniture and stock exist while you play. Two large data objects behind the game hold the lists, and everything you place is drawn from them.",
+    "The first is the object list. It holds the objects, the furniture you can buy, and the decorations split by where they go: floor, walls, the bar along the wall, ceilings, posters and everything else. That split is why a poster cannot be placed on the floor and a wall panel cannot hang in the air.",
+    "The second is the stock list. It holds what the shop shows: item kinds, accessories, figurines and board games, each as a list of its own rather than one untyped pile.",
+    "The same object decides which card material is on offer. Card sets and collection packs each have their own shown type, and packs have a list of their own, which is why a set can be present in the game and still not appear in your shop.",
+    "Restocking and events live there too. The restock data and the game event data are kept in the same place as the stock, so what a worker can bring and what an event can ask for come from the same source.",
+    "So do the costs of shelving. The unlock cost multiplier and the upgrade cost multiplier for shelves are values on this object, which is why two shops can pay different amounts to bring the same shelf into use.",
+    "The object also carries pictures. There are lists of icons for male and female customers and for the player, along with pictures of collection packs and of ancient artifacts, so the screens have something to draw from without hunting for a file.",
+    "An inventory in the game points at these objects rather than holding the values itself. A stock object, a monster object, an object list and a text set are referenced from one place, which is what keeps the shop's contents in a single set of lists.",
+    "What this entry does not tell you: how many items are on any of these lists, what the cost multipliers are set to, or what the ancient artifacts are. We have not verified those, so we do not print them."
+  ],
+  "facts": [
+    {
+      "claim": "One data object holds the objects, the furniture and the decorations split by surface.",
+      "evidence": "identifiers: ShelfData_ScriptableObject, m_ObjectDataList, m_FurniturePurchaseDataList, m_DecoDataList, m_FloorDecoDataList, m_WallDecoDataList, m_WallBarDecoDataList, m_CeilingDecoDataList, m_PosterDecoList, m_OtherDecoList"
+    },
+    {
+      "claim": "Another holds what the shop shows, including item kinds, accessories, figurines and board games.",
+      "evidence": "identifiers: StockItemData_ScriptableObject, m_ShownItemType, m_ShownAccessoryItemType, m_ShownFigurineItemType, m_ShownBoardGameItemType"
+    },
+    {
+      "claim": "It also holds which card sets and collection packs are shown, and a list of card packs.",
+      "evidence": "identifiers: m_ShownCardExpansionType, m_ShownCollectionPackType, m_CardPackItemTypeList"
+    },
+    {
+      "claim": "The restock data and the game event data are kept in the same object.",
+      "evidence": "identifiers: m_RestockDataList, m_GameEventDataList"
+    },
+    {
+      "claim": "The shelf unlock and upgrade cost multipliers are values on it as well.",
+      "evidence": "identifiers: m_ShelfUnlockCostMultiplier, m_ShelfUpgradeCostMultiplier"
+    },
+    {
+      "claim": "It carries image lists, including customer and player icons and artifact pictures.",
+      "evidence": "identifiers: m_MaleCustomerIconList, m_FemaleCustomerIconList, m_PlayerIcon, m_AncientArtifactSpriteList, m_CollectionPackImageSpriteList"
+    },
+    {
+      "claim": "An inventory points at these data objects rather than holding the values itself.",
+      "evidence": "identifiers: InventoryBase, m_StockItemData_SO, m_MonsterData_SO, m_ObjectData_SO, m_TextSO"
+    },
+    {
+      "claim": "The build ships a checklist icon of its own, a clipboard of ticked rows, for the lists it draws.",
+      "evidence": "identifier: ChecklistIcon"
+    },
+    {
+      "claim": "The figurines are pictured too, kept as numbered shelf-icon atlases of the build's own.",
+      "evidence": "asset name: sactx-0-1024x512-DXT5|BC3-ShelfIcon_0_7-06f5c0d7"
+    }
+  ],
+  "related": [
+    "how-a-shelf-holds-its-stock",
+    "expanding-and-decorating-the-shop"
+  ],
+  "images": [
+    {
+      "file": "mapped/where-the-shops-lists-live-checklist.png",
+      "kind": "game",
+      "alt": {
+        "en": "The checklist icon the game draws for its lists: a clipboard with two ticked rows and one empty.",
+        "zh": "游戏为清单绘制的图标：夹纸板上两行已勾选、一行未勾选。"
+      }
+    },
+    {
+      "file": "mapped/where-the-shops-lists-live-figurines.png",
+      "kind": "game",
+      "alt": {
+        "en": "One of the shelf-icon sheets the game ships: figurines of bat-like creatures and a hammer, each standing on its own round base.",
+        "zh": "游戏自带的货架图标图集之一：蝙蝠状小怪与一把锤子的摆件，各自立在自己的圆底座上。"
+      }
+    },
+    {
+      "file": "where-the-shops-lists-live.svg",
+      "kind": "diagram",
+      "alt": {
+        "en": "Diagram: one list holds objects, furniture and decorations by surface, another holds what is shown, the restock and event data, the shelf costs and the images.",
+        "zh": "示意图：一份列表按表面保存物件、家具与装饰；另一份保存展示内容、补货与活动数据、货架成本与图片。"
+      },
+      "disclaimer": "Original diagram drawn for this site. It is not a screenshot of the game."
+    }
+  ],
+  "sources": [
+    "A local copy of the game, read only. The grounding for each fact is listed on the technical reference pages; nothing here is estimated."
+  ],
+  "imageTier": "game-image"
+}

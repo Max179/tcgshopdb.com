@@ -1,0 +1,80 @@
+{
+  "id": "what-the-pack-opener-shows-you",
+  "title": "What the pack opener shows you",
+  "category": "Shop",
+  "summary": "The automatic pack opener in TCG Card Shop Simulator carries a screen of its own: it shows whether it is idle, working or finished, how many packs it has dealt with, and how much time is left.",
+  "body": [
+    "The machine that opens packs for you is not a silent box. It carries an interface of its own, kept as a screen group on the machine rather than being reported somewhere else in the shop.",
+    "That screen has three states: idle, processing and done. Keeping them separate is how the machine tells you that it is waiting for something, working through packs, or finished with what it was given.",
+    "It shows how many packs it has handled. There is a text element for the pack count, so the number is on the machine rather than only in the shop's records.",
+    "It also shows time passing while it works. A text element keeps the processing time left, which is why the machine can tell you how long the job will take instead of only starting it.",
+    "There are two fill bars rather than one: one for the idle state and one for the work in progress. A bar for being idle is a small thing, but it is how the machine shows that it is ready rather than broken.",
+    "The machine itself is configured as well as drawn. It holds a maximum number of packs and a time for opening one, and its interface has a position of its own with a vertical offset, which is why where the screen sits is a setting rather than a guess.",
+    "It also has a place of its own in the shop. There is a position inside it, a place to stand and an object type, and it is marked for whether it cuts the navmesh or counts as a generic object, which is how the shop knows the machine is there.",
+    "The interface is spawned from a prefab of its own, so the screen belongs to the machine and appears with it rather than being drawn once for the whole shop.",
+    "The machines that clean and the machines that open packs are different objects with different jobs, and this one's screen is written for opening: a count of packs, a time remaining and a bar that fills as it goes.",
+    "The image beside this entry is the game's own: the booster icon it draws, the pack the machine works through.",
+    "What this entry does not tell you: how long a pack takes, how many it can work through at once, or what it costs to run. We have not verified those numbers, so we do not print them."
+  ],
+  "facts": [
+    {
+      "claim": "The automatic opener has an interface of its own, kept as a screen group on the machine.",
+      "evidence": "identifiers: AutoCardOpenerUI, m_ScreenGrp"
+    },
+    {
+      "claim": "Its screen has three states: idle, processing and done.",
+      "evidence": "identifiers: m_IdleGrp, m_ProcessingGrp, m_DoneGrp"
+    },
+    {
+      "claim": "It shows a pack count and the processing time left.",
+      "evidence": "identifiers: m_PackCountText, m_ProcessingTimeLeft"
+    },
+    {
+      "claim": "It has two fill bars, one for idling and one for working.",
+      "evidence": "identifiers: m_IdleFillBar, m_ProcessingFillBar"
+    },
+    {
+      "claim": "The interface is spawned from a prefab of its own.",
+      "evidence": "identifiers: AutoCardOpenerUISpawner, m_AutoCardOpenerUIPrefab"
+    },
+    {
+      "claim": "The machine holds a maximum pack count and a time for opening a pack, and its interface has a position with an offset.",
+      "evidence": "identifiers: m_MaxPackCount, m_PackOpenTime, m_UIPos, m_UIPosYOffset"
+    },
+    {
+      "claim": "It has a position inside, a place to stand and an object type, and is marked for cutting the navmesh or being a generic object.",
+      "evidence": "identifiers: m_PosInside, m_StandLoc, m_ObjectType, m_NavMeshCut, m_IsGenericObject"
+    },
+    {
+      "claim": "The game ships a booster icon of its own, the pack its opener works through.",
+      "evidence": "asset name: Icon_Booster"
+    }
+  ],
+  "related": [
+    "machines-that-work-on-their-own",
+    "the-settings-you-can-change"
+  ],
+  "images": [
+    {
+      "file": "mapped/what-the-pack-opener-shows-you-booster.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "The booster icon the game itself uses: a pack with gold caps and a purple middle printed with a lightning bolt, on a black field.",
+        "zh": "游戏自带的补充包图标：金色两端、紫色中部并印有闪电图案的卡包，位于黑色背景上。"
+      }
+    },
+    {
+      "file": "what-the-pack-opener-shows-you.svg",
+      "kind": "diagram",
+      "alt": {
+        "en": "Diagram: the pack opener shows an idle bar, a processing bar and time left, then a finished state with a pack count.",
+        "zh": "示意图：开包机显示闲置条、处理条与剩余时间，完成后显示已处理包数。"
+      },
+      "disclaimer": "Original diagram drawn for this site. It is not a screenshot of the game."
+    }
+  ],
+  "sources": [
+    "A local copy of the game, read only. The grounding for each fact is listed on the technical reference pages; nothing here is estimated."
+  ],
+  "imageTier": "game-image"
+}

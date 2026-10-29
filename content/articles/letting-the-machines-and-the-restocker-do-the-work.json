@@ -1,0 +1,73 @@
+{
+  "id": "letting-the-machines-and-the-restocker-do-the-work",
+  "title": "Letting the machines and the restocker do the work",
+  "tier": "published",
+  "kind": "article",
+  "target": "How to use the automatic pack opener, the cleaning machine and the restock delivery in TCG Card Shop Simulator without losing track of what has been opened, what has been ordered or what the shelves are waiting for.",
+  "version": "no version stated by this build (see the sources page)",
+  "prerequisites": [
+    "A shop with room for the machines",
+    "A restock order to place",
+    "Shelf space for what arrives"
+  ],
+  "steps": [
+    {
+      "do": "Place the automatic pack opener as shop equipment rather than looking for a switch for it.",
+      "because": "the machines are registered as shop equipment instead of menu switches (m_AutoPackOpenerList, InteractableAutoPackOpener)"
+    },
+    {
+      "do": "Check what the opener is doing before you assume it is idle, because it keeps a state of its own.",
+      "because": "the opener keeps its own state and a count of the packs it has opened (AutoPackOpenerSaveData, isProcessing, packOpenedCount)"
+    },
+    {
+      "do": "Watch what the opener has produced rather than only how many packs went in, because it records the kinds of item and the cards separately.",
+      "because": "it keeps the kinds of item and the compact cards it produced (itemTypeList, compactCardDataAmountList)"
+    },
+    {
+      "do": "Let the cleaning machine work the floor while you are busy, since cleaning has its own machine and the game keeps a list of them.",
+      "because": "cleaning has a machine of its own (T_Cleanser_BaseColor, m_AutoCleanserList)"
+    },
+    {
+      "do": "Order through the restocker instead of expecting stock to appear, because deliveries run through one.",
+      "because": "deliveries are run through a restocker rather than appearing directly (ERestockerType, Icon_RestockBox)"
+    },
+    {
+      "do": "Pick the restocker that suits the order: the kinds run from a bike through vans and trucks to a helicopter.",
+      "because": "restockers come in kinds, from a bike to a helicopter (Bike, Van, Truck, BigTruck, Helicopter)"
+    },
+    {
+      "do": "Sort the restock list deliberately rather than scrolling, because the game gives you sorting options of its own.",
+      "because": "there is a set of sorting options including by licence level and by cost (ERestockSortingType, LicenseLevelLowToHigh, CostHighToLow)"
+    },
+    {
+      "do": "Expect the manager to package by type, with a box for items, one for shelves and one for cards, and a smaller box as well.",
+      "because": "the manager holds a box for items, one for shelves and one for cards (m_PackageBoxPrefab, m_PackageBoxShelfPrefab, m_PackageBoxCardPrefab, m_PackageBoxSmallPrefab)"
+    },
+    {
+      "do": "Pay for a restock cart on its own screen rather than treating it like an ordinary purchase.",
+      "because": "the cart is paid for on a checkout screen of its own (RestockCheckoutItemBar, RestockItemPanelUI, RestockItemCheckoutScreen)"
+    },
+    {
+      "do": "Use the scanner when you are standing at the shelf, because there is a restock screen built around it.",
+      "because": "there is a scanner for restocking (ScannerRestockScreen)"
+    },
+    {
+      "do": "Handle tabletop games through their own screen, since they do not restock like items or cards.",
+      "because": "tabletop games restock through a screen of their own (RestockItemBoardGameScreen)"
+    }
+  ],
+  "commonMistakes": [
+    "Leaving the automatic opener running and forgetting what it has already produced.",
+    "Ordering without checking which restocker suits the size of the order.",
+    "Treating a restock cart as a normal purchase and being surprised by its own checkout screen.",
+    "Trying to restock tabletop games from the item screen instead of their own."
+  ],
+  "relatedEntities": [
+    "machines-that-work-on-their-own",
+    "the-restocker-and-its-vehicles",
+    "scanner-restocking-workflow"
+  ],
+  "sources": [
+    "A local copy of the game, read only. The grounding for each step is listed on the technical reference pages; nothing here is estimated."
+  ]
+}

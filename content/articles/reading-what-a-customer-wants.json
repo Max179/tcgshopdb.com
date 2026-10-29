@@ -1,0 +1,47 @@
+{
+  "id": "reading-what-a-customer-wants",
+  "title": "Reading what a customer actually wants",
+  "tier": "published",
+  "kind": "article",
+  "target": "How to tell what a customer in TCG Card Shop Simulator is doing, using the states the game already tracks instead of guessing from where someone happens to be standing.",
+  "version": "no version stated by this build (see the sources page)",
+  "prerequisites": [
+    "A shop open for trading",
+    "At least one shelf and a staffed counter",
+    "A play table if you are running games"
+  ],
+  "steps": [
+    {
+      "do": "Watch whether a customer is heading for a shelf or for the counter before you move anything.",
+      "because": "the game tracks taking an item from a shelf and wanting to pay as separate states (ECustomerState)"
+    },
+    {
+      "do": "Treat a card shelf differently from an ordinary one.",
+      "because": "wanting a card is a state of its own, apart from wanting an ordinary item (WantToBuyCard)"
+    },
+    {
+      "do": "Keep a play table clear if you have one, because customers arrive intending to use it.",
+      "because": "the game has states for walking to a play table and playing at one (WantToPlayGame)"
+    },
+    {
+      "do": "Leave the bulk donation box reachable if you want cards brought to you.",
+      "because": "there are states for walking to the bulk donation box and taking from it (WalkToBulkDonationBox)"
+    },
+    {
+      "do": "Expect a queue at the counter before you expect a sale, and staff it accordingly.",
+      "because": "queueing to pay and being ready to pay are separate states (ECustomerState)"
+    }
+  ],
+  "commonMistakes": [
+    "Chasing a customer who is already on their way out.",
+    "Assuming every visitor wants an ordinary item rather than a card.",
+    "Blocking the bulk donation box with stock."
+  ],
+  "relatedEntities": [
+    "the-kinds-of-customers",
+    "trading-with-customers"
+  ],
+  "sources": [
+    "A local copy of the game, read only. Grounding for each step is on the technical reference pages; no number is estimated."
+  ]
+}

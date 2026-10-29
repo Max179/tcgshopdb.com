@@ -1,0 +1,54 @@
+{
+  "id": "the-clothes-a-shopkeeper-wears",
+  "title": "The clothes a shopkeeper can wear",
+  "category": "Interface",
+  "tier": "published",
+  "summary": "TCG Card Shop Simulator ships a clothing set of its own: a casual shirt, cargo pants, two crop tops, boots, a bra and a bicycle helmet, each named at several levels of detail and cut from a cloth sheet.",
+  "body": [
+    "The shopkeeper in TCG Card Shop Simulator is dressed from a set the game ships rather than from one fixed model. A casual shirt, cargo pants, a pair of boots and a bicycle helmet are named as pieces of their own, so what the player wears is a choice rather than a costume.",
+    "The set runs past the obvious pieces. Two crop tops and a bra are named beside the shirt and the trousers, which is why the same shopkeeper can be dressed for a shift or for a look rather than being locked into one outfit.",
+    "Every piece is carried at more than one level of detail. The boots, the cargo pants, the crop tops and the casual shirt each have their own levels named, so a garment stays in the build whether it is being worn in the shop or seen from across the street.",
+    "Several pieces have named variants as well. There are women's and men's boots, an ankle boot and variants of the cargo pants, the casual shirt and both crop tops, which is how one garment can come in more than one fit without the game inventing a second item.",
+    "The clothes are cut from a cloth of their own. A woven cloth sheet is shipped with a normal map beside it, and the garments carry packed sheets and masks named for them, so a piece is drawn rather than approximated.",
+    "That is why the clothing is worth knowing about even for a player who never changes it: the same sheets are what makes two shopkeepers in two shops look different without the game shipping a second character.",
+    "It also tells a player where a look comes from. A garment in the game is a named object with its own sheets, not a colour swap on a base body, so what can be worn is a defined list rather than an open palette.",
+    "What this entry does not tell you: how a piece is unlocked, what any of it costs, or whether customers notice it. We have not verified those, so we do not print them."
+  ],
+  "facts": [
+    {
+      "claim": "The game ships a clothing set of its own: a casual shirt, cargo pants, two crop tops, boots, a bra and a bicycle helmet among the pieces.",
+      "evidence": "asset names: Casual_Shirt, CargoPants, Crop_Top_01, Crop_Top_02, Boots, Bra, Bicycle_Helmet"
+    },
+    {
+      "claim": "The pieces are carried at more than one level of detail each.",
+      "evidence": "asset names: Boots_LOD0, Boots_LOD1, Boots_LOD2, Cargo_Pants_LOD0, Crop_Top_01_LOD0, Casual_Shirt_LOD0"
+    },
+    {
+      "claim": "Several pieces carry named variants: women's and men's boots, an ankle boot, and variants of the cargo pants, the casual shirt and both crop tops.",
+      "evidence": "asset names: Boots_01_F Variant, Boots_01_M Variant, Ankle_Boots Variant, Cargo_Pants_01 Variant, Casual_Shirt_01 Variant, Crop_Top_01 Variant, Crop_Top_02 Variant"
+    },
+    {
+      "claim": "The clothes are cut from a cloth sheet of their own, with a normal map beside it and packed sheets and masks named per garment.",
+      "evidence": "asset names: T_Cloth_D, T_Cloth_N, T_CargoPants_Packed, T_ApparelMask_Crop_Top_01, T_ApparelMask_Crop_Top_02"
+    }
+  ],
+  "related": [
+    "the-state-of-a-game-of-cards",
+    "why-every-customer-looks-different",
+    "the-settings-you-can-change"
+  ],
+  "images": [
+    {
+      "file": "mapped/the-clothes-a-shopkeeper-wears-cloth.png",
+      "kind": "game",
+      "alt": {
+        "en": "The cloth sheet the game ships for its clothing: a woven grey fabric.",
+        "zh": "游戏为服装自带的布料贴图：灰色机织布。"
+      }
+    }
+  ],
+  "sources": [
+    "A local copy of the game, read only. The grounding for each fact is listed on the technical reference pages; nothing here is estimated."
+  ],
+  "imageTier": "game-image"
+}

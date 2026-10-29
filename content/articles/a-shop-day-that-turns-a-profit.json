@@ -1,0 +1,44 @@
+{
+  "id": "a-shop-day-that-turns-a-profit",
+  "title": "A shop day that turns a profit",
+  "tier": "published",
+  "kind": "article",
+  "target": "How to spend a shop day so the day's takings pay for the next delivery, using only the shop behaviour the game defines.",
+  "version": "no version stated by this build (see the sources page)",
+  "prerequisites": [
+    "Packs in stock",
+    "Shelf space you can reach",
+    "Access to the pricing screens"
+  ],
+  "steps": [
+    {
+      "do": "Open packs before opening hours rather than during them.",
+      "because": "an automatic opener exists for bulk opening and keeps its own progress (InteractableAutoPackOpener, AutoPackOpenerSaveData)"
+    },
+    {
+      "do": "Price what you opened before it reaches a shelf.",
+      "because": "price tags are separate objects applied to goods (InteractableCardPriceTag)"
+    },
+    {
+      "do": "Fill the shelves, because a shelf only sells what it holds.",
+      "because": "shelf contents are tracked by a manager (ShelfManager)"
+    },
+    {
+      "do": "Put the day's profit into one upgrade at a time.",
+      "because": "upgrades are a defined set of choices reached from the expansion screen (EUpgradeType, ExpansionShopUIScreen)"
+    }
+  ],
+  "commonMistakes": [
+    "Opening packs during opening hours and leaving the counter empty.",
+    "Shelving cards that have not been priced.",
+    "Buying decoration before you have stock."
+  ],
+  "relatedEntities": [
+    "packs-and-opening",
+    "prices-and-price-tags",
+    "expanding-and-decorating-the-shop"
+  ],
+  "sources": [
+    "A local copy of the game, read only. Grounding for each step is on the technical reference pages; no number is estimated."
+  ]
+}

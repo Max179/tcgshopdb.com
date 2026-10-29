@@ -1,0 +1,47 @@
+{
+  "id": "setting-up-a-fixture-once",
+  "title": "Setting up a fixture once",
+  "tier": "published",
+  "kind": "article",
+  "target": "How to configure the fixtures in a TCG Card Shop Simulator shop at the fixture itself, using the setting screens the game gives each one.",
+  "version": "no version stated by this build (see the sources page)",
+  "prerequisites": [
+    "Fixtures placed in the shop",
+    "Money for whatever you are changing",
+    "A moment before customers arrive"
+  ],
+  "steps": [
+    {
+      "do": "Stand at the fixture you are changing rather than hunting for one menu for all of them.",
+      "because": "there are setting screens per kind of fixture (SetCashierCounterSettingScreen)"
+    },
+    {
+      "do": "Price items at their own screen before you rely on them selling.",
+      "because": "there is a screen for setting an item price (SetItemPriceScreen)"
+    },
+    {
+      "do": "Number your play tables so you can tell one from another.",
+      "because": "tables are numbered through their own screen (SetPlayerTableNumberScreen)"
+    },
+    {
+      "do": "Set card storage shelves at the shelf rather than from memory.",
+      "because": "storage shelves have a setting screen of their own (SetCardStorageShelfSettingScreen)"
+    },
+    {
+      "do": "Read the confirmation before selling a shelf.",
+      "because": "selling a shelf has a confirm screen of its own (ConfirmSellShelfScreen)"
+    }
+  ],
+  "commonMistakes": [
+    "Looking for a single global settings menu for fixtures.",
+    "Filling a shelf that was never configured.",
+    "Selling a shelf by accident."
+  ],
+  "relatedEntities": [
+    "the-setting-screens-for-your-fixtures",
+    "shelves-stock-and-upgrades"
+  ],
+  "sources": [
+    "A local copy of the game, read only. Grounding for each step is on the technical reference pages; no number is estimated."
+  ]
+}

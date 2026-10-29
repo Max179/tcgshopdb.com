@@ -1,0 +1,93 @@
+{
+  "id": "machines-that-work-on-their-own",
+  "title": "Machines that work on their own",
+  "category": "Shop",
+  "summary": "Some of the work in TCG Card Shop Simulator can be handed to machines: the game ships an automatic pack opener and an automatic cleanser, and keeps each one state while it runs.",
+  "body": [
+    "Not every job has to be yours. The game ships machines that run by themselves, an automatic pack opener and an automatic cleanser among them, so part of the routine can be left going while you are elsewhere.",
+    "The opener deals with packs for you. It keeps its own record of whether it is working and of how many packs it has opened, which is why you can walk away from a pile of them.",
+    "It also keeps what came out. The machine stores the kinds of item and the cards it has produced, so what it opens is collected rather than scattered across the shop.",
+    "The cleanser takes the other half of the work. Cleaning has a machine of its own, which is why a shop can stay presentable while you are standing at the counter.",
+    "Both are objects in the shop. They are fitted and registered like other equipment, so a machine takes up space and can be moved rather than being a switch in a menu.",
+    "They sit alongside the restock deliveries. Because the shop also has its own restocker, these machines are one layer of automation among several rather than a single upgrade that replaces the rest.",
+    "Three of the pictures beside this entry are the game's own: the on and off icons it draws for a machine that can be switched, and the cleanser it ships.",
+    "What this entry does not tell you: what either machine costs, how fast it works, or whether it is worth having. We have not verified those numbers, so we do not print them."
+  ],
+  "facts": [
+    {
+      "claim": "The game ships an automatic pack opener.",
+      "evidence": "identifier: InteractableAutoPackOpener"
+    },
+    {
+      "claim": "The build also names a vending machine of its own among the machines a shop can run.",
+      "evidence": "asset name: PO_VendingMachine"
+    },
+    {
+      "claim": "The opener keeps its own state and a count of the packs it has opened.",
+      "evidence": "identifiers: AutoPackOpenerSaveData, isProcessing, packOpenedCount"
+    },
+    {
+      "claim": "It keeps the kinds of item and the cards it has produced.",
+      "evidence": "identifiers: itemTypeList, compactCardDataAmountList"
+    },
+    {
+      "claim": "Cleaning has a machine of its own.",
+      "evidence": "identifiers: T_Cleanser_BaseColor, m_AutoCleanserList"
+    },
+    {
+      "claim": "The machines are registered as shop equipment rather than menu switches.",
+      "evidence": "identifier: m_AutoPackOpenerList"
+    },
+    {
+      "claim": "The game ships an on icon and an off icon of its own for a machine that can be switched.",
+      "evidence": "asset names: Icon_TurnOn, Icon_TurnOff"
+    },
+    {
+      "claim": "The automatic machines carry numbered prefabs of their own: an auto cleanser and an auto pack opener among them.",
+      "evidence": "asset names: PO_AutoCleanser1, PO_AutoCleanser2, PO_AutoCleanser3, PO_AutoPackOpener2, PO_AutoPackOpener3"
+    }
+  ],
+  "related": [
+    "shelves-stock-and-upgrades",
+    "the-restocker-and-its-vehicles"
+  ],
+  "images": [
+    {
+      "file": "mapped/machines-that-work-on-their-own-turn-on.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "The on icon the game itself uses for a machine: a green rounded button printed ON beside a power symbol.",
+        "zh": "游戏为机器使用的开启图标：绿色圆角按钮，印着 ON 与电源符号。"
+      }
+    },
+    {
+      "file": "mapped/machines-that-work-on-their-own-turn-off.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "The off icon the game itself uses for a machine: a red rounded button printed OFF beside a power symbol.",
+        "zh": "游戏为机器使用的关闭图标：红色圆角按钮，印着 OFF 与电源符号。"
+      }
+    },
+    {
+      "file": "mapped/machines-that-work-on-their-own-cleanser.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "The base colour texture taken from the game of the automatic cleanser.",
+        "zh": "取自游戏的自动清洁机基础色贴图。"
+      }
+    },
+    {
+      "file": "machines-that-work-on-their-own.svg",
+      "kind": "diagram",
+      "alt": {
+        "en": "Diagram: packs are left with the opener, it works through them, the cleanser runs, and you stay at the counter.",
+        "zh": "示意图：把卡包交给开启机、它自行处理、清洁机同时运行、你留在柜台。"
+      },
+      "disclaimer": "Original diagram drawn for this site. It is not a screenshot of the game."
+    }
+  ],
+  "sources": [
+    "A local copy of the game, read only. Identifiers are listed on the technical reference pages; nothing here is estimated."
+  ],
+  "imageTier": "game-image"
+}

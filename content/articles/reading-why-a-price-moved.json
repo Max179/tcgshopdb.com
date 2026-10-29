@@ -1,0 +1,69 @@
+{
+  "id": "reading-why-a-price-moved",
+  "title": "Reading why a price moved",
+  "tier": "published",
+  "kind": "article",
+  "target": "How to use the kinds of price change in TCG Card Shop Simulator: what the game names as a reason, why foils, borders and elements show up on that list, and where to look before buying into a move.",
+  "version": "no version stated by this build (see the sources page)",
+  "prerequisites": [
+    "A shop with cards in it",
+    "The price board or a tag within reach",
+    "A restock decision to make"
+  ],
+  "steps": [
+    {
+      "do": "Treat a price move as something the game records rather than as a random wobble, because changes are managed as their own system and labelled in the interface.",
+      "because": "price changes are managed as their own system and their kinds are labelled (PriceChangeManager, PriceChangeTypeText)"
+    },
+    {
+      "do": "Read the change where it is shown instead of from memory, because price information can be put in front of you.",
+      "because": "price information can be shown where the player is (PricePopupSpawner)"
+    },
+    {
+      "do": "Expect a change to name the pack a card came out of, per rarity, because there are kinds for each pack tier.",
+      "because": "the kinds include a common, rare, epic and legend pack card (CommonPackCard, RarePackCard, EpicPackCard, LegendPackCard)"
+    },
+    {
+      "do": "Do not assume the rarity is fixed: a pack can move a rarity at random, and there is a kind for a pack with no common card as well.",
+      "because": "a random rarity pack card and a none-common pack card are kinds of their own (RandomRarityPackCard, NoneCommonPackCard)"
+    },
+    {
+      "do": "Check the element when a card moves, because fire, earth, water and wind each have a kind and there is a random element too.",
+      "because": "element kinds exist for fire, earth, water and wind, plus a random element (FireElement, EarthElement, WaterElement, WindElement, RandomElement)"
+    },
+    {
+      "do": "Check the border as well, because silver, gold, ex and full art borders each have a kind and there is a random border.",
+      "because": "border kinds exist for silver, gold, ex and full art, plus a random border (SilverBorder, GoldBorder, ExBorder, FullArtBorder, RandomBorder)"
+    },
+    {
+      "do": "Check whether the card is a first edition, a foil or not a foil, because all three are kinds of change.",
+      "because": "first edition, foil and non-foil are kinds of their own (FirstEdition, Foil, NonFoil)"
+    },
+    {
+      "do": "Remember that a random effect and a figurine are on the same list, so a move is not always about the card's printing.",
+      "because": "a random effect and a figurine are kinds on the same list (RandomEffect, Figurine)"
+    },
+    {
+      "do": "Check which set the card belongs to, because the expansion's own cards carry a kind of change.",
+      "because": "there is a kind for the expansion's own cards (ExpansionTetramon)"
+    },
+    {
+      "do": "Look at the history rather than the last number, and keep the current and the past percentages apart.",
+      "because": "there is a screen for an item's price over time and the game keeps current and past percentage changes (ItemPriceGraphScreen, m_ItemPricePercentChangeList, m_ItemPricePercentPastChangeList)"
+    }
+  ],
+  "commonMistakes": [
+    "Buying into a price that moved for a reason that will not last, like a single pack's rarity roll.",
+    "Ignoring element, border, first edition and foil reasons and treating every move as demand.",
+    "Reading only the current percentage and not the past one, when the game keeps both.",
+    "Assuming a move is about the card's printing when a random effect or a figurine was the reason."
+  ],
+  "relatedEntities": [
+    "prices-and-price-tags",
+    "price-changes-and-cash",
+    "price-history-and-graphs"
+  ],
+  "sources": [
+    "A local copy of the game, read only. The grounding for each step is listed on the technical reference pages; nothing here is estimated."
+  ]
+}

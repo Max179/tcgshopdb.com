@@ -1,0 +1,61 @@
+{
+  "id": "following-a-pull-from-pack-to-value",
+  "title": "Following a pull from pack to value",
+  "tier": "published",
+  "kind": "article",
+  "target": "How to open packs in TCG Card Shop Simulator and then read what you actually pulled, using the pack sequence, the automatic opener and the obtained-card page.",
+  "version": "no version stated by this build (see the sources page)",
+  "prerequisites": [
+    "Packs to open",
+    "The opening sequence available on the shop computer or by hand",
+    "The automatic opener if you have one placed"
+  ],
+  "steps": [
+    {
+      "do": "Watch the pack itself, not only the cards that come out.",
+      "because": "the pack is a mesh with an animator of its own inside a sequence (CardOpeningSequence, m_CardPackMesh, m_CardPackAnimator)"
+    },
+    {
+      "do": "Expect the cards to be shown at set positions rather than wherever they land.",
+      "because": "the sequence keeps a list of positions the cards are shown at (m_ShowAllCardPosList)"
+    },
+    {
+      "do": "Look for the two marks that matter while the sequence runs.",
+      "because": "there is an icon for a new card and one for a high-value card (m_NewCardIcon, m_HighValueCardIcon)"
+    },
+    {
+      "do": "If you use the automatic opener, read its screen states instead of waiting blindly.",
+      "because": "its screen has idle, processing and done groups, with two fill bars, a pack count and the processing time left (m_IdleGrp, m_ProcessingGrp, m_DoneGrp, m_IdleFillBar, m_ProcessingFillBar, m_PackCountText, m_ProcessingTimeLeft)"
+    },
+    {
+      "do": "Stock the machine to its limit before starting a long session.",
+      "because": "the machine holds a maximum pack count and a time per pack, and its interface is placed with an offset (m_MaxPackCount, m_PackOpenTime, m_UIPos, m_UIPosYOffset)"
+    },
+    {
+      "do": "Check the page that shows what you obtained rather than trusting the moment of the pull.",
+      "because": "the game has a page of its own for a card you have obtained, with amounts and a value line (ShowCardObtainedPage, m_CardAmountUIGroupList, m_ValueGrp, m_ValueText, m_TotalValueText)"
+    },
+    {
+      "do": "Page through that screen instead of reading only the first one.",
+      "because": "it has page texts and next and previous buttons (m_PageText, m_CurrentPageValueText, m_NextButton, m_PreviousButton)"
+    },
+    {
+      "do": "Look at the price graph on that page before deciding what to do with the card.",
+      "because": "the page carries a price graph screen of its own (m_ItemPriceGraphScreen)"
+    }
+  ],
+  "commonMistakes": [
+    "Deciding a pack was bad before the sequence has finished showing the cards.",
+    "Leaving the automatic opener half stocked and coming back to nothing done.",
+    "Reading the pull from memory instead of from the obtained-card page.",
+    "Selling a card without looking at its price graph on the same page."
+  ],
+  "relatedEntities": [
+    "the-pack-and-how-it-opens",
+    "what-the-pack-opener-shows-you",
+    "the-page-that-shows-what-you-pulled"
+  ],
+  "sources": [
+    "A local copy of the game, read only. Grounding for each step is on the technical reference pages; no number is estimated."
+  ]
+}

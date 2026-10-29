@@ -1,0 +1,61 @@
+{
+  "id": "reading-a-cards-set-record-before-you-buy",
+  "title": "Reading a card's set record before you buy",
+  "tier": "published",
+  "kind": "article",
+  "target": "What a card's own record says about the set it belongs to in TCG Card Shop Simulator, so packs and singles are bought with the set list in view.",
+  "version": "no version stated by this build (see the sources page)",
+  "prerequisites": [
+    "Cards in the shop or in a pack",
+    "A set worth collecting",
+    "The pack screen or a shelf to check against"
+  ],
+  "steps": [
+    {
+      "do": "Start from the set a card names rather than from its picture.",
+      "because": "a card's record names the expansion it belongs to (CardUISetting, expansionType, ECardExpansionType)"
+    },
+    {
+      "do": "Treat the set list as fixed rather than as a label you can invent.",
+      "because": "cards are grouped into a fixed list of named expansions that the game ships (Tetramon, Destiny, Ghost, Megabot, FantasyRPG, CatJob, FoodieGO, Ascension)"
+    },
+    {
+      "do": "Read the finish as a second, separate list.",
+      "because": "a card's finish is a separate fixed list of border styles (ECardBorderType, CardBorder_Base, CardBorder_FirstEdition, CardBorder_Silver, CardBorder_Gold, CardBorder_EX)"
+    },
+    {
+      "do": "Expect the artwork to follow the finish.",
+      "because": "the game ships a border image for each finish, including the full-art frames (CardCenterFrameFullArtMask, CardFrontFullArt_Fire, CardFrontFullArt_Water)"
+    },
+    {
+      "do": "Check whether a pack can even use the card's rarity before chasing it.",
+      "because": "a record says whether an opened pack can use the card's rarity (openPackCanUseRarity)"
+    },
+    {
+      "do": "Check whether a pack can contain a duplicate.",
+      "because": "a record says whether an opened pack can contain a duplicate (openPackCanHaveDuplicate)"
+    },
+    {
+      "do": "Know that the artist, the icon and the background are recorded as indices rather than as names.",
+      "because": "a record carries an artist name index, an icon index and a background index (artistNameIndex, iconIndex, bgIndex)"
+    },
+    {
+      "do": "Expect an evolution's icon to be able to come from a different set.",
+      "because": "a record names a separate expansion for the previous evolution stage's icon (previousEvoStageIconExpansion)"
+    }
+  ],
+  "commonMistakes": [
+    "Assuming a card's set from its border colour alone.",
+    "Chasing a rarity the pack you are buying cannot use.",
+    "Forgetting that a duplicate is a property of the pack rather than of the card.",
+    "Treating the evolution icon as part of the same set as the card."
+  ],
+  "relatedEntities": [
+    "what-a-cards-set-record-says",
+    "card-sets-and-expansions",
+    "pack-tiers-and-names"
+  ],
+  "sources": [
+    "A local copy of the game, read only. Grounding for each step is on the technical reference pages; no number is estimated."
+  ]
+}

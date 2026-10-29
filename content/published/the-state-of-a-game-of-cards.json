@@ -1,0 +1,128 @@
+{
+  "id": "the-state-of-a-game-of-cards",
+  "title": "The state of a game of cards",
+  "category": "Cards",
+  "summary": "A game in TCG Card Shop Simulator keeps its own board: positions for the deck, the discard pile, the element areas, the guardian row and the hand, lists of the cards in each of those places, three separate attack totals, the card you are hovering or dragging, and a flag for a turn that is waiting to resolve.",
+  "body": [
+    "A match is a set of places and lists rather than a score kept elsewhere. The game prepares a position for every place a card can be: the deck, the discard pile, the element areas, the guardian row and the hand, and it keeps a list of cards for each of them.",
+    "The deck is split in two. There is a list for the cards at the top of the deck and another for the cards at the bottom, which is how a card can be sent under the deck rather than only on top of it.",
+    "It follows what you are doing with your hands. There is a current selected card, a card being dragged and a card being hovered, along with a list for what is being shown in the centre of the board.",
+    "It also knows where you are pointing. The element area you are hovering over is tracked by its index, which is why a card can be aimed at one of the areas rather than the whole board.",
+    "Attack is kept in three totals. There is the base attack, a boost from the elements involved and a boost from cards, so what a card does can be worked out from separate parts instead of one number that changes unpredictably.",
+    "The board keeps its own data. There are setup and deck data lists of its own, which is how a match can be built from the game's card data rather than from whatever happens to be on the shelf.",
+    "Resolving an action is a state. There is a list of the cards selected for a resolution and a list of the cards that are valid for it, along with a flag for a turn that is waiting, so the board can pause rather than guess.",
+    "A resolution can also be told not to repeat a kind of monster, which is why there is a list to check against and a list of the kinds already chosen.",
+    "The board carries its effects. There is an animation list for a card's element attack, along with effects for damage, for an evolution, for a frozen counter exploding, for a frozen area exploding and for a shuffle, so what happens is drawn rather than only recorded.",
+    "It remembers the last thing thrown away. There is a list of the cards discarded most recently, which is what lets a discarded card be referred to after it has left play.",
+    "A deck can leave the game and come back. The card game manager keeps a list of decks copied out as text and a list of card data pasted back in, with a test string and a test paste list of its own, which is why a deck can be shared as text rather than only played.",
+    "The same board can be played by the computer. It knows whether it is the one being played by the machine, and it keeps lists of the kinds of monster in its hand and of which kinds it wants to get or to keep, so an opponent uses the same structure as you.",
+    "Each set knows where it belongs. There is a player flag, an index for its deck, and references to the table game and the board interface, along with the meshes for the playmat and the deckbox and the points a card is searched for or placed at.",
+    "A frozen card is marked. The build ships a freeze icon of its own, which is the picture behind the freeze counters and the frozen element areas the board plays its effects from.",
+    "What this entry does not tell you: how many cards a deck holds, what any card's attack is, or how the machine decides its move. We have not verified those numbers, so we do not print them."
+  ],
+  "facts": [
+    {
+      "claim": "The board holds a position list for the deck, the discard pile, the element areas, the guardian row and the hand.",
+      "evidence": "identifiers: PlayCardSet, m_DeckPosList, m_DiscardPosList, m_ElementAreaPosList, m_GuardianCardPosList, m_HoldCardPosList"
+    },
+    {
+      "claim": "It keeps card lists for all cards, the deck, the discard pile, the guardians, the hand and the element areas.",
+      "evidence": "identifiers: m_AllCard3dList, m_DeckCard3dList, m_DiscardCard3dList, m_GuardianCard3dList, m_HoldCard3dList, m_ElementAreaCardList"
+    },
+    {
+      "claim": "The deck is split into a top list and a bottom list.",
+      "evidence": "identifiers: m_TopDeckCard3dList, m_BottomDeckCard3dList"
+    },
+    {
+      "claim": "It tracks a selected, a dragging and a hovered card, and a list of cards shown in the centre.",
+      "evidence": "identifiers: m_CurrentSelectedCard, m_CurrentDraggingCard, m_CurrentHoverOverCard, m_CenterShowCardList, m_CurrentHoverOverSearchCardUI"
+    },
+    {
+      "claim": "The hovered element area is tracked by index.",
+      "evidence": "identifier: m_CurrentHoverElementAreaIndex"
+    },
+    {
+      "claim": "Attack is kept as a base total with an element boost and a card boost.",
+      "evidence": "identifiers: m_AtkPowerList, m_BoostElementAtkPowerList, m_BoostCardAtkPowerList"
+    },
+    {
+      "claim": "The board keeps its own setup and deck data lists.",
+      "evidence": "identifiers: m_SetupCardDataList, m_DeckCardDataList"
+    },
+    {
+      "claim": "Resolving an action has a selected list, a valid list and a waiting flag.",
+      "evidence": "identifiers: m_ResolveActionSelectedCardList, m_ResolveActionValidCardList, m_IsWaitingActionResolve"
+    },
+    {
+      "claim": "A resolution can avoid repeating a monster kind, with a list to check and a list of kinds selected.",
+      "evidence": "identifiers: m_ActionResolveMonsterTypeNoRepeatCheckList, m_ActionResolveMonsterTypeSelectedList"
+    },
+    {
+      "claim": "The board carries an element attack animation list and effects for damage, evolution, a frozen counter, a frozen area and a shuffle.",
+      "evidence": "identifiers: m_PlayCardElemAtkAnimList, m_DamagedVFX, m_EvoVFXList, m_FreezeCounterExplodeVFX, m_FreezeElementAreaExplodeVFX, m_ShuffleVFX"
+    },
+    {
+      "claim": "It remembers the last discarded cards and the monsters standing in the element areas.",
+      "evidence": "identifiers: m_LastTriggerDiscardedCard3dList, m_ElementAreaMonsterDataList"
+    },
+    {
+      "claim": "The same board can be machine-controlled, with lists of the monster kinds in hand and the kinds to get or hold.",
+      "evidence": "identifiers: m_IsAIControlled, m_AIHandMonsterTypeList, m_AIPrioritizeGetMonsterTypeList, m_AIPrioritizeHoldMonsterTypeList"
+    },
+    {
+      "claim": "A set has a player flag, a deck index, references to the table game and board interface, and the playmat and deckbox meshes with their parents.",
+      "evidence": "identifiers: m_IsPlayer, m_DeckIndex, m_PlayTableGame, m_PlayCardSetUI, m_Mesh_Playmat, m_MeshParentGrp_Playmat, m_Mesh_Deckbox, m_MeshFilter_Deckbox, m_MeshParentGrp_Deckbox"
+    },
+    {
+      "claim": "There are separate positions for the deck's start and end, the discard's start and end, a card being searched for, a card searched out of the discard pile and a card shown before it goes to the bottom.",
+      "evidence": "identifiers: m_DeckStartPos, m_DeckEndPos, m_DiscardStartPos, m_DiscardEndPos, m_SearchCardStartPos, m_SearchDiscardPileCardStartPos, m_ShowBeforeGoDeckBottomPos"
+    },
+    {
+      "claim": "The board has an animation of its own and a place to spawn a card into.",
+      "evidence": "identifiers: m_PlayCardSetAnim, m_SpawnCardPos"
+    },
+    {
+      "claim": "It draws a fake visual of the deck and keeps a parent for the card being held.",
+      "evidence": "identifiers: m_DeckFakeVisual, m_HoldCardPosParent"
+    },
+    {
+      "claim": "It has a group of guardian positions, a position for the card shown in the centre, checkers on the left and the right, and a place items spawn.",
+      "evidence": "identifiers: m_GuardCardPosListGrp, m_CenterAreaShowPos, m_LeftRightCardCheckerA, m_LeftRightCardCheckerB, m_ItemSpawnPos"
+    },
+    {
+      "claim": "The card game manager keeps lists for copying a deck out as text and for pasting card data back in, with a test string and a test paste list of its own.",
+      "evidence": "identifiers: PlayCardGameManager, m_DeckCopyStringList, m_DeckCopyStringTest, m_DeckPasteStringList, m_PasteCardDataListTest"
+    },
+    {
+      "claim": "The build ships a freeze icon of its own for the frozen state on the board.",
+      "evidence": "asset name: Icon_Freeze"
+    }
+  ],
+  "related": [
+    "the-card-game-you-can-play",
+    "the-rules-of-the-card-game"
+  ],
+  "images": [
+    {
+      "file": "mapped/the-state-of-a-game-of-cards-freeze.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "The freeze icon the game ships: a pale blue hexagonal plate ringed by small icy studs.",
+        "zh": "游戏自带的冻结图标：淡蓝色六边形板块，四周环绕小冰晶钉。"
+      }
+    },
+    {
+      "file": "the-state-of-a-game-of-cards.svg",
+      "kind": "diagram",
+      "alt": {
+        "en": "Diagram: the board prepares places for deck, discard, areas, guardians and hand, tracks the cards in each, totals attack from three parts, and resolves actions.",
+        "zh": "示意图：牌桌为牌库、弃牌堆、区域、守护与手牌准备位置，分别记录其中的卡牌，把攻击力由三部分合计，并结算行动。"
+      },
+      "disclaimer": "Original diagram drawn for this site. It is not a screenshot of the game."
+    }
+  ],
+  "sources": [
+    "A local copy of the game, read only. The grounding for each fact is listed on the technical reference pages; nothing here is estimated."
+  ],
+  "imageTier": "game-image"
+}

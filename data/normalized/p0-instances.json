@@ -1,11 +1,12 @@
 {
   "game": "TCG Card Shop Simulator",
   "engine": "unity",
-  "version": "OPNeonGames | Card Shop Simulator (app.info)",
+  "version": "no version stated by this build",
   "source": {
     "assembly": "C:/uTorria/Downloads/TCG Card Shop Simulator/Card Shop Simulator_Data/Managed/Assembly-CSharp.dll",
     "extractor": "tcg-p0-inventory@0.2.0",
     "extractedAt": "2026-09-27T16:27:05.713Z",
+    "productLabel": "OPNeonGames | Card Shop Simulator", "versionSource": { "status": "absent", "searched": "2026-10-01", "method": "every file in the copy was scanned for a version-shaped string; only engine and library versions were found", "playerSettingsSlot": "reads 1.0, a default, and the same slot is unreliable (the R.E.P.O. copy reads 0.1 there while its own release label says v0.4.0)", "note": "the copy is identified by the product label the game records for itself, never by an invented number" },
     "note": "per-instance decoded values; each instance is one object whose layout consumed its payload exactly"
   },
   "count": 260,

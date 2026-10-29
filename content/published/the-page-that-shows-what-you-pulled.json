@@ -1,0 +1,77 @@
+{
+  "id": "the-page-that-shows-what-you-pulled",
+  "title": "The page that shows what you pulled",
+  "category": "Cards",
+  "summary": "Pulling a card in TCG Card Shop Simulator does not only add stock: the game has a page of its own for a card you have obtained, with pages, a total value, a price graph and its own look for legend cards.",
+  "body": [
+    "Pulling a card does not only add it to a shelf. The game keeps a page of its own for a card you have obtained, so what came out of a pack is presented as a result rather than only as stock.",
+    "That page counts as well as shows. It keeps a list of card amounts, a value group, a line for the value being shown and a total for everything in the result, so a pull can be judged in one place.",
+    "It is paged rather than scrolled. There are page texts, a value for the current page and next and previous buttons, which is how a large haul is read a screen at a time.",
+    "It can also show a price graph. The page carries the graph screen of its own, so a card can be weighed on how its price has moved rather than only on what it is worth right now.",
+    "Graded cards have a panel of their own. It can show the picture of an empty slot, a plus sign and the card itself with a value line, which is how a card and the case it went into are shown together.",
+    "Legend cards are not given a flat shine. Two materials are scrolled across the card at their own speeds on each axis, so the glow drifts instead of sitting still.",
+    "Collection packs have pictures of their own as well: a kind, a full picture, and a top and a bottom piece that can be used separately, so a pack can be shown whole or built from parts.",
+    "What this entry does not tell you: what any card is worth, how the glow is tuned, or how many collection packs there are. We have not verified those, so we do not print them."
+  ],
+  "facts": [
+    {
+      "claim": "The game has a page of its own for a card you have obtained.",
+      "evidence": "identifier: ShowCardObtainedPage"
+    },
+    {
+      "claim": "That page keeps a list of card amounts, a value group, a value line and a total value line.",
+      "evidence": "identifiers: m_CardAmountUIGroupList, m_ValueGrp, m_ValueText, m_TotalValueText"
+    },
+    {
+      "claim": "The page has page texts and next and previous buttons.",
+      "evidence": "identifiers: m_PageText, m_CurrentPageValueText, m_NextButton, m_PreviousButton"
+    },
+    {
+      "claim": "The page carries the price graph screen of its own.",
+      "evidence": "identifier: m_ItemPriceGraphScreen"
+    },
+    {
+      "claim": "The graded card panel can show an empty slot picture, a plus sign, the card itself and a value line.",
+      "evidence": "identifiers: GradeCardPanelUI, m_ShowEmptySlotImage, m_ShowPlusText, m_CardUI, m_EmptySlotImage, m_ValueText"
+    },
+    {
+      "claim": "Legend cards get a moving glow from two materials with their own speeds on each axis.",
+      "evidence": "identifiers: LegendCardGlowTexturePanner, m_Material1, m_Material2, m_SpeedX1, m_SpeedX2, m_SpeedY1, m_SpeedY2"
+    },
+    {
+      "claim": "Collection packs have a kind, a full picture and a top and a bottom piece.",
+      "evidence": "identifiers: CollectionPackImageSprite, colelctionPackType, fullSprite, topSprite, bottomSprite"
+    },
+    {
+      "claim": "The page buttons use an arrow picture the game ships.",
+      "evidence": "identifier: Arrow"
+    }
+  ],
+  "related": [
+    "opening-a-pack-on-screen",
+    "prices-and-price-tags"
+  ],
+  "images": [
+    {
+      "file": "mapped/the-page-that-shows-what-you-pulled-arrow.png",
+      "kind": "game",
+      "alt": {
+        "en": "The arrow the game draws on its page buttons, a white triangle with a blue outline.",
+        "zh": "游戏画在翻页按钮上的箭头：白底蓝边的三角形。"
+      }
+    },
+    {
+      "file": "the-page-that-shows-what-you-pulled.svg",
+      "kind": "diagram",
+      "alt": {
+        "en": "Diagram: a pulled card is shown on its own page with a value, a total, pages, and a price graph for the card.",
+        "zh": "示意图：抽到的卡在专属页面展示，含价值、总计、翻页与价格走势图。"
+      },
+      "disclaimer": "Original diagram drawn for this site. It is not a screenshot of the game."
+    }
+  ],
+  "sources": [
+    "A local copy of the game, read only. The grounding for each fact is listed on the technical reference pages; nothing here is estimated."
+  ],
+  "imageTier": "game-image"
+}

@@ -1,0 +1,72 @@
+{
+  "id": "the-services-the-game-offers",
+  "title": "The services the game offers",
+  "category": "Shop",
+  "summary": "TCG Card Shop Simulator keeps a fixed list of the things you can acquire beyond stock, and several of them are services rather than goods: automatic restocking, automatic placing of items and a manager.",
+  "body": [
+    "There is a fixed list, not a shopfront. The game keeps one list of what you can acquire beyond ordinary stock, which is why these are defined items rather than an open market.",
+    "Some of them are services. The list includes automatic restocking, automatic placing of items and an automatic manager, which is why part of the shop can be run without you doing it yourself.",
+    "One of them changes what a run looks like. There is an entry for unlimited energy, so not every item on the list is about the shop rather than about the player.",
+    "They come in grades. Some things on the list have more than one level, including store adjustments, which is why the list is not simply a set of one-off unlocks.",
+    "Some are about packs. The list includes foil pack options, so what you can buy includes ways to change the packs you open rather than only the things in the shop.",
+    "Others are bundles of goods. There are packs and chests on the same list alongside the services, which is why it mixes what you own with what you can do.",
+    "What this entry does not tell you: what anything costs, how any of it is paid for, or what each one changes in detail. We have not verified those, so we do not print them."
+  ],
+  "facts": [
+    {
+      "claim": "The game keeps one fixed list of the things you can acquire beyond stock.",
+      "evidence": "identifier: EShopItem"
+    },
+    {
+      "claim": "The list includes services: automatic restocking, automatic placing and an automatic manager.",
+      "evidence": "identifiers: AutoRestock, AutoPlaceItem, AutoManager"
+    },
+    {
+      "claim": "Unlimited energy is an entry on the same list.",
+      "evidence": "identifier: UnlimitedEnergy"
+    },
+    {
+      "claim": "Some entries come in more than one level, including store adjustments.",
+      "evidence": "identifiers: StorePointUpgrade1, StorePointUpgrade2, StorePointUpgrade3"
+    },
+    {
+      "claim": "The list includes foil pack options alongside goods.",
+      "evidence": "identifier: FoilBasicPack"
+    },
+    {
+      "claim": "Removing advertisements is an entry on the same list.",
+      "evidence": "identifier: RemoveAd"
+    },
+    {
+      "claim": "Gifting and healing each have a sound of their own in the build.",
+      "evidence": "asset names: SFX_Gift, SFX_Heal"
+    }
+  ],
+  "related": [
+    "the-upgrades-you-can-buy",
+    "machines-that-work-on-their-own"
+  ],
+  "images": [
+    {
+      "file": "mapped/the-services-the-game-offers-shopicon.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "The icon the game itself uses for its shop screen.",
+        "zh": "游戏本身用于其商店界面的图标。"
+      }
+    },
+    {
+      "file": "the-services-the-game-offers.svg",
+      "kind": "diagram",
+      "alt": {
+        "en": "Diagram: the list offers goods and services, you pick one, and it changes either what you own or what runs by itself.",
+        "zh": "示意图：列表中既有商品也有服务、选择其一、改变你拥有的东西或自动运行的事项。"
+      },
+      "disclaimer": "Original diagram drawn for this site. It is not a screenshot of the game."
+    }
+  ],
+  "sources": [
+    "A local copy of the game, read only. Identifiers are listed on the technical reference pages; nothing here is estimated."
+  ],
+  "imageTier": "game-image"
+}

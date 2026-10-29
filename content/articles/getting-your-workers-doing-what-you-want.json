@@ -1,0 +1,60 @@
+{
+  "id": "getting-your-workers-doing-what-you-want",
+  "title": "Getting your workers doing what you want",
+  "tier": "published",
+  "kind": "article",
+  "target": "How to direct a worker in TCG Card Shop Simulator without standing over them: the interaction screen the tasks hang off, the two price options on the price screen, the paged list of pack types and the two separate permissions a cashier counter has.",
+  "version": "no version stated by this build (see the sources page)",
+  "prerequisites": [
+    "A shop that is open and running",
+    "At least one worker you can interact with",
+    "Some idea of which job you want the worker to take on"
+  ],
+  "steps": [
+    {
+      "do": "Start from the worker rather than from a settings menu.",
+      "because": "the task screen hangs off the worker's own interaction screen rather than sitting in a general options list (WorkerInteractUIScreen, WorkerSetPrimarySecondaryTaskScreen)"
+    },
+    {
+      "do": "Set both the main task and the second task before you walk away.",
+      "because": "the screen is for a primary and a secondary task, so leaving one unset leaves the worker with nothing to fall back on (WorkerSetPrimarySecondaryTaskScreen)"
+    },
+    {
+      "do": "Deal with the price options on the price screen, not by trusting the worker.",
+      "because": "the price screen carries separate selections for rounding a price up and for whether the worker may set card prices at all (m_RoundUpPriceTickImage, m_CanSetCardPricePriceTickImage)"
+    },
+    {
+      "do": "Read the multiplier as a direction, not only a number.",
+      "because": "the screen shows a multiplier as a percentage and gives it a positive or a negative colour, so the worker's rule can push a price either way (m_MultiplierPercentText, m_PositiveColor, m_NegativeColor)"
+    },
+    {
+      "do": "Page through the pack list instead of assuming the first screen is all of it.",
+      "because": "the pack-type screen shows a list of panels with next and previous buttons, so the choices do not all fit on one page (m_WorkerPackTypeOptionPanelUIList, m_NextPageBtn, m_PreviousPageBtn)"
+    },
+    {
+      "do": "Check whether a pack type is locked before you rely on it.",
+      "because": "each pack-type panel has a locked group of its own alongside its name, image and tick (WorkerPackTypeOptionPanelUI, m_LockedGrp, m_TickImage, m_NameText)"
+    },
+    {
+      "do": "Treat checkout and trading at a counter as two permissions.",
+      "because": "the counter setting screen keeps a tick for checkout and a separate tick for trading, so granting one does not grant the other (SetCashierCounterSettingScreen, m_CanCheckoutTick, m_CanTradeTick)"
+    },
+    {
+      "do": "Set each worker up on their own rather than once for the whole staff.",
+      "because": "the screens are per worker and the game ships worker icons for each of them, so two workers can be given different jobs (Icon_Worker0, Icon_Worker1)"
+    }
+  ],
+  "commonMistakes": [
+    "Setting a main task and leaving the second task empty.",
+    "Letting a worker set card prices when the price rule they work to has not been set.",
+    "Assuming a pack type is available when its panel is still locked.",
+    "Expecting trade permission at a counter to follow from checkout permission."
+  ],
+  "relatedEntities": [
+    "setting-what-your-workers-do",
+    "the-restocker-and-its-vehicles"
+  ],
+  "sources": [
+    "A local copy of the game, read only. Grounding for each step is on the technical reference pages; no number is estimated."
+  ]
+}

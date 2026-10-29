@@ -1,0 +1,152 @@
+{
+  "id": "expanding-and-decorating-the-shop",
+  "title": "Expanding and decorating the shop",
+  "category": "Shop",
+  "tier": "published",
+  "summary": "Your shop is something you build up over time: the game separates expansion, furniture, upgrades, shop customisation and decoration into their own systems.",
+  "body": [
+    "Expansion is its own screen and its own step, so growing the building is a distinct decision from buying stock.",
+    "Furniture is bought through a separate screen, which is why placing a shelf and expanding the shop are not the same action.",
+    "Upgrades are a defined set of choices, and decoration has its own data and panel, so how the shop looks is tracked separately from what it can do.",
+    "The decoration panel is built from states rather than one button. It shows a centred name and a line for whether you already own the piece, then separate button groups for buying it, for having bought it, for placing it, for equipping it and for changing it, with a locked background and an animation for each state.",
+    "A piece of decoration carries its own data. It has a main name and optional replacement names, a flag for a bar, a main texture with a roughness map and a normal map, a colour and a smoothness, which is why a piece looks like itself rather than like a generic shape.",
+    "What this entry does not tell you: costs, what each expansion unlocks or how decoration affects customers. We have not verified those numbers, so we do not print them."
+  ],
+  "facts": [
+    {
+      "claim": "Expanding the shop has its own interface screen.",
+      "evidence": "identifiers: ExpansionShopUIScreen, EUpgradeType"
+    },
+    {
+      "claim": "Furniture is purchased through a separate screen.",
+      "evidence": "identifier: FurnitureShopUIScreen"
+    },
+    {
+      "claim": "Shop customisation and decoration are tracked as their own data.",
+      "evidence": "identifiers: ShopCustomizationManager, ShopDecoData, ShopDecoPanelUI"
+    },
+    {
+      "claim": "The build names arrow signs for entering and exiting, in several lettered variants.",
+      "evidence": "asset names: ArrowSignEnterA, ArrowSignExitA, ArrowSignLongA"
+    },
+    {
+      "claim": "Shop purchases are grouped into defined kinds.",
+      "evidence": "identifier: EShopItem"
+    },
+    {
+      "claim": "The decoration panel shows a centred name and whether the piece is already owned.",
+      "evidence": "identifiers: m_TopUIGrp, m_NameCenteredText, m_OwnedText"
+    },
+    {
+      "claim": "It keeps separate button groups for buying, having bought, placing, equipping and changing a piece, with a locked background and an animation for each state.",
+      "evidence": "identifiers: m_BuyBtnGrp, m_BoughtBtnGrp, m_PlaceBtnGrp, m_EquippedBtnGrp, m_EquippedBtnGrpB, m_ChangeBtnGrp, m_ChangeBtnGrpB, m_ChangeBtnGrpB_Locked, m_LockedBG, m_BuyBtnAnim, m_BoughtBtnAnim, m_EquippedBtnAnim, m_EquippedBtnAnimB"
+    },
+    {
+      "claim": "A decoration piece carries a main name, optional replacement names, a bar flag, a main texture with a roughness map and a normal map, a colour and a smoothness.",
+      "evidence": "identifiers: mainNameText, replaceNameXXXText, replaceNameYYYText, showBar, mainTexture, roughnessMap, normalMap, color, smoothness"
+    },
+    {
+      "claim": "The signs go beyond arrows: the build names an empty sign with a material of its own, a no-entry sign and a sign for a closed counter.",
+      "evidence": "asset names: EmptySignModel, MAT_EmptySign, MAT_NoEntrySign, MAT_CounterClosedSign"
+    },
+    {
+      "claim": "The arrow signs are things you can interact with, and the build also names a plain arrow sign.",
+      "evidence": "asset names: Interactable_ArrowSign1, ArrowSignPlainA, ArrowSignPlainB"
+    },
+    {
+      "claim": "The build also names an open-sign material, a close-sign mesh and a sign for a closed warehouse room.",
+      "evidence": "asset names: MAT_Open, CloseSign_Mesh, ClosedWarehouseRoomSign_Mesh"
+    },
+    {
+      "claim": "Card displays are named in sizes of their own, including a three-by-two wall and a big and a small electronic model.",
+      "evidence": "asset names: CardDisplayWall3X2, CardDisplayElectronicBig_Mesh, CardDisplayElectronicSmall_Mesh"
+    },
+    {
+      "claim": "Monster statues are shipped as a set of their own, with dragons for earth, fire, thunder and water and a bear, a golem and a piggy among them, some with shiny versions.",
+      "evidence": "asset names: Interactable_MonsterStatue_DragonEarth, Interactable_MonsterStatue_DragonFire, Interactable_MonsterStatue_DragonThunder, Interactable_MonsterStatue_DragonWater, Interactable_MonsterStatue_Bear, Interactable_MonsterStatue_GolemA, Interactable_MonsterStatue_ShinyGolemA, Interactable_MonsterStatue_PiggyA"
+    },
+    {
+      "claim": "A weapons closet is shipped as a fitting of its own, with a glass and a metal version and a second variant beside them.",
+      "evidence": "asset names: Weapons closet glass, Weapons closet metal, weapons closet B"
+    },
+    {
+      "claim": "The shop's own surfaces are named as well: a wall, a wall bar and a floor, each with a default sheet.",
+      "evidence": "asset names: wall_Default, wallBar_Default R, floor_Default"
+    },
+    {
+      "claim": "The floor carries a normal sheet beside its default one.",
+      "evidence": "asset names: floor_Default, floor_Default N"
+    },
+    {
+      "claim": "The arrow signs are drawn from an atlas of exit and enter boards, in lettered variants and several colours, with a running-figure exit sign among them.",
+      "evidence": "asset name: T_ArrowSign"
+    },
+    {
+      "claim": "The open and closed signs, and the no-entry board with its welcome counterpart, are each drawn from a single sheet of the build's own, as is the counter-closed sign.",
+      "evidence": "asset names: T_OpenCloseSign, T_NoEntranceSign, CounterClosedSign"
+    },
+    {
+      "claim": "The water dragon carries a texture, a material and a ghost version of its own, with its attack pose named beside them.",
+      "evidence": "asset names: T_DragonWater, MAT_WaterDragon, Ghost_DragonWater, WaterDragon_AtkPose"
+    },
+    {
+      "claim": "A water diorama and a water eye are named with their own sheets.",
+      "evidence": "asset names: T_Diorama_Water, T_Eye_Water_N, M_Eye_Water"
+    },
+    {
+      "claim": "A diorama is carried for the other elements as well: earth, fire and wind are named beside the water one.",
+      "evidence": "asset names: T_Diorama_Earth, T_Diorama_Fire, T_Diorama_Wind"
+    }
+  ],
+  "related": [
+    "shelves-stock-and-upgrades",
+    "prices-and-price-tags"
+  ],
+  "images": [
+    {
+      "file": "mapped/expanding-and-decorating-the-shop-furniture.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "The albedo texture taken from the game of the furniture the shop can be furnished with.",
+        "zh": "取自游戏的家具反照率贴图，店铺可以用它布置。"
+      }
+    },
+    {
+      "file": "mapped/expanding-and-decorating-the-shop-open-closed-sign.png",
+      "kind": "game",
+      "alt": {
+        "en": "The sheet the game's open and closed signs are cut from: a green Yes, We're Open board above a red Sorry! We're Closed one.",
+        "zh": "游戏开/关门牌的图源：上方绿色 Yes, We're Open，下方红色 Sorry! We're Closed。"
+      }
+    },
+    {
+      "file": "mapped/expanding-and-decorating-the-shop-no-entry-sign.png",
+      "kind": "game",
+      "alt": {
+        "en": "The sheet the entrance signs are cut from: a red Use Main Entrance, No Entry board beside a green Welcome, Please Enter one.",
+        "zh": "入口标牌的图源：红色 Use Main Entrance / No Entry 与绿色 Welcome / Please Enter 并排。"
+      }
+    },
+    {
+      "file": "mapped/expanding-and-decorating-the-shop-arrow-signs.png",
+      "kind": "game",
+      "alt": {
+        "en": "The arrow-sign atlas: exit and enter boards in black on white and white on black, a running-figure exit sign, and plain arrows in several colours.",
+        "zh": "箭头标牌图集：黑白两色的 EXIT 与 ENTER 牌、带奔跑小人的出口牌，以及多种颜色的箭头。"
+      }
+    },
+    {
+      "file": "expanding-and-decorating-the-shop.svg",
+      "kind": "diagram",
+      "alt": {
+        "en": "Diagram: you buy furniture, decorate the room, expand the building, then stock the new space.",
+        "zh": "店铺扩建与装饰示意图：购买家具、布置房间、扩建店面、为新空间上货。"
+      },
+      "disclaimer": "Original diagram drawn for this site. It is not a screenshot of the game."
+    }
+  ],
+  "sources": [
+    "A local copy of the game, read only. The grounding for each fact is listed on the technical reference pages; nothing here is estimated."
+  ],
+  "imageTier": "game-image"
+}

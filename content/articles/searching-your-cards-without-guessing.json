@@ -1,0 +1,61 @@
+{
+  "id": "searching-your-cards-without-guessing",
+  "title": "Searching your cards without guessing",
+  "tier": "published",
+  "kind": "article",
+  "target": "How a card search resolves in TCG Card Shop Simulator, so what you pick and where it comes from are decisions rather than surprises.",
+  "version": "no version stated by this build (see the sources page)",
+  "prerequisites": [
+    "A game in progress",
+    "A card or effect that searches",
+    "A deck worth searching"
+  ],
+  "steps": [
+    {
+      "do": "Read what the search is conditioned on before you start picking.",
+      "because": "a search carries the condition it resolves under (PlayCardSearchData, resolveCardCondition, EActionResolveCardCondition)"
+    },
+    {
+      "do": "Know how many cards you pick and how many you may look at; they are separate counts.",
+      "because": "a search has a count of cards to pick and a count of cards to look at (searchPickCount, searchLookAtCount)"
+    },
+    {
+      "do": "Check whether the count has to be satisfied.",
+      "because": "a search can require a count to be fulfilled (mustFufillCount)"
+    },
+    {
+      "do": "Know whether the card is revealed to the other player.",
+      "because": "a search can reveal the card it finds (isRevealCard)"
+    },
+    {
+      "do": "Time your search around the shuffle rather than after it.",
+      "because": "a search decides whether the deck is shuffled first, after the remaining cards, or at the end (shuffleDeckFirst, shuffleDeckAfterRemaining, shuffleDeckEnd)"
+    },
+    {
+      "do": "Use the selection screen rather than the table when there are many cards to read.",
+      "because": "the search has a screen of its own with a canvas group and separate parents for the top and bottom of the row (PlayCardSetUIScreen_SearchCardSelection, m_CanvasGrp, m_CardTopParentGrp, m_CardBtmParentGrp)"
+    },
+    {
+      "do": "Tell the cards on show from the ones you can actually take.",
+      "because": "the cards on show and the active ones each have a list (m_SearchSelectionCardUIList, m_ActiveSearchSelectionCardUIList)"
+    },
+    {
+      "do": "Watch what you have chosen move, because selection is tracked three ways.",
+      "because": "selected cards have displays that move to a locator, and selection is kept as lists of card indices for all, valid and selected (m_SelectedCardUIDisplayList, m_SelectedCardLerpPosLocator, m_CardDataIndexList, m_ValidCardDataIndexList, m_SelectedCardDataIndexList)"
+    }
+  ],
+  "commonMistakes": [
+    "Picking before checking how many cards the search lets you look at.",
+    "Forgetting that the deck may be shuffled after the remaining cards.",
+    "Treating every card on the screen as one you may take.",
+    "Revealing a card to the table when the search did not have to."
+  ],
+  "relatedEntities": [
+    "how-a-card-search-is-described",
+    "the-search-that-picks-a-card",
+    "the-state-of-a-game-of-cards"
+  ],
+  "sources": [
+    "A local copy of the game, read only. Grounding for each step is on the technical reference pages; no number is estimated."
+  ]
+}

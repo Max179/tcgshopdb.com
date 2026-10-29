@@ -1,0 +1,71 @@
+{
+  "id": "prices-and-price-tags",
+  "title": "Prices and price tags",
+  "category": "Pricing",
+  "tier": "published",
+  "summary": "What a card sells for is its own part of the shop: TCG Card Shop Simulator defines price tags as objects, a price-check screen, an atlas that holds tag artwork and a set of price-change kinds.",
+  "body": [
+    "Prices are attached through price tag objects rather than being written onto the card itself, which is why labelling a card is its own step.",
+    "There is a dedicated screen for checking a price, so looking up what something is worth is a deliberate action in the shop.",
+    "The game counts several kinds of price change, so not every price adjustment is the same event.",
+    "What this entry does not tell you: actual prices, market movement or how much customers will pay. We have not verified those numbers, so we do not print them."
+  ],
+  "facts": [
+    {
+      "claim": "Price tags are their own objects attached to goods.",
+      "evidence": "identifiers: InteractableCardPriceTag, UI_PriceTag"
+    },
+    {
+      "claim": "Tag artwork comes from a shared atlas.",
+      "evidence": "identifier: PriceTagAtlasMap"
+    },
+    {
+      "claim": "There is a screen dedicated to checking a price.",
+      "evidence": "identifier: CheckPriceScreen"
+    },
+    {
+      "claim": "The game distinguishes several kinds of price change.",
+      "evidence": "identifier: EPriceChangeType"
+    },
+    {
+      "claim": "A price tag is an object a customer can interact with, built on a quad with its own material and a group for the interface.",
+      "evidence": "asset names: Interactable_PriceTag, PriceTagQuad, Mat_PriceTagInstanced, UI_PriceTag_Grp"
+    },
+    {
+      "claim": "Price tags are shipped per thing they can sit on: a card, an item box, a package box and a warehouse rack, each with its own group.",
+      "evidence": "asset names: UI_PriceTagCard_Grp, UI_PriceTagItemBox_Grp, UI_PriceTagPackageBox_Grp, UI_PriceTagWarehouseRack_Grp"
+    },
+    {
+      "claim": "The pricing side names a sell price field, a price button and an indicator for a price of zero.",
+      "evidence": "asset names: Sell Price, Price_Button, PriceZeroIndicator"
+    }
+  ],
+  "related": [
+    "cards-and-rarity",
+    "shelves-stock-and-upgrades",
+    "how-a-price-tag-is-drawn"
+  ],
+  "images": [
+    {
+      "file": "mapped/prices-and-price-tags-atlas.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "The game's own atlas of the price tags you put on stock.",
+        "zh": "游戏自带的价签图集，用于给商品标价。"
+      }
+    },
+    {
+      "file": "prices-and-price-tags.svg",
+      "kind": "diagram",
+      "alt": {
+        "en": "Diagram: stock arrives, you check what it is worth, you attach a price tag, a customer pays the tagged price.",
+        "zh": "价格标签示意图：到货、查询价值、贴上价格标签、顾客按标签价格购买。"
+      },
+      "disclaimer": "Original diagram drawn for this site. It is not a screenshot of the game."
+    }
+  ],
+  "sources": [
+    "A local copy of the game, read only. The grounding for each fact is listed on the technical reference pages; nothing here is estimated."
+  ],
+  "imageTier": "game-image"
+}

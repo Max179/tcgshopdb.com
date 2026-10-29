@@ -1,0 +1,121 @@
+{
+  "id": "licences-and-shop-level",
+  "title": "Licences, shop level and unlocks",
+  "category": "Upgrades",
+  "summary": "In TCG Card Shop Simulator a product line is unlocked rather than simply bought: the game sells licences that ask for a shop level, keeps a cost for the unlock itself, and can hide an item until it is available.",
+  "body": [
+    "Not everything in the shop is bought with money on the spot. The game sells licences, and holding a licence is what lets a product line be sold at all rather than being a decorative purchase.",
+    "Licences are sorted by level. The game can list them from the lowest level to the highest or the other way round, so the same list can be read as a plan for what to do next or as a wish list of what is far away.",
+    "A licence has a price and a level requirement. The screen keeps a price line and a requirement line of its own, and the requirement is a shop level rather than an amount of money, which is why saving up alone does not unlock a new line.",
+    "Unlocking has a cost of its own, separate from the licence. There is a cost line for an unlock and a multiplier that changes what a shelf costs to unlock, so two shelves in the same shop do not necessarily cost the same to bring into use.",
+    "Some things are not shown until they are unlocked. The game can hide an item completely rather than showing it greyed out, which is why a product line can seem to appear out of nowhere once the shop reaches the level it wants.",
+    "Unlocking is presented as an event rather than a silent change. There is an animation for the unlock screen and a group of things that become available together, so one licence can open several lines at once.",
+    "The shop itself is levelled. The game keeps a star level and a good-or-bad level reading, and it has a frame and an icon of its own for the moment the shop gains a level; both of those are shown beside this entry.",
+    "What this entry does not tell you: what any licence costs, how much progress a level needs, or how many licences there are in total. We have not verified those numbers, so we do not print them."
+  ],
+  "facts": [
+    {
+      "claim": "The game keeps licence lists that can be ordered by level in either direction.",
+      "evidence": "identifiers: LicenseLevelLowToHigh, LicenseLevelHighToLow"
+    },
+    {
+      "claim": "A licence has a price and a shop level requirement, each with its own line of text.",
+      "evidence": "identifiers: m_LicensePriceText, licenseShopLevelRequired, m_LevelRequirementText"
+    },
+    {
+      "claim": "The licence interface is kept as its own group.",
+      "evidence": "identifiers: m_LicenseUIGrp, m_ShopB_LevelRequirementText"
+    },
+    {
+      "claim": "Unlocking has a cost of its own, and shelves carry an unlock cost multiplier.",
+      "evidence": "identifiers: m_UnlockCostText, m_ShelfUnlockCostMultiplier"
+    },
+    {
+      "claim": "An item can be hidden until it is unlocked rather than only greyed out.",
+      "evidence": "identifier: isHideItemUntilUnlocked"
+    },
+    {
+      "claim": "Unlocking has an animation and a group of things that becomes available together.",
+      "evidence": "identifiers: m_UnlockScreenAnim, m_UnlockedGrp, m_ShopB_UnlockGrp"
+    },
+    {
+      "claim": "The shop has a star level and a good-or-bad level reading.",
+      "evidence": "identifiers: starLevel, goodBadLevel, textSOGoodBadLevel"
+    },
+    {
+      "claim": "The game ships a store-point badge of its own for the level screens.",
+      "evidence": "asset name: Icon_StorePoint"
+    },
+    {
+      "claim": "The build also ships lock pictograms of its own for content that is not unlocked yet.",
+      "evidence": "asset names: Icon_PictoIcon_Lock, Icon_ImageIcon_Lock02_Lock_btn"
+    },
+    {
+      "claim": "A level-up has its own sound and vibration, and a screen that shows what the level unlocked.",
+      "evidence": "asset names: SFX_LevelUp, SFX_LevelUp_Vibration, ShowLevelUpUnlockedItem"
+    },
+    {
+      "claim": "The unlock rows are named per rarity and for a second shop: basic, rare, epic and legend, and one for shop B.",
+      "evidence": "asset names: Row_Unlock Basic, Row_Unlock Rare, Row_Unlock Epic, Row_Unlock Legend, Row_Unlock Shop B"
+    }
+  ],
+  "related": [
+    "the-upgrades-you-can-buy",
+    "expanding-and-decorating-the-shop"
+  ],
+  "images": [
+    {
+      "file": "mapped/licences-and-shop-level-frame.png",
+      "kind": "game",
+      "alt": {
+        "en": "The shield-shaped frame the game draws around the shop level in its licence screens.",
+        "zh": "游戏在执照界面中用于店铺等级的外框（盾形）。"
+      }
+    },
+    {
+      "file": "mapped/licences-and-shop-level-up.png",
+      "kind": "game",
+      "alt": {
+        "en": "The orange up arrow the game uses when the shop gains a level.",
+        "zh": "游戏在店铺升级时使用的橙色上升箭头。"
+      }
+    },
+    {
+      "file": "mapped/licences-and-shop-level-pictogram-lock.png",
+      "kind": "game",
+      "alt": {
+        "en": "The lock pictogram the game draws over content that is not unlocked yet: a blue-grey padlock with a keyhole.",
+        "zh": "游戏为尚未解锁内容绘制的锁形图标：蓝灰色挂锁，带钥匙孔。"
+      }
+    },
+    {
+      "file": "mapped/licences-and-shop-level-button-lock.png",
+      "kind": "game",
+      "alt": {
+        "en": "The second lock the build ships for a locked button, a grey padlock of its own.",
+        "zh": "本作为锁定按钮提供的第二枚锁图标：另一款灰色挂锁。"
+      }
+    },
+    {
+      "file": "licences-and-shop-level.svg",
+      "kind": "diagram",
+      "alt": {
+        "en": "Diagram: the shop levels up, a licence becomes affordable and buyable, the unlock is paid for, and the new line appears.",
+        "zh": "示意图：店铺升级、执照变得可买、支付解锁费用、新商品线出现。"
+      },
+      "disclaimer": "Original diagram drawn for this site. It is not a screenshot of the game."
+    },
+    {
+      "file": "mapped/licences-and-shop-level-store-point.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "The store-point badge the game ships: a gold crown inside a shield with blue and orange laurels on purple.",
+        "zh": "游戏自带的店铺等级徽章：紫色底、金色王冠嵌在盾形中，两侧为蓝橙枝叶。"
+      }
+    }
+  ],
+  "sources": [
+    "A local copy of the game, read only. The grounding for each fact is listed on the technical reference pages; nothing here is estimated."
+  ],
+  "imageTier": "game-image"
+}

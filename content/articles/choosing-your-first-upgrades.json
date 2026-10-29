@@ -1,0 +1,47 @@
+{
+  "id": "choosing-your-first-upgrades",
+  "title": "Choosing your first upgrades",
+  "tier": "published",
+  "kind": "article",
+  "target": "How to choose between the upgrades in TCG Card Shop Simulator, given that the game names each one and separates them by pack tier.",
+  "version": "no version stated by this build (see the sources page)",
+  "prerequisites": [
+    "Enough money for an upgrade",
+    "A shop trading most days",
+    "An idea of which pack tier sells best for you"
+  ],
+  "steps": [
+    {
+      "do": "Upgrade the tier you actually sell rather than buying packs in general.",
+      "because": "pack supply upgrades are named per tier (BasicCardPackSupply)"
+    },
+    {
+      "do": "If shelves keep emptying, look at supply and earnings before anything decorative.",
+      "because": "earnings can be upgraded per pack and box tier (CommonPackEarningUp)"
+    },
+    {
+      "do": "Buy the customer upgrades when the shop feels quiet, not the ones with the biggest-looking name.",
+      "because": "there are upgrades for what customers spend, buying more and arriving sooner (CustomerSpawnTime)"
+    },
+    {
+      "do": "Leave the collector upgrades until you are actually selling the cards collectors want.",
+      "because": "collector rates are upgraded grade by grade (CustomerCollectorSpawnRate)"
+    },
+    {
+      "do": "Remember that boosters are a separate list from upgrades.",
+      "because": "booster effects are tracked apart from upgrades (EBoosterEffect)"
+    }
+  ],
+  "commonMistakes": [
+    "Buying an upgrade for a tier you hardly stock.",
+    "Spending on decoration while the shelves sit empty.",
+    "Treating a booster effect as though it were an upgrade."
+  ],
+  "relatedEntities": [
+    "the-upgrades-you-can-buy",
+    "shelves-stock-and-upgrades"
+  ],
+  "sources": [
+    "A local copy of the game, read only. Grounding for each step is on the technical reference pages; no number is estimated."
+  ]
+}

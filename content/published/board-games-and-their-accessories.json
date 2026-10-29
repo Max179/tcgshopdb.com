@@ -1,0 +1,116 @@
+{
+  "id": "board-games-and-their-accessories",
+  "title": "Board games and their accessories",
+  "category": "Cards",
+  "summary": "Tabletop games in TCG Card Shop Simulator are stocked as sets with parts of their own: the game keeps a play mat, a deck box and a comic book as separate pieces of one set.",
+  "body": [
+    "A tabletop game is stocked as a set. The game keeps one as a set with its own record, which is why it is ordered and displayed differently from a pack of cards.",
+    "A set has named parts. A play mat, a deck box and a comic book are each a kind of their own inside the set, so what arrives is made of identified pieces rather than one anonymous box.",
+    "Those parts are modelled. Each one has its own mesh in the game, which is why a set can be laid out with its mat and its boxes rather than only shown as a picture.",
+    "The games have names. The game ships icons for particular tabletop games, so the range is a defined list rather than a single generic board game.",
+    "Restocking them has its own screen. Tabletop games are restocked through a screen of their own rather than the ordinary item list, which is why they sit apart from the card stock.",
+    "They are a different trade from cards. Because the set is its own kind of stock, a tabletop game is another product line rather than more of the same inventory.",
+    "What this entry does not tell you: what any set costs, how many games exist, or whether customers prefer them to cards. We have not verified those numbers, so we do not print them."
+  ],
+  "facts": [
+    {
+      "claim": "A tabletop game is kept as a set with its own record.",
+      "evidence": "identifiers: TableGameItemSet, TableGameItemSetData"
+    },
+    {
+      "claim": "A set has named parts: a play mat, a deck box and a comic book.",
+      "evidence": "identifiers: playMatType, deckBoxType, comicBookType"
+    },
+    {
+      "claim": "The build ships tabletop games as named meshes, including one called Mafia Works and one called Necromansters, with a dice box and its own material.",
+      "evidence": "asset names: BoardGameMesh_MafiaWorks, BoardGameMesh_Necromansters, DiceBoxMaterial"
+    },
+    {
+      "claim": "Each of those parts has its own mesh in the game.",
+      "evidence": "identifiers: m_DeckBoxMesh, m_ComicBookMesh, m_PlayMatMesh"
+    },
+    {
+      "claim": "Tabletop games restock through a screen of their own.",
+      "evidence": "identifier: RestockItemBoardGameScreen"
+    },
+    {
+      "claim": "The game ships icons for particular tabletop games.",
+      "evidence": "identifiers: Icon_Boardgame_Speedrobo_Necro, Icon_Boardgame_Speedrobo_Mafia"
+    },
+    {
+      "claim": "The build names further tabletop pieces, including a claim marker and a system gate, along with a card table of its own.",
+      "evidence": "asset names: BoardGameMesh_Claim, BoardGameMesh_SystemGate1, CardTable"
+    },
+    {
+      "claim": "A second system gate and a set called Necro are named beside them.",
+      "evidence": "asset names: BoardGameMesh_SystemGate2, BoardGameNecro"
+    },
+    {
+      "claim": "The box art the game ships for these games names a claim game and two System Gate battle boxes.",
+      "evidence": "identifiers: Icon_Boardgame_Speedrobo_Claim, Icon_Boardgame_Speedrobo_SystemGate1, Icon_Boardgame_Speedrobo_SystemGate2"
+    },
+    {
+      "claim": "The tabletop line has stock items of its own, named for the board-game range rather than for a single game.",
+      "evidence": "asset name: ItemBoardGame_0_8"
+    },
+    {
+      "claim": "The system-gate set is backed by its own material and sheet beside the mesh.",
+      "evidence": "asset names: BoardGameSystemGate, MAT_SystemGate, T_SystemGate"
+    },
+    {
+      "claim": "The game even carries an emote for throwing dice at the table.",
+      "evidence": "asset name: PlayingGameEmote_ThrowDice"
+    }
+  ],
+  "related": [
+    "trading-with-customers",
+    "the-card-game-you-can-play"
+  ],
+  "images": [
+    {
+      "file": "mapped/board-games-and-their-accessories-icon.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "One of the icons the game ships for a tabletop game it sells.",
+        "zh": "游戏为其销售的某款桌游提供的图标之一。"
+      }
+    },
+    {
+      "file": "mapped/board-games-and-their-accessories-claim.png",
+      "kind": "game",
+      "alt": {
+        "en": "The box art the game ships for one of its tabletop games: a boxed game called Claim, with a miner holding up a golden nugget.",
+        "zh": "游戏为某款桌游提供的盒面图：一盒名为 Claim 的游戏，矿工高举一块金块。"
+      }
+    },
+    {
+      "file": "mapped/board-games-and-their-accessories-system-gate.png",
+      "kind": "game",
+      "alt": {
+        "en": "The box art the game ships for a two-player battle box called System Gate, drawn as a standing box with the game's characters on it.",
+        "zh": "游戏为一款名为 System Gate 的双人对战盒提供的盒面图：立起的盒子上画着游戏角色。"
+      }
+    },
+    {
+      "file": "mapped/board-games-and-their-accessories-system-gate-2.png",
+      "kind": "game",
+      "alt": {
+        "en": "A second System Gate battle box the game ships box art for, with a different cast drawn across it.",
+        "zh": "游戏提供的第二款 System Gate 对战盒盒面图，上面的角色阵容不同。"
+      }
+    },
+    {
+      "file": "board-games-and-their-accessories.svg",
+      "kind": "diagram",
+      "alt": {
+        "en": "Diagram: a set is ordered, its mat and boxes arrive, it is shelved, and customers buy it.",
+        "zh": "示意图：订购套装、地垫与盒子送达、上架、顾客购买。"
+      },
+      "disclaimer": "Original diagram drawn for this site. It is not a screenshot of the game."
+    }
+  ],
+  "sources": [
+    "A local copy of the game, read only. Identifiers are listed on the technical reference pages; nothing here is estimated."
+  ],
+  "imageTier": "game-image"
+}

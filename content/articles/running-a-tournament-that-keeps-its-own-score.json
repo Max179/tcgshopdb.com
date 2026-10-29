@@ -1,0 +1,47 @@
+{
+  "id": "running-a-tournament-that-keeps-its-own-score",
+  "title": "Running a tournament that keeps its own score",
+  "tier": "published",
+  "kind": "article",
+  "target": "How to set up and run a TCG Card Shop Simulator tournament so the standings come out of the game's own scoring instead of your own notes on paper.",
+  "version": "no version stated by this build (see the sources page)",
+  "prerequisites": [
+    "A prize shelf with prizes already on it",
+    "Play tables placed and usable",
+    "Enough customers in the shop to take part"
+  ],
+  "steps": [
+    {
+      "do": "Put the prizes on the prize shelf before the first round rather than after the last one.",
+      "because": "a shelf dedicated to tournament prizes exists as its own shelf type (TournamentPrizeShelf)"
+    },
+    {
+      "do": "Make sure entrants can register before the opening round begins.",
+      "because": "an entrant's record tracks whether they registered for the start (CustomerTournamentData)"
+    },
+    {
+      "do": "Let the game score the rounds instead of keeping a tally of your own.",
+      "because": "wins and win points are tracked for each entrant (m_TournamentWinPoints)"
+    },
+    {
+      "do": "Do not try to break a tie by hand.",
+      "because": "the game keeps two tiebreakers of its own, drawn from the opponents each entrant faced (m_TournamentOMW)"
+    },
+    {
+      "do": "Read the final order from the entrants rather than from whoever you happened to watch.",
+      "because": "placement and the prize each entrant receives are recorded per entrant (m_TournamentPlacementIndex)"
+    }
+  ],
+  "commonMistakes": [
+    "Running the standings on paper while the game is keeping its own.",
+    "Deciding a tie by who you watched the most.",
+    "Leaving the prize shelf empty until the tournament is already over."
+  ],
+  "relatedEntities": [
+    "how-tournament-standings-are-decided",
+    "tournaments-and-events"
+  ],
+  "sources": [
+    "A local copy of the game, read only. Grounding for each step is on the technical reference pages; no number is estimated."
+  ]
+}

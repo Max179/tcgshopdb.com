@@ -1,0 +1,47 @@
+{
+  "id": "choosing-what-to-open-and-what-to-sell",
+  "title": "Choosing what to open and what to sell",
+  "tier": "published",
+  "kind": "article",
+  "target": "How to decide in TCG Card Shop Simulator which packs to open yourself and which to leave sealed on the shelf.",
+  "version": "no version stated by this build (see the sources page)",
+  "prerequisites": [
+    "Stock you can either sell or open",
+    "Space to display sealed packs",
+    "A sense of what your customers want"
+  ],
+  "steps": [
+    {
+      "do": "Check which pack tier you are dealing with before opening anything.",
+      "because": "packs are named per tier rather than being one product (ECollectionPackType)"
+    },
+    {
+      "do": "Leave sealed stock on the shelf when it is selling as it is.",
+      "because": "the game ships pack artwork for each tier, so sealed stock is a product in its own right (T_CardPackRare)"
+    },
+    {
+      "do": "Watch the reveal rather than skipping past it, since the game shows what you got.",
+      "because": "opening runs as a sequence with its own interface (CardOpeningSequence)"
+    },
+    {
+      "do": "Price a card at the moment you see it when it is worth something.",
+      "because": "there is a price popup at the reveal (CardPricePopupUI)"
+    },
+    {
+      "do": "Put what you open where it can be displayed rather than leaving it in a pile.",
+      "because": "cards are display objects with settings of their own (CardUISetting)"
+    }
+  ],
+  "commonMistakes": [
+    "Opening stock that was already selling sealed.",
+    "Assuming a higher tier guarantees a better card.",
+    "Leaving opened cards lying in a pile."
+  ],
+  "relatedEntities": [
+    "packs-and-opening",
+    "opening-a-pack-on-screen"
+  ],
+  "sources": [
+    "A local copy of the game, read only. Grounding for each step is on the technical reference pages; no number is estimated."
+  ]
+}

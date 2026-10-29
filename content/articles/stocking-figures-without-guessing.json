@@ -1,0 +1,48 @@
+{
+  "id": "stocking-figures-without-guessing",
+  "title": "Stocking figures without guessing",
+  "tier": "published",
+  "kind": "article",
+  "target": "How to stock the figure line in a TCG Card Shop Simulator shop, given that the figures come as a named set with icons, that several have evolved versions, and that the statues are a larger set with shiny variants.",
+  "version": "no version stated by this build (see the sources page)",
+  "prerequisites": [
+    "A shelf or a counter with room on it",
+    "Enough money to buy more than one kind",
+    "A note of which creatures you already carry"
+  ],
+  "steps": [
+    {
+      "do": "Buy the figures by creature rather than as one generic line.",
+      "because": "the figures are shipped with an icon each, a bat, a beetle, a fox, a golem, a piggy, a starfish and a toon among them (Icon_Toy_BatB, Icon_Toy_Beetle, Icon_Toy_FoxB, Icon_Toy_GolemB, Icon_Toy_PiggyB, Icon_Toy_StarfishB, Icon_Toy_ToonZ)"
+    },
+    {
+      "do": "Put the evolved versions out beside the basic ones instead of hiding them.",
+      "because": "several families are named in more than one version, with an evolved form beside them (Icon_Toy_PiggyEvo, Icon_Toy_StarfishEvo, Icon_Toy_BatD, Icon_Toy_GolemD)"
+    },
+    {
+      "do": "Let the podium do the work: a figure is meant to stand on one.",
+      "because": "the podiums are named as objects of their own, with a dark and a dark shiny material (StatuePodium, MAT_StatuePodium_Dark, MAT_StatuePodium_DarkShinny)"
+    },
+    {
+      "do": "Fill a corner with the larger statues rather than only small figures.",
+      "because": "the statue set runs past the dragons, a beetle, a shellfish, a fox, a tree and a wisp among them (Interactable_MonsterStatue_Beetle, Interactable_MonsterStatue_ShellfishD, Interactable_MonsterStatue_FoxD, Interactable_MonsterStatue_TreeD, Interactable_MonsterStatue_Wisp)"
+    },
+    {
+      "do": "Keep the shiny versions for the part of the shop you want to stand out.",
+      "because": "shiny versions of several statues are named beside the ordinary ones (Interactable_MonsterStatue_ShinyGolemA, Interactable_MonsterStatue_ShinyPiggyA)"
+    }
+  ],
+  "commonMistakes": [
+    "Buying one creature in bulk and calling the shelf stocked.",
+    "Leaving podiums unbought so the figures sit on bare counter.",
+    "Mixing the tiny figures and the large statues on the same shelf.",
+    "Treating the shiny versions as a different product instead of the same creature."
+  ],
+  "relatedEntities": [
+    "the-figures-the-shop-sells",
+    "where-the-shops-lists-live"
+  ],
+  "sources": [
+    "A local copy of the game, read only. Grounding for each step is on the technical reference pages; no number is estimated."
+  ]
+}

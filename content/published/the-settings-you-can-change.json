@@ -1,0 +1,121 @@
+{
+  "id": "the-settings-you-can-change",
+  "title": "The settings you can change",
+  "category": "Interface",
+  "summary": "TCG Card Shop Simulator spreads its options across controls rather than one screen: resolution, shadows, texture detail, sound, bindings, language and screen scaling each have a setting of their own.",
+  "body": [
+    "The game's options are a set of controls rather than one screen with everything on it. Each option belongs to the part of the game that reads it, which is why the display, the sound and the controls are handled separately.",
+    "Display options each have a control of their own: resolution, fullscreen, vertical sync, refresh rate and a frame limit, along with brightness.",
+    "Quality is handled in pieces rather than as a single preset. Shadow distance, shadow mode, shadow resolution, texture resolution and anti-aliasing each have a setting of their own, and post-processing has two.",
+    "Sound is split between a master level and the mixer, so the overall level and the individual channels are separate settings rather than one slider.",
+    "Controls are rebindable, and changing a binding is a state the game tracks: there are settings for a key, a linker for gamepad settings, and flags for when a binding may be updated and when the game is mid-change. The key picture beside this entry is the game's own, shown here as the space bar.",
+    "Language is a setting of its own, and the game ships the language assets it needs rather than fetching them at run time.",
+    "The interface is adjusted to the display as well: there is a scaler for screen ratio and an offset for aspect ratio, which is how the layout keeps its proportions on a different monitor. The scaler itself holds the transform it works on, a smallest and a largest scale and a setting for whether it applies only the largest, and it carries two values for the larger scaling a Steam Deck uses.",
+
+    "The offset that goes with it is bounded. The aspect ratio offset carries the amount it moves by, a smallest and a largest limit for that movement and a flag for whether it offsets all the time, which is how the layout can shift without drifting off the screen.",
+    "Controller vibration has its own data, so how a pad shakes is configured in the same place as the rest.",
+    "A pad setting is wired to its own controls. The row keeps a link to its toggle, its dropdown and the icon for the thumbstick slider it is using, which is why changing a pad option updates the screen and not only the value.",
+    "What this entry does not tell you: which settings a given platform offers, what the defaults are, or what any of them change numerically. We have not verified those, so we do not print them."
+  ],
+  "facts": [
+    {
+      "claim": "Display options each have a control of their own, including resolution, fullscreen, vertical sync, refresh rate and a frame limit.",
+      "evidence": "identifiers: ResolutionController, FullscreenController, VsyncController, RefreshRateController, FpsController"
+    },
+    {
+      "claim": "Brightness has a control of its own.",
+      "evidence": "identifier: BrightnessController"
+    },
+    {
+      "claim": "Shadow distance, shadow mode, shadow resolution, texture resolution and anti-aliasing are separate settings.",
+      "evidence": "identifiers: ShadowDistanceController, ShadowModeController, ShadowResolutionController, TextureResolutionController, AntiAliasingController"
+    },
+    {
+      "claim": "Post-processing has two controls rather than one.",
+      "evidence": "identifiers: PostProcessingController, PostProcessingEffectController"
+    },
+    {
+      "claim": "Sound has a master level and a mixer level as separate settings.",
+      "evidence": "identifiers: MasterVolumeController, AudioMixerVolumeController"
+    },
+    {
+      "claim": "Bindings are rebindable, with a key setting, a gamepad linker and flags for when a binding may be updated.",
+      "evidence": "identifiers: KeybindSetting, GamepadSettingLinker, ResetCanUpdateKeybind, SetIsChangingKeybindNextFrame"
+    },
+    {
+      "claim": "Language is a setting with assets of its own.",
+      "evidence": "identifiers: SetLanguage, LanguageSourceAsset"
+    },
+    {
+      "claim": "The interface is scaled by screen ratio and offset by aspect ratio.",
+      "evidence": "identifiers: ScreenRatioScaler, AspectRatioPositionOffset"
+    },
+    {
+      "claim": "Controller vibration has its own data.",
+      "evidence": "identifier: HapticDataSet"
+    },
+    {
+      "claim": "The screen ratio scaler carries the transform it scales, a smallest and a largest scale, whether it sets itself up on start, whether it uses only the largest, and two values for a Steam Deck's larger scaling.",
+      "evidence": "identifiers: ScreenRatioScaler, m_Transform, m_MinScale, m_MaxScale, m_InitOnStart, m_UseMaxScaleOnly, m_SteamDeckBigScaling, m_SteamDeckScale"
+    },
+    {
+      "claim": "The aspect ratio offset carries an amount to offset, a smallest and a largest limit for it, and a flag for whether it always offsets.",
+      "evidence": "identifiers: AspectRatioPositionOffset, m_OffsetAmount, m_OffsetLimitMin, m_OffsetLimitMax, m_IsAlwaysOffset"
+    },
+    {
+      "claim": "A pad setting row is linked to its toggle, its dropdown and the icon for the active thumbstick slider.",
+      "evidence": "identifiers: GamepadSettingLinker, m_Toggle, m_Dropdown, m_SliderActiveThumbstickIcon"
+    },
+    {
+      "claim": "The game ships a controller settings screen and a button that opens it.",
+      "evidence": "asset names: ControllerSettingScreen, ControllerSettingBtn"
+    },
+    {
+      "claim": "The settings name a display section text, a display setting button and a reset button of their own.",
+      "evidence": "asset names: Display Section Text, DisplaySettingBtn, Reset Button"
+    },
+    {
+      "claim": "The settings layer ships further pieces of its own: a control-keybind screen, a fullscreen toggle and an active slider thumbstick icon.",
+      "evidence": "asset names: ControlKeybindScreen, Fullscreen Toggle, ActiveSliderThumbstickIcon"
+    },
+    {
+      "claim": "The graphics side names a graphic section text of its own, the heading the graphics rows sit under.",
+      "evidence": "asset name: Graphic Section Text"
+    }
+  ],
+  "related": [
+    "the-screens-you-will-use-most",
+    "how-a-card-front-is-built"
+  ],
+  "images": [
+    {
+      "file": "mapped/the-settings-you-can-change-icon.png",
+      "kind": "game",
+      "alt": {
+        "en": "The gear icon the game itself uses for its settings.",
+        "zh": "游戏自带设置图标（齿轮）。"
+      }
+    },
+    {
+      "file": "mapped/the-settings-you-can-change-key.png",
+      "kind": "game",
+      "alt": {
+        "en": "One of the key pictures the game uses when it shows a control binding: the space bar.",
+        "zh": "游戏在显示按键绑定时使用的按键图片之一：空格键。"
+      }
+    },
+    {
+      "file": "the-settings-you-can-change.svg",
+      "kind": "diagram",
+      "alt": {
+        "en": "Diagram: display, quality, sound, controls, language and screen scaling are each read by their own part of the game.",
+        "zh": "示意图：显示、画质、声音、按键、语言与屏幕缩放分别由游戏对应部分读取。"
+      },
+      "disclaimer": "Original diagram drawn for this site. It is not a screenshot of the game."
+    }
+  ],
+  "sources": [
+    "A local copy of the game, read only. The grounding for each fact is listed on the technical reference pages; nothing here is estimated."
+  ],
+  "imageTier": "game-image"
+}

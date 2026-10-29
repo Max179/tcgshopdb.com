@@ -1,0 +1,47 @@
+{
+  "id": "putting-cards-on-display-so-they-sell",
+  "title": "Putting cards on display so they sell",
+  "tier": "published",
+  "kind": "article",
+  "target": "How to use the card displays in TCG Card Shop Simulator, given that the game ships displays for a table, for a wall and an electronic version, with their own fronts and price tags.",
+  "version": "no version stated by this build (see the sources page)",
+  "prerequisites": [
+    "Cards worth showing",
+    "Floor or wall space in the shop",
+    "A price decided before the card goes in"
+  ],
+  "steps": [
+    {
+      "do": "Pick the display shape before placing anything.",
+      "because": "the build ships card displays for a table, for a wall and an electronic one (CardDisplayTable, CardDisplayWall, CardDisplayElectronic_Mesh)"
+    },
+    {
+      "do": "Use the wall versions when floor space is short.",
+      "because": "the wall display also comes in a small and a big version (CardDisplayWallSmall, CardDisplayBigWall)"
+    },
+    {
+      "do": "Check what the display shows of a card before you trust the front.",
+      "because": "the display holds a front object and a back object of its own (CardUI, m_CardFront, m_CardBack)"
+    },
+    {
+      "do": "Attach the price to the thing the tag can sit on.",
+      "because": "price tags are shipped per thing they can sit on, including a card (UI_PriceTagCard_Grp)"
+    },
+    {
+      "do": "Expect the display to simplify itself at a distance.",
+      "because": "it can cull parts at a distance with lists of objects to hide (m_FarDistanceCullObjList)"
+    }
+  ],
+  "commonMistakes": [
+    "Buying an electronic display before there are cards worth showing on it.",
+    "Putting the best cards in the cheapest case.",
+    "Pricing the card and forgetting that the tag belongs to the display."
+  ],
+  "relatedEntities": [
+    "the-card-display-object",
+    "how-a-shelf-holds-its-stock"
+  ],
+  "sources": [
+    "A local copy of the game, read only. Grounding for each step is on the technical reference pages; no number is estimated."
+  ]
+}

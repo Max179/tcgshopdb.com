@@ -1,0 +1,77 @@
+{
+  "id": "questions-players-ask",
+  "title": "Questions players ask most",
+  "category": "FAQ",
+  "summary": "Short, checkable answers to the questions this site is asked most about running the shop, each one pointing at the entry that explains it in full rather than repeating it here.",
+  "body": [
+    "These are the questions that come up most, answered in a sentence or two. Every answer is backed by something the game itself defines, and the longer explanation sits in the entry named beside it.",
+    "On opening packs: a pack can be opened by hand or by a machine, and the build keeps the machine's save record as its own thing, so an automatic opener is a fixture you own rather than a setting.",
+    "On cards you cannot sell: there is a bulk donation box with its own screen, and customers arrive wanting to use it, so unwanted cards have somewhere to go other than the bin.",
+    "On customers: some arrive specifically to trade cards or to buy a card, and those wants are named separately from the wants for goods, which is why the customer entries split them apart.",
+    "On pricing: a price tag is a physical fixture in the build, with its own screen and its own picture sheet, so prices are changed at the shelf rather than in one master list.",
+    "On money: the shop tracks more than one currency, and the game names eight of them, which is why takings and prices carry a currency rather than a bare number.",
+    "On your workers: a worker can be given a main job and a second job, and some jobs run on their own once set, which is why staff are described as assigned rather than commanded.",
+    "What this list does not do is guess. Where an answer would need a number we have not verified, we say so rather than inventing one."
+  ],
+  "facts": [
+    {
+      "claim": "A pack can be opened by a machine the shop owns, and the machine keeps its own save record.",
+      "evidence": "identifiers: InteractableAutoPackOpener, AutoPackOpenerSaveData, m_AutoPackOpenerList"
+    },
+    {
+      "claim": "There is a bulk donation box with its own screen, and customers arrive wanting to use it.",
+      "evidence": "identifiers: BulkDonationBoxCardPanelUI, WantToTakeBulkDonationCard, WalkToBulkDonationBox"
+    },
+    {
+      "claim": "Some customers arrive to trade a card or to buy a specific card, separately from ordinary wants.",
+      "evidence": "identifiers: WantToTradeCard, WantToBuyCard, CustomerTradeCardScreen"
+    },
+    {
+      "claim": "A price tag is a physical fixture with its own screen and its own picture sheet.",
+      "evidence": "identifiers: InteractablePriceTag, UI_PriceTag, PriceTagAtlasMap"
+    },
+    {
+      "claim": "The shop tracks more than one currency, and the game names eight of them.",
+      "evidence": "identifiers: EMoneyCurrencyType, T_MoneyCoinEuro, T_MoneyCoinGBP"
+    },
+    {
+      "claim": "A worker can be given a main job and a second job, and some jobs then run on their own.",
+      "evidence": "identifiers: WorkerSetPrimarySecondaryTaskScreen, AutoRestock, AutoManager"
+    },
+    {
+      "claim": "Storage shelves remember what was taken from them rather than only how full they are.",
+      "evidence": "identifiers: InteractableCardStorageShelf, storedWarehouseShelfIndex, CardStorageShelfSaveData"
+    },
+    {
+      "claim": "The build ships a question-mark icon of its own, which is the picture the game draws for a question.",
+      "evidence": "identifier: Icon_QuestionMark"
+    }
+  ],
+  "related": [
+    "machines-that-work-on-their-own",
+    "prices-and-price-tags"
+  ],
+  "images": [
+    {
+      "file": "mapped/questions-players-ask-question-mark.png",
+      "kind": "game",
+      "alt": {
+        "en": "The question-mark icon the game ships, a bold red question mark on a pale field.",
+        "zh": "游戏自带的问题图标：浅底上一个粗体的红色问号。"
+      }
+    },
+    {
+      "file": "questions-players-ask.svg",
+      "kind": "diagram",
+      "alt": {
+        "en": "Diagram: a question is asked, checked against the game, answered briefly, and linked to the entry that explains it.",
+        "zh": "示意图：提出问题、对照游戏核实、简短回答、链接到详细条目。"
+      },
+      "disclaimer": "Original diagram drawn for this site. It is not a screenshot of the game."
+    }
+  ],
+  "sources": [
+    "A local copy of the game, read only. Every answer is backed by the identifiers listed on the technical reference pages."
+  ],
+  "imageTier": "game-image"
+}

@@ -1,0 +1,47 @@
+{
+  "id": "getting-value-from-a-ghost-card",
+  "title": "Getting value from a ghost card",
+  "tier": "published",
+  "kind": "article",
+  "target": "How to use a ghost card in TCG Card Shop Simulator by choosing the day its single effect actually helps, instead of holding it because it sounds rare.",
+  "version": "no version stated by this build (see the sources page)",
+  "prerequisites": [
+    "A ghost card in your collection",
+    "A shop open for trading",
+    "Some idea of where your money is coming from today"
+  ],
+  "steps": [
+    {
+      "do": "Read which effect the card carries before deciding it is a good one.",
+      "because": "a ghost card holds a single effect from a fixed list (GhostCardEffect)"
+    },
+    {
+      "do": "On a day you are opening packs, favour an effect that touches what you pull.",
+      "because": "foil chance is one of the effects on the list (FoilChance)"
+    },
+    {
+      "do": "On a day you are selling, favour an effect that touches customers.",
+      "because": "customer spending power and collector odds are effects of their own (CustomerSpendingPower)"
+    },
+    {
+      "do": "If your time is short, an effect that shortens play table rounds is worth as much as money.",
+      "because": "play table time appears on the effect list (ReducePlayTableTime)"
+    },
+    {
+      "do": "Do not read a booster effect as though it were a ghost card effect.",
+      "because": "booster effects are tracked in a list of their own (EBoosterEffect)"
+    }
+  ],
+  "commonMistakes": [
+    "Assuming every ghost card is an upgrade.",
+    "Chasing a money effect on a day you are opening packs.",
+    "Confusing a booster effect with a ghost card effect."
+  ],
+  "relatedEntities": [
+    "what-a-ghost-card-does",
+    "rarity-and-how-it-is-chosen"
+  ],
+  "sources": [
+    "A local copy of the game, read only. Grounding for each step is on the technical reference pages; no number is estimated."
+  ]
+}

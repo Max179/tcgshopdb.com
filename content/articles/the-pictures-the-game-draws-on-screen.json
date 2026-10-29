@@ -1,0 +1,61 @@
+{
+  "id": "the-pictures-the-game-draws-on-screen",
+  "title": "The pictures the game draws on screen",
+  "tier": "published",
+  "kind": "article",
+  "target": "Where the prompts, the card artwork and the animated crowd in TCG Card Shop Simulator come from, so what is on screen can be read for what it is.",
+  "version": "no version stated by this build (see the sources page)",
+  "prerequisites": [
+    "A shop with customers in it",
+    "Cards on show",
+    "A controller or keyboard if you want to compare prompts"
+  ],
+  "steps": [
+    {
+      "do": "Read a prompt from the interactable's own list rather than from a global key map.",
+      "because": "an interactable carries a list of input displays, with a second list for controller-only displays (m_GameActionInputDisplayList, m_ControllerOnlyGameActionInputDisplayList)"
+    },
+    {
+      "do": "Expect a click and a hold to look different.",
+      "because": "the game ships a picture of a left mouse click and another for holding the button (LeftMouseClick, LeftMouseHold)"
+    },
+    {
+      "do": "Expect named keys, and a plain key picture when a key has no name.",
+      "because": "it ships a plain key picture as well as named key pictures covering control, tab and shift (KeyboardBtn, KeyboardBtn_Ctrl, KeyboardBtn_Tab, KeyboardBtn_Shift)"
+    },
+    {
+      "do": "Know that a card on screen is laid out by a settings object rather than by the card.",
+      "because": "a card is drawn by a settings object that holds its border, background, rarity and front pictures as lists and masks the art to a card shape (CardUISetting, CardUISettingData)"
+    },
+    {
+      "do": "Expect the colouring to come from the settings rather than from the art.",
+      "because": "the settings carry a background colour for a card without foil and a different one for a foil card, with separate colours for the evolution, play-effect and description backgrounds (cardBGColorNonFoil, cardBGColorFoil, evoBGColor, playEffectBGColor, descriptionBGColor)"
+    },
+    {
+      "do": "Know that a crowd can be animated from a baked set rather than a live rig.",
+      "because": "a baked set is built from a source prefab and an archetype and keeps the bones as a texture (BakedAnimationSet, sourcePrefab, archetype, boneTexture)"
+    },
+    {
+      "do": "Expect the bake to be laid out in blocks with a frame rate of its own.",
+      "because": "it is laid out in blocks with block and texture sizes and runs at a frame rate of its own (blockWidth, blockHeight, textureWidth, textureHeight)"
+    },
+    {
+      "do": "Know that a baked set can be inspected later.",
+      "because": "the set keeps its clips, CPU copies of the bone transforms and a bake log recorded with the set (boneTexture, clips, bakeLog)"
+    }
+  ],
+  "commonMistakes": [
+    "Expecting a controller prompt where only a keyboard one was set up.",
+    "Assuming the card's look lives on the card rather than in a settings object.",
+    "Reading a crowd's movement as one animation per character.",
+    "Treating a baked animation as something that cannot be looked into."
+  ],
+  "relatedEntities": [
+    "the-picture-the-game-draws-for-a-control",
+    "the-settings-that-draw-a-card",
+    "how-a-crowd-is-animated-from-a-baked-set"
+  ],
+  "sources": [
+    "A local copy of the game, read only. Grounding for each step is on the technical reference pages; no number is estimated."
+  ]
+}

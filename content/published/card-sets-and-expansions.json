@@ -1,0 +1,84 @@
+{
+  "id": "card-sets-and-expansions",
+  "title": "Card sets and expansions",
+  "summary": "TCG Card Shop Simulator groups its cards into named expansions and into separate border finishes, so a collection is tracked by set and by look rather than as one long list of cards.",
+  "body": [
+    "Cards belong to expansions. The game keeps a fixed list of expansion names instead of letting a set be anything at all, which is why cards from different sets can sit in the same binder and still be different cards.",
+    "A card also has a finish. Border styles are their own fixed list, running from the plain base look through first editions, silver, gold, EX and the full-art border, and the game ships a border image for each one rather than drawing them on the fly.",
+    "The two are tracked separately. A card's expansion and a card's border are recorded independently, which is why one set can hold both a plain card and a special finish of that same card.",
+    "Set and finish both feed price changes. The list of things the game lets move a card's value names particular expansions and finishes alongside rarity, foil and effects, so a first edition and a full-art border are each handled as their own case.",
+    "The pictures beside this entry are the game's own: the first-edition border, the icon for the later expansion, and the card icon it prints at its top rarity.",
+    "What this entry does not tell you: how many cards sit in each expansion, the odds of pulling a particular finish, or what any finish is worth. We have not verified those numbers, so we do not print them."
+  ],
+  "facts": [
+    {
+      "claim": "Cards are grouped into a fixed list of named expansions.",
+      "evidence": "identifier: ECardExpansionType"
+    },
+    {
+      "claim": "The expansion list is the game's own fixed set of set names rather than a free label you can invent.",
+      "evidence": "identifiers: Tetramon, Destiny, Ghost, Megabot, FantasyRPG, CatJob, FoodieGO, Ascension"
+    },
+    {
+      "claim": "A card's finish is a separate fixed list of border styles.",
+      "evidence": "identifiers: ECardBorderType, CardBorder_Base, CardBorder_FirstEdition, CardBorder_Silver, CardBorder_Gold, CardBorder_EX"
+    },
+    {
+      "claim": "The game ships a border image for each finish, including the full-art frames.",
+      "evidence": "identifiers: CardCenterFrameFullArtMask, CardFrontFullArt_Fire, CardFrontFullArt_Water"
+    },
+    {
+      "claim": "Expansions and finishes are named among the things that move a card's price.",
+      "evidence": "identifiers: EPriceChangeType, ExpansionTetramon, FirstEdition, FullArtBorder, Foil"
+    },
+    {
+      "claim": "The game ships a card icon for its top rarity alongside the expansion and border artwork.",
+      "evidence": "asset name: CardIcon_Legend"
+    }
+  ],
+  "related": [
+    "cards-and-rarity",
+    "packs-and-opening",
+    "albums-and-binder-pages"
+  ],
+  "images": [
+    {
+      "file": "mapped/card-sets-and-expansions-legend.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "The legend card icon the game prints at its top rarity: two stacked card faces in red, orange and gold.",
+        "zh": "游戏在最高稀有度印制的传说卡图标：两张叠放的卡面，呈红、橙、金色。"
+      }
+    },
+    {
+      "file": "mapped/card-sets-and-expansions-border.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "The game's own card border image for the first-edition finish.",
+        "zh": "游戏自带的初版（First Edition）卡牌边框图。"
+      }
+    },
+    {
+      "file": "mapped/card-sets-and-expansions-destiny.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "The game's own icon for the Destiny card expansion.",
+        "zh": "游戏自带的 Destiny 扩充系列图标。"
+      }
+    },
+    {
+      "file": "card-sets-and-expansions.svg",
+      "kind": "diagram",
+      "alt": {
+        "en": "Diagram: a card is drawn from an expansion, given a finish, priced, and filed in the collection.",
+        "zh": "示意图：卡牌来自某个扩充系列、套用某个边框工艺、定价、收入收藏。"
+      },
+      "disclaimer": "Original diagram drawn for this site. It is not a screenshot of the game."
+    }
+  ],
+  "sources": [
+    "A local copy of the game, read only. Identifiers are listed on the technical reference pages; nothing here is estimated."
+  ],
+  "category": "Cards",
+  "imageTier": "game-image"
+}

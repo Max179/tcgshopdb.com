@@ -1,0 +1,166 @@
+{
+  "id": "albums-and-binder-pages",
+  "title": "Albums and binder pages",
+  "category": "Cards",
+  "tier": "published",
+  "summary": "Cards in TCG Card Shop Simulator do not have to sit on a shelf: the game has an album with binder pages, page visibility and a mode you enter and leave to look at them.",
+  "body": [
+    "The album is a place cards can be kept and viewed rather than only stock, which is why the game has a mode for looking through it.",
+    "Binder pages have an index for the cards they hold, so a card's position in the album is tracked rather than incidental.",
+    "Page visibility is handled by the game, which is how the album can show some pages and hide others while you work through it.",
+    "What this entry does not tell you: how many pages an album has, whether stored cards keep their value, or how customers react. We have not verified those numbers, so we do not print them."
+  ],
+  "facts": [
+    {
+      "claim": "Cards can be kept in an album with binder pages.",
+      "evidence": "identifier: DelayHideCardAlbum"
+    },
+    {
+      "claim": "A binder page tracks the index of the card it holds.",
+      "evidence": "identifier: DelaySetBinderPageCardIndex"
+    },
+    {
+      "claim": "Page visibility is controlled by the game.",
+      "evidence": "identifier: DelaySetBinderPageVisibility"
+    },
+    {
+      "claim": "Looking through the album is a mode you enter and leave.",
+      "evidence": "identifier: DelayExitViewCardAlbumMode"
+    },
+    {
+      "claim": "The binder has its own open and close objects, with a left and a right page kept apart.",
+      "evidence": "asset names: BinderOpen, BinderClose, BinderPageL, BinderPageR"
+    },
+    {
+      "claim": "The build ships more than one binder page picture, including a nine-pocket page.",
+      "evidence": "identifiers: T_3_UP_PlatinumSeriesPocketPages, T_BinderPage_second"
+    },
+    {
+      "claim": "It ships more than one binder book as well, including an all-star book.",
+      "evidence": "identifiers: T_BinderBookAllStar, BinderBook_second"
+    },
+    {
+      "claim": "The game ships a further album picture, in an eight-up layout.",
+      "evidence": "asset name: T_8_UP_Album"
+    },
+    {
+      "claim": "The game draws a collection icon of its own for a collection.",
+      "evidence": "asset name: CollectionIcon"
+    },
+    {
+      "claim": "The game ships a binder book of its own, printed with its brand.",
+      "evidence": "asset name: T_BinderBook"
+    },
+    {
+      "claim": "An all-star binder cover is shipped as its own picture, carrying the card game's logo and a collector section.",
+      "evidence": "asset names: AllStarsOptimizied_albedo, T_BinderBookAllStar"
+    },
+    {
+      "claim": "The binder book has a material and animation controllers of its own.",
+      "evidence": "asset names: BinderBookMaterial, BinderBook_AnimCtrl, BinderBookOptimized_AnimCtrl"
+    },
+    {
+      "claim": "The pages have an animation controller of their own as well, a thickness, and idle states for the next and previous pages while they are hidden.",
+      "evidence": "asset names: BinderPage_AnimCtrl, BinderPageThickness, BinderPage_HiddenNext_Idle, BinderPage_HiddenPrevious_Idle"
+    },
+    {
+      "claim": "Turning a binder page has reveal animations in both directions, with a revealed idle state of its own.",
+      "evidence": "asset names: BinderPage_HiddenToRevealAnim_NextPage, BinderPage_RevealToHiddenAnim_NextPage, BinderPage_RevealToHiddenAnim_PreviousPage, BinderPage_Revealed_Idle"
+    },
+    {
+      "claim": "The binder book is carried in more than one finish: a second book, a premium one and a transparent one beside the ordinary book.",
+      "evidence": "asset names: Binder2, BinderPremium, BinderTransparent"
+    },
+    {
+      "claim": "The optimized binder carries an albedo sheet and a second sheet of its own.",
+      "evidence": "asset names: BinderOptimizied_albedo, BinderOptimizied_second"
+    },
+    {
+      "claim": "The album has sounds of its own for opening it, flipping a page and the cards appearing.",
+      "evidence": "asset names: SFX_AlbumOpen, SFX_AlbumFlip, SFX_AllCardsAppear"
+    }
+  ],
+  "related": [
+    "cards-and-rarity",
+    "storage-shelves-and-restocking"
+  ],
+  "images": [
+    {
+      "file": "mapped/albums-and-binder-pages-all-star.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "The all-star binder book the game ships: a printed cover with the TETRAMON logo and the word COLLECTOR over the characters.",
+        "zh": "游戏自带的全明星卡册封面：TETRAMON 标志、COLLECTOR 字样与一群角色。"
+      }
+    },
+    {
+      "file": "mapped/albums-and-binder-pages-book.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "A second binder book picture the game ships, a surface sheet with the panel outlines of the cover.",
+        "zh": "游戏自带的第二张卡册图：封面外皮的面板轮廓图。"
+      }
+    },
+    {
+      "file": "mapped/albums-and-binder-pages-pocket-pages.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "The game's own picture of its nine-pocket binder pages: a printed box front with a filled page and a card shown in a pocket.",
+        "zh": "游戏自带的九宫格活页图：印着包装盒面、装好的活页以及插在口袋里的卡。"
+      }
+    },
+    {
+      "file": "mapped/albums-and-binder-pages-second-page.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "A second binder page picture the game ships: a green page of pockets with the ring holes along its edge.",
+        "zh": "游戏自带的另一张活页图：绿色口袋页，边缘带装订孔。"
+      }
+    },
+    {
+      "file": "mapped/albums-and-binder-pages-binder.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "The albedo texture taken from the game of the binder pages cards are stored in.",
+        "zh": "取自游戏的卡册内页反照率贴图。"
+      }
+    },
+    {
+      "file": "albums-and-binder-pages.svg",
+      "kind": "diagram",
+      "alt": {
+        "en": "Diagram: you open the album, turn to a binder page, the page shows its cards, and you leave the view mode.",
+        "zh": "卡册示意图：打开卡册、翻到活页、显示该页卡牌、退出查看模式。"
+      },
+      "disclaimer": "Original diagram drawn for this site. It is not a screenshot of the game."
+    },
+    {
+      "file": "mapped/albums-and-binder-pages-8up.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "A black collectors' album the game ships, its pages visible behind the cover.",
+        "zh": "游戏自带的一本黑色收藏卡册，封面后方可见内页。"
+      }
+    },
+    {
+      "file": "mapped/albums-and-binder-pages-collection.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "The collection icon the game itself draws: an open album with a red bookmark and grid panels.",
+        "zh": "游戏自带的收藏图标：一本摊开的卡册，夹着红色书签，页面为格状。"
+      }
+    },
+    {
+      "file": "mapped/albums-and-binder-pages-binder-book.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "The binder book the game ships: a brown cover printed TETRAMON COLLECTOR above the page edges.",
+        "zh": "游戏自带的卡册本：棕色封面印有 TETRAMON COLLECTOR，下方露出内页边。"
+      }
+    }
+  ],
+  "sources": [
+    "A local copy of the game, read only. The grounding for each fact is listed on the technical reference pages; nothing here is estimated."
+  ],
+  "imageTier": "game-image"
+}

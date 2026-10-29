@@ -1,0 +1,61 @@
+{
+  "id": "finding-the-card-games-own-screens",
+  "title": "Finding the card game's own screens",
+  "tier": "published",
+  "kind": "article",
+  "target": "Which screens the card game in TCG Card Shop Simulator keeps behind one manager, and what the reveal screen is telling you while a pack is opened.",
+  "version": "no version stated by this build (see the sources page)",
+  "prerequisites": [
+    "A deck to look at or edit",
+    "A pack to open",
+    "A game in progress if you want to practise"
+  ],
+  "steps": [
+    {
+      "do": "Start from the manager rather than from a menu, because the card game is held by one.",
+      "because": "the card game has a manager that holds the table game itself (PlayCardGameManager, m_PlayTableGame)"
+    },
+    {
+      "do": "Look for the deck list there.",
+      "because": "it holds the deck list screen (m_DeckListScreen)"
+    },
+    {
+      "do": "Look for the deck edit screen in the same place.",
+      "because": "it holds the deck edit screen (m_DeckEditScreen)"
+    },
+    {
+      "do": "Expect a workbench screen as well.",
+      "because": "it holds a workbench screen (m_WorkbenchUIScreen)"
+    },
+    {
+      "do": "Read the rules from the game itself rather than from memory.",
+      "because": "it holds the rulebook screen (m_PlayCardRulebookScreen)"
+    },
+    {
+      "do": "Watch the reveal screen's value readout while a card is turned over.",
+      "because": "the reveal screen has a screen group of its own and a card's value has a group and a text (CardOpeningSequenceUI, m_ScreenGrp, m_CardValueTextGrp, m_CardValueText)"
+    },
+    {
+      "do": "For a graded card, read the value before and after rather than only the result.",
+      "because": "a graded card has a value group with a text for before and a text for after (m_GradedCardValueTextGrp, m_GradedCardValueBeforeText, m_GradedCardValueAfterText)"
+    },
+    {
+      "do": "Use the two arrows to tell a gain from a loss at a glance.",
+      "because": "there is a green and a red arrow for the graded card's value (m_GradedCardValueArrowGreen, m_GradedCardValueArrowRed)"
+    }
+  ],
+  "commonMistakes": [
+    "Hunting through menus for a screen the card game's own manager holds.",
+    "Reading the graded value after the change without looking at what it was before.",
+    "Missing whether a result was a gain or a loss because the arrows were not read.",
+    "Learning the rules from memory when the game ships its own rulebook screen."
+  ],
+  "relatedEntities": [
+    "the-manager-behind-the-card-game",
+    "the-reveal-screen",
+    "the-card-game-you-can-play"
+  ],
+  "sources": [
+    "A local copy of the game, read only. Grounding for each step is on the technical reference pages; no number is estimated."
+  ]
+}

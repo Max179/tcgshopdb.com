@@ -1,0 +1,68 @@
+{
+  "id": "the-plants-in-and-around-the-shop",
+  "title": "The plants in and around the shop",
+  "category": "Shop",
+  "summary": "Plants in TCG Card Shop Simulator are placed objects of their own: the build names eight interactive plants, a numbered set of pots with several levels of detail, flower beds, trees and even ghost versions of them.",
+  "body": [
+    "Planting in this shop is done by placing things, not by painting them on. The build names a set of plants you can interact with, one after another, so what grows in the shop arrives as objects with their own places.",
+    "The pots are a numbered set of their own. More than one of them carries several levels of detail rather than a single model, which is why a shelf of pots keeps its shape whether you are close to it or across the room.",
+    "The beds are named separately from the pots. There are flower beds of their own, so a bed and a pot are two different pieces to buy and to place rather than one thing shown at two sizes.",
+    "Trees are named in kinds as well. A tree, a muffin tree and two evolution trees are among them, which is why the planting can be tailored to a corner rather than repeated everywhere.",
+    "Some of the planting is not alive at all. There are ghost versions of a tree and of a flower, so the same shapes appear in the game's other palettes when it wants them.",
+    "The planting carries its own material set. There is an opacity sheet and a normal-smooth-metallic sheet for it, with a material named for one of the trees, which is why leaves read as leaves rather than as flat paper.",
+    "The image beside this entry is the game's own: the sheet its planting is cut from, with flower beds, grasses, ferns and trailing ivy on it.",
+    "What this entry does not tell you: what any plant costs, how much it changes customer behaviour, or how many of each piece a shop may hold. We have not verified those numbers, so we do not print them."
+  ],
+  "facts": [
+    {
+      "claim": "The plants are things you can place and interact with, named one after another.",
+      "evidence": "asset names: Interactable_Plant1, Interactable_Plant2, Interactable_Plant8"
+    },
+    {
+      "claim": "The pots come in a numbered set of their own, more than one of them with several levels of detail.",
+      "evidence": "asset names: Flower_Pot_01, Flower_Pot_02_LOD0, Flower_Pot_08_LOD1"
+    },
+    {
+      "claim": "Flower beds are named as their own pieces rather than as pots shown at another size.",
+      "evidence": "asset names: Flowerbed01, Flowerbed03, Flowerbed06"
+    },
+    {
+      "claim": "The trees are named in kinds, a muffin tree and two evolution trees among them.",
+      "evidence": "asset names: TreeA, MuffinTreeA, StarfishEvoTree_Mesh, PiggyEvoTree_Mesh"
+    },
+    {
+      "claim": "There are ghost versions of a tree and of a flower.",
+      "evidence": "asset names: Ghost_TreeD, Ghost_FlowerD"
+    },
+    {
+      "claim": "The planting has a material set of its own, an opacity sheet and a normal-smooth-metallic sheet, with a material named for one of the trees.",
+      "evidence": "asset names: Plants_AlbedoOpacity, Plants_NormalSmoothMet, MAT_TreeD"
+    }
+  ],
+  "related": [
+    "expanding-and-decorating-the-shop",
+    "posters-and-wall-displays"
+  ],
+  "images": [
+    {
+      "file": "mapped/the-plants-in-and-around-the-shop-plants.png",
+      "kind": "game",
+      "alt": {
+        "en": "The sheet the game's planting is cut from: flower beds, potted plants, grasses, ferns and trailing ivy on transparency.",
+        "zh": "游戏植被所取的图集：花坛、盆栽、观赏草、蕨类与垂枝常春藤，背景透明。"
+      }
+    },
+    {
+      "file": "mapped/the-plants-in-and-around-the-shop-flower.png",
+      "kind": "game",
+      "alt": {
+        "en": "One of the flower sprites the game ships: a cartoon bloom with yellow petals, a green leaf above it and a dark red stalk.",
+        "zh": "游戏自带的花卉图之一：卡通花朵，黄色花瓣、上方一片绿叶，深红花茎。"
+      }
+    }
+  ],
+  "sources": [
+    "A local copy of the game, read only. The grounding for each fact is listed on the technical reference pages; nothing here is estimated."
+  ],
+  "imageTier": "game-image"
+}

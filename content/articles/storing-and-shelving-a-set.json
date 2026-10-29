@@ -1,0 +1,57 @@
+{
+  "id": "storing-and-shelving-a-set",
+  "title": "Storing and shelving a set",
+  "tier": "published",
+  "kind": "article",
+  "target": "How boxes, packs and shelves line up by set in TCG Card Shop Simulator, so a collection is stored and displayed by what it belongs to.",
+  "version": "no version stated by this build (see the sources page)",
+  "prerequisites": [
+    "Cards from more than one set",
+    "A shelf for cards and somewhere for storage",
+    "Enough space to sort by set"
+  ],
+  "steps": [
+    {
+      "do": "Expect the game to ship a box for each rarity rather than one box.",
+      "because": "the game ships a card box for each rarity: rare, epic and legend (RareCardBox, EpicCardBox, LegendCardBox)"
+    },
+    {
+      "do": "Expect a parallel set of boxes for the later expansion.",
+      "because": "the later expansion has a parallel set of boxes for the same rarities (Destiny_RareCardBox, Destiny_EpicCardBox, Destiny_LegendCardBox)"
+    },
+    {
+      "do": "Know that bulk supply boxes are pictured per rarity and per grade.",
+      "because": "bulk supply boxes are pictured per rarity and per grade (Icon_BulkBox_TetramonBase, Icon_BulkBox_TetramonBaseHG, Icon_BulkBox_TetramonBaseUG, Icon_BulkBox_TetramonDestiny)"
+    },
+    {
+      "do": "Keep a set's packs with the set, because each pack is tied to an expansion.",
+      "because": "each pack is tied to an expansion and the later sets have packs of their own (ExpansionTetramon, AscensionCardPack, MegabotPack, FoodieGOPack, FantasyRPGPack, CatJobPack)"
+    },
+    {
+      "do": "Expect a set to supply a front, an icon and a background for its cards.",
+      "because": "the game supplies a front, an icon and a background for a card of a set, including full-art fronts (CardFrontIconOnly, AscensionCardFrontIcon, CardFront_Air, CardFront_Destiny, CardFrontFullArt_Air, CardFrontFullArt_Water, CardFrontFullArt_Fire)"
+    },
+    {
+      "do": "Put each kind of fixture where the manager expects it.",
+      "because": "a manager holds a separate list for shelves, cashier counters, card shelves, combined shelves, prize shelves, play tables, workbenches, empty-box storage and donation boxes (ShelfManager, m_ShelfList, m_CashierCounterList, m_CardShelfList, m_CardItemCombiShelfList, m_TournamentPrizeShelfList, m_PlayTableList, m_WorkbenchList, m_EmptyBoxStorageList, m_BulkDonationBoxList)"
+    },
+    {
+      "do": "Know that card storage is listed apart from card shelves.",
+      "because": "card storage shelves are listed apart from card shelves (m_CardStorageShelfList)"
+    }
+  ],
+  "commonMistakes": [
+    "Sorting a later set into the base set's boxes.",
+    "Storing packs by size rather than by the set they belong to.",
+    "Treating card storage as if it were a card shelf.",
+    "Assuming one shelf kind is interchangeable with another."
+  ],
+  "relatedEntities": [
+    "what-the-shelf-manager-keeps",
+    "the-boxes-cards-come-in",
+    "the-expansions-the-game-ships"
+  ],
+  "sources": [
+    "A local copy of the game, read only. Grounding for each step is on the technical reference pages; no number is estimated."
+  ]
+}

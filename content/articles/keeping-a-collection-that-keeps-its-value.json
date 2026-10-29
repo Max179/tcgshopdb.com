@@ -1,0 +1,47 @@
+{
+  "id": "keeping-a-collection-that-keeps-its-value",
+  "title": "Keeping a collection that keeps its value",
+  "tier": "published",
+  "kind": "article",
+  "target": "How to keep a TCG Card Shop Simulator collection in order so that the cards you display, grade and sell do not get muddled together.",
+  "version": "no version stated by this build (see the sources page)",
+  "prerequisites": [
+    "Binder pages to store cards in",
+    "Shelves you can see at a glance",
+    "Somewhere to send cards for grading"
+  ],
+  "steps": [
+    {
+      "do": "Store what you are keeping in binder pages rather than loose.",
+      "because": "the game has binder pages as their own storage (T_BinderPage_albedo)"
+    },
+    {
+      "do": "Keep display stock apart from what is for sale.",
+      "because": "display slots are tracked separately from ordinary shelf slots (DisplaySlot)"
+    },
+    {
+      "do": "Decide what goes for grading before it goes on display.",
+      "because": "a submission holds your cards while it is away (GradeCardSubmitSet)"
+    },
+    {
+      "do": "Check the record when you are unsure what you own.",
+      "because": "the game keeps a compact list of the cards in a deck and a pool (DeckCompactCardDataList)"
+    },
+    {
+      "do": "Put graded cards somewhere they can be seen rather than in a pile.",
+      "because": "graded cards return in a case with its own artwork (GradedCardCaseBack)"
+    }
+  ],
+  "commonMistakes": [
+    "Mixing the collection with stock that is for sale.",
+    "Sending cards for grading that you needed on the shelf.",
+    "Leaving graded cards in a pile after they come back."
+  ],
+  "relatedEntities": [
+    "albums-and-binder-pages",
+    "sending-cards-to-be-graded"
+  ],
+  "sources": [
+    "A local copy of the game, read only. Grounding for each step is on the technical reference pages; no number is estimated."
+  ]
+}

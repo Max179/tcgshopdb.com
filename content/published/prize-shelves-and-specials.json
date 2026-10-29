@@ -1,0 +1,72 @@
+{
+  "id": "prize-shelves-and-specials",
+  "title": "Prize shelves and special displays",
+  "category": "Shop",
+  "tier": "published",
+  "summary": "Not every shelf in TCG Card Shop Simulator exists just to sell: the game defines shelves for particular purposes, including a shelf that exists for tournament prizes.",
+  "body": [
+    "Shelves are typed in the game, so a display can be built for a specific job rather than being one generic rack.",
+    "A prize shelf shows that some goods are handled as awards rather than ordinary stock, which is a different purpose from selling.",
+    "A prize shelf is furnished like a shelf and pointed at like a stall. It carries its own compartments and a screen of its own, a place for a customer to stand and a separate list of places for winners, which is why a display for prizes is set up rather than just placed.",
+    "It is also told how to behave around a controller. The shelf keeps a reversed quick-select sequence and a listener for electronic cards, and it is marked with an object type along with whether it cuts the navmesh or counts as a generic object.",
+    "Whatever the purpose, shelf contents are tracked the same way, so keeping the display full is still a task you have to do.",
+    "What this entry does not tell you: what a tournament pays, how often one runs or what belongs on a prize shelf. We have not verified those numbers, so we do not print them."
+  ],
+  "facts": [
+    {
+      "claim": "A shelf dedicated to tournament prizes exists.",
+      "evidence": "identifier: TournamentPrizeShelf"
+    },
+    {
+      "claim": "Shelves are typed rather than being one generic rack.",
+      "evidence": "identifiers: CardShelf, CardItemCombiShelf, Shelf"
+    },
+    {
+      "claim": "Shelf contents are tracked by a manager regardless of the shelf's purpose.",
+      "evidence": "identifier: ShelfManager"
+    },
+    {
+      "claim": "The prize shelf has its own compartments and a screen mesh, with a stand location for customers and a separate list of stand locations for winners.",
+      "evidence": "identifiers: m_CardShelfCompartmentGrpList, m_ShelfCompartmentGrpList, m_ScreenMesh, m_CustomerStandLocList, m_WinnerStandLocList"
+    },
+    {
+      "claim": "It listens for electronic cards and keeps a reversed quick-select sequence for a controller.",
+      "evidence": "identifiers: m_ElectronicCardListener, m_GamepadQuickSelectSequenceReverse"
+    },
+    {
+      "claim": "It is marked with an object type and with whether it cuts the navmesh or is a generic object.",
+      "evidence": "identifiers: m_ObjectType, m_NavMeshCut, m_IsGenericObject"
+    },
+    {
+      "claim": "The prize shelf's screen carries a television material of its own.",
+      "evidence": "asset name: MAT_TournamentPrizeShelfTV"
+    }
+  ],
+  "related": [
+    "shelves-stock-and-upgrades",
+    "trading-with-customers"
+  ],
+  "images": [
+    {
+      "file": "mapped/prize-shelves-and-specials-shelf.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "The game's own artwork for the shelf dedicated to tournament prizes.",
+        "zh": "游戏自带的锦标赛奖品专用货架图案。"
+      }
+    },
+    {
+      "file": "prize-shelves-and-specials.svg",
+      "kind": "diagram",
+      "alt": {
+        "en": "Diagram: a special shelf is placed, prizes are put on it, customers see it, and you keep it stocked.",
+        "zh": "特殊货架示意图：摆放特殊货架、放置奖品、顾客看到、你持续补货。"
+      },
+      "disclaimer": "Original diagram drawn for this site. It is not a screenshot of the game."
+    }
+  ],
+  "sources": [
+    "A local copy of the game, read only. The grounding for each fact is listed on the technical reference pages; nothing here is estimated."
+  ],
+  "imageTier": "game-image"
+}

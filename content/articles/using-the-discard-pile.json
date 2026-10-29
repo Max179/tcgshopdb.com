@@ -1,0 +1,56 @@
+{
+  "id": "using-the-discard-pile",
+  "title": "Using the discard pile instead of forgetting it",
+  "tier": "published",
+  "kind": "article",
+  "target": "How to treat the discard pile in the card game in TCG Card Shop Simulator as a place you can read and search, and how to keep it apart from throwing shop stock away.",
+  "version": "no version stated by this build (see the sources page)",
+  "prerequisites": [
+    "A play table you have set up",
+    "At least one deck you are playing with",
+    "Some idea of which card you are looking for"
+  ],
+  "steps": [
+    {
+      "do": "Treat the pile as a place with cards in it rather than as a counter.",
+      "because": "discarded cards travel to positions of their own and are kept as objects (m_DiscardStartPos, m_DiscardEndPos, m_DiscardPosList, m_DiscardCard3dList)"
+    },
+    {
+      "do": "Read the count on the table before planning a turn.",
+      "because": "the pile has a count element of its own rather than being something you tally by eye (m_DiscardPileCountText)"
+    },
+    {
+      "do": "Search the pile when you need a particular card back.",
+      "because": "the pile can be searched, with its own starting position and a flag for a search being in progress (m_SearchDiscardPileCardStartPos, isSearchingDiscardPile)"
+    },
+    {
+      "do": "Discard deliberately, because what you throw away is what you can look at later.",
+      "because": "the pile keeps the cards themselves, including the ones discarded most recently (m_LastTriggerDiscardedCard3dList)"
+    },
+    {
+      "do": "Check how much is going to the pile before you commit to the action.",
+      "because": "the number of cards being discarded is a value of its own (discardAmount)"
+    },
+    {
+      "do": "Keep the table pile and the shop bin apart in your head.",
+      "because": "getting rid of stock in the shop is a different action, with kinds of removal, a confirmation screen and a list of bins (ECardRemoveType, ConfirmTrashCardScreen, m_TrashBinList)"
+    },
+    {
+      "do": "On a controller, go to the discard area rather than hunting for a button.",
+      "because": "a controller has a discard area of its own on screen (m_ControllerButtonDiscardArea)"
+    }
+  ],
+  "commonMistakes": [
+    "Assuming a discarded card is gone for good when the pile can be searched.",
+    "Ignoring the count on the pile and then guessing what is left in the deck.",
+    "Throwing shop stock away as if it were a play-table discard.",
+    "Discarding the card you will want to search for twice over."
+  ],
+  "relatedEntities": [
+    "discarding-cards",
+    "the-rules-of-the-card-game"
+  ],
+  "sources": [
+    "A local copy of the game, read only. Grounding for each step is on the technical reference pages; no number is estimated."
+  ]
+}

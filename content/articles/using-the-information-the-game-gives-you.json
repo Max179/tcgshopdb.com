@@ -1,0 +1,47 @@
+{
+  "id": "using-the-information-the-game-gives-you",
+  "title": "Using the information the game gives you",
+  "tier": "published",
+  "kind": "article",
+  "target": "How to read what TCG Card Shop Simulator is telling you about customers and prices, instead of changing things at random when takings drop.",
+  "version": "no version stated by this build (see the sources page)",
+  "prerequisites": [
+    "A shop trading",
+    "Customers coming through",
+    "A moment to look rather than react"
+  ],
+  "steps": [
+    {
+      "do": "Read what a review is about rather than guessing why people are unhappy.",
+      "because": "the game keeps a list of what a review can be about (ECustomerReviewType)"
+    },
+    {
+      "do": "Watch what a customer is doing, not only where they are standing.",
+      "because": "each customer is in a named state of its own (ECustomerState)"
+    },
+    {
+      "do": "Check the price a customer would see rather than trusting memory.",
+      "because": "prices are shown on tags and a board of their own (InteractablePriceTag)"
+    },
+    {
+      "do": "Use the price-check screen instead of guessing at the counter.",
+      "because": "the game has a screen for checking a price (CheckPriceScreen)"
+    },
+    {
+      "do": "Search your cards when you are looking for something specific.",
+      "because": "there is a search screen for choosing a card (PlayCardSetUIScreen_SearchCardSelection)"
+    }
+  ],
+  "commonMistakes": [
+    "Ignoring the review types and changing the wrong thing.",
+    "Assuming customers are doing what it looks like they are doing.",
+    "Pricing from memory rather than from the screen."
+  ],
+  "relatedEntities": [
+    "the-kinds-of-customers",
+    "customer-reviews"
+  ],
+  "sources": [
+    "A local copy of the game, read only. Grounding for each step is on the technical reference pages; no number is estimated."
+  ]
+}

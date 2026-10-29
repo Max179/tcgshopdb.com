@@ -1,0 +1,100 @@
+{
+  "id": "how-a-card-front-is-built",
+  "title": "How a card front is built",
+  "category": "Cards",
+  "summary": "A card face in TCG Card Shop Simulator is assembled from parts: the game ships a front per element, full-art versions of the same, and versions with the background stripped out.",
+  "body": [
+    "A card front is its own piece of artwork. The game ships fronts separately from the cards themselves, which is why the face you see is drawn rather than stored once per card.",
+    "There is a front for each element. Air, fire, water and earth each have their own front, which is why an element is visible on the card rather than only mattering in the rules.",
+    "There are full-art versions as well. The same elements have full-art fronts, which is why a finish changes the whole face instead of only the border.",
+    "Some fronts come without a background. The game ships the same art with the background removed, which is why a front can be laid over something else rather than always being a rectangle.",
+    "The artwork is shared across sets too. The game has fronts named for particular expansions, so a set can bring a face of its own alongside its border.",
+    "The front and the finish are separate pieces. A card combines an element face with a border style rather than being a single image, which is why the two can be discussed independently.",
+    "What this entry does not tell you: how many fronts exist, what decides which one a card uses, or how a finish changes a card's value. We have not verified those, so we do not print them."
+  ],
+  "facts": [
+    {
+      "claim": "The game ships a card front for each element.",
+      "evidence": "identifiers: CardFront_Air, CardFront_Fire, CardFront_Water, CardFront_Earth"
+    },
+    {
+      "claim": "The same elements have full-art fronts.",
+      "evidence": "identifiers: CardFrontFullArt_Water, CardFrontFullArt_Fire, CardFrontFullArt_Earth"
+    },
+    {
+      "claim": "Some fronts are shipped with the background removed.",
+      "evidence": "identifiers: CardFront_Air_NoBG, CardFront_Fire_NoBG, CardFront_Water_NoBG"
+    },
+    {
+      "claim": "Fronts also exist for particular expansions.",
+      "evidence": "identifier: CardFront_Destiny"
+    },
+    {
+      "claim": "The finish is a separate piece from the face.",
+      "evidence": "identifiers: ECardBorderType, CardBorder_FirstEdition"
+    },
+    {
+      "claim": "A card back is shipped as its own mesh, with a material kept for it.",
+      "evidence": "asset name: CardBackMesh_MAT_CardBack"
+    },
+    {
+      "claim": "Card backs are numbered as a set: the build names more than twenty of them.",
+      "evidence": "asset names: CardBackMesh13, CardBackMesh17, CardBackMesh20, CardBackMesh23"
+    },
+    {
+      "claim": "Some fronts are shipped as ghost fronts, in a black and a white version, beside a champion front.",
+      "evidence": "asset names: CardFrontGhostBlack, CardFrontGhostWhite, CardFrontChampion"
+    },
+    {
+      "claim": "Card backgrounds are shipped per kind as well: a ghost background, a black ghost one, a ghost stat background and a champion background, with a transparent layering one beside them.",
+      "evidence": "asset names: CardBG_Ghost, CardBG_GhostBlack, CardBG_GhostStat, CardBG_Champion, CardBG_TransparentLayering"
+    },
+    {
+      "claim": "Air and water backgrounds are named beside the ghost, champion and transparent ones.",
+      "evidence": "asset names: CardBG_Air, CardBG_Water"
+    },
+    {
+      "claim": "The card back is also drawn as its own picture, with the card game's name across it.",
+      "evidence": "asset name: CardBack"
+    },
+    {
+      "claim": "The water element also carries a sleeve material and a card-front picture of its own.",
+      "evidence": "asset names: T_CardSleeveWater, MAT_CardSleeveWater, CardFrontWater"
+    }
+  ],
+  "related": [
+    "cards-and-rarity",
+    "card-sets-and-expansions"
+  ],
+  "images": [
+    {
+      "file": "mapped/how-a-card-front-is-built-air.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "The card front the game ships for one of its elements.",
+        "zh": "游戏为某一元素提供的卡面图。"
+      }
+    },
+    {
+      "file": "mapped/how-a-card-front-is-built-card-back.png",
+      "kind": "game",
+      "alt": {
+        "en": "The card back the game draws, with the card game's own name and emblem across it.",
+        "zh": "游戏绘制的卡背：印着这款卡牌游戏自己的名称与徽记。"
+      }
+    },
+    {
+      "file": "how-a-card-front-is-built.svg",
+      "kind": "diagram",
+      "alt": {
+        "en": "Diagram: an element front is chosen, a finish is applied, and the two together make the card face.",
+        "zh": "示意图：选定元素卡面、套用边框工艺、两者合成卡牌正面。"
+      },
+      "disclaimer": "Original diagram drawn for this site. It is not a screenshot of the game."
+    }
+  ],
+  "sources": [
+    "A local copy of the game, read only. Identifiers are listed on the technical reference pages; nothing here is estimated."
+  ],
+  "imageTier": "game-image"
+}

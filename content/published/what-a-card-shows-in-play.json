@@ -1,0 +1,115 @@
+{
+  "id": "what-a-card-shows-in-play",
+  "title": "What a card shows while you play it",
+  "category": "Cards",
+  "summary": "A card in play is presented rather than simply shown: the game keeps an icon-only front, its own stat icons and a damage display, so what you read off a card is put there deliberately.",
+  "body": [
+    "A card is presented, not just displayed. The game ships an icon-only version of a card front, which is what a card looks like when it is being shown rather than handled.",
+    "There are stat icons for a card. The game keeps its own icons for things a card can have, covering a critical, a boss, a fist and a defence among them, so what a card is capable of is drawn on it.",
+    "Damage is shown separately. There is an element damage display of its own, which is why a card's element matters visibly during play and not only in the rules.",
+    "Cards are drawn in a queue. The game keeps a draw queue with its own states covering the hand, the discard, the centre and the top or bottom of a deck, which is why moving a card is tracked rather than instant.",
+    "Effects are their own data. Card effects are kept as their own records, so what a card does in play is defined rather than hard-coded into the card.",
+    "The damage display is drawn from lists. It carries a background colour and a power text, and it keeps a list of element background colours beside a list of element icons, so a card's element is a colour and a symbol rather than a word.",
+    "It is placed rather than fixed. The display has a position offset and a rotation offset and it can follow the card's rotation, which is why the same damage readout sits properly whether the card is in a hand or lying on a table.",
+    "Cards also have display settings. The game keeps settings for how a card is shown, which is why the same card can be presented differently in a hand and on a board.",
+    "The elements have pictures of their own. The game ships an icon per element for a card in play, a red-and-yellow flame for fire, a blue wave for water, a green rock for earth and a yellow swirl for wind among them, which is what the damage display's list of element icons points at.",
+    "What this entry does not tell you: what any icon means in rules terms, how much damage anything does, or how many effects exist. We have not verified those, so we do not print them."
+  ],
+  "facts": [
+    {
+      "claim": "The game ships an icon-only card front for presenting a card.",
+      "evidence": "identifier: CardFrontIconOnly"
+    },
+    {
+      "claim": "There are stat icons for things a card can have, including a critical, a boss, a fist and a defence.",
+      "evidence": "identifiers: Icon_StatsIcon_Critical, Icon_StatsIcon_Boss, Icon_StatsIcon_Fist, Icon_StatsIcon_Defense"
+    },
+    {
+      "claim": "Element damage is shown by a display of its own.",
+      "evidence": "identifier: PlayCardElementDamageDisplay"
+    },
+    {
+      "claim": "Cards move through a draw queue with named destinations.",
+      "evidence": "identifier: ECardDrawQueueType"
+    },
+    {
+      "claim": "Card effects are kept as their own records.",
+      "evidence": "identifier: PlayCardEffect_ScriptableObject"
+    },
+    {
+      "claim": "Cards have display settings of their own.",
+      "evidence": "identifiers: CardUISetting, CardUISettingData"
+    },
+    {
+      "claim": "The element damage display carries a background colour and a power text, with a list of element background colours and a list of element icons.",
+      "evidence": "identifiers: m_ColorBG, m_PowerText, m_ElementBGColorList, m_ElementIconSpriteList"
+    },
+    {
+      "claim": "It has a position offset and a rotation offset, and it can follow the card's rotation.",
+      "evidence": "identifiers: m_PosOffset, m_RotOffset, m_FollowRotation"
+    },
+    {
+      "claim": "The game ships its own element icons for a card in play, including icons for fire, water, earth and wind.",
+      "evidence": "asset names: Icon_Fire, Icon_Water, Icon_Earth, Icon_Wind"
+    }
+  ],
+  "related": [
+    "how-a-card-front-is-built",
+    "the-rules-of-the-card-game"
+  ],
+  "images": [
+    {
+      "file": "mapped/what-a-card-shows-in-play-fire.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "The fire element icon the game prints on a card in play: a red and yellow flame with a black outline.",
+        "zh": "游戏在对战中的卡牌上印制的火属性图标：黑描边的红黄火焰。"
+      }
+    },
+    {
+      "file": "mapped/what-a-card-shows-in-play-water.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "The water element icon the game prints on a card in play: a blue wave and droplet with a black outline.",
+        "zh": "游戏在对战中的卡牌上印制的水属性图标：黑描边的蓝色波浪与水珠。"
+      }
+    },
+    {
+      "file": "mapped/what-a-card-shows-in-play-earth.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "The earth element icon the game prints on a card in play: a green faceted rock with a black outline.",
+        "zh": "游戏在对战中的卡牌上印制的土属性图标：黑描边的绿色棱面岩石。"
+      }
+    },
+    {
+      "file": "mapped/what-a-card-shows-in-play-wind.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "The wind element icon the game prints on a card in play: a yellow swirl and cloud with a black outline.",
+        "zh": "游戏在对战中的卡牌上印制的风属性图标：黑描边的黄色旋涡与云。"
+      }
+    },
+    {
+      "file": "mapped/what-a-card-shows-in-play-icon.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "The icon-only card front the game itself uses when presenting a card.",
+        "zh": "游戏在展示卡牌时使用的纯图标卡面。"
+      }
+    },
+    {
+      "file": "what-a-card-shows-in-play.svg",
+      "kind": "diagram",
+      "alt": {
+        "en": "Diagram: a card is drawn, its icons and damage are shown, it resolves, and it moves to the discard.",
+        "zh": "示意图：抽到卡牌、显示图标与伤害、结算效果、进入弃牌堆。"
+      },
+      "disclaimer": "Original diagram drawn for this site. It is not a screenshot of the game."
+    }
+  ],
+  "sources": [
+    "A local copy of the game, read only. Identifiers are listed on the technical reference pages; nothing here is estimated."
+  ],
+  "imageTier": "game-image"
+}

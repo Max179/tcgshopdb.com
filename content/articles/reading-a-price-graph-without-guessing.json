@@ -1,0 +1,70 @@
+{
+  "id": "reading-a-price-graph-without-guessing",
+  "title": "Reading a price graph without guessing",
+  "tier": "published",
+  "kind": "article",
+  "target": "How to use the price graph in TCG Card Shop Simulator: what the screen can show, how the line and its colours are drawn, what the lists of prices and days are for, and how a graded card gets a price of its own.",
+  "version": "no version stated by this build (see the sources page)",
+  "prerequisites": [
+    "Stock you are unsure about",
+    "A moment at the screen",
+    "Enough history for a line to mean something"
+  ],
+  "steps": [
+    {
+      "do": "Open the price graph rather than guessing a price, because the game has a screen for an item's price over time.",
+      "because": "there is a screen dedicated to an item's price over time (ItemPriceGraphScreen)"
+    },
+    {
+      "do": "Know that the same screen serves goods and cards, because it carries groups for both.",
+      "because": "the screen has an item group and a card group beside its value group (m_ItemGrp, m_CardGrp, m_ValueGrp)"
+    },
+    {
+      "do": "Read what the screen says it is showing, because it names the item, the card and the card's grade.",
+      "because": "the screen carries an item name, a card name and a card grade name (m_ItemName, m_CardName, m_CardGradeName)"
+    },
+    {
+      "do": "Expect the line to be worked out at run time rather than baked, because its start and end positions are calculated.",
+      "because": "the graph has a start and an end point, each calculated into a position (m_GraphStartXY, m_GraphEndXY, m_GraphStartCalculatePos, m_GraphEndCalculatePos)"
+    },
+    {
+      "do": "Give the line a moment, because it is drawn with a speed and a divider rather than appearing all at once.",
+      "because": "the line has a lerp speed and a divider of its own (m_LineGraphLerpSpeed, m_LineGraphDivide)"
+    },
+    {
+      "do": "Read the colour as the answer, because the graph keeps a positive, a negative and a neutral colour.",
+      "because": "the graph has a positive, a negative and a neutral colour (m_PositiveColor, m_NegativeColor, m_NeutralColor)"
+    },
+    {
+      "do": "Look at the lists behind the picture rather than only the line, because the prices and the days are kept as lists.",
+      "because": "the graph keeps lists of price lines, dots, price texts and day texts (m_ItemPriceLineGrpList, m_DotSpriteList, m_PriceTextList, m_DayTextList)"
+    },
+    {
+      "do": "Check a graded card on its own line, because the screen keeps a quick-view price for graded cards.",
+      "because": "the screen keeps a quick-view price text for graded cards (m_QuickViewGradedCardPriceTextList)"
+    },
+    {
+      "do": "Switch the grade from the screen when the grade is what you are comparing.",
+      "because": "the screen has a change-grade option screen and a list of change-grade buttons (m_ChangeGradeOptionUIScreen, m_ChangeGradeBtnList)"
+    },
+    {
+      "do": "Remember that the tag on the shelf is a separate thing, because floor price tags are objects of their own.",
+      "because": "price tags on the floor are objects of their own (InteractablePriceTag, UI_PriceTag)"
+    }
+  ],
+  "commonMistakes": [
+    "Guessing a price when the screen would have shown the history.",
+    "Reading a card's line as if it were a shelf item's, when the screen keeps the two groups apart.",
+    "Ignoring the colour and reading only the shape of the line.",
+    "Forgetting that a graded card has a price of its own on the screen.",
+    "Setting the shelf tag and expecting the graph to change on its own."
+  ],
+  "relatedEntities": [
+    "price-history-and-graphs",
+    "prices-and-price-tags",
+    "reading-the-price-board"
+  ],
+  "sources": [
+    "A local copy of the game, read only. Identifiers are listed on the technical reference pages; nothing here is estimated."
+  ]
+}

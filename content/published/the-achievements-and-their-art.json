@@ -1,0 +1,58 @@
+{
+  "id": "the-achievements-and-their-art",
+  "title": "The achievements and the art they come with",
+  "category": "Interface",
+  "tier": "published",
+  "summary": "TCG Card Shop Simulator ships an achievement set with art of its own: every numbered achievement carries an icon and a background, and the two are the same picture at two sizes of story.",
+  "body": [
+    "TCG Card Shop Simulator ships achievements as a set rather than as an afterthought. Every entry in the set carries an icon of its own, so a badge a player earns is a piece of art rather than a line of text.",
+    "Each entry carries a background as well. An achievement is therefore two pictures, one small enough to sit in a list and one wide enough to fill a screen, which is why the same achievement can be shown in two places without looking like two different things.",
+    "The two pictures go together. On one numbered entry the icon is the cut-out figure against nothing at all, and the background is the whole scene that figure was cut from, with the sky, the clouds and the sun put back in.",
+    "The set is numbered. The icons run from one to a hundred and twenty-one with an icon for each number, which is why the achievement list can be a set of its own rather than a handful of one-off awards.",
+    "The art has a subject of its own. The entry opened for this page shows a bird-like warrior in purple and black, its lance glowing, mid-leap over a blue-green arc, so the achievements are illustrated rather than abstract.",
+    "That is why the achievements are worth a look even for a player who never chases them: the art is the game's own and it is filed per achievement, so an entry can be identified by its picture alone.",
+    "The same numbering is what an outside service would show. Because an achievement has a stable number and a stable picture, a badge earned in the shop can be matched to the same badge in a list without the two having to agree on names.",
+    "What this entry does not tell you: what any single achievement is awarded for, how many are reachable in one save, or whether the list is complete. We have not verified those, so we do not print them."
+  ],
+  "facts": [
+    {
+      "claim": "The build ships an achievement set of its own, with an icon and a background for each numbered entry.",
+      "evidence": "asset names: Asc_1_Icon, Asc_1_BG, Asc_100_Icon, Asc_100_BG, Asc_121_Icon, Asc_121_BG"
+    },
+    {
+      "claim": "The set is numbered from one to a hundred and twenty-one.",
+      "evidence": "asset names: Asc_1_Icon, Asc_121_Icon"
+    },
+    {
+      "claim": "For one entry the icon is the cut-out figure and the background is the whole scene it was cut from, both carrying the same artwork.",
+      "evidence": "asset names: Asc_100_Icon, Asc_100_BG"
+    }
+  ],
+  "related": [
+    "licences-and-shop-level",
+    "pack-tiers-and-names",
+    "the-expansions-the-game-ships"
+  ],
+  "images": [
+    {
+      "file": "mapped/the-achievements-and-their-art-icon.png",
+      "kind": "game",
+      "alt": {
+        "en": "The icon art for one numbered achievement: a bird-like warrior in purple and black with a glowing lance, cut out against a plain ground.",
+        "zh": "其中一个编号成就的图标：紫黑色鸟形战士，长枪发光，抠像在透明底上。"
+      }
+    },
+    {
+      "file": "mapped/the-achievements-and-their-art-background.png",
+      "kind": "game",
+      "alt": {
+        "en": "The background for the same achievement: the same warrior over a bright sky with sun and clouds.",
+        "zh": "同一成就的背景图：同一位战士，背后是带太阳与云层的明亮天空。"
+      }
+    }
+  ],
+  "sources": [
+    "A local copy of the game, read only. The grounding for each fact is listed on the technical reference pages; nothing here is estimated."
+  ],
+  "imageTier": "game-image"
+}

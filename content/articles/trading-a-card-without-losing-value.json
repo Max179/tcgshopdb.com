@@ -1,0 +1,69 @@
+{
+  "id": "trading-a-card-without-losing-value",
+  "title": "Trading a card without losing value",
+  "tier": "published",
+  "kind": "article",
+  "target": "How to run a trade in TCG Card Shop Simulator from the screen the game gives you: reading both sides and their market prices and album counts, telling the customer's mode from its own lines, and choosing deliberately between the four ways out.",
+  "version": "no version stated by this build (see the sources page)",
+  "prerequisites": [
+    "A customer who wants to trade rather than only buy",
+    "A card you are willing to part with",
+    "A shop open, with the trade screen reachable"
+  ],
+  "steps": [
+    {
+      "do": "Run the trade from the customer's own screen rather than by moving cards around the shop.",
+      "because": "trading with a customer has a screen of its own in the game (CustomerTradeCardScreen)"
+    },
+    {
+      "do": "Read both sides before you type anything.",
+      "because": "the screen keeps a card panel for each side, plus album panels and a buying panel, so the whole offer is on one surface (m_CardUI_L, m_CardUI_R, m_CardUI_Album_L, m_CardUI_Album, m_CardUI_Buying)"
+    },
+    {
+      "do": "Compare the market prices shown rather than working from memory.",
+      "because": "a market price is shown for each side of the trade (m_MarketPrice_L, m_MarketPrice_R)"
+    },
+    {
+      "do": "Check the album counts before you let a card go.",
+      "because": "an album count is shown for each side, so the screen says what each of you already holds (m_AlbumCardCount_L, m_AlbumCardCount)"
+    },
+    {
+      "do": "Tell which mode you are in from the customer's own line rather than assuming.",
+      "because": "selling, trading, haggling, declining and accepting each have their own set of customer lines (m_CustomerSellCardTextList, m_CustomerTradeCardTextList, m_CustomerHaggleTextList, m_CustomerDeclineTextList, m_CustomerAcceptedTextList)"
+    },
+    {
+      "do": "Watch the line at the top for the reaction as it happens.",
+      "because": "the customer's top line has an animation of its own, so it is presented rather than swapped in (m_CustomerTopText, m_CustomerTopTextAnim)"
+    },
+    {
+      "do": "Type the price rather than edging it up in your head.",
+      "because": "the price is typed into an input and shown back on a display of its own (m_SetPriceInput, m_SetPriceInputDisplay, m_SetPrice)"
+    },
+    {
+      "do": "Check the price graph when the number actually matters.",
+      "because": "the item price graph screen is reachable from the trade screen rather than being a separate errand (m_ItemPriceGraphScreen, ItemPriceGraphScreen)"
+    },
+    {
+      "do": "Choose deliberately between the four ways out.",
+      "because": "accepting, cancelling, thinking it over and finishing each have their own control (m_AcceptBtn, m_CancelBtn, m_LetMeThinkBtn, m_DoneBtn)"
+    },
+    {
+      "do": "Expect the screen to behave like the shop's other screens.",
+      "because": "it carries a screen group, a rule for closing when another screen opens and a check for the virtual keyboard (m_ScreenGroup, m_CloseIfScreenOpened, m_CheckVirtualKeyboardActive, m_ControllerScreenUIExtension)"
+    }
+  ],
+  "commonMistakes": [
+    "Trading away a card that is in your own album because one side of the offer looked good.",
+    "Typing a price from memory instead of reading the market price the screen shows.",
+    "Treating the customer's line as flavour when it is saying which mode the conversation is in.",
+    "Using the thought-over control as a no rather than as a delay."
+  ],
+  "relatedEntities": [
+    "the-trade-screen-and-what-it-shows",
+    "trading-with-customers",
+    "the-counter-and-money"
+  ],
+  "sources": [
+    "A local copy of the game, read only. Grounding for each step is on the technical reference pages; no number is estimated."
+  ]
+}

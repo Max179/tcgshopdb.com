@@ -1,0 +1,61 @@
+{
+  "id": "labelling-the-shelves-so-prices-read-right",
+  "title": "Labelling the shelves so prices read right",
+  "tier": "published",
+  "kind": "article",
+  "target": "How to use price tags and compartments in TCG Card Shop Simulator so what is on a shelf and what it costs are both readable.",
+  "version": "no version stated by this build (see the sources page)",
+  "prerequisites": [
+    "A shelf or box with stock in it",
+    "Price tags unlocked",
+    "Cards if you are labelling card shelves"
+  ],
+  "steps": [
+    {
+      "do": "Expect the right tag for the container rather than one tag everywhere.",
+      "because": "price tags are spawned from a set of prefabs, with a separate one for an item box, a package box, a warehouse rack and a card (PriceTagUISpawner, m_UIPriceTagItemBoxPrefab, m_UIPriceTagPackageBoxPrefab, m_UIPriceTagWarehouseRackPrefab, m_UIPriceTagCardPrefab)"
+    },
+    {
+      "do": "Know that a shelf gets a group of world interface elements, not one tag.",
+      "because": "a shelf takes a group prefab of its own (m_Shelf_WorldUIGrpPrefab)"
+    },
+    {
+      "do": "Read the price panel's own lines instead of the tag alone.",
+      "because": "the panel carries the item image, its name, the total and a line for how the price changed (CheckPricePanelUI, m_ItemImage, m_NameText, m_TotalPriceText, m_PriceChangeText)"
+    },
+    {
+      "do": "Use the three arrows rather than guessing a trend.",
+      "because": "the panel has separate arrows for a price going up, going down and not changing (m_UpArrow, m_DownArrow, m_NoChangeArrow)"
+    },
+    {
+      "do": "Remember the tag's characters come from an atlas with a cell for each digit and currency mark.",
+      "because": "the map holds an index for each digit, for a period, a comma, a minus and a space, and for the dollar, euro, yen, pound and cent marks (PriceTagAtlasMap, digitIndex, periodIndex, commaIndex, minusIndex, spaceIndex, dollarIndex, euroIndex, yenIndex, poundIndex, centIndex)"
+    },
+    {
+      "do": "Check that the compartment will accept what you are putting in it.",
+      "because": "a compartment records what it will accept and whether its label can be locked (m_CanPutItem, m_CanPutBox, m_ItemNotForSale, m_CanLockItemLabel)"
+    },
+    {
+      "do": "Leave room for a tall item if the compartment grows upward.",
+      "because": "a compartment has a recorded size and can be affected by a tall item or able to grow upward (m_SizeX, m_SizeY, m_SizeZ, m_AffectedByTallItem, m_HeightGoesUp)"
+    },
+    {
+      "do": "For cards, use the placement the compartment offers for graded and ungraded cards.",
+      "because": "a card compartment has places to put a card, including an alternative for one that has not been graded (m_PutCardLocation, m_PutCardLocationAlt, m_NoneGradedCardUseAltCardLocation)"
+    }
+  ],
+  "commonMistakes": [
+    "Labelling a box with the same tag you use on a rack.",
+    "Reading a price without looking at the change line beside it.",
+    "Forcing stock into a compartment that was never meant to take it.",
+    "Filling a compartment to the top and then adding something tall."
+  ],
+  "relatedEntities": [
+    "price-tags-for-every-context",
+    "how-a-price-tag-is-drawn",
+    "how-a-shelf-holds-its-stock"
+  ],
+  "sources": [
+    "A local copy of the game, read only. Grounding for each step is on the technical reference pages; no number is estimated."
+  ]
+}

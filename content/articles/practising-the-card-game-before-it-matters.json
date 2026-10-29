@@ -1,0 +1,47 @@
+{
+  "id": "practising-the-card-game-before-it-matters",
+  "title": "Practising the card game before it matters",
+  "tier": "published",
+  "kind": "article",
+  "target": "How to learn the card game inside TCG Card Shop Simulator using the rulebook, the mulligan and the screens the game provides, rather than learning it by losing.",
+  "version": "no version stated by this build (see the sources page)",
+  "prerequisites": [
+    "The card game unlocked",
+    "A deck worth playing",
+    "A play table free"
+  ],
+  "steps": [
+    {
+      "do": "Read the rulebook before your first game rather than after a loss.",
+      "because": "the game ships a rulebook screen of its own (PlayCardRulebookScreen)"
+    },
+    {
+      "do": "Treat the mulligan as a real decision rather than a formality.",
+      "because": "a game opens with a mulligan screen (PlayCardSetUIScreen_Mulligan)"
+    },
+    {
+      "do": "Watch the action resolution instead of skipping past it.",
+      "because": "actions resolve on a screen of their own (PlayCardSetUIScreen_ActionResolve)"
+    },
+    {
+      "do": "Choose your element area deliberately.",
+      "because": "picking an element area is its own step (PlayCardSetUIScreen_SelectElementArea)"
+    },
+    {
+      "do": "Inspect the board whenever you are unsure what is in play.",
+      "because": "there is a screen for inspecting the board (PlayCardSetUIScreen_InspectBoard)"
+    }
+  ],
+  "commonMistakes": [
+    "Playing without reading the rulebook.",
+    "Clicking through the mulligan without thinking.",
+    "Assuming the board is what you remember it to be."
+  ],
+  "relatedEntities": [
+    "the-rules-of-the-card-game",
+    "the-card-game-you-can-play"
+  ],
+  "sources": [
+    "A local copy of the game, read only. Grounding for each step is on the technical reference pages; no number is estimated."
+  ]
+}

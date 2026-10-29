@@ -1,0 +1,204 @@
+{
+  "site": "tcgshopdb.com",
+  "floor": 20,
+  "columns": [
+    {
+      "id": "cards",
+      "label": "Cards and what is printed on them",
+      "categories": [
+        "Cards"
+      ],
+      "entries": [
+        "the-page-that-shows-what-you-pulled"
+      ]
+    },
+    {
+      "id": "rarity",
+      "label": "Card categories, rarity and finishes",
+      "categories": [
+        "Rarity"
+      ],
+      "entries": [
+        "cards-and-rarity",
+        "rarity-and-how-it-is-chosen",
+        "what-a-ghost-card-does"
+      ]
+    },
+    {
+      "id": "packs",
+      "label": "Packs, boxes and expansions",
+      "categories": [
+        "Packs"
+      ],
+      "entries": [
+        "packs-and-opening",
+        "pack-tiers-and-names",
+        "card-sets-and-expansions",
+        "the-expansions-the-game-ships"
+      ]
+    },
+    {
+      "id": "acquisition",
+      "label": "Drawing and acquiring cards",
+      "entries": [
+        "opening-a-pack-on-screen",
+        "packs-and-opening",
+        "sending-cards-to-be-graded"
+      ]
+    },
+    {
+      "id": "valuation",
+      "label": "Card prices and what they are worth",
+      "categories": [
+        "Pricing"
+      ],
+      "entries": [
+        "price-changes-and-cash",
+        "price-history-and-graphs"
+      ]
+    },
+    {
+      "id": "display",
+      "label": "Displaying and showing off cards",
+      "entries": [
+        "posters-and-wall-displays",
+        "the-warehouse-and-its-shelves",
+        "playmats-deck-boxes-and-sleeves"
+      ],
+      "status": "covers posters, wall displays, table accessories and the warehouse rows; shelving itself is covered under the storage and shop rows"
+    },
+    {
+      "id": "decks",
+      "label": "Decks and practising the game",
+      "entries": [
+        "building-and-editing-a-deck",
+        "the-card-game-you-can-play",
+        "the-rules-of-the-card-game",
+        "discarding-cards"
+      ]
+    },
+    {
+      "id": "demand",
+      "label": "What customers want",
+      "categories": [
+        "Customers"
+      ],
+      "entries": [
+        "the-profile-behind-each-customer",
+        "how-many-customers-your-shop-holds"
+      ]
+    },
+    {
+      "id": "facilities",
+      "label": "Shop facilities",
+      "categories": [
+        "Shop"
+      ],
+      "entries": [
+        "the-finishes-you-can-buy",
+        "the-screens-you-buy-from",
+        "what-the-pack-opener-shows-you"
+      ]
+    },
+    {
+      "id": "inventory",
+      "label": "Shelves, storage and stock",
+      "categories": [
+        "Storage"
+      ],
+      "entries": [
+        "how-a-shelf-holds-its-stock",
+        "where-the-shops-lists-live"
+      ]
+    },
+    {
+      "id": "pricing",
+      "label": "Pricing and price tags",
+      "categories": [
+        "Pricing"
+      ],
+      "entries": [
+        "prices-and-price-tags",
+        "reading-the-price-board",
+        "setting-prices-in-bulk",
+        "price-tags-for-every-context"
+      ]
+    },
+    {
+      "id": "staff",
+      "label": "Staff and workers",
+      "entries": [
+        "setting-what-your-workers-do"
+      ]
+    },
+    {
+      "id": "upgrades",
+      "label": "Upgrades and unlocks",
+      "entries": [
+        "the-upgrades-you-can-buy",
+        "the-services-the-game-offers",
+        "licences-and-shop-level"
+      ],
+      "status": "the upgrade list is documented; there is no separate unlock tree"
+    },
+    {
+      "id": "flow",
+      "label": "Running the shop day to day",
+      "entries": [
+        "the-counter-and-money",
+        "moving-on-old-stock",
+        "the-screens-you-will-use-most",
+        "what-the-game-writes-down",
+        "what-the-till-shows-you"
+      ]
+    },
+    {
+      "id": "events",
+      "label": "Tournaments and events",
+      "categories": [
+        "Events"
+      ],
+      "entries": [
+        "how-tournament-standings-are-decided",
+        "tournaments-and-events"
+      ]
+    },
+    {
+      "id": "interface",
+      "label": "Screens and fixture settings",
+      "categories": [
+        "Interface"
+      ],
+      "entries": [
+        "the-setting-screens-for-your-fixtures",
+        "the-settings-you-can-change"
+      ]
+    },
+    {
+      "id": "faq",
+      "label": "Answers to the questions players ask most",
+      "entries": [
+        "questions-players-ask"
+      ]
+    },
+    {
+      "id": "glossary",
+      "label": "Glossary of the terms this site uses",
+      "entries": [
+        "glossary-of-terms"
+      ]
+    },
+    {
+      "id": "versions",
+      "label": "Which version this site documents",
+      "entries": [
+        "which-version-this-site-documents"
+      ]
+    },
+    {
+      "id": "guides",
+      "label": "Step-by-step shop guides",
+      "kind": "articles"
+    }
+  ]
+}

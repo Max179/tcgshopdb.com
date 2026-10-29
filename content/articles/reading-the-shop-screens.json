@@ -1,0 +1,61 @@
+{
+  "id": "reading-the-shop-screens",
+  "title": "Reading the shop screens",
+  "tier": "published",
+  "kind": "article",
+  "target": "What the buying screens, the till and your own review records are telling you in TCG Card Shop Simulator, so a purchase or a complaint is read rather than skimmed.",
+  "version": "no version stated by this build (see the sources page)",
+  "prerequisites": [
+    "A shop with something to buy",
+    "A counter customers pay at",
+    "A few customers served"
+  ],
+  "steps": [
+    {
+      "do": "Read a shop panel's level requirement before you plan a purchase.",
+      "because": "a shop panel for an item carries its name, price, company title and level requirement (FurnitureShopPanelUI, m_NameText, m_PriceText, m_CompanyTitle, m_LevelRequirementText)"
+    },
+    {
+      "do": "Know that a purchase button has a locked form and a purchased form.",
+      "because": "the button for a purchase exists in a locked form and in a purchased form (m_LockPurchaseBtn, m_PurchasedBtn)"
+    },
+    {
+      "do": "Read an expansion panel's prologue group and what it enables.",
+      "because": "an expansion panel keeps a prologue group and a list that a later shop screen enables (ExpansionShopPanelUI, m_PrologueUIGrp, m_ShopB_EnableList)"
+    },
+    {
+      "do": "Confirm an expensive purchase on its confirmation screen, which repeats the details.",
+      "because": "a confirmation screen repeats the picture, name, description and price before a purchase is made (FurnitureShopConfirmPurchaseScreen, m_Image, m_NameText, m_DescriptionText, m_PriceText)"
+    },
+    {
+      "do": "At the till, read the item bar's four lines rather than only the total.",
+      "because": "the checkout bar carries a name, a price, a unit and a total (UI_CheckoutItemBar, m_NameText, m_PriceText, m_UnitText, m_TotalText)"
+    },
+    {
+      "do": "Watch the card payment screen where the customer is, not where you left it.",
+      "because": "the card payment screen shows a total of its own and follows an object rather than sitting in a fixed place, with an extension for controllers (UI_CreditCardScreen, m_TotalPriceText, m_FollowObject, m_ControllerScreenUIExtension)"
+    },
+    {
+      "do": "Know that change is handled per currency rather than as one amount.",
+      "because": "the counter's change data names each currency, says whether it is a coin, and gives it a value (CounterMoneyChangeCurrencyData, isCoin, value)"
+    },
+    {
+      "do": "Read a review as a record with a reason and a time, not as a mood.",
+      "because": "a review carries its reason, its star level, the wording table it came from and which line of it, the day, hour and minute, the item and the customer's name (customerReviewType, starLevel, textSOGoodBadLevel, textSOIndex, day, hour, minute, itemType, customerName)"
+    }
+  ],
+  "commonMistakes": [
+    "Buying something a level requirement was about to unlock anyway.",
+    "Skimming the till total without reading the unit price beside it.",
+    "Looking for the card payment screen in a fixed spot when it follows the customer.",
+    "Taking a bad review as a mood rather than as a record of an item and a reason."
+  ],
+  "relatedEntities": [
+    "the-screens-you-buy-from",
+    "what-the-till-shows-you",
+    "what-a-review-record-keeps"
+  ],
+  "sources": [
+    "A local copy of the game, read only. Grounding for each step is on the technical reference pages; no number is estimated."
+  ]
+}

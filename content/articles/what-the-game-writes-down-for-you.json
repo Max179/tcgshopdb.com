@@ -1,0 +1,77 @@
+{
+  "id": "what-the-game-writes-down-for-you",
+  "title": "What the game writes down for you",
+  "tier": "published",
+  "kind": "article",
+  "target": "How TCG Card Shop Simulator records a shop: which parts are saved by kind, which lists hold what the shop shows and owns, and why an inventory points at those lists instead of holding its own numbers.",
+  "version": "no version stated by this build (see the sources page)",
+  "prerequisites": [
+    "A shop with shelves and stock in it",
+    "Access to the save slots",
+    "A moment before changing the layout"
+  ],
+  "steps": [
+    {
+      "do": "Know that your shop is written down by kind rather than as one block, because each kind of shelf has a save record of its own.",
+      "because": "each kind of shelf has its own save record (CardShelfSaveData, CardStorageShelfSaveData, ShelfSaveData, WarehouseShelfSaveData)"
+    },
+    {
+      "do": "Expect a shelf that holds cards and products together to be recorded separately, because it has a record of its own.",
+      "because": "a shelf that holds cards and items together keeps a record of its own (CardItemCombiShelfSaveData)"
+    },
+    {
+      "do": "Remember what the machines were doing, because the automatic pack opener is saved as well.",
+      "because": "the automatic pack opener is saved as well (AutoPackOpenerSaveData)"
+    },
+    {
+      "do": "Do not unpack boxes before saving if you care about what is inside them, because packaging boxes keep their own record.",
+      "because": "packaging boxes have a save record of their own (PackageBoxCardSaveData)"
+    },
+    {
+      "do": "Expect the people to be written down too, because customers are saved as records of their own.",
+      "because": "customers are written down as records of their own (CustomerSaveData)"
+    },
+    {
+      "do": "Save deliberately rather than by quitting, because saving and loading has a panel of its own with a slot index and a save control.",
+      "because": "saving and loading has a panel of its own with a slot index and a save control (SaveLoadSlotPanelUI, m_SlotIndex, m_SaveBtn)"
+    },
+    {
+      "do": "Know that one list holds the shop's own objects, furniture and decorations, split by the surface they go on.",
+      "because": "one data object holds objects, furniture and decorations split by surface (ShelfData_ScriptableObject, m_ObjectDataList, m_FurniturePurchaseDataList, m_DecoDataList, m_FloorDecoDataList, m_WallDecoDataList, m_WallBarDecoDataList, m_CeilingDecoDataList, m_PosterDecoList, m_OtherDecoList)"
+    },
+    {
+      "do": "Know that another list decides what your shop puts on show, including accessories, figurines and board games.",
+      "because": "another object holds what the shop shows, including item kinds, accessories, figurines and board games (StockItemData_ScriptableObject, m_ShownItemType, m_ShownAccessoryItemType, m_ShownFigurineItemType, m_ShownBoardGameItemType)"
+    },
+    {
+      "do": "Look there for the card side as well: which sets and collection packs are shown, and the list of card packs.",
+      "because": "it also holds which card sets and collection packs are shown, and a list of card packs (m_ShownCardExpansionType, m_ShownCollectionPackType, m_CardPackItemTypeList)"
+    },
+    {
+      "do": "Expect restock and event data to live on the same object rather than in separate files.",
+      "because": "the restock data and the game event data are kept in the same object (m_RestockDataList, m_GameEventDataList)"
+    },
+    {
+      "do": "Check the cost multipliers there before planning upgrades, because shelf unlock and upgrade costs are values on it.",
+      "because": "the shelf unlock and upgrade cost multipliers are values on it (m_ShelfUnlockCostMultiplier, m_ShelfUpgradeCostMultiplier)"
+    },
+    {
+      "do": "Remember that images are held as lists too, and that an inventory points at these objects rather than holding its own numbers.",
+      "because": "it carries image lists and an inventory points at the data objects rather than holding the values itself (m_MaleCustomerIconList, m_FemaleCustomerIconList, m_PlayerIcon, m_AncientArtifactSpriteList, m_CollectionPackImageSpriteList, InventoryBase, m_StockItemData_SO, m_MonsterData_SO, m_ObjectData_SO, m_TextSO)"
+    }
+  ],
+  "commonMistakes": [
+    "Quitting instead of saving, when the game has a save panel with a slot and a control of its own.",
+    "Being surprised by a box's contents after a reload, when packaging boxes have their own record.",
+    "Looking for the shop's lists in several files when they live on two data objects.",
+    "Planning a shelf upgrade without looking at the cost multipliers the data carries."
+  ],
+  "relatedEntities": [
+    "what-the-game-writes-down",
+    "where-the-shops-lists-live",
+    "what-the-game-records-about-a-deck"
+  ],
+  "sources": [
+    "A local copy of the game, read only. The grounding for each step is listed on the technical reference pages; nothing here is estimated."
+  ]
+}

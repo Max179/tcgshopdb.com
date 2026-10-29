@@ -1,0 +1,68 @@
+{
+  "id": "opening-a-pack-on-screen",
+  "title": "What you see when a pack is opened",
+  "category": "Packs",
+  "summary": "Opening a pack in TCG Card Shop Simulator is a sequence of its own: the game spawns the cards as objects, fans them out, shows how many there are and dresses the whole thing in its own screens.",
+  "body": [
+    "A pack opening is a sequence. The game runs an opening sequence with its own interface rather than quietly adding cards to your collection, which is why unpacking has a shape to it.",
+    "The cards are real objects for a moment. Cards are spawned as three-dimensional objects that exist in the scene while a pack is open, which is why a reveal can be looked at from an angle instead of being a picture.",
+    "They are arranged rather than stacked. The game keeps a list of those objects, groups them and shuffles them into a fan, so the cards spread out instead of tumbling.",
+    "You are told how many there are. The sequence has a group for the count, so the number of cards is shown rather than counted by eye.",
+    "Cards have display settings of their own. The game keeps settings for how a card is displayed, which is why the reveal obeys rules rather than being one fixed animation.",
+    "A card can be priced straight from it. There is a price popup of its own, so a card that is worth something can be dealt with at the moment you see it.",
+    "What this entry does not tell you: the odds inside a pack, how many cards one holds, or how long the sequence runs. We have not verified those numbers, so we do not print them."
+  ],
+  "facts": [
+    {
+      "claim": "Opening a pack runs as a sequence with its own interface.",
+      "evidence": "identifiers: CardOpeningSequence, CardOpeningSequenceUI"
+    },
+    {
+      "claim": "Cards are spawned as objects in the scene while the pack is open.",
+      "evidence": "identifiers: Card3dUISpawner, Card3dUIGroup"
+    },
+    {
+      "claim": "The open cards are listed, grouped and shuffled into a fan.",
+      "evidence": "identifiers: Card3dList, CardFanRandomizer"
+    },
+    {
+      "claim": "The sequence shows how many cards there are.",
+      "evidence": "identifier: CardAmountUIGroup"
+    },
+    {
+      "claim": "Cards have display settings of their own.",
+      "evidence": "identifiers: CardUISetting, CardUISettingData, CardUI"
+    },
+    {
+      "claim": "A card can be priced from the reveal.",
+      "evidence": "identifier: CardPricePopupUI"
+    }
+  ],
+  "related": [
+    "packs-and-opening",
+    "cards-and-rarity"
+  ],
+  "images": [
+    {
+      "file": "mapped/opening-a-pack-on-screen-cardback.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "The texture taken from the game of a card back, what a card shows before it is revealed.",
+        "zh": "取自游戏的卡背贴图，即卡牌揭开前所显示的一面。"
+      }
+    },
+    {
+      "file": "opening-a-pack-on-screen.svg",
+      "kind": "diagram",
+      "alt": {
+        "en": "Diagram: a pack is opened, the cards appear as objects, they fan out, and you see what you got.",
+        "zh": "示意图：拆开卡包、卡牌以实体出现、扇形展开、看清所得。"
+      },
+      "disclaimer": "Original diagram drawn for this site. It is not a screenshot of the game."
+    }
+  ],
+  "sources": [
+    "A local copy of the game, read only. Identifiers are listed on the technical reference pages; nothing here is estimated."
+  ],
+  "imageTier": "game-image"
+}

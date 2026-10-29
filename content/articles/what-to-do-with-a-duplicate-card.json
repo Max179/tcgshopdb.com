@@ -1,0 +1,66 @@
+{
+  "id": "what-to-do-with-a-duplicate-card",
+  "title": "What to do with a duplicate card",
+  "tier": "published",
+  "kind": "article",
+  "target": "What to do with the second, third and fourth copy of a card in TCG Card Shop Simulator: keeping one in the album, selling or donating the rest, binning what will not move, and when grading is worth the wait.",
+  "version": "no version stated by this build (see the sources page)",
+  "prerequisites": [
+    "A card you already own a copy of",
+    "The shop open, with the album or the counter within reach",
+    "An idea of what the card sells for"
+  ],
+  "steps": [
+    {
+      "do": "Put the first copy in the album before deciding anything about the rest.",
+      "because": "cards are kept in an album whose binder pages track the index of the card they hold, and looking through the album is a mode you enter and leave (DelayHideCardAlbum, DelaySetBinderPageCardIndex, DelayExitViewCardAlbumMode)"
+    },
+    {
+      "do": "Price the spare from the game's own information rather than from memory.",
+      "because": "a card carries a price tag of its own and the price can be checked on a screen of its own (InteractableCardPriceTag, CheckPriceScreen)"
+    },
+    {
+      "do": "Sell the ordinary duplicates on a shelf rather than hoarding them in a box.",
+      "because": "what is on a shelf and what is in a box are tracked separately, so a spare is either display stock or storage (ShelfManager, InteractablePackagingBox_Card)"
+    },
+    {
+      "do": "Use the donation box for the spares that are not worth pricing.",
+      "because": "there is a bulk donation box for cards, with a panel of its own (BulkDonationBoxCardPanelUI)"
+    },
+    {
+      "do": "Bin what will not move instead of storing it forever.",
+      "because": "cards are also removed in the shop, with kinds of removal, a confirmation screen and a list of bins of its own (ECardRemoveType, ConfirmTrashCardScreen, m_TrashBinList)"
+    },
+    {
+      "do": "Check what grading would cost before you send anything.",
+      "because": "a grading service has a name, a number of days and a cost per card, and the submit screen breaks the total into per-card cost and a delivery fee (GradeCardServiceData, m_ServiceName, m_ServiceDays, m_CostPerCard, GradedCardSubmitSelectScreen)"
+    },
+    {
+      "do": "Only send cards you can afford to wait for.",
+      "because": "a submission holds the cards, the service level and the time that has passed, and can be checked while it is away (GradeCardSubmitSet, m_CardDataList, m_ServiceLevel, m_DayPassed, GradedCardSetCheckStatusScreen)"
+    },
+    {
+      "do": "Expect graded cards back through a sequence of their own.",
+      "because": "graded cards come back through an opening sequence rather than straight onto the shelf (GradedCardOpeningSequence, m_CardRevealFromBoxAnim)"
+    },
+    {
+      "do": "Keep the spares a deck needs before you sell the rest.",
+      "because": "the play table's items include the playmat, the deck box and the cards, so a spare can have a use that is not selling (TableGameItemSet, m_DeckBoxMesh, m_PlayMatMesh)"
+    }
+  ],
+  "commonMistakes": [
+    "Filing the spare in the album and the original in a box, the wrong way round.",
+    "Sending a cheap card to grading because the service was already open.",
+    "Binning cards the bulk donation box would have taken.",
+    "Selling the copies a deck needs because they happened to be the ones in hand."
+  ],
+  "relatedEntities": [
+    "albums-and-binder-pages",
+    "moving-on-old-stock",
+    "discarding-cards",
+    "sending-cards-to-be-graded"
+  ],
+  "sources": [
+    "A local copy of the game, read only. Grounding for each step is on the technical reference pages; no number is estimated."
+  ]
+}

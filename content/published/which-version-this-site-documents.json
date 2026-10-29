@@ -1,0 +1,68 @@
+{
+  "id": "which-version-this-site-documents",
+  "title": "Which version of the game this site documents",
+  "category": "Versions",
+  "summary": "Every page on this site describes one installed copy of TCG Card Shop Simulator: this entry names the publisher and build it was read from, and lists what was measured from it.",
+  "body": [
+    "This site describes one installation. Everything published here was read from the copy of TCG Card Shop Simulator installed on the machine that built the site, and the build is named below.",
+    "The build identifies its publisher as a small studio rather than a store front, and its name is read from the file the game itself keeps for that purpose rather than from a shop listing. The build states no version of its own: every file in it was searched for a version marker and none was found, so this site names the copy from that recorded label instead of printing a number it cannot support. That is deliberate: a store page can be edited without the game changing.",
+    "We record measurements instead of impressions. From this build we read two hundred and forty named types, and nine thousand five hundred and ninety-three rows of stored data names inside them.",
+    "The measured value layer is small on purpose. Only two hundred and sixty values could be tied to a named thing with confidence, and those are the only ones the site prints; everything else is described without a number instead of guessed at.",
+    "The two measurements agree in the way you would want. Eight coin designs are recorded for named currencies, and the same eight names appear in the build's own option list for money, which is why the currencies page lists exactly those and no more.",
+    "What that means for you: if your copy updates, an entry here may describe something that has changed, because we do not carry a claim across builds and do not cover a build we have not read.",
+    "What this entry does not tell you: the release date, the patch notes, or what any update changed. We have not verified those, so we do not print them."
+  ],
+  "facts": [
+    {
+      "claim": "This site documents a build that states no version of its own and is identified by the name the game records for itself.",
+      "evidence": "read from the copy of the game this site was built from; every file in it was searched for a version marker and none was found"
+    },
+    {
+      "claim": "The build reports a small studio as its publisher rather than a store front.",
+      "evidence": "the same publisher name is recorded on the technical sources page for this site"
+    },
+    {
+      "claim": "The build holds two hundred and forty named types and nine thousand five hundred and ninety-three rows of stored data names.",
+      "evidence": "counted from the normalized data committed with this site"
+    },
+    {
+      "claim": "Only two hundred and sixty measured values could be tied to a named thing, and only those are published.",
+      "evidence": "the measured value layer recorded in the machine-readable status file"
+    },
+    {
+      "claim": "Eight coin designs are recorded for named currencies, matching the build's own list of money kinds.",
+      "evidence": "identifiers: T_MoneyCoinEuro, T_MoneyCoinGBP, EMoneyCurrencyType"
+    },
+    {
+      "claim": "The build also ships a title screen for each store it was released on, one for the Microsoft Store, one for PlayStation, one for Switch and one for Xbox.",
+      "evidence": "asset names: TitleScreenMSStore, TitleScreenPS, TitleScreenSwitch, TitleScreenXbox"
+    }
+  ],
+  "related": [
+    "the-currencies-the-game-tracks",
+    "card-sets-and-expansions"
+  ],
+  "images": [
+    {
+      "file": "mapped/which-version-this-site-documents-title.png",
+      "kind": "game",
+      "alt": {
+        "en": "The game's own title art: TCG CARD SHOP in yellow over SIMULATOR on a red bar.",
+        "zh": "游戏自带标题美术：黄色 TCG CARD SHOP 与红色横条上的 SIMULATOR。"
+      }
+    },
+    {
+      "file": "which-version-this-site-documents.svg",
+      "kind": "diagram",
+      "alt": {
+        "en": "Diagram: one installation is read, its build name and measurements are recorded, and every page follows that build.",
+        "zh": "示意图：读取一份安装、记录版本与统计、所有页面据此生成。"
+      },
+      "disclaimer": "Original diagram drawn for this site. It is not a screenshot of the game."
+    }
+  ],
+  "sources": [
+    "A local copy of the game, read only. The build name and the measurements are listed on the sources page; nothing here is estimated."
+  ],
+  "imageTier": "game-image"
+}

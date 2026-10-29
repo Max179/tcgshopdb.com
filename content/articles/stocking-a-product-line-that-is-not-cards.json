@@ -1,0 +1,47 @@
+{
+  "id": "stocking-a-product-line-that-is-not-cards",
+  "title": "Stocking a product line that is not cards",
+  "tier": "published",
+  "kind": "article",
+  "target": "How to add tabletop games to a TCG Card Shop Simulator shop, given that the game treats a set as its own kind of stock with its own parts.",
+  "version": "no version stated by this build (see the sources page)",
+  "prerequisites": [
+    "Room for a product line that is not cards",
+    "Money for a first order of sets",
+    "A shelf or display for boxed goods"
+  ],
+  "steps": [
+    {
+      "do": "Treat a tabletop game as a set rather than as one box.",
+      "because": "the game keeps each one as a set with a record of its own (TableGameItemSet)"
+    },
+    {
+      "do": "Check what a set contains before ordering, because the parts are separate kinds.",
+      "because": "a play mat, a deck box and a comic book are each named parts (playMatType)"
+    },
+    {
+      "do": "Restock them through their own screen rather than the card list.",
+      "because": "tabletop games restock through a screen of their own (RestockItemBoardGameScreen)"
+    },
+    {
+      "do": "Put them where the sets can be seen rather than squeezing them onto a card shelf.",
+      "because": "each part is modelled with its own mesh (m_PlayMatMesh)"
+    },
+    {
+      "do": "Judge the range by the games the shop actually stocks rather than assuming one size fits.",
+      "because": "the game ships icons for particular games (Icon_Boardgame_Speedrobo_Mafia)"
+    }
+  ],
+  "commonMistakes": [
+    "Ordering a set and expecting a single box.",
+    "Shelving sets the same way as card packs.",
+    "Restocking them from the ordinary item list."
+  ],
+  "relatedEntities": [
+    "board-games-and-their-accessories",
+    "trading-with-customers"
+  ],
+  "sources": [
+    "A local copy of the game, read only. Grounding for each step is on the technical reference pages; no number is estimated."
+  ]
+}

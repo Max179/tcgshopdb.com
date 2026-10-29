@@ -1,0 +1,61 @@
+{
+  "id": "following-a-customer-from-the-door",
+  "title": "Following a customer from the door",
+  "tier": "published",
+  "kind": "article",
+  "target": "What a customer in TCG Card Shop Simulator is doing between the door and the counter: it walks a path of its own, wears the bag and the cash the game gives it, and shops to a budget it keeps.",
+  "version": "no version stated by this build (see the sources page)",
+  "prerequisites": [
+    "A shop open for trading",
+    "The trade screen within reach",
+    "A shelf that is stocked enough for a customer to find something"
+  ],
+  "steps": [
+    {
+      "do": "Expect a customer to arrive along a path rather than to wander in.",
+      "because": "a customer follows a path with a seeker and a start-and-end modifier (Customer, m_Seeker, m_OriginalStartEndModifier)"
+    },
+    {
+      "do": "Read two customers crossing the shop at different paces as a speed each of them keeps.",
+      "because": "a customer keeps a move speed, a speed, a waypoint distance, a repath rate and a rotation lerp (m_CurrentMoveSpeed, m_Speed, m_NextWaypointDistance, m_RepathRate, m_RotationLerpSpeed)"
+    },
+    {
+      "do": "Look at what a customer is holding, because the bag and the cash are attached to it rather than carried in code.",
+      "because": "the shopping bag and the customer's cash hang from parent points of their own (m_ShoppingBagTransform, m_ShoppingBagParentTo, m_CustomerCash, m_CustomerCashParentTo)"
+    },
+    {
+      "do": "Remember that a customer can be carrying tins and cards at the same time.",
+      "because": "the items in the bag and the cards in the bag are kept in separate lists (m_ItemInBagList, m_CardInBagList)"
+    },
+    {
+      "do": "Expect a winner's goods to be placed rather than dropped.",
+      "because": "there are prize locations for a big item, an item and a card, each with a swapped version (m_PrizeBigItemLocList, m_PrizeItemLocList, m_PrizeCardLocList)"
+    },
+    {
+      "do": "Judge what a customer will spend by the total it is keeping rather than by a mood.",
+      "because": "a customer keeps a running cost total, a maximum it will spend and the list of items it means to buy (m_CurrentCostTotal, m_MaxMoney, m_TargetBuyItemList)"
+    },
+    {
+      "do": "Notice whether a customer is smelly or clean, because each of those has an effect of its own.",
+      "because": "there are separate effects for being smelly and for being clean (m_SmellyFX, m_CleanFX)"
+    },
+    {
+      "do": "Expect a customer to notice you, because it has something to look at you with.",
+      "because": "a customer carries a collider for being interacted with and a target to look at (m_InteractCollider, m_PlayerLookAtTarget)"
+    }
+  ],
+  "commonMistakes": [
+    "Blocking the path a customer is walking instead of stepping aside.",
+    "Assuming a customer's bag holds only cards when it keeps items and cards in separate lists.",
+    "Reading a customer's mood as its budget when the budget is a total it keeps.",
+    "Forgetting that a customer can be watching you while you work."
+  ],
+  "relatedEntities": [
+    "what-a-customer-carries",
+    "the-kinds-of-customers",
+    "the-payment-a-customer-hands-over"
+  ],
+  "sources": [
+    "A local copy of the game, read only. Grounding for each step is on the technical reference pages; no number is estimated."
+  ]
+}

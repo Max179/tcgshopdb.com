@@ -1,0 +1,53 @@
+{
+  "id": "signing-a-shop-so-people-find-their-way",
+  "title": "Signing a shop so people find their way",
+  "tier": "published",
+  "kind": "article",
+  "target": "How to sign and glaze a TCG Card Shop Simulator shop, given that the game ships its own door plates, arrow signs and room signs.",
+  "version": "no version stated by this build (see the sources page)",
+  "prerequisites": [
+    "A shop with a front door",
+    "The walls you want to dress",
+    "The sign list open in the shop menu"
+  ],
+  "steps": [
+    {
+      "do": "Hang the entrance plate instead of leaving the door bare.",
+      "because": "the game ships a sheet carrying a red no-entry plate and a green welcome plate (T_NoEntranceSign)"
+    },
+    {
+      "do": "Point the way with the arrow set rather than with words.",
+      "because": "an enter arrow, an exit arrow, a long one and a plain one are named, with one arrow named for the exit door (ArrowSignEnterA, ArrowSignExitA, ArrowSignLongA, ArrowSignExitDoor)"
+    },
+    {
+      "do": "Sign the counter as well as the door.",
+      "because": "a counter sign is named for the counter being closed (CounterClosedSign)"
+    },
+    {
+      "do": "Tell customers when a room is shut off.",
+      "because": "a close sign and a closed warehouse room sign are named (CloseSign_Mesh, ClosedWarehouseRoomSign_Mesh)"
+    },
+    {
+      "do": "Glaze the front rather than walling it up.",
+      "because": "two glass doors are named, one of them the reveal door (GlassDoor, RevealGlassDoor)"
+    },
+    {
+      "do": "Keep the outside of the building readable too.",
+      "because": "the houses outside carry their own door and window sheets (House_02_Door_A, House_01_Window_A)"
+    }
+  ],
+  "commonMistakes": [
+    "Leaving the entrance unmarked and relying on customers finding the door.",
+    "Using one arrow for both the way in and the way out.",
+    "Forgetting to say when the counter is closed.",
+    "Blocking the glass front with shelving so nothing can be seen from the street."
+  ],
+  "relatedEntities": [
+    "the-doors-and-the-signs-that-point-the-way",
+    "expanding-and-decorating-the-shop",
+    "the-counter-and-money"
+  ],
+  "sources": [
+    "A local copy of the game, read only. Grounding for each step is on the technical reference pages; nothing here is estimated."
+  ]
+}

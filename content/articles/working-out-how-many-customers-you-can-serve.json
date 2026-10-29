@@ -1,0 +1,61 @@
+{
+  "id": "working-out-how-many-customers-you-can-serve",
+  "title": "Working out how many customers you can serve",
+  "tier": "published",
+  "kind": "article",
+  "target": "How the crowd in TCG Card Shop Simulator is counted and who walks in, so the shop is sized for the people it actually gets.",
+  "version": "no version stated by this build (see the sources page)",
+  "prerequisites": [
+    "A shop with at least one shelf",
+    "An entrance customers can reach",
+    "A play table if you want players"
+  ],
+  "steps": [
+    {
+      "do": "Know the ceiling before you widen the shop.",
+      "because": "the manager keeps a maximum number of customers and a time per customer (m_CustomerCountMax, m_TimePerCustomer)"
+    },
+    {
+      "do": "Count your crowd in three parts rather than one.",
+      "because": "the current count is tracked with separate totals for the shop, the play tables and tournaments (m_TotalCurrentCustomerCount, m_TotalPlaytableCustomerCount, m_TotalTournamentCustomerCount)"
+    },
+    {
+      "do": "Watch the tournament list as well as the door.",
+      "because": "tournament customers are kept in two lists, one of them sorted (m_TournamentCustomerList, m_TournamentSortedCustomerList)"
+    },
+    {
+      "do": "Check the points customers use to come in and go out.",
+      "because": "the manager keeps an entrance point, a list of entrance points, points inside the shop, exit points and points outside the windows (m_ShopEntranceLocationPoint, m_ShopEntranceLocationPointList, m_ShopLocationPointList, m_CustomerExitPointList, m_ShopWindowOutsidePointList)"
+    },
+    {
+      "do": "Expect different kinds of shopper rather than one average one.",
+      "because": "each kind of customer has a profile with a name, a kind and a rate at which it appears (CustomerProfile, name, type, appearRate)"
+    },
+    {
+      "do": "Stock for what a profile can actually pay.",
+      "because": "the profile sets a range of money the customer may carry and a maximum they will spend (maxMoneyRangeMin, maxMoneyRangeMax, maxMoney)"
+    },
+    {
+      "do": "Expect a basket size and some randomness in it.",
+      "because": "the profile sets a range for how many items the customer wants, with percentages for how random that is (maxItemCountRangeMin, maxItemCountRangeMax, itemWantRandomPercentMin, itemWantRandomPercentMax)"
+    },
+    {
+      "do": "Remember the cards are a separate decision from the goods.",
+      "because": "the profile sets how likely the customer is to buy a card, and a list of things they ignore (buyCardPercentChance, ignoreItemList)"
+    }
+  ],
+  "commonMistakes": [
+    "Filling one big shop when the crowd is capped and shared with the play tables.",
+    "Stocking expensive goods for customers whose profile will not pay for them.",
+    "Ignoring the entrance and window points and then wondering why the shop feels empty.",
+    "Assuming every customer is a card buyer."
+  ],
+  "relatedEntities": [
+    "how-many-customers-your-shop-holds",
+    "the-profile-behind-each-customer",
+    "why-every-customer-looks-different"
+  ],
+  "sources": [
+    "A local copy of the game, read only. Grounding for each step is on the technical reference pages; no number is estimated."
+  ]
+}

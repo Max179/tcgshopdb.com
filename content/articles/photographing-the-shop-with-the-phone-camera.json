@@ -1,0 +1,47 @@
+{
+  "id": "photographing-the-shop-with-the-phone-camera",
+  "title": "Photographing the shop with the phone camera",
+  "tier": "published",
+  "kind": "article",
+  "target": "How the phone camera and the photo gallery work in TCG Card Shop Simulator, given that the phone has a take-photo mode, the shot is framed on a grid, and the picture ends up in a gallery you can open.",
+  "version": "no version stated by this build (see the sources page)",
+  "prerequisites": [
+    "A phone in hand",
+    "Something worth photographing",
+    "A moment the shop can spare"
+  ],
+  "steps": [
+    {
+      "do": "Enter the take-photo mode deliberately rather than looking for a button in the world.",
+      "because": "the phone can be put into a take-photo mode and back out of it (EnterPhoneTakePhotoMode, ExitPhoneTakePhotoMode)"
+    },
+    {
+      "do": "Frame the shot on the grid and its centre mark.",
+      "because": "the shot is framed on a grid that has a centre mark of its own (CameraPhotoGrid, CameraPhotoGridCenter)"
+    },
+    {
+      "do": "Watch the camera screen rather than the shop while you are framing.",
+      "because": "the camera has its own screen, which opens and closes (CameraPhotoOpenScreen, CameraPhotoCloseScreen)"
+    },
+    {
+      "do": "Listen for the shutter, and expect a different one on a pad.",
+      "because": "taking the picture has a sound of its own, with a version for the pad (SFX_TakePhoto, SFX_TakePhoto_Pad)"
+    },
+    {
+      "do": "Go to the gallery to see the picture, and open it full screen.",
+      "because": "a picture can be opened full screen in a gallery and closed again (PhotoGalleryImageFullScreenEnter, PhotoGalleryImageFullScreenExit)"
+    }
+  ],
+  "commonMistakes": [
+    "Leaving the phone in take-photo mode and then wondering why the controls changed.",
+    "Framing off the centre mark and losing the subject out of the shot.",
+    "Looking for the picture in the shop instead of in the gallery."
+  ],
+  "relatedEntities": [
+    "the-camera-and-the-photo-gallery",
+    "the-screens-you-will-use-most"
+  ],
+  "sources": [
+    "A local copy of the game, read only. Grounding for each step is on the technical reference pages; no number is estimated."
+  ]
+}

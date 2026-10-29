@@ -1,0 +1,63 @@
+{
+  "id": "customer-reviews",
+  "title": "Customer reviews and how a day is judged",
+  "category": "Customers",
+  "tier": "published",
+  "summary": "A day in TCG Card Shop Simulator leaves an impression: the game defines customer reviews with their own data, screen, panel and even the text customers use.",
+  "body": [
+    "Reviews are recorded by the game, which is why a bad day has consequences beyond the till rather than being forgotten.",
+    "The text of a review comes from the game's own table of lines, so what a customer says is drawn from data rather than generated on the fly.",
+    "A review on that panel is made of parts. It carries the text of the review, the time it was left and a list of stars, so a rating is drawn from data rather than written into the panel.",
+    "There is a screen and a panel for reviews, which means looking them up is something you can do deliberately rather than wait to be told.",
+    "What this entry does not tell you: how reviews affect customers or how many you need to recover a reputation. We have not verified those numbers, so we do not print them."
+  ],
+  "facts": [
+    {
+      "claim": "Customer reviews are managed by the game.",
+      "evidence": "identifiers: CustomerReviewManager, CustomerReviewData"
+    },
+    {
+      "claim": "Reviews have their own screen and panel.",
+      "evidence": "identifiers: CustomerReviewScreen, CustomerReviewPanelUI"
+    },
+    {
+      "claim": "The wording of a review comes from a data table.",
+      "evidence": "identifiers: CustomerReviewTextDataTable, CustomerReviewGatherData"
+    },
+    {
+      "claim": "Waiting customers are removed from a queue by the game's own handling.",
+      "evidence": "identifiers: CardDrawQueueData, DelayRemoveCustomerFromQueue"
+    },
+    {
+      "claim": "A review panel shows the review text, the time it was left and a list of star images.",
+      "evidence": "identifiers: m_ReviewText, m_TimeText, m_StarImageList"
+    }
+  ],
+  "related": [
+    "trading-with-customers",
+    "cards-and-rarity"
+  ],
+  "images": [
+    {
+      "file": "mapped/customer-reviews-star.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "The star the game itself uses in its rating displays.",
+        "zh": "游戏本身在评分显示中使用的星形图案。"
+      }
+    },
+    {
+      "file": "customer-reviews.svg",
+      "kind": "diagram",
+      "alt": {
+        "en": "Diagram: a customer shops, forms an opinion, a review is recorded, and you read it on the review screen.",
+        "zh": "顾客评价示意图：顾客购物、形成印象、记录评价、你在评价界面查看。"
+      },
+      "disclaimer": "Original diagram drawn for this site. It is not a screenshot of the game."
+    }
+  ],
+  "sources": [
+    "A local copy of the game, read only. The grounding for each fact is listed on the technical reference pages; nothing here is estimated."
+  ],
+  "imageTier": "game-image"
+}

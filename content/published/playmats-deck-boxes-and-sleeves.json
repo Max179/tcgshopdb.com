@@ -1,0 +1,202 @@
+{
+  "id": "playmats-deck-boxes-and-sleeves",
+  "title": "Playmats, deck boxes and sleeves",
+  "category": "Cards",
+  "summary": "The play table in TCG Card Shop Simulator is made of parts: the game keeps a set of table items, and the playmat and the deck box have meshes of their own rather than being textures on the table.",
+  "body": [
+    "The play table is not simply a table. The game keeps a set of table items, and the playmat, the deck box and the cards are parts of that set rather than props that happen to be nearby.",
+    "A playmat is a mesh of its own, with a background that darkens behind it, which is why the mat reads as a surface the cards sit on rather than as a picture printed on the table.",
+    "A deck box has a mesh and a filter of its own, so it can be picked up and moved like an object while still being tied to the deck it holds.",
+    "The game ships more than one deck box design. There is artwork for a plain box, more than one numbered box, a nine-up tower box and a six-up penny-sleeve box, so the size of the box you use is a choice rather than a fixed part of the table.",
+    "Sleeves are themed. The game ships sleeve artwork for wind, fire and earth, one for its own set, and a second plain design, which is why the same deck can look different at the table from how it looks in the binder.",
+    "The game ships dice artwork as well, so what sits on the table is not limited to cards and boxes.",
+    "The images beside this entry are the game's own: a deck box texture carrying the game's own branding, and the pictures the game uses for an empty playmat slot and for an empty deck box.",
+    "The dice are pictured as well: the icon the game draws for them sits beside this entry, so what goes on the table is not only cards and boxes.",
+    "What this entry does not tell you: what any of these accessories costs, how many designs exist, or whether they change how the card game plays. We have not verified those, so we do not print them."
+  ],
+  "facts": [
+    {
+      "claim": "The play table keeps its own set of items, with the playmat, the deck box and the cards as parts of it.",
+      "evidence": "identifiers: TableGameItemSet, TableGameItemSetData, m_TableGameItemSetData"
+    },
+    {
+      "claim": "A playmat has a mesh of its own and a background that darkens behind it.",
+      "evidence": "identifiers: m_PlayMatMesh, m_Mesh_Playmat, m_DarkenPlaymatBG"
+    },
+    {
+      "claim": "A deck box has a mesh and a filter of its own.",
+      "evidence": "identifiers: m_DeckBoxMesh, m_DeckBoxMeshFilter"
+    },
+    {
+      "claim": "The game ships artwork for more than one deck box, including a nine-up tower box and a six-up penny-sleeve box.",
+      "evidence": "asset names: T_DeckBox, T_DeckBox4, T_9_UP_TowerDeckbox, T_6_UP_PennySleeves"
+    },
+    {
+      "claim": "Sleeve artwork exists for wind, fire and earth, for the game's own set, and for a second plain design.",
+      "evidence": "asset names: T_CardSleeveWind, T_CardSleeveFire, T_CardSleeveEarth, T_CardSleeveTetramon, CardSleeve_second"
+    },
+    {
+      "claim": "The game ships dice artwork as well, including a texture for a dice box.",
+      "evidence": "asset names: T_D20Dice, Icon_Dice_Yellow, DiceBox_second"
+    },
+    {
+      "claim": "The game ships a picture for an empty playmat slot.",
+      "evidence": "asset name: Icon_EmptyPlaymat"
+    },
+    {
+      "claim": "The game ships a picture for an empty deck box slot as well.",
+      "evidence": "asset name: Icon_EmptyDeckbox"
+    },
+    {
+      "claim": "The game ships a dice icon for the play table.",
+      "evidence": "asset name: Icon_Dice"
+    },
+    {
+      "claim": "A second dice icon is shipped in a different colour.",
+      "evidence": "asset name: Icon_Dice_Yellow"
+    },
+    {
+      "claim": "The game ships a tower deck box of its own as well as the flat ones.",
+      "evidence": "asset name: T_9_UP_TowerDeckbox"
+    },
+    {
+      "claim": "A further deck box is shipped in the game, branded for its card game.",
+      "evidence": "asset name: T_DeckBox2"
+    },
+    {
+      "claim": "The sleeves a card goes into are a set of their own, with a material for them.",
+      "evidence": "asset names: CardSleeves, CardSleeveMaterial"
+    },
+    {
+      "claim": "The build names accessories individually, including a card preserver, platinum-series pocket pages and a magnetic holder.",
+      "evidence": "asset names: Icon_2_UP_CardPreserver, Icon_3_UP_PlatinumSeriesPocketPages, Icon_1_UP_MagneticHolder"
+    },
+    {
+      "claim": "Further accessories are named as well: a semi-rigid card holder, a toploader, six-up penny sleeves and two more playmat designs.",
+      "evidence": "asset names: Icon_4_UP_SemiRigidCardHolder, Icon_5_UP_Toploader, Icon_6_UP_PennySleeves, Icon_7_UP_PlaymatB, Icon_7_UP_PlaymatC"
+    },
+    {
+      "claim": "The platinum-series pocket pages have a material of their own, named for the set.",
+      "evidence": "asset names: MAT_3_UP_PlatinumSeriesPocketPages, PlatinumSeriesPocketPagesMaterial"
+    },
+    {
+      "claim": "The dice box is carried in a low-detail form and in a glass form beside the ordinary one.",
+      "evidence": "asset names: DiceBox_low, DiceBoxGlass_low"
+    },
+    {
+      "claim": "The playmat designs run past the ones already named, and a clear sleeve is named beside the element sleeves.",
+      "evidence": "asset names: Icon_Playmat10, Icon_Playmat11, Icon_Playmat12, Icon_CardSleeveClear"
+    },
+    {
+      "claim": "The sleeve designs each have an icon of their own, one for each of the game's card elements.",
+      "evidence": "asset names: Icon_CardSleeveEarth, Icon_CardSleeveFire, Icon_CardSleeveWater, Icon_CardSleeveWind, Icon_CardSleeveTetramon"
+    },
+    {
+      "claim": "Further playmat icons are numbered beside the ones already named.",
+      "evidence": "asset names: Icon_Playmat2, Icon_Playmat5, Icon_Playmat9"
+    },
+    {
+      "claim": "The card accessories carry their own materials as well, named per accessory.",
+      "evidence": "asset names: MAT_1_UP_MagneticHolder, MAT_2_UP_CardPreserver, MAT_6_UP_PennySleeves, MAT_7_UP_Playmat"
+    }
+  ],
+  "related": [
+    "the-card-game-you-can-play",
+    "building-and-editing-a-deck"
+  ],
+  "images": [
+    {
+      "file": "mapped/playmats-deck-boxes-and-sleeves-dice.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "The dice icon the game itself draws for the play table: a pale blue die with black pips inside a black-outlined square.",
+        "zh": "游戏为对战桌绘制的骰子图标：浅蓝色骰子配黑色点数，外有黑色描边方框。"
+      }
+    },
+    {
+      "file": "mapped/playmats-deck-boxes-and-sleeves-sleeve.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "The sleeve artwork the game ships for its second plain design, a green patterned sheet with two sleeve fronts.",
+        "zh": "游戏为第二种素色牌套提供的图：绿色花纹图面，含两张牌套正面。"
+      }
+    },
+    {
+      "file": "mapped/playmats-deck-boxes-and-sleeves-dice-box.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "The dice box texture the game ships, carrying panels and strips of dice numbers.",
+        "zh": "游戏自带的骰子盒贴图：面板与成排骰子点数。"
+      }
+    },
+    {
+      "file": "mapped/playmats-deck-boxes-and-sleeves-deck-box.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "The colour texture the game ships for one of its deck boxes, carrying the game's own branding.",
+        "zh": "游戏为其中一款卡盒提供的颜色贴图，带有游戏自身的品牌字样。"
+      }
+    },
+    {
+      "file": "mapped/playmats-deck-boxes-and-sleeves-playmat.png",
+      "kind": "game",
+      "alt": {
+        "en": "The picture the game uses for an empty playmat slot at the play table.",
+        "zh": "游戏用于对战桌上空置牌垫位置的图片。"
+      }
+    },
+    {
+      "file": "mapped/playmats-deck-boxes-and-sleeves-empty-deck-box.png",
+      "kind": "game",
+      "alt": {
+        "en": "The icon the game draws for an empty deck box, a plain grey box seen from the front corner.",
+        "zh": "游戏为空卡盒绘制的图标：一个从前方一角看到的素灰色盒子。"
+      }
+    },
+    {
+      "file": "mapped/playmats-deck-boxes-and-sleeves-card-preserver.png",
+      "kind": "game",
+      "alt": {
+        "en": "The card preserver the build ships: a blister pack holding clear rigid card holders, with a 25-pack mark and a red burst on the card.",
+        "zh": "本作自带的卡牌保护盒：泡壳包装内是透明硬质卡套，包装上印着 25 pack 与红色星形标。"
+      }
+    },
+    {
+      "file": "playmats-deck-boxes-and-sleeves.svg",
+      "kind": "diagram",
+      "alt": {
+        "en": "Diagram: the table has a set of items; a playmat is a surface, a deck box holds a deck, and sleeves cover the cards.",
+        "zh": "示意图：桌面由一组物件构成；牌垫是台面、卡盒装牌、卡套包住卡牌。"
+      },
+      "disclaimer": "Original diagram drawn for this site. It is not a screenshot of the game."
+    },
+    {
+      "file": "mapped/playmats-deck-boxes-and-sleeves-dice-yellow.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "A second dice icon the game ships for the play table: a yellow die with dark pips.",
+        "zh": "游戏为牌桌提供的第二个骰子图标：黄色骰面配深色点数。"
+      }
+    },
+    {
+      "file": "mapped/playmats-deck-boxes-and-sleeves-tower-deck-box.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "The game's own tower deck box texture: purple panels printed SATIN TOWER DECK BOX.",
+        "zh": "游戏自带的高塔牌盒贴图：紫色面板上印有 SATIN TOWER DECK BOX。"
+      }
+    },
+    {
+      "file": "mapped/playmats-deck-boxes-and-sleeves-deck-box-2.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "A second deck box texture the game ships: green, printed DECKBOX under the card game brand.",
+        "zh": "游戏自带的第二个牌盒贴图：绿色底，印有 DECKBOX 与卡牌对战标志。"
+      }
+    }
+  ],
+  "sources": [
+    "A local copy of the game, read only. The grounding for each fact is listed on the technical reference pages; nothing here is estimated."
+  ],
+  "imageTier": "game-image"
+}

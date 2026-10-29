@@ -1,0 +1,95 @@
+{
+  "id": "the-key-binding-settings",
+  "title": "The key binding settings",
+  "category": "Interface",
+  "summary": "Rebinding keys in TCG Card Shop Simulator runs through screens of its own: settings are split into game, display and language screens, keys have separate keyboard and controller screens with highlights for which is in use, a change has to be confirmed, and each binding holds two keys and a flag for whether it is a pad binding.",
+  "body": [
+    "Settings are a place rather than a menu that appears anywhere. There is a settings screen with a group of its own, and it holds other screens inside it, so the things you can change are separated rather than listed together.",
+    "The parts are split up. There are separate screens for the game's settings, for the display and for the language, which is why a change to how the game behaves and a change to how it looks are not in the same list.",
+    "Keys get the most room. There is a key binding screen of its own, and within it a keyboard screen and a controller screen, because a binding is not one thing but two depending on what is in your hands.",
+    "It shows which one you are using. There is a highlight for the keyboard and another for the controller, which is why the screen can make clear which set of bindings you are about to change.",
+    "A change is confirmed rather than applied. There is a confirmation screen of its own for key bind changes, so a rebind is a decision you finish rather than something that happens as you type.",
+    "There is a list of bindings and a set of highlights. The key binding setting list holds the rows, and the sub-setting buttons have highlights of their own, so the screen keeps track of where you are as well as what you set.",
+    "A single binding holds two keys. There is a base key and a second base key, along with a flag for whether the binding belongs to a controller, which is how one action can have a key and an alternative rather than only one.",
+    "And it knows when it is being changed. There is a group shown while a binding is being updated, along with a tooltip and a link to the controller setting, so the row can show what it is doing without a separate popup being opened.",
+    "The screens carry their own extension hook. There is a controller extension on the screens and one on the confirmation screen, which is how the same interface can be driven by a pad as well as a mouse.",
+    "What this entry does not tell you: what any default binding is, how many actions can be rebound, or whether every action can be. We have not verified those numbers, so we do not print them."
+  ],
+  "facts": [
+    {
+      "claim": "Settings are a screen with its own group, with separate screens for the game, the display and the language.",
+      "evidence": "identifiers: SettingScreen, m_ScreenGrp, m_GameSettingScreen, m_DisplaySettingScreen, m_LanguageScreen"
+    },
+    {
+      "claim": "Keys have a screen of their own with a keyboard screen and a controller screen.",
+      "evidence": "identifiers: m_KeybindScreen, m_KeybindKeyboardScreen, m_KeybindControllerScreen"
+    },
+    {
+      "claim": "There is a highlight for the keyboard and one for the controller.",
+      "evidence": "identifiers: m_KeybindKeyboardHighlight, m_KeybindControllerHighlight"
+    },
+    {
+      "claim": "A key bind change has its own confirmation screen.",
+      "evidence": "identifiers: m_KeybindChangesConfirmScreen, m_KeybindChangesConfirmScreenUIExtension"
+    },
+    {
+      "claim": "There is a list of key bindings and a set of sub-setting button highlights.",
+      "evidence": "identifiers: m_KeybindSettingList, m_SubSettingBtnHighlight"
+    },
+    {
+      "claim": "A binding holds a base key and a secondary base key with a flag for whether it is a controller binding.",
+      "evidence": "identifiers: KeybindSetting, m_GameBaseKey, m_GameBaseKeySecondary, m_IsGamepad, EGameBaseKey"
+    },
+    {
+      "claim": "It has a group shown while updating, a tooltip and a link to the controller setting.",
+      "evidence": "identifiers: m_UpdatingGrp, m_TooltipUI, m_GamepadSettingLinker"
+    },
+    {
+      "claim": "The screens carry a controller extension hook.",
+      "evidence": "identifiers: m_ControllerScreenUIExtension, ControllerScreenUIExtension"
+    }
+  ],
+  "related": [
+    "the-settings-you-can-change",
+    "the-screens-you-will-use-most"
+  ],
+  "images": [
+    {
+      "file": "mapped/the-key-binding-settings-shift.png",
+      "kind": "game",
+      "alt": {
+        "en": "Another of the key pictures the game draws in its rebinding screens, here the Shift key.",
+        "zh": "游戏在改键界面里绘制的按键图之一，这里是 Shift 键。"
+      }
+    },
+    {
+      "file": "mapped/the-key-binding-settings-tab.png",
+      "kind": "game",
+      "alt": {
+        "en": "The Tab key in the same set of key pictures.",
+        "zh": "同一套按键图中的 Tab 键。"
+      }
+    },
+    {
+      "file": "mapped/the-key-binding-settings-enter.png",
+      "kind": "game",
+      "alt": {
+        "en": "One of the key pictures the game draws beside a rebindable action, here the Enter key.",
+        "zh": "游戏在可改键动作旁绘制的按键图之一，这里是 Enter 键。"
+      }
+    },
+    {
+      "file": "the-key-binding-settings.svg",
+      "kind": "diagram",
+      "alt": {
+        "en": "Diagram: the settings screen opens, keys have keyboard and controller screens with highlights, a rebind is confirmed, and each binding holds two keys.",
+        "zh": "示意图：设置界面打开、按键分为键盘与手柄两屏并高亮当前一屏、改键需确认、每个绑定持有两个按键。"
+      },
+      "disclaimer": "Original diagram drawn for this site. It is not a screenshot of the game."
+    }
+  ],
+  "sources": [
+    "A local copy of the game, read only. The grounding for each fact is listed on the technical reference pages; nothing here is estimated."
+  ],
+  "imageTier": "game-image"
+}

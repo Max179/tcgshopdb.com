@@ -1,0 +1,53 @@
+{
+  "id": "clearing-old-stock-in-bulk",
+  "title": "Clearing old stock in bulk",
+  "tier": "published",
+  "kind": "article",
+  "target": "How to get rid of stock you cannot sell in TCG Card Shop Simulator without mixing up donations, bins and the boxes the stock lives in.",
+  "version": "no version stated by this build (see the sources page)",
+  "prerequisites": [
+    "A shop holding stock it cannot sell",
+    "The bulk donation box available",
+    "Somewhere to put the cards you are keeping"
+  ],
+  "steps": [
+    {
+      "do": "Deal with unwanted cards on the panel rather than one at a time.",
+      "because": "there is a bulk donation box with a panel of its own (BulkDonationBoxCardPanelUI)"
+    },
+    {
+      "do": "Read the count on the panel before you commit.",
+      "because": "the panel keeps a slot empty for adding a new card along with a count group and a count text (m_EmptyAddNewCardSlot, m_CardCountGrp, m_CountText)"
+    },
+    {
+      "do": "Clear the containers as well as the shelves, because a container holds stock of its own.",
+      "because": "packaged goods keep their own saved contents (PackageBoxItemaveData)"
+    },
+    {
+      "do": "Treat boxes and shelves as two places when you are making room.",
+      "because": "they are tracked apart from each other (ShelfManager, InteractablePackagingBox_Card)"
+    },
+    {
+      "do": "Be sure which action you are taking: donating in bulk is not the same as throwing stock away.",
+      "because": "removing stock has kinds of its own, a confirmation screen and a list of bins (ECardRemoveType, ConfirmTrashCardScreen, m_TrashBinList)"
+    },
+    {
+      "do": "Use the donation box where it stands rather than expecting a screen you can open anywhere.",
+      "because": "the bulk donation box is a container in the shop with its own texture (PO_BulkDonationBox)"
+    }
+  ],
+  "commonMistakes": [
+    "Donating card by card when the panel was built for bulk.",
+    "Clearing the shelves and leaving the boxes they came from full.",
+    "Throwing stock away when donating it was the action you meant.",
+    "Leaving the clear-out until the delivery is already in the back room."
+  ],
+  "relatedEntities": [
+    "moving-on-old-stock",
+    "discarding-cards",
+    "storage-shelves-and-restocking"
+  ],
+  "sources": [
+    "A local copy of the game, read only. Grounding for each step is on the technical reference pages; no number is estimated."
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "id": "the-money-the-counter-handles",
+  "title": "The money the counter handles",
+  "category": "Shop",
+  "summary": "The cash at a counter in TCG Card Shop Simulator is made of objects rather than numbers: each piece of money knows whether it is a coin or a note, carries a value in two kinds of number and an index, has its own model and outline, and belongs to a list of currency data kept by the counter.",
+  "body": [
+    "Money at the counter is not a balance that goes up and down. Change is made of objects you handle, and each one is an interaction in the world rather than a line in an account.",
+    "It knows what it is. A piece of money can be either a coin or a note, and the game keeps that distinction on the object itself, which is why the same handling can produce different things to pick up.",
+    "It carries its value. There is a value kept as an ordinary number and the same value kept at a higher precision, along with an index of its own, so a piece of money can be identified as well as counted.",
+    "It belongs to a currency. The counter keeps a list of currency data, and a piece of money refers to that rather than assuming one currency, which is why the counter can be set up for a different kind of money.",
+    "It has a model and an instance of that model. Both are recorded, which is how one shape can be drawn many times on a counter without each piece being a new object in the game's memory.",
+    "It is drawn twice over. There are renderers for the plain object and for the repeated one, and coins have a mesh group and their own pair of renderers, so a handful of coins is cheaper to draw than a handful of separate things.",
+    "It shows its own outline. A note and a coin each have an outline of their own, which is how what you are about to pick up is picked out from the counter beneath it.",
+    "It knows where it belongs. A piece of money refers to the cashier counter it sits on, which is why what you pay with and what you are given back are tied to the same fixture.",
+    "It is still an object in the world. Money has a mesh, a highlight, colliders, pickup and move rules, and rules about whether it may be placed in the shop or only in the warehouse, and it can be scanned at the counter.",
+    "The images beside this entry are the game's own: the sheets it ships for two of its currencies, each carrying both coins and notes.",
+    "What this entry does not tell you: which currencies the game supports, what any coin or note is worth, or how a purchase is worked out. We have not verified those numbers, so we do not print them."
+  ],
+  "facts": [
+    {
+      "claim": "A piece of money at the counter can be a coin or a note, and it carries that on the object.",
+      "evidence": "identifiers: InteractableCounterMoneyChange, m_CanBeCoinOrBill, m_IsCoin"
+    },
+    {
+      "claim": "Each piece of money carries a value as an ordinary number and as a more precise one, plus an index.",
+      "evidence": "identifiers: m_Value, m_ValueDouble, m_Index"
+    },
+    {
+      "claim": "The counter keeps a list of currency data that the money refers to.",
+      "evidence": "identifiers: m_CounterMoneyChangeCurrencyDataList, CounterMoneyChangeCurrencyData"
+    },
+    {
+      "claim": "A piece of money has a model and an instance of that model.",
+      "evidence": "identifiers: m_MoneyModel, m_MoneyModelInstance"
+    },
+    {
+      "claim": "It has renderers for the plain object and for the instanced one.",
+      "evidence": "identifiers: m_MoneyMeshRenderer, m_MoneyInstanceMeshRenderer"
+    },
+    {
+      "claim": "Coins have a mesh group and their own plain and instanced renderers.",
+      "evidence": "identifiers: m_CoinMoneyMeshGrp, m_CoinMoneyMeshRenderer, m_CoinMoneyInstanceMeshRenderer"
+    },
+    {
+      "claim": "A note and a coin each have an outline of their own.",
+      "evidence": "identifiers: m_BillMoneyOutline, m_CoinMoneyOutline"
+    },
+    {
+      "claim": "A piece of money is tied to the cashier counter it belongs to.",
+      "evidence": "identifier: m_CashierCounter"
+    },
+    {
+      "claim": "Money is also a world object with a mesh, a highlight, colliders, pickup and move rules and placement limits for the shop and the warehouse.",
+      "evidence": "identifiers: m_Mesh, m_HighlightGameObj, m_BoxCollider, m_BoxColliderList, m_CanPickupMoveObject, m_CanBoxUpObject, m_PlaceObjectInShopOnly, m_PlaceObjectInWarehouseOnly, m_PickupObjectMesh, m_MoveStateValidArea"
+    },
+    {
+      "claim": "Money can be scanned at the counter.",
+      "evidence": "identifier: m_CanScanByCounter"
+    },
+    {
+      "claim": "The game ships a texture sheet for each of its currencies with both coins and notes on it.",
+      "evidence": "asset names: T_MoneyCoinEuro, T_MoneyCoinYen"
+    },
+    {
+      "claim": "A coin spawning has a sound of its own in the build.",
+      "evidence": "asset name: SFX_CoinSpawn"
+    }
+  ],
+  "related": [
+    "the-counter-and-money",
+    "the-currencies-the-game-tracks"
+  ],
+  "images": [
+    {
+      "file": "mapped/the-money-the-counter-handles-euro.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "The texture sheet the game ships for one of its currencies, with its coins and notes.",
+        "zh": "游戏为其中一种货币提供的贴图集，包含硬币与纸币。"
+      }
+    },
+    {
+      "file": "mapped/the-money-the-counter-handles-yen.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "The texture sheet the game ships for another of its currencies, again with coins and notes.",
+        "zh": "游戏为另一种货币提供的贴图集，同样包含硬币与纸币。"
+      }
+    },
+    {
+      "file": "the-money-the-counter-handles.svg",
+      "kind": "diagram",
+      "alt": {
+        "en": "Diagram: a currency is chosen, a piece is a coin or a note, it has its own model and outline, and it is handled at the counter.",
+        "zh": "示意图：选择货币、该枚为硬币或纸币、拥有自己的模型与描边，并在柜台被处理。"
+      },
+      "disclaimer": "Original diagram drawn for this site. It is not a screenshot of the game."
+    }
+  ],
+  "sources": [
+    "A local copy of the game, read only. The grounding for each fact is listed on the technical reference pages; nothing here is estimated."
+  ],
+  "imageTier": "game-image"
+}

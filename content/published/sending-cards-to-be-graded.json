@@ -1,0 +1,99 @@
+{
+  "id": "sending-cards-to-be-graded",
+  "title": "Sending cards to be graded",
+  "category": "Cards",
+  "summary": "TCG Card Shop Simulator lets you send cards away to be graded: the game runs a website for it, charges a service with its own days and price per card, and returns the cards in a case.",
+  "body": [
+    "Grading is done through a website the game runs itself. It is a screen rather than a counter you stand at, which is why sending a card off is a separate job from selling one.",
+    "You choose a service. The game keeps a set of grading services, each with its own name, its own number of days and its own cost per card, so the price of grading is a choice you make rather than a fixed fee.",
+    "The cost is broken down for you. The submit screen shows the cost per card, the delivery fee and the total separately, so you can see what the delivery adds before you commit.",
+    "A submission is held as a set. The game keeps the cards, the service level you chose and the time that has passed, which is why a submission continues while you get on with the shop.",
+    "You can check on it while it is away. There is a status screen with the set name, the delivery days and a progress bar, so a set in progress is something you can look up rather than wait blindly for.",
+    "The submit screen is assembled rather than drawn once. It carries the website screen and a list of grading panels, with text for the service type, the days that service takes and the subtotal, so each service on offer is a panel of its own.",
+    "The reveal is staged in an order. The opening sequence keeps the card held at the end, a list of 3D card interfaces to run through and the cards being revealed with the positions they are revealed at, along with where a stored card starts, which is why the return is a small performance rather than a pop-up.",
+    "The return is a reveal. Graded cards come back through an opening sequence of their own, with animation for a card coming out of the box and a separate icon for a high-value result.",
+    "The website screen is split up. Submitting a card opens a screen of its own, checking the set has another, and progress is tracked through a list of panels, which is why a submission is followed through rather than dumped in one page.",
+    "What this entry does not tell you: the grade a card will receive, how long any service takes in real time, or what grading does to a card's value. We have not verified those, so we do not print them."
+  ],
+  "facts": [
+    {
+      "claim": "Grading is run through a website of the game's own.",
+      "evidence": "identifier: GradeCardWebsiteUIScreen"
+    },
+    {
+      "claim": "A grading service has its own name, number of days and cost per card.",
+      "evidence": "identifiers: GradeCardServiceData, m_ServiceName, m_ServiceDays, m_CostPerCard"
+    },
+    {
+      "claim": "The submit screen breaks the cost into per-card, delivery fee and total.",
+      "evidence": "identifiers: GradedCardSubmitSelectScreen, m_ServiceCostPerCardText, m_ServiceDeliveryFeeText, m_ServiceTotalCostText"
+    },
+    {
+      "claim": "A submission holds the cards, the service level and the time passed.",
+      "evidence": "identifiers: GradeCardSubmitSet, m_CardDataList, m_ServiceLevel, m_DayPassed, m_MinutePassed"
+    },
+    {
+      "claim": "A set can be checked while it is away, with days left and a progress bar.",
+      "evidence": "identifiers: GradedCardSetCheckStatusScreen, m_SetNameText, m_DeliveryDaysText, GradingProgressSetPanelUI, m_DaysLeftText, m_BarImage"
+    },
+    {
+      "claim": "Graded cards come back through an opening sequence of their own.",
+      "evidence": "identifiers: GradedCardOpeningSequence, m_CardRevealFromBoxAnim, m_HighValueCardIcon"
+    },
+    {
+      "claim": "The case a graded card returns in has its own artwork.",
+      "evidence": "identifier: GradedCardCaseBack"
+    },
+    {
+      "claim": "The submit screen carries a website screen and a list of grading panels, with text for the service type, the days and the subtotal.",
+      "evidence": "identifiers: m_GradeCardWebsiteUIScreen, m_GradeCardPanelUIList, m_ServiceTypeText, m_ServiceDaysText, m_ServiceSubtotalText"
+    },
+    {
+      "claim": "The opening sequence keeps the card at the end, a list of 3D card interfaces to run through, the cards being revealed with their positions, and where a stored card starts.",
+      "evidence": "identifiers: m_HoldCardAtEnd, m_Card3dUISequencedList, m_RevalCard3dUIList, m_RevalCardPosList, m_StoredCardStartPosList"
+    },
+    {
+      "claim": "The website screen keeps its own submit-select screen, a screen for checking the set, and a list of progress panels.",
+      "evidence": "identifiers: GradeCardWebsiteUIScreen, m_GradedCardSubmitSelectScreen, m_GradedCardSetCheckStatusScreen, m_GradingProgressSetPanelUIList"
+    },
+    {
+      "claim": "A graded card's surface is drawn with a mask and a numbered set of scratches, ten of them.",
+      "evidence": "asset names: GradedCardTextureMask, GradeCardScratch1, GradeCardScratch2, GradeCardScratch10"
+    },
+    {
+      "claim": "The grade is written out with its own company text and grade text, and a single-card reveal has enter, idle and revealed states.",
+      "evidence": "asset names: GradingCompanyText, GradeText, RevealGradeCardSingleEnter, RevealGradeCardSingleIdle, RevealGradeCardSingleRevealedIdle"
+    },
+    {
+      "claim": "The grade itself is drawn with named pieces: a grade text and a grade number text, a set of scratch marks and a slab group with a culled back.",
+      "evidence": "asset names: GradeText, GradeNumberText, GradeCardScratch1, GradeCardScratch10, GradingSlabGrp, GradingSlabCullGrp"
+    }
+  ],
+  "related": [
+    "cards-and-rarity",
+    "rarity-and-how-it-is-chosen"
+  ],
+  "images": [
+    {
+      "file": "mapped/sending-cards-to-be-graded-case.jpg",
+      "kind": "game",
+      "alt": {
+        "en": "The texture taken from the game of the case a graded card is returned in.",
+        "zh": "取自游戏的评级卡盒贴图。"
+      }
+    },
+    {
+      "file": "sending-cards-to-be-graded.svg",
+      "kind": "diagram",
+      "alt": {
+        "en": "Diagram: you choose a service, submit cards, wait out the days, check the progress, and open the returns.",
+        "zh": "示意图：选择服务、提交卡牌、等待天数、查看进度、拆开返还的卡。"
+      },
+      "disclaimer": "Original diagram drawn for this site. It is not a screenshot of the game."
+    }
+  ],
+  "sources": [
+    "A local copy of the game, read only. Identifiers are listed on the technical reference pages; nothing here is estimated."
+  ],
+  "imageTier": "game-image"
+}

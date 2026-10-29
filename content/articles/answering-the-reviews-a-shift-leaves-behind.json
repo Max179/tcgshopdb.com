@@ -1,0 +1,69 @@
+{
+  "id": "answering-the-reviews-a-shift-leaves-behind",
+  "title": "Answering the reviews a shift leaves behind",
+  "tier": "published",
+  "kind": "article",
+  "target": "How to read why a customer left a particular review in TCG Card Shop Simulator and answer the reason that was actually recorded, instead of discounting everything at once.",
+  "version": "no version stated by this build (see the sources page)",
+  "prerequisites": [
+    "A shop that has traded for a day",
+    "Customers who have come and gone",
+    "The review screen within reach"
+  ],
+  "steps": [
+    {
+      "do": "Sort the reasons a review can carry before you change anything: the game names each one rather than writing a free-form complaint.",
+      "because": "the kinds of review are a fixed list of named reasons (ECustomerReviewType, StoreGeneric, ItemVariety, ItemPrice, CardPrice, CardRarity, PlaytablePrice)"
+    },
+    {
+      "do": "Treat a complaint about choice as a complaint about the shelves, not about the prices.",
+      "because": "variety is recorded separately from price, so restocking is the answer and not discounting (ItemVariety, ItemPrice, CardPrice)"
+    },
+    {
+      "do": "Take a card complaint and a product complaint as two different problems, since the game files them separately.",
+      "because": "cards carry reasons of their own apart from the product reasons (CardRarity, CardPrice, ItemPrice)"
+    },
+    {
+      "do": "Answer a complaint about playing at the table at the table, because the playtable is judged on its own.",
+      "because": "the playtable has a named reason (PlaytablePrice)"
+    },
+    {
+      "do": "Fix the shop itself before touching the prices when the reason is the shop: a smell, a blocked store, dark lights and opening packs in front of customers are each recorded on their own.",
+      "because": "a smell, a blocked store, dark lights and opening packs in front of customers are each a reason the game names (SmellyCustomer, BlockedStore, LightTurnedOff, OwnerOpenPack)"
+    },
+    {
+      "do": "Keep the change you hand over reasonable rather than emptying the till of small coins.",
+      "because": "the game records giving out a lot of pennies as a reason of its own (GiveManyChangePennies)"
+    },
+    {
+      "do": "Keep the bulk donation box working: a customer who brings cards and is not served has a reason of its own.",
+      "because": "bulk donation has a named reason (BulkDonation)"
+    },
+    {
+      "do": "Expect a tournament day to be judged as a tournament, with one reason for a problem at the table and a second for a review left deliberately to hurt the shop.",
+      "because": "a problem at the table and a review left to hurt the shop are two different named reasons (TournamentProblem, TournamentReviewBomb)"
+    },
+    {
+      "do": "Read the wording on the review screen rather than the reason alone, because each review carries both.",
+      "because": "the wording comes from the game's own table of bad, normal and good lines, and each review keeps its type, its text line, the hour, the minute, the item and the customer (CustomerReviewTextDataTable, CustomerReviewData)"
+    },
+    {
+      "do": "Remember that a day leaves a rating and not only a list of complaints, so answer the list and let the rating follow.",
+      "because": "the gathered reviews carry a higher-star chance and pass through a manager with a screen and a panel of their own (CustomerReviewGatherData, CustomerReviewManager, CustomerReviewScreen, CustomerReviewPanelUI)"
+    }
+  ],
+  "commonMistakes": [
+    "Discounting everything at once when one named reason is the one that was recorded.",
+    "Reading a card complaint as a product complaint and restocking the wrong thing.",
+    "Ignoring the shop-level reasons (a smell, a blocked store, the lights, opening packs behind the counter) and looking only at prices.",
+    "Assuming a tournament review will read like an ordinary one when the game files it under its own reasons."
+  ],
+  "relatedEntities": [
+    "customer-reviews",
+    "the-review-screen",
+    "the-kinds-of-customers"
+  ],
+  "sources": [
+    "A local copy of the game, read only. The grounding for each step is listed on the technical reference pages; nothing here is estimated."
+  ]
+}

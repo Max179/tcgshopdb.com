@@ -1,0 +1,47 @@
+{
+  "id": "using-grading-without-wasting-cards",
+  "title": "Using grading without wasting cards",
+  "tier": "published",
+  "kind": "article",
+  "target": "How to use card grading in TCG Card Shop Simulator deliberately, instead of sending cards off and losing track of what it cost you.",
+  "version": "no version stated by this build (see the sources page)",
+  "prerequisites": [
+    "Cards that are worth grading",
+    "Money for the service and the delivery fee",
+    "A shop that can trade without those cards"
+  ],
+  "steps": [
+    {
+      "do": "Read the whole cost on the submit screen rather than only the price per card.",
+      "because": "the screen shows the per-card cost, the delivery fee and the total separately (m_ServiceDeliveryFeeText)"
+    },
+    {
+      "do": "Choose the service by its days as well as its price.",
+      "because": "each grading service carries its own days and its own cost per card (GradeCardServiceData)"
+    },
+    {
+      "do": "Only send cards you can do without while they are away.",
+      "because": "a submission holds your cards until it comes back (GradeCardSubmitSet)"
+    },
+    {
+      "do": "Check the status screen instead of wondering whether it has finished.",
+      "because": "there is a status screen with days left and a progress bar (GradingProgressSetPanelUI)"
+    },
+    {
+      "do": "Open the returns deliberately, because the reveal is its own sequence.",
+      "because": "graded cards come back through an opening sequence (GradedCardOpeningSequence)"
+    }
+  ],
+  "commonMistakes": [
+    "Reading only the per-card price and forgetting the delivery fee.",
+    "Grading cards you needed on the shelf that week.",
+    "Sending a set off and then never looking at its status."
+  ],
+  "relatedEntities": [
+    "sending-cards-to-be-graded",
+    "cards-and-rarity"
+  ],
+  "sources": [
+    "A local copy of the game, read only. Grounding for each step is on the technical reference pages; no number is estimated."
+  ]
+}
