@@ -1,12 +1,14 @@
 # Picture replacement — tcgshopdb.com — 2026-10-30
 
-Status: **complete locally**. The 186 raw Unity texture exports are gone; the site now shows 89 sourced in-game
-pictures, one per pictured entry, plus two new homepage screenshots. The build and every local gate pass on macOS,
-and the picture-sources page and disclaimer state where the pictures came from. **Nothing was pushed or deployed
-from this pass** — the Lead owns the push and the Cloudflare Pages deploy.
+Status: **complete locally, revision 2 applied**. The 186 raw Unity texture exports are gone; the site shows 89
+sourced in-game pictures, one per pictured entry, plus two official-store homepage screenshots. Revision 2 of the
+Lead's picture pack swapped 51 of the 89 pictures for better-fitting subjects and fixed the Steam source-page
+records. The build and every local gate pass on macOS, and the picture-sources page and disclaimer state where the
+pictures came from. **Nothing was pushed or deployed from this pass** — the Lead owns the push and the deploy.
 
-Content commit: `195a3f6` (pictures, manifest, entries, homepage files, pack reports).
-Code commit: `b9aa756` (generated credits, homepage provenance, gate/generator copy).
+Commits: `195a3f6` revision-1 pictures/manifest/entries, `b9aa756` generated credits/wording,
+`0e86f21` revision-2 picture swap, `9cde7f0` homepage credit to the official store page, then the docs commit
+that carries this updated record and the status commit.
 
 ## 1. What was wrong
 
@@ -16,58 +18,56 @@ as pictures of the things the entries describe, and the site credited them as lo
 
 ## 2. Before and after (measured)
 
-| Measure | Before | After |
-| --- | --- | --- |
-| mapped pictures | 186 raw texture exports | **89 normalised in-game pictures** (1200x750 JPEG) |
-| entries with a picture | 89 (186 game images across them) | 89 (one in-game picture each) |
-| diagram-only entries | 9 | 9, untouched (diagrams only, no mapped record) |
-| picture records in `content/images-manifest.json` | 186, local-export shape | **89**, full source provenance |
-| provenance per record | source bundle + asset name | sourceName, sourcePage, originalUrl, license, rightsReview, retrievedAt, verdict, reviewer, reviewDate (+ hash/bytes/dimensions) |
-| mapped bytes | 20,136,095 | 7,826,556 |
-| homepage hero/feature | 1024x1024 furniture texture + card front | 1600x900 official store screenshots |
-| `/sources` picture credits | none | generated per-file table + homepage credits |
-| image sanity | 186 records, 12 flagged | **89 records, 0 flagged** |
-| site gates | 63 | **66** (picture-provenance gate added) |
-| build | pages=445 indexable=176 | **pages=445 indexable=176** (unchanged) |
+| Measure | Before | Revision 1 | Revision 2 (current) |
+| --- | --- | --- | --- |
+| mapped pictures | 186 raw texture exports | 89 normalised in-game pictures | **89**, 51 of them swapped for better-fitting subjects |
+| entries with a picture | 89 (186 game images) | 89 (one each) | 89 (one each; 51 picture files replaced) |
+| diagram-only entries | 9 | 9 untouched | 9 untouched (no mapped record) |
+| picture records in manifest | 186, local-export shape | 89 with full provenance | **89** (Steam sourcePage fixed to the store app page) |
+| provenance per record | source bundle + asset name | sourceName, sourcePage, originalUrl, license, rightsReview, retrievedAt, verdict, reviewer, reviewDate | same, with Steam sourcePage = https://store.steampowered.com/app/3070070/ |
+| mapped bytes | 20,136,095 | 7,826,556 | 9,734,461 |
+| homepage hero/feature | 1024x1024 textures | 1600x900 store screenshots | same files, credit corrected to the official store page |
+| image sanity | 186 records, 12 flagged | 89 records, 0 flagged | 89 records, 0 flagged |
+| site gates | 63 | 66 | **66** |
+| build | pages=445 indexable=176 | same | **pages=445 indexable=176** (unchanged) |
 
-## 3. Source breakdown
+## 3. Source breakdown (revision 2)
 
-- **60 pictures** from the TCG Card Shop Wiki (Fandom), with a per-file source page, original image URL, licence
-  note and retrieval date in the manifest.
-- **29 pictures** from the official Steam store page.
-- **61 unique pictures**; 44 records sit in 16 SHA groups that share a file. 27 records carry the manifest note
-  "Reused as a category-level in-game picture."; the largest repeat is 4 entries.
-- **Homepage**: 2 official Steam store screenshots (hero = the shop floor with card display cases; feature = a card
-  pull with the card value screen). PACK provenance is kept verbatim in `reports/image-pack-2026-10-30.json` and
-  rendered in the picture-sources section.
-- Every mapped file was re-checked against its record: 89/89 exist, and bytes, sha256 and dimensions match.
-- Rights review is recorded per file as `fair_use_review` with reviewer `lead` and review date 2026-10-30; the
-  per-file verdicts are in `reports/image-reviews.md` (one row per mapped file).
+- **43 pictures** from the TCG Card Shop Wiki (Fandom), each with its wiki source page, original image URL,
+  licence note and retrieval date in the manifest.
+- **46 pictures** from the official Steam store page. Every Steam record's `sourcePage` is now the store app page
+  (`https://store.steampowered.com/app/3070070/`) while `originalUrl` keeps the Steam CDN asset URL.
+- **53 unique pictures**; 46 records sit in 10 SHA groups sharing a file and their notes say
+  "Shared with N other entrie(s) as a category-level in-game picture." 36 records are reused copies; the largest
+  repeat is 6 entries.
+- **Homepage**: the same two official Steam store screenshots (hero = shop floor with card display cases; feature =
+  a card pull with the card value screen). Both are now credited to the official store page; the PACK provenance is
+  kept verbatim in `reports/image-pack-2026-10-30.json`.
+- Every mapped file was re-checked against its record: 89/89 exist at 1200x750, and bytes, sha256 and dimensions
+  match. Rights review is recorded as `fair_use_review` (reviewer `lead`, 2026-10-30); the per-file verdicts are in
+  `reports/image-reviews.md` (89 rows).
 
 ## 4. What changed in the repo
 
-- `content/assets/mapped/*.jpg`: the 186 old files were deleted and the 89 pack files copied in.
-- `content/images-manifest.json`: complete replacement (89 records, 22 fields each); no provenance field edited.
-- `content/published/*.json`: 89 replacement entries (new picture first, original diagrams kept); the 9
-  `diagram-only` entries are byte-identical to before.
-- `web/assets/hero-shop.jpg` and `web/assets/featured-card.jpg`: replaced with the pack's 1600x900 screenshots.
-- `pipeline/site.mjs`: SITE hero/feature alt and caption text from `PACK.json`; the picture-sources section on
-  `/reference/sources.html` (linked from the footer technical reference and the disclaimer) is generated from the
-  manifest — every record's file, source name, source-page link (absolute URL), licence/rights-review status and
-  retrieval date — plus credited rows for the two homepage pictures. The disclaimer, home-page provenance note,
-  start page, game guide and footer wording now describe in-game pictures from the official store page and the
-  community wiki, credited to their source and never relicensed.
-- `tests/site.test.mjs`: the picture-provenance gate arms against the new manifest — every record must carry
-  sourceName, sourcePage, retrievedAt and rightsReview/license; every sourcePage must be an absolute `http(s)` URL;
-  every record must be listed on the generated sources page with its source linked; the page must state the
-  fair-use policy and that diagrams are original. The gate was mutation-tested on a scratch copy (missing field,
-  relative URL, half-migrated manifest all fail).
-- `reports/image-sources.md` (new), `reports/image-reviews.md` (replaced ledger), `reports/image-sanity.md` and
-  `reports/image-coverage.md` (regenerated), `reports/image-pack-2026-10-30.json` (the frozen `PACK.json`).
-- `content/README.md`, `README.md` and the generated footer now describe one picture model: an in-game picture is
-  a store screenshot or a community-wiki file, used to identify the subject, credited on the sources page.
+Revision 1 (`195a3f6`, `b9aa756`):
+- deleted the 186 raw pieces, added 89 in-game pictures, complete manifest + 89 entries, homepage files swapped.
+- generated picture-sources section on the sources page (every file, source name, source-page link, licence/rights
+  review, retrieval date) + credited homepage rows; disclaimer, home provenance note, start page, game guide,
+  footer, README and content model describe the same picture model; provenance gate added to the site tests.
 
-## 5. Verification — exact commands and results (all exit 0)
+Revision 2 (`0e86f21`, `9cde7f0`):
+- replaced the whole `content/assets/mapped/` set: 89 files, **51 different** from revision 1 (38 identical); old
+  mapped files not in the new manifest deleted.
+- complete replacement manifest (89 records) and 51 swapped published entries (diagrams kept); the 38 unchanged
+  entries and the 9 diagram-only entries are untouched.
+- provenance fix: Steam records' `sourcePage` = the store app page, `originalUrl` keeps the CDN; shared-picture
+  notes now read "Shared with N other entrie(s) as a category-level in-game picture."
+- homepage credit: `SITE.heroSourcePage` / `SITE.featureSourcePage` now point at the recorded official store page
+  (`https://store.steampowered.com/app/3070070/`), render on the sources page as recorded.
+- `reports/image-sources.md` and the 89-row `reports/image-reviews.md` ledger regenerated for revision 2;
+  `reports/image-sanity.md` and `reports/image-coverage.md` regenerated (89 records, 0 flagged, 0 unused).
+
+## 5. Verification — exact commands and results (all exit 0, revision 2)
 
     python3 tools/image-sanity.py            -> [image-sanity] 89 records, 0 flagged
     node tools/image-coverage.mjs            -> entries=98 withGameImage=89 diagramOnly=9 manifestRecords=89 unusedRecords=0
@@ -78,51 +78,60 @@ as pictures of the things the entries describe, and the site credited them as lo
     node tools/verify-citations.mjs          -> entries=98 facts=855 distinctIdentifiers=1517 universe=7781 confirmedElsewhere=14 unmatched=0
     node tools/coverage.mjs                  -> columns=20 covered=20 published=98 draft=0 reference=0 absent=0 qualityFailures=0
     node tools/classify-urls.mjs             -> 176 keep, 263 noindex, 0 redirect(s) (no diff to config/urls.json)
-    node tools/preflight.mjs                 -> see reports/local-complete.md
-    node tools/smoke.mjs                     -> see reports/local-complete.md
+    node tools/preflight.mjs                 -> [preflight] 11 ok, 0 failed
+    node tools/smoke.mjs                     -> [smoke] the artefact passes
+    node pipeline/status.mjs                 -> reports/status.json regenerated
 
-`reports/status.json` was regenerated from a fresh build after the content and code commits.
+`reports/status.json` was regenerated from a fresh build after the revision-2 commits.
 
-## 6. Visual review (89 pictures opened by eye)
+## 6. Visual review (all 89 pictures opened by eye, revision 2)
 
-All 89 files were viewed on labelled contact sheets. None is blank, corrupt or a masked/placeholder sheet, and the
-sanity pass flags none. Pictures are credited with their real source, so the following are fit issues, not
-provenance failures; they are reported to the Lead for swapping:
+All 89 files are readable in-game pictures; none is blank, corrupt or a texture sheet, and the sanity pass flags
+none. Revision 2 remapped every entry from the revision-1 "clearly wrong" list. Of the 21 revision-1 clear
+mismatches, 6 now fit (the money/payment/counter group, the till, and the shop-lists UI), and the generic fallbacks
+are acceptable for many others because the subject is genuinely a shop scene. The following still show a different
+object or a generic scene where the entry describes a specific screen/item — reported to the Lead to swap or accept:
 
-- Clearly the wrong subject (unique pictures): `the-plants-in-and-around-the-shop` (a trash bin),
-  `the-doors-and-the-signs-that-point-the-way` (a small metal rack), `the-restocker-and-its-vehicles` (a wide
-  shelf), `the-figures-the-shop-sells` (a play table), `the-finishes-you-can-buy` (a single-sided shelf),
-  `posters-and-wall-displays` (Auto Scent G500 air freshener), `scanner-restocking-workflow` (Auto Scent M100),
-  `setting-what-your-workers-do` (Auto Scent T1000), `the-money-the-counter-handles` (a small cabinet),
-  `the-payment-a-customer-hands-over` (a small personal shelf), `the-counter-and-money` (a huge personal shelf),
-  `what-the-till-shows-you` (a card table), `where-the-shops-lists-live` (a big card display),
-  `which-version-this-site-documents` (a small card display), `how-the-restock-manager-packs-stock` (a small
-  card display), `the-box-your-stock-arrives-in` (a double-sided shelf), `moving-on-old-stock` (a vintage card
-  table), `the-search-that-picks-a-card` (a monster card illustration), `the-key-binding-settings` (a checkout
-  screenshot), `what-the-pack-opener-shows-you` (a card display table), `licences-and-shop-level` (a card display
-  table). 21 entries in total.
-- Weaker fit from a reused category-level picture: `the-setting-screens-for-your-fixtures`,
-  `the-currencies-the-game-tracks`, `the-trade-screen-and-what-it-shows`, `tournaments-and-events`,
-  `the-clothes-a-shopkeeper-wears`, `what-a-customer-carries`, `the-services-the-game-offers`,
-  `keeping-the-shop-clean`, `the-shop-billboard-and-your-shop-name`, `the-upgrades-you-can-buy`,
-  `the-reveal-screen`, `the-review-screen`, `the-screens-you-will-use-most`, `what-a-review-record-keeps`,
-  `the-boards-interface`, `machines-that-work-on-their-own`, `restocking-from-a-cart`,
-  `the-picture-the-game-draws-for-a-control`.
+Clearly wrong subject (13):
+- `the-plants-in-and-around-the-shop` — shows an empty shop floor with shelves, no plants
+- `the-box-your-stock-arrives-in` — shows an empty shop floor with shelves, no box
+- `restocking-from-a-cart` — shows a card-table render, no cart
+- `the-restocker-and-its-vehicles` — shows a small card display cabinet, no restocker or vehicle
+- `the-search-that-picks-a-card` — shows a monster card illustration (Drilceros), not the search screen
+- `the-key-binding-settings` — shows the product-list screen, not key bindings
+- `what-the-pack-opener-shows-you` — shows a monster card illustration (Crobib), not the pack opener
+- `the-figures-the-shop-sells` — shows a monster card illustration (Forush), not figures
+- `the-finishes-you-can-buy` — shows a wall of card packs, not wall/floor finishes
+- `licences-and-shop-level` — shows a wall of card packs, not the licence/shop-level screen
+- `the-trade-screen-and-what-it-shows` — shows a wall of card packs, not the trade screen
+- `the-services-the-game-offers` — shows an Auto Scent G500 item render, not the services screen
+- `the-shop-billboard-and-your-shop-name` — shows a checkout screenshot, no billboard
 
-## 7. Pack bookkeeping notes (for the Lead; no provenance edited)
+Weaker fit, Lead to decide (10):
+- `the-reveal-screen`, `the-review-screen`, `the-boards-interface` — the product-list screen
+- `what-a-review-record-keeps`, `the-settings-you-can-change` — a wall of card packs
+- `the-upgrades-you-can-buy` — an Auto Scent M100 item render
+- `the-camera-and-the-photo-gallery` — a checkout screenshot
+- `which-version-this-site-documents`, `moving-on-old-stock`, `the-doors-and-the-signs-that-point-the-way` —
+  the shop-floor screenshot (a door and a CLOSED sign are visible in it)
 
-- `PACK.json` and `reports/image-sources.md` say 27 reused pictures; that matches the 27 records whose manifest
-  notes say "Reused as a category-level in-game picture." 16 SHA groups are shared by 44 records, one group
-  (`expanding-and-decorating-the-shop` / `the-screens-you-buy-from`) has no reuse note on either record.
-- `PACK.json` sourceCounts wiki 60 / steam 29 / screen 0 matches the manifest exactly.
-- The hero picture's recorded source page is `gamedropdaily.com` while its original image URL is an official
-  Steam store asset; both are shown on the sources page as recorded, not rewritten.
-- Missing-file / unused-record / ledger-mismatch checks: none. No gate failed; no pack fix was needed beyond the
-  frozen integration steps.
+The other 66 pictured entries now show a picture of the subject or an acceptable category-level picture.
+
+## 7. Pack bookkeeping notes (for the Lead; no provenance field edited)
+
+- Revision 2 fixed the Steam records: `sourcePage` is the store app page for all 46 Steam records, `originalUrl`
+  keeps the CDN URL; Fandom source pages are unchanged.
+- `PACK.json` sourceCounts (43 wiki / 46 store) and reusedPictures (36 reused copies) match the manifest; 46 records
+  carry the "Shared with N other entrie(s)" note.
+- `SWAP.md` says "60 entries changed"; measured against the integrated revision 1, 51 published files differ (51
+  mapped files differ too). The 38 unchanged entry files are byte-identical, so copying all 89 was harmless.
+- No missing file, unused record or ledger mismatch: the integration needed no bookkeeping fix.
+- Homepage files are byte-identical to revision 1; only the recorded source page changed (gamedropdaily.com →
+  store.steampowered.com/app/3070070), which the sources page now shows.
 
 ## 8. Residual items
 
-- Swap the fit issues listed in section 6 once the Lead has replacements; the manifest and ledger then need the
-  same copy-in treatment.
+- Swap or accept the fit issues in section 6; the manifest, entry file, review-ledger row and image reports must be
+  replaced together for any swap.
 - The 9 diagram-only entries still have no in-game picture by design.
 - Lead actions: push the local commits and verify the live site with `node tools/smoke.mjs https://tcgshopdb.com`.
