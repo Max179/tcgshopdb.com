@@ -104,7 +104,7 @@ def main():
             lines.append('| %s | %s | %.1f | %.0f%% | %d | %s |' % (r['file'], r['assetName'], m['stddev'], m['uniform'] * 100, m['median'], note))
     if not flagged:
         lines.append('')
-        lines.append('Nothing was flagged in this run: every exported picture carries visible variation.')
+        lines.append('Nothing was flagged in this run: every recorded picture carries visible variation.')
     lines += ['', 'Totals: %d records, %d flagged.' % (len(rows), len(flagged)), '']
     os.makedirs(os.path.dirname(REPORT), exist_ok=True)
     open(REPORT, 'w', encoding='utf-8').write('\n'.join(lines))

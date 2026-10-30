@@ -9,6 +9,6 @@ near-white (above 235). A flag is not a verdict: it means the file has to be loo
 | file | asset | stddev | uniform share | median | flag |
 | --- | --- | --- | --- | --- | --- |
 
-Nothing was flagged in this run: every exported picture carries visible variation.
+Nothing was flagged in this run: every recorded picture carries visible variation.
 
 Totals: 89 records, 0 flagged.

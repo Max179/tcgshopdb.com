@@ -24,13 +24,25 @@ export const SITE = {
   tagline: 'Build a card shop: open packs, price singles, stock shelves and make the next sale',
   searchPlaceholder: 'Search cards, packs, customers or guides',
   versionBadge: 'TCG Card Shop Simulator · read from a local copy',
-  // Design-owned homepage imagery, added by the Mac design commit 6169d5e and kept out of the package on purpose.
+  // Design-owned homepage imagery. The files and their alt/caption text come from the frozen picture pack
+  // (reports/image-pack-2026-10-30.json): official Steam store screenshots of the shop and of a card pull.
   heroImage: 'assets/hero-shop.jpg',
-  heroAlt: 'The shop furniture textures the game ships for its fixtures.',
-  heroCaption: 'In-game shop furniture · verified game asset',
+  heroAlt: "The shop floor of TCG Card Shop Simulator, from the game's official store screenshots.",
+  heroCaption: 'In-game shop view · official store screenshot',
   featureImage: 'assets/featured-card.jpg',
-  featureAlt: 'The fire card front the game ships for one of its card sets.',
-  featureCaption: 'In-game card front · verified game asset',
+  featureAlt: 'An in-game card pull in TCG Card Shop Simulator.',
+  featureCaption: 'In-game play · official store screenshot',
+  // The two homepage pictures are not entry pictures and so are not in the image manifest; their provenance is
+  // carried here and rendered in the picture-sources section of the sources page.
+  homepagePicturesRetrievedAt: '2026-10-30',
+  heroSourceName: 'Official Steam store screenshot',
+  heroSourcePage: 'https://gamedropdaily.com/updates/tcg-card-shop-simulator/',
+  heroOriginalUrl: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3070070/b0d2200e01a96a6e699dac98564bac109ca55186/ss_b0d2200e01a96a6e699dac98564bac109ca55186.1920x1080.jpg',
+  heroLabel: 'the shop floor with card display cases',
+  featureSourceName: 'Official Steam store screenshot',
+  featureSourcePage: 'https://store.steampowered.com/app/3070070/TCG_Card_Shop_Simulator/',
+  featureOriginalUrl: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3070070/afca7f365bb6c9590a0b2d7038d78296d9497e1f/ss_afca7f365bb6c9590a0b2d7038d78296d9497e1f.1920x1080.jpg',
+  featureLabel: 'a pull of cards with the card value screen',
   featured: ['cards-and-rarity', 'packs-and-opening', 'the-counter-and-money', 'storage-shelves-and-restocking',
     'sending-cards-to-be-graded', 'the-card-game-you-can-play', 'playmats-deck-boxes-and-sleeves', 'the-box-your-stock-arrives-in'],
 };
@@ -100,7 +112,7 @@ const groupOf = (category) => (CATEGORIES.find((c) => c.src.includes(category)) 
 
 export function build(inventoryPath, outDir) {
   const inv = JSON.parse(readFileSync(inventoryPath, 'utf8'));
-  const srcLine = 'Source: read from a local copy of the game · version ' + (inv.version ?? 'unknown') + ' · nothing invented';
+  const srcLine = "Source: the game's own files, read only · version " + (inv.version ?? 'unknown') + ' · nothing invented';
   let manifest = { records: [] };
   try { manifest = JSON.parse(readFileSync(join(process.cwd(), 'content', 'images-manifest.json'), 'utf8')); } catch { /* none yet */ }
 
@@ -391,17 +403,36 @@ export function build(inventoryPath, outDir) {
     '<td>' + (isHttpUrl(picPage(r)) ? '<a href="' + esc(picPage(r)) + '" rel="nofollow noopener">' + esc(picPage(r)) + '</a>' : esc(picPage(r) || 'not recorded')) + '</td>' +
     '<td>' + esc(picRights(r) || 'not recorded') + '</td>' +
     '<td>' + esc(String(r.retrievedAt ?? '').trim() || 'not recorded') + '</td></tr>').join('\n');
+  // The two design-owned homepage pictures are not entry pictures, so they are not in the manifest; they get
+  // their own credited rows here, from the frozen picture pack recorded in reports/image-pack-2026-10-30.json.
+  const homepagePictures = [
+    { file: SITE.heroImage, role: 'Homepage hero', label: SITE.heroLabel, sourceName: SITE.heroSourceName, sourcePage: SITE.heroSourcePage, originalUrl: SITE.heroOriginalUrl },
+    { file: SITE.featureImage, role: 'Homepage feature', label: SITE.featureLabel, sourceName: SITE.featureSourceName, sourcePage: SITE.featureSourcePage, originalUrl: SITE.featureOriginalUrl },
+  ].filter((p) => p.file && p.sourceName && isHttpUrl(p.sourcePage));
+  const shortUrl = (u) => esc(String(u).replace(/^https?:\/\//, '').replace(/[?&].*$/, '').slice(0, 58));
+  const homepageRows = homepagePictures.map((p) => '<tr class="pic-row"><td class="mono"><a href="/' + esc(p.file) + '">' + esc(p.file) + '</a></td>' +
+    '<td>' + esc(p.role) + '</td><td>' + esc(p.sourceName) + '</td>' +
+    '<td><a href="' + esc(p.sourcePage) + '" rel="nofollow noopener">' + esc(p.sourcePage) + '</a></td>' +
+    '<td class="mono small">' + (isHttpUrl(p.originalUrl) ? '<a href="' + esc(p.originalUrl) + '" rel="nofollow noopener">' + shortUrl(p.originalUrl) + '…</a>' : 'not recorded') + '</td>' +
+    '<td>' + esc(SITE.homepagePicturesRetrievedAt ?? 'not recorded') + '</td></tr>').join('\n');
+  const homepageSection = homepagePictures.length ? '<h3>Homepage pictures</h3>' +
+    '<p class="dim small">The two pictures above the fold on the home page are not entry pictures, so they are credited here rather than in the table above. ' +
+    homepagePictures.map((p) => esc(p.role) + ' shows ' + esc(p.label || 'the game')).join('; ') +
+    '. Both are official Steam store screenshots, used only to identify the game; they remain the property of the developer and publisher.</p>' +
+    '<table><thead><tr><th>File</th><th>Use</th><th>Source</th><th>Source page</th><th>Original image</th><th>Retrieved</th></tr></thead><tbody>\n' +
+    homepageRows + '\n</tbody></table>' : '';
   // The paragraph follows the ledger rather than asserting a sourcing policy the files do not meet. Until a
   // record carries a source page the files are described as they are (pictures taken from the game itself); as
   // soon as the sourced records land the paragraph states the external sources, so it cannot overclaim.
   const picturePolicy = (pictureRecords.length && picUntraced === pictureRecords.length)
     ? '<p>Pictures on this site are in-game pictures. The current files are recorded as taken from the game itself; the table below marks their external source page as not recorded rather than claiming one. Every picture is used only to identify the subject an entry describes and remains the property of its owner. Diagrams were drawn for this site and are labelled as diagrams, never as screenshots.</p>'
-    : '<p>Pictures on this site are in-game pictures: screenshots from the game\'s official Steam store page and files from its community wikis (the TCG Card Shop Wiki on Fandom and wiki.gg). They are used only to identify the subject an entry describes, under a fair-use review, and they are credited to the page they came from, with their licence and rights-review status and the date they were retrieved. They remain the property of their owners and uploaders; this site does not relicense them. Diagrams were drawn for this site and are labelled as diagrams, never as screenshots.</p>';
+    : '<p>Pictures on this site are in-game pictures: screenshots from the game\'s official Steam store page and files from its community wiki (the TCG Card Shop Wiki on Fandom). They are used only to identify the subject an entry describes, under a fair-use review, and they are credited to the page they came from, with their licence and rights-review status and the date they were retrieved. They remain the property of their owners and uploaders; this site does not relicense them. Diagrams were drawn for this site and are labelled as diagrams, never as screenshots.</p>';
   const pictureSourcesSection = '<h2 id="pictures">Picture sources</h2>' + picturePolicy +
     (picUntraced ? '<p class="dim small">' + picUntraced + ' file(s) below predate the external-source record: their source page is marked "not recorded" rather than credited to a page nobody has verified.</p>' : '') +
     '<p class="dim small">Recorded sources: ' + [...picSourceCounts].map(([n, c]) => esc(n) + ' (' + c + ')').join(', ') + '. This table covers all ' + pictureRecords.length + ' picture record(s) in <span class="mono">content/images-manifest.json</span>.</p>' +
     '<table><thead><tr><th>File</th><th>Source</th><th>Source page</th><th>Licence / rights review</th><th>Retrieved</th></tr></thead><tbody>\n' +
-    pictureSourceRows + '\n</tbody></table>';
+    pictureSourceRows + '\n</tbody></table>' +
+    homepageSection;
   reference('reference/sources.html', 'Sources', 'Where every number and every picture came from.',
     '<h1>Sources</h1><div class="note">Every value in this build traces to a file on the Windows machine that produced it. Nothing in the value layer is community-sourced and nothing is estimated.</div>' +
     '<h2>Assembly</h2><p class="mono">' + esc(inv.source?.assembly ?? '') + '</p><h2>Extractor</h2><p class="mono">' + esc(inv.source?.extractor ?? '') + '</p>' +
@@ -425,7 +456,7 @@ export function build(inventoryPath, outDir) {
     '<h1>Contact</h1><p>Corrections are welcome. Report the page, the claim and what the game actually does; corrections that cannot be checked against the game files cannot be used.</p><p>There is no form and no server behind this site.</p>');
   indexable('disclaimer.html', 'Disclaimer', 'No affiliation; game pictures are used only to identify the items they show.',
     '<h1>Disclaimer</h1><p>Not affiliated with, endorsed by, or sponsored by the game\'s developer or publisher. Game names and marks belong to their owners.</p>' +
-    '<p>Pictures on this site are in-game pictures: screenshots from the game\'s official Steam store page and files from its community wikis (the TCG Card Shop Wiki on Fandom and wiki.gg). They are used only to identify the subject an entry describes, under a fair-use review. Each one is credited to the page it came from on the <a href="/reference/sources.html#pictures">picture sources</a> page, and every picture remains the property of its owner or uploader; this site does not relicense any of them.</p>' +
+    '<p>Pictures on this site are in-game pictures: screenshots from the game\'s official Steam store page and files from its community wiki (the TCG Card Shop Wiki on Fandom). They are used only to identify the subject an entry describes, under a fair-use review. Each one is credited to the page it came from on the <a href="/reference/sources.html#pictures">picture sources</a> page, and every picture remains the property of its owner or uploader; this site does not relicense any of them.</p>' +
     '<p>Diagrams were drawn for this site and are labelled as diagrams; they are not screenshots.</p>');
   indexable('privacy.html', 'Privacy', 'No cookies, no tracking, no third-party requests.',
     '<h1>Privacy</h1><p>This static build sets no cookies, runs no analytics and makes no third-party requests. The search and lookup tools run entirely in your browser over data embedded in the page or fetched from this site.</p>');
