@@ -188,7 +188,7 @@ export function build(inventoryPath, outDir) {
       : '<p class="dim">No update notes yet.</p>') +
     '\n<p><a href="/updates.html">All updates &rarr;</a></p>\n</section>\n' +
     '<section class="section">\n<h2>Where the pictures and facts come from</h2>\n' +
-    '<p>Pictures are taken from a local copy of the game itself, each one recorded with the asset it came from; a diagram drawn for this site is always labelled as a diagram and is never passed off as a screenshot. Facts are read from the game\'s own files, not from a wiki or a forum. The build this site documents is <strong>' + esc(inv.version ?? 'unknown') + '</strong>.</p>\n' +
+    '<p>Pictures are in-game pictures: screenshots from the official Steam store page and files from the game\'s community wikis, each one recorded with the page it came from and used only to identify what the entry describes; the <a href="/reference/sources.html#pictures">picture sources</a> page lists every file with its source. A diagram drawn for this site is always labelled as a diagram and is never passed off as a screenshot. Facts are read from the game\'s own files, not from a wiki or a forum. The build this site documents is <strong>' + esc(inv.version ?? 'unknown') + '</strong>.</p>\n' +
     '<p class="dim small">The raw identifiers, tables and extraction notes are kept in a technical reference, reachable from the footer of every page and kept out of search engines on purpose.</p>\n</section>\n');
 
   // ---- game guide ------------------------------------------------------------------------------
@@ -199,7 +199,7 @@ export function build(inventoryPath, outDir) {
     '<h2>3. Serve the people who come in</h2><p>Who comes, what they want and how a trade works: <a href="/entities/customers.html">customers and trading</a>.</p>\n' +
     '<h2>4. Read what you pulled</h2><p>Rarity, grading and a collection that holds value: <a href="/entities/cards.html">cards and rarity</a>.</p>\n' +
     '<h2>5. Play the game yourself</h2><p>Decks, the table and tournaments: <a href="/entities/decks.html">decks and the card game</a> and <a href="/entities/events.html">events</a>.</p>\n' +
-    '<h2>How to use this site</h2><p>Use the search box, browse <a href="/entities/">entities by part of the run</a>, or read a <a href="/articles/">guide</a> that walks through one job from start to finish. Pictures come from the game; a diagram is always labelled as a diagram.</p>');
+    '<h2>How to use this site</h2><p>Use the search box, browse <a href="/entities/">entities by part of the run</a>, or read a <a href="/articles/">guide</a> that walks through one job from start to finish. Pictures are in-game pictures, credited with their sources on the <a href="/reference/sources.html#pictures">picture sources</a> page; a diagram is always labelled as a diagram.</p>');
 
   // ---- entity hub and category pages ------------------------------------------------------------
   indexable('entities/index.html', 'Entities', 'Every part of the run this site documents, with pictures taken from the game.',
@@ -259,7 +259,7 @@ export function build(inventoryPath, outDir) {
     '<li><strong>Follow the <a href="/guide.html">game guide</a></strong> through a shop day.</li>' +
     '<li><strong>Read a <a href="/articles/">guide</a></strong> that walks through one job from start to finish.</li>' +
     '<li><strong>Search</strong> from the box at the top of any page.</li></ul>\n' +
-    '<h2>What the pictures are</h2><p>Where a picture could be taken from the game, it is; each one is labelled on the entry. Where no picture has been confirmed, the subject is kept as a note rather than dressed up as a finished entry.</p>\n' +
+    '<h2>What the pictures are</h2><p>Every picture is an in-game picture of the thing its entry describes, taken from the game, its official store page or its community wikis. Each one is labelled on the entry and credited with its source page on the <a href="/reference/sources.html#pictures">picture sources</a> page. Where no picture has been confirmed, the subject is kept as a note rather than dressed up as a finished entry.</p>\n' +
     '<h2>What we will never do</h2><p>We do not print a number we could not verify, we do not fill a gap with a guess, and a diagram is always labelled as a diagram.</p>');
   for (const e of notes) {
     const img = imgOf(e);
@@ -371,12 +371,44 @@ export function build(inventoryPath, outDir) {
     'var draw=function(){var v=q.value.trim().toLowerCase();var rows=!v?F.slice(0,20):F.filter(function(x){return x.field.toLowerCase().indexOf(v)>=0||String(x.type).toLowerCase().indexOf(v)>=0});' +
     's.textContent=v?(rows.length+" match(es)"):"empty query - showing the first 20 indexed fields";' +
     'o.innerHTML=rows.slice(0,50).map(function(x){return "<div><span class=mono>"+x.field+"</span> <span class=dim>"+x.type+" - "+x.class+"</span></div>"}).join("")};q.addEventListener("input",draw);draw();</script>');
-  reference('reference/sources.html', 'Sources', 'Where every number came from.',
-    '<h1>Sources</h1><div class="note">Every value in this build traces to a file on the Windows machine that produced it. Nothing is community-sourced and nothing is estimated.</div>' +
+  // ---- picture sources ------------------------------------------------------------------------------
+  // A picture here is not the site's own: it is an in-game picture used to identify the subject an entry
+  // describes, and it has to be traceable to the page it came from. The credit table is generated from
+  // content/images-manifest.json, so it cannot drift from the files the build publishes.
+  const pictureRecords = (manifest.records ?? []).slice().sort((a, b) => String(a.file).localeCompare(String(b.file)));
+  const picName = (r) => String(r.sourceName ?? '').trim();
+  const picPage = (r) => String(r.sourcePage ?? '').trim();
+  const isHttpUrl = (u) => /^https?:\/\/[^\s]+$/.test(u);
+  const picRights = (r) => [r.license, r.rightsReview].map((x) => String(x ?? '').trim()).filter(Boolean).join(' · ');
+  const picSourceCounts = new Map();
+  for (const r of pictureRecords) {
+    const n = picName(r) || 'source not recorded';
+    picSourceCounts.set(n, (picSourceCounts.get(n) ?? 0) + 1);
+  }
+  const picUntraced = pictureRecords.filter((r) => !isHttpUrl(picPage(r))).length;
+  const pictureSourceRows = pictureRecords.map((r) => '<tr class="pic-row"><td class="mono"><a href="/' + esc(String(r.file)) + '">' + esc(String(r.file)) + '</a></td>' +
+    '<td>' + esc(picName(r) || 'not recorded') + '</td>' +
+    '<td>' + (isHttpUrl(picPage(r)) ? '<a href="' + esc(picPage(r)) + '" rel="nofollow noopener">' + esc(picPage(r)) + '</a>' : esc(picPage(r) || 'not recorded')) + '</td>' +
+    '<td>' + esc(picRights(r) || 'not recorded') + '</td>' +
+    '<td>' + esc(String(r.retrievedAt ?? '').trim() || 'not recorded') + '</td></tr>').join('\n');
+  // The paragraph follows the ledger rather than asserting a sourcing policy the files do not meet. Until a
+  // record carries a source page the files are described as they are (pictures taken from the game itself); as
+  // soon as the sourced records land the paragraph states the external sources, so it cannot overclaim.
+  const picturePolicy = (pictureRecords.length && picUntraced === pictureRecords.length)
+    ? '<p>Pictures on this site are in-game pictures. The current files are recorded as taken from the game itself; the table below marks their external source page as not recorded rather than claiming one. Every picture is used only to identify the subject an entry describes and remains the property of its owner. Diagrams were drawn for this site and are labelled as diagrams, never as screenshots.</p>'
+    : '<p>Pictures on this site are in-game pictures: screenshots from the game\'s official Steam store page and files from its community wikis (the TCG Card Shop Wiki on Fandom and wiki.gg). They are used only to identify the subject an entry describes, under a fair-use review, and they are credited to the page they came from, with their licence and rights-review status and the date they were retrieved. They remain the property of their owners and uploaders; this site does not relicense them. Diagrams were drawn for this site and are labelled as diagrams, never as screenshots.</p>';
+  const pictureSourcesSection = '<h2 id="pictures">Picture sources</h2>' + picturePolicy +
+    (picUntraced ? '<p class="dim small">' + picUntraced + ' file(s) below predate the external-source record: their source page is marked "not recorded" rather than credited to a page nobody has verified.</p>' : '') +
+    '<p class="dim small">Recorded sources: ' + [...picSourceCounts].map(([n, c]) => esc(n) + ' (' + c + ')').join(', ') + '. This table covers all ' + pictureRecords.length + ' picture record(s) in <span class="mono">content/images-manifest.json</span>.</p>' +
+    '<table><thead><tr><th>File</th><th>Source</th><th>Source page</th><th>Licence / rights review</th><th>Retrieved</th></tr></thead><tbody>\n' +
+    pictureSourceRows + '\n</tbody></table>';
+  reference('reference/sources.html', 'Sources', 'Where every number and every picture came from.',
+    '<h1>Sources</h1><div class="note">Every value in this build traces to a file on the Windows machine that produced it. Nothing in the value layer is community-sourced and nothing is estimated.</div>' +
     '<h2>Assembly</h2><p class="mono">' + esc(inv.source?.assembly ?? '') + '</p><h2>Extractor</h2><p class="mono">' + esc(inv.source?.extractor ?? '') + '</p>' +
     '<h2>Extracted at</h2><p class="mono">' + esc(inv.source?.extractedAt ?? '') + '</p><h2>Game version</h2><p>' + esc(inv.version ?? '') + '</p>' +
     '<h2>Per-field provenance</h2><p>' + esc(inv.provenance?.fields ?? 'source, version, checkedAt, confidence, value') + '</p>' +
-    '<h2>Not extracted (unknown)</h2><p>' + esc(inv.provenance?.values ?? 'Per-field values are listed only where the object decoded; everything else is marked unknown.') + '</p>');
+    '<h2>Not extracted (unknown)</h2><p>' + esc(inv.provenance?.values ?? 'Per-field values are listed only where the object decoded; everything else is marked unknown.') + '</p>' +
+    pictureSourcesSection);
   reference('reference/index.html', 'Technical reference', 'Identifiers, tables and provenance for modders. Not indexed.',
     '<h1>Technical reference</h1><p class="lead">For modders and for checking our data. Deliberately kept out of search engines: it lists identifiers read from the game\'s files, which are useful to a modder but are not answers to a player\'s question.</p><ul>' +
     '<li><a href="/reference/collection.html">All names</a></li><li><a href="/reference/cards.html">Card data</a></li><li><a href="/reference/enums.html">Enums</a></li>' +
@@ -391,9 +423,10 @@ export function build(inventoryPath, outDir) {
     '<h2>What is on which layer</h2><p>The player reference — entities, guides, the game guide and the tools — is what the site is for. Identifiers, tables and extraction notes are an evidence layer behind the <a href="/reference/">technical reference</a>, kept out of search engines on purpose.</p>');
   indexable('contact.html', 'Contact', 'How to report a wrong value.',
     '<h1>Contact</h1><p>Corrections are welcome. Report the page, the claim and what the game actually does; corrections that cannot be checked against the game files cannot be used.</p><p>There is no form and no server behind this site.</p>');
-  indexable('disclaimer.html', 'Disclaimer', 'No affiliation; game images are used only to identify items.',
+  indexable('disclaimer.html', 'Disclaimer', 'No affiliation; game pictures are used only to identify the items they show.',
     '<h1>Disclaimer</h1><p>Not affiliated with, endorsed by, or sponsored by the game\'s developer or publisher. Game names and marks belong to their owners.</p>' +
-    '<p>Some images are taken from the game to identify the item they belong to; those images remain the property of the developer. Diagrams drawn for this site are labelled as diagrams and are not screenshots.</p>');
+    '<p>Pictures on this site are in-game pictures: screenshots from the game\'s official Steam store page and files from its community wikis (the TCG Card Shop Wiki on Fandom and wiki.gg). They are used only to identify the subject an entry describes, under a fair-use review. Each one is credited to the page it came from on the <a href="/reference/sources.html#pictures">picture sources</a> page, and every picture remains the property of its owner or uploader; this site does not relicense any of them.</p>' +
+    '<p>Diagrams were drawn for this site and are labelled as diagrams; they are not screenshots.</p>');
   indexable('privacy.html', 'Privacy', 'No cookies, no tracking, no third-party requests.',
     '<h1>Privacy</h1><p>This static build sets no cookies, runs no analytics and makes no third-party requests. The search and lookup tools run entirely in your browser over data embedded in the page or fetched from this site.</p>');
   indexable('terms.html', 'Terms', 'Use of this site.',

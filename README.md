@@ -37,7 +37,7 @@ python3 -m http.server 4205 --directory web/dist
 | Command | What it does |
 | --- | --- |
 | `npm run build` | Regenerate `web/dist/` from the committed data and content. The build prints `pages=445 indexable=176`. |
-| `npm test` | Run the 63 site gates (`tests/site.test.mjs`). Builds into a temp directory and checks routes, canonical URLs, noindex/sitemap policy, provenance, images, content invariants, duplicate indexable pages, mobile viewport and the publish configuration. |
+| `npm test` | Run the 66 site gates (`tests/site.test.mjs`). Builds into a temp directory and checks routes, canonical URLs, noindex/sitemap policy, provenance, images (including the picture-source ledger and the generated credit table), content invariants, duplicate indexable pages, mobile viewport and the publish configuration. |
 | `npm run typecheck` | `tsc --noEmit -p tsconfig.ci.json` — portable type roots, checks the `.mjs` pipeline and tests. |
 | `npm run gates` | Content gate, coverage matrix, image coverage and citation check, in that order. |
 | `npm run classify` | Rewrite `config/urls.json` (one keep/noindex line per emitted page) from `web/dist` + sitemap. |
@@ -94,16 +94,23 @@ npm run typecheck
 
 ## Images and licensing
 
-The MIT licence in [`LICENSE`](LICENSE) covers the **site code only**. It does not relicense any game asset:
+The MIT licence in [`LICENSE`](LICENSE) covers the **site code only**. It does not relicense any picture:
 
-- **Game assets** (textures and renders exported from the game) are the property of the developer and their
-  rights holders. They are used only to identify the subject they belong to, and they keep their original status.
-  Every mapped file is recorded in `content/images-manifest.json` with source bundle, asset name, dimensions,
-  bytes and sha256, and every record carries a reviewed verdict in `reports/image-reviews.md`.
+- **Game pictures** are in-game pictures: screenshots from the game's official Steam store page, files from its
+  community wikis (the TCG Card Shop Wiki on Fandom and wiki.gg), and pictures taken from the game itself. They
+  belong to the game's developer and their rights holders, and to the wiki uploaders for community files. They
+  are used only to identify the subject an entry describes, under a fair-use review, and this site does not
+  relicense them. Every file is recorded in `content/images-manifest.json` with its kind, entity, source name,
+  source page (an absolute URL), original URL, licence and rights-review status, retrieval date and hash, and
+  every record carries a reviewed verdict in `reports/image-reviews.md`. The build generates the per-file credit
+  table on `/reference/sources.html#pictures` from that manifest, and every published page carries the same
+  "Picture taken from the game to identify this item" label next to its picture.
 - **Original diagrams** were drawn for this site and are labelled as diagrams, never as screenshots.
 
 The build's content gate refuses a published entry without an image, a diagram presented as a screenshot, or an
-image without English and Chinese alt text.
+image without English and Chinese alt text. The site tests refuse a picture record that does not carry a source
+name, a source page, a retrieval date and a rights review, a source page that is not an absolute `http(s)` URL,
+or a record that the generated credit table does not list.
 
 ## Deploy
 

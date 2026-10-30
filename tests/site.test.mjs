@@ -229,6 +229,33 @@ try {
   ok('at least half of the published entries carry an image taken from the game',
     illustrated.length * 2 >= published.length, illustrated.length + ' of ' + published.length + ' entries');
 
+  // Picture provenance, checked end to end. The manifest is the picture ledger, so a record that cannot name
+  // where its picture came from is not evidence, and a credit the sources page does not print is not a credit.
+  // The old local-export manifest carries no provenance fields at all, and the sourced pack has not landed yet:
+  // the strict checks arm themselves as soon as one record names a source or source page, and a half-migrated
+  // manifest fails, so the sourced shape cannot silently regress once the pack is in.
+  {
+    const manifest = JSON.parse(readFileSync('content/images-manifest.json', 'utf8'));
+    const recs = manifest.records ?? [];
+    const hasField = (r, k) => typeof r[k] === 'string' && r[k].trim().length > 0;
+    const armed = recs.some((r) => hasField(r, 'sourceName') || hasField(r, 'sourcePage'));
+    const pending = 'PENDING: manifest still has the local-export shape (' + recs.length + ' records, none with a source page)';
+    const sourcesHtml = readFileSync(join(dir, 'reference', 'sources.html'), 'utf8');
+    const escAttr = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    const missingFields = armed ? recs.filter((r) => !hasField(r, 'sourceName') || !hasField(r, 'sourcePage') ||
+      !hasField(r, 'retrievedAt') || !(hasField(r, 'rightsReview') || hasField(r, 'license'))).map((r) => String(r.file)) : [];
+    ok('every picture record names its source, source page, retrieval date and rights review',
+      armed ? missingFields.length === 0 : true, armed ? missingFields.slice(0, 3).join(', ') : pending);
+    const badUrls = armed ? recs.filter((r) => !/^https?:\/\/[^\s]+$/.test(String(r.sourcePage ?? ''))).map((r) => String(r.file)) : [];
+    ok('every picture source page is an absolute http(s) URL', armed ? badUrls.length === 0 : true,
+      armed ? badUrls.slice(0, 3).join(', ') : pending);
+    const unlisted = armed ? recs.filter((r) => !sourcesHtml.includes(String(r.file)) ||
+      !sourcesHtml.includes('href="' + escAttr(r.sourcePage) + '"')).map((r) => String(r.file)) : [];
+    const explainsPolicy = sourcesHtml.includes('id="pictures"') && /fair-use/i.test(sourcesHtml) && /Diagrams were drawn for this site/i.test(sourcesHtml);
+    ok('the generated sources page lists every picture record with a link to its source page and the picture policy',
+      armed ? unlisted.length === 0 && explainsPolicy : true, armed ? unlisted.slice(0, 3).join(', ') : pending);
+  }
+
   // The five player sections, in order; the technical reference lives in the footer only.
   const expectedNav = ['/guide.html', '/entities/', '/articles/', '/tools/', '/updates.html'];
   ok('the top navigation is exactly the five player sections, in order',
