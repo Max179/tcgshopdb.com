@@ -6,20 +6,20 @@
   "picturedEntries": 89,
   "diagramOnlyEntries": 9,
   "sourceCounts": {
-    "wiki": 60,
-    "steam": 29,
+    "wiki": 43,
+    "steam": 46,
     "screen": 0
   },
-  "reusedPictures": 27,
+  "reusedPictures": 36,
   "hero": {
     "file": "assets/hero-shop.jpg",
-    "source": "https://gamedropdaily.com/updates/tcg-card-shop-simulator/",
+    "source": "https://store.steampowered.com/app/3070070/",
     "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3070070/b0d2200e01a96a6e699dac98564bac109ca55186/ss_b0d2200e01a96a6e699dac98564bac109ca55186.1920x1080.jpg",
     "label": "the shop floor with card display cases"
   },
   "feature": {
     "file": "assets/featured-card.jpg",
-    "source": "https://store.steampowered.com/app/3070070/TCG_Card_Shop_Simulator/",
+    "source": "https://store.steampowered.com/app/3070070/",
     "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3070070/afca7f365bb6c9590a0b2d7038d78296d9497e1f/ss_afca7f365bb6c9590a0b2d7038d78296d9497e1f.1920x1080.jpg",
     "label": "a pull of cards with the card value screen"
   },
