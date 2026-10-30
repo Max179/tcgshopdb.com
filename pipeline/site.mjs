@@ -24,8 +24,8 @@ export const SITE = {
   tagline: 'Build a card shop: open packs, price singles, stock shelves and make the next sale',
   searchPlaceholder: 'Search cards, packs, customers or guides',
   versionBadge: 'TCG Card Shop Simulator · read from a local copy',
-  // Design-owned homepage imagery. The files and their alt/caption text come from the frozen picture pack
-  // (reports/image-pack-2026-10-30.json): official Steam store screenshots of the shop and of a card pull.
+  // Design-owned homepage imagery. The files, alt/caption text and source pages come from the picture pack
+  // (reports/image-pack-2026-10-30.json, revision 2): official Steam store screenshots of the shop and a card pull.
   heroImage: 'assets/hero-shop.jpg',
   heroAlt: "The shop floor of TCG Card Shop Simulator, from the game's official store screenshots.",
   heroCaption: 'In-game shop view · official store screenshot',
@@ -36,11 +36,11 @@ export const SITE = {
   // carried here and rendered in the picture-sources section of the sources page.
   homepagePicturesRetrievedAt: '2026-10-30',
   heroSourceName: 'Official Steam store screenshot',
-  heroSourcePage: 'https://gamedropdaily.com/updates/tcg-card-shop-simulator/',
+  heroSourcePage: 'https://store.steampowered.com/app/3070070/',
   heroOriginalUrl: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3070070/b0d2200e01a96a6e699dac98564bac109ca55186/ss_b0d2200e01a96a6e699dac98564bac109ca55186.1920x1080.jpg',
   heroLabel: 'the shop floor with card display cases',
   featureSourceName: 'Official Steam store screenshot',
-  featureSourcePage: 'https://store.steampowered.com/app/3070070/TCG_Card_Shop_Simulator/',
+  featureSourcePage: 'https://store.steampowered.com/app/3070070/',
   featureOriginalUrl: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3070070/afca7f365bb6c9590a0b2d7038d78296d9497e1f/ss_afca7f365bb6c9590a0b2d7038d78296d9497e1f.1920x1080.jpg',
   featureLabel: 'a pull of cards with the card value screen',
   featured: ['cards-and-rarity', 'packs-and-opening', 'the-counter-and-money', 'storage-shelves-and-restocking',
