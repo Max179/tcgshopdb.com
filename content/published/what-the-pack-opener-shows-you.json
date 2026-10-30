@@ -56,11 +56,11 @@
   ],
   "images": [
     {
-      "file": "mapped/what-the-pack-opener-shows-you-booster.jpg",
+      "file": "mapped/what-the-pack-opener-shows-you-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "The booster icon the game itself uses: a pack with gold caps and a purple middle printed with a lightning bolt, on a black field.",
-        "zh": "游戏自带的补充包图标：金色两端、紫色中部并印有闪电图案的卡包，位于黑色背景上。"
+        "en": "In-game picture of Card Display Table from TCG Card Shop Simulator, used to illustrate What the pack opener shows you.",
+        "zh": "《TCG Card Shop Simulator》游戏内Card Display Table的画面，用于说明「What the pack opener shows you」。"
       }
     },
     {

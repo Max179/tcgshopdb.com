@@ -50,11 +50,11 @@
   ],
   "images": [
     {
-      "file": "mapped/what-a-cards-set-record-says-card.jpg",
+      "file": "mapped/what-a-cards-set-record-says-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "One of the card icons the game prints at a rarity: two stacked card faces in magenta and purple under the same dark border.",
-        "zh": "游戏按稀有度印制的卡牌图标之一：两张叠放的洋红与紫色卡面，同款深色边框。"
+        "en": "In-game picture of Budwing from TCG Card Shop Simulator, used to illustrate What a card's set record says.",
+        "zh": "《TCG Card Shop Simulator》游戏内Budwing的画面，用于说明「What a card's set record says」。"
       }
     },
     {

@@ -101,11 +101,11 @@
   ],
   "images": [
     {
-      "file": "mapped/the-boards-interface-shield.jpg",
+      "file": "mapped/the-boards-interface-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "The shield icon the game itself uses on the board: a green shield with a darker inner shield on a black field.",
-        "zh": "游戏在牌桌上使用的护盾图标：黑色背景上的绿色盾形，内部还有一层更深的盾形。"
+        "en": "In-game picture from TCG Card Shop Simulator showing the shopkeeper holding money at the counter, used to illustrate The board's interface.",
+        "zh": "《TCG Card Shop Simulator》游戏内画面：the shopkeeper holding money at the counter，用于说明「The board's interface」。"
       }
     },
     {

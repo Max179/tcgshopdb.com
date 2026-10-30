@@ -55,27 +55,11 @@
   ],
   "images": [
     {
-      "file": "mapped/the-key-binding-settings-shift.png",
+      "file": "mapped/the-key-binding-settings-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "Another of the key pictures the game draws in its rebinding screens, here the Shift key.",
-        "zh": "游戏在改键界面里绘制的按键图之一，这里是 Shift 键。"
-      }
-    },
-    {
-      "file": "mapped/the-key-binding-settings-tab.png",
-      "kind": "game",
-      "alt": {
-        "en": "The Tab key in the same set of key pictures.",
-        "zh": "同一套按键图中的 Tab 键。"
-      }
-    },
-    {
-      "file": "mapped/the-key-binding-settings-enter.png",
-      "kind": "game",
-      "alt": {
-        "en": "One of the key pictures the game draws beside a rebindable action, here the Enter key.",
-        "zh": "游戏在可改键动作旁绘制的按键图之一，这里是 Enter 键。"
+        "en": "In-game picture from TCG Card Shop Simulator showing checkout, used to illustrate The key binding settings.",
+        "zh": "《TCG Card Shop Simulator》游戏内画面：checkout，用于说明「The key binding settings」。"
       }
     },
     {

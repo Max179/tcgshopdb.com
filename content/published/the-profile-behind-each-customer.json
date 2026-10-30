@@ -71,19 +71,11 @@
   ],
   "images": [
     {
-      "file": "mapped/the-profile-behind-each-customer-female.jpg",
+      "file": "mapped/the-profile-behind-each-customer-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "One of the customer portraits the game ships.",
-        "zh": "游戏自带的顾客头像之一。"
-      }
-    },
-    {
-      "file": "mapped/the-profile-behind-each-customer-male.jpg",
-      "kind": "game",
-      "alt": {
-        "en": "Another of the customer portraits the game ships.",
-        "zh": "游戏自带的另一位顾客头像。"
+        "en": "In-game picture from TCG Card Shop Simulator showing customers sitting at the card tables, used to illustrate The profile behind each customer.",
+        "zh": "《TCG Card Shop Simulator》游戏内画面：customers sitting at the card tables，用于说明「The profile behind each customer」。"
       }
     },
     {

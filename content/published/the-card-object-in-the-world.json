@@ -68,11 +68,11 @@
   ],
   "images": [
     {
-      "file": "mapped/the-card-object-in-the-world-card.jpg",
+      "file": "mapped/the-card-object-in-the-world-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "One of the card icons the game prints on a card: two stacked card faces, one fire-red and one water-blue, with dark borders.",
-        "zh": "游戏印在卡牌上的图标之一：两张叠放的卡面，一为火红、一为水蓝，带深色边框。"
+        "en": "In-game picture of Decimite from TCG Card Shop Simulator, used to illustrate The card object in the world.",
+        "zh": "《TCG Card Shop Simulator》游戏内Decimite的画面，用于说明「The card object in the world」。"
       }
     },
     {

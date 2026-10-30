@@ -82,27 +82,11 @@
   ],
   "images": [
     {
-      "file": "mapped/what-a-customer-carries-bag.jpg",
+      "file": "mapped/what-a-customer-carries-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "The base colour texture the game ships for the paper bag a customer carries: brown kraft paper with the top edge folded down.",
-        "zh": "游戏自带的顾客纸袋基础色贴图：牛皮纸色，顶部折边。"
-      }
-    },
-    {
-      "file": "mapped/what-a-customer-carries-bag-open.jpg",
-      "kind": "game",
-      "alt": {
-        "en": "The same bag texture in its open form, with the two handle cut-outs drawn on the paper.",
-        "zh": "同一纸袋贴图的敞开形态，纸面上画有两个提手开口。"
-      }
-    },
-    {
-      "file": "mapped/what-a-customer-carries-emotes.png",
-      "kind": "game",
-      "alt": {
-        "en": "The sheet of customer emotes the game ships: twenty faces drawn as yellow circles, with a heart, an exclamation mark and a red angry face among them.",
-        "zh": "游戏自带的顾客表情图集：二十张黄色圆形表情，其中有心形、感叹号与红色愤怒脸。"
+        "en": "In-game picture from TCG Card Shop Simulator showing walls of cards on display, used to illustrate What a customer carries and how it moves.",
+        "zh": "《TCG Card Shop Simulator》游戏内画面：walls of cards on display，用于说明「What a customer carries and how it moves」。"
       }
     },
     {

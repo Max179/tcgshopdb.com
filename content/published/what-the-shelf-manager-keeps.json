@@ -46,19 +46,11 @@
   ],
   "images": [
     {
-      "file": "mapped/what-the-shelf-manager-keeps-shelves.jpg",
+      "file": "mapped/what-the-shelf-manager-keeps-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "The game's own colour texture for its shelves, a dark sheet of shelf panels, edges and brackets.",
-        "zh": "游戏给货架准备的颜色贴图：深色图集上排布着货架面板、边条与托架。"
-      }
-    },
-    {
-      "file": "mapped/what-the-shelf-manager-keeps-card-storage.jpg",
-      "kind": "game",
-      "alt": {
-        "en": "The game's own artwork for the card storage shelf, a tall unit of drawers with label plates.",
-        "zh": "游戏自带的卡牌收纳架美术：带标签牌的高抽屉柜。"
+        "en": "In-game picture of Big Personal Shelf from TCG Card Shop Simulator, used to illustrate What the shelf manager keeps.",
+        "zh": "《TCG Card Shop Simulator》游戏内Big Personal Shelf的画面，用于说明「What the shelf manager keeps」。"
       }
     }
   ],

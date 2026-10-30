@@ -64,11 +64,11 @@
   ],
   "images": [
     {
-      "file": "mapped/the-group-that-shows-a-card-rarity.jpg",
+      "file": "mapped/the-group-that-shows-a-card-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "One of the rarity icons the game prints on a card: two stacked orange card shapes with a flame pattern behind them.",
-        "zh": "游戏印在卡牌上的稀有度图标之一：两张叠放的橙色卡形，背后有火焰纹样。"
+        "en": "In-game picture of Forush from TCG Card Shop Simulator, used to illustrate The group that shows a card.",
+        "zh": "《TCG Card Shop Simulator》游戏内Forush的画面，用于说明「The group that shows a card」。"
       }
     },
     {

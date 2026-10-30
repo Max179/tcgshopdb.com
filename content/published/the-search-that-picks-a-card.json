@@ -50,11 +50,11 @@
   ],
   "images": [
     {
-      "file": "mapped/the-search-that-picks-a-card-front.jpg",
+      "file": "mapped/the-search-that-picks-a-card-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "The game's own card front icons, the small element marks printed on the cards a search shows.",
-        "zh": "游戏自带的卡面图标：搜索列表里那些卡牌上印的小属性标记。"
+        "en": "In-game picture of Flory from TCG Card Shop Simulator, used to illustrate The search that picks a card.",
+        "zh": "《TCG Card Shop Simulator》游戏内Flory的画面，用于说明「The search that picks a card」。"
       }
     }
   ],

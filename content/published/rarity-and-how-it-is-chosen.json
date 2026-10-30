@@ -48,11 +48,11 @@
   ],
   "images": [
     {
-      "file": "mapped/rarity-and-how-it-is-chosen-foil.jpg",
+      "file": "mapped/rarity-and-how-it-is-chosen-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "The game's own rainbow foil texture used on foil cards.",
-        "zh": "游戏自带的彩虹闪卡贴图。"
+        "en": "In-game picture of Clawcifear from TCG Card Shop Simulator, used to illustrate Rarity and how it is chosen.",
+        "zh": "《TCG Card Shop Simulator》游戏内Clawcifear的画面，用于说明「Rarity and how it is chosen」。"
       }
     },
     {

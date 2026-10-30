@@ -63,11 +63,11 @@
   ],
   "images": [
     {
-      "file": "mapped/the-setting-screens-for-your-fixtures-ceiling.jpg",
+      "file": "mapped/the-setting-screens-for-your-fixtures-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "One of the fixture icons the game ships for its setting screens: a light grey grid of square ceiling tiles.",
-        "zh": "游戏为设置界面提供的设施图标之一：浅灰色方格天花板的贴图。"
+        "en": "In-game picture from TCG Card Shop Simulator showing customers sitting at the card tables, used to illustrate The setting screens for your fixtures.",
+        "zh": "《TCG Card Shop Simulator》游戏内画面：customers sitting at the card tables，用于说明「The setting screens for your fixtures」。"
       }
     },
     {
@@ -78,14 +78,6 @@
         "zh": "示意图：走到设施前、打开其设置界面、修改适用于它的设定、确认。"
       },
       "disclaimer": "Original diagram drawn for this site. It is not a screenshot of the game."
-    },
-    {
-      "file": "mapped/the-setting-screens-for-your-fixtures-icons.jpg",
-      "kind": "game",
-      "alt": {
-        "en": "A sheet of the game's fixture icons: a checkout machine, a counter, a table with chairs, a bin and a vending machine, in blue and in green.",
-        "zh": "游戏自带的设施图标图集：收银机、柜台、桌椅、垃圾桶与自动售货机，各有蓝、绿两种配色。"
-      }
     }
   ],
   "sources": [

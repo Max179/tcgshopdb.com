@@ -47,19 +47,11 @@
   ],
   "images": [
     {
-      "file": "mapped/the-card-game-you-can-play-logo.jpg",
+      "file": "mapped/the-card-game-you-can-play-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "The game's own logo for the card game it ships: the name TETRAMON in gold letters over DUEL MASTER, with a blue bat-like crest above it.",
-        "zh": "游戏为自带卡牌对战设计的标志：金色 TETRAMON 字样压在 DUEL MASTER 之上，上方是蓝色蝙蝠状纹章。"
-      }
-    },
-    {
-      "file": "mapped/the-card-game-you-can-play-playtable.jpg",
-      "kind": "game",
-      "alt": {
-        "en": "The game's own play table marker used at the tables customers play on.",
-        "zh": "游戏自带的对局桌标记，顾客就在这些桌子上打牌。"
+        "en": "In-game picture of Crablox from TCG Card Shop Simulator, used to illustrate The card game you can play.",
+        "zh": "《TCG Card Shop Simulator》游戏内Crablox的画面，用于说明「The card game you can play」。"
       }
     },
     {

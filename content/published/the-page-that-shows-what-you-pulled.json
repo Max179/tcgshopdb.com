@@ -53,11 +53,11 @@
   ],
   "images": [
     {
-      "file": "mapped/the-page-that-shows-what-you-pulled-arrow.png",
+      "file": "mapped/the-page-that-shows-what-you-pulled-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "The arrow the game draws on its page buttons, a white triangle with a blue outline.",
-        "zh": "游戏画在翻页按钮上的箭头：白底蓝边的三角形。"
+        "en": "In-game picture of Aquariff from TCG Card Shop Simulator, used to illustrate The page that shows what you pulled.",
+        "zh": "《TCG Card Shop Simulator》游戏内Aquariff的画面，用于说明「The page that shows what you pulled」。"
       }
     },
     {

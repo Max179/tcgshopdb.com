@@ -65,35 +65,11 @@
   ],
   "images": [
     {
-      "file": "mapped/licences-and-shop-level-frame.png",
+      "file": "mapped/licences-and-shop-level-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "The shield-shaped frame the game draws around the shop level in its licence screens.",
-        "zh": "游戏在执照界面中用于店铺等级的外框（盾形）。"
-      }
-    },
-    {
-      "file": "mapped/licences-and-shop-level-up.png",
-      "kind": "game",
-      "alt": {
-        "en": "The orange up arrow the game uses when the shop gains a level.",
-        "zh": "游戏在店铺升级时使用的橙色上升箭头。"
-      }
-    },
-    {
-      "file": "mapped/licences-and-shop-level-pictogram-lock.png",
-      "kind": "game",
-      "alt": {
-        "en": "The lock pictogram the game draws over content that is not unlocked yet: a blue-grey padlock with a keyhole.",
-        "zh": "游戏为尚未解锁内容绘制的锁形图标：蓝灰色挂锁，带钥匙孔。"
-      }
-    },
-    {
-      "file": "mapped/licences-and-shop-level-button-lock.png",
-      "kind": "game",
-      "alt": {
-        "en": "The second lock the build ships for a locked button, a grey padlock of its own.",
-        "zh": "本作为锁定按钮提供的第二枚锁图标：另一款灰色挂锁。"
+        "en": "In-game picture of Card Display Table from TCG Card Shop Simulator, used to illustrate Licences, shop level and unlocks.",
+        "zh": "《TCG Card Shop Simulator》游戏内Card Display Table的画面，用于说明「Licences, shop level and unlocks」。"
       }
     },
     {
@@ -104,14 +80,6 @@
         "zh": "示意图：店铺升级、执照变得可买、支付解锁费用、新商品线出现。"
       },
       "disclaimer": "Original diagram drawn for this site. It is not a screenshot of the game."
-    },
-    {
-      "file": "mapped/licences-and-shop-level-store-point.jpg",
-      "kind": "game",
-      "alt": {
-        "en": "The store-point badge the game ships: a gold crown inside a shield with blue and orange laurels on purple.",
-        "zh": "游戏自带的店铺等级徽章：紫色底、金色王冠嵌在盾形中，两侧为蓝橙枝叶。"
-      }
     }
   ],
   "sources": [

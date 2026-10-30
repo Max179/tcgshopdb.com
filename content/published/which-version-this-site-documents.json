@@ -44,11 +44,11 @@
   ],
   "images": [
     {
-      "file": "mapped/which-version-this-site-documents-title.png",
+      "file": "mapped/which-version-this-site-documents-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "The game's own title art: TCG CARD SHOP in yellow over SIMULATOR on a red bar.",
-        "zh": "游戏自带标题美术：黄色 TCG CARD SHOP 与红色横条上的 SIMULATOR。"
+        "en": "In-game picture of Small Card Display from TCG Card Shop Simulator, used to illustrate Which version of the game this site documents.",
+        "zh": "《TCG Card Shop Simulator》游戏内Small Card Display的画面，用于说明「Which version of the game this site documents」。"
       }
     },
     {

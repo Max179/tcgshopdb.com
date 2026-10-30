@@ -39,11 +39,11 @@
   ],
   "images": [
     {
-      "file": "mapped/the-clothes-a-shopkeeper-wears-cloth.png",
+      "file": "mapped/the-clothes-a-shopkeeper-wears-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "The cloth sheet the game ships for its clothing: a woven grey fabric.",
-        "zh": "游戏为服装自带的布料贴图：灰色机织布。"
+        "en": "In-game picture from TCG Card Shop Simulator showing walls of cards on display, used to illustrate The clothes a shopkeeper can wear.",
+        "zh": "《TCG Card Shop Simulator》游戏内画面：walls of cards on display，用于说明「The clothes a shopkeeper can wear」。"
       }
     }
   ],

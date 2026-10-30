@@ -54,51 +54,11 @@
   ],
   "images": [
     {
-      "file": "mapped/the-picture-the-game-draws-for-a-control-plain-key.png",
+      "file": "mapped/the-picture-the-game-draws-for-a-control-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "The plain key picture the game ships, a blank key cap with no letter on it.",
-        "zh": "游戏自带的空白键帽图：没有印任何字母。"
-      }
-    },
-    {
-      "file": "mapped/the-picture-the-game-draws-for-a-control-mouse.png",
-      "kind": "game",
-      "alt": {
-        "en": "The game's own picture of a mouse with the left button marked, drawn to show a click.",
-        "zh": "游戏自带的鼠标示意图，左键被标出，用来表示一次点击。"
-      }
-    },
-    {
-      "file": "mapped/the-picture-the-game-draws-for-a-control-key.png",
-      "kind": "game",
-      "alt": {
-        "en": "One of the key pictures the game ships, a blank key cap used to show a binding.",
-        "zh": "游戏自带的按键图之一：一枚空白键帽，用来表示某个绑定。"
-      }
-    },
-    {
-      "file": "mapped/the-picture-the-game-draws-for-a-control-pad-button.png",
-      "kind": "game",
-      "alt": {
-        "en": "The picture the game draws for a pad's A button: a white circle with the letter on it.",
-        "zh": "游戏为手柄 A 键画的图：白色圆钮，上面印着字母 A。"
-      }
-    },
-    {
-      "file": "mapped/the-picture-the-game-draws-for-a-control-pad-trigger.png",
-      "kind": "game",
-      "alt": {
-        "en": "The picture the game draws for a pad's left trigger: a rounded shape lettered LT.",
-        "zh": "游戏为手柄左扳机画的图：圆角形状，上面写着 LT。"
-      }
-    },
-    {
-      "file": "mapped/the-picture-the-game-draws-for-a-control-pad-dpad.png",
-      "kind": "game",
-      "alt": {
-        "en": "The picture the game draws for a direction on the pad's d-pad.",
-        "zh": "游戏为手柄方向键的某个方向画的图。"
+        "en": "In-game picture from TCG Card Shop Simulator showing checkout, used to illustrate The picture the game draws for a control.",
+        "zh": "《TCG Card Shop Simulator》游戏内画面：checkout，用于说明「The picture the game draws for a control」。"
       }
     }
   ],

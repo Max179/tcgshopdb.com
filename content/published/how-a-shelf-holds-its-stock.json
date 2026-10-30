@@ -82,19 +82,11 @@
   ],
   "images": [
     {
-      "file": "mapped/how-a-shelf-holds-its-stock-empty.png",
+      "file": "mapped/how-a-shelf-holds-its-stock-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "The picture the game uses for an empty slot on a card shelf.",
-        "zh": "游戏用于卡架空位的图片。"
-      }
-    },
-    {
-      "file": "mapped/how-a-shelf-holds-its-stock-frozen.png",
-      "kind": "game",
-      "alt": {
-        "en": "The picture the game uses for a frozen slot on a card shelf.",
-        "zh": "游戏用于卡架“冻结”槽位的图片。"
+        "en": "In-game picture of Big Card Display from TCG Card Shop Simulator, used to illustrate How a shelf holds its stock.",
+        "zh": "《TCG Card Shop Simulator》游戏内Big Card Display的画面，用于说明「How a shelf holds its stock」。"
       }
     },
     {

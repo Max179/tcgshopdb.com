@@ -86,43 +86,11 @@
   ],
   "images": [
     {
-      "file": "mapped/albums-and-binder-pages-all-star.jpg",
+      "file": "mapped/albums-and-binder-pages-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "The all-star binder book the game ships: a printed cover with the TETRAMON logo and the word COLLECTOR over the characters.",
-        "zh": "游戏自带的全明星卡册封面：TETRAMON 标志、COLLECTOR 字样与一群角色。"
-      }
-    },
-    {
-      "file": "mapped/albums-and-binder-pages-book.jpg",
-      "kind": "game",
-      "alt": {
-        "en": "A second binder book picture the game ships, a surface sheet with the panel outlines of the cover.",
-        "zh": "游戏自带的第二张卡册图：封面外皮的面板轮廓图。"
-      }
-    },
-    {
-      "file": "mapped/albums-and-binder-pages-pocket-pages.jpg",
-      "kind": "game",
-      "alt": {
-        "en": "The game's own picture of its nine-pocket binder pages: a printed box front with a filled page and a card shown in a pocket.",
-        "zh": "游戏自带的九宫格活页图：印着包装盒面、装好的活页以及插在口袋里的卡。"
-      }
-    },
-    {
-      "file": "mapped/albums-and-binder-pages-second-page.jpg",
-      "kind": "game",
-      "alt": {
-        "en": "A second binder page picture the game ships: a green page of pockets with the ring holes along its edge.",
-        "zh": "游戏自带的另一张活页图：绿色口袋页，边缘带装订孔。"
-      }
-    },
-    {
-      "file": "mapped/albums-and-binder-pages-binder.jpg",
-      "kind": "game",
-      "alt": {
-        "en": "The albedo texture taken from the game of the binder pages cards are stored in.",
-        "zh": "取自游戏的卡册内页反照率贴图。"
+        "en": "In-game picture of Cards from TCG Card Shop Simulator, used to illustrate Albums and binder pages.",
+        "zh": "《TCG Card Shop Simulator》游戏内Cards的画面，用于说明「Albums and binder pages」。"
       }
     },
     {
@@ -133,30 +101,6 @@
         "zh": "卡册示意图：打开卡册、翻到活页、显示该页卡牌、退出查看模式。"
       },
       "disclaimer": "Original diagram drawn for this site. It is not a screenshot of the game."
-    },
-    {
-      "file": "mapped/albums-and-binder-pages-8up.jpg",
-      "kind": "game",
-      "alt": {
-        "en": "A black collectors' album the game ships, its pages visible behind the cover.",
-        "zh": "游戏自带的一本黑色收藏卡册，封面后方可见内页。"
-      }
-    },
-    {
-      "file": "mapped/albums-and-binder-pages-collection.jpg",
-      "kind": "game",
-      "alt": {
-        "en": "The collection icon the game itself draws: an open album with a red bookmark and grid panels.",
-        "zh": "游戏自带的收藏图标：一本摊开的卡册，夹着红色书签，页面为格状。"
-      }
-    },
-    {
-      "file": "mapped/albums-and-binder-pages-binder-book.jpg",
-      "kind": "game",
-      "alt": {
-        "en": "The binder book the game ships: a brown cover printed TETRAMON COLLECTOR above the page edges.",
-        "zh": "游戏自带的卡册本：棕色封面印有 TETRAMON COLLECTOR，下方露出内页边。"
-      }
     }
   ],
   "sources": [

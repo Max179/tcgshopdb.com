@@ -53,11 +53,11 @@
   ],
   "images": [
     {
-      "file": "mapped/the-upgrades-you-can-buy-levelup.jpg",
+      "file": "mapped/the-upgrades-you-can-buy-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "The level-up icon the game itself uses.",
-        "zh": "游戏本身使用的升级图标。"
+        "en": "In-game picture of Big Card Display from TCG Card Shop Simulator, used to illustrate The upgrades you can buy.",
+        "zh": "《TCG Card Shop Simulator》游戏内Big Card Display的画面，用于说明「The upgrades you can buy」。"
       }
     },
     {

@@ -55,11 +55,11 @@
   ],
   "images": [
     {
-      "file": "mapped/the-counter-and-money-coin.png",
+      "file": "mapped/the-counter-and-money-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "A texture taken from the game of the currency coin handled at the counter.",
-        "zh": "取自游戏柜台使用的货币硬币贴图。"
+        "en": "In-game picture of Huge Personal Shelf from TCG Card Shop Simulator, used to illustrate The counter and money handling.",
+        "zh": "《TCG Card Shop Simulator》游戏内Huge Personal Shelf的画面，用于说明「The counter and money handling」。"
       }
     },
     {
@@ -70,14 +70,6 @@
         "zh": "柜台示意图：顾客到柜台、金钱往来、收银台按设置运行、继续营业。"
       },
       "disclaimer": "Original diagram drawn for this site. It is not a screenshot of the game."
-    },
-    {
-      "file": "mapped/the-counter-and-money-closed-sign.jpg",
-      "kind": "game",
-      "alt": {
-        "en": "The counter sign the game ships: COUNTER CLOSED and NO CARD TRADING OR SELLING HERE printed on white.",
-        "zh": "游戏自带的柜台告示：白底黑字写着 COUNTER CLOSED 与 NO CARD TRADING OR SELLING HERE。"
-      }
     }
   ],
   "sources": [

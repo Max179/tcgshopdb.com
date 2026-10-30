@@ -40,11 +40,11 @@
   ],
   "images": [
     {
-      "file": "mapped/the-camera-and-the-photo-gallery-camera.jpg",
+      "file": "mapped/the-camera-and-the-photo-gallery-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "The camera icon the game itself draws for this feature: a cream camera body with a rainbow lens ring and a red shutter button.",
-        "zh": "游戏自己画的相机图标：米白机身上的彩虹镜环与红色快门点。"
+        "en": "In-game picture from TCG Card Shop Simulator showing the product list screen, used to illustrate The camera and the photo gallery.",
+        "zh": "《TCG Card Shop Simulator》游戏内画面：the product list screen，用于说明「The camera and the photo gallery」。"
       }
     },
     {

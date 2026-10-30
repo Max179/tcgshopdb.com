@@ -55,11 +55,11 @@
   ],
   "images": [
     {
-      "file": "mapped/the-screens-you-buy-from-checkout.jpg",
+      "file": "mapped/the-screens-you-buy-from-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "The checkout icon the game itself uses: a pale shopping trolley with two wheels, drawn for the screens the shop is bought from.",
-        "zh": "游戏自带的结账图标：一辆带两个轮子的浅色购物车，用于购买店铺内容的界面。"
+        "en": "In-game picture of File:File:Site-background-light from TCG Card Shop Simulator, used to illustrate The screens you buy from.",
+        "zh": "《TCG Card Shop Simulator》游戏内File:File:Site-background-light的画面，用于说明「The screens you buy from」。"
       }
     },
     {

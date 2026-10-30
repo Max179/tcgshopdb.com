@@ -11,7 +11,6 @@
     "Controls are rebindable, and changing a binding is a state the game tracks: there are settings for a key, a linker for gamepad settings, and flags for when a binding may be updated and when the game is mid-change. The key picture beside this entry is the game's own, shown here as the space bar.",
     "Language is a setting of its own, and the game ships the language assets it needs rather than fetching them at run time.",
     "The interface is adjusted to the display as well: there is a scaler for screen ratio and an offset for aspect ratio, which is how the layout keeps its proportions on a different monitor. The scaler itself holds the transform it works on, a smallest and a largest scale and a setting for whether it applies only the largest, and it carries two values for the larger scaling a Steam Deck uses.",
-
     "The offset that goes with it is bounded. The aspect ratio offset carries the amount it moves by, a smallest and a largest limit for that movement and a flag for whether it offsets all the time, which is how the layout can shift without drifting off the screen.",
     "Controller vibration has its own data, so how a pad shakes is configured in the same place as the rest.",
     "A pad setting is wired to its own controls. The row keeps a link to its toggle, its dropdown and the icon for the thumbstick slider it is using, which is why changing a pad option updates the screen and not only the value.",
@@ -89,19 +88,11 @@
   ],
   "images": [
     {
-      "file": "mapped/the-settings-you-can-change-icon.png",
+      "file": "mapped/the-settings-you-can-change-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "The gear icon the game itself uses for its settings.",
-        "zh": "游戏自带设置图标（齿轮）。"
-      }
-    },
-    {
-      "file": "mapped/the-settings-you-can-change-key.png",
-      "kind": "game",
-      "alt": {
-        "en": "One of the key pictures the game uses when it shows a control binding: the space bar.",
-        "zh": "游戏在显示按键绑定时使用的按键图片之一：空格键。"
+        "en": "In-game picture from TCG Card Shop Simulator showing the product list screen, used to illustrate The settings you can change.",
+        "zh": "《TCG Card Shop Simulator》游戏内画面：the product list screen，用于说明「The settings you can change」。"
       }
     },
     {

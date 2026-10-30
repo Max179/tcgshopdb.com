@@ -70,19 +70,11 @@
   ],
   "images": [
     {
-      "file": "mapped/why-every-customer-looks-different-female.jpg",
+      "file": "mapped/why-every-customer-looks-different-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "One of the game's own customer portraits, a female shopper with long brown hair and a green top.",
-        "zh": "游戏自带的顾客头像之一：一位棕色长发、绿衣的女顾客。"
-      }
-    },
-    {
-      "file": "mapped/why-every-customer-looks-different-male.jpg",
-      "kind": "game",
-      "alt": {
-        "en": "A second of the game's customer portraits, a bearded male shopper with glasses and a grey top.",
-        "zh": "游戏自带的另一位顾客头像：留着胡子、戴眼镜、灰衣的男顾客。"
+        "en": "In-game picture from TCG Card Shop Simulator showing the shopkeeper holding money at the counter, used to illustrate Why every customer looks different.",
+        "zh": "《TCG Card Shop Simulator》游戏内画面：the shopkeeper holding money at the counter，用于说明「Why every customer looks different」。"
       }
     }
   ],

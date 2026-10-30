@@ -48,11 +48,11 @@
   ],
   "images": [
     {
-      "file": "mapped/prize-shelves-and-specials-shelf.jpg",
+      "file": "mapped/prize-shelves-and-specials-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "The game's own artwork for the shelf dedicated to tournament prizes.",
-        "zh": "游戏自带的锦标赛奖品专用货架图案。"
+        "en": "In-game picture of Big Personal Shelf from TCG Card Shop Simulator, used to illustrate Prize shelves and special displays.",
+        "zh": "《TCG Card Shop Simulator》游戏内Big Personal Shelf的画面，用于说明「Prize shelves and special displays」。"
       }
     },
     {

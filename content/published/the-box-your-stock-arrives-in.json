@@ -73,19 +73,11 @@
   ],
   "images": [
     {
-      "file": "mapped/the-box-your-stock-arrives-in-packaging.jpg",
+      "file": "mapped/the-box-your-stock-arrives-in-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "A packaging box texture the game ships for the boxes stock arrives in, with its labels and handling marks.",
-        "zh": "游戏为到货纸箱提供的包装贴图，可见标签与搬运标记。"
-      }
-    },
-    {
-      "file": "mapped/the-box-your-stock-arrives-in-cardboard.jpg",
-      "kind": "game",
-      "alt": {
-        "en": "One of the smaller cardboard box textures the game ships, again with its shipping label and marks.",
-        "zh": "游戏提供的较小纸箱贴图之一，同样带有物流标签与标记。"
+        "en": "In-game picture of Double Sided Shelf from TCG Card Shop Simulator, used to illustrate The box your stock arrives in.",
+        "zh": "《TCG Card Shop Simulator》游戏内Double Sided Shelf的画面，用于说明「The box your stock arrives in」。"
       }
     },
     {

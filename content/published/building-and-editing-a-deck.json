@@ -70,11 +70,11 @@
   ],
   "images": [
     {
-      "file": "mapped/building-and-editing-a-deck-playmat.jpg",
+      "file": "mapped/building-and-editing-a-deck-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "The icon the game itself shows for an empty play mat.",
-        "zh": "游戏本身为空白对战垫显示的图标。"
+        "en": "In-game picture of Amneshark from TCG Card Shop Simulator, used to illustrate Building and editing a deck.",
+        "zh": "《TCG Card Shop Simulator》游戏内Amneshark的画面，用于说明「Building and editing a deck」。"
       }
     },
     {
@@ -85,46 +85,6 @@
         "zh": "示意图：打开卡组编辑器、检索卡池、加入卡牌、卡组以摘要呈现。"
       },
       "disclaimer": "Original diagram drawn for this site. It is not a screenshot of the game."
-    },
-    {
-      "file": "mapped/building-and-editing-a-deck-precon-water.jpg",
-      "kind": "game",
-      "alt": {
-        "en": "The box art of the game's own preconstructed water battle deck, headed Tetra Elemental Battle Deck with a legend card on it.",
-        "zh": "游戏自带水属性预组对战套牌的盒面：标题为 Tetra Elemental Battle Deck，盒面印着一张传说卡。"
-      }
-    },
-    {
-      "file": "mapped/building-and-editing-a-deck-precon-water-destiny.jpg",
-      "kind": "game",
-      "alt": {
-        "en": "The water deck's Destiny box art, headed Tetra Destiny Battle Deck.",
-        "zh": "水属性套牌的 Destiny 版盒面：标题为 Tetra Destiny Battle Deck。"
-      }
-    },
-    {
-      "file": "mapped/building-and-editing-a-deck-precon-fire.jpg",
-      "kind": "game",
-      "alt": {
-        "en": "The box art of the game's own preconstructed fire battle deck, showing a legend card and the deck's name.",
-        "zh": "游戏自带火属性预组对战套牌的盒面：一张传说卡与套牌名称。"
-      }
-    },
-    {
-      "file": "mapped/building-and-editing-a-deck-precon-earth.jpg",
-      "kind": "game",
-      "alt": {
-        "en": "The box art of the game's own preconstructed earth battle deck.",
-        "zh": "游戏自带土属性预组对战套牌的盒面。"
-      }
-    },
-    {
-      "file": "mapped/building-and-editing-a-deck-precon-wind.jpg",
-      "kind": "game",
-      "alt": {
-        "en": "The box art of the game's own preconstructed wind battle deck, with a legendary card printed on the front.",
-        "zh": "游戏自带风属性预组对战套牌的盒面，正面印着一张传说卡。"
-      }
     }
   ],
   "sources": [

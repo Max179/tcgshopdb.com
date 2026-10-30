@@ -56,11 +56,11 @@
   ],
   "images": [
     {
-      "file": "mapped/how-tournament-standings-are-decided-trophy.jpg",
+      "file": "mapped/how-tournament-standings-are-decided-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "The trophy image the game itself uses for its tournaments.",
-        "zh": "游戏本身用于锦标赛的奖杯图案。"
+        "en": "In-game picture from TCG Card Shop Simulator showing a pull of cards with the card value screen, used to illustrate How tournament standings are decided.",
+        "zh": "《TCG Card Shop Simulator》游戏内画面：a pull of cards with the card value screen，用于说明「How tournament standings are decided」。"
       }
     },
     {

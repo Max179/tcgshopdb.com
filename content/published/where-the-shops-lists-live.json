@@ -58,19 +58,11 @@
   ],
   "images": [
     {
-      "file": "mapped/where-the-shops-lists-live-checklist.png",
+      "file": "mapped/where-the-shops-lists-live-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "The checklist icon the game draws for its lists: a clipboard with two ticked rows and one empty.",
-        "zh": "游戏为清单绘制的图标：夹纸板上两行已勾选、一行未勾选。"
-      }
-    },
-    {
-      "file": "mapped/where-the-shops-lists-live-figurines.png",
-      "kind": "game",
-      "alt": {
-        "en": "One of the shelf-icon sheets the game ships: figurines of bat-like creatures and a hammer, each standing on its own round base.",
-        "zh": "游戏自带的货架图标图集之一：蝙蝠状小怪与一把锤子的摆件，各自立在自己的圆底座上。"
+        "en": "In-game picture of Big Card Display from TCG Card Shop Simulator, used to illustrate Where the shop's lists live.",
+        "zh": "《TCG Card Shop Simulator》游戏内Big Card Display的画面，用于说明「Where the shop's lists live」。"
       }
     },
     {

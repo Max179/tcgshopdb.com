@@ -47,75 +47,11 @@
   ],
   "images": [
     {
-      "file": "mapped/posters-and-wall-displays-poster.jpg",
+      "file": "mapped/posters-and-wall-displays-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "One of the poster images the game ships for wall decoration.",
-        "zh": "游戏为墙面装饰提供的海报图案之一。"
-      }
-    },
-    {
-      "file": "mapped/posters-and-wall-displays-poster-b.jpg",
-      "kind": "game",
-      "alt": {
-        "en": "A second poster from the game's own set: a dark armoured horned creature standing in a stadium.",
-        "zh": "游戏自带海报集中的第二张：一只深色披甲、头生双角的怪物站在体育场中。"
-      }
-    },
-    {
-      "file": "mapped/posters-and-wall-displays-poster-c.jpg",
-      "kind": "game",
-      "alt": {
-        "en": "A third poster from the game's own set: a green and red plant-like creature standing in a field.",
-        "zh": "游戏自带海报集中的第三张：一只红绿相间的植物状怪物站在田野中。"
-      }
-    },
-    {
-      "file": "mapped/posters-and-wall-displays-poster-d.png",
-      "kind": "game",
-      "alt": {
-        "en": "A fourth poster from the game's own set: a grinning red pig-like creature leaping over a green field, signed Cheka Art.",
-        "zh": "游戏自带海报集中的第四张：一只咧嘴笑的红色猪状生物跃过绿色原野，署名 Cheka Art。"
-      }
-    },
-    {
-      "file": "mapped/posters-and-wall-displays-poster-e.png",
-      "kind": "game",
-      "alt": {
-        "en": "A fifth poster from the set: a fiery monster drawn as flat red, orange and blue shapes on black, with the card game's name in the corner.",
-        "zh": "游戏自带海报集中的第五张：黑底上以红橙蓝平涂色块画出的火焰怪物，角落印着这款卡牌游戏的名字。"
-      }
-    },
-    {
-      "file": "mapped/posters-and-wall-displays-poster-f.png",
-      "kind": "game",
-      "alt": {
-        "en": "A sixth poster from the game's set: a round white creature with pink and blue wings drawn in outline on white.",
-        "zh": "游戏自带海报集中的第六张：白底描线的圆形白色小怪，长着粉蓝翅膀。"
-      }
-    },
-    {
-      "file": "mapped/posters-and-wall-displays-poster-g.png",
-      "kind": "game",
-      "alt": {
-        "en": "A seventh poster from the game's set: a booster box of the card game shown on sale, with a pack propped against it and the words On Sale in the corner.",
-        "zh": "游戏自带海报集中的第七张：正在促销的卡牌游戏整盒装，旁边靠着补充包，角落写着 On Sale。"
-      }
-    },
-    {
-      "file": "mapped/posters-and-wall-displays-poster-h.png",
-      "kind": "game",
-      "alt": {
-        "en": "An eighth poster from the game's set: a second booster box shown on sale, with a different set's pack propped against it.",
-        "zh": "游戏自带海报集中的第八张：又一盒促销中的整盒装，旁边靠着另一系列的补充包。"
-      }
-    },
-    {
-      "file": "mapped/posters-and-wall-displays-poster-i.png",
-      "kind": "game",
-      "alt": {
-        "en": "A ninth poster from the game's set: a fox-like creature drawn in flat orange, red and blue shapes on a pale ground.",
-        "zh": "游戏自带海报集中的第九张：浅色底上以橙红蓝平涂色块画出的狐形生物。"
+        "en": "In-game picture of Auto Scent G500 from TCG Card Shop Simulator, used to illustrate Posters and wall displays.",
+        "zh": "《TCG Card Shop Simulator》游戏内Auto Scent G500的画面，用于说明「Posters and wall displays」。"
       }
     },
     {

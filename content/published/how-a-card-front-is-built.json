@@ -68,19 +68,11 @@
   ],
   "images": [
     {
-      "file": "mapped/how-a-card-front-is-built-air.jpg",
+      "file": "mapped/how-a-card-front-is-built-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "The card front the game ships for one of its elements.",
-        "zh": "游戏为某一元素提供的卡面图。"
-      }
-    },
-    {
-      "file": "mapped/how-a-card-front-is-built-card-back.png",
-      "kind": "game",
-      "alt": {
-        "en": "The card back the game draws, with the card game's own name and emblem across it.",
-        "zh": "游戏绘制的卡背：印着这款卡牌游戏自己的名称与徽记。"
+        "en": "In-game picture of Bonfiox from TCG Card Shop Simulator, used to illustrate How a card front is built.",
+        "zh": "《TCG Card Shop Simulator》游戏内Bonfiox的画面，用于说明「How a card front is built」。"
       }
     },
     {

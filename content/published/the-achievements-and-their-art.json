@@ -35,19 +35,11 @@
   ],
   "images": [
     {
-      "file": "mapped/the-achievements-and-their-art-icon.png",
+      "file": "mapped/the-achievements-and-their-art-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "The icon art for one numbered achievement: a bird-like warrior in purple and black with a glowing lance, cut out against a plain ground.",
-        "zh": "其中一个编号成就的图标：紫黑色鸟形战士，长枪发光，抠像在透明底上。"
-      }
-    },
-    {
-      "file": "mapped/the-achievements-and-their-art-background.png",
-      "kind": "game",
-      "alt": {
-        "en": "The background for the same achievement: the same warrior over a bright sky with sun and clouds.",
-        "zh": "同一成就的背景图：同一位战士，背后是带太阳与云层的明亮天空。"
+        "en": "In-game picture from TCG Card Shop Simulator showing an empty shop floor with shelves, used to illustrate The achievements and the art they come with.",
+        "zh": "《TCG Card Shop Simulator》游戏内画面：an empty shop floor with shelves，用于说明「The achievements and the art they come with」。"
       }
     }
   ],

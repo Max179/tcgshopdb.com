@@ -42,11 +42,11 @@
   ],
   "images": [
     {
-      "file": "mapped/what-the-till-shows-you-card.jpg",
+      "file": "mapped/what-the-till-shows-you-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "The card the game draws on its card payment screen.",
-        "zh": "游戏在刷卡付款界面上绘制的银行卡。"
+        "en": "In-game picture of Card Table from TCG Card Shop Simulator, used to illustrate What the till shows you.",
+        "zh": "《TCG Card Shop Simulator》游戏内Card Table的画面，用于说明「What the till shows you」。"
       }
     },
     {

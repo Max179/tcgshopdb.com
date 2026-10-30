@@ -62,11 +62,11 @@
   ],
   "images": [
     {
-      "file": "mapped/the-pack-and-how-it-opens-packs.jpg",
+      "file": "mapped/the-pack-and-how-it-opens-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "The game's own sheet of pack wrappers, one per set, which is the wrapper the opening sequence turns to its front.",
-        "zh": "游戏自带的卡包包装图，每个系列一款；开包动画翻到正面的就是它。"
+        "en": "In-game picture of Clamigo from TCG Card Shop Simulator, used to illustrate The pack and how it opens.",
+        "zh": "《TCG Card Shop Simulator》游戏内Clamigo的画面，用于说明「The pack and how it opens」。"
       }
     },
     {
@@ -77,14 +77,6 @@
         "zh": "示意图：包装网格滑入、动画将其转到正面、特效与图标播放、卡牌在各个位置展示。"
       },
       "disclaimer": "Original diagram drawn for this site. It is not a screenshot of the game."
-    },
-    {
-      "file": "mapped/the-pack-and-how-it-opens-wrapper.jpg",
-      "kind": "game",
-      "alt": {
-        "en": "A booster pack wrapper the game ships: a TETRAMON trading card game pack printed seven additional game cards.",
-        "zh": "游戏自带的补充包包装：印有 TETRAMON 集换式卡牌与「7 Additional Game Cards」。"
-      }
     }
   ],
   "sources": [

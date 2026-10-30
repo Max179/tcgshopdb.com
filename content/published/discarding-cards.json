@@ -59,11 +59,11 @@
   ],
   "images": [
     {
-      "file": "mapped/discarding-cards-bin.png",
+      "file": "mapped/discarding-cards-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "The game's own picture of the bin cards are thrown away in.",
-        "zh": "游戏自带的垃圾桶图片，用于丢弃卡牌。"
+        "en": "In-game picture of File:File:Angez.png from TCG Card Shop Simulator, used to illustrate Discarding cards, at the table and in the shop.",
+        "zh": "《TCG Card Shop Simulator》游戏内File:File:Angez.png的画面，用于说明「Discarding cards, at the table and in the shop」。"
       }
     },
     {

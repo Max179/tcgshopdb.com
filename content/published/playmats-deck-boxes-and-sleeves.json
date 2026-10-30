@@ -106,59 +106,11 @@
   ],
   "images": [
     {
-      "file": "mapped/playmats-deck-boxes-and-sleeves-dice.jpg",
+      "file": "mapped/playmats-deck-boxes-and-sleeves-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "The dice icon the game itself draws for the play table: a pale blue die with black pips inside a black-outlined square.",
-        "zh": "游戏为对战桌绘制的骰子图标：浅蓝色骰子配黑色点数，外有黑色描边方框。"
-      }
-    },
-    {
-      "file": "mapped/playmats-deck-boxes-and-sleeves-sleeve.jpg",
-      "kind": "game",
-      "alt": {
-        "en": "The sleeve artwork the game ships for its second plain design, a green patterned sheet with two sleeve fronts.",
-        "zh": "游戏为第二种素色牌套提供的图：绿色花纹图面，含两张牌套正面。"
-      }
-    },
-    {
-      "file": "mapped/playmats-deck-boxes-and-sleeves-dice-box.jpg",
-      "kind": "game",
-      "alt": {
-        "en": "The dice box texture the game ships, carrying panels and strips of dice numbers.",
-        "zh": "游戏自带的骰子盒贴图：面板与成排骰子点数。"
-      }
-    },
-    {
-      "file": "mapped/playmats-deck-boxes-and-sleeves-deck-box.jpg",
-      "kind": "game",
-      "alt": {
-        "en": "The colour texture the game ships for one of its deck boxes, carrying the game's own branding.",
-        "zh": "游戏为其中一款卡盒提供的颜色贴图，带有游戏自身的品牌字样。"
-      }
-    },
-    {
-      "file": "mapped/playmats-deck-boxes-and-sleeves-playmat.png",
-      "kind": "game",
-      "alt": {
-        "en": "The picture the game uses for an empty playmat slot at the play table.",
-        "zh": "游戏用于对战桌上空置牌垫位置的图片。"
-      }
-    },
-    {
-      "file": "mapped/playmats-deck-boxes-and-sleeves-empty-deck-box.png",
-      "kind": "game",
-      "alt": {
-        "en": "The icon the game draws for an empty deck box, a plain grey box seen from the front corner.",
-        "zh": "游戏为空卡盒绘制的图标：一个从前方一角看到的素灰色盒子。"
-      }
-    },
-    {
-      "file": "mapped/playmats-deck-boxes-and-sleeves-card-preserver.png",
-      "kind": "game",
-      "alt": {
-        "en": "The card preserver the build ships: a blister pack holding clear rigid card holders, with a 25-pack mark and a red burst on the card.",
-        "zh": "本作自带的卡牌保护盒：泡壳包装内是透明硬质卡套，包装上印着 25 pack 与红色星形标。"
+        "en": "In-game picture of Clawaken from TCG Card Shop Simulator, used to illustrate Playmats, deck boxes and sleeves.",
+        "zh": "《TCG Card Shop Simulator》游戏内Clawaken的画面，用于说明「Playmats, deck boxes and sleeves」。"
       }
     },
     {
@@ -169,30 +121,6 @@
         "zh": "示意图：桌面由一组物件构成；牌垫是台面、卡盒装牌、卡套包住卡牌。"
       },
       "disclaimer": "Original diagram drawn for this site. It is not a screenshot of the game."
-    },
-    {
-      "file": "mapped/playmats-deck-boxes-and-sleeves-dice-yellow.jpg",
-      "kind": "game",
-      "alt": {
-        "en": "A second dice icon the game ships for the play table: a yellow die with dark pips.",
-        "zh": "游戏为牌桌提供的第二个骰子图标：黄色骰面配深色点数。"
-      }
-    },
-    {
-      "file": "mapped/playmats-deck-boxes-and-sleeves-tower-deck-box.jpg",
-      "kind": "game",
-      "alt": {
-        "en": "The game's own tower deck box texture: purple panels printed SATIN TOWER DECK BOX.",
-        "zh": "游戏自带的高塔牌盒贴图：紫色面板上印有 SATIN TOWER DECK BOX。"
-      }
-    },
-    {
-      "file": "mapped/playmats-deck-boxes-and-sleeves-deck-box-2.jpg",
-      "kind": "game",
-      "alt": {
-        "en": "A second deck box texture the game ships: green, printed DECKBOX under the card game brand.",
-        "zh": "游戏自带的第二个牌盒贴图：绿色底，印有 DECKBOX 与卡牌对战标志。"
-      }
     }
   ],
   "sources": [

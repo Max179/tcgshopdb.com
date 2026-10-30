@@ -46,11 +46,11 @@
   ],
   "images": [
     {
-      "file": "mapped/reading-the-price-board-price-tag-atlas.jpg",
+      "file": "mapped/reading-the-price-board-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "The game's own tag sheet: the numerals, separators and currency signs a price tag is written with, beside a grid of item pictures.",
-        "zh": "游戏自带的价签图集：写价签用的数字、分隔符与货币符号，旁边是成排的商品小图。"
+        "en": "In-game picture from TCG Card Shop Simulator showing a pull of cards with the card value screen, used to illustrate Reading the price board.",
+        "zh": "《TCG Card Shop Simulator》游戏内画面：a pull of cards with the card value screen，用于说明「Reading the price board」。"
       }
     },
     {

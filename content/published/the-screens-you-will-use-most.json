@@ -47,11 +47,11 @@
   ],
   "images": [
     {
-      "file": "mapped/the-screens-you-will-use-most-shopicon.jpg",
+      "file": "mapped/the-screens-you-will-use-most-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "The icon the game itself uses for the shop screen.",
-        "zh": "游戏本身用于商店界面的图标。"
+        "en": "In-game picture from TCG Card Shop Simulator showing the shop floor with card display cases, used to illustrate The screens you will use most.",
+        "zh": "《TCG Card Shop Simulator》游戏内画面：the shop floor with card display cases，用于说明「The screens you will use most」。"
       }
     },
     {

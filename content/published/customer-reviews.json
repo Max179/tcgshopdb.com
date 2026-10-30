@@ -39,11 +39,11 @@
   ],
   "images": [
     {
-      "file": "mapped/customer-reviews-star.jpg",
+      "file": "mapped/customer-reviews-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "The star the game itself uses in its rating displays.",
-        "zh": "游戏本身在评分显示中使用的星形图案。"
+        "en": "In-game picture from TCG Card Shop Simulator showing customers sitting at the card tables, used to illustrate Customer reviews and how a day is judged.",
+        "zh": "《TCG Card Shop Simulator》游戏内画面：customers sitting at the card tables，用于说明「Customer reviews and how a day is judged」。"
       }
     },
     {

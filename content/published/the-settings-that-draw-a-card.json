@@ -81,83 +81,11 @@
   ],
   "images": [
     {
-      "file": "mapped/the-settings-that-draw-a-card-colour.jpg",
+      "file": "mapped/the-settings-that-draw-a-card-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "One of the colour card icons the game ships: a stack of blue card shapes with dark outlines.",
-        "zh": "游戏自带的彩色卡牌图标之一：一叠带深色描边的蓝色卡形。"
-      }
-    },
-    {
-      "file": "mapped/the-settings-that-draw-a-card-colour-red.jpg",
-      "kind": "game",
-      "alt": {
-        "en": "A second colour card icon from the same set: a stack of red and orange card shapes with dark outlines.",
-        "zh": "同一套彩色卡牌图标中的第二张：一叠带深色描边的红橙色卡形。"
-      }
-    },
-    {
-      "file": "mapped/the-settings-that-draw-a-card-colour-green.jpg",
-      "kind": "game",
-      "alt": {
-        "en": "A third colour card icon from the same set: a stack of green card shapes with dark outlines.",
-        "zh": "同一套彩色卡牌图标中的第三张：一叠带深色描边的绿色卡形。"
-      }
-    },
-    {
-      "file": "mapped/the-settings-that-draw-a-card-colour-yellow.jpg",
-      "kind": "game",
-      "alt": {
-        "en": "A fourth colour card icon from the same set: a stack of yellow and orange card shapes with dark outlines.",
-        "zh": "同一套彩色卡牌图标中的第四张：一叠带深色描边的黄橙色卡形。"
-      }
-    },
-    {
-      "file": "mapped/the-settings-that-draw-a-card-air.jpg",
-      "kind": "game",
-      "alt": {
-        "en": "The air card background the game ships: orange streaks of wind over a warm field.",
-        "zh": "游戏自带的风属性卡面底图：暖色底上橙色的风纹。"
-      }
-    },
-    {
-      "file": "mapped/the-settings-that-draw-a-card-destiny.jpg",
-      "kind": "game",
-      "alt": {
-        "en": "The card background the game ships for its Destiny set: a star burst over violet and green.",
-        "zh": "游戏为 Destiny 系列准备的卡面底图：紫绿底色上的星爆。"
-      }
-    },
-    {
-      "file": "mapped/the-settings-that-draw-a-card-water.jpg",
-      "kind": "game",
-      "alt": {
-        "en": "The water card background the game ships: pale blue caustics on a blue field.",
-        "zh": "游戏自带的水属性卡面底图：蓝色底上带浅蓝色的水波纹理。"
-      }
-    },
-    {
-      "file": "mapped/the-settings-that-draw-a-card-earth.jpg",
-      "kind": "game",
-      "alt": {
-        "en": "The earth card background: green grass tufts on a green field.",
-        "zh": "游戏自带的地属性卡面底图：绿色底上布满草叶纹理。"
-      }
-    },
-    {
-      "file": "mapped/the-settings-that-draw-a-card-border.jpg",
-      "kind": "game",
-      "alt": {
-        "en": "One of the border pictures the game ships for its cards.",
-        "zh": "游戏为卡牌提供的边框图案之一。"
-      }
-    },
-    {
-      "file": "mapped/the-settings-that-draw-a-card-background.jpg",
-      "kind": "game",
-      "alt": {
-        "en": "One of the card backgrounds the game ships, drawn with flames.",
-        "zh": "游戏提供的卡牌背景之一，绘有火焰图案。"
+        "en": "In-game picture of Drilceros from TCG Card Shop Simulator, used to illustrate The settings that draw a card.",
+        "zh": "《TCG Card Shop Simulator》游戏内Drilceros的画面，用于说明「The settings that draw a card」。"
       }
     },
     {

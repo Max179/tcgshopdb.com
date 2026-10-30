@@ -48,11 +48,11 @@
   ],
   "images": [
     {
-      "file": "mapped/the-services-the-game-offers-shopicon.jpg",
+      "file": "mapped/the-services-the-game-offers-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "The icon the game itself uses for its shop screen.",
-        "zh": "游戏本身用于其商店界面的图标。"
+        "en": "In-game picture of File:File:Tcg ghost card examples.jpg from TCG Card Shop Simulator, used to illustrate The services the game offers.",
+        "zh": "《TCG Card Shop Simulator》游戏内File:File:Tcg ghost card examples.jpg的画面，用于说明「The services the game offers」。"
       }
     },
     {

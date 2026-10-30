@@ -44,11 +44,11 @@
   ],
   "images": [
     {
-      "file": "mapped/opening-a-pack-on-screen-cardback.jpg",
+      "file": "mapped/opening-a-pack-on-screen-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "The texture taken from the game of a card back, what a card shows before it is revealed.",
-        "zh": "取自游戏的卡背贴图，即卡牌揭开前所显示的一面。"
+        "en": "In-game picture of Dracunix from TCG Card Shop Simulator, used to illustrate What you see when a pack is opened.",
+        "zh": "《TCG Card Shop Simulator》游戏内Dracunix的画面，用于说明「What you see when a pack is opened」。"
       }
     },
     {

@@ -104,35 +104,11 @@
   ],
   "images": [
     {
-      "file": "mapped/expanding-and-decorating-the-shop-furniture.jpg",
+      "file": "mapped/expanding-and-decorating-the-shop-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "The albedo texture taken from the game of the furniture the shop can be furnished with.",
-        "zh": "取自游戏的家具反照率贴图，店铺可以用它布置。"
-      }
-    },
-    {
-      "file": "mapped/expanding-and-decorating-the-shop-open-closed-sign.png",
-      "kind": "game",
-      "alt": {
-        "en": "The sheet the game's open and closed signs are cut from: a green Yes, We're Open board above a red Sorry! We're Closed one.",
-        "zh": "游戏开/关门牌的图源：上方绿色 Yes, We're Open，下方红色 Sorry! We're Closed。"
-      }
-    },
-    {
-      "file": "mapped/expanding-and-decorating-the-shop-no-entry-sign.png",
-      "kind": "game",
-      "alt": {
-        "en": "The sheet the entrance signs are cut from: a red Use Main Entrance, No Entry board beside a green Welcome, Please Enter one.",
-        "zh": "入口标牌的图源：红色 Use Main Entrance / No Entry 与绿色 Welcome / Please Enter 并排。"
-      }
-    },
-    {
-      "file": "mapped/expanding-and-decorating-the-shop-arrow-signs.png",
-      "kind": "game",
-      "alt": {
-        "en": "The arrow-sign atlas: exit and enter boards in black on white and white on black, a running-figure exit sign, and plain arrows in several colours.",
-        "zh": "箭头标牌图集：黑白两色的 EXIT 与 ENTER 牌、带奔跑小人的出口牌，以及多种颜色的箭头。"
+        "en": "In-game picture of File:File:Site-background-dark from TCG Card Shop Simulator, used to illustrate Expanding and decorating the shop.",
+        "zh": "《TCG Card Shop Simulator》游戏内File:File:Site-background-dark的画面，用于说明「Expanding and decorating the shop」。"
       }
     },
     {

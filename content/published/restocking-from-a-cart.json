@@ -59,11 +59,11 @@
   ],
   "images": [
     {
-      "file": "mapped/restocking-from-a-cart-box.jpg",
+      "file": "mapped/restocking-from-a-cart-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "The albedo texture taken from the game of one of the cardboard boxes it ships for stock.",
-        "zh": "取自游戏的库存纸箱反照率贴图之一。"
+        "en": "In-game picture of Checkout Counter from TCG Card Shop Simulator, used to illustrate Restocking from a cart.",
+        "zh": "《TCG Card Shop Simulator》游戏内Checkout Counter的画面，用于说明「Restocking from a cart」。"
       }
     },
     {

@@ -43,11 +43,11 @@
   ],
   "images": [
     {
-      "file": "mapped/shelves-stock-and-upgrades-shelf.jpg",
+      "file": "mapped/shelves-stock-and-upgrades-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "The texture taken from the game of one of the shelf types the shop can be fitted with.",
-        "zh": "取自游戏的货架类型贴图之一。"
+        "en": "In-game picture of Big Warehouse Shelf from TCG Card Shop Simulator, used to illustrate Shelves, stock and shop upgrades.",
+        "zh": "《TCG Card Shop Simulator》游戏内Big Warehouse Shelf的画面，用于说明「Shelves, stock and shop upgrades」。"
       }
     },
     {

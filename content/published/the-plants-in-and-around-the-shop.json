@@ -45,19 +45,11 @@
   ],
   "images": [
     {
-      "file": "mapped/the-plants-in-and-around-the-shop-plants.png",
+      "file": "mapped/the-plants-in-and-around-the-shop-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "The sheet the game's planting is cut from: flower beds, potted plants, grasses, ferns and trailing ivy on transparency.",
-        "zh": "游戏植被所取的图集：花坛、盆栽、观赏草、蕨类与垂枝常春藤，背景透明。"
-      }
-    },
-    {
-      "file": "mapped/the-plants-in-and-around-the-shop-flower.png",
-      "kind": "game",
-      "alt": {
-        "en": "One of the flower sprites the game ships: a cartoon bloom with yellow petals, a green leaf above it and a dark red stalk.",
-        "zh": "游戏自带的花卉图之一：卡通花朵，黄色花瓣、上方一片绿叶，深红花茎。"
+        "en": "In-game picture of Trash Bin from TCG Card Shop Simulator, used to illustrate The plants in and around the shop.",
+        "zh": "《TCG Card Shop Simulator》游戏内Trash Bin的画面，用于说明「The plants in and around the shop」。"
       }
     }
   ],

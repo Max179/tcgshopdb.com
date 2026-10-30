@@ -59,11 +59,11 @@
   ],
   "images": [
     {
-      "file": "mapped/the-payment-a-customer-hands-over-coin.jpg",
+      "file": "mapped/the-payment-a-customer-hands-over-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "A currency sheet the game ships, carrying the notes and coins a customer's cash is drawn from.",
-        "zh": "游戏提供的货币贴图集，顾客现金所用的纸币与硬币都取自这里。"
+        "en": "In-game picture of Small Personal Shelf from TCG Card Shop Simulator, used to illustrate The payment a customer hands over.",
+        "zh": "《TCG Card Shop Simulator》游戏内Small Personal Shelf的画面，用于说明「The payment a customer hands over」。"
       }
     },
     {

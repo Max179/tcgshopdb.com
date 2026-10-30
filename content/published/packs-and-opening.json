@@ -51,19 +51,11 @@
   ],
   "images": [
     {
-      "file": "mapped/packs-and-opening-cardpack-atlas-40-47.png",
+      "file": "mapped/packs-and-opening-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "A third sprite atlas taken from the game, covering a further set of card packs.",
-        "zh": "取自游戏的第三张卡包图集，覆盖更后一批卡包。"
-      }
-    },
-    {
-      "file": "mapped/packs-and-opening-cardpack-atlas.png",
-      "kind": "game",
-      "alt": {
-        "en": "The game's own sprite atlas that holds the artwork for the first card packs.",
-        "zh": "游戏自带的卡包图集，包含首批卡包的图像。"
+        "en": "In-game picture of Clawdos from TCG Card Shop Simulator, used to illustrate Packs and opening them.",
+        "zh": "《TCG Card Shop Simulator》游戏内Clawdos的画面，用于说明「Packs and opening them」。"
       }
     },
     {
@@ -74,14 +66,6 @@
         "zh": "卡包流程示意图：封箱到货、入库或上架、手工或机器开封、卡牌上架销售。"
       },
       "disclaimer": "Original diagram drawn for this site. It is not a screenshot of the game."
-    },
-    {
-      "file": "mapped/packs-and-opening-cardpack-atlas-8-15.png",
-      "kind": "game",
-      "alt": {
-        "en": "A second sprite atlas taken from the game, covering the next set of card packs.",
-        "zh": "取自游戏的第二张卡包图集，覆盖下一批卡包。"
-      }
     }
   ],
   "sources": [

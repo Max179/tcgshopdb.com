@@ -51,11 +51,11 @@
   ],
   "images": [
     {
-      "file": "mapped/what-a-review-record-keeps-star-bg.jpg",
+      "file": "mapped/what-a-review-record-keeps-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "The background image the game ships to sit under its star fill in the rating display.",
-        "zh": "游戏在其星级显示中垫在星形下面的背景图。"
+        "en": "In-game picture from TCG Card Shop Simulator showing the shopkeeper holding money at the counter, used to illustrate What a review record keeps.",
+        "zh": "《TCG Card Shop Simulator》游戏内画面：the shopkeeper holding money at the counter，用于说明「What a review record keeps」。"
       }
     }
   ],

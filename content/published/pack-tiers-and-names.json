@@ -42,19 +42,11 @@
   ],
   "images": [
     {
-      "file": "mapped/pack-tiers-and-names-atlas.jpg",
+      "file": "mapped/pack-tiers-and-names-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "Pack artwork taken from the game, showing several different pack designs side by side.",
-        "zh": "取自游戏的卡包图案，并排展示多种不同卡包设计。"
-      }
-    },
-    {
-      "file": "mapped/pack-tiers-and-names-atlas-24-31.jpg",
-      "kind": "game",
-      "alt": {
-        "en": "A further sheet of pack artwork taken from the game.",
-        "zh": "取自游戏的另一组卡包图案。"
+        "en": "In-game picture of Clawop from TCG Card Shop Simulator, used to illustrate Pack tiers and what the names mean.",
+        "zh": "《TCG Card Shop Simulator》游戏内Clawop的画面，用于说明「Pack tiers and what the names mean」。"
       }
     },
     {

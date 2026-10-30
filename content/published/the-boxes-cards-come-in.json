@@ -52,19 +52,11 @@
   ],
   "images": [
     {
-      "file": "mapped/the-boxes-cards-come-in-legend.jpg",
+      "file": "mapped/the-boxes-cards-come-in-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "The game's own box art for its legend rare card box: a red bordered TETRAMON box showing the packs inside.",
-        "zh": "游戏自带的传说稀有卡盒盒面：红边 TETRAMON 卡盒，画着盒内的卡包。"
-      }
-    },
-    {
-      "file": "mapped/the-boxes-cards-come-in-destiny.jpg",
-      "kind": "game",
-      "alt": {
-        "en": "The legend card box the game ships for its later set, with different art and packs.",
-        "zh": "游戏为后续系列准备的传说卡盒，盒面与卡包图案不同。"
+        "en": "In-game picture of Blazoar from TCG Card Shop Simulator, used to illustrate The boxes cards come in.",
+        "zh": "《TCG Card Shop Simulator》游戏内Blazoar的画面，用于说明「The boxes cards come in」。"
       }
     }
   ],

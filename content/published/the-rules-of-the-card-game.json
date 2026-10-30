@@ -59,19 +59,11 @@
   ],
   "images": [
     {
-      "file": "mapped/the-rules-of-the-card-game-sample.jpg",
+      "file": "mapped/the-rules-of-the-card-game-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "The sample card the game prints in its rulebook: a rare Burpig with a play effect and four attack values.",
-        "zh": "游戏规则书中印出的示例卡：稀有度 Rare 的 Burpig，带打出效果与四项攻击值。"
-      }
-    },
-    {
-      "file": "mapped/the-rules-of-the-card-game-playarea.jpg",
-      "kind": "game",
-      "alt": {
-        "en": "The play area diagram the game itself prints in its rulebook.",
-        "zh": "游戏自带规则书中的对战区域示意图。"
+        "en": "In-game picture of Fistronk from TCG Card Shop Simulator, used to illustrate The rules of the card game.",
+        "zh": "《TCG Card Shop Simulator》游戏内Fistronk的画面，用于说明「The rules of the card game」。"
       }
     },
     {

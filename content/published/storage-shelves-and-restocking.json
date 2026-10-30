@@ -39,11 +39,11 @@
   ],
   "images": [
     {
-      "file": "mapped/storage-shelves-and-restocking-storage.jpg",
+      "file": "mapped/storage-shelves-and-restocking-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "The texture taken from the game of the card storage shelving the back room uses.",
-        "zh": "取自游戏的卡牌仓储货架贴图。"
+        "en": "In-game picture of Small Warehouse Shelf from TCG Card Shop Simulator, used to illustrate Storage shelves and restocking.",
+        "zh": "《TCG Card Shop Simulator》游戏内Small Warehouse Shelf的画面，用于说明「Storage shelves and restocking」。"
       }
     },
     {

@@ -91,11 +91,11 @@
   ],
   "images": [
     {
-      "file": "mapped/the-card-display-object-full-art-front.jpg",
+      "file": "mapped/the-card-display-object-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "The full-art card front the display draws: a golden bordered frame around the window the art sits in.",
-        "zh": "展示卡牌时使用的全画面前景：金色边框围出插画所在的窗口。"
+        "en": "In-game picture of Frizard from TCG Card Shop Simulator, used to illustrate The card display object.",
+        "zh": "《TCG Card Shop Simulator》游戏内Frizard的画面，用于说明「The card display object」。"
       }
     },
     {

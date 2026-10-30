@@ -53,11 +53,11 @@
   ],
   "images": [
     {
-      "file": "mapped/price-tags-for-every-context-atlas.jpg",
+      "file": "mapped/price-tags-for-every-context-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "The game's own atlas of the price tags the entry describes.",
-        "zh": "游戏自带的价签图集。"
+        "en": "In-game picture from TCG Card Shop Simulator showing the price list screen, used to illustrate Price tags for every context.",
+        "zh": "《TCG Card Shop Simulator》游戏内画面：the price list screen，用于说明「Price tags for every context」。"
       }
     },
     {

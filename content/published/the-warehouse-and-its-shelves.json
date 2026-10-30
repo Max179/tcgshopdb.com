@@ -53,27 +53,11 @@
   ],
   "images": [
     {
-      "file": "mapped/the-warehouse-and-its-shelves-box-shelf.jpg",
+      "file": "mapped/the-warehouse-and-its-shelves-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "The game's own artwork for a box shelf, a tall unit of four open shelves.",
-        "zh": "游戏自带的箱式货架美术：四层开放格的高货架。"
-      }
-    },
-    {
-      "file": "mapped/the-warehouse-and-its-shelves-corner-shelf.jpg",
-      "kind": "game",
-      "alt": {
-        "en": "The game's own artwork for a corner shelf, an L-shaped unit that turns a corner.",
-        "zh": "游戏自带的转角货架美术：拐角处的 L 形货架。"
-      }
-    },
-    {
-      "file": "mapped/the-warehouse-and-its-shelves-storage.jpg",
-      "kind": "game",
-      "alt": {
-        "en": "The game's own artwork for the empty box storage used in the back room.",
-        "zh": "游戏自带的空箱仓储图案，用于后仓存放。"
+        "en": "In-game picture of Big Warehouse Shelf from TCG Card Shop Simulator, used to illustrate The warehouse and its shelves.",
+        "zh": "《TCG Card Shop Simulator》游戏内Big Warehouse Shelf的画面，用于说明「The warehouse and its shelves」。"
       }
     },
     {

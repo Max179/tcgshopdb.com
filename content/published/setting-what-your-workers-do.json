@@ -40,11 +40,11 @@
   ],
   "images": [
     {
-      "file": "mapped/setting-what-your-workers-do-icon.jpg",
+      "file": "mapped/setting-what-your-workers-do-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "One of the worker icons the game itself uses.",
-        "zh": "游戏本身使用的员工图标之一。"
+        "en": "In-game picture of Auto Scent T1000 from TCG Card Shop Simulator, used to illustrate Setting what your workers do.",
+        "zh": "《TCG Card Shop Simulator》游戏内Auto Scent T1000的画面，用于说明「Setting what your workers do」。"
       }
     },
     {

@@ -51,11 +51,11 @@
   ],
   "images": [
     {
-      "file": "mapped/the-doors-and-the-signs-that-point-the-way-entrance-sign.png",
+      "file": "mapped/the-doors-and-the-signs-that-point-the-way-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "The entrance sheet the game ships: a red plate reading Use Main Entrance, No Entry beside a green plate reading Welcome, Please Enter.",
-        "zh": "游戏自带的入口挂牌：红色牌写着 Use Main Entrance / No Entry，绿色牌写着 Welcome / Please Enter。"
+        "en": "In-game picture of Small Metal Rack from TCG Card Shop Simulator, used to illustrate The doors and the signs that point the way.",
+        "zh": "《TCG Card Shop Simulator》游戏内Small Metal Rack的画面，用于说明「The doors and the signs that point the way」。"
       }
     }
   ],

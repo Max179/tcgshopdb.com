@@ -48,11 +48,11 @@
   ],
   "images": [
     {
-      "file": "mapped/what-a-ghost-card-does-ghost.jpg",
+      "file": "mapped/what-a-ghost-card-does-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "The sheet of front icons the game itself uses for ghost cards.",
-        "zh": "游戏本身用于幽灵卡牌的正面图标图集。"
+        "en": "In-game picture of File:File:Ghost Blazoar.png from TCG Card Shop Simulator, used to illustrate What a ghost card does.",
+        "zh": "《TCG Card Shop Simulator》游戏内File:File:Ghost Blazoar.png的画面，用于说明「What a ghost card does」。"
       }
     },
     {

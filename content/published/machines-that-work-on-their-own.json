@@ -53,27 +53,11 @@
   ],
   "images": [
     {
-      "file": "mapped/machines-that-work-on-their-own-turn-on.jpg",
+      "file": "mapped/machines-that-work-on-their-own-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "The on icon the game itself uses for a machine: a green rounded button printed ON beside a power symbol.",
-        "zh": "游戏为机器使用的开启图标：绿色圆角按钮，印着 ON 与电源符号。"
-      }
-    },
-    {
-      "file": "mapped/machines-that-work-on-their-own-turn-off.jpg",
-      "kind": "game",
-      "alt": {
-        "en": "The off icon the game itself uses for a machine: a red rounded button printed OFF beside a power symbol.",
-        "zh": "游戏为机器使用的关闭图标：红色圆角按钮，印着 OFF 与电源符号。"
-      }
-    },
-    {
-      "file": "mapped/machines-that-work-on-their-own-cleanser.jpg",
-      "kind": "game",
-      "alt": {
-        "en": "The base colour texture taken from the game of the automatic cleanser.",
-        "zh": "取自游戏的自动清洁机基础色贴图。"
+        "en": "In-game picture of Card Table from TCG Card Shop Simulator, used to illustrate Machines that work on their own.",
+        "zh": "《TCG Card Shop Simulator》游戏内Card Table的画面，用于说明「Machines that work on their own」。"
       }
     },
     {

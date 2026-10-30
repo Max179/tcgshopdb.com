@@ -48,11 +48,11 @@
   ],
   "images": [
     {
-      "file": "mapped/the-kinds-of-customers-portrait.jpg",
+      "file": "mapped/the-kinds-of-customers-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "One of the game's own customer portraits.",
-        "zh": "游戏自带的顾客头像之一。"
+        "en": "In-game picture from TCG Card Shop Simulator showing customers sitting at the card tables, used to illustrate The kinds of customers you get.",
+        "zh": "《TCG Card Shop Simulator》游戏内画面：customers sitting at the card tables，用于说明「The kinds of customers you get」。"
       }
     },
     {

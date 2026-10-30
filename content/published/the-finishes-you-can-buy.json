@@ -58,35 +58,11 @@
   ],
   "images": [
     {
-      "file": "mapped/the-finishes-you-can-buy-wall-icon.jpg",
+      "file": "mapped/the-finishes-you-can-buy-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "One of the wall finish icons the game itself uses: a dark wood band above cream slats, the picture a surface is chosen by.",
-        "zh": "游戏自用的墙面饰面图标之一：深色木纹覆于米色条板之上，即选择表面时看到的图。"
-      }
-    },
-    {
-      "file": "mapped/the-finishes-you-can-buy-wall-blue.jpg",
-      "kind": "game",
-      "alt": {
-        "en": "The colour texture the game ships for one of its wall finishes.",
-        "zh": "游戏为其中一种墙面饰面提供的颜色贴图。"
-      }
-    },
-    {
-      "file": "mapped/the-finishes-you-can-buy-wall-orange.jpg",
-      "kind": "game",
-      "alt": {
-        "en": "The colour texture the game ships for another of its wall finishes.",
-        "zh": "游戏为另一种墙面饰面提供的颜色贴图。"
-      }
-    },
-    {
-      "file": "mapped/the-finishes-you-can-buy-floor-icon.png",
-      "kind": "game",
-      "alt": {
-        "en": "The picture the game uses for a wood floor finish.",
-        "zh": "游戏用于木质地板饰面的图片。"
+        "en": "In-game picture of Single Sided Shelf from TCG Card Shop Simulator, used to illustrate The wall and floor finishes for your shop.",
+        "zh": "《TCG Card Shop Simulator》游戏内Single Sided Shelf的画面，用于说明「The wall and floor finishes for your shop」。"
       }
     },
     {

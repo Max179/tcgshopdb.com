@@ -75,11 +75,11 @@
   ],
   "images": [
     {
-      "file": "mapped/sending-cards-to-be-graded-case.jpg",
+      "file": "mapped/sending-cards-to-be-graded-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "The texture taken from the game of the case a graded card is returned in.",
-        "zh": "取自游戏的评级卡盒贴图。"
+        "en": "In-game picture of Burpig from TCG Card Shop Simulator, used to illustrate Sending cards to be graded.",
+        "zh": "《TCG Card Shop Simulator》游戏内Burpig的画面，用于说明「Sending cards to be graded」。"
       }
     },
     {

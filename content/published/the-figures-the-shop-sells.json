@@ -61,19 +61,11 @@
   ],
   "images": [
     {
-      "file": "mapped/the-figures-the-shop-sells-fox.png",
+      "file": "mapped/the-figures-the-shop-sells-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "The icon the game ships for one of its figures: a fox with a purple ball at its chest and a red mark on its brow.",
-        "zh": "游戏为某件手办提供的图标：胸前抱着紫色球、额上有红斑的狐狸。"
-      }
-    },
-    {
-      "file": "mapped/the-figures-the-shop-sells-golem.png",
-      "kind": "game",
-      "alt": {
-        "en": "A second figure icon: a stone golem with red horns standing on a green base.",
-        "zh": "第二件手办图标：长着红色角的石头魔像，立在绿色底座上。"
+        "en": "In-game picture of Play Table from TCG Card Shop Simulator, used to illustrate The figures the shop sells.",
+        "zh": "《TCG Card Shop Simulator》游戏内Play Table的画面，用于说明「The figures the shop sells」。"
       }
     }
   ],

@@ -68,35 +68,11 @@
   ],
   "images": [
     {
-      "file": "mapped/board-games-and-their-accessories-icon.jpg",
+      "file": "mapped/board-games-and-their-accessories-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "One of the icons the game ships for a tabletop game it sells.",
-        "zh": "游戏为其销售的某款桌游提供的图标之一。"
-      }
-    },
-    {
-      "file": "mapped/board-games-and-their-accessories-claim.png",
-      "kind": "game",
-      "alt": {
-        "en": "The box art the game ships for one of its tabletop games: a boxed game called Claim, with a miner holding up a golden nugget.",
-        "zh": "游戏为某款桌游提供的盒面图：一盒名为 Claim 的游戏，矿工高举一块金块。"
-      }
-    },
-    {
-      "file": "mapped/board-games-and-their-accessories-system-gate.png",
-      "kind": "game",
-      "alt": {
-        "en": "The box art the game ships for a two-player battle box called System Gate, drawn as a standing box with the game's characters on it.",
-        "zh": "游戏为一款名为 System Gate 的双人对战盒提供的盒面图：立起的盒子上画着游戏角色。"
-      }
-    },
-    {
-      "file": "mapped/board-games-and-their-accessories-system-gate-2.png",
-      "kind": "game",
-      "alt": {
-        "en": "A second System Gate battle box the game ships box art for, with a different cast drawn across it.",
-        "zh": "游戏提供的第二款 System Gate 对战盒盒面图，上面的角色阵容不同。"
+        "en": "In-game picture of Workbench from TCG Card Shop Simulator, used to illustrate Board games and their accessories.",
+        "zh": "《TCG Card Shop Simulator》游戏内Workbench的画面，用于说明「Board games and their accessories」。"
       }
     },
     {

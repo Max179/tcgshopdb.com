@@ -39,11 +39,11 @@
   ],
   "images": [
     {
-      "file": "mapped/the-currencies-the-game-tracks-euro.jpg",
+      "file": "mapped/the-currencies-the-game-tracks-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "The coin texture the game ships for one of the currencies it supports.",
-        "zh": "游戏为其支持的某一种货币提供的硬币贴图。"
+        "en": "In-game picture from TCG Card Shop Simulator showing a pull of cards with the card value screen, used to illustrate The currencies the game tracks.",
+        "zh": "《TCG Card Shop Simulator》游戏内画面：a pull of cards with the card value screen，用于说明「The currencies the game tracks」。"
       }
     },
     {

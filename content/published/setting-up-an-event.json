@@ -52,11 +52,11 @@
   ],
   "images": [
     {
-      "file": "mapped/setting-up-an-event-host-screen.jpg",
+      "file": "mapped/setting-up-an-event-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "The background the game itself draws for the screen where a tournament is hosted: two duelling monsters facing each other in a burst of light.",
-        "zh": "游戏自己为主持赛事界面画的背景：两只决斗中的怪物在光束中对峙。"
+        "en": "In-game picture from TCG Card Shop Simulator showing a pull of cards with the card value screen, used to illustrate Setting up an event and what it changes.",
+        "zh": "《TCG Card Shop Simulator》游戏内画面：a pull of cards with the card value screen，用于说明「Setting up an event and what it changes」。"
       }
     },
     {

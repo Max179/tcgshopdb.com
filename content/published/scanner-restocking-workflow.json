@@ -39,11 +39,11 @@
   ],
   "images": [
     {
-      "file": "mapped/scanner-restocking-workflow-scanner.jpg",
+      "file": "mapped/scanner-restocking-workflow-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "The diffuse texture taken from the game of the barcode scanner used to restock.",
-        "zh": "取自游戏的条码扫描器漫反射贴图，用于补货。"
+        "en": "In-game picture of Auto Scent M100 from TCG Card Shop Simulator, used to illustrate The scanner and the restocking workflow.",
+        "zh": "《TCG Card Shop Simulator》游戏内Auto Scent M100的画面，用于说明「The scanner and the restocking workflow」。"
       }
     },
     {

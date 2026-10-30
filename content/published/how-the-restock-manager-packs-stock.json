@@ -59,35 +59,11 @@
   ],
   "images": [
     {
-      "file": "mapped/how-the-restock-manager-packs-stock-refill.jpg",
+      "file": "mapped/how-the-restock-manager-packs-stock-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "The refill icon the game itself uses: a red rounded button printed REFILL beside a power symbol.",
-        "zh": "游戏自带的补货图标：红色圆角按钮，印着 REFILL 与电源符号。"
-      }
-    },
-    {
-      "file": "mapped/how-the-restock-manager-packs-stock-base-box.png",
-      "kind": "game",
-      "alt": {
-        "en": "The bulk supply box the game pictures for its base set: a white box printed Tetramon Base Bulk Box and 100 Cards.",
-        "zh": "游戏为基础系列绘制的整箱包装：白色箱子，印着 Tetramon Base Bulk Box 与 100 Cards。"
-      }
-    },
-    {
-      "file": "mapped/how-the-restock-manager-packs-stock-hg-box.png",
-      "kind": "game",
-      "alt": {
-        "en": "The same box in its HG grade: yellow, with an HG mark in the corner.",
-        "zh": "同款箱子的 HG 版本：黄色箱身，右下角有 HG 标记。"
-      }
-    },
-    {
-      "file": "mapped/how-the-restock-manager-packs-stock-destiny-box.png",
-      "kind": "game",
-      "alt": {
-        "en": "The bulk box the game pictures for its Destiny set, printed Tetramon Destiny Bulk Box.",
-        "zh": "游戏为 Destiny 系列绘制的整箱包装，印着 Tetramon Destiny Bulk Box。"
+        "en": "In-game picture of Small Card Display from TCG Card Shop Simulator, used to illustrate How the restock manager packs stock.",
+        "zh": "《TCG Card Shop Simulator》游戏内Small Card Display的画面，用于说明「How the restock manager packs stock」。"
       }
     },
     {

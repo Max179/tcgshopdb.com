@@ -68,11 +68,11 @@
   ],
   "images": [
     {
-      "file": "mapped/how-a-price-tag-is-drawn-atlas.jpg",
+      "file": "mapped/how-a-price-tag-is-drawn-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "The atlas the game draws its price tags from, with the digits, punctuation, currency marks, a barcode and rows of item and object pictures.",
-        "zh": "游戏用于绘制价签的图集，含数字、标点、货币符号、条码以及成行的物品与物件图案。"
+        "en": "In-game picture from TCG Card Shop Simulator showing the price list screen, used to illustrate How a price tag is drawn.",
+        "zh": "《TCG Card Shop Simulator》游戏内画面：the price list screen，用于说明「How a price tag is drawn」。"
       }
     },
     {

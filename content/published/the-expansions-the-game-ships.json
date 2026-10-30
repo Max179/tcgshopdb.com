@@ -53,27 +53,11 @@
   ],
   "images": [
     {
-      "file": "mapped/the-expansions-the-game-ships-pack.jpg",
+      "file": "mapped/the-expansions-the-game-ships-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "The pack front the game ships for its Ascension set.",
-        "zh": "游戏自带的 Ascension 系列卡包封面。"
-      }
-    },
-    {
-      "file": "mapped/the-expansions-the-game-ships-card-icon.jpg",
-      "kind": "game",
-      "alt": {
-        "en": "Card artwork the game ships for one card of that set.",
-        "zh": "该系列其中一张卡的卡面美术。"
-      }
-    },
-    {
-      "file": "mapped/the-expansions-the-game-ships-card-background.jpg",
-      "kind": "game",
-      "alt": {
-        "en": "Background artwork the game ships for another card of that set.",
-        "zh": "该系列另一张卡的背景美术。"
+        "en": "In-game picture of Bogon from TCG Card Shop Simulator, used to illustrate The expansions the game ships.",
+        "zh": "《TCG Card Shop Simulator》游戏内Bogon的画面，用于说明「The expansions the game ships」。"
       }
     },
     {

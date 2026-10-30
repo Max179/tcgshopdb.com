@@ -43,11 +43,11 @@
   ],
   "images": [
     {
-      "file": "mapped/moving-on-old-stock-donationbox.jpg",
+      "file": "mapped/moving-on-old-stock-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "The texture taken from the game of the bulk donation box old stock goes into.",
-        "zh": "取自游戏的大宗捐赠箱贴图，旧库存可以投进去。"
+        "en": "In-game picture of Vintage Card Table from TCG Card Shop Simulator, used to illustrate Moving on old stock.",
+        "zh": "《TCG Card Shop Simulator》游戏内Vintage Card Table的画面，用于说明「Moving on old stock」。"
       }
     },
     {

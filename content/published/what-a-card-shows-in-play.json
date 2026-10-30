@@ -59,43 +59,11 @@
   ],
   "images": [
     {
-      "file": "mapped/what-a-card-shows-in-play-fire.jpg",
+      "file": "mapped/what-a-card-shows-in-play-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "The fire element icon the game prints on a card in play: a red and yellow flame with a black outline.",
-        "zh": "游戏在对战中的卡牌上印制的火属性图标：黑描边的红黄火焰。"
-      }
-    },
-    {
-      "file": "mapped/what-a-card-shows-in-play-water.jpg",
-      "kind": "game",
-      "alt": {
-        "en": "The water element icon the game prints on a card in play: a blue wave and droplet with a black outline.",
-        "zh": "游戏在对战中的卡牌上印制的水属性图标：黑描边的蓝色波浪与水珠。"
-      }
-    },
-    {
-      "file": "mapped/what-a-card-shows-in-play-earth.jpg",
-      "kind": "game",
-      "alt": {
-        "en": "The earth element icon the game prints on a card in play: a green faceted rock with a black outline.",
-        "zh": "游戏在对战中的卡牌上印制的土属性图标：黑描边的绿色棱面岩石。"
-      }
-    },
-    {
-      "file": "mapped/what-a-card-shows-in-play-wind.jpg",
-      "kind": "game",
-      "alt": {
-        "en": "The wind element icon the game prints on a card in play: a yellow swirl and cloud with a black outline.",
-        "zh": "游戏在对战中的卡牌上印制的风属性图标：黑描边的黄色旋涡与云。"
-      }
-    },
-    {
-      "file": "mapped/what-a-card-shows-in-play-icon.jpg",
-      "kind": "game",
-      "alt": {
-        "en": "The icon-only card front the game itself uses when presenting a card.",
-        "zh": "游戏在展示卡牌时使用的纯图标卡面。"
+        "en": "In-game picture of Drakon from TCG Card Shop Simulator, used to illustrate What a card shows while you play it.",
+        "zh": "《TCG Card Shop Simulator》游戏内Drakon的画面，用于说明「What a card shows while you play it」。"
       }
     },
     {

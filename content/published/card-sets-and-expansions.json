@@ -43,27 +43,11 @@
   ],
   "images": [
     {
-      "file": "mapped/card-sets-and-expansions-legend.jpg",
+      "file": "mapped/card-sets-and-expansions-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "The legend card icon the game prints at its top rarity: two stacked card faces in red, orange and gold.",
-        "zh": "游戏在最高稀有度印制的传说卡图标：两张叠放的卡面，呈红、橙、金色。"
-      }
-    },
-    {
-      "file": "mapped/card-sets-and-expansions-border.jpg",
-      "kind": "game",
-      "alt": {
-        "en": "The game's own card border image for the first-edition finish.",
-        "zh": "游戏自带的初版（First Edition）卡牌边框图。"
-      }
-    },
-    {
-      "file": "mapped/card-sets-and-expansions-destiny.jpg",
-      "kind": "game",
-      "alt": {
-        "en": "The game's own icon for the Destiny card expansion.",
-        "zh": "游戏自带的 Destiny 扩充系列图标。"
+        "en": "In-game picture of Anguifish from TCG Card Shop Simulator, used to illustrate Card sets and expansions.",
+        "zh": "《TCG Card Shop Simulator》游戏内Anguifish的画面，用于说明「Card sets and expansions」。"
       }
     },
     {

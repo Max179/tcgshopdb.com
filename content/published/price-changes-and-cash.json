@@ -45,11 +45,11 @@
   ],
   "images": [
     {
-      "file": "mapped/price-changes-and-cash-register.jpg",
+      "file": "mapped/price-changes-and-cash-picture.jpg",
       "kind": "game",
       "alt": {
-        "en": "The albedo texture taken from the game of the cash register money is taken at.",
-        "zh": "取自游戏的收银机反照率贴图。"
+        "en": "In-game picture from TCG Card Shop Simulator showing the price list screen, used to illustrate Price changes and cash at the counter.",
+        "zh": "《TCG Card Shop Simulator》游戏内画面：the price list screen，用于说明「Price changes and cash at the counter」。"
       }
     },
     {
