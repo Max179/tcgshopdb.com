@@ -39,7 +39,7 @@ pictures were replaced with official store screenshots. Full record: `reports/im
       node tools/smoke.mjs                     -> [smoke] tcgshopdb.com: 176 kept, 263 noindex; the artefact passes
       node pipeline/status.mjs                 -> reports/status.json regenerated after the content and code commits
 
-- Picture fit, not provenance, is the residual: 22 entries show a clearly different object and 17 a weaker reused
+- Picture fit, not provenance, is the residual: 21 entries show a clearly different object and 18 a weaker reused
   category-level picture (ids in `reports/image-replacement-2026-10-30.md` §6, reported to the Lead to swap).
 - Publishing: **not done from this machine**. The Lead owns the push and the Cloudflare Pages deploy; verify the
   live domain with `node tools/smoke.mjs https://tcgshopdb.com` after the deploy.

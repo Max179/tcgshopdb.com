@@ -31,7 +31,7 @@ credits + wording), then the replacement-report and status commits. Working tree
    `node tools/smoke.mjs https://tcgshopdb.com` (all 176 kept URLs, titles and canonicals on the real domain).
    Record the result in `reports/local-complete.md`.
 3. Replace the pictures whose subject is clearly not what the entry describes: the list is in
-   `reports/image-replacement-2026-10-30.md` §6 (22 clearly-wrong ids and 17 weaker reused category-level ones,
+   `reports/image-replacement-2026-10-30.md` §6 (21 clearly-wrong ids and 18 weaker reused category-level ones,
    also reported to the Lead). A swapped picture needs the same copy-in treatment: mapped file, manifest record,
    entry file, review-ledger row, regenerated image reports.
 4. Bind/verify `tcgshopdb.com` in the Cloudflare dashboard if it is not already attached (account owner action).

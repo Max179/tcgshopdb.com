@@ -99,14 +99,15 @@ provenance failures; they are reported to the Lead for swapping:
   `which-version-this-site-documents` (a small card display), `how-the-restock-manager-packs-stock` (a small
   card display), `the-box-your-stock-arrives-in` (a double-sided shelf), `moving-on-old-stock` (a vintage card
   table), `the-search-that-picks-a-card` (a monster card illustration), `the-key-binding-settings` (a checkout
-  screenshot), `the-picture-the-game-draws-for-a-control` (a checkout screenshot), `what-the-pack-opener-shows-you`
-  (a card display table), `licences-and-shop-level` (a card display table).
+  screenshot), `what-the-pack-opener-shows-you` (a card display table), `licences-and-shop-level` (a card display
+  table). 21 entries in total.
 - Weaker fit from a reused category-level picture: `the-setting-screens-for-your-fixtures`,
   `the-currencies-the-game-tracks`, `the-trade-screen-and-what-it-shows`, `tournaments-and-events`,
   `the-clothes-a-shopkeeper-wears`, `what-a-customer-carries`, `the-services-the-game-offers`,
   `keeping-the-shop-clean`, `the-shop-billboard-and-your-shop-name`, `the-upgrades-you-can-buy`,
   `the-reveal-screen`, `the-review-screen`, `the-screens-you-will-use-most`, `what-a-review-record-keeps`,
-  `the-boards-interface`, `machines-that-work-on-their-own`, `restocking-from-a-cart`.
+  `the-boards-interface`, `machines-that-work-on-their-own`, `restocking-from-a-cart`,
+  `the-picture-the-game-draws-for-a-control`.
 
 ## 7. Pack bookkeeping notes (for the Lead; no provenance edited)
 
