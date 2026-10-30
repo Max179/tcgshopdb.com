@@ -4,7 +4,47 @@ The full round-by-round log (577 lines, 377999 bytes, 446 recorded rounds)
 is the working record of the extraction host and stays there. This copy carries the standing state at the handoff commit plus the
 most recent recorded rounds verbatim, so the Mac side has the facts without the history. Nothing here is generated at publish time.
 
-## Mac integration (2026-10-30) — current standing state
+## Picture replacement (2026-10-30) — current standing state
+
+The 186 raw Unity texture exports (UI atlases, white-on-black icon sheets, albedo/ground/furniture textures, grey
+placeholders) were replaced with **89 sourced in-game pictures**, one per pictured entry, and the two homepage
+pictures were replaced with official store screenshots. Full record: `reports/image-replacement-2026-10-30.md`.
+
+- Commits: `195a3f6` (89 pictures + manifest + 89 entry files + homepage + pack reports, 186 old mapped files
+  deleted), `b9aa756` (generated credits, homepage provenance, wording), then the docs commit that carries this
+  section and the report, and a status commit. Working tree clean at handoff.
+- Sources: **60** pictures from the TCG Card Shop Wiki (Fandom), **29** from the official Steam store page;
+  61 unique pictures, 27 records marked "Reused as a category-level in-game picture.", max 4 repeats. Every
+  manifest record carries sourceName, sourcePage (absolute http(s)), originalUrl, license, rightsReview
+  (`fair_use_review`), retrievedAt, verdict, reviewer and reviewDate; every file was re-checked against its
+  sha256/bytes/dimensions. The 9 `diagram-only` entries are untouched.
+- Build: **pages=445 indexable=176** (263 noindex, unchanged); 98 published entries (89 with an in-game picture,
+  9 diagram-only notes), 63 guides, 855 facts, 89 picture records (unused 0). The sources page now renders a
+  generated per-file credit table plus credited homepage rows; the disclaimer, home page, start page, game guide,
+  footer, README and content model describe the same picture model.
+- Gate: the site tests carry a picture-provenance gate (source fields, absolute source page, every record listed on
+  the sources page), so the previous 63 gates are now **66**; all 66 pass.
+- Verbatim commands and exits — all exit 0:
+
+      python3 tools/image-sanity.py            -> [image-sanity] 89 records, 0 flagged (was 186 / 12)
+      node tools/image-coverage.mjs            -> entries=98 withGameImage=89 diagramOnly=9 manifestRecords=89 unusedRecords=0
+      node pipeline/site.mjs                   -> [site] pages=445 indexable=176 schema(noindex)=263
+      node tests/site.test.mjs                 -> [site-tests] 66 passed, 0 failed
+      npx tsc --noEmit -p tsconfig.ci.json     -> no diagnostics
+      node tools/content-gate.mjs              -> [content-gate] 98 entry file(s), 0 violation(s)
+      node tools/verify-citations.mjs          -> entries=98 facts=855 distinctIdentifiers=1517 universe=7781 confirmedElsewhere=14 unmatched=0
+      node tools/coverage.mjs                  -> columns=20 covered=20 published=98 draft=0 reference=0 absent=0 qualityFailures=0
+      node tools/classify-urls.mjs             -> 176 keep, 263 noindex, 0 redirect(s) (no diff to config/urls.json)
+      node tools/preflight.mjs                 -> [preflight] 11 ok, 0 failed
+      node tools/smoke.mjs                     -> [smoke] tcgshopdb.com: 176 kept, 263 noindex; the artefact passes
+      node pipeline/status.mjs                 -> reports/status.json regenerated after the content and code commits
+
+- Picture fit, not provenance, is the residual: 22 entries show a clearly different object and 17 a weaker reused
+  category-level picture (ids in `reports/image-replacement-2026-10-30.md` §6, reported to the Lead to swap).
+- Publishing: **not done from this machine**. The Lead owns the push and the Cloudflare Pages deploy; verify the
+  live domain with `node tools/smoke.mjs https://tcgshopdb.com` after the deploy.
+
+## Mac integration (2026-10-30) — earlier standing state
 
 The Oct-2-2026 Windows handoff package was merged into this repository on macOS and the Mac design
 (8c1312f / 6169d5e) was ported onto the package generator. Full record: `reports/revival-2026-10-30.md`;
