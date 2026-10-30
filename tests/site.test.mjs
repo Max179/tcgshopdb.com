@@ -444,10 +444,18 @@ ok('every game image used in an entry has a manifest record and exists in the bu
     return null;
   };
   const records = manifest.records ?? [];
+  // A record names either a content picture (published from content/assets) or a design-owned homepage picture
+  // (published from web/assets); resolve in that order so both are re-checkable against the same ledger.
+  const recordPath = (rel) => {
+    for (const base of [join('content', 'assets'), 'web']) {
+      if (existsSync(join(base, rel))) return join(base, rel);
+    }
+    return join('content', 'assets', rel);
+  };
   const bad = [];
   let checked = 0;
   for (const r of records) {
-    const f = join('content', 'assets', r.file);
+    const f = recordPath(r.file);
     if (!existsSync(f)) { bad.push(r.file + ' (missing)'); continue; }
     const buf = readFileSync(f);
     const sha = createHash('sha256').update(buf).digest('hex');
@@ -481,7 +489,9 @@ ok('every game image used in an entry has a manifest record and exists in the bu
 {
   const manifest = JSON.parse(readFileSync('content/images-manifest.json', 'utf8'));
   const ledger = readFileSync('reports/image-reviews.md', 'utf8');
-  const judged = new Set([...ledger.matchAll(/\|\s*(mapped\/[^\s|]+)\s*\|/g)].map((m) => m[1].trim()));
+  // Every record names its file in a ledger cell; the ledger covers mapped content pictures and the design-owned
+  // homepage pictures alike, so the check is against the exact record path rather than only paths under mapped/.
+  const judged = new Set([...ledger.matchAll(/\|\s*([^\s|]+\/[^\s|]+)\s*\|/g)].map((m) => m[1].trim()));
   const unjudged = manifest.records.filter((r) => !judged.has(r.file)).map((r) => r.file);
   ok('every mapped picture has a verdict in the review ledger', unjudged.length === 0,
     unjudged.slice(0, 3).join(', '));

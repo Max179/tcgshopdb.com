@@ -3,12 +3,13 @@
  * Image coverage report: writes reports/image-coverage.md from the entry files and the image manifest.
  *
  * It exists because "does every entry have a real picture" has to be checkable rather than asserted. For every
- * published entry it prints whether the entry carries an image taken from the game, and for those that do it prints
- * the recorded origin of that image (source bundle, asset name, size, bytes and sha256) straight from the manifest.
+ * published entry it prints whether the entry carries an in-game picture, and for those that do it prints the
+ * recorded origin of that picture (source bundle, asset name, size, bytes and sha256) straight from the manifest.
  * Entries with no game image are listed as diagram-only, which is the tier their page declares to the reader.
  */
 import { readFileSync, writeFileSync, readdirSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
+import { SITE } from '../pipeline/site.mjs';
 
 const root = process.cwd();
 const dir = join(root, 'content', 'published');
@@ -32,6 +33,9 @@ for (const e of entries) {
     (rec ? rec.assetName : 'MISSING') + ' | ' + (rec ? rec.width + 'x' + rec.height : '-') + ' | ' +
     (rec ? rec.bytes : '-') + ' | ' + (rec ? String(rec.sha256).slice(0, 16) : '-') + ' |');
 }
+// The design-owned homepage pictures are manifest records too: they are not in any entry's images array, so they
+// have to be counted as used through SITE or the report calls them unused and the gate fails.
+for (const p of [SITE.heroImage, SITE.featureImage]) if (p) usedFiles.add(p);
 const unused = (manifest.records ?? []).filter((r) => !usedFiles.has(r.file));
 const illustrated = entries.length - diagramOnly.length;
 const pct = entries.length ? Math.round((illustrated / entries.length) * 100) : 0;
@@ -44,9 +48,10 @@ writeFileSync(join(root, 'reports', 'image-coverage.md'),
   '- entries that are diagram-only, labelled as such on their own page: ' + diagramOnly.length + '\n' +
   '- mapped image records in the manifest: ' + (manifest.records ?? []).length + '\n' +
   '- manifest records no entry currently uses: ' + unused.length + (unused.length ? ' (' + unused.map((r) => r.file).join(', ') + ')' : '') + '\n\n' +
-  'Every image below was exported from the game on this machine and its bytes were hashed when it was written, so the\n' +
-  'record can be re-checked by rebuilding. An entry with no game image is not pretending to have one: its diagram is\n' +
-  'labelled "not a screenshot" and the entry says so at the top.\n\n' +
+  'Every picture below is an in-game picture recorded in the image ledger with the source it came from; its bytes,\n' +
+  'dimensions and sha256 were measured when the record was written, so the record can be re-checked by rebuilding.\n' +
+  'An entry with no game image is not pretending to have one: its diagram is labelled "not a screenshot" and the\n' +
+  'entry says so at the top.\n\n' +
   '| entry | picture tier | file | source bundle | asset name | size | bytes | sha256 (first 16) |\n' +
   '| --- | --- | --- | --- | --- | --- | --- | --- |\n' + rows.join('\n') + '\n\n' +
   (diagramOnly.length ? '## Entries still waiting for an image from the game\n\n' +
