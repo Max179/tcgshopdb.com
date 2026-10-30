@@ -9,20 +9,23 @@ most recent recorded rounds verbatim, so the Mac side has the facts without the 
 The 186 raw Unity texture exports (UI atlases, white-on-black icon sheets, albedo/ground/furniture textures, grey
 placeholders) were replaced with **89 sourced in-game pictures**, one per pictured entry, and the two homepage
 pictures were replaced with official store screenshots. Revision 2 of the pack then swapped **51 of the 89**
-pictures for better-fitting subjects and fixed the Steam source-page records. Full record:
-`reports/image-replacement-2026-10-30.md`.
+pictures for better-fitting subjects and fixed the Steam source-page records. Revision 3 (the wiki completeness
+pass) then swapped **86 of the 89** pictures for the specific TCG Card Shop Simulator Wiki on wiki.gg files. Full
+record: `reports/image-replacement-2026-10-30.md`.
 
 - Commits: `195a3f6` (89 pictures + manifest + 89 entry files + homepage + pack reports, 186 old mapped files
   deleted), `b9aa756` (generated credits, homepage provenance, wording), `0e86f21` (revision-2 swap: 51
   pictures/manifest entries replaced, Steam sourcePage fixed), `9cde7f0` (homepage credit to the official store
-  page), then the docs commit that carries this section and the status commit. Working tree clean at handoff.
-- Sources: **43** pictures from the TCG Card Shop Wiki (Fandom), **46** from the official Steam store page (every
-  Steam record's sourcePage is the store app page, originalUrl keeps the CDN URL); 53 unique pictures, 46 records
-  in shared groups whose notes say "Shared with N other entrie(s) as a category-level in-game picture." (36 reused
-  copies, max 6 repeats); 9,734,461 mapped bytes, all 1200x750. Every manifest record carries sourceName,
-  sourcePage (absolute http(s)), originalUrl, license, rightsReview (`fair_use_review`), retrievedAt, verdict,
-  reviewer and reviewDate; every file was re-checked against its sha256/bytes/dimensions. The 9 `diagram-only`
-  entries are untouched.
+  page), `0028520` (revision-3 completeness pass: 86 pictures/manifest entries replaced, reports replaced), then
+  the code/copy commit for the wiki.gg naming, the docs commit that carries this section and the status commit.
+  Working tree clean at handoff.
+- Sources: **79** pictures from the TCG Card Shop Simulator Wiki (wiki.gg), **10** from the official Steam store
+  page (was 43 Fandom / 46 Steam); 79 unique pictures, max 3 repeats, 4,835,632 mapped bytes, all 1200x750. Every
+  manifest record carries sourceName, sourcePage (absolute http(s)), license, rightsReview (`fair_use_review`),
+  retrievedAt, verdict, reviewer and reviewDate; every file was re-checked against its sha256/bytes/dimensions.
+  The 3 unchanged Steam pictures keep their `originalUrl`; the 86 changed records came back with `originalUrl`
+  null and 7 Steam fallbacks with a mapped-file `assetName` (pack bookkeeping regression recorded in the report,
+  no provenance field edited; the gate does not require originalUrl). The 9 `diagram-only` entries are untouched.
 - Build: **pages=445 indexable=176** (263 noindex, unchanged); 98 published entries (89 with an in-game picture,
   9 diagram-only notes), 63 guides, 855 facts, 89 picture records (unused 0). The sources page now renders a
   generated per-file credit table plus credited homepage rows; the disclaimer, home page, start page, game guide,
@@ -44,9 +47,10 @@ pictures for better-fitting subjects and fixed the Steam source-page records. Fu
       node tools/smoke.mjs                     -> [smoke] tcgshopdb.com: 176 kept, 263 noindex; the artefact passes
       node pipeline/status.mjs                 -> reports/status.json regenerated after the content and code commits
 
-- Picture fit, not provenance, is the residual: revision 2 remapped every entry from the revision-1 "clearly
-  wrong" list; 13 entries still show a clearly different object and 10 a weaker generic picture (ids with the
-  current "shows" in `reports/image-replacement-2026-10-30.md` §6, reported to the Lead to swap or accept).
+- Picture fit, not provenance, is the residual: revision 3's wiki.gg pass made almost every picture specific to
+  its entry; 3 entries still show a clearly different object (`the-plants-in-and-around-the-shop`,
+  `what-a-review-record-keeps`, `the-currencies-the-game-tracks`) and a few phone/icon fallbacks are weaker
+  (ids with the current "shows" in `reports/image-replacement-2026-10-30.md` §6, reported to the Lead).
 - Publishing: **not done from this machine**. The Lead owns the push and the Cloudflare Pages deploy; verify the
   live domain with `node tools/smoke.mjs https://tcgshopdb.com` after the deploy.
 
