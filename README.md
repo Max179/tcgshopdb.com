@@ -97,14 +97,15 @@ npm run typecheck
 The MIT licence in [`LICENSE`](LICENSE) covers the **site code only**. It does not relicense any picture:
 
 - **Game pictures** are in-game pictures: screenshots from the game's official Steam store page, files from its
-  community wikis (the TCG Card Shop Wiki on Fandom and wiki.gg), and pictures taken from the game itself. They
-  belong to the game's developer and their rights holders, and to the wiki uploaders for community files. They
-  are used only to identify the subject an entry describes, under a fair-use review, and this site does not
-  relicense them. Every file is recorded in `content/images-manifest.json` with its kind, entity, source name,
-  source page (an absolute URL), original URL, licence and rights-review status, retrieval date and hash, and
-  every record carries a reviewed verdict in `reports/image-reviews.md`. The build generates the per-file credit
-  table on `/reference/sources.html#pictures` from that manifest, and every published page carries the same
-  "Picture taken from the game to identify this item" label next to its picture.
+  community wiki (the TCG Card Shop Simulator Wiki on wiki.gg; earlier passes used the TCG Card Shop Wiki on
+  Fandom where that wiki had a file), and pictures taken from the game itself. They belong to the game's developer
+  and their rights holders, and to the wiki uploaders for community files. They are used only to identify the
+  subject an entry describes, under a fair-use review, and this site does not relicense them. Every file is
+  recorded in `content/images-manifest.json` with its kind, entity, source name, source page (an absolute URL),
+  the original image URL where the source publishes one, licence and rights-review status, retrieval date and
+  hash, and every record carries a reviewed verdict in `reports/image-reviews.md`. The build generates the
+  per-file credit table on `/reference/sources.html#pictures` from that manifest, and every published page
+  carries the same "Picture taken from the game to identify this item" label next to its picture.
 - **Original diagrams** were drawn for this site and are labelled as diagrams, never as screenshots.
 
 The build's content gate refuses a published entry without an image, a diagram presented as a screenshot, or an
