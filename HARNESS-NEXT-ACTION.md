@@ -1,3 +1,7 @@
+# NOTE 2026-11-02 21:02 — sitemap P0 无需动作
+Live https://tcgshopdb.com/sitemap.xml = 176×`<url><loc>clean</loc></url>`（工具 curl 实测）。生成器已正确。继续下方原 Next 队列（图片/部署后验），勿重做 sitemap。
+
+---
 # Harness next action — TCG Shop (tcgshopdb.com)
 
 Updated: 2026-11-02, after the Mac handoff integration, picture replacement revision 3 and the SEO pass.
