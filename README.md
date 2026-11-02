@@ -37,10 +37,11 @@ python3 -m http.server 4205 --directory web/dist
 | Command | What it does |
 | --- | --- |
 | `npm run build` | Regenerate `web/dist/` from the committed data and content. The build prints `pages=445 indexable=176`. |
-| `npm test` | Run the 66 site gates (`tests/site.test.mjs`). Builds into a temp directory and checks routes, canonical URLs, noindex/sitemap policy, provenance, images (including the picture-source ledger and the generated credit table), content invariants, duplicate indexable pages, mobile viewport and the publish configuration. |
+| `npm test` | Run the 80 site gates (`tests/site.test.mjs`). Builds into a temp directory and checks routes, clean canonical URLs, the SEO contract (titles, descriptions, og/twitter, JSON-LD, sitemap lastmod, robots, IndexNow key), noindex/sitemap policy, provenance, images (including the picture-source ledger and the generated credit table), content invariants, duplicate indexable pages, mobile viewport and the publish configuration. |
 | `npm run typecheck` | `tsc --noEmit -p tsconfig.ci.json` — portable type roots, checks the `.mjs` pipeline and tests. |
 | `npm run gates` | Content gate, coverage matrix, image coverage and citation check, in that order. |
-| `npm run classify` | Rewrite `config/urls.json` (one keep/noindex line per emitted page) from `web/dist` + sitemap. |
+| `npm run classify` | Rewrite `config/urls.json` (one keep/noindex line per emitted page, keyed by its clean public URL) from `web/dist` + sitemap. |
+| `npm run indexnow` | Submit the built sitemap to IndexNow (Bing/Yandex). Manual publish step with network access; never run by the build, tests or deploy workflow. |
 | `npm run image-sanity` | Flag near-uniform or near-blank mapped images (Python 3 + Pillow) into `reports/image-sanity.md`. |
 | `npm run preflight` | Publish checklist: runs the site gates, requires a clean working tree, checks `reports/status.json`, the handoff report, the workflow, the raw/build boundaries and the coverage floor. |
 | `npm run smoke` | Check the built artefact against the classified URL list. With a URL argument (`npm run smoke -- https://tcgshopdb.com`) it checks the live site instead. |
@@ -112,6 +113,27 @@ The build's content gate refuses a published entry without an image, a diagram p
 image without English and Chinese alt text. The site tests refuse a picture record that does not carry a source
 name, a source page, a retrieval date and a rights review, a source page that is not an absolute `http(s)` URL,
 or a record that the generated credit table does not list.
+
+## SEO and URL scheme
+
+Pages are stored as `.html` files but the host serves them at **clean URLs** (`/entries/cards`, `/entities/`,
+`/`) and 308-redirects the `.html` forms. Everything a crawler reads uses the clean form, so no link or
+canonical points at a redirect: canonical, `og:url`, hreflang, the sitemap, JSON-LD and every internal link.
+
+- **Titles** are generated per page: the page's own subject plus the brand suffix, and the suffix is dropped rather
+  than exceeding 60 characters. Every indexable page has a unique 25-60 character title.
+- **Descriptions** are unique and 70-160 characters, cut on a word boundary (never mid-word).
+- **JSON-LD**: the home page carries `WebSite` + `SearchAction`; every indexable page carries a `WebPage` (or
+  `Article` for entries and guides) plus a `BreadcrumbList`, all with URLs matching the canonical.
+- **Social**: `og:title/description/url/image/type` and `twitter:card/title/description/image` on every
+  indexable page; the twitter image is the og image.
+- **Sitemap**: exactly the 176 indexable pages in clean URL form. `<lastmod>` is only written where content
+  metadata supplies a truthful date (an `updates.json` date, or the picture record date of a pictured entry);
+  undated pages carry no `lastmod` rather than a faked build date.
+- **robots.txt**: `Allow: /` plus the sitemap line, with the `noindex` policy for the reference/evidence layer.
+- **IndexNow**: `web/indexnow-key.txt` is a public 32-hex ownership key; the build serves it at
+  `/<key>.txt` from the dist root. `tools/indexnow.mjs` is the manual submission step and is not part of the
+  build or the deploy workflow.
 
 ## Deploy
 

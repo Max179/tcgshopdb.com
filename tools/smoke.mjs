@@ -11,17 +11,15 @@
  */
 import { readFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
+import { fileForCleanPath } from '../pipeline/site.mjs';
 
 const base = process.argv[2];
 const urls = JSON.parse(readFileSync('config/urls.json', 'utf8'));
 const status = existsSync('reports/status.json') ? JSON.parse(readFileSync('reports/status.json', 'utf8')) : {};
 const domain = urls.site || status.site;
 const outDir = 'web/dist';
-const fileFor = (u) => {
-  const clean = u.split('#')[0].split('?')[0];
-  if (clean.endsWith('/')) return join(outDir, clean.slice(1), 'index.html');
-  return join(outDir, clean.replace(/^\//, ''));
-};
+// Public URLs are clean; the file that serves one is the matching .html path (Cloudflare Pages serves it).
+const fileFor = (u) => join(outDir, fileForCleanPath(u.split('#')[0].split('?')[0]));
 const PLACEHOLDER = /\b(tbd|todo|lorem ipsum|placeholder|coming soon)\b/i;
 
 if (!base) {
@@ -36,19 +34,20 @@ if (!base) {
       if (!existsSync(f)) { fails.push(e.url + ': no file'); continue; }
       const h = readFileSync(f, 'utf8');
       if (!/<title>[^<]+<\/title>/.test(h)) fails.push(e.url + ': no title');
-      if (!h.includes('https://' + domain + '/')) fails.push(e.url + ': canonical is not on ' + domain);
+      if (!h.includes('rel="canonical" href="https://' + domain + e.url + '"')) fails.push(e.url + ': canonical is not the page URL on ' + domain);
       if (h.includes('noindex')) fails.push(e.url + ': a kept page says noindex');
       if (PLACEHOLDER.test(h.replace(/<script[\s\S]*?<\/script>/g, ' ').replace(/<[^>]*>/g, ' '))) fails.push(e.url + ': placeholder text');
     } else {
       noindexed++;
-      if (sitemap.includes('https://' + domain + e.url)) fails.push(e.url + ': noindex page is in the sitemap');
+      if (sitemap.includes('<loc>https://' + domain + e.url + '</loc>')) fails.push(e.url + ': noindex page is in the sitemap');
       if (existsSync(f) && !readFileSync(f, 'utf8').includes('noindex')) fails.push(e.url + ': is not marked noindex');
     }
   }
   for (const required of ['index.html', '404.html', 'sitemap.xml', 'robots.txt', 'style.css']) {
     if (!existsSync(join(outDir, required))) fails.push(required + ': missing from the artefact');
   }
-  if (!sitemap.includes('https://' + domain + '/')) fails.push('sitemap: not on the published domain');
+  if (!sitemap.includes('<loc>https://' + domain + '/</loc>')) fails.push('sitemap: the home URL is not on the published domain');
+  if (sitemap.includes('.html</loc>')) fails.push('sitemap: a <loc> still uses the redirecting .html form');
   console.log('[smoke] ' + domain + ': ' + kept + ' kept, ' + noindexed + ' noindex, artefact in ' + outDir);
   if (fails.length) { for (const f of fails.slice(0, 12)) console.log('  FAIL ' + f); console.log('[smoke] ' + fails.length + ' failure(s)'); process.exit(1); }
   console.log('[smoke] the artefact passes; point this script at the live URL after publishing');
@@ -67,7 +66,7 @@ for (const e of urls.entries ?? []) {
     checked++;
     if (!res.ok) fails.push(url + ': HTTP ' + res.status);
     else if (!/<title>[^<]+<\/title>/.test(body)) fails.push(url + ': no title in the response');
-    else if (!body.includes('https://' + domain + '/')) fails.push(url + ': canonical is not on ' + domain);
+    else if (!body.includes('rel="canonical" href="https://' + domain + e.url + '"')) fails.push(url + ': canonical is not the page URL on ' + domain);
   } catch (err) {
     fails.push(url + ': ' + String(err).slice(0, 80));
   }

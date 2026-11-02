@@ -11,6 +11,7 @@
     "typecheck": "tsc --noEmit -p tsconfig.ci.json",
     "gates": "node tools/content-gate.mjs && node tools/coverage.mjs && node tools/image-coverage.mjs && node tools/verify-citations.mjs",
     "classify": "node tools/classify-urls.mjs",
+    "indexnow": "node tools/indexnow.mjs",
     "image-sanity": "python3 tools/image-sanity.py",
     "preflight": "node tools/preflight.mjs",
     "smoke": "node tools/smoke.mjs",

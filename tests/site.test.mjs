@@ -9,9 +9,11 @@ import { execFileSync } from 'node:child_process';
 import { join } from 'node:path';
 import { createHash } from 'node:crypto';
 import { tmpdir } from 'node:os';
-import { build, lookupFields, SITE, NAV, CATEGORIES, REFERENCE_PATHS } from '../pipeline/site.mjs';
+import { build, lookupFields, SITE, NAV, CATEGORIES, REFERENCE_PATHS, cleanPath, fileForCleanPath } from '../pipeline/site.mjs';
 
 const INV = 'data/normalized/p0-inventory.json';
+// The site is served at clean URLs, so a sitemap <loc> maps back to the .html file that serves it.
+const locFile = (loc) => fileForCleanPath(new URL(loc).pathname);
 let pass = 0, fail = 0;
 const ok = (name, cond, detail = '') => { if (cond) { pass++; console.log('  PASS ' + name); } else { fail++; console.log('  FAIL ' + name + (detail ? ' :: ' + detail : '')); } };
 
@@ -65,7 +67,7 @@ try {
   ok('robots.txt points at the sitemap', readFileSync(join(dir, 'robots.txt'), 'utf8').includes('Sitemap: ' + SITE.url + '/sitemap.xml'));
   ok('the build reports the page count it emitted', stats.pages > 100, String(stats.pages));
   // A nav target that is not emitted is a dangling link for every visitor; the route list check did not cover it.
-  const missingNav = NAV.filter(([href]) => !existsSync(join(dir, href.replace(/^\//, ''))));
+  const missingNav = NAV.filter(([href]) => !existsSync(join(dir, fileForCleanPath(href))));
   ok('every navigation target is a page that exists', missingNav.length === 0, missingNav.map(([h]) => h).join(', '));
   // The product routes named by the objective must each carry a canonical URL, an index directive and the source
   // line in the footer; their existence is already covered by "every required route is emitted" above.
@@ -79,8 +81,8 @@ try {
   // Two indexable pages that answer the same query with the same text are duplicate content; the audit that
   // prompted this gate found search.html and tool.html sharing 98.8% of their main text.
   const mains = {};
-  for (const m of (sitemap.match(/<loc>([^<]+)<\/loc>/g) ?? [])) {
-    const rel = m.replace('<loc>' + SITE.url + '/', '').replace('</loc>', '') || 'index.html';
+  for (const loc of [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1])) {
+    const rel = locFile(loc);
     const h = readFileSync(join(dir, rel), 'utf8');
     const body = h.match(/<main>([\s\S]*?)<\/main>/);
     mains[rel] = (body ? body[1] : h).replace(/\s+/g, ' ').trim();
@@ -131,16 +133,15 @@ try {
   for (const f of htmlFiles) {
     const h = readFileSync(f, 'utf8');
     for (const m of h.matchAll(/href="(\/[^"#?]*)([#?][^"]*)?"/g)) {
-      const t = m[1] === '/' ? 'index.html' : m[1].slice(1);
-      if (!existsSync(join(dir, t)) && !existsSync(join(dir, t, 'index.html'))) dangling.push(f.slice(dir.length) + ' -> ' + m[1]);
+      if (!existsSync(join(dir, fileForCleanPath(m[1])))) dangling.push(f.slice(dir.length) + ' -> ' + m[1]);
     }
   }
   ok('every internal link resolves to an emitted file', dangling.length === 0, dangling.slice(0, 5).join(', '));
 
   // A title that repeats the site name, or two pages sharing a title or description, is a real SEO defect.
   const seenTitles = new Set(); const seenDescs = new Set(); const badMeta = [];
-  for (const u of (sitemap.match(/<loc>([^<]+)<\/loc>/g) ?? [])) {
-    const rel = u.replace('<loc>' + SITE.url + '/', '').replace('</loc>', '') || 'index.html';
+  for (const loc of [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1])) {
+    const rel = locFile(loc);
     const h = readFileSync(join(dir, rel), 'utf8');
     const t = (h.match(/<title>([^<]*)<\/title>/) ?? [])[1] ?? '';
     const d = (h.match(/<meta name="description" content="([^"]*)"/) ?? [])[1] ?? '';
@@ -189,9 +190,10 @@ try {
   const entityFile = (e) => (e.imageTier === 'game-image' ? join(dir, 'entries', e.id + '.html') : join(dir, 'reference', 'notes', e.id + '.html'));
   const missingPages = published.filter((e) => !existsSync(entityFile(e)));
   ok('every published subject has a page: entities under /entries/, picture-less subjects as notes', missingPages.length === 0, missingPages.map((e) => e.id).join(', '));
+  const inSitemap = (path) => sitemap.includes('<loc>' + SITE.url + path + '</loc>');
   const misSitemapped = published.filter((e) => (e.imageTier === 'game-image'
-    ? !sitemap.includes(SITE.url + '/entries/' + e.id + '.html')
-    : sitemap.includes(SITE.url + '/reference/notes/' + e.id + '.html')));
+    ? !inSitemap('/entries/' + e.id)
+    : inSitemap('/reference/notes/' + e.id)));
   ok('the sitemap lists entities only, and keeps picture-less subjects out of it', misSitemapped.length === 0, misSitemapped.map((e) => e.id).join(', '));
   const thin = [];
   for (const e of published) {
@@ -210,7 +212,7 @@ try {
   const badRefPages = [...REFERENCE_PATHS].filter((rel) => {
     const file = rel.endsWith('/') ? join(dir, rel.slice(1), 'index.html') : join(dir, rel.slice(1));
     const h = readFileSync(file, 'utf8');
-    return !h.includes('noindex, follow') || sitemap.includes(SITE.url + rel);
+    return !h.includes('noindex, follow') || inSitemap(cleanPath(rel.replace(/^\//, '')));
   });
   ok('technical reference pages are noindex and stay out of the sitemap', badRefPages.length === 0, badRefPages.join(', '));
 
@@ -257,14 +259,15 @@ try {
   }
 
   // The five player sections, in order; the technical reference lives in the footer only.
-  const expectedNav = ['/guide.html', '/entities/', '/articles/', '/tools/', '/updates.html'];
+  const expectedNav = ['/guide', '/entities/', '/articles/', '/tools/', '/updates'];
   ok('the top navigation is exactly the five player sections, in order',
     NAV.length === expectedNav.length && NAV.every(([h], i) => h === expectedNav[i]) &&
-    !NAV.some(([h]) => h === '/reference/' || h === '/collection.html'), NAV.map(([h]) => h).join(' '));
+    !NAV.some(([h]) => h === '/reference/' || h === '/collection'), NAV.map(([h]) => h).join(' '));
 
   // The "what's new" list is a set of internal links, so a stale URL there is a broken link on a player page.
   const updates = JSON.parse(readFileSync('content/updates.json', 'utf8'));
-  const badUpdates = updates.filter((u) => !u.date || !u.title || !u.kind || !u.url || !existsSync(join(dir, String(u.url).replace(/^\//, ''))));
+  const badUpdates = updates.filter((u) => !u.date || !u.title || !u.kind || !u.url ||
+    !existsSync(join(dir, fileForCleanPath(cleanPath(String(u.url).replace(/^\//, ''))))));
   ok('every item on the updates page has a date, a title, a kind and a link that exists',
     Array.isArray(updates) && updates.length > 0 && badUpdates.length === 0,
     badUpdates.slice(0, 4).map((u) => u.url).join(', '));
@@ -275,7 +278,7 @@ try {
   const catPages = CATEGORIES.filter((c) => published.some((e) => c.src.includes(e.category) && e.imageTier === 'game-image'));
   const badCatPages = catPages.filter((c) => {
     const rel = 'entities/' + c.key + '.html';
-    if (!existsSync(join(dir, rel)) || !sitemap.includes(SITE.url + '/' + rel)) return true;
+    if (!existsSync(join(dir, rel)) || !inSitemap(cleanPath(rel))) return true;
     const h = readFileSync(join(dir, rel), 'utf8');
     return !/<figure class="banner">[\s\S]*?<img/.test(h) || !/id="f"/.test(h) || !/class="card"/.test(h);
   });
@@ -289,7 +292,7 @@ try {
     const h = readFileSync(join(dir, 'articles', a.id + '.html'), 'utf8');
     for (const section of ['Applies to', 'Before you start', 'Steps', 'Common mistakes', 'Related entries', 'Sources']) if (!h.includes(section)) thinArticles.push(a.id + ':' + section);
     if (!/<ol[\s>]/.test(h) || (a.steps ?? []).length < 3) thinArticles.push(a.id + ':steps');
-    if (!sitemap.includes(SITE.url + '/articles/' + a.id + '.html')) thinArticles.push(a.id + ':not in sitemap');
+    if (!inSitemap('/articles/' + a.id)) thinArticles.push(a.id + ':not in sitemap');
     const ids = (a.steps ?? []).flatMap((s) => String(s.because).split(/[(),\s]+/)).filter((x) => /[a-z][A-Z]|[0-9]|_/.test(x));
     for (const id of ids) if (h.includes(id)) thinArticles.push(a.id + ': leaks ' + id);
   }
@@ -330,10 +333,10 @@ ok('every game image used in an entry has a manifest record and exists in the bu
 
   const urlsCfg = JSON.parse(readFileSync('config/urls.json', 'utf8'));
   const classified = new Map((urlsCfg.entries ?? []).map((e) => [e.url, e.action]));
-  const emitted = htmlFiles.map((f) => '/' + f.slice(dir.length + 1).split('\\').join('/')).filter((p) => p !== '/404.html');
+  const emitted = htmlFiles.map((f) => cleanPath('/' + f.slice(dir.length + 1).split('\\').join('/'))).filter((p) => p !== '/404');
   const unclassified = emitted.filter((p) => !classified.has(p));
-  const keepNotInSitemap = [...classified].filter(([u, a]) => a === 'keep' && !sitemap.includes(SITE.url + u)).map(([u]) => u);
-  const noindexInSitemap = [...classified].filter(([u, a]) => a === 'noindex' && sitemap.includes(SITE.url + u)).map(([u]) => u);
+  const keepNotInSitemap = [...classified].filter(([u, a]) => a === 'keep' && !inSitemap(u)).map(([u]) => u);
+  const noindexInSitemap = [...classified].filter(([u, a]) => a === 'noindex' && inSitemap(u)).map(([u]) => u);
   const badRedirects = (urlsCfg.redirects ?? []).filter((r) => !existsSync(join(dir, String(r.to).replace(/^\//, ''))));
   ok('every emitted page is classified in config/urls.json and the classification matches the sitemap',
     unclassified.length === 0 && keepNotInSitemap.length === 0 && noindexInSitemap.length === 0 && badRedirects.length === 0,
@@ -350,6 +353,199 @@ ok('every game image used in an entry has a manifest record and exists in the bu
     return false;
   });
   ok('mobile smoke: every page has a responsive viewport and no fixed width wider than a phone', notMobile.length === 0, notMobile.slice(0, 3).join(', '));
+
+  // ---- SEO gate ---------------------------------------------------------------------------------
+  // Everything a crawler reads has to describe the same redirect-free URL, and the head of every indexable page
+  // has to be complete enough to be indexed: a managed title, a unique description, canonical/og/twitter, JSON-LD,
+  // a clean sitemap with a truthful lastmod, a robots policy and a served IndexNow ownership key.
+  {
+    const sitemapLocs = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
+    const lastmodLocs = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>\s*<lastmod>([^<]+)<\/lastmod>/g)].map((m) => ({ loc: m[1], lastmod: m[2] }));
+    // A minimal XML parser: this asserts the sitemap is well-formed, not merely regex-shaped.
+    const parseXml = (xml) => {
+      let i = 0;
+      const fail = (msg) => { throw new Error(msg + ' at ' + i); };
+      const ws = () => { while (i < xml.length && /\s/.test(xml[i])) i++; };
+      const readName = () => { const s = i; while (i < xml.length && /[A-Za-z0-9:_-]/.test(xml[i])) i++; if (s === i) fail('expected a name'); return xml.slice(s, i); };
+      const readText = () => { const s = i; while (i < xml.length && xml[i] !== '<') i++; return xml.slice(s, i); };
+      const readAttrs = () => {
+        const out = {};
+        while (true) {
+          ws();
+          if (i >= xml.length || xml[i] === '>' || xml[i] === '/') return out;
+          const n = readName(); ws();
+          if (xml[i] !== '=') fail('expected = after ' + n);
+          i++; ws();
+          const q = xml[i];
+          if (q !== '"' && q !== "'") fail('expected a quoted attribute value');
+          i++;
+          const s = i;
+          while (i < xml.length && xml[i] !== q) i++;
+          if (i >= xml.length) fail('unterminated attribute');
+          out[n] = xml.slice(s, i); i++;
+        }
+      };
+      const readNode = () => {
+        ws();
+        if (xml[i] !== '<') fail('expected <');
+        i++;
+        if (xml[i] === '?') { i++; while (i + 1 < xml.length && !(xml[i] === '?' && xml[i + 1] === '>')) i++; if (i + 1 >= xml.length) fail('unterminated processing instruction'); i += 2; return null; }
+        if (xml[i] === '/') fail('unexpected closing tag');
+        const tag = readName(); const attrs = readAttrs(); ws();
+        if (xml[i] === '/') { i++; if (xml[i] !== '>') fail('expected >'); i++; return { tag, attrs, children: [], text: '' }; }
+        if (xml[i] !== '>') fail('expected >');
+        i++;
+        const children = []; let text = '';
+        while (true) {
+          if (i >= xml.length) fail('unexpected end of document inside ' + tag);
+          if (xml[i] === '<') {
+            if (xml[i + 1] === '/') { i += 2; const close = readName(); ws(); if (xml[i] !== '>') fail('expected > in close'); i++; if (close !== tag) fail('mismatched close ' + close + ' for ' + tag); return { tag, attrs, children, text }; }
+            const child = readNode(); if (child) children.push(child);
+          } else { text += readText(); }
+        }
+      };
+      if (/&(?!(amp|lt|gt|quot|apos|#\d+|#x[0-9a-fA-F]+);)/.test(xml)) fail('unescaped ampersand');
+      ws(); let root = readNode();
+      while (!root) { ws(); root = readNode(); }
+      ws();
+      if (i !== xml.length) fail('trailing content');
+      return root;
+    };
+    let sitemapTree = null, xmlError = '';
+    try { sitemapTree = parseXml(sitemap); } catch (e) { xmlError = e.message; }
+    ok('the sitemap is well-formed XML in the sitemaps.org namespace',
+      !!sitemapTree && sitemapTree.tag === 'urlset' && sitemapTree.attrs.xmlns === 'http://www.sitemaps.org/schemas/sitemap/0.9',
+      xmlError || 'unexpected root');
+    const urlNodes = sitemapTree ? sitemapTree.children.filter((c) => c.tag === 'url') : [];
+    ok('every sitemap <url> has one <loc> and at most one date-shaped <lastmod>',
+      urlNodes.length === sitemapLocs.length && urlNodes.every((n) =>
+        n.children.filter((c) => c.tag === 'loc').length === 1 &&
+        n.children.filter((c) => c.tag === 'lastmod').length <= 1 &&
+        n.children.filter((c) => c.tag === 'lastmod').every((c) => /^\d{4}-\d{2}-\d{2}$/.test(c.text.trim()))),
+      JSON.stringify({ nodes: urlNodes.length, locs: sitemapLocs.length }));
+    ok('the sitemap lists exactly the indexable pages, each once, in clean URL form',
+      sitemapLocs.length === stats.urls && new Set(sitemapLocs).size === sitemapLocs.length &&
+      sitemapLocs.every((l) => l === SITE.url + '/' || (l.startsWith(SITE.url + '/') && !l.endsWith('.html'))),
+      sitemapLocs.filter((l) => l.endsWith('.html')).slice(0, 3).join(', '));
+    // lastmod truthfulness is re-derived here from the same content metadata the build uses, not trusted blindly.
+    const updatesMeta = JSON.parse(readFileSync('content/updates.json', 'utf8'));
+    const manifestMeta = JSON.parse(readFileSync('content/images-manifest.json', 'utf8'));
+    const imageDate = new Map((manifestMeta.records ?? [])
+      .filter((r) => r.entity && /^\d{4}-\d{2}-\d{2}$/.test(String(r.retrievedAt ?? '')))
+      .map((r) => [r.entity, String(r.retrievedAt)]));
+    const expectedLastmod = new Map();
+    const put = (path, date) => { if (!date) return; const prev = expectedLastmod.get(path); if (!prev || date > prev) expectedLastmod.set(path, date); };
+    for (const u of updatesMeta) { const rel = String(u.url ?? '').replace(/^\//, ''); if (rel.endsWith('.html')) put(cleanPath(rel), String(u.date ?? '')); }
+    for (const e of published) if (e.imageTier === 'game-image') put(cleanPath('entries/' + e.id + '.html'), imageDate.get(e.id));
+    put('/updates', updatesMeta.map((u) => String(u.date ?? '')).sort().pop());
+    const actualLastmod = new Map(lastmodLocs.map((x) => [x.loc, x.lastmod]));
+    const wrongDates = [...expectedLastmod].filter(([path, date]) => actualLastmod.get(SITE.url + path) !== date).map(([path]) => path);
+    const extraDates = [...actualLastmod.keys()].filter((loc) => !expectedLastmod.has(loc.slice(SITE.url.length)));
+    ok('the sitemap carries a lastmod exactly where a truthful content date exists',
+      wrongDates.length === 0 && extraDates.length === 0 && actualLastmod.size === expectedLastmod.size,
+      JSON.stringify({ expected: expectedLastmod.size, actual: actualLastmod.size, wrong: wrongDates.slice(0, 3), extra: extraDates.slice(0, 3) }));
+    const seo = [];
+    for (const loc of sitemapLocs) {
+      const file = locFile(loc);
+      const h = readFileSync(join(dir, file), 'utf8');
+      const attr = (re) => (h.match(re) ?? [])[1] ?? '';
+      const ld = [...h.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map((m) => m[1]);
+      let parsed = null, ldError = '';
+      try {
+        if (ld.length !== 1) ldError = 'expected exactly one JSON-LD script, found ' + ld.length;
+        else parsed = JSON.parse(ld[0]);
+      } catch (e) { ldError = e.message; }
+      seo.push({
+        loc, file,
+        title: attr(/<title>([^<]*)<\/title>/),
+        desc: attr(/<meta name="description" content="([^"]*)"/),
+        canonical: attr(/<link rel="canonical" href="([^"]*)"/),
+        ogUrl: attr(/<meta property="og:url" content="([^"]*)"/),
+        ogTitle: attr(/<meta property="og:title" content="([^"]*)"/),
+        ogDesc: attr(/<meta property="og:description" content="([^"]*)"/),
+        ogImage: attr(/<meta property="og:image" content="([^"]*)"/),
+        ogType: attr(/<meta property="og:type" content="([^"]*)"/),
+        twCard: attr(/<meta name="twitter:card" content="([^"]*)"/),
+        twTitle: attr(/<meta name="twitter:title" content="([^"]*)"/),
+        twDesc: attr(/<meta name="twitter:description" content="([^"]*)"/),
+        twImage: attr(/<meta name="twitter:image" content="([^"]*)"/),
+        hreflang: [...h.matchAll(/<link rel="alternate" hreflang="(?:en|x-default)" href="([^"]*)"/g)].map((m) => m[1]),
+        ld, parsed, ldError,
+      });
+    }
+    const badTitles = seo.filter((p) => p.title.length < 25 || p.title.length > 60 || !/[A-Za-z0-9)]$/.test(p.title));
+    ok('every indexable page has a unique 25-60 character title that does not end mid-word',
+      badTitles.length === 0 && new Set(seo.map((p) => p.title)).size === seo.length,
+      badTitles.map((p) => p.loc + ' (' + p.title.length + ')').slice(0, 4).join(', '));
+    const badDescs = seo.filter((p) => p.desc.length < 70 || p.desc.length > 160 || /…$/.test(p.desc) || !/[A-Za-z0-9.)]$/.test(p.desc));
+    ok('every indexable page has a unique 70-160 character description without truncated words',
+      badDescs.length === 0 && new Set(seo.map((p) => p.desc)).size === seo.length,
+      badDescs.map((p) => p.loc + ' (' + p.desc.length + ')').slice(0, 4).join(', '));
+    const badUrlForm = seo.filter((p) => p.canonical !== p.loc || p.ogUrl !== p.loc ||
+      p.hreflang.length !== 2 || p.hreflang.some((u) => u !== p.loc) ||
+      p.canonical !== SITE.url + cleanPath(p.file) || p.canonical.includes('.html'));
+    ok('canonical, og:url and both hreflang links are the same clean URL as the sitemap <loc>',
+      badUrlForm.length === 0, badUrlForm.map((p) => p.loc).slice(0, 4).join(', '));
+    const badSocial = seo.filter((p) => !p.ogTitle || !p.ogDesc || !p.ogType || !p.ogImage || !p.ogUrl ||
+      p.twCard !== 'summary_large_image' || p.twTitle !== p.ogTitle || p.twDesc !== p.ogDesc || p.twImage !== p.ogImage ||
+      !/^https:\/\//.test(p.ogImage));
+    ok('every indexable page carries complete og and twitter metadata wired to the same page and image',
+      badSocial.length === 0, badSocial.map((p) => p.loc).slice(0, 4).join(', '));
+    const badLd = seo.filter((p) => p.ldError);
+    ok('every indexable page embeds valid JSON-LD', badLd.length === 0,
+      badLd.map((p) => p.loc + ': ' + p.ldError).slice(0, 3).join(' | '));
+    const ldNode = (p, type) => ((p.parsed && p.parsed['@graph']) ?? []).find((n) => n['@type'] === type);
+    const ldProblems = seo.filter((p) => {
+      if (!p.parsed || p.parsed['@context'] !== 'https://schema.org') return true;
+      if (p.loc === SITE.url + '/') {
+        const site = ldNode(p, 'WebSite');
+        return !site || site.url !== SITE.url + '/' || !site.potentialAction ||
+          site.potentialAction.target?.urlTemplate !== SITE.url + '/search?q={search_term_string}';
+      }
+      const kind = /\/(entries|articles)\/[^/]+$/.test(p.loc) ? 'Article' : 'WebPage';
+      const page = ldNode(p, kind);
+      if (!page || page.url !== p.loc || !page.name) return true;
+      if (kind === 'Article' && !page.headline) return true;
+      const crumb = ldNode(p, 'BreadcrumbList');
+      if (!crumb || !Array.isArray(crumb.itemListElement) || crumb.itemListElement.length < 2) return true;
+      if (!crumb.itemListElement.every((c) => typeof c.item === 'string' && c.item.startsWith(SITE.url + '/') && !c.item.endsWith('.html'))) return true;
+      if (crumb.itemListElement[crumb.itemListElement.length - 1].item !== p.loc) return true;
+      if (page.image && !/^https:\/\//.test(page.image)) return true;
+      return false;
+    });
+    ok('every indexable page has JSON-LD WebSite/Article/WebPage and BreadcrumbList matching its URL',
+      ldProblems.length === 0, ldProblems.map((p) => p.loc).slice(0, 3).join(', '));
+    const staleDates = seo.filter((p) => {
+      const page = ldNode(p, 'WebPage') ?? ldNode(p, 'Article');
+      if (!page || !page.dateModified) return false;
+      return page.dateModified !== actualLastmod.get(p.loc);
+    });
+    ok('JSON-LD dateModified agrees with the sitemap lastmod wherever both exist',
+      staleDates.length === 0, staleDates.map((p) => p.loc).slice(0, 3).join(', '));
+    const internalHtml = [];
+    for (const f of htmlFiles) {
+      const h = readFileSync(f, 'utf8');
+      if (/href="[^"]*\.html(?:[#?][^"]*)?"/.test(h) || /action="[^"]*\.html"/.test(h) || /url=\/[^"]*\.html/.test(h)) {
+        internalHtml.push(f.slice(dir.length));
+      }
+    }
+    ok('no page links to or redirects to the .html form the host 308-redirects', internalHtml.length === 0,
+      internalHtml.slice(0, 3).join(', '));
+    const robotsText = readFileSync(join(dir, 'robots.txt'), 'utf8');
+    ok('robots.txt allows the site, points at the sitemap and disallows nothing',
+      /^User-agent: \*$/m.test(robotsText) && /^Allow: \/$/m.test(robotsText) &&
+      robotsText.includes('Sitemap: ' + SITE.url + '/sitemap.xml') && !/^Disallow:/m.test(robotsText),
+      JSON.stringify(robotsText));
+    const keyFile = readFileSync('web/indexnow-key.txt', 'utf8').trim();
+    const distKeys = readdirSync(dir).filter((n) => /^[0-9a-f]{32}\.txt$/.test(n));
+    const toolSrc = readFileSync('tools/indexnow.mjs', 'utf8');
+    const workflowSrc = readFileSync('.github/workflows/publish.yml', 'utf8');
+    ok('the IndexNow key file is served from the dist root and the submission tool is manual-only',
+      /^[0-9a-f]{32}$/.test(keyFile) && distKeys.length === 1 && distKeys[0] === keyFile + '.txt' &&
+      readFileSync(join(dir, distKeys[0]), 'utf8').trim() === keyFile &&
+      toolSrc.includes('api.indexnow.org') && !toolSrc.includes('pipeline/site.mjs') && !workflowSrc.includes('indexnow'),
+      JSON.stringify({ keys: distKeys, tool: toolSrc.includes('api.indexnow.org') }));
+  }
 
   // The deploy target is declared twice (workflow flag and wrangler.toml); the two must agree.
   {

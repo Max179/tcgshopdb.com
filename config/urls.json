@@ -5,2197 +5,2197 @@
   "redirects": [],
   "entries": [
     {
-      "url": "/about.html",
+      "url": "/",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/articles/a-shop-day-that-turns-a-profit.html",
+      "url": "/about",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/articles/answering-the-reviews-a-shift-leaves-behind.html",
+      "url": "/articles/",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/articles/choosing-what-to-open-and-what-to-sell.html",
+      "url": "/articles/a-shop-day-that-turns-a-profit",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/articles/choosing-your-first-upgrades.html",
+      "url": "/articles/answering-the-reviews-a-shift-leaves-behind",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/articles/clearing-old-stock-in-bulk.html",
+      "url": "/articles/choosing-what-to-open-and-what-to-sell",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/articles/deciding-what-to-acquire-beyond-stock.html",
+      "url": "/articles/choosing-your-first-upgrades",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/articles/dressing-the-shop-so-it-looks-like-yours.html",
+      "url": "/articles/clearing-old-stock-in-bulk",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/articles/dressing-the-table-before-a-game.html",
+      "url": "/articles/deciding-what-to-acquire-beyond-stock",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/articles/earning-and-reading-achievements.html",
+      "url": "/articles/dressing-the-shop-so-it-looks-like-yours",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/articles/finding-the-card-games-own-screens.html",
+      "url": "/articles/dressing-the-table-before-a-game",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/articles/following-a-customer-from-the-door.html",
+      "url": "/articles/earning-and-reading-achievements",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/articles/following-a-pull-from-pack-to-value.html",
+      "url": "/articles/finding-the-card-games-own-screens",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/articles/from-delivery-to-sold-card.html",
+      "url": "/articles/following-a-customer-from-the-door",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/articles/getting-a-licence-without-stalling-the-shop.html",
+      "url": "/articles/following-a-pull-from-pack-to-value",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/articles/getting-a-table-game-onto-a-table.html",
+      "url": "/articles/from-delivery-to-sold-card",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/articles/getting-value-from-a-ghost-card.html",
+      "url": "/articles/getting-a-licence-without-stalling-the-shop",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/articles/getting-your-workers-doing-what-you-want.html",
+      "url": "/articles/getting-a-table-game-onto-a-table",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/articles/handling-the-cards-in-the-shop.html",
+      "url": "/articles/getting-value-from-a-ghost-card",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/articles/index.html",
+      "url": "/articles/getting-your-workers-doing-what-you-want",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/articles/keeping-a-collection-that-keeps-its-value.html",
+      "url": "/articles/handling-the-cards-in-the-shop",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/articles/keeping-a-shop-that-keeps-getting-messy.html",
+      "url": "/articles/keeping-a-collection-that-keeps-its-value",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/articles/keeping-the-counter-straight-on-a-busy-day.html",
+      "url": "/articles/keeping-a-shop-that-keeps-getting-messy",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/articles/keeping-the-shelves-selling.html",
+      "url": "/articles/keeping-the-counter-straight-on-a-busy-day",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/articles/labelling-the-shelves-so-prices-read-right.html",
+      "url": "/articles/keeping-the-shelves-selling",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/articles/letting-the-machines-and-the-restocker-do-the-work.html",
+      "url": "/articles/labelling-the-shelves-so-prices-read-right",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/articles/opening-day-routine.html",
+      "url": "/articles/letting-the-machines-and-the-restocker-do-the-work",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/articles/packs-to-profit.html",
+      "url": "/articles/opening-day-routine",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/articles/photographing-the-shop-with-the-phone-camera.html",
+      "url": "/articles/packs-to-profit",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/articles/planting-a-shop-that-looks-lived-in.html",
+      "url": "/articles/photographing-the-shop-with-the-phone-camera",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/articles/practising-the-card-game-before-it-matters.html",
+      "url": "/articles/planting-a-shop-that-looks-lived-in",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/articles/pricing-a-card-from-what-you-can-see.html",
+      "url": "/articles/practising-the-card-game-before-it-matters",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/articles/putting-a-collection-into-albums-without-losing-track.html",
+      "url": "/articles/pricing-a-card-from-what-you-can-see",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/articles/putting-a-deck-together-deliberately.html",
+      "url": "/articles/putting-a-collection-into-albums-without-losing-track",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/articles/putting-cards-on-display-so-they-sell.html",
+      "url": "/articles/putting-a-deck-together-deliberately",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/articles/putting-on-an-event-that-pays-for-itself.html",
+      "url": "/articles/putting-cards-on-display-so-they-sell",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/articles/putting-the-walls-and-the-prizes-to-work.html",
+      "url": "/articles/putting-on-an-event-that-pays-for-itself",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/articles/reading-a-cards-set-record-before-you-buy.html",
+      "url": "/articles/putting-the-walls-and-the-prizes-to-work",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/articles/reading-a-price-graph-without-guessing.html",
+      "url": "/articles/reading-a-cards-set-record-before-you-buy",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/articles/reading-the-board-before-you-act.html",
+      "url": "/articles/reading-a-price-graph-without-guessing",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/articles/reading-the-market-before-you-buy.html",
+      "url": "/articles/reading-the-board-before-you-act",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/articles/reading-the-shop-screens.html",
+      "url": "/articles/reading-the-market-before-you-buy",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/articles/reading-what-a-customer-wants.html",
+      "url": "/articles/reading-the-shop-screens",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/articles/reading-why-a-price-moved.html",
+      "url": "/articles/reading-what-a-customer-wants",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/articles/restocking-without-guessing-what-you-need.html",
+      "url": "/articles/reading-why-a-price-moved",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/articles/running-a-back-room-that-works.html",
+      "url": "/articles/restocking-without-guessing-what-you-need",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/articles/running-a-tournament-that-keeps-its-own-score.html",
+      "url": "/articles/running-a-back-room-that-works",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/articles/searching-your-cards-without-guessing.html",
+      "url": "/articles/running-a-tournament-that-keeps-its-own-score",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/articles/setting-a-shop-name-you-will-keep.html",
+      "url": "/articles/searching-your-cards-without-guessing",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/articles/setting-the-game-up-before-you-trade.html",
+      "url": "/articles/setting-a-shop-name-you-will-keep",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/articles/setting-up-a-fixture-once.html",
+      "url": "/articles/setting-the-game-up-before-you-trade",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/articles/signing-a-shop-so-people-find-their-way.html",
+      "url": "/articles/setting-up-a-fixture-once",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/articles/sorting-the-restock-list-before-you-spend.html",
+      "url": "/articles/signing-a-shop-so-people-find-their-way",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/articles/stocking-a-product-line-that-is-not-cards.html",
+      "url": "/articles/sorting-the-restock-list-before-you-spend",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/articles/stocking-figures-without-guessing.html",
+      "url": "/articles/stocking-a-product-line-that-is-not-cards",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/articles/storing-and-shelving-a-set.html",
+      "url": "/articles/stocking-figures-without-guessing",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/articles/the-pictures-the-game-draws-on-screen.html",
+      "url": "/articles/storing-and-shelving-a-set",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/articles/trading-a-card-without-losing-value.html",
+      "url": "/articles/the-pictures-the-game-draws-on-screen",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/articles/using-grading-without-wasting-cards.html",
+      "url": "/articles/trading-a-card-without-losing-value",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/articles/using-the-discard-pile.html",
+      "url": "/articles/using-grading-without-wasting-cards",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/articles/using-the-information-the-game-gives-you.html",
+      "url": "/articles/using-the-discard-pile",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/articles/using-the-warehouse-without-losing-stock.html",
+      "url": "/articles/using-the-information-the-game-gives-you",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/articles/what-the-game-writes-down-for-you.html",
+      "url": "/articles/using-the-warehouse-without-losing-stock",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/articles/what-to-do-with-a-duplicate-card.html",
+      "url": "/articles/what-the-game-writes-down-for-you",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/articles/working-out-how-many-customers-you-can-serve.html",
+      "url": "/articles/what-to-do-with-a-duplicate-card",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/cards.html",
+      "url": "/articles/working-out-how-many-customers-you-can-serve",
+      "action": "keep",
+      "reason": "player-facing page: a question a player asks"
+    },
+    {
+      "url": "/cards",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/collection.html",
+      "url": "/collection",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/contact.html",
+      "url": "/contact",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/disclaimer.html",
+      "url": "/disclaimer",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entities/basics.html",
+      "url": "/entities/",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entities/cards.html",
+      "url": "/entities/basics",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entities/customers.html",
+      "url": "/entities/cards",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entities/decks.html",
+      "url": "/entities/customers",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entities/events.html",
+      "url": "/entities/decks",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entities/index.html",
+      "url": "/entities/events",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entities/interface.html",
+      "url": "/entities/interface",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entities/packs.html",
+      "url": "/entities/packs",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entities/pricing.html",
+      "url": "/entities/pricing",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entities/shop.html",
+      "url": "/entities/shop",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entities/storage.html",
+      "url": "/entities/storage",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entities/upgrades.html",
+      "url": "/entities/upgrades",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entity/actionresolve-discardallhandcard-d-162.html",
+      "url": "/entity/actionresolve-discardallhandcard-d-162",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/actionresolve-discarddeck-d-160.html",
+      "url": "/entity/actionresolve-discarddeck-d-160",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/actionresolve-drawcard-d-161.html",
+      "url": "/entity/actionresolve-drawcard-d-161",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/actionresolve-selectcardtodiscard-d-158.html",
+      "url": "/entity/actionresolve-selectcardtodiscard-d-158",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/antialiasingcontroller.html",
+      "url": "/entity/antialiasingcontroller",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/aspectratiopositionoffset.html",
+      "url": "/entity/aspectratiopositionoffset",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/audiomixervolumecontroller.html",
+      "url": "/entity/audiomixervolumecontroller",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/autocardopenerui.html",
+      "url": "/entity/autocardopenerui",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/autocardopeneruispawner.html",
+      "url": "/entity/autocardopeneruispawner",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/autopackopenersavedata.html",
+      "url": "/entity/autopackopenersavedata",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/bakedanimationset.html",
+      "url": "/entity/bakedanimationset",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/brightnesscontroller.html",
+      "url": "/entity/brightnesscontroller",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/bulkdonationboxcardpanelui.html",
+      "url": "/entity/bulkdonationboxcardpanelui",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/card3dlist.html",
+      "url": "/entity/card3dlist",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/card3duigroup.html",
+      "url": "/entity/card3duigroup",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/card3duispawner.html",
+      "url": "/entity/card3duispawner",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/cardamountuigroup.html",
+      "url": "/entity/cardamountuigroup",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/carddata.html",
+      "url": "/entity/carddata",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/carddrawqueuedata.html",
+      "url": "/entity/carddrawqueuedata",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/cardexpansionselectscreen.html",
+      "url": "/entity/cardexpansionselectscreen",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/cardfanrandomizer.html",
+      "url": "/entity/cardfanrandomizer",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/carditemcombishelf.html",
+      "url": "/entity/carditemcombishelf",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/carditemcombishelfsavedata.html",
+      "url": "/entity/carditemcombishelfsavedata",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/cardopeningsequence.html",
+      "url": "/entity/cardopeningsequence",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/cardopeningsequenceui.html",
+      "url": "/entity/cardopeningsequenceui",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/cardpricepopupui.html",
+      "url": "/entity/cardpricepopupui",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/cardrarityselectscreen.html",
+      "url": "/entity/cardrarityselectscreen",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/cardrevealend-d-27.html",
+      "url": "/entity/cardrevealend-d-27",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/cardshelf.html",
+      "url": "/entity/cardshelf",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/cardshelfsavedata.html",
+      "url": "/entity/cardshelfsavedata",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/cardstorageshelfsavedata.html",
+      "url": "/entity/cardstorageshelfsavedata",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/cardui.html",
+      "url": "/entity/cardui",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/carduisetting.html",
+      "url": "/entity/carduisetting",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/carduisettingdata.html",
+      "url": "/entity/carduisettingdata",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/checkpricepanelui.html",
+      "url": "/entity/checkpricepanelui",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/checkpricescreen.html",
+      "url": "/entity/checkpricescreen",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/collectionpackimagesprite.html",
+      "url": "/entity/collectionpackimagesprite",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/compactcarddataamount.html",
+      "url": "/entity/compactcarddataamount",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/confirmsellshelfscreen.html",
+      "url": "/entity/confirmsellshelfscreen",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/confirmtrashcardscreen.html",
+      "url": "/entity/confirmtrashcardscreen",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/countermoneychangecurrencydata.html",
+      "url": "/entity/countermoneychangecurrencydata",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/csettingdata.html",
+      "url": "/entity/csettingdata",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/custombooleancontroller.html",
+      "url": "/entity/custombooleancontroller",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/customer.html",
+      "url": "/entity/customer",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/customermanager.html",
+      "url": "/entity/customermanager",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/customerprofile.html",
+      "url": "/entity/customerprofile",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/customerreviewdata.html",
+      "url": "/entity/customerreviewdata",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/customerreviewgatherdata.html",
+      "url": "/entity/customerreviewgatherdata",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/customerreviewmanager.html",
+      "url": "/entity/customerreviewmanager",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/customerreviewpanelui.html",
+      "url": "/entity/customerreviewpanelui",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/customerreviewscreen.html",
+      "url": "/entity/customerreviewscreen",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/customerreviewtextdatatable.html",
+      "url": "/entity/customerreviewtextdatatable",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/customersavedata.html",
+      "url": "/entity/customersavedata",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/customertournamentdata.html",
+      "url": "/entity/customertournamentdata",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/customertradecardscreen.html",
+      "url": "/entity/customertradecardscreen",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/customertradedata.html",
+      "url": "/entity/customertradedata",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/customfloatcontroller.html",
+      "url": "/entity/customfloatcontroller",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/decideiffinishshopping-d-140.html",
+      "url": "/entity/decideiffinishshopping-d-140",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/deckcardeditpanelui.html",
+      "url": "/entity/deckcardeditpanelui",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/deckcardplusminusscreen.html",
+      "url": "/entity/deckcardplusminusscreen",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/deckcompactcarddatalist.html",
+      "url": "/entity/deckcompactcarddatalist",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/delayexitshop-d-141.html",
+      "url": "/entity/delayexitshop-d-141",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/delayexitshop-d-160.html",
+      "url": "/entity/delayexitshop-d-160",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/delayexitviewcardalbummode-d-246.html",
+      "url": "/entity/delayexitviewcardalbummode-d-246",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/delayhidecardalbum-d-66.html",
+      "url": "/entity/delayhidecardalbum-d-66",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/delaylerpspawnedcardpacktohand-d-188.html",
+      "url": "/entity/delaylerpspawnedcardpacktohand-d-188",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/delayloadcustomer-d-105.html",
+      "url": "/entity/delayloadcustomer-d-105",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/delayremovecustomerfromqueue-d-161.html",
+      "url": "/entity/delayremovecustomerfromqueue-d-161",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/delayresetcanflipbook-d-68.html",
+      "url": "/entity/delayresetcanflipbook-d-68",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/delayresetcustomerextraspeed-d-39.html",
+      "url": "/entity/delayresetcustomerextraspeed-d-39",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/delayresetcustomerextraspeed-d-61.html",
+      "url": "/entity/delayresetcustomerextraspeed-d-61",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/delayresetissettingprice-d-21.html",
+      "url": "/entity/delayresetissettingprice-d-21",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/delayresetissettingprice-d-70.html",
+      "url": "/entity/delayresetissettingprice-d-70",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/delayresetopenbox-d-14.html",
+      "url": "/entity/delayresetopenbox-d-14",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/delayresetopenbox-d-18.html",
+      "url": "/entity/delayresetopenbox-d-18",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/delayresettoggleopenclose-d-40.html",
+      "url": "/entity/delayresettoggleopenclose-d-40",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/delaysetbinderpagecardindex-d-73.html",
+      "url": "/entity/delaysetbinderpagecardindex-d-73",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/delaysetbinderpagevisibility-d-67.html",
+      "url": "/entity/delaysetbinderpagevisibility-d-67",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/delaysetischangingkeybind-d-11.html",
+      "url": "/entity/delaysetischangingkeybind-d-11",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/delaysetpricetagvisibility-d-44.html",
+      "url": "/entity/delaysetpricetagvisibility-d-44",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/delaysetuimodefalse-d-216.html",
+      "url": "/entity/delaysetuimodefalse-d-216",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/delayshowcard-d-6.html",
+      "url": "/entity/delayshowcard-d-6",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/delayspawngamestartcustomer-d-59.html",
+      "url": "/entity/delayspawngamestartcustomer-d-59",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/discardelementareacard-d-163.html",
+      "url": "/entity/discardelementareacard-d-163",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/eactionresolvecardcondition.html",
+      "url": "/entity/eactionresolvecardcondition",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/eboostereffect.html",
+      "url": "/entity/eboostereffect",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/ecardbordertype.html",
+      "url": "/entity/ecardbordertype",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/ecarddrawqueuetype.html",
+      "url": "/entity/ecarddrawqueuetype",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/ecardexpansiontype.html",
+      "url": "/entity/ecardexpansiontype",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/ecardremovetype.html",
+      "url": "/entity/ecardremovetype",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/ecollectionpacktype.html",
+      "url": "/entity/ecollectionpacktype",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/ecustomerreviewtype.html",
+      "url": "/entity/ecustomerreviewtype",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/ecustomerstate.html",
+      "url": "/entity/ecustomerstate",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/ecustomertype.html",
+      "url": "/entity/ecustomertype",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/eghostcardeffect.html",
+      "url": "/entity/eghostcardeffect",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/emoneycurrencytype.html",
+      "url": "/entity/emoneycurrencytype",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/epricechangetype.html",
+      "url": "/entity/epricechangetype",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/erarity.html",
+      "url": "/entity/erarity",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/erestockertype.html",
+      "url": "/entity/erestockertype",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/erestocksortingtype.html",
+      "url": "/entity/erestocksortingtype",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/eshopitem.html",
+      "url": "/entity/eshopitem",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/eupgradetype.html",
+      "url": "/entity/eupgradetype",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/evaluateactiverestockuiscroller-d-36.html",
+      "url": "/entity/evaluateactiverestockuiscroller-d-36",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/eventsystem.html",
+      "url": "/entity/eventsystem",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/expansionshoppanelui.html",
+      "url": "/entity/expansionshoppanelui",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/expansionshopuiscreen.html",
+      "url": "/entity/expansionshopuiscreen",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/footoffset.html",
+      "url": "/entity/footoffset",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/fpscontroller.html",
+      "url": "/entity/fpscontroller",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/fullscreencontroller.html",
+      "url": "/entity/fullscreencontroller",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/furnitureshopconfirmpurchasescreen.html",
+      "url": "/entity/furnitureshopconfirmpurchasescreen",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/furnitureshoppanelui.html",
+      "url": "/entity/furnitureshoppanelui",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/furnitureshopuiscreen.html",
+      "url": "/entity/furnitureshopuiscreen",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/gamepadsettinglinker.html",
+      "url": "/entity/gamepadsettinglinker",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/ghostcarddata.html",
+      "url": "/entity/ghostcarddata",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/gradecardpanelui.html",
+      "url": "/entity/gradecardpanelui",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/gradecardservicedata.html",
+      "url": "/entity/gradecardservicedata",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/gradecardsubmitset.html",
+      "url": "/entity/gradecardsubmitset",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/gradecardwebsiteuiscreen.html",
+      "url": "/entity/gradecardwebsiteuiscreen",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/gradedcardopeningsequence.html",
+      "url": "/entity/gradedcardopeningsequence",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/gradedcardsetcheckstatusscreen.html",
+      "url": "/entity/gradedcardsetcheckstatusscreen",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/gradedcardsubmitselectscreen.html",
+      "url": "/entity/gradedcardsubmitselectscreen",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/gradingprogresssetpanelui.html",
+      "url": "/entity/gradingprogresssetpanelui",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/hapticdataset.html",
+      "url": "/entity/hapticdataset",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/interactableautopackopener.html",
+      "url": "/entity/interactableautopackopener",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/interactablecard3d.html",
+      "url": "/entity/interactablecard3d",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/interactablecardcompartment.html",
+      "url": "/entity/interactablecardcompartment",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/interactablecardpricetag.html",
+      "url": "/entity/interactablecardpricetag",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/interactablecardstorageshelf.html",
+      "url": "/entity/interactablecardstorageshelf",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/interactablecountermoneychange.html",
+      "url": "/entity/interactablecountermoneychange",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/interactablecustomercash.html",
+      "url": "/entity/interactablecustomercash",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/interactablepackagingbox-card.html",
+      "url": "/entity/interactablepackagingbox",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/interactablepackagingbox-item.html",
+      "url": "/entity/interactablepackagingbox-card",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/interactablepackagingbox-shelf.html",
+      "url": "/entity/interactablepackagingbox-item",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/interactablepackagingbox.html",
+      "url": "/entity/interactablepackagingbox-shelf",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/interactablepricetag.html",
+      "url": "/entity/interactablepricetag",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/interactableshopbillboard.html",
+      "url": "/entity/interactableshopbillboard",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/inventorybase.html",
+      "url": "/entity/inventorybase",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/itempricegraphscreen.html",
+      "url": "/entity/itempricegraphscreen",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/itempricelinegrp.html",
+      "url": "/entity/itempricelinegrp",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/keybindsetting.html",
+      "url": "/entity/keybindsetting",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/languagesourceasset.html",
+      "url": "/entity/languagesourceasset",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/layoutelement.html",
+      "url": "/entity/layoutelement",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/legendcardglowtexturepanner.html",
+      "url": "/entity/legendcardglowtexturepanner",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/marketprice.html",
+      "url": "/entity/marketprice",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/mask.html",
+      "url": "/entity/mask",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/mastervolumecontroller.html",
+      "url": "/entity/mastervolumecontroller",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/onfinishsearchcardselection-d-157.html",
+      "url": "/entity/onfinishsearchcardselection-d-157",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/packageboxcandidate.html",
+      "url": "/entity/packageboxcandidate",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/packageboxcardsavedata.html",
+      "url": "/entity/packageboxcardsavedata",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/packageboxitemavedata.html",
+      "url": "/entity/packageboxitemavedata",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/paramvalue.html",
+      "url": "/entity/paramvalue",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/platformprefabset.html",
+      "url": "/entity/platformprefabset",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/playcard.html",
+      "url": "/entity/playcard",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/playcardbuttongrp.html",
+      "url": "/entity/playcardbuttongrp",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/playcarddeckdata.html",
+      "url": "/entity/playcarddeckdata",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/playcardeffect-scriptableobject.html",
+      "url": "/entity/playcardeffect-scriptableobject",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/playcardelementdamagedisplay.html",
+      "url": "/entity/playcardelementdamagedisplay",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/playcardgamemanager.html",
+      "url": "/entity/playcardgamemanager",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/playcardpool.html",
+      "url": "/entity/playcardpool",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/playcardrulebookscreen.html",
+      "url": "/entity/playcardrulebookscreen",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/playcardsearchdata.html",
+      "url": "/entity/playcardsearchdata",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/playcardsearchselectioncardui.html",
+      "url": "/entity/playcardsearchselectioncardui",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/playcardset.html",
+      "url": "/entity/playcardset",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/playcardsetui.html",
+      "url": "/entity/playcardsetui",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/playcardsetuiscreen-actionresolve.html",
+      "url": "/entity/playcardsetuiscreen",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/playcardsetuiscreen-endgameconversation.html",
+      "url": "/entity/playcardsetuiscreen-actionresolve",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/playcardsetuiscreen-inspectboard.html",
+      "url": "/entity/playcardsetuiscreen-endgameconversation",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/playcardsetuiscreen-mulligan.html",
+      "url": "/entity/playcardsetuiscreen-inspectboard",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/playcardsetuiscreen-searchcardselection.html",
+      "url": "/entity/playcardsetuiscreen-mulligan",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/playcardsetuiscreen-selectelementarea.html",
+      "url": "/entity/playcardsetuiscreen-searchcardselection",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/playcardsetuiscreen-winlosescreen.html",
+      "url": "/entity/playcardsetuiscreen-selectelementarea",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/playcardsetuiscreen.html",
+      "url": "/entity/playcardsetuiscreen-winlosescreen",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/postprocessingcontroller.html",
+      "url": "/entity/postprocessingcontroller",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/postprocessingeffectcontroller.html",
+      "url": "/entity/postprocessingeffectcontroller",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/pricechangemanager.html",
+      "url": "/entity/pricechangemanager",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/pricechangetypetext.html",
+      "url": "/entity/pricechangetypetext",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/pricepopupspawner.html",
+      "url": "/entity/pricepopupspawner",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/pricepopupui.html",
+      "url": "/entity/pricepopupui",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/pricetagatlasmap.html",
+      "url": "/entity/pricetagatlasmap",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/pricetaguispawner.html",
+      "url": "/entity/pricetaguispawner",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/refreshratecontroller.html",
+      "url": "/entity/refreshratecontroller",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/resetcanupdatekeybind-d-20.html",
+      "url": "/entity/resetcanupdatekeybind-d-20",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/resolutioncontroller.html",
+      "url": "/entity/resolutioncontroller",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/restockcategorybar.html",
+      "url": "/entity/restockcategorybar",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/restockcheckoutitembar.html",
+      "url": "/entity/restockcheckoutitembar",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/restockdata.html",
+      "url": "/entity/restockdata",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/restockitemaddtocartscreen.html",
+      "url": "/entity/restockitemaddtocartscreen",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/restockitemboardgamescreen.html",
+      "url": "/entity/restockitemboardgamescreen",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/restockitemcheckoutscreen.html",
+      "url": "/entity/restockitemcheckoutscreen",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/restockitempanelui.html",
+      "url": "/entity/restockitempanelui",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/restockitemscreen.html",
+      "url": "/entity/restockitemscreen",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/restockmanager.html",
+      "url": "/entity/restockmanager",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/retrysetuphighendgamecamera-d-57.html",
+      "url": "/entity/retrysetuphighendgamecamera-d-57",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/saveloadslotpanelui.html",
+      "url": "/entity/saveloadslotpanelui",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/scannerrestockscreen.html",
+      "url": "/entity/scannerrestockscreen",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/screenratioscaler.html",
+      "url": "/entity/screenratioscaler",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/scrobj-presets.html",
+      "url": "/entity/scrobj-presets",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/setcardstorageshelfsettingscreen.html",
+      "url": "/entity/setcardstorageshelfsettingscreen",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/setcashiercountersettingscreen.html",
+      "url": "/entity/setcashiercountersettingscreen",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/setcursor.html",
+      "url": "/entity/setcursor",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/setgameeventformatscreen.html",
+      "url": "/entity/setgameeventformatscreen",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/setgameeventpricescreen.html",
+      "url": "/entity/setgameeventpricescreen",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/setgameeventscreen.html",
+      "url": "/entity/setgameeventscreen",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/setischangingkeybindnextframe-d-12.html",
+      "url": "/entity/setischangingkeybindnextframe-d-12",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/setitempricescreen.html",
+      "url": "/entity/setitempricescreen",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/setlanguage.html",
+      "url": "/entity/setlanguage",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/setplayertablenumberscreen.html",
+      "url": "/entity/setplayertablenumberscreen",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/settingscreen.html",
+      "url": "/entity/settingscreen",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/shadowdistancecontroller.html",
+      "url": "/entity/shadowdistancecontroller",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/shadowmodecontroller.html",
+      "url": "/entity/shadowmodecontroller",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/shadowresolutioncontroller.html",
+      "url": "/entity/shadowresolutioncontroller",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/shelf.html",
+      "url": "/entity/shelf",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/shelfcompartment.html",
+      "url": "/entity/shelfcompartment",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/shelfdata-scriptableobject.html",
+      "url": "/entity/shelfdata-scriptableobject",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/shelfmanager.html",
+      "url": "/entity/shelfmanager",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/shelfmovestatevalidarea.html",
+      "url": "/entity/shelfmovestatevalidarea",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/shelfsavedata.html",
+      "url": "/entity/shelfsavedata",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/shopbuydecouiscreen.html",
+      "url": "/entity/shopbuydecouiscreen",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/shopcustomizationmanager.html",
+      "url": "/entity/shopcustomizationmanager",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/shopdecodata.html",
+      "url": "/entity/shopdecodata",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/shopdecopanelui.html",
+      "url": "/entity/shopdecopanelui",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/shoprenamer.html",
+      "url": "/entity/shoprenamer",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/showcardobtainedpage.html",
+      "url": "/entity/showcardobtainedpage",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/spawncustomer-d-67.html",
+      "url": "/entity/spawncustomer-d-67",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/standaloneinputmodule.html",
+      "url": "/entity/standaloneinputmodule",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/stockitemdata-scriptableobject.html",
+      "url": "/entity/stockitemdata-scriptableobject",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/tablegameitemset.html",
+      "url": "/entity/tablegameitemset",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/tablegameitemsetdata.html",
+      "url": "/entity/tablegameitemsetdata",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/textureresolutioncontroller.html",
+      "url": "/entity/textureresolutioncontroller",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/tournamentprizeshelf.html",
+      "url": "/entity/tournamentprizeshelf",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/ui-checkoutitembar.html",
+      "url": "/entity/ui-checkoutitembar",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/ui-creditcardscreen.html",
+      "url": "/entity/ui-creditcardscreen",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/ui-pricetag.html",
+      "url": "/entity/ui-pricetag",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/vsynccontroller.html",
+      "url": "/entity/vsynccontroller",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/warehouseshelf.html",
+      "url": "/entity/warehouseshelf",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/warehouseshelfsavedata.html",
+      "url": "/entity/warehouseshelfsavedata",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/workeroptionsetpriceuiscreen.html",
+      "url": "/entity/workeroptionsetpriceuiscreen",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/workerpacktypeoptionpanelui.html",
+      "url": "/entity/workerpacktypeoptionpanelui",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/workersetpackopenertypeoptionscreen.html",
+      "url": "/entity/workersetpackopenertypeoptionscreen",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entity/workersetprimarysecondarytaskscreen.html",
+      "url": "/entity/workersetprimarysecondarytaskscreen",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/entries/albums-and-binder-pages.html",
+      "url": "/entries/",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/board-games-and-their-accessories.html",
+      "url": "/entries/albums-and-binder-pages",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/building-and-editing-a-deck.html",
+      "url": "/entries/board-games-and-their-accessories",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/card-sets-and-expansions.html",
+      "url": "/entries/building-and-editing-a-deck",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/cards-and-rarity.html",
+      "url": "/entries/card-sets-and-expansions",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/customer-reviews.html",
+      "url": "/entries/cards-and-rarity",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/discarding-cards.html",
+      "url": "/entries/customer-reviews",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/expanding-and-decorating-the-shop.html",
+      "url": "/entries/discarding-cards",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/how-a-card-front-is-built.html",
+      "url": "/entries/expanding-and-decorating-the-shop",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/how-a-price-tag-is-drawn.html",
+      "url": "/entries/how-a-card-front-is-built",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/how-a-shelf-holds-its-stock.html",
+      "url": "/entries/how-a-price-tag-is-drawn",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/how-the-restock-manager-packs-stock.html",
+      "url": "/entries/how-a-shelf-holds-its-stock",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/how-tournament-standings-are-decided.html",
+      "url": "/entries/how-the-restock-manager-packs-stock",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/index.html",
+      "url": "/entries/how-tournament-standings-are-decided",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/keeping-the-shop-clean.html",
+      "url": "/entries/keeping-the-shop-clean",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/licences-and-shop-level.html",
+      "url": "/entries/licences-and-shop-level",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/machines-that-work-on-their-own.html",
+      "url": "/entries/machines-that-work-on-their-own",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/moving-on-old-stock.html",
+      "url": "/entries/moving-on-old-stock",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/opening-a-pack-on-screen.html",
+      "url": "/entries/opening-a-pack-on-screen",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/pack-tiers-and-names.html",
+      "url": "/entries/pack-tiers-and-names",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/packs-and-opening.html",
+      "url": "/entries/packs-and-opening",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/playmats-deck-boxes-and-sleeves.html",
+      "url": "/entries/playmats-deck-boxes-and-sleeves",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/posters-and-wall-displays.html",
+      "url": "/entries/posters-and-wall-displays",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/price-changes-and-cash.html",
+      "url": "/entries/price-changes-and-cash",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/price-tags-for-every-context.html",
+      "url": "/entries/price-tags-for-every-context",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/prices-and-price-tags.html",
+      "url": "/entries/prices-and-price-tags",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/prize-shelves-and-specials.html",
+      "url": "/entries/prize-shelves-and-specials",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/questions-players-ask.html",
+      "url": "/entries/questions-players-ask",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/rarity-and-how-it-is-chosen.html",
+      "url": "/entries/rarity-and-how-it-is-chosen",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/reading-the-price-board.html",
+      "url": "/entries/reading-the-price-board",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/restocking-from-a-cart.html",
+      "url": "/entries/restocking-from-a-cart",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/scanner-restocking-workflow.html",
+      "url": "/entries/scanner-restocking-workflow",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/sending-cards-to-be-graded.html",
+      "url": "/entries/sending-cards-to-be-graded",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/setting-up-an-event.html",
+      "url": "/entries/setting-up-an-event",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/setting-what-your-workers-do.html",
+      "url": "/entries/setting-what-your-workers-do",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/shelves-stock-and-upgrades.html",
+      "url": "/entries/shelves-stock-and-upgrades",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/storage-shelves-and-restocking.html",
+      "url": "/entries/storage-shelves-and-restocking",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/the-achievements-and-their-art.html",
+      "url": "/entries/the-achievements-and-their-art",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/the-boards-interface.html",
+      "url": "/entries/the-boards-interface",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/the-box-your-stock-arrives-in.html",
+      "url": "/entries/the-box-your-stock-arrives-in",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/the-boxes-cards-come-in.html",
+      "url": "/entries/the-boxes-cards-come-in",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/the-camera-and-the-photo-gallery.html",
+      "url": "/entries/the-camera-and-the-photo-gallery",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/the-card-display-object.html",
+      "url": "/entries/the-card-display-object",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/the-card-game-you-can-play.html",
+      "url": "/entries/the-card-game-you-can-play",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/the-card-object-in-the-world.html",
+      "url": "/entries/the-card-object-in-the-world",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/the-clothes-a-shopkeeper-wears.html",
+      "url": "/entries/the-clothes-a-shopkeeper-wears",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/the-counter-and-money.html",
+      "url": "/entries/the-counter-and-money",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/the-currencies-the-game-tracks.html",
+      "url": "/entries/the-currencies-the-game-tracks",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/the-doors-and-the-signs-that-point-the-way.html",
+      "url": "/entries/the-doors-and-the-signs-that-point-the-way",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/the-expansions-the-game-ships.html",
+      "url": "/entries/the-expansions-the-game-ships",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/the-figures-the-shop-sells.html",
+      "url": "/entries/the-figures-the-shop-sells",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/the-finishes-you-can-buy.html",
+      "url": "/entries/the-finishes-you-can-buy",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/the-group-that-shows-a-card.html",
+      "url": "/entries/the-group-that-shows-a-card",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/the-key-binding-settings.html",
+      "url": "/entries/the-key-binding-settings",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/the-kinds-of-customers.html",
+      "url": "/entries/the-kinds-of-customers",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/the-money-the-counter-handles.html",
+      "url": "/entries/the-money-the-counter-handles",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/the-pack-and-how-it-opens.html",
+      "url": "/entries/the-pack-and-how-it-opens",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/the-page-that-shows-what-you-pulled.html",
+      "url": "/entries/the-page-that-shows-what-you-pulled",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/the-payment-a-customer-hands-over.html",
+      "url": "/entries/the-payment-a-customer-hands-over",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/the-picture-the-game-draws-for-a-control.html",
+      "url": "/entries/the-picture-the-game-draws-for-a-control",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/the-plants-in-and-around-the-shop.html",
+      "url": "/entries/the-plants-in-and-around-the-shop",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/the-profile-behind-each-customer.html",
+      "url": "/entries/the-profile-behind-each-customer",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/the-restocker-and-its-vehicles.html",
+      "url": "/entries/the-restocker-and-its-vehicles",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/the-reveal-screen.html",
+      "url": "/entries/the-reveal-screen",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/the-review-screen.html",
+      "url": "/entries/the-review-screen",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/the-rules-of-the-card-game.html",
+      "url": "/entries/the-rules-of-the-card-game",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/the-screens-you-buy-from.html",
+      "url": "/entries/the-screens-you-buy-from",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/the-screens-you-will-use-most.html",
+      "url": "/entries/the-screens-you-will-use-most",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/the-search-that-picks-a-card.html",
+      "url": "/entries/the-search-that-picks-a-card",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/the-services-the-game-offers.html",
+      "url": "/entries/the-services-the-game-offers",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/the-setting-screens-for-your-fixtures.html",
+      "url": "/entries/the-setting-screens-for-your-fixtures",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/the-settings-that-draw-a-card.html",
+      "url": "/entries/the-settings-that-draw-a-card",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/the-settings-you-can-change.html",
+      "url": "/entries/the-settings-you-can-change",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/the-shop-billboard-and-your-shop-name.html",
+      "url": "/entries/the-shop-billboard-and-your-shop-name",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/the-state-of-a-game-of-cards.html",
+      "url": "/entries/the-state-of-a-game-of-cards",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/the-trade-screen-and-what-it-shows.html",
+      "url": "/entries/the-trade-screen-and-what-it-shows",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/the-upgrades-you-can-buy.html",
+      "url": "/entries/the-upgrades-you-can-buy",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/the-warehouse-and-its-shelves.html",
+      "url": "/entries/the-warehouse-and-its-shelves",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/tournaments-and-events.html",
+      "url": "/entries/tournaments-and-events",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/what-a-card-shows-in-play.html",
+      "url": "/entries/what-a-card-shows-in-play",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/what-a-cards-set-record-says.html",
+      "url": "/entries/what-a-cards-set-record-says",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/what-a-customer-carries.html",
+      "url": "/entries/what-a-customer-carries",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/what-a-ghost-card-does.html",
+      "url": "/entries/what-a-ghost-card-does",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/what-a-review-record-keeps.html",
+      "url": "/entries/what-a-review-record-keeps",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/what-the-pack-opener-shows-you.html",
+      "url": "/entries/what-the-pack-opener-shows-you",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/what-the-shelf-manager-keeps.html",
+      "url": "/entries/what-the-shelf-manager-keeps",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/what-the-till-shows-you.html",
+      "url": "/entries/what-the-till-shows-you",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/where-the-shops-lists-live.html",
+      "url": "/entries/where-the-shops-lists-live",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/which-version-this-site-documents.html",
+      "url": "/entries/which-version-this-site-documents",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/entries/why-every-customer-looks-different.html",
+      "url": "/entries/why-every-customer-looks-different",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/enums.html",
+      "url": "/enums",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
-    },
-    {
-      "url": "/guide.html",
-      "action": "keep",
-      "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/index.html",
+      "url": "/guide",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/privacy.html",
+      "url": "/privacy",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/reference/cards.html",
+      "url": "/reference/",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/reference/collection.html",
+      "url": "/reference/cards",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/reference/enums.html",
+      "url": "/reference/collection",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/reference/index.html",
+      "url": "/reference/enums",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/reference/notes/glossary-of-terms.html",
+      "url": "/reference/notes/",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/reference/notes/how-a-card-search-is-described.html",
+      "url": "/reference/notes/glossary-of-terms",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/reference/notes/how-a-crowd-is-animated-from-a-baked-set.html",
+      "url": "/reference/notes/how-a-card-search-is-described",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/reference/notes/how-many-customers-your-shop-holds.html",
+      "url": "/reference/notes/how-a-crowd-is-animated-from-a-baked-set",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/reference/notes/index.html",
+      "url": "/reference/notes/how-many-customers-your-shop-holds",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/reference/notes/price-history-and-graphs.html",
+      "url": "/reference/notes/price-history-and-graphs",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/reference/notes/the-manager-behind-the-card-game.html",
+      "url": "/reference/notes/the-manager-behind-the-card-game",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/reference/notes/trading-with-customers.html",
+      "url": "/reference/notes/trading-with-customers",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/reference/notes/what-the-game-records-about-a-deck.html",
+      "url": "/reference/notes/what-the-game-records-about-a-deck",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/reference/notes/what-the-game-writes-down.html",
+      "url": "/reference/notes/what-the-game-writes-down",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/reference/sources.html",
+      "url": "/reference/sources",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/reference/tool.html",
+      "url": "/reference/tool",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/reference/values.html",
+      "url": "/reference/values",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/search.html",
+      "url": "/search",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/sources.html",
+      "url": "/sources",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/terms.html",
+      "url": "/terms",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/tool.html",
+      "url": "/tool",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     },
     {
-      "url": "/tools/index.html",
+      "url": "/tools/",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/updates.html",
+      "url": "/updates",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"
     },
     {
-      "url": "/values.html",
+      "url": "/values",
       "action": "noindex",
       "reason": "technical reference or duplicate kept reachable but not indexed"
     }

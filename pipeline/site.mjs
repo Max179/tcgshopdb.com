@@ -47,16 +47,39 @@ export const SITE = {
     'sending-cards-to-be-graded', 'the-card-game-you-can-play', 'playmats-deck-boxes-and-sleeves', 'the-box-your-stock-arrives-in'],
 };
 
+/**
+ * The public URL form. Pages are written as .html files, but Cloudflare Pages serves each of them at the clean
+ * URL and 308-redirects the .html form, so every URL the crawler reads (canonical, hreflang, og:url, sitemap,
+ * JSON-LD, internal links) uses cleanPath(). The .html file set is unchanged.
+ */
+export function cleanPath(rel) {
+  const p = String(rel ?? '').replace(/^\/+/, '');
+  if (p === '' || p === 'index.html') return '/';
+  if (p.endsWith('/index.html')) return '/' + p.slice(0, -'index.html'.length);
+  if (p.endsWith('.html')) return '/' + p.slice(0, -5);
+  return '/' + p.replace(/\/+$/, '') + (p.endsWith('/') ? '/' : '');
+}
+
+/** Map a clean public path (or a legacy .html path) back to the emitted file that serves it. */
+export function fileForCleanPath(urlPath) {
+  const p = String(urlPath ?? '/').split('#')[0].split('?')[0].replace(/^\/+/, '');
+  if (p === '') return 'index.html';
+  if (p.endsWith('/')) return p + 'index.html';
+  if (/\.[a-z0-9]+$/i.test(p)) return p;
+  return p + '.html';
+}
+
 const slug = (s) => String(s).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
-/** Keep meta/OG descriptions inside the useful search-snippet range (the sibling site's convention). */
+/** Keep meta/OG descriptions inside the 70-160 character range, cutting on a word boundary rather than mid-word. */
 export const metaDescription = (s) => {
   const text = String(s ?? '').replace(/\s+/g, ' ').trim();
   if (text.length <= 160) return text;
-  const cut = text.slice(0, 157);
-  const at = cut.lastIndexOf(' ');
-  return (at > 120 ? cut.slice(0, at) : cut).replace(/[.,;:!?—-]+$/, '') + '…';
+  const window = text.slice(0, 160);
+  let cut = window.lastIndexOf(' ');
+  if (cut < 120) cut = 160;
+  return window.slice(0, cut).replace(/[.,;:!?—-]+$/, '').trim();
 };
 
 /** Pure, fixture-tested: field search across the inventory. */
@@ -76,13 +99,13 @@ export function lookupFields(inventory, query, limit = 50) {
   return out;
 }
 
-/** The five player-facing sections. */
+/** The five player-facing sections, in their public (clean) URL form. */
 export const NAV = [
-  ['/guide.html', 'Game guide'],
+  ['/guide', 'Game guide'],
   ['/entities/', 'Entities'],
   ['/articles/', 'Guides'],
   ['/tools/', 'Tools'],
-  ['/updates.html', 'Updates'],
+  ['/updates', 'Updates'],
 ];
 
 /** Evidence layer: reachable from the footer and /reference/ only, never indexed. */
@@ -119,34 +142,112 @@ export function build(inventoryPath, outDir) {
   rmSync(outDir, { recursive: true, force: true });
   mkdirSync(outDir, { recursive: true });
   const pages = new Map();
+  // The sitemap carries clean public URLs; each entry may also carry a truthful lastmod date (see lastmodFor).
   const urls = [];
+  const BRAND = ' | ' + SITE.name;
+  // A page's title is its own subject followed by the brand, and the brand is dropped rather than going over 60.
+  const pageTitle = (base) => { const t = String(base).trim(); return (t.length + BRAND.length <= 60) ? t + BRAND : t; };
+  const absolute = (rel) => SITE.url + '/' + String(rel).replace(/^\/+/, '');
+  // JSON-LD is serialised with JSON.stringify; the page text never contains "<", so the script body cannot close
+  // itself early. The tests parse every script back with JSON.parse.
+  const ldScript = (obj) => '<script type="application/ld+json">' + JSON.stringify(obj) + '</script>';
+  const defaultCrumbs = (rel) => {
+    const named = { 'guide.html': 'Game guide', 'entities/index.html': 'Entities', 'entries/index.html': 'Start here',
+      'articles/index.html': 'Guides', 'tools/index.html': 'Tools', 'updates.html': 'Updates', 'search.html': 'Search',
+      'about.html': 'About', 'contact.html': 'Contact', 'privacy.html': 'Privacy', 'terms.html': 'Terms', 'disclaimer.html': 'Disclaimer' };
+    return named[rel] ? [{ name: named[rel] }] : [];
+  };
+  const breadcrumbNodes = (crumbs, canonical) => {
+    const items = [{ name: 'Home', item: SITE.url + '/' }];
+    (crumbs ?? []).forEach((c, i) => items.push({ name: c.name, item: c.url ? absolute(c.url) : (i === crumbs.length - 1 ? canonical : SITE.url + '/') }));
+    return items;
+  };
+  const structuredData = (rel, canonical, titleBase, description, image, opts) => {
+    if (rel === 'index.html') {
+      return ldScript({ '@context': 'https://schema.org', '@graph': [
+        { '@type': 'WebSite', '@id': SITE.url + '/#website', url: SITE.url + '/', name: SITE.name, description: SITE.tagline, inLanguage: 'en',
+          publisher: { '@type': 'Organization', name: SITE.name, url: SITE.url + '/' },
+          potentialAction: { '@type': 'SearchAction', target: { '@type': 'EntryPoint', urlTemplate: SITE.url + '/search?q={search_term_string}' }, 'query-input': 'required name=search_term_string' } },
+        { '@type': 'WebPage', '@id': canonical + '#webpage', url: canonical, name: titleBase, description, inLanguage: 'en', isPartOf: { '@id': SITE.url + '/#website' } },
+      ] });
+    }
+    const page = { '@type': opts.article ? 'Article' : 'WebPage', '@id': canonical + '#webpage', url: canonical, name: titleBase, description, inLanguage: 'en',
+      isPartOf: { '@type': 'WebSite', name: SITE.name, url: SITE.url + '/' } };
+    if (opts.article) page.headline = titleBase;
+    if (opts.image) page.image = image;
+    if (opts.datePublished) page.datePublished = opts.datePublished;
+    if (opts.dateModified) page.dateModified = opts.dateModified;
+    const list = breadcrumbNodes(opts.crumbs, canonical);
+    return ldScript({ '@context': 'https://schema.org', '@graph': [page,
+      { '@type': 'BreadcrumbList', '@id': canonical + '#breadcrumb', itemListElement: list.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.name, item: c.item })) }] });
+  };
   // The page shell is the Mac design integration (8c1312f, 6169d5e): sticky bar with a letter mark, the
   // five-section player nav, the wide player column and the dark teal palette. Page bodies keep the package's
   // two-layer content contract; only the shell and its stylesheet belong to the design port.
-  const layout = (title, description, path, body) => '<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n' +
-    '<meta name="viewport" content="width=device-width,initial-scale=1">\n<title>' + esc(title.includes(SITE.name) ? title : title + ' · ' + SITE.name) + '</title>\n' +
-    '<meta name="description" content="' + esc(metaDescription(description)) + '">\n<meta name="robots" content="' + (isNoindexPage(path) ? 'noindex, follow' : 'index, follow') + '">\n' +
-    '<link rel="canonical" href="' + SITE.url + path + '">\n<link rel="icon" href="/favicon.svg" type="image/svg+xml">\n' +
-    '<link rel="alternate" hreflang="en" href="' + SITE.url + path + '">' +
-    '<link rel="alternate" hreflang="x-default" href="' + SITE.url + path + '">' +
-    '<meta property="og:title" content="' + esc(title) + '"><meta property="og:type" content="website">\n' +
-    '<meta property="og:description" content="' + esc(metaDescription(description)) + '">\n' +
-    '<link rel="stylesheet" href="/style.css">\n</head>\n<body>\n' +
-    '<a class="skip" href="#main">Skip to content</a>\n' +
-    '<header class="top">\n<div class="bar">\n' +
-    '<a class="brand" href="/"><span class="mark">TCG</span><span>' + esc(SITE.name) + '</span></a>\n' +
-    '<nav class="main" aria-label="Sections">' + NAV.map(([h, t]) =>
-      '<a href="' + h + '"' + (path === h || (h !== '/' && path.startsWith(h.replace(/\.html$/, '').replace(/index\.html$/, ''))) ? ' class="on"' : '') + '>' + esc(t) + '</a>').join('') + '</nav>\n' +
-    '<form class="hsearch" action="/search.html" method="get" role="search"><input type="search" name="q" placeholder="' + esc(SITE.searchPlaceholder) + '" aria-label="Search this site"><button type="submit">Search</button></form>\n' +
-    '</div>\n</header>\n<main id="main">\n' + body + '\n</main>\n' +
-    '<footer class="foot"><div class="wrap">\n<p class="dim">' + esc(srcLine) + '</p>\n' +
-    '<p class="dim">A diagram is always labelled as a diagram. A number we could not verify is not printed.</p>\n' +
-    '<p class="dim"><a href="/about.html">About</a> · <a href="/contact.html">Contact</a> · <a href="/privacy.html">Privacy</a> · ' +
-    '<a href="/terms.html">Terms</a> · <a href="/disclaimer.html">Disclaimer</a> · <a href="/reference/">Technical reference</a></p>\n' +
-    '</div></footer>\n</body>\n</html>\n';
-  const write = (rel, html) => { const f = join(outDir, rel); mkdirSync(dirname(f), { recursive: true }); writeFileSync(f, html, 'utf8'); pages.set('/' + rel, html); };
-  const indexable = (rel, title, desc, body) => { write(rel, layout(title, desc, '/' + rel, body)); urls.push(SITE.url + '/' + rel); };
-  const reference = (rel, title, desc, body) => { write(rel, layout(title, desc, '/' + rel, body)); };
+  const layout = (titleBase, description, path, body, opts = {}) => {
+    const rel = String(path).replace(/^\/+/, '');
+    const canonical = opts.canonical ?? SITE.url + cleanPath(rel);
+    const title = pageTitle(titleBase);
+    const desc = metaDescription(description);
+    const noindex = opts.noindex ?? isNoindexPage(path);
+    const image = opts.image ? absolute(opts.image) : absolute(SITE.heroImage);
+    const crumbs = opts.crumbs ?? defaultCrumbs(rel);
+    const jsonLd = noindex ? '' : structuredData(rel, canonical, titleBase, desc, image, { ...opts, crumbs });
+    return '<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n' +
+      '<meta name="viewport" content="width=device-width,initial-scale=1">\n' +
+      '<title>' + esc(title) + '</title>\n' +
+      '<meta name="description" content="' + esc(desc) + '">\n' +
+      '<meta name="robots" content="' + (noindex ? 'noindex, follow' : 'index, follow') + '">\n' +
+      '<link rel="canonical" href="' + esc(canonical) + '">\n' +
+      (opts.refresh ? '<meta http-equiv="refresh" content="0; url=' + esc(opts.refresh) + '">\n' : '') +
+      '<link rel="icon" href="/favicon.svg" type="image/svg+xml">\n' +
+      '<link rel="alternate" hreflang="en" href="' + esc(canonical) + '">' +
+      '<link rel="alternate" hreflang="x-default" href="' + esc(canonical) + '">' +
+      '<meta property="og:site_name" content="' + esc(SITE.name) + '">\n' +
+      '<meta property="og:title" content="' + esc(title) + '">\n' +
+      '<meta property="og:type" content="' + (opts.article ? 'article' : 'website') + '">\n' +
+      '<meta property="og:description" content="' + esc(desc) + '">\n' +
+      '<meta property="og:url" content="' + esc(canonical) + '">\n' +
+      '<meta property="og:image" content="' + esc(image) + '">\n' +
+      '<meta name="twitter:card" content="summary_large_image">\n' +
+      '<meta name="twitter:title" content="' + esc(title) + '">\n' +
+      '<meta name="twitter:description" content="' + esc(desc) + '">\n' +
+      '<meta name="twitter:image" content="' + esc(image) + '">\n' +
+      (jsonLd ? jsonLd + '\n' : '') +
+      '<link rel="stylesheet" href="/style.css">\n</head>\n<body>\n' +
+      '<a class="skip" href="#main">Skip to content</a>\n' +
+      '<header class="top">\n<div class="bar">\n' +
+      '<a class="brand" href="/"><span class="mark">TCG</span><span>' + esc(SITE.name) + '</span></a>\n' +
+      '<nav class="main" aria-label="Sections">' + NAV.map(([h, t]) =>
+        '<a href="' + h + '"' + (cleanPath(rel) === h || (h !== '/' && cleanPath(rel).startsWith(h)) ? ' class="on"' : '') + '>' + esc(t) + '</a>').join('') + '</nav>\n' +
+      '<form class="hsearch" action="/search.html" method="get" role="search"><input type="search" name="q" placeholder="' + esc(SITE.searchPlaceholder) + '" aria-label="Search this site"><button type="submit">Search</button></form>\n' +
+      '</div>\n</header>\n<main id="main">\n' + body + '\n</main>\n' +
+      '<footer class="foot"><div class="wrap">\n<p class="dim">' + esc(srcLine) + '</p>\n' +
+      '<p class="dim">A diagram is always labelled as a diagram. A number we could not verify is not printed.</p>\n' +
+      '<p class="dim"><a href="/about.html">About</a> · <a href="/contact.html">Contact</a> · <a href="/privacy.html">Privacy</a> · ' +
+      '<a href="/terms.html">Terms</a> · <a href="/disclaimer.html">Disclaimer</a> · <a href="/reference/">Technical reference</a></p>\n' +
+      '</div></footer>\n</body>\n</html>\n';
+  };
+  // Every .html link (or legacy meta-refresh target) written into a page is rewritten to its clean public URL
+  // here, so no internal link can point at the form the host 308-redirects. Canonical/og/hreflang/JSON-LD are
+  // already built clean by layout().
+  const cleanLinks = (html) => html
+    .replace(/href="\/([^"#?]*?)\.html((?:[#?][^"]*)?)"/g, (m, p, tail) => 'href="' + cleanPath(p + '.html') + (tail ?? '') + '"')
+    .replace(/action="\/([^"#?]*?)\.html"/g, (m, p) => 'action="' + cleanPath(p + '.html') + '"')
+    .replace(/(content="0; url=)\/([^"#?]*?)\.html"/g, (m, head, p) => head + cleanPath(p + '.html') + '"');
+  const write = (rel, html) => {
+    const f = join(outDir, rel);
+    mkdirSync(dirname(f), { recursive: true });
+    const content = rel.endsWith('.html') ? cleanLinks(html) : html;
+    writeFileSync(f, content, 'utf8');
+    pages.set('/' + rel, content);
+  };
+  const indexable = (rel, title, desc, body, opts = {}) => {
+    const article = /^(entries|articles)\/(?!index\.html$)[^/]+\.html$/.test(rel);
+    write(rel, layout(title, desc, '/' + rel, body, { article, ...opts }));
+    urls.push({ loc: SITE.url + cleanPath(rel), lastmod: opts.lastmod ?? null });
+  };
+  const reference = (rel, title, desc, body, opts = {}) => write(rel, layout(title, desc, '/' + rel, body, opts));
 
   // ---- content --------------------------------------------------------------------------------
   const entriesDir = join(process.cwd(), 'content', 'published');
@@ -176,6 +277,26 @@ export function build(inventoryPath, outDir) {
   let questions = {};
   try { questions = JSON.parse(readFileSync(join(process.cwd(), 'data', 'guide-questions.json'), 'utf8')); } catch { /* none yet */ }
   const playerUpdates = updates.filter((u) => !String(u.url ?? '').startsWith('/reference/'));
+
+  // Truthful sitemap dates only. updates.json records when an entry or guide was added or updated; a pictured
+  // entry also records when its picture (part of the page) was last retrieved. A page with neither stays undated
+  // rather than carrying the build date.
+  const updateDateByPath = new Map();
+  for (const u of updates) {
+    const rel = String(u.url ?? '').replace(/^\//, '');
+    const date = String(u.date ?? '');
+    if (rel.endsWith('.html') && /^\d{4}-\d{2}-\d{2}$/.test(date)) updateDateByPath.set(cleanPath(rel), date);
+  }
+  const imageDateByEntity = new Map();
+  for (const r of manifest.records ?? []) {
+    if (r.entity && /^\d{4}-\d{2}-\d{2}$/.test(String(r.retrievedAt ?? ''))) imageDateByEntity.set(String(r.entity), String(r.retrievedAt));
+  }
+  const lastmodFor = (rel, entry) => {
+    const dates = [updateDateByPath.get(cleanPath(rel)), entry ? imageDateByEntity.get(entry.id) : null].filter(Boolean).sort();
+    return dates.length ? dates[dates.length - 1] : null;
+  };
+  const updateDateFor = (rel) => updateDateByPath.get(cleanPath(rel)) ?? null;
+  const latestUpdateDate = [...updateDateByPath.values()].sort().pop() ?? null;
 
   // ---- home ------------------------------------------------------------------------------------
   const featured = (SITE.featured ?? []).map((id) => byId.get(id)).filter((e) => e && e.imageTier === 'game-image');
@@ -214,7 +335,7 @@ export function build(inventoryPath, outDir) {
     '<h2>How to use this site</h2><p>Use the search box, browse <a href="/entities/">entities by part of the run</a>, or read a <a href="/articles/">guide</a> that walks through one job from start to finish. Pictures are in-game pictures, credited with their sources on the <a href="/reference/sources.html#pictures">picture sources</a> page; a diagram is always labelled as a diagram.</p>');
 
   // ---- entity hub and category pages ------------------------------------------------------------
-  indexable('entities/index.html', 'Entities', 'Every part of the run this site documents, with pictures taken from the game.',
+  indexable('entities/index.html', 'Entities', 'Every part of the run this site documents, with pictures taken from the game: browse by what you are dealing with in a run.',
     '<h1>Entities</h1><p class="lead">Browse by what you are dealing with in a run. Each entry says what the game itself establishes, and carries a picture taken from the game.</p>\n' +
     '<div class="grid">' + CATEGORIES.map((c) => {
       const list = entities.filter((e) => groupOf(e.category).key === c.key);
@@ -240,7 +361,8 @@ export function build(inventoryPath, outDir) {
       '<p><a href="/entities/">Back to all entities</a></p>\n' +
       '<script>var f=document.getElementById("f");if(f){var cards=Array.prototype.slice.call(document.querySelectorAll("#cards .card")),c=document.getElementById("count");' +
       'var run=function(){var q=f.value.trim().toLowerCase(),n=0;cards.forEach(function(el){var hit=!q||el.textContent.toLowerCase().indexOf(q)>=0;el.style.display=hit?"":"none";if(hit)n++;});c.textContent=n+" shown";};' +
-      'f.addEventListener("input",run);run();}</script>');
+      'f.addEventListener("input",run);run();}</script>',
+      { image: cover?.file, crumbs: [{ name: 'Entities', url: '/entities/' }, { name: c.name }] });
   }
 
   // ---- entities and notes ----------------------------------------------------------------------
@@ -262,9 +384,15 @@ export function build(inventoryPath, outDir) {
       '<h2>In play</h2>' + (e.body ?? []).map((p) => '<p>' + esc(p) + '</p>').join('') + '\n' +
       (related.length ? '<h2>Related</h2><div class="grid">' + related.map((id) => card(byId.get(id))).join('') + '</div>' : '') +
       '<h2>Version and sources</h2><p class="dim small">' + esc((e.sources ?? []).join(' ')) + ' Documented build: ' + esc(inv.version ?? 'unknown') + '.</p>\n' +
-      '</article>');
+      '</article>', {
+        image: img?.file,
+        crumbs: [{ name: 'Entities', url: '/entities/' }, { name: groupOf(e.category).name, url: '/entities/' + groupOf(e.category).key }, { name: e.title }],
+        lastmod: lastmodFor('entries/' + e.id + '.html', e),
+        datePublished: updateDateFor('entries/' + e.id + '.html') ?? undefined,
+        dateModified: lastmodFor('entries/' + e.id + '.html', e) ?? undefined,
+      });
   }
-  indexable('entries/index.html', 'Start here', 'How to use this site, and where to begin with a shop.',
+  indexable('entries/index.html', 'Start here', 'How to use this site, and where to begin with a shop: start with the entities, the game guide, the guides or the search box.',
     '<h1>Start here</h1><p class="lead">This site is a player-written reference for ' + esc(SITE.gameName) + '. It does not try to be a full wiki: every entry states what the game itself establishes, and says plainly when something has not been verified.</p>\n' +
     '<h2>The four things you can do</h2><ul>' +
     '<li><strong>Browse <a href="/entities/">entities</a></strong> by the part of the shop you are dealing with.</li>' +
@@ -289,32 +417,38 @@ export function build(inventoryPath, outDir) {
   // ---- guides ------------------------------------------------------------------------------------
   for (const a of articles) {
     const related = (a.relatedEntities ?? []).filter((id) => byId.has(id));
-    indexable('articles/' + a.id + '.html', a.title, a.target,
+    indexable('articles/' + a.id + '.html', a.title, (String(a.target ?? '').length >= 70 ? a.target : String(a.target ?? '') + ' A step-by-step guide for ' + SITE.gameName + '.'),
       '<article class="entry"><p class="kicker">Guide</p>\n<h1>' + esc(a.title) + '</h1>\n<p class="lead">' + esc(a.target) + '</p>\n' +
       '<h2>Applies to</h2><p class="dim">' + esc(a.version ?? SITE.versionBadge) + '</p>\n' +
       '<h2>Before you start</h2><ul>' + (a.prerequisites ?? []).map((p) => '<li>' + esc(p) + '</li>').join('') + '</ul>\n' +
       '<h2>Steps</h2><ol class="steps">' + (a.steps ?? []).map((s) => '<li><strong>' + esc(s.do) + '</strong><br><span class="dim small">' + esc(whyOf(s.because)) + '</span></li>').join('') + '</ol>\n' +
       '<h2>Common mistakes</h2><ul>' + (a.commonMistakes ?? []).map((m) => '<li>' + esc(m) + '</li>').join('') + '</ul>\n' +
       (related.length ? '<h2>Related entries</h2><div class="grid">' + related.map((id) => card(byId.get(id))).join('') + '</div>' : '') +
-      '<h2>Sources</h2><p class="dim small">' + esc((a.sources ?? []).join(' ')) + '</p></article>');
+      '<h2>Sources</h2><p class="dim small">' + esc((a.sources ?? []).join(' ')) + '</p></article>', {
+        crumbs: [{ name: 'Guides', url: '/articles/' }, { name: a.title }],
+        lastmod: lastmodFor('articles/' + a.id + '.html', null),
+        datePublished: updateDateFor('articles/' + a.id + '.html') ?? undefined,
+        dateModified: lastmodFor('articles/' + a.id + '.html', null) ?? undefined,
+      });
   }
-  indexable('articles/index.html', 'Guides', 'Step-by-step guides for a run, each grounded in what the game itself establishes.',
+  indexable('articles/index.html', 'Guides', 'Step-by-step guides for a run in TCG Card Shop Simulator, each grounded in what the game itself establishes.',
     '<h1>Guides</h1><p class="lead">Each guide has a goal, the build it applies to, what you need first, the steps and the mistakes people make. Every step says why it works.</p>\n' +
     '<div class="grid">' + articles.map((a) => '<a class="card qcard" href="/articles/' + esc(a.id) + '.html">' +
       (questions[a.id] ? '<strong>' + esc(questions[a.id]) + '</strong><span>' + esc(a.title) + '</span>' : '<strong>' + esc(a.title) + '</strong>') +
       '<span class="dim">' + esc(a.target) + '</span></a>').join('') + '</div>');
 
   // ---- tools and updates -------------------------------------------------------------------------
-  indexable('tools/index.html', 'Tools', 'Search boxes and checkers for looking something up on this site.',
+  indexable('tools/index.html', 'Tools', 'Search boxes and checkers for looking something up on this site, all running in your browser over the site\'s own data.',
     '<h1>Tools</h1><p class="lead">The tools here run in your browser; nothing you type is sent anywhere.</p>\n<div class="grid">' +
     '<a class="card" href="/search.html"><strong>Search field names</strong><span class="dim">Search the field names the game writes, by name, type or the class that declares them.</span></a>' +
     '<a class="card" href="/reference/tool.html"><strong>Field lookup</strong><span class="dim">Ask which class declares a field.</span></a>' +
     '<a class="card" href="/articles/"><strong>Guides</strong><span class="dim">Step-by-step write-ups for one job at a time.</span></a>' +
     '</div><p class="dim small">These utilities report what the game\'s files contain. They are not part of the player reference and carry no advice.</p>');
-  indexable('updates.html', 'Updates', 'What has been added to this site, newest first.',
+  indexable('updates.html', 'Updates', 'What has been added to this site, newest first: new entries, new guides and the changes recorded in each update note.',
     '<h1>Updates</h1><p class="lead">What has been added, newest first. Entries are added only when a fact has been checked against the game or a picture confirmed.</p>\n' +
     (playerUpdates.length ? '<ul class="updates">' + playerUpdates.map((u) => '<li><span class="when">' + esc(u.date) + '</span> <a href="' + esc(u.url) + '">' + esc(u.title) + '</a> <span class="dim small">' + esc(u.kind ?? '') + '</span></li>').join('') + '</ul>' : '<p class="dim">No update notes yet.</p>') +
-    '<p class="dim small">Notes for subjects that have no confirmed picture yet are listed in the technical reference, which is reachable from the footer.</p>');
+    '<p class="dim small">Notes for subjects that have no confirmed picture yet are listed in the technical reference, which is reachable from the footer.</p>',
+    { lastmod: latestUpdateDate, dateModified: latestUpdateDate ?? undefined });
 
   // ---- evidence layer (unchanged content, footer only) --------------------------------------------
   const classes = (inv.classes ?? []).slice().sort((a, b) => b.written - a.written);
@@ -368,7 +502,7 @@ export function build(inventoryPath, outDir) {
       '<div class="note">Each row is one object read out of the game\'s own files. Its class was accepted only because the measured layout consumed that object\'s payload exactly, so these are the game\'s values rather than estimates.</div>' +
       (list.length === 0 ? '<p class="dim">No object in this build decoded yet.</p>' : rows + (names.length > 40 ? '<p class="dim">Showing 40 of ' + names.length + ' classes.</p>' : '')));
   }
-  indexable('search.html', 'Search', 'Search every field name the game defines, in your browser.',
+  indexable('search.html', 'Search', 'Search every field name the game defines, in your browser: results come from the site\'s committed data and no request leaves the page.',
     '<h1>Search</h1><p class="dim">Client-side over ' + (inv.totals?.fields ?? 0) + ' fields. No network requests.</p>' +
     '<p><input id="q" type="search" placeholder="field or class" autocomplete="off"> <span id="status" class="dim"></span></p><ul id="out"></ul>' +
     '<script>var F=' + JSON.stringify(lookupFields(inv, '', 200)) + ';var q=document.getElementById("q"),o=document.getElementById("out"),s=document.getElementById("status");' +
@@ -448,41 +582,51 @@ export function build(inventoryPath, outDir) {
     '<p><a href="/entities/">Back to the player reference</a></p>');
 
   // ---- legal ---------------------------------------------------------------------------------------
-  indexable('about.html', 'About', 'About this site and how it is built.',
+  indexable('about.html', 'About', 'About this site and how it is built: a generated player-written reference for TCG Card Shop Simulator with no database behind it.',
     '<h1>About</h1><p>This site is a player-written reference for ' + esc(SITE.gameName) + '. It is generated by a static build; there is no database behind it.</p>' +
     '<h2>Method</h2><p>No page on this site is hand-written from memory. Everything shown is produced by the build from the files listed on the <a href="/reference/sources.html">sources page</a>. When the build cannot read something, it says so.</p>' +
     '<h2>What is on which layer</h2><p>The player reference — entities, guides, the game guide and the tools — is what the site is for. Identifiers, tables and extraction notes are an evidence layer behind the <a href="/reference/">technical reference</a>, kept out of search engines on purpose.</p>');
-  indexable('contact.html', 'Contact', 'How to report a wrong value.',
+  indexable('contact.html', 'Contact', 'How to report a wrong value or a broken page: include the page, the claim and what the game actually does, so a correction can be checked.',
     '<h1>Contact</h1><p>Corrections are welcome. Report the page, the claim and what the game actually does; corrections that cannot be checked against the game files cannot be used.</p><p>There is no form and no server behind this site.</p>');
-  indexable('disclaimer.html', 'Disclaimer', 'No affiliation; game pictures are used only to identify the items they show.',
+  indexable('disclaimer.html', 'Disclaimer', 'No affiliation with the game\'s developer or publisher; its pictures are used only to identify the items they show and remain the property of their owners.',
     '<h1>Disclaimer</h1><p>Not affiliated with, endorsed by, or sponsored by the game\'s developer or publisher. Game names and marks belong to their owners.</p>' +
     '<p>Pictures on this site are in-game pictures: screenshots from the game\'s official Steam store page and files from its community wiki (the TCG Card Shop Simulator Wiki on wiki.gg). They are used only to identify the subject an entry describes, under a fair-use review. Each one is credited to the page it came from on the <a href="/reference/sources.html#pictures">picture sources</a> page, and every picture remains the property of its owner or uploader; this site does not relicense any of them.</p>' +
     '<p>Diagrams were drawn for this site and are labelled as diagrams; they are not screenshots.</p>');
-  indexable('privacy.html', 'Privacy', 'No cookies, no tracking, no third-party requests.',
+  indexable('privacy.html', 'Privacy', 'No cookies, no tracking and no third-party requests: the search and lookup tools run entirely in your browser over data embedded in the page.',
     '<h1>Privacy</h1><p>This static build sets no cookies, runs no analytics and makes no third-party requests. The search and lookup tools run entirely in your browser over data embedded in the page or fetched from this site.</p>');
-  indexable('terms.html', 'Terms', 'Use of this site.',
+  indexable('terms.html', 'Terms', 'Use of this site: provided as-is for personal reference, with the game build it documents recorded on every entry and in each update note.',
     '<h1>Terms</h1><p>Provided as-is for personal reference. Data may change as the game patches; each build records the version it was read from.</p>');
 
-  write('404.html', layout('Not found', 'Page not found.', '/404.html', '<h1>Page not found</h1><p>Try the <a href="/entities/">entities</a> or the search box at the top of the page.</p>').replace('content="index, follow"', 'content="noindex, follow"'));
+  write('404.html', layout('Not found', 'Page not found.', '/404.html', '<h1>Page not found</h1><p>Try the <a href="/entities/">entities</a> or the search box at the top of the page.</p>', { noindex: true }));
 
   // ---- machine-readable ------------------------------------------------------------------------------
-  // Old top-level addresses keep working: each is a noindex stub that points at the reference page now.
+  // Old top-level addresses keep working: each is a noindex stub that points at the reference page now. Its
+  // canonical and refresh target are the clean URL of the page it points at, never the redirecting form.
   const stub = (oldRel, newPath, title) => {
-    const html = layout(title + ' (moved)', 'This page has moved into the technical reference.', '/' + oldRel,
-      '<h1>' + esc(title) + '</h1><p class="note">This page has moved into the <a href="' + newPath + '">technical reference</a>. The address was kept so an old link still lands somewhere useful.</p>')
-      .replace('content="index, follow"', 'content="noindex, follow"')
-      .replace('<link rel="canonical" href="' + SITE.url + '/' + oldRel + '">', '<link rel="canonical" href="' + SITE.url + newPath + '">')
-      .replace('<head>', '<head>\n<meta http-equiv="refresh" content="0; url=' + newPath + '">');
-    write(oldRel, html);
+    const target = cleanPath(newPath.replace(/^\//, ''));
+    write(oldRel, layout(title + ' (moved)', 'This page has moved into the technical reference. Follow the link to the new address.', '/' + oldRel,
+      '<h1>' + esc(title) + '</h1><p class="note">This page has moved into the <a href="' + target + '">technical reference</a>. The address was kept so an old link still lands somewhere useful.</p>',
+      { canonical: SITE.url + target, refresh: target, noindex: true }));
   };
   for (const [oldRel, name, title] of [
     ['collection.html', 'collection', 'All names'], ['cards.html', 'cards', 'Card data'], ['enums.html', 'enums', 'Enums'],
     ['values.html', 'values', 'Decoded values'], ['tool.html', 'tool', 'Field lookup'], ['sources.html', 'sources', 'Sources'],
   ]) stub(oldRel, '/reference/' + name + '.html', title);
 
+  // The sitemap is exactly the indexable set, in clean URL form, with a <lastmod> only where a truthful content
+  // date exists (updates.json dates and the picture record date of a pictured entry).
+  const xmlEsc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
   write('sitemap.xml', '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
-    urls.map((u) => '  <loc>' + u + '</loc>\n').join('') + '</urlset>\n');
+    urls.map((u) => '  <url>\n    <loc>' + xmlEsc(u.loc) + '</loc>\n' + (u.lastmod ? '    <lastmod>' + xmlEsc(u.lastmod) + '</lastmod>\n' : '') + '  </url>\n').join('') +
+    '</urlset>\n');
   write('robots.txt', 'User-agent: *\nAllow: /\nSitemap: ' + SITE.url + '/sitemap.xml\n');
+  // IndexNow ownership marker: /<key>.txt returns the key. Written directly, outside write(), so the page count
+  // is unchanged; tools/indexnow.mjs submits the sitemap and is never run by the build or the deploy workflow.
+  {
+    const keyPath = join(process.cwd(), 'web', 'indexnow-key.txt');
+    const key = existsSync(keyPath) ? readFileSync(keyPath, 'utf8').trim() : '';
+    if (/^[0-9a-f]{32}$/.test(key)) writeFileSync(join(outDir, key + '.txt'), key + '\n', 'utf8');
+  }
   // ---- the Mac design shell -------------------------------------------------------------------------
   // favicon, brand mark and the whole stylesheet come from the Mac design integration (8c1312f) and its
   // verified in-game homepage imagery (6169d5e). The Windows copy of the shell hard-coded the sibling site's
