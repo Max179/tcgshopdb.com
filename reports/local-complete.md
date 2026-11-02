@@ -4,7 +4,51 @@ The full round-by-round log (577 lines, 377999 bytes, 446 recorded rounds)
 is the working record of the extraction host and stays there. This copy carries the standing state at the handoff commit plus the
 most recent recorded rounds verbatim, so the Mac side has the facts without the history. Nothing here is generated at publish time.
 
-## Picture replacement (2026-10-30) — current standing state
+## SEO pass (2026-11-02) — current standing state
+
+The site now uses one clean-URL scheme and a complete search contract: clean canonical/og:url/hreflang/sitemap/
+JSON-LD/internal links, managed 25-60 character titles, unique 70-160 character descriptions, JSON-LD on every
+indexable page, og/twitter metadata, truthful sitemap `<lastmod>`, gated robots.txt and a served IndexNow key with
+a manual submission tool. Full record with before/after measurements: `reports/seo-audit.md`.
+
+- Commit: `5c8d573` (clean URLs, titles/descriptions, JSON-LD, sitemap lastmod, social metadata, IndexNow key and
+  tool, classifier/smoke updates, regenerated `config/urls.json`, 14 new SEO gates), then the docs commit that
+  carries this section and the status commit. Working tree clean at handoff.
+- Measured on the built artefact: titles over 60 chars **44 → 0** (all 176 unique, 26-60, average 47.5);
+  descriptions under 70 chars **8 → 0** (all unique, 70-160, word-boundary cut, no ellipsis); sitemap **176 locs**
+  in clean form (was 176 `.html` locs) with **99 truthful `<lastmod>`** (was 0; 89 pictured entries use the
+  picture record date 2026-10-30, 9 guides an updates.json date, the updates page the latest update date);
+  canonical == og:url == hreflang == sitemap for 176/176; internal `.html` links **4014 → 0**; JSON-LD **0 → 176
+  valid scripts** (home WebSite+SearchAction, 152 Article+BreadcrumbList, 23 WebPage+BreadcrumbList); og:url/og:image
+  and all four twitter tags **0 → 176**; robots unchanged and now gated; IndexNow key served at
+  `/d3ad5d6eccb8896afad82b32eb7798f6.txt`.
+- File set unchanged: **440 HTML files / 445 build outputs / 176 indexable / 439 classified rows** (176 keep, 263
+  noindex); Cloudflare serves each clean URL from the matching `.html` file.
+- Gates: the site tests grew **66 → 80** (14 SEO gates: title/description ranges and uniqueness, canonical=og:url=
+  hreflang=sitemap, sitemap parsed as XML with the lastmod map re-derived from content metadata, JSON-LD types/URLs/
+  dates, og/twitter coverage, no `.html` links, robots, IndexNow key/tool). Mutation check recorded in the audit:
+  forcing long titles failed the gate (79 passed, 1 failed, exit 1) and restoring passed 80/80.
+- Verbatim commands and exits — all exit 0:
+
+      python3 tools/image-sanity.py            -> [image-sanity] 89 records, 0 flagged
+      node tools/image-coverage.mjs            -> entries=98 withGameImage=89 diagramOnly=9 manifestRecords=89 unusedRecords=0
+      node pipeline/site.mjs                   -> [site] pages=445 indexable=176 schema(noindex)=263
+      node tools/classify-urls.mjs             -> 176 keep, 263 noindex, 0 redirect(s)
+      node tools/smoke.mjs                     -> the artefact passes
+      node tests/site.test.mjs                 -> [site-tests] 80 passed, 0 failed
+      npx tsc --noEmit -p tsconfig.ci.json     -> no diagnostics
+      node tools/content-gate.mjs              -> [content-gate] 98 entry file(s), 0 violation(s)
+      node tools/verify-citations.mjs          -> entries=98 facts=855 distinctIdentifiers=1517 universe=7781 confirmedElsewhere=14 unmatched=0
+      node tools/coverage.mjs                  -> columns=20 covered=20 published=98 draft=0 reference=0 absent=0 qualityFailures=0
+      node tools/preflight.mjs                 -> [preflight] 11 ok, 0 failed (on the committed tree)
+
+- Residual: live verification after the Lead's push/deploy; 77 pages omit `lastmod` by design because no truthful
+  content date exists; `npm run indexnow` is a manual step to run once the sitemap is live; no
+  `priority`/`changefreq` was added to the sitemap.
+- Publishing: **not done from this machine**. The Lead owns the push and the Cloudflare Pages deploy; verify the
+  live domain with `node tools/smoke.mjs https://tcgshopdb.com` after the deploy.
+
+## Picture replacement (2026-10-30) — earlier standing state
 
 The 186 raw Unity texture exports (UI atlases, white-on-black icon sheets, albedo/ground/furniture textures, grey
 placeholders) were replaced with **89 sourced in-game pictures**, one per pictured entry, and the two homepage
