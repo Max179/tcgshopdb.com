@@ -293,6 +293,10 @@ try {
     for (const section of ['Applies to', 'Before you start', 'Steps', 'Common mistakes', 'Related entries', 'Sources']) if (!h.includes(section)) thinArticles.push(a.id + ':' + section);
     if (!/<ol[\s>]/.test(h) || (a.steps ?? []).length < 3) thinArticles.push(a.id + ':steps');
     if (!inSitemap('/articles/' + a.id)) thinArticles.push(a.id + ':not in sitemap');
+    for (const g of a.relatedGuides ?? []) {
+      if (!articles.some((x) => x.id === g)) thinArticles.push(a.id + ':missing related guide ' + g);
+      else if (!h.includes('href="/articles/' + g + '"')) thinArticles.push(a.id + ':related guide not linked ' + g);
+    }
     const ids = (a.steps ?? []).flatMap((s) => String(s.because).split(/[(),\s]+/)).filter((x) => /[a-z][A-Z]|[0-9]|_/.test(x));
     for (const id of ids) if (h.includes(id)) thinArticles.push(a.id + ': leaks ' + id);
   }

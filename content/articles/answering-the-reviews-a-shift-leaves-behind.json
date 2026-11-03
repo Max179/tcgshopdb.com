@@ -58,6 +58,9 @@
     "Ignoring the shop-level reasons (a smell, a blocked store, the lights, opening packs behind the counter) and looking only at prices.",
     "Assuming a tournament review will read like an ordinary one when the game files it under its own reasons."
   ],
+  "relatedGuides": [
+    "a-closing-routine-that-sets-up-the-next-shop-day"
+  ],
   "relatedEntities": [
     "customer-reviews",
     "the-review-screen",

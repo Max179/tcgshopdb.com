@@ -7,7 +7,7 @@ files.
 
 The output has two deliberately separate layers:
 
-- **Player layer** — home, game guide, entity hub and 11 player category pages, entity pages, 63 guides, tools
+- **Player layer** — home, game guide, entity hub and 11 player category pages, entity pages, 64 guides, tools
   and updates. These are the pages a player is meant to find.
 - **Evidence layer** — class, field, enum and value tables plus provenance, under `/reference/` and
   `/entity/` and marked `noindex`. These pages exist so a claim can be checked, not to rank in search.
@@ -36,7 +36,7 @@ python3 -m http.server 4205 --directory web/dist
 
 | Command | What it does |
 | --- | --- |
-| `npm run build` | Regenerate `web/dist/` from the committed data and content. The build prints `pages=445 indexable=176`. |
+| `npm run build` | Regenerate `web/dist/` from the committed data and content. The build prints `pages=446 indexable=177`. |
 | `npm test` | Run the 80 site gates (`tests/site.test.mjs`). Builds into a temp directory and checks routes, clean canonical URLs, the SEO contract (titles, descriptions, og/twitter, JSON-LD, sitemap lastmod, robots, IndexNow key), noindex/sitemap policy, provenance, images (including the picture-source ledger and the generated credit table), content invariants, duplicate indexable pages, mobile viewport and the publish configuration. |
 | `npm run typecheck` | `tsc --noEmit -p tsconfig.ci.json` — portable type roots, checks the `.mjs` pipeline and tests. |
 | `npm run gates` | Content gate, coverage matrix, image coverage and citation check, in that order. |
@@ -127,7 +127,7 @@ canonical points at a redirect: canonical, `og:url`, hreflang, the sitemap, JSON
   `Article` for entries and guides) plus a `BreadcrumbList`, all with URLs matching the canonical.
 - **Social**: `og:title/description/url/image/type` and `twitter:card/title/description/image` on every
   indexable page; the twitter image is the og image.
-- **Sitemap**: exactly the 176 indexable pages in clean URL form. `<lastmod>` is only written where content
+- **Sitemap**: exactly the 177 indexable pages in clean URL form. `<lastmod>` is only written where content
   metadata supplies a truthful date (an `updates.json` date, or the picture record date of a pictured entry);
   undated pages carry no `lastmod` rather than a faked build date.
 - **robots.txt**: `Allow: /` plus the sitemap line, with the `noindex` policy for the reference/evidence layer.

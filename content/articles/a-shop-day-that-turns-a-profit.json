@@ -33,6 +33,9 @@
     "Shelving cards that have not been priced.",
     "Buying decoration before you have stock."
   ],
+  "relatedGuides": [
+    "a-closing-routine-that-sets-up-the-next-shop-day"
+  ],
   "relatedEntities": [
     "packs-and-opening",
     "prices-and-price-tags",

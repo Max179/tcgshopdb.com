@@ -277,6 +277,7 @@ export function build(inventoryPath, outDir) {
   let questions = {};
   try { questions = JSON.parse(readFileSync(join(process.cwd(), 'data', 'guide-questions.json'), 'utf8')); } catch { /* none yet */ }
   const playerUpdates = updates.filter((u) => !String(u.url ?? '').startsWith('/reference/'));
+  const articleById = new Map(articles.map((a) => [a.id, a]));
 
   // Truthful sitemap dates only. updates.json records when an entry or guide was added or updated; a pictured
   // entry also records when its picture (part of the page) was last retrieved. A page with neither stays undated
@@ -417,6 +418,7 @@ export function build(inventoryPath, outDir) {
   // ---- guides ------------------------------------------------------------------------------------
   for (const a of articles) {
     const related = (a.relatedEntities ?? []).filter((id) => byId.has(id));
+    const relatedGuides = (a.relatedGuides ?? []).map((id) => articleById.get(id)).filter((g) => g && g.id !== a.id);
     indexable('articles/' + a.id + '.html', a.title, (String(a.target ?? '').length >= 70 ? a.target : String(a.target ?? '') + ' A step-by-step guide for ' + SITE.gameName + '.'),
       '<article class="entry"><p class="kicker">Guide</p>\n<h1>' + esc(a.title) + '</h1>\n<p class="lead">' + esc(a.target) + '</p>\n' +
       '<h2>Applies to</h2><p class="dim">' + esc(a.version ?? SITE.versionBadge) + '</p>\n' +
@@ -424,6 +426,8 @@ export function build(inventoryPath, outDir) {
       '<h2>Steps</h2><ol class="steps">' + (a.steps ?? []).map((s) => '<li><strong>' + esc(s.do) + '</strong><br><span class="dim small">' + esc(whyOf(s.because)) + '</span></li>').join('') + '</ol>\n' +
       '<h2>Common mistakes</h2><ul>' + (a.commonMistakes ?? []).map((m) => '<li>' + esc(m) + '</li>').join('') + '</ul>\n' +
       (related.length ? '<h2>Related entries</h2><div class="grid">' + related.map((id) => card(byId.get(id))).join('') + '</div>' : '') +
+      (relatedGuides.length ? '<h2>Related guides</h2><ul class="guide-links">' + relatedGuides.map((g) =>
+        '<li><a href="/articles/' + esc(g.id) + '.html">' + esc(g.title) + '</a><br><span class="dim small">' + esc(g.target) + '</span></li>').join('') + '</ul>' : '') +
       '<h2>Sources</h2><p class="dim small">' + esc((a.sources ?? []).join(' ')) + '</p></article>', {
         crumbs: [{ name: 'Guides', url: '/articles/' }, { name: a.title }],
         lastmod: lastmodFor('articles/' + a.id + '.html', null),
@@ -696,6 +700,7 @@ export function build(inventoryPath, outDir) {
     '.verified li,.steps li{margin:8px 0}',
     '.note{border-left:3px solid var(--accent);background:var(--panel);padding:14px 18px;border-radius:0 10px 10px 0;margin:18px 0;max-width:44rem}',
     '.notes ul{padding-left:1.2rem}.notes li{margin:8px 0}',
+    '.guide-links{padding-left:1.2rem}.guide-links li{margin:10px 0}',
     'table{border-collapse:collapse;width:100%;font-size:14px}',
     'th,td{border-bottom:1px solid var(--line);text-align:left;padding:9px 8px}',
     'footer.foot{border-top:1px solid var(--line);padding:0 0 40px;margin-top:54px}',

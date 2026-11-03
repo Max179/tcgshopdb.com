@@ -1,0 +1,70 @@
+{
+  "id": "a-closing-routine-that-sets-up-the-next-shop-day",
+  "title": "A closing routine that sets up the next shop day",
+  "tier": "published",
+  "kind": "article",
+  "target": "How to close a trading day in TCG Card Shop Simulator: read the game's reviews and price changes, answer the recorded reasons, then stock shelves for tomorrow.",
+  "version": "no version stated by this build (see the sources page)",
+  "prerequisites": [
+    "A shop that has traded for a day",
+    "The review screen within reach",
+    "Price tags and the shelf manager available"
+  ],
+  "steps": [
+    {
+      "do": "Start the pass on the review screen rather than on the till.",
+      "because": "reviews have their own screen, panel and manager, and the screen carries the shop name and an average rating, so the day's record is read somewhere other than the money (see customer-reviews, the-review-screen)"
+    },
+    {
+      "do": "Sort the reviews by the reason that was recorded before changing anything.",
+      "because": "the kinds of review are a fixed list of named reasons, and each review keeps the text list its wording came from and the line inside that list (see what-a-review-record-keeps)"
+    },
+    {
+      "do": "Match each review to the item and the customer it names, so the complaint is answered at the right shelf.",
+      "because": "a review record carries the item, the customer's name and the day, hour and minute the review was left (see what-a-review-record-keeps)"
+    },
+    {
+      "do": "Read the day's price changes before re-tagging anything.",
+      "because": "price changes are managed as their own system, the kinds of change are labelled, and current and past percentage changes are kept by the restock manager (see price-changes-and-cash, how-the-restock-manager-packs-stock)"
+    },
+    {
+      "do": "Answer a reason about choice with stock and a reason about price with a tag, one at a time.",
+      "because": "the game files a variety reason and a price reason separately, so restocking and discounting fix different things (see answering-the-reviews-a-shift-leaves-behind, customer-reviews)"
+    },
+    {
+      "do": "Apply the new price with a price tag rather than moving the goods around.",
+      "because": "a price tag is its own object attached to goods, the artwork is drawn from a shared atlas, and a price-check screen exists apart from the shelf (see prices-and-price-tags, how-a-price-tag-is-drawn)"
+    },
+    {
+      "do": "Plan tomorrow's delivery from the shelf manager's own list rather than from memory.",
+      "because": "the shelf manager keeps a separate list for each kind of shelf and counter, while the restock manager packs deliveries into its own item, shelf and card box lists (see what-the-shelf-manager-keeps, how-the-restock-manager-packs-stock)"
+    },
+    {
+      "do": "Put priced stock back on the shelves before the pass ends.",
+      "because": "a shelf is tracked by the shelf manager, and a card's shelf price is applied through a price tag object, so unpriced stock is not ready to sell (see shelves-stock-and-upgrades, prices-and-price-tags)"
+    },
+    {
+      "do": "Check the cleaners are still placed and remembered by the shop.",
+      "because": "cleaner data is saved with the shop in a list of its own and the cleaners are objects with their own interaction (see keeping-the-shop-clean)"
+    }
+  ],
+  "commonMistakes": [
+    "Reading the average rating and stopping there instead of reading the reasons that produced it.",
+    "Discounting everything at once when the reason that was recorded was about choice rather than price.",
+    "Re-tagging from memory without the day's price changes in front of you.",
+    "Ordering stock without checking the shelf manager's list of what each shelf already holds.",
+    "Leaving the cleaners somewhere else and expecting the saved cleaner data to follow them."
+  ],
+  "relatedEntities": [
+    "customer-reviews",
+    "price-changes-and-cash",
+    "how-the-restock-manager-packs-stock"
+  ],
+  "relatedGuides": [
+    "answering-the-reviews-a-shift-leaves-behind",
+    "a-shop-day-that-turns-a-profit"
+  ],
+  "sources": [
+    "A local copy of the game, read only. Grounding for each step is on the technical reference pages; no number is estimated."
+  ]
+}

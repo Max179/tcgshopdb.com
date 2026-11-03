@@ -1,9 +1,9 @@
 {
   "site": "tcgshopdb.com",
-  "head": "215a69e",
-  "commits": 28,
-  "pages": 445,
-  "indexable": 176,
+  "head": "ab71299",
+  "commits": 30,
+  "pages": 446,
+  "indexable": 177,
   "noindex": 269,
   "classes": 240,
   "fields": 9593,
@@ -11,12 +11,12 @@
   "generatedBy": "pipeline/status.mjs",
   "headNote": "generated from this commit; the commit that adds this file is one step later",
   "handoff": {
-    "trackedFiles": 430,
+    "trackedFiles": 431,
     "byTop": {
       "(root)": 9,
       ".github": 1,
       "config": 2,
-      "content": 339,
+      "content": 340,
       "data": 5,
       "docs": 1,
       "pipeline": 22,

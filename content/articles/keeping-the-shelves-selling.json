@@ -33,6 +33,9 @@
     "Putting cards on the wrong kind of shelf.",
     "Keeping all your stock in sealed boxes and none on the floor."
   ],
+  "relatedGuides": [
+    "a-closing-routine-that-sets-up-the-next-shop-day"
+  ],
   "relatedEntities": [
     "shelves-stock-and-upgrades",
     "prices-and-price-tags",
