@@ -162,3 +162,33 @@ to `80 passed, 0 failed`.
 - No `priority`/`changefreq` in the sitemap (search engines ignore them; not added rather than faked).
 - Titles are generated from the page subject; if a future entry title is longer than 53 characters the generator
   drops the brand suffix, and the 25-60 gate would flag anything that still breaks the range.
+
+
+## Addendum — 2026-11-03 (growth page)
+
+One indexable guide was added for the end-of-day cluster:
+`/articles/a-closing-routine-that-sets-up-the-next-shop-day` ("A closing routine that sets up the next shop
+day", 9 steps). It is the only new page, and the whole SEO contract was re-measured on the built artefact after
+the addition.
+
+| Measure | Before this pass (2026-11-02) | After (2026-11-03) |
+| --- | --- | --- |
+| build outputs / HTML files / indexable | 445 / 440 / 176 | **446 / 441 / 177 (+1 each)** |
+| sitemap `<loc>` count (clean form) | 176 | **177** |
+| sitemap `<lastmod>` count | 99 | **100** (new guide + updates page = 2026-11-03) |
+| titles unique / 25-60 chars | 176 / 176 | **177 / 177** (new: 48) |
+| descriptions unique / 70-160 chars | 176 / 176 | **177 / 177** (new: 159) |
+| canonical = og:url = hreflang = sitemap | 176/176 | **177/177** |
+| JSON-LD scripts valid (Article/WebPage + BreadcrumbList types) | 176 (152 Article) | **177 (153 Article)** |
+| og:url/og:image and twitter card/title/description/image | 176/176 | **177/177** |
+| internal `.html` links in the dist | 0 | **0** |
+| `config/urls.json` rows (keep / noindex) | 439 (176 / 263) | **440 (177 / 263)** |
+| site gates | 80 | **80 passed, 0 failed** |
+
+The new page was not special-cased: the existing SEO gates validated it automatically (title/description
+ranges and uniqueness, canonical/og/hreflang/sitemap equality, JSON-LD URL and `datePublished`/`dateModified`
+2026-11-03 agreeing with the sitemap lastmod, og/twitter coverage, no `.html` links). The content gate now also
+rejects a `relatedGuides` id that does not exist, and the article test asserts that every related guide link is
+actually rendered. No undated page received a fake date; the 77 pages without truthful content metadata still
+omit `<lastmod>`.
+

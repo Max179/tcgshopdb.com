@@ -4,7 +4,47 @@ The full round-by-round log (577 lines, 377999 bytes, 446 recorded rounds)
 is the working record of the extraction host and stays there. This copy carries the standing state at the handoff commit plus the
 most recent recorded rounds verbatim, so the Mac side has the facts without the history. Nothing here is generated at publish time.
 
-## SEO pass (2026-11-02) — current standing state
+## Growth pass (2026-11-03) — current standing state
+
+One new indexable player guide was added for a real coverage gap, plus article-to-article cross-links:
+`/articles/a-closing-routine-that-sets-up-the-next-shop-day` — "A closing routine that sets up the next shop
+day" (9 steps, 5 common mistakes, every step grounded in facts already published on the entry pages). Full
+record: `reports/growth-2026-11-03.md`; measured before/after in the addendum to `reports/seo-audit.md`.
+
+- Commit: the growth commit (new guide, 3 existing guides gained a `relatedGuides` inbound link, generator
+  renders a "Related guides" section, content-gate validates related-guide ids, test checks the link renders,
+  `content/updates.json` new 2026-11-03 row, `data/guide-questions.json` player question, regenerated
+  `config/urls.json`), then the docs commit that carries this section and the status commit. Working tree clean.
+- Build: **pages=446 indexable=177** (263 noindex) — exactly +1 page / +1 indexable over the 445/176 baseline;
+  sitemap **177 clean locs** with **100 truthful `<lastmod>`** (new guide and updates page 2026-11-03);
+  `config/urls.json` 440 rows, 177 keep / 263 noindex; the only new row is the new guide = keep.
+- The new page: title 48 chars (25-60 unique), description 159 chars (70-160 unique), clean canonical,
+  Article + BreadcrumbList JSON-LD with datePublished/dateModified 2026-11-03 matching the sitemap, og/twitter
+  complete, 0 `.html` links; listed on `/articles/`, `/updates` and the home page (latest updates + player
+  question card); linked from 3 existing guide pages (Related guides) and it links 3 entries + 2 guides.
+- Noindex audit: **0 promoted**. The 9 remaining noindex notes are all diagram-only; the policy (a confirmed
+  in-game picture is required before a subject becomes an indexable entry) stays intact; no picture pack in scope.
+- Gates: all 80 site gates pass; typecheck, content-gate 98 entries + 64 articles / 0 violations, citations
+  unmatched=0, coverage 20/20, image gates 89 records / 0 flagged / 0 unused, classify 177 keep / 263 noindex,
+  preflight 11/11, smoke pass. Verbatim commands and exits — all exit 0:
+
+      python3 tools/image-sanity.py            -> [image-sanity] 89 records, 0 flagged
+      node tools/image-coverage.mjs            -> entries=98 withGameImage=89 diagramOnly=9 manifestRecords=89 unusedRecords=0
+      node pipeline/site.mjs                   -> [site] pages=446 indexable=177 schema(noindex)=263
+      node tools/classify-urls.mjs             -> 177 keep, 263 noindex, 0 redirect(s)
+      node tools/smoke.mjs                     -> the artefact passes
+      node tests/site.test.mjs                 -> [site-tests] 80 passed, 0 failed
+      npx tsc --noEmit -p tsconfig.ci.json     -> no diagnostics
+      node tools/content-gate.mjs              -> [content-gate] 98 entry file(s), 0 violation(s)
+      node tools/verify-citations.mjs          -> entries=98 facts=855 distinctIdentifiers=1517 universe=7781 confirmedElsewhere=14 unmatched=0
+      node tools/coverage.mjs                  -> columns=20 covered=20 published=98 draft=0 reference=0 absent=0 qualityFailures=0
+      node tools/preflight.mjs                 -> [preflight] 11 ok, 0 failed (on the committed tree)
+
+- Next: **push + deploy by the Lead**, then live smoke and one manual `npm run indexnow` for the 177 URLs; watch
+  the new guide's query shape in Search Console.
+- Publishing: **not done from this machine**.
+
+## SEO pass (2026-11-02) — earlier standing state
 
 The site now uses one clean-URL scheme and a complete search contract: clean canonical/og:url/hreflang/sitemap/
 JSON-LD/internal links, managed 25-60 character titles, unique 70-160 character descriptions, JSON-LD on every

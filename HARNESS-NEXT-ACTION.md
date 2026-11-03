@@ -4,22 +4,27 @@ Live https://tcgshopdb.com/sitemap.xml = 176×`<url><loc>clean</loc></url>`（�
 ---
 # Harness next action — TCG Shop (tcgshopdb.com)
 
-Updated: 2026-11-02, after the Mac handoff integration, picture replacement revision 3 and the SEO pass.
+Updated: 2026-11-03, after the Mac handoff integration, picture replacement revision 3, the SEO pass and growth
+pass P1 (one new indexable guide).
 
 ## State: local-complete
 
 The Oct-2-2026 Windows handoff package is integrated, the Mac design is ported onto its generator, and the raw
 Unity texture exports were replaced with sourced in-game pictures.
-`node pipeline/site.mjs` prints `pages=445 indexable=176` (263 noindex) and every local gate passes on macOS with
+`node pipeline/site.mjs` prints `pages=446 indexable=177` (263 noindex) and every local gate passes on macOS with
 no game files, no network and no credentials:
 
 - 80 site gates (14 of them SEO), typecheck, content/coverage/image/citation gates, preflight 11/11, smoke, status.
 - Clean-URL scheme throughout: canonical/og:url/hreflang/sitemap/JSON-LD/internal links all use the clean URLs the
   host serves; titles 25-60 and unique, descriptions 70-160 and unique, JSON-LD (WebSite/SearchAction, Article/
-  WebPage, BreadcrumbList) on every indexable page, og/twitter metadata complete, sitemap 176 clean locs with 99
+  WebPage, BreadcrumbList) on every indexable page, og/twitter metadata complete, sitemap 177 clean locs with 100
   truthful `<lastmod>` dates, robots gated, IndexNow key served at `/<key>.txt` with a manual
   `npm run indexnow` tool. Measured before/after: `reports/seo-audit.md`.
-- 98 published entries (89 with a sourced in-game picture, 9 diagram-only notes), 63 guides, 855 facts,
+- **Growth P1 (2026-11-03): one new indexable guide** for the end-of-day cluster,
+  `/articles/a-closing-routine-that-sets-up-the-next-shop-day` (9 steps; the only new page, +1 page / +1
+  indexable). It adds article-to-article links in both directions (3 existing guides now link to it) and is listed
+  automatically on `/articles/`, `/updates` and the home page. Record: `reports/growth-2026-11-03.md`.
+- 98 published entries (89 with a sourced in-game picture, 9 diagram-only notes), 64 guides, 855 facts,
   89 picture records (**79 from the TCG Card Shop Simulator Wiki on wiki.gg, 10 from the official Steam store
   page**; 79 unique, max 3 repeats; 0 unused). Revision 3 swapped 86 of the 89 pictures for the specific wiki.gg
   file for each subject.
@@ -35,15 +40,17 @@ reports are current. Commits: `85d80e5` (import), `c59da87` (macOS-clean tooling
 credits + wording), `0e86f21` (revision-2 swap of 51 pictures), `9cde7f0` (homepage credit to the official
 store page), `0028520` (revision-3 wiki completeness pass: 86 picture swaps), then the wiki.gg copy, replacement-
 report and status commits, and `5c8d573` (SEO pass: clean URLs, titles/descriptions, JSON-LD, sitemap lastmod,
-social metadata, IndexNow key/tool, 14 SEO gates), then the SEO-report and status commits. Working tree clean.
+social metadata, IndexNow key/tool, 14 SEO gates), then the SEO-report and status commits, and the growth commit
+(new closing-routine guide + related-guides cross-links + gates), then the growth-report and status commits.
+Working tree clean.
 
 ## Next, in order
 
-1. Push these commits (Lead) and let `.github/workflows/publish.yml` deploy `web/dist` to the existing Cloudflare
-   Pages project `tcgshopdb-com` (gate job: build -> tests -> typecheck; deploy job: build -> preflight -> smoke ->
-   wrangler deploy).
+1. **Push + deploy (Lead).** Push these commits and let `.github/workflows/publish.yml` deploy `web/dist` to the
+   existing Cloudflare Pages project `tcgshopdb-com` (gate job: build -> tests -> typecheck; deploy job: build ->
+   preflight -> smoke -> wrangler deploy).
 2. After the deploy completes, verify the live domain the same way a reader arrives:
-   `node tools/smoke.mjs https://tcgshopdb.com` (all 176 kept URLs, titles and canonicals on the real domain).
+   `node tools/smoke.mjs https://tcgshopdb.com` (all 177 kept URLs, titles and canonicals on the real domain).
    Record the result in `reports/local-complete.md`.
 3. Decide on the last pictures whose subject is not what the entry describes: revision 3's wiki.gg pass fixed
    almost all of them, and `reports/image-replacement-2026-10-30.md` §6 now lists 3 still-clearly-wrong ids
@@ -51,10 +58,10 @@ social metadata, IndexNow key/tool, 14 SEO gates), then the SEO-report and statu
    few weaker phone/icon fallbacks (also reported to the Lead). A swapped picture needs the same copy-in treatment:
    mapped file, manifest record, entry file, review-ledger row, regenerated image reports.
 4. Bind/verify `tcgshopdb.com` in the Cloudflare dashboard if it is not already attached (account owner action).
-5. After the deploy, run `npm run indexnow` once to submit the live sitemap (manual only; not run in CI).
+5. After the deploy, run `npm run indexnow` once to submit the live sitemap (177 URLs, manual only, not run in CI).
 6. Optional later round: VideoGame/FAQPage structured data beyond the site/article/breadcrumb set now emitted, then
    consider the AdSense application (policy pages, original content and image attribution are ready).
-6. New facts/values need a Windows extraction host: never invent game data, keep unknown explicit, keep
+7. New facts/values need a Windows extraction host: never invent game data, keep unknown explicit, keep
    parser/extraction blockers from blocking the build or the gates.
 
 ## Rules
