@@ -56,5 +56,8 @@
   ],
   "sources": [
     "A local copy of the game, read only. Grounding for each step is on the technical reference pages; no number is estimated."
+  ],
+  "relatedGuides": [
+    "which-shop-jobs-go-to-a-worker-a-machine-or-the-restocker"
   ]
 }

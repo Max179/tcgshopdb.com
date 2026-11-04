@@ -335,6 +335,11 @@
       "reason": "player-facing page: a question a player asks"
     },
     {
+      "url": "/articles/which-shop-jobs-go-to-a-worker-a-machine-or-the-restocker",
+      "action": "keep",
+      "reason": "player-facing page: a question a player asks"
+    },
+    {
       "url": "/articles/working-out-how-many-customers-you-can-serve",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"

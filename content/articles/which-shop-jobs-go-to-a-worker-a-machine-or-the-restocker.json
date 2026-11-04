@@ -1,0 +1,83 @@
+{
+  "id": "which-shop-jobs-go-to-a-worker-a-machine-or-the-restocker",
+  "title": "Which shop jobs go to a worker, a machine or the restocker",
+  "tier": "published",
+  "kind": "article",
+  "target": "A handoff guide for TCG Card Shop Simulator: which shop jobs go to a worker, which to the automatic machines and the restocker, and what still stays with you.",
+  "version": "no version stated by this build (see the sources page)",
+  "prerequisites": [
+    "A shop that is trading and has shelves to fill",
+    "A restock order you can afford",
+    "Access to the worker screens, if you are handing work to a worker"
+  ],
+  "steps": [
+    {
+      "do": "Write the routine down as separate jobs before you hire or buy anything: buying, delivering, opening and cleaning, pricing and placing, and serving at the counter.",
+      "because": "the game keeps these as separate systems with their own screens and managers, so one purchase does not take over the whole routine (see restocking-from-a-cart, the-restocker-and-its-vehicles, machines-that-work-on-their-own, prices-and-price-tags)"
+    },
+    {
+      "do": "Give the delivery to the restocker, but keep the shelf itself as a separate job.",
+      "because": "a delivery is run through a restocker, the manager packs it into boxes for items, shelves and cards, and the shelf manager is what records what is actually on a shelf (see the-restocker-and-its-vehicles, how-the-restock-manager-packs-stock, what-the-shelf-manager-keeps)"
+    },
+    {
+      "do": "Do the buying yourself from the restock screens, because the cart is the part with a total to check before you pay.",
+      "because": "browsing and adding to the cart are separate screens, the cart carries a total and a count, and it is paid for on a checkout screen of its own (see sorting-the-restock-list-before-you-spend, restocking-without-guessing-what-you-need)"
+    },
+    {
+      "do": "Use the scanner for the shelf-side part instead of walking back to the list.",
+      "because": "the scanner has a restock screen of its own and the phone is what puts the shop into restock scanning mode (see scanner-restocking-workflow, the-restocker-and-its-vehicles)"
+    },
+    {
+      "do": "Give a worker both a main task and a second task before you walk away.",
+      "because": "the worker screen is for a primary and a secondary task, so leaving the second one unset leaves the worker with nothing to fall back on (see getting-your-workers-doing-what-you-want, setting-what-your-workers-do)"
+    },
+    {
+      "do": "Set the worker's price rule in the same pass, and check the card-price option rather than assuming it is on.",
+      "because": "the price screen has its own tick for rounding up and a separate tick for whether the worker may set card prices (see getting-your-workers-doing-what-you-want, setting-what-your-workers-do)"
+    },
+    {
+      "do": "Treat checkout and trading at a cashier counter as two permissions.",
+      "because": "the counter setting screen keeps a tick for checkout and a separate tick for trading, so granting one does not grant the other (see getting-your-workers-doing-what-you-want)"
+    },
+    {
+      "do": "Give the machines only the two jobs they actually name: opening packs and cleaning.",
+      "because": "the automatic pack opener and the automatic cleanser are shop equipment with their own running state, and the opener keeps a count and the kinds of item and card it produced (see letting-the-machines-and-the-restocker-do-the-work, machines-that-work-on-their-own)"
+    },
+    {
+      "do": "Keep pricing and the final shelf check with you, because a price tag belongs to the goods and a compartment decides what it will accept.",
+      "because": "a card's price is applied through a price tag object, and a shelf compartment records what it will accept, its size and whether its label can be locked (see pricing-a-card-from-what-you-can-see, labelling-the-shelves-so-prices-read-right, how-a-shelf-holds-its-stock)"
+    },
+    {
+      "do": "At the end of the pass, read what each layer left behind instead of only looking at the till.",
+      "because": "the opener keeps a count and what it produced, the cart is settled on its own checkout screen, the shelf manager keeps a list for each fixture kind, and the review screen records what customers said (see a-closing-routine-that-sets-up-the-next-shop-day, what-the-shelf-manager-keeps, customer-reviews)"
+    }
+  ],
+  "commonMistakes": [
+    "Expecting the restocker to put the delivery on the shelf, when the delivery and the shelf are tracked as separate jobs.",
+    "Handing a job to a worker without checking that it is on the worker's own task screen; this guide maps the handoff, it does not replace that list.",
+    "Hiring a worker and setting only the main task, leaving the second task empty.",
+    "Assuming checkout permission at a cashier counter also allows trading.",
+    "Leaving the card-price option unticked and expecting the worker to reprice cards.",
+    "Giving the pack opener credit for ordering stock or shelving it; it opens packs and keeps what it produced.",
+    "Treating a machine as a replacement for pricing and the final shelf check."
+  ],
+  "relatedEntities": [
+    "setting-what-your-workers-do",
+    "the-restocker-and-its-vehicles",
+    "machines-that-work-on-their-own",
+    "what-the-shelf-manager-keeps",
+    "restocking-from-a-cart",
+    "scanner-restocking-workflow"
+  ],
+  "relatedGuides": [
+    "getting-your-workers-doing-what-you-want",
+    "letting-the-machines-and-the-restocker-do-the-work",
+    "sorting-the-restock-list-before-you-spend",
+    "restocking-without-guessing-what-you-need",
+    "keeping-the-shelves-selling",
+    "a-closing-routine-that-sets-up-the-next-shop-day"
+  ],
+  "sources": [
+    "A local copy of the game, read only. Grounding for each step is on the technical reference pages; no number is estimated."
+  ]
+}
