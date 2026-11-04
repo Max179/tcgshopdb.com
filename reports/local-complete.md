@@ -4,7 +4,14 @@ The full round-by-round log (577 lines, 377999 bytes, 446 recorded rounds)
 is the working record of the extraction host and stays there. This copy carries the standing state at the handoff commit plus the
 most recent recorded rounds verbatim, so the Mac side has the facts without the history. Nothing here is generated at publish time.
 
-## Growth pass (2026-11-03) — current standing state
+## Current standing state (2026-11-05)
+
+The growth pass of 2026-11-05 added `/articles/which-shop-jobs-go-to-a-worker-a-machine-or-the-restocker`;
+build **pages=447 indexable=178**, **65 guides**, **0 noindex promotions**. Full record:
+`reports/growth-2026-11-05.md`; machine-readable counts: `reports/status.json`. The section below is the
+previous 2026-11-03 pass, kept as the record of that round.
+
+## Growth pass (2026-11-03) — previous state
 
 One new indexable player guide was added for a real coverage gap, plus article-to-article cross-links:
 `/articles/a-closing-routine-that-sets-up-the-next-shop-day` — "A closing routine that sets up the next shop
