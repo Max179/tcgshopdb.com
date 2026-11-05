@@ -235,6 +235,11 @@
       "reason": "player-facing page: a question a player asks"
     },
     {
+      "url": "/articles/repricing-a-shelf-that-stopped-selling",
+      "action": "keep",
+      "reason": "player-facing page: a question a player asks"
+    },
+    {
       "url": "/articles/restocking-without-guessing-what-you-need",
       "action": "keep",
       "reason": "player-facing page: a question a player asks"

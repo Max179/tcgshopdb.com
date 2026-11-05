@@ -63,6 +63,9 @@
     "price-changes-and-cash",
     "price-history-and-graphs"
   ],
+  "relatedGuides": [
+    "repricing-a-shelf-that-stopped-selling"
+  ],
   "sources": [
     "A local copy of the game, read only. The grounding for each step is listed on the technical reference pages; nothing here is estimated."
   ]

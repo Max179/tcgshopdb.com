@@ -41,6 +41,9 @@
     "prices-and-price-tags",
     "reading-the-price-board"
   ],
+  "relatedGuides": [
+    "repricing-a-shelf-that-stopped-selling"
+  ],
   "sources": [
     "A local copy of the game, read only. Grounding for each step is on the technical reference pages; no number is estimated."
   ]

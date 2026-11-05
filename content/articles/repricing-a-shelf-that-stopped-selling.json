@@ -1,0 +1,78 @@
+{
+  "id": "repricing-a-shelf-that-stopped-selling",
+  "title": "Repricing stock that has stopped selling",
+  "tier": "published",
+  "kind": "article",
+  "target": "How to change a price in TCG Card Shop Simulator after the first tag: read the move, reset it at the shelf, check the tag, then clear what will not sell.",
+  "version": "no version stated by this build (see the sources page)",
+  "prerequisites": [
+    "Stock that has already been priced once and is still sitting on the shelf",
+    "The price check screen or the price board within reach",
+    "The fixture's own setting screen, because that is where the price is changed"
+  ],
+  "steps": [
+    {
+      "do": "Re-read the price that is actually on the goods before you change it, rather than working from what you meant to charge.",
+      "because": "the game checks a price on a screen of its own, and the panel gives the item, the total and a line for how the price has changed (CheckPriceScreen, CheckPricePanelUI, m_TotalPriceText, m_PriceChangeText)"
+    },
+    {
+      "do": "Read the direction on that panel as well as the total, because an unchanged price needs a different decision from one that has already moved.",
+      "because": "the panel keeps separate arrows for a price going up, going down and not changing (m_UpArrow, m_DownArrow, m_NoChangeArrow)"
+    },
+    {
+      "do": "Look at the item's history before choosing a new number, so the change you make answers the move you actually saw.",
+      "because": "the game has a screen for an item's price over time, and a market price keeps a generated price with current and past percentage changes (ItemPriceGraphScreen, MarketPrice, pricePercentChangeList, pastPricePercentChangeList)"
+    },
+    {
+      "do": "Change the number at the fixture's own price screen, with the average cost and the profit on that screen in view.",
+      "because": "there is a screen for setting an item price, and it carries the average cost, the profit and a card interface for setting the price (SetItemPriceScreen, m_AverageCostText, m_Profit, m_SetPriceCardUI)"
+    },
+    {
+      "do": "Know which tag you are changing, because a card, an item box, a package box and a warehouse rack each get a tag of their own.",
+      "because": "tags are spawned from prefabs chosen for what is being tagged, with separate ones for a card, an item box, a package box and a warehouse rack (PriceTagUISpawner, m_UIPriceTagCardPrefab, m_UIPriceTagItemBoxPrefab, m_UIPriceTagPackageBoxPrefab, m_UIPriceTagWarehouseRackPrefab)"
+    },
+    {
+      "do": "Check what the compartment will accept, and whether its label can be locked, before you re-tag rather than after.",
+      "because": "a compartment records what it will accept and whether its label can be locked (m_CanPutItem, m_CanPutBox, m_CanLockItemLabel)"
+    },
+    {
+      "do": "Look at the tag after the change and clear any zero price before the shelf goes back on sale.",
+      "because": "a tag caches the price as text, knows when the price is zero and has a warning indicator for that case (m_PriceStringCached, m_IsPriceZero, m_PriceZeroWarningIndicator)"
+    },
+    {
+      "do": "Expect the market to keep moving after your edit, and read a later change as an event the game labels rather than as proof the new price failed.",
+      "because": "price changes are managed as their own system with labelled kinds, and price information can be shown where the player is (PriceChangeManager, PriceChangeTypeText, PricePopupSpawner)"
+    },
+    {
+      "do": "Decide when a reprice has become a stock decision, and move what will not sell to the bulk donation box or the bin rather than repricing it again.",
+      "because": "there is a bulk donation box with a panel of its own, and removing stock has kinds with a confirmation screen and a list of bins (BulkDonationBoxCardPanelUI, ECardRemoveType, ConfirmTrashCardScreen, m_TrashBinList)"
+    }
+  ],
+  "commonMistakes": [
+    "Repricing from memory instead of opening the check screen on the goods.",
+    "Reading only the total and ignoring the line and arrows that say which way the price moved.",
+    "Changing a card's tag and assuming the tag on the box it came from changed too.",
+    "Leaving a price at zero after an edit because the tag's zero warning was not read.",
+    "Repricing an item for a third time when the stock decision was to donate or bin it.",
+    "Treating a later market move as proof that the new price did not work."
+  ],
+  "relatedEntities": [
+    "prices-and-price-tags",
+    "price-tags-for-every-context",
+    "price-changes-and-cash",
+    "reading-the-price-board",
+    "the-setting-screens-for-your-fixtures",
+    "how-a-shelf-holds-its-stock"
+  ],
+  "relatedGuides": [
+    "reading-why-a-price-moved",
+    "reading-a-price-graph-without-guessing",
+    "pricing-a-card-from-what-you-can-see",
+    "labelling-the-shelves-so-prices-read-right",
+    "clearing-old-stock-in-bulk",
+    "keeping-the-shelves-selling"
+  ],
+  "sources": [
+    "A local copy of the game, read only. Grounding for each step is on the technical reference pages; no number is estimated."
+  ]
+}
