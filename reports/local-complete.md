@@ -6,10 +6,13 @@ most recent recorded rounds verbatim, so the Mac side has the facts without the 
 
 ## Current standing state (2026-11-05)
 
-The growth pass of 2026-11-05 added `/articles/which-shop-jobs-go-to-a-worker-a-machine-or-the-restocker`;
-build **pages=447 indexable=178**, **65 guides**, **0 noindex promotions**. Full record:
-`reports/growth-2026-11-05.md`; machine-readable counts: `reports/status.json`. The section below is the
-previous 2026-11-03 pass, kept as the record of that round.
+The growth work of 2026-11-05 first added
+`/articles/which-shop-jobs-go-to-a-worker-a-machine-or-the-restocker`, then a second pass added
+`/articles/repricing-a-shelf-that-stopped-selling` (the missing action between the price-diagnosis, initial-pricing,
+labelling and clearing guides). Standing counts: build **pages=448 indexable=179**, **66 guides**, **0 noindex
+promotions**. Full records: `reports/growth-2026-11-05.md` (worker pass),
+`reports/growth-2026-11-05-repricing.md` (repricing pass); machine-readable counts: `reports/status.json`. The
+section below is the 2026-11-03 pass, kept as the record of that round.
 
 ## Growth pass (2026-11-03) — previous state
 
